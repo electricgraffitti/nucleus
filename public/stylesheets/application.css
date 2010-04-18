@@ -175,6 +175,14 @@ label.error {
 	right: 10px;
 	bottom: 35px;
 }
+#client_name {
+	position: relative;
+	height: 15px;
+	padding: 7px 0px;
+	float: right;
+	color: #c9cdca;
+	margin-right: 10px;
+}
 /*******Navigation********/
 #nav_wrapper {
   position: absolute;

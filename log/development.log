@@ -2030,3 +2030,129 @@ ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-17 22:35:44) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (67.5ms)
+Rendered layouts/_flash (0.5ms)
+Rendered layouts/_main_nav (0.8ms)
+Rendered layouts/_icon_nav (1.4ms)
+Rendered layouts/_header (8.7ms)
+Rendered layouts/_footer (0.4ms)
+Rendered layouts/_scripts (0.2ms)
+Completed in 130ms (View: 128, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 22:35:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-17 22:36:09) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.5ms)
+Rendered layouts/_flash (0.1ms)
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (0.6ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_scripts (0.0ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 22:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-17 22:37:54) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.6ms)
+Rendered layouts/_flash (0.1ms)
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (0.6ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_scripts (0.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 22:37:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-17 22:38:06) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (0.6ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_scripts (0.0ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 22:38:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-17 22:38:21) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.6ms)
+Rendered layouts/_flash (0.1ms)
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (0.6ms)
+Rendered layouts/_header (2.2ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_scripts (0.0ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 22:38:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-17 22:38:58) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+Rendered layouts/_main_nav (0.2ms)
+Rendered layouts/_icon_nav (0.6ms)
+Rendered layouts/_header (1.5ms)
+Rendered layouts/_footer (0.0ms)
+Rendered layouts/_scripts (0.0ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-17 22:38:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
