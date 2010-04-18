@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <%= render :partial => "layouts/headmeta" %>
+</head>
+<body class="yui-skin-sam">
+  <!-- Application Layout -->
+  <div id="wrapper" class="container_12">
+    <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
+	  <div id="hd" class="left">
+      <%= render :partial => "layouts/header" %>
+	  </div>
+    <div id="bd" class="left">
+      <div class="main_content left">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="ft" class="left">
+      <%= render :partial => "layouts/footer" %>
+    </div>
+	</div>
+	<%= render :partial => "layouts/scripts" %>
+</body>
+</html>
+
+
