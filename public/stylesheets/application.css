@@ -6,7 +6,13 @@ html, body {
   height: 100%;
 	width: 100%;
 }
-#hd, #main_content, #ft {
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0px auto -20px;
+}
+#hd, #main_content {
   position: relative;
   text-align: left;
 	width: 100%;
@@ -19,7 +25,6 @@ a {
   text-indent: -3000em;
 }
 p {
-  margin: 5px 0px 0px;
   line-height: 16.35px;
 }
 .content_wrap {
@@ -300,7 +305,6 @@ ul.icon_nav li#icon_nav_7:hover {
   border-right: 1px solid #aaa;
   border-bottom: 1px solid #fefefe;
   margin: 0px auto;
-  padding-bottom: 20px;
 }
 .cube_confessions {
   background: url('../images/c2_headers.png') 0px -130px no-repeat;
@@ -312,266 +316,6 @@ ul.icon_nav li#icon_nav_7:hover {
   font-size: 12px;
   font-weight: bold;
 }
-/**************************************************/
-/******************CUBE LISTINGS******************/
-.cube_listing {
-  position: relative;
-  float: left;
-  width: 900px;
-  padding: 20px;
-}
-.cube_listing img {
-  padding: 10px;
-  border: 2px solid #222;
-  float: left;
-  background: #fefefe;
-  margin-right: 20px;
-}
-.index_image img {
-/*  float: left;
-  margin-right: 20px;
-	margin-top: -15px;
-	padding: 0px;
-  border: none;
-  background: none;*/
-}
-.listing_title {
-  position: relative;
-  font-size: 40px;
-  font-family: impact, Arial;
-  color: #222;
-  width: 750px;
-  text-shadow: 0px 1px 0px #fefefe;
-  padding: 0px;
-}
-.listing_sub_title {
-  position: relative;
-  float: left;
-  font-size: 125%;
-  font-style: italic;
-  font-family: "Helvetica Neue LT", Arial, Helvetica, Geneva, sans-serif;
-  width: 670px;
-  color: #a70d0e;
-  text-shadow: 0px -1px 0px #222;
-  margin-bottom: 2px;
-}
-.cube_listing p {
-  margin-bottom: 10px;
-}
-.listing_time {
-  position: relative;
-  float: left;
-  font-size: 95%;
-  font-style: italic;
-  font-family: "Helvetica Neue LT", Arial, Helvetica, Geneva, sans-serif;
-  width: 670px;
-  color: #444;
-  text-shadow: 0px 1px 0px #fff;
-  margin-bottom: 10px;
-}
-.retweet_links {
-	position: relative;
-	float: right;
-	width: 100px;
-}
-/*********************************************/
-/******************SUB BOXES******************/
-#mast_sub_box {
-  background: url('../images/sub_box_bg.jpg') center top no-repeat;
-  color: #fff;
-}
-#sub_boxes {
-   background: url('../images/inner_sub_boxes.png') repeat-y;
-   padding-bottom: 20px;
-   min-height: 260px;
-   width: 960px;
-}
-.sub_box_left {
-  position: relative;
-  width: 480px;
-  float: left;
-  margin: 0px 12px;
-}
-.sub_box_right {
-  position: relative;
-  width: 400px;
-  float: left;
-  margin: 0px 20px;
-}
-#sub_boxes ul {
-  margin-left: 50px;
-} 
-#sub_boxes ul li {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin-bottom: 5px;
-  font-size: 125%;
-}
-.code_confessions {
-  background: url('../images/c2_headers.png') 0px 0px no-repeat;
-}
-.the_founders {
-  background: url('../images/c2_headers.png') 0px -65px no-repeat;
-}
-.testimonial {
-  background: url('../images/c2_headers.png') 0px -195px no-repeat;
-}
-.client_list {
-  background: url('../images/c2_headers.png') 0px -260px no-repeat;
-}
-.other_svc {
-  background: url('../images/c2_headers.png') 0px -325px no-repeat;
-}
-.svc_list {
-  background: url('../images/c2_headers.png') 0px -390px no-repeat;
-}
-/********************SUB BOX LISTING*********/
-.cube_sub_listing {
-  position: relative;
-  float: left;
-  width: 500px;
-  padding: 20px;
-}
-.cube_sub_listing img {
-  padding: 5px;
-  border: 1px solid #640102; /* darker red like header ribbon */
-  float: left;
-  background: #000;
-  margin-right: 10px;
-}
-.sub_box_listing_title {
-  position: relative;
-  float: left;
-  font-size: 26px;
-  font-family: impact, Arial;
-  color: #ccc;
-  width: 395px;
-  text-shadow: 0px 1px 0px #000;
-  padding: 0px 0px 5px;
-}
-.sub_box_listing_sub_title {
-  position: relative;
-  float: left;
-  font-size: 108%;
-  font-style: italic;
-  font-family: "Helvetica Neue LT", Arial, Helvetica, Geneva, sans-serif;
-  width: 395px;
-  text-shadow: 0px 1px 0px #000;
-  margin-bottom: 2px;
-}
-.cube_sub_listing h3, .cube_sub_listing h4 {
-  color: #ccc;
-  text-shadow: none;
-}
-.sub_box_listing_sub_link {
-	margin-top: 10px;
-}
-.sub_box_listing_sub_link a:hover {
-	color: #FCFFCD;
-}
-.right_listing p {
-  color: #dedede;
-  width: 345px;
-}
-.left_listing p {
-  color: #dedede;
-  width: 415px;
-}
-.sub_box_listing_time {
-  position: relative;
-  float: left;
-  font-size: 85%;
-  font-style: italic;
-  font-family: "Helvetica Neue LT", Arial, Helvetica, Geneva, sans-serif;
-  width: 300px;
-  color: #444;
-  text-shadow: 0px 1px 0px #fff;
-  margin-bottom: 5px;
-}
-.sub_box_quote {
-  font-style: italic;
-  width: 395px;
-  margin-bottom: 10px;
-}
-.sub_box_lights {
-	position: absolute;
-	width: 940px;
-	height: 200px;
-	left: 10px;
-	top: 0px;
-	background: url('../images/c2_sub_box_light.jpg') no-repeat;
-}
-/*********************************************/
-/******************ADMINS*********************/
-.admin_login {
-  margin-top: 90px;
-  margin-left: 20px;
-}
-.admin_nav {
-  position: relative;
-  width: 700px;
-  height: 25px;
-  padding: 15px;
-  float: right;
-}
-.admin_nav ul {
-  position: relative;
-  width: 600px;
-  height: 25px;
-  float: right;
-}
-.admin_nav ul li {
-  position: relative;
-  width: 75px;
-  height: 25px;
-  padding: 0px 5px;
-  float: left;
-}
-.admin_nav ul li a {
-  position: relative;
-  display: block;
-  width: 75px;
-  height: 25px;
-  color: #222;
-  text-shadow: 0px 1px 0px #ccc;
-}
-.admin_nav ul li a:hover {
-  color: #a70d0e;
-}
-.admin_sidebar {
-  position: relative;
-  width: 175px;
-  min-height: 200px;
-  margin-top: 50px;
-  padding: 20px;
-  float: left;
-}
-.admin_form_wrap, #admin_datatable {
-  position: relative;
-  float: left;
-  width: 710px;
-}
-#admin_datatable {
-	color: #ccc;
-}
-/*********************************************/
-/******************FLASH**********************/
- 
-.flash_html {
-	display:inline;
-}
-.flash_ajax {
-	display: block;
-	position:fixed;
-	bottom:0px;
-	width:100%;
-	z-index:1003;
-	color:#ccc;
-	background-color:#000;
-	padding:4px;
-}
-
-
 /*********************************************/
 /******************BUTTONS********************/
 .btn {
@@ -593,126 +337,17 @@ ul.icon_nav li#icon_nav_7:hover {
 }
 /*********************************************/
 /******************FOOTER********************/
-#mast_footer {
-  position: relative;
-  background: #222;
-  height: 190px;
-}
 #ft {
-  width: 940px;
-  position: relative;
-  height: 190px;
-  background: url('../images/footer_bg.png') no-repeat;
-}
-.footer_logo {
-  position: absolute;
-  top: 26px;
-  right: 65px;
-  width: 220px;
-  height: 95px;
-  background: url('../images/c2_footer_logo.png') no-repeat;
-  text-indent: -3000em;
-}
-.footer_contact {
-  position: absolute;
-  bottom: 16px;
-  right: 78px;
-  color: #999;
-}
-.footer_contact ul {
-  margin-bottom: 5px;
-}
-.footer_nav {
-	position: absolute;
-	top: 8px;
-	left: 5px;	
-}
-.login {
-  position: absolute;
-  top: 25px;
-  right: 5px;
-}
-.login a {
-  color: #333;
-}
-.footer_nav ul {
-	float: left;
-}
-.footer_nav li {
-	float: left;
-	border-right: 1px solid #676767;	
-}
-.footer_nav li.last {
-	border-right: none;	
-}
-.footer_nav li a {
-	display: block;
-	float: left;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: #dddddd;
-	text-shadow: 0px 1px 0px #000;
-}
-.footer_nav li a:hover {
-/*  text-decoration: underline;*/
-	color: #a70d0e;
-	text-shadow: none;
+  margin-top: -20px;
+  width: 100%;
+  height: 20px;
+  background: #222;
 }
 .copyright {
-	position: absolute;
-	right: 10px;
-	top: 19px;
-	color: #ddd;
-}
-.footer_contact_wrap {
-  float: left;
-  position: relative;
-  left: 425px;
-  top: 5px;
-  text-align: center;
-  color: #ddd;
-}
-.footer_contact_wrap a:link {
-  color: #ddd;
-  text-decoration: underline;
-}
-.footer_contact_wrap a:hover{
-  color: #ffb800;
-  text-decoration: underline;
-}
-.twitter_link {
 	position: relative;
-	left: 15px;
-	top: 70px;
-	width: 311px;
-	height: 100px;
-	background: url('../images/twitter_bird.png') no-repeat;
-}
-.twitter_link h4 {
-	position: relative;
-	float: right;
-	right: 50px;
-	top: -10px;
-	color: #dddddd;
-	text-shadow: 0px 1px 0px #000;
-	font-size: 155%;
-}
-.twitter_link h4:hover {
-	color: #a70d0e;
-	text-shadow: none;
-}
-#twitter_feed {
-	position: relative;
-	width: 235px;
-	left: 115px;
-	top: 25px;
-}
-#twitter_feed ul {
-	color: #dddddd;
-}
-.tweet_header {
-	margin-bottom: 5px;
-	color: #a70d0e;
+	float: left;
+	margin: 2px 10px;
+	color: #c9cdca;
 }
 /********************************************/
 /**************CROSSFADE STYLES**************/

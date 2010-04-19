@@ -6,7 +6,7 @@
 </head>
 <body class="yui-skin-sam">
   <!-- Application Layout -->
-  <div id="wrapper" class="container_12">
+  <div id="wrapper">
     <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
 	  <div id="hd" class="left">
       <%= render :partial => "layouts/header" %>
@@ -16,11 +16,11 @@
         <%= yield %>
       </div>
     </div>
-    <div id="ft" class="left">
-      <%= render :partial => "layouts/footer" %>
-    </div>
+    <div class="clear"></div>
 	</div>
-	<%= render :partial => "layouts/scripts" %>
+	<div id="ft">
+    <%= render :partial => "layouts/footer" %>
+  </div>
 </body>
 </html>
 
