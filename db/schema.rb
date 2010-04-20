@@ -9,11 +9,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100418022049) do
+ActiveRecord::Schema.define(:version => 20100420225425) do
 
   create_table "claims", :force => true do |t|
     t.string   "name"
     t.integer  "provider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "client_sessions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

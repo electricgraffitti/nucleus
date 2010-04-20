@@ -2906,3 +2906,1158 @@ Rendered layouts/_icon_nav (1.2ms)
 Rendered layouts/_header (3.6ms)
 Rendered layouts/_footer (0.1ms)
 Completed in 44ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100417234026)
+Migrating to CreateProviders (20100418021722)
+Migrating to CreateClaims (20100418022049)
+Migrating to CreateClientSessions (20100420225341)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "client_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420225341')[0m
+Migrating to CreateClients (20100420225425)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420225425')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("claims")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("client_sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("providers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-20 17:13:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (45.8ms)
+Rendered layouts/_flash (1.1ms)
+Rendered layouts/_main_nav (1.7ms)
+Rendered layouts/_icon_nav (2.6ms)
+Rendered layouts/_header (14.2ms)
+Rendered layouts/_footer (22.3ms)
+Completed in 143ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:13:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+
+ActionView::TemplateError (client_session_url failed to generate from {:controller=>"client_sessions", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["client_sessions", :id] - are they all satisfied?) on line #3 of app/views/client_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @client_session, :url => client_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :username %><br />
+6:   <%= f.text_field :username %><br />
+
+    (eval):16:in `client_session_path'
+    app/views/client_sessions/new.html.erb:3
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (143.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:14:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+
+ActionView::TemplateError (client_session_url failed to generate from {:controller=>"client_sessions", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["client_sessions", :id] - are they all satisfied?) on line #3 of app/views/client_sessions/new.html.erb:
+1: <h1>Login</h1>
+2: 
+3: <% form_for @client_session, :url => client_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :username %><br />
+6:   <%= f.text_field :username %><br />
+
+    (eval):16:in `client_session_path'
+    app/views/client_sessions/new.html.erb:3
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:15:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (4.3ms)
+Completed in 39ms (View: 27, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:15:46) [GET]
+
+ActionController::RoutingError (No route matches "/articles.rss" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:17:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:17:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:17:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:17:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:18:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 23ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:18:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:19:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-20 17:19:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (3.2ms)
+Rendered layouts/_flash (0.7ms)
+Rendered layouts/_main_nav (1.3ms)
+Rendered layouts/_icon_nav (2.0ms)
+Rendered layouts/_header (11.3ms)
+Rendered layouts/_footer (0.5ms)
+Completed in 103ms (View: 100, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:19:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:19:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:20:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 20ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:20:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:29:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:29:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:32:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 20ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:32:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:34:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:34:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:35:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.4ms)
+Completed in 83ms (View: 71, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:35:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:36:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.4ms)
+Completed in 20ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:36:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.6ms)
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:36:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:38:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 20ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:38:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:38:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.3ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:38:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:39:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.4ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:39:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:40:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 86ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:40:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:40:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:40:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:41:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:41:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:41:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+ERROR: compiling _run_erb_app47views47client_sessions47new46html46erb RAISED compile error
+/Users/BobHanson/Sites/Railsapps/nucleus/app/views/client_sessions/new.html.erb:15: syntax error, unexpected ','
+...ncat(( f.label :remember_me, ,:class => "label_small" ).to_s...
+                              ^
+Function body:           def _run_erb_app47views47client_sessions47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"login_left\">\n  <h1 class=\"med_nucleus_logo\">Nucleus</h1>\n  <h2>Welcome Back!</h2>\n  "
+
+
+;  form_for(@client_session) do |f| ; @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n    <p>\n      "
+
+; @output_buffer.concat(( f.label :username ).to_s); @output_buffer.concat "<br/>\n      "
+; @output_buffer.concat(( f.text_field :username ).to_s); @output_buffer.concat "\n    </p>\n    <p>\n      "
+
+
+; @output_buffer.concat(( f.label :password ).to_s); @output_buffer.concat "<br/>\n      "
+; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "\n    </p>\n    <p>\n      "
+
+
+; @output_buffer.concat(( f.check_box :remember_me ).to_s); @output_buffer.concat(( f.label :remember_me, ,:class => "label_small" ).to_s); @output_buffer.concat "<br/>\n      "
+; @output_buffer.concat(( link_to "Forgot your password", "#" ).to_s); @output_buffer.concat "\n    </p>\n    <p>"
+
+; @output_buffer.concat(( f.submit "Login", :class => 'btn' ).to_s); @output_buffer.concat "</p>\n  "
+;  end ; @output_buffer.concat "\n</div>\n\n<div id=\"login_right\">\n  \n</div>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/BobHanson/Sites/Railsapps/nucleus/app/views/client_sessions/new.html.erb:27:in `compile!'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/commands/server.rb:111
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/BobHanson/Sites/Railsapps/nucleus/app/views/client_sessions/new.html.erb:15: syntax error, unexpected ','
+...ncat(( f.label :remember_me, ,:class => "label_small" ).to_s...
+                              ^) on line #15 of app/views/client_sessions/new.html.erb:
+12:       <%= f.password_field :password %>
+13:     </p>
+14:     <p>
+15:       <%= f.check_box :remember_me %><%= f.label :remember_me, ,:class => "label_small" %><br/>
+16:       <%= link_to "Forgot your password", "#" %>
+17:     </p>
+18:     <p><%= f.submit "Login", :class => 'btn' %></p>
+
+    app/views/client_sessions/new.html.erb:27:in `compile!'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:43:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+ERROR: compiling _run_erb_app47views47client_sessions47new46html46erb RAISED compile error
+/Users/BobHanson/Sites/Railsapps/nucleus/app/views/client_sessions/new.html.erb:15: syntax error, unexpected ','
+...ncat(( f.label :remember_me, , ,:class => "label_small" ).to...
+                              ^
+Function body:           def _run_erb_app47views47client_sessions47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"login_left\">\n  <h1 class=\"med_nucleus_logo\">Nucleus</h1>\n  <h2>Welcome Back!</h2>\n  "
+
+
+;  form_for(@client_session) do |f| ; @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n    <p>\n      "
+
+; @output_buffer.concat(( f.label :username ).to_s); @output_buffer.concat "<br/>\n      "
+; @output_buffer.concat(( f.text_field :username ).to_s); @output_buffer.concat "\n    </p>\n    <p>\n      "
+
+
+; @output_buffer.concat(( f.label :password ).to_s); @output_buffer.concat "<br/>\n      "
+; @output_buffer.concat(( f.password_field :password ).to_s); @output_buffer.concat "\n    </p>\n    <p>\n      "
+
+
+; @output_buffer.concat(( f.check_box :remember_me ).to_s); @output_buffer.concat(( f.label :remember_me, , ,:class => "label_small" ).to_s); @output_buffer.concat "<br/>\n      "
+; @output_buffer.concat(( link_to "Forgot your password", "#" ).to_s); @output_buffer.concat "\n    </p>\n    <p>"
+
+; @output_buffer.concat(( f.submit "Login", :class => 'btn' ).to_s); @output_buffer.concat "</p>\n  "
+;  end ; @output_buffer.concat "\n</div>\n\n<div id=\"login_right\">\n  \n</div>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/BobHanson/Sites/Railsapps/nucleus/app/views/client_sessions/new.html.erb:27:in `compile!'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/BobHanson/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/commands/server.rb:111
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/BobHanson/Sites/Railsapps/nucleus/app/views/client_sessions/new.html.erb:15: syntax error, unexpected ','
+...ncat(( f.label :remember_me, , ,:class => "label_small" ).to...
+                              ^) on line #15 of app/views/client_sessions/new.html.erb:
+12:       <%= f.password_field :password %>
+13:     </p>
+14:     <p>
+15:       <%= f.check_box :remember_me %><%= f.label :remember_me, , ,:class => "label_small" %><br/>
+16:       <%= link_to "Forgot your password", "#" %>
+17:     </p>
+18:     <p><%= f.submit "Login", :class => 'btn' %></p>
+
+    app/views/client_sessions/new.html.erb:27:in `compile!'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:44:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+
+ActionView::TemplateError (wrong number of arguments (4 for 3)) on line #15 of app/views/client_sessions/new.html.erb:
+12:       <%= f.password_field :password %>
+13:     </p>
+14:     <p>
+15:       <%= f.check_box :remember_me %><%= f.label :remember_me, :remember_me, "Remeber Me",:class => "label_small" %><br/>
+16:       <%= link_to "Forgot your password", "#" %>
+17:     </p>
+18:     <p><%= f.submit "Login", :class => 'btn' %></p>
+
+    app/views/client_sessions/new.html.erb:15:in `label'
+    app/views/client_sessions/new.html.erb:15
+    app/views/client_sessions/new.html.erb:4
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:45:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 29ms (View: 16, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:45:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:45:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.7ms)
+Completed in 23ms (View: 9, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:45:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:46:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.5ms)
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:46:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:46:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 29ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:46:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:47:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 27ms (View: 14, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:47:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:48:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (4.7ms)
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:48:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:49:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 87ms (View: 75, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:49:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:50:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:50:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:50:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.3ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:50:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 17:51:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.1ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 17:51:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/BobHanson/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
