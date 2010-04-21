@@ -19,10 +19,23 @@ var flash = {
 		}
 };
 
-
+var scatterChart;
+var chart;
 //**********Initialize Document**********//
 
 $(document).ready(function() {
+	
+  // Scatter Plot
+    $.getScript('javascripts/data/scatterData.js');
+  
+  // Bar Graph
+  $.getScript('javascripts/data/comboData.js');
+  
+  // Line Chart
+	$.getScript('javascripts/data/lineData.js');
+	
+	// Pie Chart
+	$.getScript('javascripts/data/pieChart.js');
 	
 	// injects flash div into dom
 	flash.injectFlashBox();
@@ -33,5 +46,4 @@ $(document).ready(function() {
  	if(msg != "") {
 		flash.activateNotice(flash_message);
 	}
-	
 });
