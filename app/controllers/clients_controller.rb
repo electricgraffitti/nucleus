@@ -47,7 +47,7 @@ class ClientsController < ApplicationController
     respond_to do |format|
       if @client.save
         flash[:notice] = 'Account Created'
-        format.html { redirect_to dashboard_path }
+        format.html { redirect_to quick_launch_path }
         format.xml  { render :xml => @client, :status => :created, :location => @client }
       else
         format.html { render :action => "new" }

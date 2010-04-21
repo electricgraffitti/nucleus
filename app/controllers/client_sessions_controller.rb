@@ -10,7 +10,7 @@ class ClientSessionsController < ApplicationController
     @client_session = ClientSession.new(params[:client_session])
     if @client_session.save
       flash[:notice] = "Login successful!"
-      redirect_to dashboard_path
+      redirect_to quick_launch_path
     else
       render :action => :new
     end
