@@ -1,0 +1,18 @@
+<h1>Listing client_sessions</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @client_sessions.each do |client_session| %>
+  <tr>
+    <td><%= link_to 'Show', client_session %></td>
+    <td><%= link_to 'Edit', edit_client_session_path(client_session) %></td>
+    <td><%= link_to 'Destroy', client_session, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client_session', new_client_session_path %>

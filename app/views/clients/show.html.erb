@@ -1,0 +1,33 @@
+<p>
+  <b>First name:</b>
+  <%=h @client.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @client.last_name %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%=h @client.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @client.email %>
+</p>
+
+<p>
+  <b>Crypted password:</b>
+  <%=h @client.crypted_password %>
+</p>
+
+<p>
+  <b>Password salt:</b>
+  <%=h @client.password_salt %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

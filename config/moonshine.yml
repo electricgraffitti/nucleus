@@ -21,6 +21,7 @@
 # to the server: these are files that you don't have/want in scm.
 :local_config:
  - config/database.yml
+ - config/app_config.yml
 #
 # The entries in shared_children are created in #{application}/shared
 :shared_children:
