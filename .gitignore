@@ -1,0 +1,11 @@
+log/development.log
+log/*.log
+log/*.pid
+db/schema.sql
+.DS_Store
+public/attachments/*
+public/ad_images/*
+config/development.sphinx.conf
+db/sphinx/*
+db/sphinx/development/*
+.sqlite3
