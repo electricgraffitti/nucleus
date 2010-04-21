@@ -3,7 +3,7 @@ $(document).ready(function() {
   // Sets up Line Chart
   lineGraphData = [['2010-01-30',4], ['2010-02-30',6.5], ['2010-03-30',5.7], ['2010-04-30',9], ['2010-05-30',8.2]];
   lineGraph = $.jqplot('top_left_chart', [lineGraphData], {
-      title:'Fraud Savings for 2010',
+      title:'Provider Rankings',
       axes:{xaxis:{renderer:$.jqplot.DateAxisRenderer}},
       series:[{lineWidth:4, markerOptions:{style:'square'}}],
       cursor:{show: false, zoom:false, showTooltip:false}

@@ -410,7 +410,8 @@ ul.icon_nav li#icon_nav_7:hover {
 /*****Dashboard*****/
 #dashboard {
   position: relative;
-  width: 960px;
+  width: 920px;
+  padding: 20px;
   margin: 20px auto;
   min-height: 720px;
   border: 1px solid #c0c0c0;
