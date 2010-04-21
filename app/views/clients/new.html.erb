@@ -1,35 +1,43 @@
-<h1>New client</h1>
+<div id="login_left">
+  <h1 class="med_nucleus_logo">Nucleus</h1>
+  <h2 class="register">Client Registration</h2>
+  <% form_for(@client) do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name %>
+    </p>
+    <p>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p>
+      <%= f.submit 'Create', :class => "login_btn" %>
+    </p>
+  <% end %>
+</div>
 
-<% form_for(@client) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :crypted_password %><br />
-    <%= f.text_field :crypted_password %>
-  </p>
-  <p>
-    <%= f.label :password_salt %><br />
-    <%= f.text_field :password_salt %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', clients_path %>
+<div id="login_right">
+  <div class="login_sub_box">
+    
+  </div>
+  <div class="login_sub_box">
+    
+  </div>
+</div>

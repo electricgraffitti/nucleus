@@ -1,0 +1,1848 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100417234026)
+Migrating to CreateProviders (20100418021722)
+Migrating to CreateClaims (20100418022049)
+Migrating to CreateClientSessions (20100420225341)
+Migrating to CreateClients (20100420225425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("claims")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("client_sessions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("providers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-20 23:35:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (10.5ms)
+Rendered layouts/_flash (0.5ms)
+Rendered layouts/_main_nav (1.0ms)
+Rendered layouts/_icon_nav (1.4ms)
+Rendered layouts/_header (9.6ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 97ms (View: 95, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:35:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:35:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:47:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 36ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:47:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:49:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 68ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:49:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:49:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:49:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:49:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:49:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:50:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:50:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:52:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:52:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-20 23:52:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 23:52:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/gloss_button_blue.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:01:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (54.7ms)
+Completed in 80ms (View: 61, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:01:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.8ms)
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:02:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:02:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:02:49) [GET]
+
+ActionController::RoutingError (No route matches "/articles.rss" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:03:04) [GET]
+
+ActionController::RoutingError (No route matches "/shows.atom" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:03:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:03:16) [GET]
+
+ActionController::RoutingError (No route matches "/articles.rss" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:04:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:04:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.9ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:06:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.5ms)
+Completed in 66ms (View: 58, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:06:45) [GET]
+
+ActionController::RoutingError (No route matches "/client/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:06:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 103ms (View: 13, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:09:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+
+NoMethodError (undefined method `client_sessions' for #<ClientsController:0x1033a17a0>):
+  app/controllers/clients_controller.rb:31:in `new'
+
+Rendered rescues/_trace (90.4ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:09:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.5ms)
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:10:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:10:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:11:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.5ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:11:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.4ms)
+Completed in 69ms (View: 62, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:12:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:15:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:16:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-04-21 00:16:37) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "client"=>{"password_confirmation"=>"[FILTERED]", "username"=>"darin", "last_name"=>"Johnson", "password"=>"[FILTERED]", "email"=>"darin@hcinsight.com", "first_name"=>"Darin"}, "controller"=>"clients"}
+
+NoMethodError (undefined method `persistence_token=' for #<Client:0x10342dc28>):
+  authlogic (2.1.1) lib/authlogic/acts_as_authentic/persistence_token.rb:50:in `reset_persistence_token'
+  authlogic (2.1.1) lib/authlogic/acts_as_authentic/password.rb:188:in `after_password_set'
+  authlogic (2.1.1) lib/authlogic/acts_as_authentic/password.rb:231:in `password='
+  app/controllers/clients_controller.rb:45:in `new'
+  app/controllers/clients_controller.rb:45:in `create'
+
+Rendered rescues/_trace (91.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-04-21 00:17:39) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "client"=>{"password_confirmation"=>"[FILTERED]", "username"=>"darin", "last_name"=>"Johnson", "password"=>"[FILTERED]", "email"=>"darin@hcinsight.com", "first_name"=>"Darin"}, "controller"=>"clients"}
+
+NoMethodError (undefined method `persistence_token=' for #<Client:0x1035cd290>):
+  authlogic (2.1.1) lib/authlogic/acts_as_authentic/persistence_token.rb:50:in `reset_persistence_token'
+  authlogic (2.1.1) lib/authlogic/acts_as_authentic/password.rb:188:in `after_password_set'
+  authlogic (2.1.1) lib/authlogic/acts_as_authentic/password.rb:231:in `password='
+  app/controllers/clients_controller.rb:45:in `new'
+  app/controllers/clients_controller.rb:45:in `create'
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100417234026)
+Migrating to CreateProviders (20100418021722)
+Migrating to CreateClaims (20100418022049)
+Migrating to CreateClientSessions (20100420225341)
+Migrating to CreateClients (20100420225425)
+Migrating to AddPersistenceTokenToClients (20100421072308)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mALTER TABLE "clients" ADD "persistence_token" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100421072308')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("claims")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("client_sessions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("providers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-04-21 00:24:02) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "client"=>{"password_confirmation"=>"[FILTERED]", "username"=>"darin", "last_name"=>"Johnson", "password"=>"[FILTERED]", "email"=>"darin@hcinsight.com", "first_name"=>"Darin"}, "controller"=>"clients"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."email") = 'darin@hcinsight.com') LIMIT 1[0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."username") = 'darin') LIMIT 1[0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+  [4;35;1mClient Create (0.3ms)[0m   [0mINSERT INTO "clients" ("created_at", "crypted_password", "updated_at", "username", "password_salt", "last_name", "persistence_token", "first_name", "email") VALUES('2010-04-21 07:24:03', 'e9be44213ef267e6303afbcf83de2dd2ab0e0527755d4fa5c064d17a0e2c9ae5365d53c7ddf0e68d5e1513a5e0ed61a42b18c23860f2b97004b2dd58de9fb39c', '2010-04-21 07:24:03', 'darin', '1OQ9-mdQiXu7uLPWx2Vt', 'Johnson', '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596', 'Darin', 'darin@hcinsight.com')[0m
+Redirected to http://localhost:3000/
+Completed in 180ms (DB: 1) | 302 Found [http://localhost/clients]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:24:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+
+NameError (undefined local variable or method `account_url' for #<ClientSessionsController:0x1033be558>):
+  app/controllers/application_controller.rb:34:in `require_no_client'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 71ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 72ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 72ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 73ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: sessions: DELETE FROM sessions[0m
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 64ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:25:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 65ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 64ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 64ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = '73a6c698f4393f3cdf50f501a4b1edf12478cfb20acfa8a52c8454b784d8bd63f0d4a7d8c8c9525ce6fb9734febf2a241fccf89c2b8253e72df2b36899ede596') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:26:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (3.2ms)
+Completed in 74ms (View: 65, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientSessionsController#create (for 127.0.0.1 at 2010-04-21 00:26:26) [POST]
+  Parameters: {"commit"=>"Sign In", "action"=>"create", "client_session"=>{"remember_me"=>"0", "username"=>"darin", "password"=>"[FILTERED]"}, "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE (LOWER("clients".username) = 'darin') LIMIT 1[0m
+Redirected to http://localhost:3000/nucleus-client-dashboard
+Completed in 207ms (DB: 0) | 302 Found [http://localhost/client_sessions]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:26:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.5ms)
+Rendered layouts/_flash (0.5ms)
+Rendered layouts/_main_nav (1.1ms)
+Rendered layouts/_icon_nav (2.0ms)
+Rendered layouts/_header (11.0ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 32ms (View: 30, DB: 0) | 200 OK [http://localhost/nucleus-client-dashboard]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:31:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = '1') LIMIT 1[0m
+Rendered layouts/_main_nav (0.8ms)
+Rendered layouts/_icon_nav (1.9ms)
+Rendered layouts/_header (6.7ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 29ms (View: 27, DB: 0) | 200 OK [http://localhost/nucleus-client-dashboard]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:32:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = '1') LIMIT 1[0m
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (1.0ms)
+
+ActionView::TemplateError (undefined method `join' for #<Client:0x1032b1b88>) on line #9 of app/views/layouts/_header.html.erb:
+6:   <%= render :partial => 'layouts/main_nav', :locals => {:client => current_client} %>
+7:   <%= render :partial => 'layouts/icon_nav' %>
+8:   <div id="client_name">
+9:     Welcome <%= client.full_name %>
+10:   </div>
+11: </div>
+
+    app/models/client.rb:6:in `full_name'
+    app/views/layouts/_header.html.erb:9
+    app/views/layouts/application.html.erb:12
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:37:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = '1') LIMIT 1[0m
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (1.0ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/nucleus-client-dashboard]
+
+
+Processing ClientSessionsController#destroy (for 127.0.0.1 at 2010-04-21 00:38:02) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/client_sessions/new
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/client-logout]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:38:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.3ms)
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ClientSessionsController#create (for 127.0.0.1 at 2010-04-21 00:39:11) [POST]
+  Parameters: {"commit"=>"Sign In", "action"=>"create", "client_session"=>{"remember_me"=>"0", "username"=>"darin", "password"=>"[FILTERED]"}, "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.6ms)[0m   [0mSELECT * FROM "clients" WHERE (LOWER("clients".username) = 'darin') LIMIT 1[0m
+Redirected to http://localhost:3000/nucleus-client-dashboard
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/client_sessions]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:39:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = '1') LIMIT 1[0m
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (1.1ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_footer (0.0ms)
+Completed in 87ms (View: 85, DB: 0) | 200 OK [http://localhost/nucleus-client-dashboard]
+
+
+Processing ClientSessionsController#destroy (for 127.0.0.1 at 2010-04-21 00:39:16) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/client_sessions/new
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/client-logout]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:39:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.5ms)
+Rendered layouts/_flash (0.1ms)
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:39:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+Completed in 78ms (View: 12, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#new (for 127.0.0.1 at 2010-04-21 00:40:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clients"}
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.3ms)
+Rendered layouts/_flash (0.1ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/clients/new]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-04-21 00:40:26) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "client"=>{"password_confirmation"=>"[FILTERED]", "username"=>"admin", "last_name"=>"Hanson", "password"=>"[FILTERED]", "email"=>"bhanson@hcinsight.com", "first_name"=>"Bob"}, "controller"=>"clients"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."email") = 'bhanson@hcinsight.com') LIMIT 1[0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."username") = 'admin') LIMIT 1[0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+  [4;35;1mClient Create (0.4ms)[0m   [0mINSERT INTO "clients" ("created_at", "crypted_password", "updated_at", "username", "password_salt", "last_name", "persistence_token", "first_name", "email") VALUES('2010-04-21 07:40:26', '3e0e3c2ad7f2740841433268b5072a94d01a0e26e36d683af71c4ab0d81ae99486a127c9d438bdb61a7bab190b0e2ce76885776b796a47c90b45c50ae407f9d8', '2010-04-21 07:40:26', 'admin', '_oWJVrMCGLNaTb-Tubhs', 'Hanson', 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244', 'Bob', 'bhanson@hcinsight.com')[0m
+Redirected to http://localhost:3000/
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/clients]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 73ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 74ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:40:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 73ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 73ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.4ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 73ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:41:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_client] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-04-21 00:42:26) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "client"=>{"password_confirmation"=>"[FILTERED]", "username"=>"admin", "last_name"=>"Hanson", "password"=>"[FILTERED]", "email"=>"bhanson@hcinsight.com", "first_name"=>"Bob"}, "controller"=>"clients"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."email") = 'bhanson@hcinsight.com') LIMIT 1[0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."username") = 'admin') LIMIT 1[0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."persistence_token" = '184c2d34916e1120ff35132ecfa3991baf919ce2d1559ae31cf43952aea5589ece2b8cf925d78f34f6827002f35387cf5399a1a2c9a7546a353c0c959da590e0') LIMIT 1[0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."email" = 'bhanson@hcinsight.com') LIMIT 1[0m
+Rendering template within layouts/client_sessions
+Rendering clients/new
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+Completed in 89ms (View: 14, DB: 0) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#create (for 127.0.0.1 at 2010-04-21 00:43:09) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "client"=>{"password_confirmation"=>"[FILTERED]", "username"=>"jim", "last_name"=>"Beam", "password"=>"[FILTERED]", "email"=>"jbeam@whisky.com", "first_name"=>"Jim"}, "controller"=>"clients"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."email") = 'jbeam@whisky.com') LIMIT 1[0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE (LOWER("clients"."username") = 'jim') LIMIT 1[0m
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."persistence_token" = '738d6b08b87e920186f394501c82462c729e62a89ba08891bede63a45d1ab8ab6539d079153d388e513acfb9baf92f6e75aaf5291bdea426fd96f5f4f3bbe77a') LIMIT 1[0m
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."email" = 'jbeam@whisky.com') LIMIT 1[0m
+  [4;36;1mClient Load (0.5ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+  [4;35;1mClient Create (0.5ms)[0m   [0mINSERT INTO "clients" ("created_at", "crypted_password", "updated_at", "username", "password_salt", "last_name", "persistence_token", "first_name", "email") VALUES('2010-04-21 07:43:09', '9b785e92844b929cdf657aed30e039e0a45be9a36c95c23918555b04d08d0c1957f840ca2637c55dfc4cadc1536f860641985828d147bece9966280388f86a9a', '2010-04-21 07:43:09', 'jim', '4YqzuCs0TKyxgfgwOKJw', 'Beam', '738d6b08b87e920186f394501c82462c729e62a89ba08891bede63a45d1ab8ab6539d079153d388e513acfb9baf92f6e75aaf5291bdea426fd96f5f4f3bbe77a', 'Jim', 'jbeam@whisky.com')[0m
+Redirected to http://localhost:3000/nucleus-client-dashboard
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/clients]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:43:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.5ms)
+Rendered layouts/_flash (0.1ms)
+  [4;36;1mClient Load (0.4ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (1.1ms)
+Rendered layouts/_header (2.5ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 24ms (View: 23, DB: 0) | 200 OK [http://localhost/nucleus-client-dashboard]
+
+
+Processing ClientSessionsController#destroy (for 127.0.0.1 at 2010-04-21 00:43:15) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"client_sessions"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."persistence_token" = 'eb5395719fbc0610d6c32c69908bac662779fd73eb0c97e5c3974363ee7e9bd8ac9c30e5f59f3de3a4fb4c95ee0c91f9769cb7220f6b6d67b422d637a1aea244') LIMIT 1[0m
+Redirected to http://localhost:3000/client_sessions/new
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/client-logout]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:43:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/client_sessions/new]
+
+
+Processing ClientSessionsController#create (for 127.0.0.1 at 2010-04-21 00:43:27) [POST]
+  Parameters: {"commit"=>"Sign In", "action"=>"create", "client_session"=>{"remember_me"=>"0", "username"=>"admin", "password"=>"[FILTERED]"}, "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE (LOWER("clients".username) = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/nucleus-client-dashboard
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/client_sessions]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-04-21 00:43:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.3ms)
+  [4;35;1mClient Load (0.4ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = '2') LIMIT 1[0m
+Rendered layouts/_main_nav (0.3ms)
+Rendered layouts/_icon_nav (1.1ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 85ms (View: 83, DB: 0) | 200 OK [http://localhost/nucleus-client-dashboard]
+
+
+Processing ClientSessionsController#destroy (for 127.0.0.1 at 2010-04-21 00:43:31) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"client_sessions"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = '2') LIMIT 1[0m
+Redirected to http://localhost:3000/client_sessions/new
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/client-logout]
+
+
+Processing ClientSessionsController#new (for 127.0.0.1 at 2010-04-21 00:43:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"client_sessions"}
+Rendering template within layouts/client_sessions
+Rendering client_sessions/new
+Rendered layouts/_headmeta (2.4ms)
+Rendered layouts/_flash (0.1ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/client_sessions/new]

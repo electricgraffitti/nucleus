@@ -1,4 +1,6 @@
 class ClientsController < ApplicationController
+  
+  layout "client_sessions"
   # GET /clients
   # GET /clients.xml
   def index
@@ -44,8 +46,8 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        flash[:notice] = 'Client was successfully created.'
-        format.html { redirect_to(@client) }
+        flash[:notice] = 'Account Created'
+        format.html { redirect_to dashboard_path }
         format.xml  { render :xml => @client, :status => :created, :location => @client }
       else
         format.html { render :action => "new" }
@@ -61,7 +63,7 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.update_attributes(params[:client])
-        flash[:notice] = 'Client was successfully updated.'
+        flash[:notice] = 'Account Updated'
         format.html { redirect_to(@client) }
         format.xml  { head :ok }
       else

@@ -360,6 +360,10 @@ ul.icon_nav li#icon_nav_7:hover {
   margin-bottom: 26px;
   font-size: 18px;
 }
+#login_left h2.register {
+	margin-top: 5px;
+  margin-bottom: 5px;
+}
 #login_right {
   position: relative;
   float: left;
@@ -367,7 +371,17 @@ ul.icon_nav li#icon_nav_7:hover {
   height: 366px;
   border-left: 1px solid #c0c0c0;
   margin: 42px 40px 60px 0px;
-  background: #dedede;
+	background: #fff url('../images/login/hci_logo.jpg') right bottom no-repeat;
+}
+.login_sub_box {
+	position: relative;
+	width: 328px;
+	height: 126px;
+	padding: 10px;
+	margin-left: 40px;
+	margin-top: 1px;
+	margin-bottom: 20px;
+	background: transparent url('../images/login/sub_box_bg.jpg') no-repeat;
 }
 /*********************************************/
 /******************BUTTONS********************/
@@ -387,6 +401,20 @@ ul.icon_nav li#icon_nav_7:hover {
 .btn:hover {
 	color: #fefefe;
   background: #a70d0e;
+}
+.login_btn {
+	position: relative;
+	width: 90px;
+	height: 34px;
+	border: none;
+	background: url('../images/login/login_button.jpg') 0px 0px no-repeat;
+	color: #c0c0c0;
+	font-size: 14px;
+	padding: 0px;
+}
+.login_btn:hover {
+	background: url('../images/login/login_button.jpg') 0px -34px no-repeat;
+	color: #333;
 }
 /*********************************************/
 /******************FOOTER********************/

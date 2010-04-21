@@ -3,9 +3,9 @@
   <%= image_tag("header/account_brand.png", :alt => "Molina Healthcare", :id => "account_brand") %>
 </div>
 <div id="nav_wrapper">
-  <%= render :partial => 'layouts/main_nav' %>
+  <%= render :partial => 'layouts/main_nav', :locals => {:client => current_client} %>
   <%= render :partial => 'layouts/icon_nav' %>
   <div id="client_name">
-    Welcome <%= @user %>
+    Welcome <%= client.full_name %>
   </div>
 </div>

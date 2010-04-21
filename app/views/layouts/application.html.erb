@@ -9,7 +9,7 @@
   <div id="wrapper">
     <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
 	  <div id="hd" class="green_background left">
-      <%= render :partial => "layouts/header" %>
+      <%= render :partial => "layouts/header", :locals => {:client => current_client} %>
 	  </div>
     <div id="bd" class="left">
       <div class="main_content left">

@@ -7,6 +7,7 @@
 <body class="yui-skin-sam green_background">
   <!-- Application Layout -->
   <div id="login_wrapper">
+    <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
     <div id="bd" class="left">
       <%= yield %>
     </div>
