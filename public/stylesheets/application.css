@@ -105,10 +105,10 @@ a:active, button:active {
   outline: none;
 }
 .green_background {
-  background: #64a531;
+  background: #6ac520;
 }
 .green {
-  color: #64a531;
+  color: #6ac520;
 }
 /******************************************/
 /*******************ERRORS*****************/
@@ -131,7 +131,7 @@ a:active, button:active {
 }
 
 #errorExplanation {
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 0%;
   width: 100%;
@@ -191,18 +191,20 @@ label.error {
 	text-indent: -3000em;
   background: url('../images/header/logo.png') no-repeat;
 }
-#hd #account_brand {
-	position: absolute;
-	right: 10px;
-	bottom: 35px;
+#hd #brand_wrap {
+	position: relative;
+	float: right;
+	height: 29px;
+	top: 18px;
 }
 #client_name {
 	position: relative;
 	height: 15px;
 	padding: 7px 0px;
 	float: right;
-	color: #c9cdca;
+	color: #fff;
 	margin-right: 10px;
+	top: 26px;
 }
 /*******Navigation********/
 #nav_wrapper {
@@ -339,7 +341,7 @@ ul.icon_nav li#icon_nav_7:hover {
   background: transparent url('../images/login/nucleus_logo.jpg') no-repeat;
   margin-top: -18px;
 }
-#login_left h2 {
+#login_left h2.login {
   font-weight: bold;
   font-family: Arial, Helvetica, Geneva, sans-serif; 
   margin-top: 34px;
