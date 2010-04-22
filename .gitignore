@@ -10,3 +10,4 @@ db/sphinx/*
 db/sphinx/development/*
 .sqlite3
 log/sqlite/development.sqlite3
+log/sqlite/production.sqlite3
