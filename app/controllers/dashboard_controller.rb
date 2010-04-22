@@ -7,5 +7,9 @@ class DashboardController < ApplicationController
   def quick_launch
     
   end
-
+  
+  def provider_search
+    
+  end
+  
 end

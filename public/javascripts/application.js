@@ -25,29 +25,11 @@ var chart;
 
 $(document).ready(function() {
 	
-	Highcharts.setOptions({
-     colors: [
-        '#00853f',
-        '#009fc2',
-        '#98002e',
-        '#e5b53a',
-        '#00467f',
-        '#78496a'
-     ]
-  });
+	// Pull in Chart Scripts
+	$.getScript('javascripts/hciCharts.js');
 	
-  // Scatter Plot
-  $.getScript('javascripts/data/scatterData.js');
-  
-  // Bar Graph
-  $.getScript('javascripts/data/barData.js');
-  
-  // Line Chart
-	$.getScript('javascripts/data/lineData.js');
-	
-	// Pie Chart
-	$.getScript('javascripts/data/pieChart.js');
-	
+	// Pull in Layouts
+	$.getScript('javascripts/pageLayouts.js')
 	// injects flash div into dom
 	flash.injectFlashBox();
 	

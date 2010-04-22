@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"
   map.quick_launch "nucleus-quick-launch", :controller => "dashboard", :action => "quick_launch"
+  map.provider_search "nucleus-provider-search", :controller => "dashboard", :action => "provider_search"
   
   map.root :controller => "client_sessions", :action => "new"
 

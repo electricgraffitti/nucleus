@@ -54,7 +54,6 @@ var scatterChart = new Highcharts.Chart({
         point: {
           events: {
             click: function() {
-              alert(this.series.link);
             }
           }
         },
