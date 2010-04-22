@@ -2,19 +2,27 @@ var lineChart = new Highcharts.Chart({
    chart: {
       renderTo: 'top_right_chart',
       defaultSeriesType: 'line',
-      margin: [50, 150, 60, 80]
+      margin: [50, 20, 60, 80],
+      backgroundColor: {
+        linearGradient: [0, 0, 0, 300],
+        stops: [[0, 'rgb(56,57,56)'],[1, 'rgb(15,15,15)']]
+      },
+      zoomType: 'xy',
+      borderColor: '#ffffff',
+      borderRadius: 10,
+      borderWidth: 2
+   },
+   credits: {
+     enabled: false
    },
    title: {
-      text: 'Monthly Average Temperature',
+      text: 'Average Fraudulent Claims',
       style: {
-         margin: '10px 100px 0 0' // center it
+         color: "#c0c0c0"
       }
    },
    subtitle: {
-      text: 'Source: WorldClimate.com',
-      style: {
-         margin: '0 100px 0 0' // center it
-      }
+      text: 'Source: HCI Data Center'
    },
    xAxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
@@ -25,7 +33,7 @@ var lineChart = new Highcharts.Chart({
    },
    yAxis: {
       title: {
-         text: 'Temperature (Â°C)'
+         text: 'Claim Rejection Ratio'
       },
       plotLines: [{
          value: 0,
@@ -45,20 +53,22 @@ var lineChart = new Highcharts.Chart({
          left: 'auto',
          bottom: 'auto',
          right: '10px',
-         top: '100px'
-      }
+         top: '20px'
+      },
+      borderWidth: 1,
+      backgroundColor: '#FFFFFF'
    },
    series: [{
-      name: 'Tokyo',
+      name: 'Medicaid',
       data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
    }, {
-      name: 'New York',
+      name: 'Medicare',
       data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
    }, {
-      name: 'Berlin',
+      name: 'Facility',
       data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
    }, {
-      name: 'London',
+      name: 'P & C',
       data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
    }]
 });

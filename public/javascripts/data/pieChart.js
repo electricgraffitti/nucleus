@@ -1,10 +1,23 @@
 var pieChart = new Highcharts.Chart({
    chart: {
       renderTo: 'bottom_right_chart',
-      margin: [50, 200, 60, 170]
+      margin: [50, 20, 60, 20],
+      backgroundColor: {
+        linearGradient: [0, 0, 0, 300],
+        stops: [[0, 'rgb(56,57,56)'],[1, 'rgb(15,15,15)']]
+      },
+      borderColor: '#ffffff',
+      borderRadius: 10,
+      borderWidth: 2
+   },
+   credits: {
+     enabled: false
    },
    title: {
-      text: 'Browser market shares at a specific website, 2008'
+      text: 'HealthCare Insight Service Share',
+      style: {
+        color: '#c0c0c0'
+      }
    },
    plotArea: {
       shadow: null,
@@ -36,26 +49,27 @@ var pieChart = new Highcharts.Chart({
       style: {
          left: 'auto',
          bottom: 'auto',
-         right: '50px',
-         top: '100px'
-      }
+         right: '20px',
+         top: '20px'
+      },
+      borderWidth: 1,
+      backgroundColor: '#FFFFFF'
    },
         series: [{
       type: 'pie',
       name: 'Browser share',
       data: [
-         ['Firefox',   44.2],
-         ['IE7',       26.6],
+         ['PCI',   44.2],
+         ['DCI',       10.6],
          {
-            name: 'IE6',
-            y: 20,
+            name: 'FCI',
+            y: 26.6,
             sliced: true,
             selected: true
          },
-         ['Chrome',    3.1],
-         ['Safari',    2.7],
-         ['Opera',     2.3],
-         ['Mozilla',   0.4]
+         ['OCI',    15.1],
+         ['RxI',    2.7],
+         ['VCI',     2.3]
       ]
       //data: [3.40, 1.05, 2.90, 1.65, 1.35, 2.59, 1.39, 3.07, 2.82]
    }]
