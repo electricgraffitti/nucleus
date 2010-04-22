@@ -341,7 +341,7 @@ ul.icon_nav li#icon_nav_7:hover {
   background: transparent url('../images/login/nucleus_logo.jpg') no-repeat;
   margin-top: -18px;
 }
-#login_left h2.login {
+#login_left h2 .login {
   font-weight: bold;
   font-family: Arial, Helvetica, Geneva, sans-serif; 
   margin-top: 34px;
