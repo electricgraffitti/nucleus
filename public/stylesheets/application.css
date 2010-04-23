@@ -495,9 +495,7 @@ ul.icon_nav li#icon_nav_7:hover {
 }
 #panel_main {
   position: relative;
-  float: right;
-  width: 100%;
-  margin-left: -220px;
+  margin-left: 220px;
   height: 668px;
 }
 #panel_layout div#panel_west {
@@ -510,7 +508,7 @@ ul.icon_nav li#icon_nav_7:hover {
 #panel_layout div#panel_south {
   position: relative;
   top: 75%;
-  margin-left: 220px;
+  width: 100%;
   height: 200px;
 }
 #west_resizer {
