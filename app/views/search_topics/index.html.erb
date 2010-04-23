@@ -1,0 +1,20 @@
+<h1>Listing search_topics</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @search_topics.each do |search_topic| %>
+  <tr>
+    <td><%=h search_topic.name %></td>
+    <td><%= link_to 'Show', search_topic %></td>
+    <td><%= link_to 'Edit', edit_search_topic_path(search_topic) %></td>
+    <td><%= link_to 'Destroy', search_topic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New search_topic', new_search_topic_path %>

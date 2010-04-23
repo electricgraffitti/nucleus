@@ -13,6 +13,9 @@ html, body {
   height: 100%;
   margin: 0px auto -20px;
 }
+#hd, #bd, #ft {
+  float: left;
+}
 #login_wrapper {
   position: relative;
   margin: 130px auto;
@@ -26,7 +29,18 @@ html, body {
   text-align: left;
 	width: 100%;
 }
-
+.grey_header {
+  border-top: 1px solid #818181;
+  border-bottom: 1px solid #818181;
+  background: #585958;
+  padding-left: 20px;
+  padding-top: 5px;
+  color: #CFCFCF;
+  text-shadow: 0px 1px 1px #333;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
 a {
   color: #2070b5;
 }
@@ -224,7 +238,7 @@ ul.nav_ul {
   margin-left: 4px;
 }
 ul.nav_ul li {
-  width: 60px;
+  width: 63px;
   height: 15px;
 	padding: 7px 0px;
   float: left;
@@ -442,6 +456,7 @@ ul.icon_nav li#icon_nav_7:hover {
   margin-left: 18px;
   color: #555;
   font-weight: bold;
+  text-shadow: 1px 1px 0px #efefef;
 }
 #page_header ul.page_nav {
   float: right;
@@ -466,20 +481,117 @@ ul.icon_nav li#icon_nav_7:hover {
 #page_header ul.page_nav li a:hover {
   color: #2070B5;
 }
+/***Panels***/
 #panel_layout {
   position: relative;
+  float: left;
   width: 100%;
   height: 100%;
+  text-align: left;
 }
-#panel_layout div.ui-layout-west {
-  min-height: 606px;
-}
-#panel_layout .test_box {
+#panel_main {
   position: relative;
-  margin: 20px;
-  width: 180px;
-  height: 200px;
-  background: #efefef;
+  float: left;
+  width: 100%;
+/*  min-height: 606px;*/
+}
+#panel_layout div#panel_west {
+  position: relative;
+  width: 220px;
+  height: 100%;
+  background: #f1f1f1;
+  float: left;
+} 
+#west_resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: #f1f1f1;
+  border-left: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+}
+.resize_vert {
+  position: relative;
+  top: 50%;
+  margin-top: -13px;
+  width: 6px;
+  height: 26px;
+  background: url('../images/inner_pages/resize_handle_vert.jpg') no-repeat;
+}
+#panel_layout #top_search {
+  position: relative;
+  width: 220px;
+  padding-bottom: 10px;
+}
+#search_search_topic_id {
+  margin: 20px 0px 10px 18px;
+  width: 173px;
+  background: #d2edbc;
+  border: 1px solid #c0c0c0;
+  padding: 2px;
+}
+#search_buttons {
+  margin-left: 18px;
+  margin-bottom: 10px;
+  width: 173px;
+  text-align: right;
+}
+#search_clear {
+  margin-right: 10px;
+}
+#sub_search_params {
+  position: relative;
+  text-align: left;
+}
+#sub_search_params {
+  width: 202px;
+  padding-top: 10px;
+  padding-left: 18px;
+  overflow: auto;
+}
+#sub_search_params label {
+  font-size: 12px;
+}
+#sub_search_params select {
+  margin: 5px 0px 10px;
+  width: 173px;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 2px;
+  float: left;
+}
+#sub_search_params input[type="text"] {
+  margin: 5px 0px 10px;
+  width: 162px;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  padding: 4px;
+  float: left;
+}
+#sub_search_params input[type="text"]:focus {
+  background: #f7fb87;
+}
+input[type="text"]#claim_sequence_wide {
+  width: 112px;
+}
+input[type="text"]#claim_sequence_short {
+  width: 29px;
+}
+a.search_mag {
+  position: relative;
+  display: block;
+  float: left;
+  width: 17px;
+  height: 17px;
+  text-indent: -3000em;
+  margin: 7px 0px 0px 3px;
+  background: url('../images/inner_pages/mag_glass.jpg') no-repeat;
+}
+span.field_seperator {
+  float: left;
+  margin: 7px 3px;
 }
 /*********************************************/
 /******************BUTTONS********************/
@@ -506,26 +618,45 @@ ul.icon_nav li#icon_nav_7:hover {
 	height: 34px;
 	border: none;
 	background: url('../images/login/login_button.jpg') 0px 0px no-repeat;
-	color: #c0c0c0;
+	color: #CFCFCF;
 	font-size: 14px;
 	padding: 0px;
+	text-shadow: 1px 1px 0px #333;
 }
 .login_btn:hover {
 	background: url('../images/login/login_button.jpg') 0px -34px no-repeat;
 	color: #333;
+	text-shadow: 1px 1px 0px #efefef;
+}
+.medium_btn {
+	position: relative;
+	width: 63px;
+	height: 24px;
+	border: none;
+	background: url('../images/inner_pages/medium_button.png') 0px 0px no-repeat;
+	color: #CFCFCF;
+	font-size: 12px;
+	padding: 0px;
+	text-shadow: 1px 1px 0px #333;
+}
+.medium_btn:hover {
+	background: url('../images/inner_pages/medium_button.png') 0px -24px no-repeat;
+	color: #333;
+	text-shadow: 1px 1px 0px #efefef;
 }
 /*********************************************/
 /******************FOOTER********************/
 #ft {
+  position: relative;
   margin-top: -20px;
   width: 100%;
   height: 20px;
   background: #222;
+  text-align: left;
 }
 .copyright {
 	position: relative;
-	float: left;
-	margin: 2px 18px;
+	margin: 0px 18px;
 	color: #c9cdca;
 }
 /*********************************************/

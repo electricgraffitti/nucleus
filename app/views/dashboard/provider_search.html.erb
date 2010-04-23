@@ -1,14 +1,10 @@
 <%= render :partial => 'layouts/inner_page_header' %>
 <div id="panel_layout">
-  <div class="ui-layout-west ui-layout-pane ui-layout-pane-west open">
-    <div id="main_west"></div>
-    <div class="test_box"></div>
-  </div>
-  <div class="panel ui-layout-center">
-    <div class="test_box"></div>
-    <div class="ui-layout-south ui-layout-pane ui-layout-pane-south open">
-      <div id="main_south"></div>
-      <div class="test_box"></div>
+  <div id="panel_west" class="ui-layout-west ui-layout-pane ui-layout-pane-west open">
+    <%= render :partial => 'dashboard/search' %>
+    <div id="west_resizer">
+      <div class="resize_vert"></div>
     </div>
   </div>
+  <div id="panel_main" class="panel ui-layout-center"></div>
 </div>
