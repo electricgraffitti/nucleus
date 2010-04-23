@@ -495,16 +495,23 @@ ul.icon_nav li#icon_nav_7:hover {
 #panel_main {
   position: relative;
   float: left;
-  width: 100%;
-/*  min-height: 606px;*/
+  width: 80%;
+  height: 668px;
 }
 #panel_layout div#panel_west {
   position: relative;
-  width: 220px;
+  width: 17.5%;
   height: 100%;
   background: #f1f1f1;
   float: left;
-} 
+}
+#panel_layout div#panel_south {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 200px;
+  float: left;
+}
 #west_resizer {
   position: absolute;
   top: 0;
@@ -515,6 +522,15 @@ ul.icon_nav li#icon_nav_7:hover {
   border-left: 1px solid #c0c0c0;
   border-right: 1px solid #c0c0c0;
 }
+#south_resizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-top: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+}
 .resize_vert {
   position: relative;
   top: 50%;
@@ -522,6 +538,14 @@ ul.icon_nav li#icon_nav_7:hover {
   width: 6px;
   height: 26px;
   background: url('../images/inner_pages/resize_handle_vert.jpg') no-repeat;
+}
+.resize_horz {
+  position: relative;
+  left: 50%;
+  margin-left: -13px;
+  width: 26px;
+  height: 6px;
+  background: url('../images/inner_pages/resize_handle_horz.jpg') no-repeat;
 }
 #panel_layout #top_search {
   position: relative;
