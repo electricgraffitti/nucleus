@@ -237,6 +237,9 @@ ul.nav_ul {
   min-height: 29px;
   margin-left: 4px;
 }
+ul.secondary_nav_ul {
+  margin-left: 30px;
+}
 ul.nav_ul li {
   width: 63px;
   height: 15px;
