@@ -18,9 +18,6 @@ var flash = {
 		 	1400);
 		}
 };
-
-var scatterChart;
-var chart;
 //**********Initialize Document**********//
 
 $(document).ready(function() {
@@ -29,7 +26,8 @@ $(document).ready(function() {
 	$.getScript('javascripts/hciCharts.js');
 	
 	// Pull in Layouts
-	$.getScript('javascripts/pageLayouts.js')
+  // $.getScript('javascripts/pageLayouts.js');
+	
 	// injects flash div into dom
 	flash.injectFlashBox();
 	
