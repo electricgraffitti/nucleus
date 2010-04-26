@@ -385,12 +385,22 @@ ul.icon_nav li#icon_nav_7:hover {
 .login_sub_box {
 	position: relative;
 	width: 328px;
-	height: 126px;
-	padding: 10px;
+	height: 131px;
+	padding: 5px 10px 0px;
 	margin-left: 40px;
 	margin-top: 1px;
 	margin-bottom: 20px;
 	background: transparent url('../images/login/sub_box_bg.jpg') no-repeat;
+}
+.login_sub_box p {
+  font-size: 13px;
+  margin-bottom: 6px;
+  text-align: center;
+  color: #666666;
+}
+.login_sub_box p b {
+  color: #444444;
+  font-size: 14px;
 }
 /*****Quick Launch*****/
 #quick_launch {
