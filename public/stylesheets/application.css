@@ -346,6 +346,46 @@ ul.icon_nav li#icon_nav_7:hover {
   font-size: 12px;
   font-weight: bold;
 }
+.panel_set {
+  position: relative;
+  float: left;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+.basic_panel, .combo_panel { /** A Combo Panel has sub_panels **/
+  position: relative;
+  width: 360px;
+  margin: 0px 0px 5px 20px;
+  padding: 6px 20px;
+  float: left;
+  border: 1px solid #c0c0c0;
+}
+.combo_panel {
+  width: 400px;
+  padding: 0px;
+}
+.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4  {
+  font-size: 14px;
+  color: #555;
+  padding: 5px;
+  float: left;
+}
+.basic_panel h4, .combo_panel h4 {
+  font-size: 13px;
+}
+.basic_panel h3 span, .basic_panel h4 span, .combo_panel h3 span, .combo_panel h4 span {
+  color: #333;
+}
+.sub_panel {
+  position: relative;
+  float: left;
+  padding: 6px 20px;
+  width: 360px;
+  border-bottom: 1px solid #c0c0c0;
+}
+.sub_panel.last {
+  border-bottom: none;
+}
 /****Login Page****/
 #login_left {
   position: relative;
@@ -506,7 +546,7 @@ ul.icon_nav li#icon_nav_7:hover {
 #panel_main {
   position: relative;
   margin-left: 220px;
-  height: 668px;
+  padding: 20px 0px;
 }
 #panel_layout div#panel_west {
   position: relative;
@@ -517,7 +557,7 @@ ul.icon_nav li#icon_nav_7:hover {
 }
 #panel_layout div#panel_south {
   position: relative;
-  top: 75%;
+  float: left;
   width: 100%;
   height: 200px;
 }
@@ -560,6 +600,13 @@ ul.icon_nav li#icon_nav_7:hover {
   position: relative;
   width: 220px;
   padding-bottom: 10px;
+}
+#provider_stat_date_range_date_range_id {
+  margin: 0px;
+  width: 173px;
+  background: #d2edbc;
+  border: 1px solid #c0c0c0;
+  padding: 2px;
 }
 #search_search_topic_id {
   margin: 20px 0px 10px 18px;
@@ -628,6 +675,55 @@ a.search_mag {
 span.field_seperator {
   float: left;
   margin: 7px 3px;
+}
+#provider_rating {
+  background: #D3D4D4;
+  font-size:18px;
+  font-weight:bold;
+  height:32px;
+  padding:7px 0 0 25px;
+  position:absolute;
+  right:0;
+  top:0;
+  width:65px;
+}
+#provider_rating.green_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs.png') right -78px no-repeat;
+}
+#provider_rating.yellow_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs.png') right -39px no-repeat;
+}
+#provider_rating.red_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs.png') right 0px no-repeat;
+}
+/** Provider Stats **/
+#provider_stats, #provider_stats .stat_group {
+  position: relative;
+  float: left;
+}
+#provider_stats .stat_group .stat_title {
+  position: relative;
+  text-align: right;
+  color: #555555;
+  font-size: 13px;
+  width: 55px;
+}
+#provider_stats .stat_group div {
+  padding: 5px 10px;
+}
+#provider_stats .stat_group .stat_value {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  background: #333;
+}
+#provider_stats .stat_group .stat_range {
+  position: relative;
+  text-align: left;
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
 }
 /*********************************************/
 /******************BUTTONS********************/

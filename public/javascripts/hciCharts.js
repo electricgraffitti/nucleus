@@ -21,3 +21,6 @@ $.getScript('javascripts/data/lineData.js');
 
 // Pie Chart
 $.getScript('javascripts/data/pieChart.js');
+
+// Provider Results Chart
+$.getScript('javascripts/data/providerResults.js');
