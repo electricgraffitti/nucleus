@@ -58,6 +58,43 @@
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
+        <div class="drag_row">Drag & drop a column header here to group by that column.</div>
+        <div id="provider_search_table">
+          <table>
+            <thead>
+              <tr>
+                <th>Score</th>
+                <th>Note</th>
+                <th>Prv Seq</th>
+                <th>Provider Name</th>
+                <th>TIN</th>
+                <th>Spec</th>
+                <th>Group Name</th>
+                <th>State</th>
+                <th>CIU Alerts</th>
+                <th>Condition Suspect</th>
+                <th>HCI Flagged</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% 10.times do %>
+              <tr class=<%=cycle('even', 'odd')%>>
+                <td><div class="table_rating_dot"></div>100</td>
+                <td><div class="table_note"></div></td>
+                <td>101896<div class="table_lock"></td>
+                <td>John Doe</td>
+                <td>391824445</td>
+                <td>37</td>
+                <td>UW Medical Foundation</td>
+                <td>WI</td>
+                <td>Yes</td>
+                <td>SBRD</td>
+                <td></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

@@ -138,7 +138,7 @@ var scatterChart = new Highcharts.Chart({
       name: "Dr. Schulzke",
       data: [[54.2, 13.6]],
       color: 'rgba(0,133,63,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+      url: "http://localhost:3000/nucleus-provider-search"
    },
    {
       name: "Dr. Blair",
