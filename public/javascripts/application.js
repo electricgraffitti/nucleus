@@ -21,12 +21,17 @@ var flash = {
 //**********Initialize Document**********//
 
 $(document).ready(function() {
-	
-	// Pull in Chart Scripts
-	$.getScript('javascripts/hciCharts.js');
-	
-	// Pull in Layouts
-  // $.getScript('javascripts/pageLayouts.js');
+  // Set Base Colors for Charts
+  Highcharts.setOptions({
+     colors: [
+        '#00853f',
+        '#009fc2',
+        '#98002e',
+        '#e5b53a',
+        '#00467f',
+        '#78496a'
+     ]
+  });
 	
 	// injects flash div into dom
 	flash.injectFlashBox();

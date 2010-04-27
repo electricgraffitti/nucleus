@@ -349,16 +349,38 @@ ul.icon_nav li#icon_nav_7:hover {
 .panel_set {
   position: relative;
   float: left;
-  max-width: 450px;
+  max-width: 400px;
   margin-bottom: 20px;
 }
 .basic_panel, .combo_panel { /** A Combo Panel has sub_panels **/
   position: relative;
-  width: 360px;
+  width: 340px;
   margin: 0px 0px 5px 20px;
   padding: 6px 20px;
   float: left;
   border: 1px solid #c0c0c0;
+}
+.provider_stats {
+  padding-bottom: 22px;
+}
+.panel_left, .panel_right {
+  position: relative;
+  float: left;
+  width: 50%;
+}
+.panel_item {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.panel_item .panel_item_title, .panel_item .panel_item_value {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.panel_item .panel_item_value {
+  font-weight: bold;
 }
 .combo_panel {
   width: 400px;
@@ -367,7 +389,7 @@ ul.icon_nav li#icon_nav_7:hover {
 .basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4  {
   font-size: 14px;
   color: #555;
-  padding: 5px;
+  padding: 5px 5px 5px 0px;
   float: left;
 }
 .basic_panel h4, .combo_panel h4 {
@@ -545,7 +567,6 @@ ul.icon_nav li#icon_nav_7:hover {
 }
 #panel_main {
   position: relative;
-  margin-left: 220px;
   padding: 20px 0px;
 }
 #panel_layout div#panel_west {
@@ -706,7 +727,7 @@ span.field_seperator {
   text-align: right;
   color: #555555;
   font-size: 13px;
-  width: 55px;
+  width: 70px;
 }
 #provider_stats .stat_group div {
   padding: 5px 10px;
@@ -740,17 +761,51 @@ span.field_seperator {
   border-bottom: 1px solid #818181;
   background: #D3D4D4;
   color: #818181;
-  padding: 5px 20px;
+  padding: 5px 0px;
+}
+.drag_row span {
+  padding-left: 20px;
 }
 th {
-  height: 23px;
+  height: 12px;
   background: url('../images/inner_pages/table_header.jpg') repeat-x;
   color: #c9caca;
   border-right: 1px solid #c9caca;
-  padding: 5px;
+  padding: 4px 5px 5px;
 }
 td {
   padding: 5px;
+}
+tr td div.table_note {
+  float: left;
+  width: 12px;
+  height: 15px;
+  margin-top: 3px;
+  background: url('../images/inner_pages/table_note_icon.jpg') no-repeat;
+}
+tr td div.table_rating_dot {
+  float: left;
+  width:14px;
+  height: 14px;
+  background: url('../images/inner_pages/table_rating_dots.jpg') 0px 0px;
+}
+tr td div.table_rating_dot.red_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') 0px 0px;
+}
+tr td div.table_rating_dot.yellow_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') 0px -14px;
+}
+tr td div.table_rating_dot.green_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') 0px -28px;
+}
+tr.odd td div.table_rating_dot.red_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -14px 0px;
+}
+tr.odd td div.table_rating_dot.yellow_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -14px -14px;
+}
+tr.odd td div.table_rating_dot.green_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -14px -28px;
 }
 tr.odd {
   background: #f0f2f0;
@@ -760,6 +815,40 @@ tr.even {
 }
 tr.active {
   background: #d2edbc;
+}
+/******Provider Search********/
+.provider_search_score {
+  width: 45px;
+}
+.provider_search_note {
+  width: 35px;
+}
+.provider_search_prv_seq {
+  width: 60px;
+}
+.provider_search_provider_name {
+  width: 90px;
+}
+.provider_search_tin {
+  width: 70px;
+}
+.provider_search_spec {
+  width: 40px;
+}
+.provider_search_group_name {
+  width: 150px;
+}
+.provider_search_state {
+  width: 35px;
+}
+.provider_search_ciu {
+  width: 60px;
+}
+.provider_search_condition {
+  width: 105px;
+}
+.provider_search_flagged {
+  width: 75px;
 }
 /*********************************************/
 /******************BUTTONS********************/

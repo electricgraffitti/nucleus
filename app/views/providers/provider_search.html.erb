@@ -1,4 +1,4 @@
-<%= render :partial => 'layouts/inner_page_header' %>
+<%= render :partial => 'providers/search_page_header' %>
 <div id="panel_layout">
   <div id="panel_west" class="ui-layout-west">
     <%= render :partial => 'dashboard/search' %>
@@ -58,9 +58,9 @@
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
-        <div class="drag_row">Drag & drop a column header here to group by that column.</div>
+        <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
         <div id="provider_search_table">
-          <table>
+          <table id="provider_search">
             <thead>
               <tr>
                 <th>Score</th>
@@ -78,18 +78,18 @@
             </thead>
             <tbody>
               <% 10.times do %>
-              <tr class=<%=cycle('even', 'odd')%>>
-                <td><div class="table_rating_dot"></div>100</td>
-                <td><div class="table_note"></div></td>
-                <td>101896<div class="table_lock"></td>
-                <td>John Doe</td>
-                <td>391824445</td>
-                <td>37</td>
-                <td>UW Medical Foundation</td>
-                <td>WI</td>
-                <td>Yes</td>
-                <td>SBRD</td>
-                <td></td>
+              <tr class='<%=cycle('even', 'odd')%>'>
+                <td class="provider_search_score"><div class="table_rating_dot green_dot"></div>100</td>
+                <td class="provider_search_note"><%= link_to '<div class="table_note"></div>', '#' %></td>
+                <td class="provider_search_prv_seq">101896<div class="table_lock"></td>
+                <td class="provider_search_provider_name">John Doe</td>
+                <td class="provider_search_tin">391824445</td>
+                <td class="provider_search_spec">37</td>
+                <td class="provider_search_group_name">UW Medical Foundation</td>
+                <td class="provider_search_state">WI</td>
+                <td class="provider_search_ciu">Yes</td>
+                <td class="provider_search_condition">SBRD</td>
+                <td class="provider_search_flagged"></td>
               </tr>
               <% end %>
             </tbody>
@@ -99,3 +99,6 @@
     </div>
   </div>
 </div>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'providerSearch' %>
+<% end %>

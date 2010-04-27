@@ -8,8 +8,4 @@ class DashboardController < ApplicationController
     
   end
   
-  def provider_search
-    
-  end
-  
 end

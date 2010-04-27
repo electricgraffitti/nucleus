@@ -82,4 +82,13 @@ class ProvidersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def provider_search
+    
+  end
+  
+  def provider_action
+    
+  end
+  
 end
