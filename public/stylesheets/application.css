@@ -346,13 +346,19 @@ ul.icon_nav li#icon_nav_7:hover {
   font-size: 12px;
   font-weight: bold;
 }
-.panel_set {
+.panel_set, .panel_set_2, .panel_set_3 {
   position: relative;
   float: left;
   max-width: 380px;
   margin-bottom: 20px;
 }
-.basic_panel, .combo_panel { /** A Combo Panel has sub_panels **/
+.panel_set_2 {
+  max-width: 322px;
+}
+.panel_set_3 {
+  max-width: 342px;
+}
+.basic_panel, .combo_panel, .basic_panel_2, .combo_panel_2, .basic_panel_3, .combo_panel_3 { /** A Combo Panel has sub_panels **/
   position: relative;
   width: 335px;
   margin: 0px 0px 5px 20px;
@@ -360,36 +366,18 @@ ul.icon_nav li#icon_nav_7:hover {
   float: left;
   border: 1px solid #c0c0c0;
 }
-.provider_info {
-  padding: 25px 10px 37px;
+.basic_panel_2, .combo_panel_2 {
+  width: 280px;
 }
-.provider_stats {
-  padding: 23px 10px;
-}
-.panel_left, .panel_right {
-  position: relative;
-  float: left;
-  width: 50%;
-}
-.panel_item {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.panel_item .panel_item_title, .panel_item .panel_item_value {
-  position: relative;
-  float: left;
-  width: 100%;
-}
-.panel_item .panel_item_value {
-  font-weight: bold;
+.basic_panel_3, .combo_panel_3 {
+  margin-left: 10px;
+  width: 305px;
 }
 .combo_panel {
   width: 355px;
   padding: 0px;
 }
-.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4  {
+.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4 {
   font-size: 14px;
   color: #555;
   padding: 5px 5px 5px 0px;
@@ -410,6 +398,34 @@ ul.icon_nav li#icon_nav_7:hover {
 }
 .sub_panel.last {
   border-bottom: none;
+}
+.provider_info {
+  padding: 25px 10px 27px;
+}
+.provider_stats {
+  padding: 22px 0px 13px;
+}
+.provider_action_chart {
+  padding: 0px;
+}
+.panel_left, .panel_right {
+  position: relative;
+  float: left;
+  width: 50%;
+}
+.panel_item {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.panel_item .panel_item_title, .panel_item .panel_item_value {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.panel_item .panel_item_value {
+  font-weight: bold;
 }
 /****Login Page****/
 #login_left {

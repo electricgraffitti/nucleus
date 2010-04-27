@@ -2,13 +2,14 @@ var scatterChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
       defaultSeriesType: 'scatter',
-      width: 340,
-      height: 210,
+      width: 310,
+      height: 200,
       zoomType: 'xy',
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
-      }
+      margin: [20,20,20,50],
+      // backgroundColor: {
+      //   linearGradient: [0, 0, 0, 300],
+      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
+      // }
    },
    credits: {
      enabled: false

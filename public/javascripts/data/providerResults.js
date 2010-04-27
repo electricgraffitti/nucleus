@@ -4,6 +4,7 @@ var scatterChart = new Highcharts.Chart({
       defaultSeriesType: 'scatter',
       width: 340,
       height: 210,
+      margin: [20,20,20,60],
       zoomType: 'xy',
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
