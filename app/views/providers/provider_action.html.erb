@@ -42,44 +42,148 @@
     </div>
     <div class="panel_set_3">
       <div class="basic_panel_3">
-        <div id="provider_action_chart" class="clear left"></div>
+        <div id="provider_action_hart" class="clear left"></div>
       </div>
     </div>
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
         <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
-        <div id="provider_search_table">
-          <table id="provider_search">
+        <div id="provider_action_table">
+          <table id="provider_action" border='1' borderColor='#c0c0c0'>
             <thead>
               <tr>
-                <th>Score</th>
+                <th><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th>Note</th>
-                <th>Prv Seq</th>
-                <th>Provider Name</th>
-                <th>TIN</th>
-                <th>Spec</th>
-                <th>Group Name</th>
-                <th>State</th>
-                <th>CIU Alerts</th>
-                <th>Condition Suspect</th>
-                <th>HCI Flagged</th>
+                <th>Trigger Date</th>
+                <th>Condition</th>
+                <th>Rank</th>
+                <th>Ttl Provider</th>
+                <th>Score</th>
+                <th>Billed</th>
+                <th>Paid</th>
+                <th>HCI Remnd Action</th>
+                <th>Client Action</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <% 10.times do %>
               <tr class='<%=cycle('even', 'odd')%>'>
-                <td class="provider_search_score"><div class="table_rating_dot green_dot"></div>100</td>
-                <td class="provider_search_note"><%= link_to '<div class="table_note"></div>', '#' %></td>
-                <td class="provider_search_prv_seq">101896<div class="table_lock"></td>
-                <td class="provider_search_provider_name">John Doe</td>
-                <td class="provider_search_tin">391824445</td>
-                <td class="provider_search_spec">37</td>
-                <td class="provider_search_group_name">UW Medical Foundation</td>
-                <td class="provider_search_state">WI</td>
-                <td class="provider_search_ciu">Yes</td>
-                <td class="provider_search_condition">SBRD</td>
-                <td class="provider_search_flagged"></td>
+                <td class="provider_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
+                <td class="provider_action_toggle"><%= link_to '<div class="table_icon table_toggle_icon"></div>', "" %></td>
+                <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', "" %></td>
+                <td class="provider_action_blank"></td>
+                <td class="provider_action_note"><%= link_to '<div class="table_icon table_note_icon"></div>', "" %></td>
+                <td class="provider_action_trigger_date">01/21/2010</td>
+                <td class="provider_action_condition">STPX / Procedure Combination - 98941</td>
+                <td class="provider_action_rank">120</td>
+                <td class="provider_action_ttl">13200</td>
+                <td class="provider_action_score">68</td>
+                <td class="provider_action_billed">$27,430</td>
+                <td class="provider_action_paid">No</td>
+                <td class="provider_action_remnd">True</td>
+                <td class="provider_action_client_action">N/A</td>
+                <td class="provider_action_action">N/A</td>
+              </tr>
+              <tr class="table_sub_content" style="display: none;">
+                <td colspan='16' cellpadding='0'>
+              <div class="table_toggle_content">
+                <div class="table_toggle_content_section">
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Code Pct</div>
+                    <div class="table_content_value">100%</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Pat Cnt</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Cnt w/Code</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Total Paid</div>
+                    <div class="table_content_value">$4592</div>
+                  </div>
+                </div>
+                <div class="table_toggle_content_section">
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Code Pct</div>
+                    <div class="table_content_value">100%</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Pat Cnt</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Cnt w/Code</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Total Paid</div>
+                    <div class="table_content_value">$4592</div>
+                  </div>
+                </div>
+                <div class="table_toggle_content_section">
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Code Pct</div>
+                    <div class="table_content_value">100%</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Pat Cnt</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Cnt w/Code</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Total Paid</div>
+                    <div class="table_content_value">$4592</div>
+                  </div>
+                </div>
+                <div class="table_toggle_content_section">
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Code Pct</div>
+                    <div class="table_content_value">100%</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Pat Cnt</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Cnt w/Code</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Total Paid</div>
+                    <div class="table_content_value">$4592</div>
+                  </div>
+                </div>
+                <div class="table_toggle_content_section last">
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Code Pct</div>
+                    <div class="table_content_value">100%</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Pat Cnt</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row odd">
+                    <div class="table_content_title">Pat Cnt w/Code</div>
+                    <div class="table_content_value">11</div>
+                  </div>
+                  <div class="table_toggle_content_section_row even">
+                    <div class="table_content_title">Total Paid</div>
+                    <div class="table_content_value">$4592</div>
+                  </div>
+                </div>
+              </div>
+              </td>
               </tr>
               <% end %>
             </tbody>

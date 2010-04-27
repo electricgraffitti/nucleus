@@ -18,6 +18,14 @@ var flash = {
 		 	1400);
 		}
 };
+
+var tableActions = {
+  
+  showSubContent: function(el) {
+    el.parent('tr').next('tr').slideToggle('slow');
+  }
+  
+};
 //**********Initialize Document**********//
 
 $(document).ready(function() {
@@ -31,6 +39,13 @@ $(document).ready(function() {
         '#00467f',
         '#78496a'
      ]
+  });
+  
+  // Hide the table sub content(toggle)
+  $toggle = $('.table_toggle_icon');
+  $toggle.click(function() {
+    tableActions.showSubContent($(this));
+    return false;
   });
 	
 	// injects flash div into dom
