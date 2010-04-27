@@ -1,6 +1,6 @@
 var scatterChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'provider_results_chart', 
+      renderTo: 'provider_action_chart', 
       defaultSeriesType: 'scatter',
       width: 340,
       height: 210,

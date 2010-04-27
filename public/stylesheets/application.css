@@ -349,19 +349,22 @@ ul.icon_nav li#icon_nav_7:hover {
 .panel_set {
   position: relative;
   float: left;
-  max-width: 400px;
+  max-width: 380px;
   margin-bottom: 20px;
 }
 .basic_panel, .combo_panel { /** A Combo Panel has sub_panels **/
   position: relative;
-  width: 340px;
+  width: 335px;
   margin: 0px 0px 5px 20px;
-  padding: 6px 20px;
+  padding: 6px 10px;
   float: left;
   border: 1px solid #c0c0c0;
 }
+.provider_info {
+  padding: 25px 10px 37px;
+}
 .provider_stats {
-  padding-bottom: 22px;
+  padding: 23px 10px;
 }
 .panel_left, .panel_right {
   position: relative;
@@ -383,7 +386,7 @@ ul.icon_nav li#icon_nav_7:hover {
   font-weight: bold;
 }
 .combo_panel {
-  width: 400px;
+  width: 355px;
   padding: 0px;
 }
 .basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4  {
@@ -401,8 +404,8 @@ ul.icon_nav li#icon_nav_7:hover {
 .sub_panel {
   position: relative;
   float: left;
-  padding: 6px 20px;
-  width: 360px;
+  padding: 6px 10px;
+  width: 335px;
   border-bottom: 1px solid #c0c0c0;
 }
 .sub_panel.last {
@@ -517,6 +520,10 @@ ul.icon_nav li#icon_nav_7:hover {
   width: 460px;
   height: 340px;
 }
+/***Charts***/
+#provider_results_chart {
+  margin-bottom: 2px;
+}
 /******Inner Page General*******/
 #page_header {
   position: relative;
@@ -567,7 +574,12 @@ ul.icon_nav li#icon_nav_7:hover {
 }
 #panel_main {
   position: relative;
+  margin-left: 220px;
   padding: 20px 0px;
+}
+#panel_main_full {
+  position: relative;
+  padding: 20px 0px  
 }
 #panel_layout div#panel_west {
   position: relative;

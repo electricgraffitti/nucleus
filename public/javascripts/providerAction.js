@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
-  // Provider Results Chart
-  $.getScript('javascripts/data/providerResults.js');
+  // Provider Action Chart
+  $.getScript('javascripts/data/providerActionChart.js');
   
   // $('#provider_search').dataTable();
   
