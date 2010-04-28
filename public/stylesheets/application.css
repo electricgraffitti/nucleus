@@ -11,7 +11,7 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0px auto -20px;
+  margin: 0px auto 0px;
 }
 #hd, #bd, #ft {
   float: left;
@@ -401,10 +401,15 @@ ul.icon_nav li#icon_nav_7:hover {
   border-bottom: none;
 }
 .provider_info {
-  padding: 25px 10px 27px;
+  height: 175px;
+  padding: 25px 10px 0px;
 }
 .provider_stats {
-  padding: 22px 0px 13px;
+  height: 224px;
+  padding: 22px 0px 0px;
+}
+.provider_chart {
+  height: 234px;
 }
 .provider_action_chart {
   padding: 0px;
@@ -783,7 +788,7 @@ span.field_seperator {
 }
 /*********************************************/
 /******************TABLES********************/
-.drag_row {
+.drag_row, .table_select {
   position: relative;
   float: left;
   height: 15px;
@@ -797,6 +802,25 @@ span.field_seperator {
 .drag_row span {
   padding-left: 20px;
 }
+.table_select form {
+  position: relative;
+  float: left;
+  margin: 10px 20px;
+}
+.table_select select {
+  width: 173px;
+  background: #d2edbc;
+  border: 1px solid #c0c0c0;
+  padding: 2px;
+}
+.table_select {
+  background: #fff;
+  border-bottom: none;
+  height: 45px;
+}
+table {
+  border-collapse: collapse;
+}
 th {
   height: 12px;
   background: url('../images/inner_pages/table_header.jpg') repeat-x;
@@ -807,6 +831,9 @@ th {
 td {
   padding: 5px;
 }
+td.empty {
+  padding: 0px;
+}
 tr td div.table_note_icon {
   background: url('../images/inner_pages/table_note_icon.jpg') no-repeat;
 }
@@ -814,6 +841,9 @@ tr td div.table_icon {
   float: left;
   width: 20px;
   height: 20px;
+}
+tr td div.table_toggle_icon {
+  cursor: pointer;
 }
 /* Even */
 tr td div.table_rating_dot.red_dot {
@@ -921,21 +951,25 @@ tr.active {
   width: 20px;
 }
 .provider_action_condition {
-  min-width: 220px;
+  min-width: 215px;
 }
 .provider_action_client_action {
-  min-width: 105px;
+  min-width: 96px;
 }
 .provider_action_action {
-  min-width: 100px;
+  min-width: 92px;
+}
+#provider_action {
+  min-width: 1024px;
 }
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
   position: relative;
   float: left;
-  width: 1020px;
+  width: 1009px;
 }
 .table_toggle_content {
+  margin: 5px;
  border: 1px solid #c0c0c0; 
 }
 .table_toggle_content_section {
@@ -1016,8 +1050,9 @@ tr.active {
 /*********************************************/
 /******************FOOTER********************/
 #ft {
-  position: relative;
-  margin-top: -20px;
+  position: absolute;
+  bottom: 0px;
+/*  margin-top: -20px;*/
   width: 100%;
   height: 20px;
   background: #222;

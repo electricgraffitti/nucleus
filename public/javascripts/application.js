@@ -22,7 +22,8 @@ var flash = {
 var tableActions = {
   
   showSubContent: function(el) {
-    el.parent('tr').next('tr').slideToggle('slow');
+    row = el.parents('tr').next('tr.table_sub_content').find('div.table_toggle_content');
+    row.slideToggle('slow');
   }
   
 };
