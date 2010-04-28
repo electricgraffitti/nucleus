@@ -9,11 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100423144918) do
+ActiveRecord::Schema.define(:version => 20100428194817) do
 
   create_table "claims", :force => true do |t|
-    t.string   "name"
     t.integer  "provider_id"
+    t.integer  "patient_id"
+    t.integer  "product_id"
+    t.string   "batch_number"
+    t.string   "sequence_number"
+    t.string   "sequence_sub_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,13 +39,38 @@ ActiveRecord::Schema.define(:version => 20100423144918) do
     t.string   "persistence_token"
   end
 
-  create_table "providers", :force => true do |t|
+  create_table "patients", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "ssn"
+    t.string   "sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "provider_groups", :force => true do |t|
+    t.string   "name"
+    t.string   "group_tin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "providers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
     t.integer  "tin"
-    t.string   "group_name"
     t.integer  "state_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "sequence_number"
+    t.integer  "provider_group_id"
+    t.integer  "provider_tax_id"
   end
 
   create_table "search_topics", :force => true do |t|

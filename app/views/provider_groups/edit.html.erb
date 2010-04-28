@@ -1,0 +1,20 @@
+<h1>Editing provider_group</h1>
+
+<% form_for(@provider_group) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :group_tin %><br />
+    <%= f.text_field :group_tin %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @provider_group %> |
+<%= link_to 'Back', provider_groups_path %>

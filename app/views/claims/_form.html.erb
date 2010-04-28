@@ -1,0 +1,30 @@
+<% form_for(@claim) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :batch_number %><br />
+    <%= f.text_field :batch_number %>
+  </p>
+  <p>
+    <%= f.label :sequence_number %><br />
+    <%= f.text_field :sequence_number %>
+  </p>
+  <p>
+    <%= f.label :sequence_sub_number %><br />
+    <%= f.text_field :sequence_sub_number %>
+  </p>
+  <p>
+    <%= f.label :provider_id, "Provider" %><br />
+    <%= collection_select(:claim, :provider_id, Provider.all, :id, :last_name) %>
+  </p>
+  <p>
+    <%= f.label :patient_id %><br />
+    <%= collection_select(:claim, :patient_id, Patient.all, :id, :ssn) %>
+  </p>
+  <p>
+    <%= f.label :product_id %><br />
+    <%= collection_select(:claim, :product_id, Product.all, :id, :name) %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

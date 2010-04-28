@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @provider_group.name %>
+</p>
+
+<p>
+  <b>Group tin:</b>
+  <%=h @provider_group.group_tin %>
+</p>
+
+
+<%= link_to 'Edit', edit_provider_group_path(@provider_group) %> |
+<%= link_to 'Back', provider_groups_path %>
