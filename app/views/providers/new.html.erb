@@ -1,14 +1,38 @@
-<h1>New provider</h1>
+<h2>New Provider</h2>
 
 <% form_for(@provider) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :tin %><br />
+    <%= f.text_field :tin %>
+  </p>
+  <p>
+    <%= f.label :sequence_number %><br />
+    <%= f.text_field :sequence_number %>
+  </p>
+  <p>
+    <%= f.label :provider_tax_id %><br />
+    <%= f.text_field :provider_tax_id %>
+  </p>
+  <p>
+    <%= f.label :state_id %><br />
+    <%= collection_select(:provider, :state_id, State.all, :id, :full_name) %>
+  </p>
+  <p>
+    <%= f.label :provider_group_id %><br />
+    <%= collection_select(:provider, :provider_group_id, ProviderGroup.all, :id, :full_name) %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
   </p>
 <% end %>
 

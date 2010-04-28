@@ -1,13 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :products
-
   map.resources :patients
-
   map.resources :provider_groups
-
   map.resources :search_topics
-
-
   map.resources :clients
   map.resources :client_sessions
   map.resources :claims

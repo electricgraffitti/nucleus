@@ -492,7 +492,7 @@ ul.icon_nav li#icon_nav_7:hover {
 /*****Quick Launch*****/
 #quick_launch {
   position: relative;
-  margin: 20px auto;
+  margin: 20px 20px;
   width: 805px;
   height: 403px;
   border: 1px solid #c0c0c0;
@@ -532,7 +532,7 @@ ul.icon_nav li#icon_nav_7:hover {
   position: relative;
   width: 920px;
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px 20px;
   min-height: 720px;
   border: 1px solid #c0c0c0;
 }
