@@ -230,7 +230,7 @@ label.error {
   left: 0px;
   height: 30px;
   width: 100%;
-	background: url('../images/header/main_nav_black_bg.png') repeat;
+	background: url('../images/header/main_nav_bg.png') 0px 0px repeat-x;
 }
 ul.nav_ul {
   position: relative;
@@ -253,7 +253,7 @@ ul.nav_ul li.last {
 	border-right: none;
 }
 ul.nav_ul li:hover {
-	background: url('../images/header/main_nav_silver_bg.png') repeat-x;
+	background: url('../images/header/main_nav_bg.png') 0px -29px repeat-x;
 }
 ul.nav_ul li a {
   text-decoration: none;
@@ -263,7 +263,7 @@ ul.nav_ul li a {
 	color: #c9cdca;
 }
 ul.nav_ul li a:hover {
-	color: #222;
+	color: #efefef;
 }
 ul.icon_nav {
 	position: relative;
