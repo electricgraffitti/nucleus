@@ -4,7 +4,7 @@ var barChart = new Highcharts.Chart({
       defaultSeriesType: 'bar',
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(56,57,56)'],[1, 'rgb(15,15,15)']]
+        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       borderColor: '#ffffff',
       borderRadius: 10,
@@ -16,18 +16,21 @@ var barChart = new Highcharts.Chart({
    title: {
       text: 'Top Fraudulent States',
       style: {
-        color: '#c0c0c0'
+        color: '#555555'
       } 
    },
    subtitle: {
-      text: 'Source: HCI Data Center'
+      text: 'Source: HCI Data Center',
+      style: {
+        color: '#6ac520'
+      }
    },
    xAxis: {
       categories: ['Los Angeles', 'New York', 'Miami', 'Orlando', 'San Diego'],
       title: {
          text: null,
          style: {
-           color: '#c0c0c0'
+           color: '#555555'
          }
       }
    },
@@ -35,7 +38,10 @@ var barChart = new Highcharts.Chart({
       min: 0,
       title: {
          text: 'Fraudulent Claims by Claim Count',
-         align: 'high'
+         align: 'high',
+         style: {
+           color: '#555555'
+         }
       }
    },
    tooltip: {

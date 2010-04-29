@@ -1,22 +1,16 @@
-<h1>Listing provider_groups</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Group tin</th>
-  </tr>
-
-<% @provider_groups.each do |provider_group| %>
-  <tr>
-    <td><%=h provider_group.name %></td>
-    <td><%=h provider_group.group_tin %></td>
-    <td><%= link_to 'Show', provider_group %></td>
-    <td><%= link_to 'Edit', edit_provider_group_path(provider_group) %></td>
-    <td><%= link_to 'Destroy', provider_group, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<div class="scaffold_panel">
+  <h2>Listing Provider Groups</h2>
+  <% @provider_groups.each do |provider_group| %>
+  <div class="listing_panel clear_left">
+    <h3>Provider Group: <span><%=h provider_group.name %></span></h3>
+    <div class="left">    
+      <div class="left"><%= link_to 'Show', provider_group %></div>
+      <div class="left"><%= link_to 'Edit', edit_provider_group_path(provider_group) %></div>
+      <div class="left"><%= link_to 'Delete', provider_group, :confirm => 'Are you sure?', :method => :delete %></div>
+    </div>
+  </div>
+  <% end %>
 
 <%= link_to 'New provider_group', new_provider_group_path %>
+</div>
+

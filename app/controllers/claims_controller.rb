@@ -82,4 +82,10 @@ class ClaimsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def note
+    
+    render :layout => false
+    
+  end
 end

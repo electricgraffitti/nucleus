@@ -4,7 +4,7 @@ var pieChart = new Highcharts.Chart({
       margin: [50, 20, 60, 20],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(56,57,56)'],[1, 'rgb(15,15,15)']]
+        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       borderColor: '#ffffff',
       borderRadius: 10,
@@ -16,13 +16,13 @@ var pieChart = new Highcharts.Chart({
    title: {
       text: 'HealthCare Insight Service Share',
       style: {
-        color: '#c0c0c0'
+        color: '#555555'
       }
    },
    plotArea: {
-      shadow: null,
-      borderWidth: null,
-      backgroundColor: null
+      shadow: true,
+      borderWidth: 2,
+      backgroundColor: '#555555'
    },
    tooltip: {
       formatter: function() {
@@ -41,7 +41,8 @@ var pieChart = new Highcharts.Chart({
             style: {
                font: '13px Trebuchet MS, Verdana, sans-serif'
             }
-         }
+         },
+         shadow: true
       }
    },
    legend: {

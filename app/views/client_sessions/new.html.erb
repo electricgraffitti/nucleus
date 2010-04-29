@@ -1,8 +1,9 @@
 <div id="login_left">
   <h1 class="med_nucleus_logo">Nucleus</h1>
-  <h2 class="login">Welcome Back!</h2>
+  <h2 class="login green">Welcome Back!</h2>
   <% form_for(@client_session) do |f| %>
     <%= f.error_messages %>
+    <div class="login_fields_wrap">
     <p>
       <%= f.label :username %><br/>
       <%= f.text_field :username %>
@@ -11,6 +12,7 @@
       <%= f.label :password %><br/>
       <%= f.password_field :password %>
     </p>
+    </div>
     <p class="top_20_wrap small_label">
       <%= f.check_box :remember_me %><%= f.label :remember_me %><br/>
     </p>
@@ -34,4 +36,7 @@
     </p>
     <%= link_to(image_tag('login/ad_boxes/hciu_ad.png', :alt => "HealthCare Insight Services"), "http://stage.hcinsight.com/insight-university", :target => "_blank") %>
   </div>
+  <p class="top_20_wrap">
+    <%= link_to "Subscribe", "#", :class => "login_rss"%>
+  </p>
 </div>

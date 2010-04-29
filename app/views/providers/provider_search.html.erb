@@ -1,4 +1,4 @@
-<%= render :partial => 'providers/search_page_header' %>
+<%= render :partial => 'providers/search_page_header', :locals => {:provider => @provider} %>
 <div id="panel_layout">
   <div id="panel_west" class="ui-layout-west">
     <%= render :partial => 'dashboard/search' %>
@@ -15,12 +15,11 @@
     </div>
     <div class="panel_set">
       <div class="basic_panel">
-        <h3>Provider Name: <span>John Doe</span></h3>
-        <div id="provider_rating" class="red_rating">99</div>
+        <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
       </div>
       <div class="combo_panel">
         <div class="sub_panel">
-        <h4>Provider Sequence: <span>101896</span></h4><h4>Primary Specialty: <span>37</span></h4>
+        <h4>Provider Sequence: <span><%= @provider.sequence_number %></span></h4><h4>Primary Specialty: <span>37</span></h4>
         </div>
         <div class="sub_panel">
           <div id="provider_stats">
@@ -59,46 +58,11 @@
       <div id="south_resizer">
         <div class="resize_horz"></div>
         <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
-        <div id="provider_search_table">
-          <table id="provider_search">
-            <thead>
-              <tr>
-                <th>Score</th>
-                <th>Note</th>
-                <th>Prv Seq</th>
-                <th>Provider Name</th>
-                <th>TIN</th>
-                <th>Spec</th>
-                <th>Group Name</th>
-                <th>State</th>
-                <th>CIU Alerts</th>
-                <th>Condition Suspect</th>
-                <th>HCI Flagged</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% 10.times do %>
-              <tr class='<%=cycle('even', 'odd')%>'>
-                <td class="provider_search_score"><div class="table_icon table_rating_dot green_dot"></div>100</td>
-                <td class="provider_search_note"><%= link_to '<div class=" table_icon table_note_icon"></div>', '#' %></td>
-                <td class="provider_search_prv_seq">101896<div class="table_icon table_lock_icon"></td>
-                <td class="provider_search_provider_name">John Doe</td>
-                <td class="provider_search_tin">391824445</td>
-                <td class="provider_search_spec">37</td>
-                <td class="provider_search_group_name">UW Medical Foundation</td>
-                <td class="provider_search_state">WI</td>
-                <td class="provider_search_ciu">Yes</td>
-                <td class="provider_search_condition">SBRD</td>
-                <td class="provider_search_flagged"></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+          <%= render :partial => "providers/provider_search_table", :locals => {:providers => @providers} %>
       </div>
     </div>
   </div>
 </div>
 <% content_for :javascripts do %>
-  <%= javascript_include_tag 'providerSearch' %>
+  <%= javascript_include_tag "providerSearch" %>
 <% end %>

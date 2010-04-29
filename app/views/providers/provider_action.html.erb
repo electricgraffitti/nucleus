@@ -1,8 +1,8 @@
-<%= render :partial => 'providers/action_page_header' %>
+<%= render :partial => 'providers/action_page_header', :locals => {:provider => @provider} %>
 <div id="panel_layout">
   <div id="panel_main_full" class="panel ui-layout-center">
     <div class="panel_set_2">
-      <%= render :partial => 'providers/provider_info' %>
+      <%= render :partial => 'providers/provider_info', :locals => {:provider => @provider} %>
     </div>
     <div class="panel_set">
       <%= render :partial => 'providers/provider_action_stats' %>

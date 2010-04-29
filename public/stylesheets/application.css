@@ -21,8 +21,8 @@ html, body {
   margin: 130px auto;
   width: 760px;
   height: 470px;
-  padding: 10px;
-  background: #83b759;
+  padding: 0px 0px 20px;
+  background: #333;
 }
 #hd, #bd {
   position: relative;
@@ -43,6 +43,9 @@ html, body {
   font-weight: bold;
 }
 a {
+  color: #555;
+}
+a:hover {
   color: #2070b5;
 }
 .hide_text {
@@ -124,6 +127,9 @@ a:active, button:active {
 }
 .green {
   color: #6ac520;
+}
+.grey_background {
+  background: #d2d3d3 url('../images/login/grey_bg_gradient.jpg') left top repeat-x;
 }
 /******************************************/
 /*******************ERRORS*****************/
@@ -340,6 +346,36 @@ ul.icon_nav li#icon_nav_7:hover {
 .cube_confessions {
   background: url('../images/c2_headers.png') 0px -130px no-repeat;
 }
+.scaffold_panel {
+  position: relative;
+  float: left;
+  text-align: left;
+  margin: 20px;
+  padding: 10px 20px 20px;
+  border: 1px solid #c0c0c0;
+}
+.scaffold_panel h2 {
+  font-size: 18px;
+  color: #c0c0c0;
+  font-weight: bold;
+}
+div.scaffold_pane label {
+  font-size: 12px;
+}
+.scaffold_panel p {
+  margin: 10px 0px;
+}
+.listing_panel {
+  position: relative;
+  width: 400px;
+  margin: 10px 0px;
+  padding: 6px 10px;
+  float: left;
+  border: 1px solid #c0c0c0;
+}
+.listing_panel a {
+  padding: 5px;
+}
 .contact_form {
 	margin-left: 280px;
 }
@@ -434,11 +470,12 @@ ul.icon_nav li#icon_nav_7:hover {
   font-weight: bold;
 }
 /****Login Page****/
-#login_left {
+#login_left, #login_right {
   position: relative;
   float: left;
-  width: 290px;
-  height: 366px;
+  text-align: left;
+  width: 325px;
+  height: 300px;
   margin: 42px 0px 60px 40px;
 }
 #login_left h1 {
@@ -452,8 +489,8 @@ ul.icon_nav li#icon_nav_7:hover {
 #login_left h2.login {
   font-weight: bold;
   font-family: Arial, Helvetica, Geneva, sans-serif; 
-  margin-top: 34px;
-  margin-bottom: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 18px;
 }
 #login_left h2.register {
@@ -461,27 +498,31 @@ ul.icon_nav li#icon_nav_7:hover {
   margin-bottom: 5px;
 }
 #login_right {
-  position: relative;
-  float: left;
-  width: 389px;
-  height: 366px;
+  width: 345px;
+  height: 350px;
   border-left: 1px solid #c0c0c0;
   margin: 42px 40px 60px 0px;
 	background: #fff url('../images/login/hci_logo.jpg') right bottom no-repeat;
 }
-.login_sub_box {
+.login_sub_box, .login_fields_wrap {
 	position: relative;
-	width: 328px;
-	height: 131px;
+	width: 282px;
+	height: 123px;
 	padding: 5px 10px 0px;
 	margin-left: 40px;
 	margin-top: 1px;
 	margin-bottom: 20px;
-	background: transparent url('../images/login/sub_box_bg.jpg') no-repeat;
+	border: 1px solid #c0c0c0;
+	background: #fff url('../images/login/sub_box_bg_x.jpg') left top repeat-x;
+}
+.login_fields_wrap {
+  width: 268px;
+  padding: 10px 0px 10px 20px;
+  margin: 1px 0px 20px 0px;
 }
 .login_sub_box p {
   font-size: 13px;
-  margin-bottom: 5px;
+  margin-bottom: 11px;
   text-align: center;
   color: #666666;
 }
@@ -489,35 +530,43 @@ ul.icon_nav li#icon_nav_7:hover {
   color: #444444;
   font-size: 14px;
 }
+.login_rss {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 5px 0px 0px 40px;
+  padding-left: 15px;
+  background: url('../images/login/login_rss.jpg') left 4px no-repeat;
+}
 /*****Quick Launch*****/
 #quick_launch {
   position: relative;
   margin: 20px 20px;
-  width: 805px;
-  height: 403px;
+  width: 1019px;
+  height: 510px;
   border: 1px solid #c0c0c0;
 }
 #quick_launch_top {
   position: relative;
   float: left;
   width: 100%;
-  height: 200px;
+  height: 254px;
   border-bottom: 1px solid #c0c0c0;
 }
 .quick_launch_box {
   position: relative;
   float: left;
   border-right: 1px solid #c0c0c0;
-  width: 200px;
-  height: 200px;
+  width: 254px;
+  height: 255px;
 }
 .quick_launch_box.last {
   border-right: none;
 }
 .quick_launch_box a {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 155px;
+  height: 155px;
   display: block;
   cursor: pointer;
   margin: 50px;
@@ -837,7 +886,7 @@ td.empty {
 tr td div.table_note_icon {
   background: url('../images/inner_pages/table_note_icon.jpg') no-repeat;
 }
-tr td div.table_icon {
+tr td div.table_icon, tr td a.table_icon {
   float: left;
   width: 20px;
   height: 20px;
@@ -855,7 +904,7 @@ tr td div.table_rating_dot.yellow_dot {
 tr td div.table_rating_dot.green_dot {
   background: url('../images/inner_pages/table_icon_sprite.jpg') 0px -40px;
 }
-tr td div.table_note_icon {
+tr td div.table_note_icon, tr td a.table_note_icon {
   background: url('../images/inner_pages/table_icon_sprite.jpg') 0px -60px no-repeat;
 }
 tr td div.table_mag_icon {
@@ -874,7 +923,7 @@ tr.odd td div.table_rating_dot.yellow_dot {
 tr.odd td div.table_rating_dot.green_dot {
   background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -40px;
 }
-tr.odd td div.table_note_icon {
+tr.odd td div.table_note_icon, tr.odd td a.table_note_icon {
   background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -60px no-repeat;
 }
 tr.odd td div.table_mag_icon {
@@ -893,7 +942,7 @@ tr.active td div.table_rating_dot.yellow_dot {
 tr.active td div.table_rating_dot.green_dot {
   background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -40px;
 }
-tr.active td div.table_note_icon {
+tr.active td div.table_note_icon, tr.active td a.table_note_icon {
   background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -60px no-repeat;
 }
 tr.active td div.table_mag_icon {
@@ -901,6 +950,16 @@ tr.active td div.table_mag_icon {
 }
 tr.active td div.table_toggle_icon {
   background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -100px no-repeat;
+}
+tr td a.table_icon_link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -3000em;
+}
+tr td a.note_trigger {
+  display: block;
+  text-indent: -3000em;
 }
 /* end */
 tr.odd {
@@ -1021,15 +1080,16 @@ tr.active {
 	height: 34px;
 	border: none;
 	background: url('../images/login/login_button.jpg') 0px 0px no-repeat;
-	color: #CFCFCF;
+	color: #fff;
 	font-size: 14px;
+	font-weight: bold;
 	padding: 0px;
-	text-shadow: 1px 1px 0px #333;
+	text-shadow: 0px 1px 0px #428011;
 }
 .login_btn:hover {
 	background: url('../images/login/login_button.jpg') 0px -34px no-repeat;
-	color: #333;
-	text-shadow: 1px 1px 0px #efefef;
+	color: #fff;
+/*  text-shadow: 0px -1px 0px #428011;*/
 }
 .medium_btn {
 	position: relative;
@@ -1097,13 +1157,17 @@ p.login_checkbox_wrap {
 
 /*/* overlay size and background image */ 
 div.overlay { 
- 
+    position: relative;
     width:530px; 
-    height:380px; 
- 
-    background-image:url(../images/overlay/apple.png); 
+    /*background-image:url(../images/overlay/apple.png); */
+    background: #fff;
     display:none; 
-    padding: 0 !important; 
+    padding: 0 !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+    -webkit-box-shadow: 2px 2px 5px #000;
 } 
  
 /* close button for overlay */ 
@@ -1115,25 +1179,48 @@ div.overlay div.close {
     width:35px; 
     height:35px; 
     cursor:pointer; 
-} 
- 
-/* original size of the player */ 
-#player, #player embed, #player object { 
-	height:291px;
-	left:12px;
-	position:relative;
-	top:12px;
-	width:481px;
-} 
- 
-/* absolute positioning of the player */ 
-#player embed, #player object { 
-    position:relative; 
- 
-    /* layer as the topmost element */ 
-    z-index:10000; 
-}*/
-
+}
+.contentWrap {
+  position: relative;
+  float: left;
+  text-align: left;
+  margin: 20px;
+}
+/***Modals***/
+.claim_notes h1 {
+  color: #6ac520;
+  text-shadow: 1px 1px 1px rgba('0,0,0,.2');
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.note_wrap {
+  position: relative;
+  float: left;
+  padding: 5px 0px;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+.note_title {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+}
+.note_date {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #c0c0c0;
+  font-size: 10px;
+  font-weight: bold;
+}
+.claim_notes p {
+  position: relative;
+  float: left;
+  padding: 5px 0px;
+}
 /* styling for elements inside overlay */ 
 .details { 
     position:absolute; 

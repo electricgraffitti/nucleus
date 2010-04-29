@@ -84,11 +84,22 @@ class ProvidersController < ApplicationController
   end
   
   def provider_search
+    @providers = Provider.all
+    if params[:id].nil?
+      @provider = Provider.last
+    else
+      @provider = Provider.find(params[:id])
+    end
     
   end
   
   def provider_action
-    
+    @provider = Provider.first
+    if params[:id].nil?
+      @provider = Provider.first
+    else
+      @provider = Provider.find(params[:id])
+    end
   end
   
 end

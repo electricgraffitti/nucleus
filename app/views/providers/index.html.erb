@@ -1,20 +1,15 @@
-<h1>Listing providers</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
-
-<% @providers.each do |provider| %>
-  <tr>
-    <td><%=h provider.name %></td>
-    <td><%= link_to 'Show', provider %></td>
-    <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
-    <td><%= link_to 'Destroy', provider, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<div class="scaffold_panel">
+  <h2>Listing providers</h2>
+  <% @providers.each do |provider| %>
+  <div class="listing_panel clear_left">
+    <h3>Provider Name: <span><%=h provider.full_name %></span></h3>
+    <div id="provider_rating" class="red_rating"><%= link_to "99", provider_path(provider) %></div>
+    <div class="left">
+      <div class="left"><%= link_to 'Show', provider %></div>
+      <div class="left"><%= link_to 'Edit', edit_provider_path(provider) %></div>
+      <div class="left"><%= link_to 'Destroy', provider, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+</div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New provider', new_provider_path %>
+<%= link_to 'New provider', new_provider_path %></div>

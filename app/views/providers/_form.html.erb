@@ -1,0 +1,39 @@
+<% form_for(@provider) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :tin %><br />
+    <%= f.text_field :tin %>
+  </p>
+  <p>
+    <%= f.label :sequence_number %><br />
+    <%= f.text_field :sequence_number %>
+  </p>
+  <p>
+    <%= f.label :provider_tax_id %><br />
+    <%= f.text_field :provider_tax_id %>
+  </p>
+  <p>
+    <%= f.label :provider_score %><br />
+    <%= f.text_field :provider_score %>
+  </p>
+  <p>
+    <%= f.label :state_id %><br />
+    <%= collection_select(:provider, :state_id, State.all, :id, :full_name) %>
+  </p>
+  <p>
+    <%= f.label :provider_group_id %><br />
+    <%= collection_select(:provider, :provider_group_id, ProviderGroup.all, :id, :name) %>
+  </p>
+  <p>
+    <%= f.submit 'Submit', :class => 'login_btn' %>
+  </p>
+<% end %>

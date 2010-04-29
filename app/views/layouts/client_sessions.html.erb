@@ -4,11 +4,13 @@
 <head>
   <%= render :partial => "layouts/headmeta" %>
 </head>
-<body class="yui-skin-sam green_background">
+<body class="yui-skin-sam grey_background">
   <!-- Application Layout -->
   <div id="login_wrapper">
     <div id="bd" class="left">
-      <%= yield %>
+      <div id="main_content" class="left">
+        <%= yield %>
+      </div>
     </div>
 	</div>
 	<%= render :partial => "layouts/scripts" %>

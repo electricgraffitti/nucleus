@@ -15,10 +15,13 @@ ActionController::Routing::Routes.draw do |map|
 
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"
   map.quick_launch "nucleus-quick-launch", :controller => "dashboard", :action => "quick_launch"
-  map.provider_search "nucleus-provider-search", :controller => "providers", :action => "provider_search"
-  map.provider_action "nucleus-provider-action", :controller => "providers", :action => "provider_action"
+  map.provider_search "nucleus-provider-search/:id", :controller => "providers", :action => "provider_search"
+  map.provider_action "nucleus-provider-action/:id", :controller => "providers", :action => "provider_action"
   
-  map.root :controller => "client_sessions", :action => "new"
+  # For Test
+  map.note "claim-notes", :controller => "claims", :action => "note"
+  
+  map.root :controller => "dashboard", :action => "login"
 
   
 end

@@ -5,10 +5,10 @@ var scatterChart = new Highcharts.Chart({
       zoomType: 'xy',
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(56,57,56)'],[1, 'rgb(15,15,15)']]
+        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       style: {
-        margin: ['0px 20px 20px 0px']
+        margin: ['0px 10px 20px 0px']
       },
       borderColor: '#ffffff',
       borderRadius: 10,
@@ -20,16 +20,22 @@ var scatterChart = new Highcharts.Chart({
    title: {
       text: 'Provider Risk Analysis',
       style: {
-         color: "#c0c0c0"
+         color: "#555555"
       }
    },
    subtitle: {
-      text: 'Source: HCI Data Center'
+      text: 'Source: HCI Data Center',
+      style: {
+         color: "#6ac520"
+      }
    },
    xAxis: {
       title: {
          enabled: true,
-         text: 'Claims Submitted'
+         text: 'Claims Submitted',
+         style: {
+            color: "#555555"
+         }
       },
       startOnTick: true,
       endOnTick: true,
@@ -37,7 +43,10 @@ var scatterChart = new Highcharts.Chart({
    },
    yAxis: {
       title: {
-         text: 'Claims Rejected'
+         text: 'Claims Rejected',
+         style: {
+            color: "#555555"
+         }
       }
    },
    tooltip: {

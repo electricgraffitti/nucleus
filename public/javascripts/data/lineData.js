@@ -5,7 +5,7 @@ var lineChart = new Highcharts.Chart({
       margin: [50, 20, 60, 80],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(56,57,56)'],[1, 'rgb(15,15,15)']]
+        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       zoomType: 'xy',
       borderColor: '#ffffff',
@@ -18,22 +18,31 @@ var lineChart = new Highcharts.Chart({
    title: {
       text: 'Average Fraudulent Claims',
       style: {
-         color: "#c0c0c0"
+         color: "#555555"
       }
    },
    subtitle: {
-      text: 'Source: HCI Data Center'
+      text: 'Source: HCI Data Center',
+      style: {
+         color: "#6ac520"
+      }
    },
    xAxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       title: {
-         text: 'Month'
+         text: 'Month',
+         style: {
+            color: "#555555"
+         }
       }
    },
    yAxis: {
       title: {
-         text: 'Claim Rejection Ratio'
+         text: 'Claim Rejection Ratio',
+         style: {
+            color: "#555555"
+         }
       },
       plotLines: [{
          value: 0,

@@ -3,7 +3,12 @@ class ClientSessionsController < ApplicationController
   before_filter :require_client, :only => :destroy
   
   def new
-    @client_session = ClientSession.new
+    
+    if current_client_session
+      redirect_to quick_launch_path
+    else
+      @client_session = ClientSession.new
+    end
   end
   
   def create
