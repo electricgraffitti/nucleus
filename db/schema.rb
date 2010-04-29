@@ -13,13 +13,13 @@ ActiveRecord::Schema.define(:version => 20100428205809) do
 
   create_table "claims", :force => true do |t|
     t.integer  "provider_id"
-    t.integer  "patient_id"
-    t.integer  "product_id"
-    t.string   "batch_number"
-    t.string   "sequence_number"
-    t.string   "sequence_sub_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "batch_number"
+    t.integer  "product_id"
+    t.string   "sequence_number"
+    t.string   "sequence_sub_number"
+    t.integer  "patient_id"
   end
 
   create_table "client_sessions", :force => true do |t|
@@ -62,8 +62,6 @@ ActiveRecord::Schema.define(:version => 20100428205809) do
   end
 
   create_table "providers", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
     t.integer  "tin"
     t.integer  "state_id"
     t.datetime "created_at"
@@ -71,6 +69,8 @@ ActiveRecord::Schema.define(:version => 20100428205809) do
     t.string   "sequence_number"
     t.integer  "provider_group_id"
     t.integer  "provider_tax_id"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   create_table "search_topics", :force => true do |t|

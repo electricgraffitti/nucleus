@@ -27,10 +27,17 @@ var tableActions = {
   },
   
   selectAllCheckboxes: function(el) {
-    $table = el.parentsUntil('table');
-    $rows = $table.children('tbody > tr').children('input[type=checkbox]');
-    $checkboxes = el.parentsUntil('table').find('input[type=checkbox]');
-    console.log($rows);
+		cb = $('table > tbody > tr > td > :checkbox').get();
+		
+		if (el.is(':checked')) {
+			$.each(cb, function() {
+				$(this).attr('checked', 'checked');
+			});
+		} else {
+			$.each(cb, function() {
+				$(this).attr('checked', '');
+			});
+		}
   }
   
 };
