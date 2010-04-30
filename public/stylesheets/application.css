@@ -713,16 +713,16 @@ div.scaffold_pane label {
 /*****Dashboard*****/
 #dashboard {
   position: relative;
-  width: 984px;
-  padding: 20px 0px;
-  margin: 20px 50px;
+  width: 994px;
+  margin: 15px;
   float:left;
 }
 .graph_box {
   position: relative;
   float: left;
-  width: 460px;
+  width: 480px;
   height: 340px;
+  margin: 8px;
 }
 /***Charts***/
 #provider_results_chart {
