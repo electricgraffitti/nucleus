@@ -45,7 +45,7 @@ class ProvidersController < ApplicationController
     respond_to do |format|
       if @provider.save
         flash[:notice] = 'Provider was successfully created.'
-        format.html { redirect_to(@provider) }
+        format.html { redirect_to providers_path }
         format.xml  { render :xml => @provider, :status => :created, :location => @provider }
       else
         format.html { render :action => "new" }
