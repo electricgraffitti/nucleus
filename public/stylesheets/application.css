@@ -480,7 +480,7 @@ div.scaffold_pane label {
 }
 .basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .combo_panel_2, .combo_panel_3, .combo_panel_4 { /** A Combo Panel has sub_panels **/
   position: relative;
-  width: 360px;
+  width: 363px;
   margin: 0px 0px 5px 20px;
   padding: 6px 10px;
   float: left;
@@ -506,7 +506,7 @@ div.scaffold_pane label {
   width: 335px;
 }
 .combo_panel {
-  width: 380px;
+  width: 383px;
   padding: 0px;
 }
 .basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4, .combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
@@ -525,7 +525,7 @@ div.scaffold_pane label {
   position: relative;
   float: left;
   padding: 6px 10px;
-  width: 360px;
+  width: 363px;
   border-bottom: 1px solid #c0c0c0;
 }
 .sub_panel.last {
