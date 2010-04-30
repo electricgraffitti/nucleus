@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
   
   def index
-    
+    render :layout => "application"
   end
   
   def quick_launch

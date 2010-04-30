@@ -713,11 +713,10 @@ div.scaffold_pane label {
 /*****Dashboard*****/
 #dashboard {
   position: relative;
-  width: 920px;
-  padding: 20px;
-  margin: 20px 20px;
-  min-height: 720px;
-  border: 1px solid #c0c0c0;
+  width: 984px;
+  padding: 20px 0px;
+  margin: 20px 50px;
+  float:left;
 }
 .graph_box {
   position: relative;
