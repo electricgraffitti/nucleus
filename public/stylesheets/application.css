@@ -488,7 +488,7 @@ div.scaffold_pane label {
 }
 .full_panel {
   position: relative;
-  width: 100%;
+  width: 962px;
   margin: 0px 0px 5px 0px;
   padding: 6px 10px;
   float: left;
@@ -940,12 +940,11 @@ span.field_seperator {
 .provider_flag_panel {
   position: relative;
   float: left;
-  width: 300px;
+  width: 295px;
   padding: 15px 0px 15px 15px;
   height: 30px;
   background: #333;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin: 5px;
 }
 .provider_flag_panel .last {
   margin-right: 0px;
