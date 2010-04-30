@@ -5,15 +5,24 @@
   <%= render :partial => "layouts/headmeta" %>
   <%= stylesheet_link_tag 'login' %>
 </head>
-<body class="yui-skin-sam grey_background">
+<body class="yui-skin-sam">
   <!-- Application Layout -->
-  <div id="login_wrapper">
+  <div id="wrapper">
+	  <div id="hd" class="green_background left">
+      <%= render :partial => "layouts/header", :locals => {:client => current_client} %>
+	  </div>
     <div id="bd" class="left">
       <div id="main_content" class="left">
         <%= yield %>
+        <div class="clear"></div>
+      </div>
+      
+      <div id="ft">
+        <%= render :partial => "layouts/footer" %>
       </div>
     </div>
 	</div>
-	<%= render :partial => "layouts/scripts" %>
+  <%= render :partial => 'layouts/overlay' %>
+  <%= render :partial => "layouts/scripts" %>
 </body>
 </html>

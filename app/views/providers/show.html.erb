@@ -1,8 +1,26 @@
-<p>
-  <b>Name:</b>
-  <%=h @provider.full_name %>
-</p>
-
-
-<%= link_to 'Edit', edit_provider_path(@provider) %> |
-<%= link_to 'Back', providers_path %>
+<%= render :partial => 'providers/provider_profile_header', :locals => {:provider => @provider} %>
+<div id="panel_layout" class="clear">
+  <div id="padded_panel_layout">
+    <div class="full_panel provider_heading_full">
+      <%= render :partial => 'providers/provider_heading_full', :locals => {:provider => @provider} %>
+    </div>
+    <div class="full_panel grey_panel">
+      <div class="provider_flag_panel">1. Provider</div>
+      <div class="provider_flag_panel">2. Provider Client Identifier</div>
+      <div class="provider_flag_panel last">3. Provider Score</div>
+      <div class="provider_flag_panel">4. Provider Address</div>
+      <div class="provider_flag_panel">5. Provider Fraud</div>
+      <div class="provider_flag_panel last">6. Provider Security</div>
+      <div class="provider_flag_panel">7. Provider NPI</div>
+      <div class="provider_flag_panel">8. Provider Sanction</div>
+      <div class="provider_flag_panel last">9. Provider License</div>
+    </div>
+    <div id="panel_south" class="ui-layout-south">
+  
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<% content_for :javascripts do %>
+  
+<% end %>

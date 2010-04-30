@@ -1,10 +1,10 @@
 <%= render :partial => 'providers/action_page_header', :locals => {:provider => @provider} %>
-<div id="panel_layout">
-  <div id="panel_main_full" class="panel ui-layout-center">
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
     <div class="panel_set_2">
       <%= render :partial => 'providers/provider_info', :locals => {:provider => @provider} %>
     </div>
-    <div class="panel_set">
+    <div class="panel_set_4">
       <%= render :partial => 'providers/provider_action_stats' %>
     </div>
     <div class="panel_set_3">
@@ -25,6 +25,7 @@
       <%= render :partial => 'provider_action_table' %>
     </div>
   </div>
+  <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag 'providerAction' %>
