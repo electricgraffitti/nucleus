@@ -4,19 +4,9 @@
     <div class="full_panel provider_heading_full">
       <%= render :partial => 'providers/provider_heading_full', :locals => {:provider => @provider} %>
     </div>
-    <div class="full_panel grey_panel">
-      <div class="provider_flag_panel">1. Provider</div>
-      <div class="provider_flag_panel">2. Provider Client Identifier</div>
-      <div class="provider_flag_panel last">3. Provider Score</div>
-      <div class="provider_flag_panel">4. Provider Address</div>
-      <div class="provider_flag_panel">5. Provider Fraud</div>
-      <div class="provider_flag_panel last">6. Provider Security</div>
-      <div class="provider_flag_panel">7. Provider NPI</div>
-      <div class="provider_flag_panel">8. Provider Sanction</div>
-      <div class="provider_flag_panel last">9. Provider License</div>
-    </div>
+    <%= render :partial => 'providers/provider_flags' %>
     <div id="panel_south" class="ui-layout-south">
-  
+        <%= render :partial => 'providers/provider_accordion' %>
     </div>
   </div>
   <div class="clear"></div>

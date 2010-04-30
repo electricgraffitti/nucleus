@@ -113,16 +113,6 @@ p {
 .justify {
   text-align: justify;
 }
-/***Firefox dotted line tweak***/
-a, button {
-  outline: none;
-}
-:focus, button {
-  -moz-outline-style: none;
-}
-a:active, button:active {
-  outline: none;
-}
 .green_background {
   background: #6ac520;
 }
@@ -131,6 +121,16 @@ a:active, button:active {
 }
 .grey_background {
   background: #d2d3d3 url('../images/login/grey_bg_gradient.jpg') left top repeat-x;
+}
+/***Firefox dotted line tweak***/
+h3, a, button {
+  outline: none;
+}
+h3, :focus, button {
+  -moz-outline-style: none;
+}
+h3, a:active, button:active {
+  outline: none;
 }
 /******************************************/
 /*******************ERRORS*****************/
@@ -377,7 +377,7 @@ ul.icon_nav li#icon_nav_7:hover {
   position: relative;
   float: left;
   width: 100%;
-  min-height: 200px;
+  margin-bottom: 20px;
 }
 #inner_panel {
   position: relative;
@@ -941,13 +941,54 @@ span.field_seperator {
   position: relative;
   float: left;
   width: 295px;
-  padding: 15px 0px 15px 15px;
-  height: 30px;
+  padding: 18px 0px 15px 15px;
+  height: 24px;
   background: #333;
   margin: 5px;
+  font-size: 18px;
+  color: #fff;
 }
 .provider_flag_panel .last {
   margin-right: 0px;
+}
+.provider_flag_panel a.flag_box {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  text-indent: -3000em;
+  width: 59px;
+  height: 57px;
+  border-left: 1px solid #474747;
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') left top no-repeat;
+}
+.provider_flag_panel a.flag_box.red_flag {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -59px top no-repeat;
+}
+.provider_flag_panel a.flag_box.yellow_flag {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -177px top no-repeat;
+}
+/**accordion**/
+#accordion {
+  width: 982px;
+  border: 1px solid #c0c0c0;
+}
+#accordion h3 {
+  background:none repeat scroll 0 0 #E7E7E7;
+  border-bottom:2px solid #FFFFFF;
+  color:#333333;
+  font-size:12px;
+  font-weight:bold;
+  height:12px;
+  padding:6px 15px 10px;
+  position:relative;
+  width:952px;
+}
+#accordion h3 a {
+  text-decoration:none;
+}
+.inner_accordion {
+  padding: 10px;
 }
 /*********************************************/
 /******************TABLES********************/

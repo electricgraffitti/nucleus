@@ -66,6 +66,8 @@ $(document).ready(function() {
   $('#provider_select').click(function() {
     tableActions.selectAllCheckboxes($(this));
   });
+  
+  $('#accordion').accordion({active: 3});
  
   $("a[rel]").overlay({ 
 
