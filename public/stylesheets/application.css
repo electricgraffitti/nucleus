@@ -342,6 +342,7 @@ ul.icon_nav li#icon_nav_7:hover {
   height: 100%;
   text-align: center;
   min-width: 1024px;
+  margin-bottom: 20px;
 }
 .cube_confessions {
   background: url('../images/c2_headers.png') 0px -130px no-repeat;
@@ -1117,6 +1118,7 @@ tr.active {
   height: 20px;
   background: #222;
   text-align: left;
+  margin-top: 20px;
 }
 .copyright {
 	position: relative;

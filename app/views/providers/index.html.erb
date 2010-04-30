@@ -2,14 +2,15 @@
   <h2>Listing providers</h2>
   <% @providers.each do |provider| %>
   <div class="listing_panel clear_left">
-    <h3>Provider Name: <span><%=h provider.full_name %></span></h3>
-    <div id="provider_rating" class="red_rating"><%= link_to "99", provider_path(provider) %></div>
+    <h3>Provider Name: <span><%= provider.full_name %></span></h3>
+    <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_path(provider) %></div>
     <div class="left">
       <div class="left"><%= link_to 'Show', provider %></div>
       <div class="left"><%= link_to 'Edit', edit_provider_path(provider) %></div>
-      <div class="left"><%= link_to 'Destroy', provider, :confirm => 'Are you sure?', :method => :delete %>
+      <div class="left"><%= link_to 'Destroy', provider, :confirm => 'Are you sure?', :method => :delete %></div>
     </div>
   </div>
+  <% end %>
+  <div class="clear"></div>
+  <%= link_to 'Add a New Provider', new_provider_path %>
 </div>
-<% end %>
-<%= link_to 'New provider', new_provider_path %></div>
