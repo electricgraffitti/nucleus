@@ -15,7 +15,7 @@ class ProvidersController < ApplicationController
   def show
     @provider = Provider.find(params[:id])
     
-    coords = Geocoder.fetch_coordinates('10897 S. River Front Parkway, South Jordan, UT, 84095')
+    coords = @provider.locations.first.fetch_coordinates()
     @map = GMap.new("map")
     @map.control_init(:large_map => true, :map_type => true)
     @map.center_zoom_init(coords,14)

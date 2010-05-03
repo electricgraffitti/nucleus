@@ -1376,6 +1376,9 @@ div.overlay div.close {
   float: left;
   text-align: left;
 }
+.iframe {
+  border: none;
+}
 /***Modals***/
 .claim_notes h1 {
   color: #6ac520;
