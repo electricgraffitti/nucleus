@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :locations
+
 
   map.resources :products
   map.resources :patients

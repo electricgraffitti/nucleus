@@ -951,21 +951,20 @@ span.field_seperator {
 .provider_flag_panel .last {
   margin-right: 0px;
 }
-.provider_flag_panel a.flag_box {
+.provider_flag_panel .flag_box {
   position: absolute;
   right: 0px;
   top: 0px;
-  display: block;
   text-indent: -3000em;
   width: 59px;
   height: 57px;
   border-left: 1px solid #474747;
   background: url('../images/inner_pages/provider_flags_sprite.jpg') left top no-repeat;
 }
-.provider_flag_panel a.flag_box.red_flag {
+.provider_flag_panel .flag_box.red_flag {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -59px top no-repeat;
 }
-.provider_flag_panel a.flag_box.yellow_flag {
+.provider_flag_panel .flag_box.yellow_flag {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -177px top no-repeat;
 }
 /**accordion**/
@@ -989,6 +988,29 @@ span.field_seperator {
 }
 .inner_accordion {
   padding: 10px;
+  clear: both;
+}
+.accordion_content_wrap {
+  position: relative;
+  float: left;
+  width: 470px;
+  height: 340px;
+}
+.charts_maps_wrap {
+  position: relative;
+  float: left;
+  width: 480px;
+  height: 340px;
+  border: 1px solid #c0c0c0;
+  margin-left: 10px;
+}
+.provider_location_box ul {
+  position: relative;
+  padding: 10px 30px;
+}
+.provider_location_box ul h4 {
+  font-weight: bold;
+  font-size: 14px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -1301,6 +1323,14 @@ p.small_label label {
 p.login_checkbox_wrap {
   margin-top: 23px;
 }
+.form_box {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  float: left;
+  margin-right: 20px;
+}
 /********************************************/
 /**************CROSSFADE STYLES**************/
 .cube_crossfade_wrap {
@@ -1318,7 +1348,7 @@ p.login_checkbox_wrap {
 /*/* overlay size and background image */ 
 div.overlay { 
     position: relative;
-    width:530px; 
+    width:700px; 
     /*background-image:url(../images/overlay/apple.png); */
     background: #fff;
     display:none; 
@@ -1345,7 +1375,6 @@ div.overlay div.close {
   position: relative;
   float: left;
   text-align: left;
-  margin: 20px;
 }
 /***Modals***/
 .claim_notes h1 {

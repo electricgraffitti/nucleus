@@ -14,6 +14,12 @@ class ProvidersController < ApplicationController
   # GET /providers/1.xml
   def show
     @provider = Provider.find(params[:id])
+    
+    coords = Geocoder.fetch_coordinates('10897 S. River Front Parkway, South Jordan, UT, 84095')
+    @map = GMap.new("map")
+    @map.control_init(:large_map => true, :map_type => true)
+    @map.center_zoom_init(coords,14)
+    @map.overlay_init(GMarker.new(coords,:title => "#{@provider.full_name}", :info_window => "Provider Location"))
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +31,7 @@ class ProvidersController < ApplicationController
   # GET /providers/new.xml
   def new
     @provider = Provider.new
+    @provider.locations.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +42,7 @@ class ProvidersController < ApplicationController
   # GET /providers/1/edit
   def edit
     @provider = Provider.find(params[:id])
+    @provider.locations.build
   end
 
   # POST /providers

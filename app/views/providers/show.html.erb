@@ -1,3 +1,7 @@
+<% content_for :header do %>
+  <%= GMap.header %>
+	<%= @map.to_html unless @map.blank? %>
+<% end %>
 <%= render :partial => 'providers/provider_profile_header', :locals => {:provider => @provider} %>
 <div id="panel_layout" class="clear">
   <div id="padded_panel_layout">
@@ -6,7 +10,7 @@
     </div>
     <%= render :partial => 'providers/provider_flags' %>
     <div id="panel_south" class="ui-layout-south">
-        <%= render :partial => 'providers/provider_accordion' %>
+      <%= render :partial => 'providers/provider_accordion', :locals => {:m => @map, :provider => @provider} %>
     </div>
   </div>
   <div class="clear"></div>

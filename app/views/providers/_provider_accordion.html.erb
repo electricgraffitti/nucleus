@@ -35,12 +35,23 @@
         	<h3><a href="#">4. Provider Address</a></h3>
         	<div>
         	  <div class="inner_accordion">
-        		<p>
-        		Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-        		ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-        		amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-        		odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-        		</p>
+        	    <div class="accordion_content_wrap">
+        	      <ul class="location_listing">
+        	        <% provider.locations.each do |location| %>
+        	          <li class="provider_location_box">
+        	            <ul>
+        	              <li><h4><%= location.name %></h4><li>
+        	              <li><%= location.address %></li>
+        	              <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
+        	              <li><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
+        	            </ul>
+        	          </li>
+        	     <% end %>
+        	     </ul>
+        	    </div>
+        	    <div class="charts_maps_wrap">
+                <%= m.div(:width => 480, :height => 340) %>
+              </div>
         		</div>
         	</div>
         	<h3><a href="#">5. Provider Fraud</a></h3>
