@@ -19,7 +19,7 @@ html, body {
 }
 #login_wrapper {
   position: relative;
-  margin: 130px auto;
+  margin: 0px auto;
   width: 760px;
   height: 470px;
   padding: 0px 0px 20px;
@@ -349,6 +349,7 @@ ul.icon_nav li#icon_nav_7:hover {
 #panel_layout {
   position: relative;
   width: 1024px;
+  height: 100%;
   text-align: left;
   margin: 0px auto;
   border-left: 1px solid #c0c0c0;
@@ -396,13 +397,12 @@ ul.icon_nav li#icon_nav_7:hover {
   border-right: 1px solid #c0c0c0;
 }
 #south_resizer {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   width: 100%;
   height: 6px;
   border-top: 1px solid #c0c0c0;
-  border-bottom: 1px solid #c0c0c0;
 }
 .resize_vert {
   position: relative;
@@ -997,7 +997,7 @@ span.field_seperator {
   float: left;
   height: 15px;
   width: 100%;
-  border-top: 1px solid #818181;
+  border-top: 1px solid #c0c0c0;
   border-bottom: 1px solid #818181;
   background: #D3D4D4;
   color: #818181;
@@ -1021,10 +1021,10 @@ span.field_seperator {
   background: #fff;
   border-bottom: none;
   height: 45px;
-  margin-top:6px;
 }
 table {
   border-collapse: collapse;
+  float: left;
 }
 tr {
   border-bottom: 1px solid #c0c0c0;
@@ -1040,7 +1040,7 @@ th {
   padding: 4px 5px 5px;
 }
 td {
-  padding: 5px;
+  padding: 4px;
 }
 td.empty {
   padding: 0px;
@@ -1135,7 +1135,7 @@ tr.active {
 }
 /******Provider Search********/
 .provider_search_score {
-  width: 35px;
+  width: 42px;
 }
 .provider_search_note {
   
@@ -1156,17 +1156,17 @@ tr.active {
 .provider_search_state {
 }
 .provider_search_ciu {
-  width: 60px;
+  width: 70px;
 }
 .provider_search_condition {
-  width: 105px;
+  width: 125px;
 }
 .provider_search_flagged {
-  width: 70px;
+  width: 80px;
 }
 /*******Provider Action*******/
 .provider_action_blank {
-  width: 20px;
+  width: 31px;
 }
 .provider_action_condition {
   min-width: 215px;
@@ -1174,7 +1174,7 @@ tr.active {
 .provider_action_client_action {
   min-width: 96px;
 }
-.provider_action_action {
+.provider_action_action, .provider_action_remnd {
   min-width: 92px;
 }
 #provider_action {

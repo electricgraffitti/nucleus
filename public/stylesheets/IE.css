@@ -5,38 +5,40 @@ body {
   color: #000;
   font-size: 11px;
 }
-#hd {
-  z-index: 1;
+/*******Provider Action*******/
+.provider_action_checkbox {
+  min-width: 25px;
 }
-#main_nav {
-  position: absolute;
-  z-index: 1;
+.provider_action_toggle {
+  min-width: 25px;
 }
-#anti_gravity_text {
-  position: relative;
-  width: 180px;
-  left: 120px;
+.provider_action_search {
+  min-width: 25px;
 }
-/*ul.nav_ul {
-  margin-left: 520px;
-}*/
-.logo {
-  position: relative;
-  z-index: 10;
+.provider_action_blank {
+  min-width: 31px;
 }
-.about_banner p {
-  margin-top:20px;
-  float: left;
-  text-align:left;
-  width: 630px;
+.provider_action_note {
+  min-width: 25px;
 }
-/*.badge {
-  position: relative;
-  top: 5px;
-  left: 5px;
-  width: 50px;
-  height: 50px;
-}*/
+.provider_action_trigger_date {
+  min-width: 74px;
+}
+.provider_action_condition {
+  min-width: 215px;
+}
+.provider_action_ttl {
+  min-width: 68px;
+}
+.provider_action_client_action {
+  min-width: 96px;
+}
+.provider_action_action, .provider_action_remnd {
+  min-width: 92px;
+}
+#provider_action {
+  min-width: 1024px;
+}
 /*********************************************/
 /*******************HEADER********************/
 
@@ -47,30 +49,5 @@ body {
 /****************MAIN CONTENT*****************/
 
 
-/***********************/
-/********banners********/
-#slider {
-  height: 135px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-.scroll {
-  width: 320px;
-  height: 135px;
-  overflow: hidden;
-  overflow-x: hidden;
-  position: relative; /* fix for IE to respect overflow */
-  clear: left;
-}
-.scrollContainer {
-  position: relative;
-  overflow: hidden;
-  width: 320px;
-  height: 135px;
-}
-img.banner_scroll.r, img.banner_scroll.l {
-  visibility: hidden;
-}
 
 
