@@ -40,6 +40,7 @@
         	        <% provider.locations.each do |location| %>
         	          <li class="provider_location_box">
         	            <ul>
+        	              <li class="map_icon">map<li>
         	              <li><h4><%= location.name %></h4><li>
         	              <li><%= location.address %></li>
         	              <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
@@ -50,7 +51,7 @@
         	     </ul>
         	    </div>
         	    <div class="charts_maps_wrap">
-                <%= m.div(:width => 480, :height => 340) %>
+                <%= m.div(:width => 420, :height => 250) %>
               </div>
         		</div>
         	</div>

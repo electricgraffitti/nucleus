@@ -1049,24 +1049,50 @@ a.flag_panel {
 .accordion_content_wrap {
   position: relative;
   float: left;
-  width: 450px;
-  height: 340px;
+  width: 490px;
+  height: 270px;
 }
 .charts_maps_wrap {
   position: relative;
   float: left;
-  width: 480px;
-  height: 340px;
+  width: 420px;
+  padding: 10px;
+  height: 250px;
   border: 1px solid #c0c0c0;
-  margin-left: 10px;
+/*  margin-left: 10px;*/
 }
-.provider_location_box ul {
+/*.provider_location_box ul {
   position: relative;
   padding: 10px 30px;
+}*/
+li.provider_location_box {
+  position: relative;
+  float: left;
+  width: 469px;
+  padding: 0px 20px 0px 0px;
+  height: 38px;
+  border: 1px solid #c0c0c0;
+}
+ul.location_listing ul {
+  float: left;
+}
+ul.location_listing ul li {
+  font-size: 11px;
+  padding: 11px 5px 0px;
+  float: left;
+}
+ul.location_listing ul li.map_icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  padding: 0px 2px 0px;
+  margin-right: 10px;
+  text-indent: -3000em;
+  background: url('../images/inner_pages/map_pins.jpg') left top no-repeat;
 }
 .provider_location_box ul h4 {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 10px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -1474,12 +1500,6 @@ div.overlay div.close {
 }
 .iframe {
   border: none;
-}
-.iframe #header {
-  display: none;
-}
-.iframe #main {
-  height: 300px;
 }
 #inner {
   margin-top: -200px;
