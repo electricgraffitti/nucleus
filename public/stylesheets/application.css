@@ -15,6 +15,7 @@ html, body {
   margin: 0px auto 0px;
 }
 #hd, #bd, #ft {
+	min-width: 1026px;
   float: left;
 }
 #login_wrapper {
@@ -1133,10 +1134,10 @@ tr.active {
   width: 42px;
 }
 .provider_search_note {
-  
+  width: 25px;
 }
 .provider_search_prv_seq {
-  width: 45px;
+  width: 50px;
 }
 .provider_search_provider_name {
   width: 110px;
