@@ -15,8 +15,10 @@ html, body {
   margin: 0px auto 0px;
 }
 #hd, #bd, #ft {
-	min-width: 1026px;
   float: left;
+}
+#hd, #ft {
+  min-width: 1026px;
 }
 #login_wrapper {
   position: relative;
