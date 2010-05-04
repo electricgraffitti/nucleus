@@ -692,11 +692,11 @@ div.scaffold_pane label {
 }
 .quick_launch_box.box4 a {
   margin: 0px 0px 25px 25px;
-  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -656px 0px no-repeat;
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1148px 0px no-repeat;
 }
 .quick_launch_box.box5 a {
   margin: 25px 25px 0px 0px;
-  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') 0px 0px no-repeat;
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -983px 0px no-repeat;
 }
 .quick_launch_box.box6 a {
   margin: 25px 25px 0px 25px;

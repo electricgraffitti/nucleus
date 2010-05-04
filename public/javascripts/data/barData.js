@@ -14,7 +14,7 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Top Fraudulent States',
+      text: 'Top Fraudulent Cities',
       style: {
         color: '#555555'
       } 
