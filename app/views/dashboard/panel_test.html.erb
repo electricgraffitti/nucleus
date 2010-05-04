@@ -1,0 +1,22 @@
+<style type="text/css" media="screen">
+  #panel_layout, #inner_panel {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+  }
+</style>
+<div id="panel_layout">
+  <div id="inner_panel" class="pane ui-layout-center ui-layout-pane ui-layout-pane-center">
+    <div class="pane ui-layout-center ui-layout-pane ui-layout-pane-center"></div>
+    <div class="pane ui-layout-south ui-layout-pane ui-layout-pane-south"></div>
+  </div>
+  <div class="pane ui-layout-west ui-layout-pane ui-layout-pane-west"></div>
+</div>
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $('#panel_layout').layout();
+      $('#panel_layout > #innerPanel').layout();
+    });
+  </script>
+<% end %>

@@ -8,6 +8,10 @@ class DashboardController < ApplicationController
     
   end
   
+  def panel_test
+    
+  end
+  
   def login
     if current_client_session
       redirect_to quick_launch_path

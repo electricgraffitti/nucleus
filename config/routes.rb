@@ -20,6 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"
+  map.panel_test "panel-test", :controller => "dashboard", :action => "panel_test"
   
   map.root :controller => "dashboard", :action => "login"
 
