@@ -1,8 +1,8 @@
 <div id="provider_rating_full" class="<%= provider.score_color(provider)%>_rating"><%= provider.provider_score %></div>
 <h3>Provider Name: <span><%= provider.full_name %></span></h3>
 <div id="search_wrap">
-  <% form_tag 'http://www2.hcinsight.com/s/1492/ecd49b6c89fda642946b7a6c5de4198c', :method => :get do %>
-  <%= text_field_tag :search, params[:search], :value => "#{provider.full_name}" %>
-  <%= submit_tag "Search", :name => nil, :title => "Search Nucleus", :class => "search_btn" %>
-  <% end %>
+  <form action="http://google.com/search" method="get" class="search" target="_blank">
+      <input type="text" name="q" size="27" value="<%= provider.full_name %>"/>
+      <button type="submit" class="search_btn">Search</button>
+  </form>
 </div>

@@ -834,33 +834,6 @@ input[type="text"]#claim_sequence_wide {
 input[type="text"]#claim_sequence_short {
   width: 29px;
 }
-a.search_mag {
-  position: relative;
-  display: block;
-  float: left;
-  width: 17px;
-  height: 17px;
-  text-indent: -3000em;
-  margin: 7px 0px 0px 3px;
-  background: url('../images/inner_pages/mag_glass.jpg') no-repeat;
-}
-#search_wrap {
-  width: 300px;
-  float: right;
-  margin-right: 10px;
-  text-align: right;
-}
-#search_wrap input[type='text'] {
-  margin: 0px;
-  color: #c0c0c0;
-}
-.search_btn {
-  width: 24px;
-  height: 25px;
-  background: #e7e7e7 url('../images/inner_pages/search_mag.jpg') left top no-repeat;
-  border: 1px solid #c0c0c0;
-  text-indent: -3000em;
-}
 span.field_seperator {
   float: left;
   margin: 7px 3px;
@@ -1311,6 +1284,37 @@ input[type="text"], input[type="password"] {
   padding: 5px;
   border: 1px solid #c0c0c0;
   margin: 5px 0px;
+}
+a.search_mag {
+  position: relative;
+  display: block;
+  float: left;
+  width: 17px;
+  height: 17px;
+  text-indent: -3000em;
+  margin: 7px 0px 0px 3px;
+  background: url('../images/inner_pages/mag_glass.jpg') no-repeat;
+}
+#search_wrap {
+  width: 300px;
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+}
+#search_wrap input[type='text'] {
+  margin: 0px;
+  color: #c0c0c0;
+}
+.search input {
+  padding:5px 0 3px 5px;
+}
+#search_wrap .search button {
+  width: 24px;
+  height: 25px;
+  background: #e7e7e7 url('../images/inner_pages/search_mag.jpg') left top no-repeat;
+  border: 1px solid #c0c0c0;
+  text-indent: -3000em;
+	margin: 0 -2px 0 -28px;
 }
 label {
   color: #000;
