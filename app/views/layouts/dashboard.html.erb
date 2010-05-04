@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <%= render :partial => "layouts/headmeta" %>
+  <%= stylesheet_link_tag 'dashboard' %>
+</head>
+<body class="yui-skin-sam">
+  <!-- Application Layout -->
+  <div id="wrapper">
+	  <div id="hd" class="green_background left">
+      <%= render :partial => "layouts/header", :locals => {:client => current_client} %>
+	  </div>
+    <div id="bd" class="left">
+      <div id="main_content" class="left">
+        <%= yield %>
+        <div class="clear"></div>
+      </div>
+      
+      <div id="ft">
+        <%= render :partial => "layouts/footer" %>
+      </div>
+    </div>
+	</div>
+  <%= render :partial => 'layouts/overlay' %>
+  <%= render :partial => "layouts/scripts" %>
+</body>
+</html>

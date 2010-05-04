@@ -1,8 +1,20 @@
-<p>
-  <b>Name:</b>
-  <%=h @provider.full_name %>
-</p>
-
-
-<%= link_to 'Edit', edit_provider_path(@provider) %> |
-<%= link_to 'Back', providers_path %>
+<% content_for :header do %>
+  <%= GMap.header %>
+	<%= @map.to_html unless @map.blank? %>
+<% end %>
+<%= render :partial => 'providers/provider_profile_header', :locals => {:provider => @provider} %>
+<div id="panel_layout" class="clear">
+  <div id="padded_panel_layout">
+    <div class="full_panel provider_heading_full">
+      <%= render :partial => 'providers/provider_heading_full', :locals => {:provider => @provider} %>
+    </div>
+    <%= render :partial => 'providers/provider_flags' %>
+    <div id="panel_south" class="ui-layout-south">
+      <%= render :partial => 'providers/provider_accordion', :locals => {:m => @map, :provider => @provider} %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<% content_for :javascripts do %>
+  
+<% end %>

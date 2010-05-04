@@ -38,28 +38,6 @@ var tableActions = {
 				$(this).attr('checked', '');
 			});
 		}
-  },
-  
-  noteModal: function(el) {
-    
-    console.log(el);
-    // if the function argument is given to overlay, 
-    // it is assumed to be the onBeforeLoad event listener 
-    el.overlay({ 
-
-        expose: 'darkred', 
-        effect: 'apple', 
-
-        onBeforeLoad: function() { 
-
-            // grab wrapper element inside content 
-            var wrap = this.getContent().find(".contentWrap"); 
-
-            // load the page specified in the trigger 
-            wrap.load(this.getTrigger().attr("href")); 
-        } 
-
-    });
   }
   
 };
@@ -89,33 +67,26 @@ $(document).ready(function() {
     tableActions.selectAllCheckboxes($(this));
   });
   
-  // $('.note_trigger').click( function() {
-  //   tableActions.noteModal($(this));
-  //   return false;
-  // });
-	
+  $('#accordion').accordion({active: 3});
+ 
+  $("a[rel]").overlay({ 
 
-      // if the function argument is given to overlay, 
-      // it is assumed to be the onBeforeLoad event listener 
-      $("a[rel]").overlay({ 
+      expose: {
+   	    color: '#000',
+   	    opacity: 0.15,
+   	    closeSpeed: 700
+   	  }, 
+      effect: 'apple', 
 
-          expose: {
-       	    color: '#000',
-       	    opacity: 0.15,
-       	    closeSpeed: 700
-       	  }, 
-          // effect: 'apple', 
+      onBeforeLoad: function() { 
 
-          onBeforeLoad: function() { 
+          // grab wrapper element inside content 
+          var wrap = this.getContent().find(".contentWrap"); 
 
-              // grab wrapper element inside content 
-              var wrap = this.getContent().find(".contentWrap"); 
-
-              // load the page specified in the trigger 
-              wrap.load(this.getTrigger().attr("href")); 
-          } 
-
-      }); 
+          // load the page specified in the trigger 
+          wrap.load(this.getTrigger().attr("href")); 
+      }
+  }); 
 	
 	// injects flash div into dom
 	// flash.injectFlashBox();

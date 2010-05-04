@@ -1,10 +1,10 @@
 <%= render :partial => 'providers/action_page_header', :locals => {:provider => @provider} %>
-<div id="panel_layout">
-  <div id="panel_main_full" class="panel ui-layout-center">
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
     <div class="panel_set_2">
       <%= render :partial => 'providers/provider_info', :locals => {:provider => @provider} %>
     </div>
-    <div class="panel_set">
+    <div class="panel_set_4">
       <%= render :partial => 'providers/provider_action_stats' %>
     </div>
     <div class="panel_set_3">
@@ -15,16 +15,17 @@
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
-        <div class="table_select">
-          <% form_tag providers_path, :method => :get do %>
-            <%= collection_select(:provider_table_action, :action_id, SearchTopic.all, :id, :name, {:prompt => "Action"}) %><br/>
-          <% end %>
-        </div>
-        <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
-        <%= render :partial => 'provider_action_table' %>
       </div>
+      <div class="table_select left">
+        <% form_tag providers_path, :method => :get do %>
+          <%= collection_select(:provider_table_action, :action_id, SearchTopic.all, :id, :name, {:prompt => "Action"}) %><br/>
+        <% end %>
+      </div>
+      <div class="drag_row left"><span>Drag & drop a column header here to group by that column.</span></div>
+      <%= render :partial => 'provider_action_table' %>
     </div>
   </div>
+  <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag 'providerAction' %>

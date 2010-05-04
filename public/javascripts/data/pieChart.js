@@ -6,9 +6,9 @@ var pieChart = new Highcharts.Chart({
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
-      borderColor: '#ffffff',
+      borderColor: '#e7e7e7',
       borderRadius: 10,
-      borderWidth: 2
+      borderWidth: 1
    },
    credits: {
      enabled: false

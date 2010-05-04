@@ -8,9 +8,9 @@ var lineChart = new Highcharts.Chart({
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       zoomType: 'xy',
-      borderColor: '#ffffff',
+      borderColor: '#e7e7e7',
       borderRadius: 10,
-      borderWidth: 2
+      borderWidth: 1
    },
    credits: {
      enabled: false

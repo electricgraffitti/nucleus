@@ -1,19 +1,20 @@
 <%= render :partial => 'providers/search_page_header', :locals => {:provider => @provider} %>
-<div id="panel_layout">
+<div id="panel_layout" class="clear">
   <div id="panel_west" class="ui-layout-west">
     <%= render :partial => 'dashboard/search' %>
     <div id="west_resizer">
       <div class="resize_vert"></div>
     </div>
   </div>
-  <div id="panel_main" class="panel ui-layout-center">
-    <div class="panel_set">
+  <div id="panel_center" class="panel ui-layout-center">
+    <div id="inner_panel">
+      <div class="panel_set">
       <div class="basic_panel">
         <h3>Provider Results</h3>
         <div id="provider_results_chart" class="clear left"></div>
       </div>
     </div>
-    <div class="panel_set">
+      <div class="panel_set">
       <div class="basic_panel">
         <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
       </div>
@@ -54,14 +55,16 @@
         </div>
       </div>
     </div>
+    </div>
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
-        <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
-          <%= render :partial => "providers/provider_search_table", :locals => {:providers => @providers} %>
       </div>
+      <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
+      <%= render :partial => "providers/provider_search_table", :locals => {:providers => @providers} %>
     </div>
   </div>
+  <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "providerSearch" %>

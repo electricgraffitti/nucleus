@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <%= render :partial => "layouts/headmeta" %>
+  <%= yield :header %>
 </head>
 <body class="yui-skin-sam">
   <!-- Application Layout -->
@@ -13,11 +14,12 @@
     <div id="bd" class="left">
       <div id="main_content" class="left">
         <%= yield %>
+        <div class="clear"></div>
       </div>
-    </div>
-    <div class="clear"></div>
-    <div id="ft">
-      <%= render :partial => "layouts/footer" %>
+      <div class="clear"></div>
+      <div id="ft">
+        <%= render :partial => "layouts/footer" %>
+      </div>
     </div>
 	</div>
   <%= render :partial => 'layouts/overlay' %>

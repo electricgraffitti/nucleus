@@ -14,6 +14,12 @@ class ProvidersController < ApplicationController
   # GET /providers/1.xml
   def show
     @provider = Provider.find(params[:id])
+    
+    coords = @provider.locations.first.fetch_coordinates()
+    @map = GMap.new("map")
+    @map.control_init(:large_map => true, :map_type => true)
+    @map.center_zoom_init(coords,14)
+    @map.overlay_init(GMarker.new(coords,:title => "#{@provider.full_name}", :info_window => "Provider Location"))
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +31,7 @@ class ProvidersController < ApplicationController
   # GET /providers/new.xml
   def new
     @provider = Provider.new
+    @provider.locations.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +42,7 @@ class ProvidersController < ApplicationController
   # GET /providers/1/edit
   def edit
     @provider = Provider.find(params[:id])
+    @provider.locations.build
   end
 
   # POST /providers
@@ -45,7 +53,7 @@ class ProvidersController < ApplicationController
     respond_to do |format|
       if @provider.save
         flash[:notice] = 'Provider was successfully created.'
-        format.html { redirect_to(@provider) }
+        format.html { redirect_to providers_path }
         format.xml  { render :xml => @provider, :status => :created, :location => @provider }
       else
         format.html { render :action => "new" }
@@ -86,7 +94,7 @@ class ProvidersController < ApplicationController
   def provider_search
     @providers = Provider.all
     if params[:id].nil?
-      @provider = Provider.last
+      @provider = Provider.first
     else
       @provider = Provider.find(params[:id])
     end

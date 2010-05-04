@@ -10,9 +10,9 @@ var scatterChart = new Highcharts.Chart({
       style: {
         margin: ['0px 10px 20px 0px']
       },
-      borderColor: '#ffffff',
+      borderColor: '#e7e7e7',
       borderRadius: 10,
-      borderWidth: 2
+      borderWidth: 1
    },
    credits: {
      enabled: false
