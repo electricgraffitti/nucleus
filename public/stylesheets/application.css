@@ -978,7 +978,7 @@ a.flag_panel {
 #accordion h3 span {
   position: relative;
   float: right;
-  margin-right: 2px;
+  margin-right: 5px;
 }
 #accordion h3 div.accordion_rating_dot {
   position: relative;
@@ -1382,7 +1382,7 @@ a.search_mag {
   background: url('../images/inner_pages/mag_glass.jpg') no-repeat;
 }
 #search_wrap {
-  width: 300px;
+  width: 350px;
   float: right;
   margin-right: 10px;
   text-align: right;
@@ -1474,6 +1474,15 @@ div.overlay div.close {
 }
 .iframe {
   border: none;
+}
+.iframe #header {
+  display: none;
+}
+.iframe #main {
+  height: 300px;
+}
+#inner {
+  margin-top: -200px;
 }
 /***Modals***/
 .claim_notes {
