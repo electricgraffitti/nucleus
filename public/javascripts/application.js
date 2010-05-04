@@ -41,6 +41,20 @@ var tableActions = {
   }
   
 };
+
+var baseActions = {
+  
+  setActive: function(el) {
+    
+  },
+  
+  accordionClick: function(el) {
+   $panel_selector = el.attr("panel");
+   $panel = $("#" + $panel_selector);
+   $panel.click();
+  }
+  
+}
 //**********Initialize Document**********//
 
 $(document).ready(function() {
@@ -67,7 +81,14 @@ $(document).ready(function() {
     tableActions.selectAllCheckboxes($(this));
   });
   
-  $('#accordion').accordion({active: 3});
+  $('#accordion').accordion({
+    active: 3,
+    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
+  });
+  
+  $("a.flag_panel").click(function() {
+    baseActions.accordionClick($(this));
+  });
  
   $("a[rel]").overlay({ 
 

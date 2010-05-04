@@ -923,7 +923,7 @@ a.flag_panel {
   width: 295px;
   padding: 18px 0px 15px 15px;
   height: 24px;
-  background: #333;
+  background: #333 url('../images/inner_pages/profile_flag_bg.jpg') left top repeat-x;
   margin: 5px;
   font-size: 18px;
   color: #fff;
@@ -938,7 +938,7 @@ a.flag_panel {
   text-indent: -3000em;
   width: 59px;
   height: 57px;
-  border-left: 1px solid #474747;
+/*  border-left: 1px solid #474747;*/
   background: url('../images/inner_pages/provider_flags_sprite.jpg') left top no-repeat;
 }
 .provider_flag_panel .flag_box.red_flag {
@@ -951,20 +951,96 @@ a.flag_panel {
 #accordion {
   width: 982px;
   border: 1px solid #c0c0c0;
+  height: 500px;
+  overflow: auto;
 }
 #accordion h3 {
   background:none repeat scroll 0 0 #E7E7E7;
+  border: none;
   border-bottom:2px solid #FFFFFF;
   color:#333333;
   font-size:12px;
   font-weight:bold;
   height:12px;
-  padding:6px 15px 10px;
+  padding:6px 13px 10px;
   position:relative;
-  width:952px;
+  width:941px;
+  margin-top: 0px;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
 }
 #accordion h3 a {
+  padding: 0px;
+  color: #333;
   text-decoration:none;
+}
+#accordion h3 span {
+  position: relative;
+  float: right;
+  margin-right: 2px;
+}
+#accordion h3 div.accordion_rating_dot {
+  position: relative;
+  float: left;
+  width: 14px;
+  height: 14px;
+  top: 2px;
+  margin-right: 5px;
+  background: url('../images/inner_pages/table_rating_dots.jpg') -28px -42px no-repeat;
+}
+#accordion h3 div.accordion_rating_dot.red_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -28px 0px no-repeat;
+}
+#accordion h3.ui-state-active div.accordion_rating_dot.red_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -42px 0px no-repeat;
+}
+#accordion h3 div.accordion_rating_dot.yellow_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -28px -14px no-repeat;
+}
+#accordion h3.ui-state-active div.accordion_rating_dot.yellow_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -42px -14px no-repeat;
+}
+#accordion h3 div.accordion_rating_dot.green_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -28px -28px no-repeat;
+}
+#accordion h3.ui-state-active div.accordion_rating_dot.green_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -42px -28px no-repeat;
+}
+#accordion h3 div.accordion_rating_dot.blue_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -28px -42px no-repeat;
+}
+#accordion h3.ui-state-active div.accordion_rating_dot.blue_dot {
+  background: url('../images/inner_pages/table_rating_dots.jpg') -42px -42px no-repeat;
+}
+.ui-accordion .ui-accordion-content {
+  border-top:0 none;
+  margin-bottom:0px;
+  margin-top:0px;
+  overflow:none;
+  padding:0em 0em;
+  position:relative;
+  top:0px;
+  padding-bottom: 20px;
+}
+.ui-widget-content {
+  background: none;
+  border: none;
+  color:#222;
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+  background: #d6d6d6;
+}
+#accordion h3.ui-state-active {
+  background: #d6d6d6;
+}
+.ui-corner-bottom {
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 .inner_accordion {
   padding: 10px;
@@ -973,7 +1049,7 @@ a.flag_panel {
 .accordion_content_wrap {
   position: relative;
   float: left;
-  width: 470px;
+  width: 450px;
   height: 340px;
 }
 .charts_maps_wrap {
