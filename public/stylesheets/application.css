@@ -1310,11 +1310,16 @@ a.search_mag {
 }
 #search_wrap .search button {
   width: 24px;
-  height: 25px;
+  height: 22px;
   background: #e7e7e7 url('../images/inner_pages/search_mag.jpg') left top no-repeat;
   border: 1px solid #c0c0c0;
   text-indent: -3000em;
-	margin: 0 -2px 0 -28px;
+	margin: 0 -2px 0 -5px;
+	outline: none;
+	box-sizing: content-box;
+  -moz-box-sizing: content-box;
+/*  -webkit-box-sizing: content-box;*/
+  
 }
 label {
   color: #000;
@@ -1369,8 +1374,8 @@ div.overlay {
 div.overlay div.close { 
     background:url(../images/overlay/apple-close.png) no-repeat; 
     position:absolute; 
-    top:6px; 
-    right:-5px; 
+		right:-22px;
+		top:-12px;
     width:35px; 
     height:35px; 
     cursor:pointer; 
@@ -1384,6 +1389,11 @@ div.overlay div.close {
   border: none;
 }
 /***Modals***/
+.claim_notes {
+	position: relative;
+	float: left;
+	padding: 20px;
+}
 .claim_notes h1 {
   color: #6ac520;
   text-shadow: 1px 1px 1px rgba('0,0,0,.2');
