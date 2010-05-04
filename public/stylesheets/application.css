@@ -913,6 +913,10 @@ span.field_seperator {
   float:left;
   overflow: auto;
 }
+a.flag_panel {
+  display: block;
+  text-decoration: none;
+}
 .provider_flag_panel {
   position: relative;
   float: left;
@@ -1160,11 +1164,14 @@ tr.active {
   width: 125px;
 }
 .provider_search_flagged {
-  width: 80px;
+  width: 85px;
 }
 /*******Provider Action*******/
 .provider_action_blank {
-  width: 31px;
+  min-width: 31px;
+}
+.provider_action_trigger_date {
+  min-width: 85px;
 }
 .provider_action_condition {
   min-width: 215px;
@@ -1173,7 +1180,7 @@ tr.active {
   min-width: 96px;
 }
 .provider_action_action, .provider_action_remnd {
-  min-width: 92px;
+  min-width: 70px;
 }
 #provider_action {
   min-width: 1024px;
@@ -1381,7 +1388,8 @@ div.overlay div.close {
 		top:-12px;
     width:35px; 
     height:35px; 
-    cursor:pointer; 
+    cursor:pointer;
+    z-index: 10;
 }
 .contentWrap {
   position: relative;

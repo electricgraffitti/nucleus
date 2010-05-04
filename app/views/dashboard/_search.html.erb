@@ -13,7 +13,7 @@
           </p>
           <p>
           <%= label_tag "Product"%>
-          <%= collection_select(:search, :product_id, SearchTopic.all, :id, :name, {:prompt => "Select"}) %>
+          <%= collection_select(:search, :product_id, Product.all, :id, :name, {:prompt => "Select"}) %>
           </p>
           <p>
           <%= label_tag "Status"%>
