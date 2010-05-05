@@ -423,9 +423,6 @@ ul.icon_nav li#icon_nav_7:hover {
   height: 6px;
   background: url('../images/inner_pages/resize_handle_horz.jpg') no-repeat;
 }
-.cube_confessions {
-  background: url('../images/c2_headers.png') 0px -130px no-repeat;
-}
 .scaffold_panel {
   position: relative;
   float: left;
@@ -1052,6 +1049,15 @@ a.flag_panel {
   width: 490px;
   height: 270px;
 }
+.map_address_wrap {
+  width: 489px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-top: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+  border-left: 1px solid #c0c0c0;
+}
 .charts_maps_wrap {
   position: relative;
   float: left;
@@ -1061,16 +1067,12 @@ a.flag_panel {
   border: 1px solid #c0c0c0;
 /*  margin-left: 10px;*/
 }
-/*.provider_location_box ul {
-  position: relative;
-  padding: 10px 30px;
-}*/
 div.provider_location_box {
   position: relative;
   float: left;
   width: 469px;
   padding: 0px 20px 0px 0px;
-  border: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
 }
 ul.location_listing ul li {
   float:left;
@@ -1091,6 +1093,22 @@ ul.location_listing div.map_icon {
   float: left;
   font-weight: bold;
   font-size: 12px;
+}
+/** Provider Help **/
+#panel_layout.help_panels .panel {
+  position: relative;
+  float: left;
+  padding: 20px;
+  height: 500px;
+}
+#panel_layout.help_panels .ui-layout-center {
+  width: 500px;
+  border-left: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+}
+#panel_layout.help_panels .ui-layout-west, #panel_layout.help_panels .ui-layout-east {
+  background: #efefef;
+  width: 201px;
 }
 /*********************************************/
 /******************TABLES********************/

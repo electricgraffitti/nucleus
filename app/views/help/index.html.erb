@@ -1,14 +1,12 @@
 <%= render :partial => 'help/help_page_header', :locals => {:provider => @provider} %>
-<div id="panel_layout" class="clear">
-  <div id="inner_panel" class="panel ui-layout-center">
-    
+<div id="panel_layout" class="help_panels clear">
+  <div class="panel ui-layout-west"></div>
+  <div class="panel ui-layout-center">
+    <%= link_to "get object", providers_path, :id => "get_object" %>
   </div>
-  <div id="panel_south" class="ui-layout-south">
-    
-  </div>
+  <div class="panel ui-layout-east"></div>
+  <div class="clear"></div>
 </div>
-<div class="clear"></div>
-
 <% content_for :javascripts do %>
   
 <% end %>

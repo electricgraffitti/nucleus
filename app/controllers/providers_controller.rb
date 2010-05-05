@@ -3,10 +3,13 @@ class ProvidersController < ApplicationController
   # GET /providers.xml
   def index
     @providers = Provider.all
-
+    
+    @response = { :item => @providers }
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @providers }
+      format.js { render :json => @response.to_json(), :callback => params[:callback]}
     end
   end
 

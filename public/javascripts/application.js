@@ -52,6 +52,13 @@ var baseActions = {
    $panel_selector = el.attr("panel");
    $panel = $("#" + $panel_selector);
    $panel.click();
+  },
+  
+  getJsonObject: function(el, object_url) {
+    $objs = $.getJSON(object_url);
+    console.log($objs);
+    
+    return false;
   }
   
 }
@@ -85,6 +92,12 @@ $(document).ready(function() {
     active: 3,
     icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
   });
+  
+  $('#get_object').click(function() {
+    baseActions.getJsonObject($(this), $(this).attr('href'));
+    return false;
+  });
+  
   
   $("a.flag_panel").click(function() {
     baseActions.accordionClick($(this));
