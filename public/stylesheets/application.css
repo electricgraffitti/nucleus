@@ -1065,34 +1065,32 @@ a.flag_panel {
   position: relative;
   padding: 10px 30px;
 }*/
-li.provider_location_box {
+div.provider_location_box {
   position: relative;
   float: left;
   width: 469px;
   padding: 0px 20px 0px 0px;
-  height: 38px;
   border: 1px solid #c0c0c0;
 }
-ul.location_listing ul {
-  float: left;
-}
 ul.location_listing ul li {
-  font-size: 11px;
-  padding: 11px 5px 0px;
+  float:left;
+  font-size:10px;
+  padding:1px 1px 0;
+}
+ul.location_listing div.map_icon {
+  background:url("../images/inner_pages/map_pins.jpg") no-repeat scroll left top transparent;
+  border-right:1px solid #C0C0C0;
+  height:35px;
+  margin-right:5px;
+  padding:0 2px;
+  position:relative;
+  text-indent:-3000em;
+  width:30px;
+}
+.provider_location_box h4 {
   float: left;
-}
-ul.location_listing ul li.map_icon {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  padding: 0px 2px 0px;
-  margin-right: 10px;
-  text-indent: -3000em;
-  background: url('../images/inner_pages/map_pins.jpg') left top no-repeat;
-}
-.provider_location_box ul h4 {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -1392,7 +1390,7 @@ tr.active {
 }
 /*********************************************/
 /******************FORMS********************/
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], textarea {
   padding: 5px;
   border: 1px solid #c0c0c0;
   margin: 5px 0px;

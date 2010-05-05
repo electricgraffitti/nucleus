@@ -27,9 +27,7 @@
         		<p>
               Donec porttitor consectetur ante sit amet interdum. Nam accumsan, augue sagittis molestie malesuada, dolor lectus tempus nunc, sit amet malesuada est urna ac eros. Quisque non sapien risus, quis ultrices ligula. Donec dapibus nisi nec augue luctus egestas! Mauris lacinia, metus non tempor aliquam, est dui tristique nisi, et scelerisque dui leo tristique arcu. Praesent accumsan varius ligula, in facilisis orci tempus sit amet? Nullam lacinia metus aliquam tellus dictum fermentum. Integer tincidunt tincidunt risus at tincidunt. Nunc sollicitudin ornare dolor, a accumsan odio tincidunt vel. Mauris suscipit orci eget nunc tristique a vulputate nisl elementum. Nulla varius elit orci, et lacinia leo? Nunc cursus auctor erat, vel ultricies nulla feugiat a. Nam tellus lectus, molestie ut accumsan sit amet, luctus eget nunc. Integer sapien ante; blandit id fermentum in, posuere eu mauris. Donec nulla eros, cursus vel malesuada vel, pellentesque id augue. Integer facilisis pellentesque aliquam. Morbi dictum sem vitae quam lacinia gravida nec sed ante? Cras a quam at massa faucibus scelerisque. Nulla eu justo elit.</p>
 
-              <p>Praesent tempus, risus vitae scelerisque adipiscing, ante nunc feugiat lacus, in iaculis libero purus vel dolor. Sed vel velit urna. Nunc quis sem arcu. Duis ac nulla at augue facilisis vulputate. Vivamus egestas tristique orci vel bibendum. Donec mattis posuere ultrices. Donec id nulla libero, id molestie sem? In non nulla in nulla mollis blandit. Suspendisse a tortor sit amet mauris faucibus dignissim nec sed ipsum. Fusce eu odio in tellus rhoncus tempus. Mauris varius aliquet mauris, at fermentum velit pulvinar eget! Praesent vitae turpis posuere diam gravida eleifend. Aliquam eget eros sed ante dictum pulvinar. Duis ullamcorper ultrices mauris sit amet rhoncus. Cras cursus bibendum dui, at dapibus magna blandit at. Morbi ut ultricies velit?
-              
-        		</p>
+              <p>Praesent tempus, risus vitae scelerisque adipiscing, ante nunc feugiat lacus, in iaculis libero purus vel dolor. Sed vel velit urna. Nunc quis sem arcu. Duis ac nulla at augue facilisis vulputate. Vivamus egestas tristique orci vel bibendum. Donec mattis posuere ultrices. Donec id nulla libero, id molestie sem? In non nulla in nulla mollis blandit. Suspendisse a tortor sit amet mauris faucibus dignissim nec sed ipsum. Fusce eu odio in tellus rhoncus tempus. Mauris varius aliquet mauris, at fermentum velit pulvinar eget! Praesent vitae turpis posuere diam gravida eleifend. Aliquam eget eros sed ante dictum pulvinar. Duis ullamcorper ultrices mauris sit amet rhoncus. Cras cursus bibendum dui, at dapibus magna blandit at. Morbi ut ultricies velit?</p>
         		</div>
         	</div>
         	<h3 id="provider_address"><div class="accordion_rating_dot green_dot"></div><a href="#">Provider Address</a></h3>
@@ -38,16 +36,16 @@
         	    <div class="accordion_content_wrap">
         	      <ul class="location_listing">
         	        <% provider.locations.each do |location| %>
-        	          <li class="provider_location_box">
-        	            <ul>
-        	              <li class="map_icon">map<li>
-        	              <li><h4><%= location.name %></h4><li>
-        	              <li><%= location.address %></li>
-        	              <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
-        	              <li><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
-        	            </ul>
-        	          </li>
-        	     <% end %>
+        	          <div class="provider_location_box">
+        	            <div class="map_icon left">map</div>
+        	            <h4><%= location.name %></h4><br/>
+      	              <ul>
+      	                <li><%= location.address %></li>
+      	                <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
+      	                <li><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
+      	              </ul>
+        	          </div>
+        	          <% end %>
         	     </ul>
         	    </div>
         	    <div class="charts_maps_wrap">

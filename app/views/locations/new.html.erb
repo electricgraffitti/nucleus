@@ -1,3 +1,6 @@
-<h1>Provider Location</h1>
-  <%= render :partial => 'locations/form' %>
-<%= link_to 'Back', locations_path %>
+<div class="scaffold_panel">
+  <h2>Provider Location</h2>
+  <%= render :partial => 'locations/form', :locals => {:provider => @provider} %>
+  <div class="clear"></div>
+  <%= link_to 'Back', locations_path %>
+</div>

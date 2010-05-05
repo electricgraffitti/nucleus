@@ -14,9 +14,7 @@ class LocationsController < ApplicationController
   # GET /locations/1.xml
   def show
     @location = Location.find(params[:id])
-    
     @coords = Geocoder.fetch_coordinates("#{@location.address},#{@location.city},#{@location.state.abbreviation},#{@location.zipcode}")
-    
     respond_to do |format|
       format.html { render :layout => false }
       format.xml  { render :xml => @location }
@@ -27,7 +25,8 @@ class LocationsController < ApplicationController
   # GET /locations/new.xml
   def new
     @location = Location.new
-
+    @provider = Provider.find(params[:id])
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @location }
