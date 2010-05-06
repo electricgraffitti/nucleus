@@ -1,12 +1,33 @@
 <%= render :partial => 'help/help_page_header', :locals => {:provider => @provider} %>
 <div id="panel_layout" class="help_panels clear">
-  <div class="panel ui-layout-west"></div>
-  <div class="panel ui-layout-center">
-    <%= link_to "get object", providers_path, :id => "get_object" %>
+  <div class="panel ui-layout-west">
+    <%= render :partial => 'help/help_west' %>
   </div>
-  <div class="panel ui-layout-east"></div>
+  <div class="panel ui-layout-center">
+    <%= render :partial => 'help/help_center' %>
+  </div>
+  <div class="panel ui-layout-east">
+    <div class="sidebar_panel">
+      <%= link_to "Contact our Support Team", "", :class => "sidebar_icon_link" %>
+      <%= link_to "Live Chat with our Support Team", "", :class => "sidebar_icon_link" %>
+      <%= link_to "Customer Forum", "", :class => "sidebar_icon_link" %>
+    </div>
+    <div class="sidebar_panel">
+      <%= link_to "HCI U", "", :class => "sidebar_icon_link" %>
+      <%= link_to "Video Tutorials", "", :class => "sidebar_icon_link" %>
+    </div>
+    <div class="sidebar_panel">
+      <p>
+        HealthCare Insight<br/>
+        10897 S. River FRont Parkway<br/>
+        South Jordan, UT. 84095<br/>
+        801-285-5800
+      </p>
+    </div>
+  </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   
 <% end %>
+<%#= link_to "get object", providers_path, :id => "get_object" %>

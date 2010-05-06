@@ -1103,17 +1103,76 @@ ul.location_listing div.map_icon.active {
 #panel_layout.help_panels .panel {
   position: relative;
   float: left;
-  padding: 20px;
-  height: 500px;
+  min-height: 620px;
 }
 #panel_layout.help_panels .ui-layout-center {
-  width: 500px;
+  width: 582px;
   border-left: 1px solid #c0c0c0;
   border-right: 1px solid #c0c0c0;
 }
 #panel_layout.help_panels .ui-layout-west, #panel_layout.help_panels .ui-layout-east {
   background: #efefef;
-  width: 201px;
+  width: 220px;
+}
+ul.help_west_list li {
+  padding: 10px 2px;
+}
+#panel_layout.help_panels .ui-layout-west #top_search h2 {
+  font-weight: bold;
+  padding: 10px 20px 0px;
+}
+#center_help_content_wrap {
+  position: relative;
+  border: 1px solid #c0c0c0;
+  height: 580px;
+  margin: 20px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#center_help_content_wrap h3, #center_help_content_wrap h4, #center_help_content_wrap h5 {
+  font-weight: bold;
+}
+#center_help_content_wrap h3 {
+  font-size: 16px;
+}
+#center_help_content_wrap h4 {
+  font-size: 14px;
+  padding: 20px 20px 0px;
+}
+#center_help_content_wrap h5 {
+  font-size: 12px;
+}
+.help_west_list a {
+  text-decoration: none;
+}
+.help_west_list a:hover {
+  text-decoration: underline;
+}
+.help_list_item {
+  position: relative;
+  margin-left: 20px;
+  padding: 20px 0px;
+  width: 480px;
+  border-bottom: 1px solid #c0c0c0;
+}
+.sidebar_panel {
+  position: relative;
+  padding: 10px 9px;
+  width:202px;
+  border-bottom: 1px solid #c0c0c0;
+}
+.sidebar_panel a.sidebar_icon_link {
+  position: relative;
+  padding: 5px 0px 5px 42px;
+  height: 22px;
+  margin: 10px 0px;
+  display: block;
+  background: url("../images/inner_pages/support_icons.png") left top no-repeat;
+  text-decoration: none;
+}
+.sidebar_panel a.sidebar_icon_link:hover {
+  text-decoration: underline;
 }
 /*********************************************/
 /******************TABLES********************/

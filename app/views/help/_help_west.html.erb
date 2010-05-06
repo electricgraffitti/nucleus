@@ -1,0 +1,21 @@
+    <div id="top_search">
+      <h2>Search Knowledge Base</h2>
+      <% form_tag providers_path, :method => :get do %>
+        <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:prompt => "Quick Search"}) %><br/>
+        <div id="search_buttons">
+          <%= link_to "Clear Filters", "", :id => "search_clear" %>
+          <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+        </div>
+        <h3 class="grey_header">Browse by Topic</h3>
+        <div id="sub_search_params">
+          <ul class="help_west_list">
+            <li><%= link_to "Different Types of Searches", "#" %></li>
+            <li><%= link_to "Claims", "#" %></li>
+            <li><%= link_to "Appeals", "#" %></li>
+            <li><%= link_to "Different Types of Reports", "#" %></li>
+            <li><%= link_to "User Settings", "#" %></li>
+            <li><%= link_to "Client Settings", "#" %></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
