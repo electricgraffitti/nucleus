@@ -344,6 +344,7 @@ ul.icon_nav li#icon_nav_7:hover {
   position: relative;
   width: 100%;
   height: 100%;
+  min-width: 1026px;
   text-align: center;
   margin-bottom: 20px;
   background: #e7e7e7;
@@ -733,6 +734,7 @@ div.scaffold_pane label {
   position: relative;
   float: left;
   width: 100%;
+  min-width: 1026px;
   height: 26px;
   padding: 7px 0px;
   background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x
@@ -1080,7 +1082,7 @@ ul.location_listing ul li {
   padding:1px 1px 0;
 }
 ul.location_listing div.map_icon {
-  background:url("../images/inner_pages/map_pins.jpg") no-repeat scroll left top transparent;
+  background:url("../images/inner_pages/map_pins.png") no-repeat scroll left top transparent;
   border-right:1px solid #C0C0C0;
   height:35px;
   margin-right:5px;
@@ -1088,6 +1090,9 @@ ul.location_listing div.map_icon {
   position:relative;
   text-indent:-3000em;
   width:30px;
+}
+ul.location_listing div.map_icon.active {
+  background:url("../images/inner_pages/map_pins.png") no-repeat scroll left -35px transparent;
 }
 .provider_location_box h4 {
   float: left;
