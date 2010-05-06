@@ -36,6 +36,7 @@ class LocationsController < ApplicationController
   # GET /locations/1/edit
   def edit
     @location = Location.find(params[:id])
+    @provider = Provider.find(params[:id])
   end
 
   # POST /locations

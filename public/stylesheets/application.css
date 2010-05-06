@@ -125,6 +125,15 @@ p {
 .grey_background {
   background: #d2d3d3 url('../images/login/grey_bg_gradient.jpg') left top repeat-x;
 }
+.tooltip {
+	display:none;
+	background:transparent url("../tooltip/black_arrow_small.png");
+	font-size:12px;
+	width:66px;
+	height: 25px;
+	padding:18px;
+	color:#fff;	
+}
 /***Firefox dotted line tweak***/
 h3, a, button {
   outline: none;

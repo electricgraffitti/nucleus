@@ -1,0 +1,11 @@
+<div class="scaffold_panel">
+  <h2>Listing Provider Specialities</h2>
+  <% @provider_specialities.each do |ps| %>
+  <div class="listing_panel clear_left">
+    <h3>Provider Speciality: <span><%= ps.speciality_type %></span></h3>
+    <p>Code: <%= ps.speciality_code %></p>
+  </div>
+  <% end %>
+  <div class="clear"></div>
+  <%= link_to 'Add a New Speciality', new_provider_speciality_path %>
+</div>

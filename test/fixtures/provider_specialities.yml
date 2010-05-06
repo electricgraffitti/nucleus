@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  speciality_code: 1
+  speciality_type: MyString
+
+two:
+  speciality_code: 1
+  speciality_type: MyString

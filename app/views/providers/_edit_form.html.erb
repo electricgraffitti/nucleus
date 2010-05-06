@@ -38,32 +38,6 @@
       <%= collection_select(:provider, :provider_group_id, ProviderGroup.all, :id, :name, {:prompt => "Select Group"}) %>
     </p>
   </div>
-  <div class="form_box">
-    <% f.fields_for :locations do |location_form| %>
-    <p>
-      <%= location_form.label :name %><br />
-      <%= location_form.text_field :name %>
-    </p>
-    <p>
-      <%= location_form.label :address %><br />
-      <%= location_form.text_area :address, :rows => 5, :cols => 27 %>
-    </p>
-    <p>
-      <%= location_form.label :city %><br />
-      <%= location_form.text_field :city %>
-    </p>
-    <p>
-      <p>
-        <%= f.label :state_id %><br />
-        <%= collection_select(:locations, :state_id, State.all, :id, :full_name, {:prompt => "Select State"}) %>
-      </p>
-    </p>
-    <p>
-      <%= location_form.label :zipcode %><br />
-      <%= location_form.text_field :zipcode %>
-    </p>
-    <% end %>
-  </div>
   <div class="clear"></div>
   <p>
     <%= f.submit 'Submit', :class => 'login_btn' %>

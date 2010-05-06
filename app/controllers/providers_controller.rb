@@ -45,7 +45,6 @@ class ProvidersController < ApplicationController
   # GET /providers/1/edit
   def edit
     @provider = Provider.find(params[:id])
-    @provider.locations.build
   end
 
   # POST /providers
@@ -106,6 +105,7 @@ class ProvidersController < ApplicationController
   
   def provider_action
     @provider = Provider.first
+    @action_types = SearchTopic.new
     if params[:id].nil?
       @provider = Provider.first
     else

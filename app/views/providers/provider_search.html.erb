@@ -20,7 +20,7 @@
       </div>
       <div class="combo_panel">
         <div class="sub_panel">
-        <h4>Provider Sequence: <span><%= @provider.sequence_number %></span></h4><h4>Primary Specialty: <span>37</span></h4>
+        <h4>Provider Sequence: <span><%= @provider.sequence_number %></span></h4><h4>Primary Specialty: <span id="speciality_code" title="<%= @provider.provider_speciality.speciality_type %>"><%= @provider.provider_speciality.speciality_code %></span></h4>
         </div>
         <div class="sub_panel">
           <div id="provider_stats">

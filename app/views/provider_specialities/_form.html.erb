@@ -1,0 +1,15 @@
+<% form_for(@provider_speciality) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :speciality_code %><br />
+    <%= f.text_field :speciality_code %>
+  </p>
+  <p>
+    <%= f.label :speciality_type %><br />
+    <%= f.text_field :speciality_type %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

@@ -88,6 +88,12 @@ $(document).ready(function() {
     tableActions.selectAllCheckboxes($(this));
   });
   
+  $('#speciality_code[title]').tooltip({ effect: 'slide'});
+  $('#speciality_code_main[title]').tooltip({
+    effect:'slide',
+    offset:[0,-65]
+  });
+  
   $('#accordion').accordion({
     active: 3,
     icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }

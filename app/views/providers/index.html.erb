@@ -5,6 +5,13 @@
     <h3>Provider Name: <span><%= provider.full_name %></span></h3>
     <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_path(provider) %></div>
     <div class="left">
+      <ul>
+      <% provider.locations.each do |pl| %>
+        <li><%= pl.name %> - <%= link_to "Edit Location", edit_location_path(pl) %></li>
+      <% end %>
+      </ul>
+    </div>
+    <div class="left clear">
       <div class="left"><%= link_to 'Add Location', new_location_path(:id => provider.id) %></div>
       <div class="left"><%= link_to 'Show', provider_path(provider) %></div>
       <div class="left"><%= link_to 'Edit', edit_provider_path(provider) %></div>
