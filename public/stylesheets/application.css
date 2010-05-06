@@ -55,6 +55,9 @@ a:hover {
 .hide_text {
   text-indent: -3000em;
 }
+.hidden {
+  display: none;
+}
 p {
   line-height: 16.35px;
 }

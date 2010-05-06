@@ -21,6 +21,15 @@ var flash = {
 
 var tableActions = {
   
+  setActive: function(el) {
+    allRows = el.parents('tbody').children('tr').removeClass('active');
+    el.addClass('active');
+  },
+  
+  findProvider: function(el) {
+    providerId = el;
+  },
+  
   showSubContent: function(el) {
     $row = el.parents('tr').next('tr.table_sub_content').find('div.table_toggle_content');
     $row.slideToggle('slow');
@@ -43,11 +52,7 @@ var tableActions = {
 };
 
 var baseActions = {
-  
-  setActive: function(el) {
     
-  },
-  
   accordionClick: function(el) {
    $panel_selector = el.attr("panel");
    $panel = $("#" + $panel_selector);
@@ -87,6 +92,12 @@ $(document).ready(function() {
   $('#provider_select').click(function() {
     tableActions.selectAllCheckboxes($(this));
   });
+  
+  $('#provider_search tbody tr').click(function() {
+    tableActions.setActive($(this));
+  });
+  
+  $('#provider_search tbody').children().first().click();
   
   $('#speciality_code[title]').tooltip({ effect: 'slide'});
   $('#speciality_code_main[title]').tooltip({

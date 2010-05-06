@@ -21,7 +21,7 @@
         <td class="provider_search_score"><div class="table_icon table_rating_dot <%= provider.score_color(provider) %>_dot"><%= link_to "provider", provider_search_path(provider), :class => 'table_icon_link' %></div><%=h provider.provider_score %></td>
         <td class="provider_search_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon', :rel => '#overlay' %></td>
         <td class="provider_search_prv_seq"><%=h provider.sequence_number %></td>
-        <td class="provider_search_provider_name"><%= link_to "#{provider.full_name}", provider_path(provider) %></td>
+        <td class="provider_search_provider_name"><span class="hidden"><%=h provider.id %></span><%= link_to "#{provider.full_name}", provider_path(provider) %></td>
         <td class="provider_search_tin"><%=h provider.tin %></td>
         <td class="provider_search_spec">37</td>
         <td class="provider_search_group_name"><%=h provider.provider_group.name %></td>
