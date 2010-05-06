@@ -111,17 +111,18 @@ $(document).ready(function() {
  
   $("a[rel]").overlay({ 
 
-      expose: {
-   	    color: '#000',
-   	    opacity: 0.15,
-   	    closeSpeed: 700
-   	  }, 
+      mask: {
+    		color: '#000000',
+    		loadSpeed: 200,
+    		opacity: 0.15
+      },
+      closeOnClick: false,
       effect: 'apple', 
 
       onBeforeLoad: function() { 
 
           // grab wrapper element inside content 
-          var wrap = this.getContent().find(".contentWrap"); 
+          var wrap = this.getOverlay().find(".contentWrap"); 
 
           // load the page specified in the trigger 
           wrap.load(this.getTrigger().attr("href")); 
