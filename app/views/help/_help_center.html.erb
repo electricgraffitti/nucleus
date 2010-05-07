@@ -1,39 +1,44 @@
-    <div id="center_help_content_wrap">
-      <h3 class="help_list_item">Popular How to Guides and Video Tutorials</h3>
-      <h4>How to Guides</h4>
-      <ul class="help_list">
-        <li class="help_list_item">
-          <h5>How do I change my user account settings</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </li>
-        <li class="help_list_item">
-          <h5>How do I change my user account settings</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </li>
-        <li class="help_list_item">
-          <h5>How do I change my user account settings</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </li>
-      </ul>
-      <h4>Video Tutorials</h4>
-      <ul class="help_list">
-        <li class="help_list_item">
-          <h5>How do I change my user account settings</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </li>
-        <li class="help_list_item">
-          <h5>How do I change my user account settings</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </li>
-        <li class="help_list_item">
-          <h5>How do I change my user account settings</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </li>
-      </ul>
+<div id="help_search">
+  <h2>Search Knowledge Base</h2>
+  <% form_tag providers_path, :method => :get do %>
+    <%= text_field_tag(:search, nil, {:size => 52, :class => "left"} )%>
+    <div id="search_buttons">
+      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+      <%= link_to "Clear", "", :id => "search_clear" %>
     </div>
+    <% end %>
+    <div class="clear"></div>
+</div>
+<div id="center_help_content_wrap">
+  <h3 class="help_list_item">Popular How to Guides and Video Tutorials</h3>
+  <h4 class="green">How to Guides</h4>
+  <ul class="help_list">
+    <li class="help_list_item">
+      <div class="tutorial_icon pdf_icon"></div>
+      <h5>How do I change my user account settings</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+      </p>
+    </li>
+    <li class="help_list_item">
+      <div class="tutorial_icon pdf_icon"></div>
+      <h5>How do I change my user account settings</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+      </p>
+    </li>
+  </ul>
+  <h4 class="green">Video Tutorials</h4>
+  <ul class="help_list">
+    <li class="help_list_item">
+      <div class="tutorial_icon video_icon"></div>
+      <h5>How do I change my user account settings</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+      </p>
+    </li>
+    <li class="help_list_item">
+      <div class="tutorial_icon video_icon"></div>
+      <h5>How do I change my user account settings</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+      </p>
+    </li>
+  </ul>
+</div>

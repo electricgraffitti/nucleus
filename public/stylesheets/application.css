@@ -46,6 +46,16 @@ html, body {
   font-size: 12px;
   font-weight: bold;
 }
+.green_header {
+  background: #6ac520;
+  padding-left: 20px;
+  padding-top: 5px;
+  color: #fff;
+  text-shadow: 0px 1px 1px #59a61b;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold; 
+}
 a {
   color: #555;
 }
@@ -1124,13 +1134,13 @@ ul.location_listing div.map_icon.active {
   min-height: 620px;
 }
 #panel_layout.help_panels .ui-layout-center {
-  width: 582px;
+  width: 542px;
   border-left: 1px solid #c0c0c0;
   border-right: 1px solid #c0c0c0;
 }
 #panel_layout.help_panels .ui-layout-west, #panel_layout.help_panels .ui-layout-east {
   background: #efefef;
-  width: 220px;
+  width: 240px;
 }
 ul.help_west_list li {
   padding: 10px 2px;
@@ -1142,11 +1152,40 @@ ul.help_west_list li {
 #center_help_content_wrap {
   position: relative;
   border: 1px solid #c0c0c0;
-  height: 580px;
+  height: 435px;
   margin: 20px;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
+}
+#help_search {
+  position: relative;
+  background: #6ac520;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+#help_search h2 {
+  font-size: 18px;
+  color: #fff;
+}
+#help_search form {
+  float: left;
+}
+#help_search #search_buttons {
+  margin-top:5px;
+  margin-left:0px;
+  text-align:right;
+  width:125px;
+  float: left;
+}
+#help_search #search_buttons a {
+  color: #fff;
+}
+#help_search #search_buttons #search_clear {
+  margin: 0px 0px 0px 10px;
 }
 #center_help_content_wrap h3, #center_help_content_wrap h4, #center_help_content_wrap h5 {
   font-weight: bold;
@@ -1161,6 +1200,18 @@ ul.help_west_list li {
 #center_help_content_wrap h5 {
   font-size: 12px;
 }
+.tutorial_icon {
+  float: left;
+  width: 38px;
+  height: 53px;
+  margin-right: 10px;
+}
+.tutorial_icon.pdf_icon {
+  background: url('../images/inner_pages/tutorial_icons.jpg') -38px top no-repeat;
+}
+.tutorial_icon.video_icon {
+  background: url('../images/inner_pages/tutorial_icons.jpg') left top no-repeat;
+}
 .help_west_list a {
   text-decoration: none;
 }
@@ -1171,26 +1222,67 @@ ul.help_west_list li {
   position: relative;
   margin-left: 20px;
   padding: 20px 0px;
-  width: 480px;
+  width: 450px;
   border-bottom: 1px solid #c0c0c0;
 }
 .sidebar_panel {
   position: relative;
-  padding: 10px 9px;
-  width:202px;
+  padding: 20px;
+  width:200px;
   border-bottom: 1px solid #c0c0c0;
+}
+.sidebar_panel p {
+  margin-bottom: 20px;
+}
+#panel_layout.help_panels .sidebar_panel.white {
+  background: #fff;
+}
+#panel_layout.help_panels .sidebar_panel h2 {
+  font-size: 18px;
+}
+.help_icon_sub_text {
+  font-size: 75%;
+}
+.icon_single_line {
+  display:block;
+  margin-top:10px;
 }
 .sidebar_panel a.sidebar_icon_link {
   position: relative;
-  padding: 5px 0px 5px 42px;
-  height: 22px;
+  padding: 7px 0px 15px 70px;
+  height: 35px;
   margin: 10px 0px;
   display: block;
-  background: url("../images/inner_pages/support_icons.png") left top no-repeat;
+  background: #333 url('../images/inner_pages/profile_flag_bg.jpg') left top repeat-x;
+  /*background: url("../images/inner_pages/support_icons.png") left top no-repeat;*/
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
 }
 .sidebar_panel a.sidebar_icon_link:hover {
-  text-decoration: underline;
+
+}
+.sidebar_panel a.sidebar_icon_link div.help_icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 59px;
+  height: 57px;
+}
+.sidebar_panel a.sidebar_icon_link div#contact {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -236px top no-repeat;
+}
+.sidebar_panel a.sidebar_icon_link div#chat {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -295px top no-repeat;
+}
+.sidebar_panel a.sidebar_icon_link div#forum {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -354px top no-repeat;
+}
+.sidebar_panel a.sidebar_icon_link div#hciu {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px top no-repeat;
+}
+.sidebar_panel a.sidebar_icon_link div#video {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px top no-repeat;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -1458,7 +1550,7 @@ tr.active {
 .medium_btn {
 	position: relative;
 	width: 63px;
-	height: 26px;
+	height: 25px;
 	border: none;
 	background: url('../images/inner_pages/medium_button.png') 0px 0px no-repeat;
 	color: #CFCFCF;

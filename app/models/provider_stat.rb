@@ -3,7 +3,7 @@ class ProviderStat < ActiveRecord::Base
   belongs_to :provider
   
   def line_percentage
-    line_percentage = (self.total_line_count.to_f / self.final_line_count.to_f) * 100.00
+    line_percentage = (self.final_line_count.to_f / self.total_line_count.to_f) * 100.00
     return line_percentage
   end
   

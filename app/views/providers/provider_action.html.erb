@@ -5,7 +5,7 @@
       <%= render :partial => 'providers/provider_info', :locals => {:provider => @provider} %>
     </div>
     <div class="panel_set_4">
-      <%= render :partial => 'providers/provider_action_stats' %>
+      <%= render :partial => 'providers/provider_action_stats', :locals => {:provider => @provider} %>
     </div>
     <div class="panel_set_3">
       <div class="basic_panel_3 provider_chart">
