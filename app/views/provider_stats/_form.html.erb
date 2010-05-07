@@ -1,0 +1,71 @@
+<div class="form_box">
+<% form_for(@provider_stat) do |f| %>
+  <%= f.error_messages %>
+
+<div class="form_block">  
+  <p>
+    <%= f.label :final_line_count %><br />
+    <%= f.text_field :final_line_count, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :total_line_count %><br />
+    <%= f.text_field :total_line_count, :size => 15 %>
+  </p>
+</div>
+<div class="form_block">
+  <p>
+    <%= f.label :final_procedure_count %><br />
+    <%= f.text_field :final_procedure_count, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :total_procedure_count %><br />
+    <%= f.text_field :total_procedure_count, :size => 15 %>
+  </p>
+</div>
+<div class="form_block">
+  <p>
+    <%= f.label :final_patient_count %><br />
+    <%= f.text_field :final_patient_count, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :total_patient_count %><br />
+    <%= f.text_field :total_patient_count, :size => 15 %>
+  </p>
+</div>
+<div class="form_block">
+  <p>
+    <%= f.label :final_claim_count %><br />
+    <%= f.text_field :final_claim_count, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :total_claim_count %><br />
+    <%= f.text_field :total_patient_count, :size => 15 %>
+  </p>
+</div>
+<div class="form_block">
+  <p>
+    <%= f.label :final_savings_count %><br />
+    <%= f.text_field :final_savings_count, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :total_savings_count %><br />
+    <%= f.text_field :total_savings_count, :size => 15 %>
+  </p>
+</div>
+<div class="form_block">
+  <p>
+    <%= f.label :final_billed_count %><br />
+    <%= f.text_field :final_billed_count, :size => 15 %>
+  </p>
+  <p>
+    <%= f.label :total_billed_count %><br />
+    <%= f.text_field :total_billed_count, :size => 15 %>
+  </p>
+</div>
+<div class="clear"></div>
+  <%= f.hidden_field :provider_id, :value => provider.id%>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
+</div>

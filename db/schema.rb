@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100506173020) do
+ActiveRecord::Schema.define(:version => 20100507145957) do
 
   create_table "claims", :force => true do |t|
     t.integer  "provider_id"
@@ -77,6 +77,24 @@ ActiveRecord::Schema.define(:version => 20100506173020) do
   create_table "provider_specialities", :force => true do |t|
     t.string   "speciality_code"
     t.string   "speciality_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "provider_stats", :force => true do |t|
+    t.integer  "final_line_count"
+    t.integer  "total_line_count"
+    t.integer  "final_procedure_count"
+    t.integer  "total_procedure_count"
+    t.integer  "final_patient_count"
+    t.integer  "total_patient_count"
+    t.integer  "final_claim_count"
+    t.integer  "total_claim_count"
+    t.integer  "final_savings_count"
+    t.integer  "total_savings_count"
+    t.integer  "final_billed_count"
+    t.integer  "total_billed_count"
+    t.integer  "provider_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

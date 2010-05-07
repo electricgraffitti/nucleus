@@ -1,0 +1,42 @@
+<h1>Listing provider_stats</h1>
+
+<table>
+  <tr>
+    <th>Line active</th>
+    <th>Total lines</th>
+    <th>Procedure active</th>
+    <th>Total procedures</th>
+    <th>Patient active</th>
+    <th>Total patients</th>
+    <th>Claims active</th>
+    <th>Total claims</th>
+    <th>Paid amount</th>
+    <th>Paid request</th>
+    <th>Billed amount</th>
+    <th>Total billed</th>
+  </tr>
+
+<% @provider_stats.each do |provider_stat| %>
+  <tr>
+    <td><%=h provider_stat.line_active %></td>
+    <td><%=h provider_stat.total_lines %></td>
+    <td><%=h provider_stat.procedure_active %></td>
+    <td><%=h provider_stat.total_procedures %></td>
+    <td><%=h provider_stat.patient_active %></td>
+    <td><%=h provider_stat.total_patients %></td>
+    <td><%=h provider_stat.claims_active %></td>
+    <td><%=h provider_stat.total_claims %></td>
+    <td><%=h provider_stat.paid_amount %></td>
+    <td><%=h provider_stat.paid_request %></td>
+    <td><%=h provider_stat.billed_amount %></td>
+    <td><%=h provider_stat.total_billed %></td>
+    <td><%= link_to 'Show', provider_stat %></td>
+    <td><%= link_to 'Edit', edit_provider_stat_path(provider_stat) %></td>
+    <td><%= link_to 'Destroy', provider_stat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New provider_stat', new_provider_stat_path %>

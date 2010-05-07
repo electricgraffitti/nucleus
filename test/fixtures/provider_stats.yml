@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  line_active: 1
+  total_lines: 1
+  procedure_active: 1
+  total_procedures: 1
+  patient_active: 1
+  total_patients: 1
+  claims_active: 1
+  total_claims: 1
+  paid_amount: 1
+  paid_request: 1
+  billed_amount: 1
+  total_billed: 1
+
+two:
+  line_active: 1
+  total_lines: 1
+  procedure_active: 1
+  total_procedures: 1
+  patient_active: 1
+  total_patients: 1
+  claims_active: 1
+  total_claims: 1
+  paid_amount: 1
+  paid_request: 1
+  billed_amount: 1
+  total_billed: 1

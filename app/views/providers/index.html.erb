@@ -1,5 +1,6 @@
 <div class="scaffold_panel">
   <h2>Listing providers</h2>
+  <div class="form_box">
   <% @providers.each do |provider| %>
   <div class="listing_panel clear_left">
     <h3>Provider Name: <span><%= provider.full_name %></span></h3>
@@ -13,12 +14,18 @@
     </div>
     <div class="left clear">
       <div class="left"><%= link_to 'Add Location', new_location_path(:id => provider.id) %></div>
+      <% if provider.provider_stats.blank? %>
+        <div class="left"><%= link_to 'Add Stats', new_provider_stat_path(:id => provider.id) %></div>
+      <% else %>
+        <div class="left"><%= link_to 'Edit Stats', edit_provider_stat_path(:id => provider.id) %></div>
+      <% end %>
       <div class="left"><%= link_to 'Show', provider_path(provider) %></div>
       <div class="left"><%= link_to 'Edit', edit_provider_path(provider) %></div>
       <div class="left"><%= link_to 'Delete', provider, :confirm => 'Are you sure?', :method => :delete %></div>
     </div>
   </div>
   <% end %>
+  </div>
   <div class="clear"></div>
   <%= link_to 'Add a New Provider', new_provider_path %>
 </div>

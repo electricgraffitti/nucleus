@@ -1,0 +1,7 @@
+<div class="scaffold_panel">
+  <h2>Provider Stats</h2>
+  <%= render :partial => 'provider_stats/form', :locals => {:provider => @provider} %>
+  <div class="clear"></div>
+  <%= link_to 'Show', @provider_stat %> |
+  <%= link_to 'Back', providers_path %>
+</div>

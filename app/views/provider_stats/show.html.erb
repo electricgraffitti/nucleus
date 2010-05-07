@@ -1,0 +1,63 @@
+<p>
+  <b>Line active:</b>
+  <%=h @provider_stat.line_active %>
+</p>
+
+<p>
+  <b>Total lines:</b>
+  <%=h @provider_stat.total_lines %>
+</p>
+
+<p>
+  <b>Procedure active:</b>
+  <%=h @provider_stat.procedure_active %>
+</p>
+
+<p>
+  <b>Total procedures:</b>
+  <%=h @provider_stat.total_procedures %>
+</p>
+
+<p>
+  <b>Patient active:</b>
+  <%=h @provider_stat.patient_active %>
+</p>
+
+<p>
+  <b>Total patients:</b>
+  <%=h @provider_stat.total_patients %>
+</p>
+
+<p>
+  <b>Claims active:</b>
+  <%=h @provider_stat.claims_active %>
+</p>
+
+<p>
+  <b>Total claims:</b>
+  <%=h @provider_stat.total_claims %>
+</p>
+
+<p>
+  <b>Paid amount:</b>
+  <%=h @provider_stat.paid_amount %>
+</p>
+
+<p>
+  <b>Paid request:</b>
+  <%=h @provider_stat.paid_request %>
+</p>
+
+<p>
+  <b>Billed amount:</b>
+  <%=h @provider_stat.billed_amount %>
+</p>
+
+<p>
+  <b>Total billed:</b>
+  <%=h @provider_stat.total_billed %>
+</p>
+
+
+<%= link_to 'Edit', edit_provider_stat_path(@provider_stat) %> |
+<%= link_to 'Back', provider_stats_path %>
