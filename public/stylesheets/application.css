@@ -358,7 +358,6 @@ ul.icon_nav li#icon_nav_7:hover {
   height: 100%;
   min-width: 1026px;
   text-align: center;
-  margin-bottom: 20px;
   background: #e7e7e7;
 }
 /***Panels***/
@@ -1475,7 +1474,7 @@ tr.active {
   height: 20px;
   background: #222;
   text-align: left;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 .copyright {
 	position: relative;
