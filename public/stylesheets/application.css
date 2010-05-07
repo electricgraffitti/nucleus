@@ -784,7 +784,7 @@ div.scaffold_pane label {
 #panel_layout #top_search {
   position: relative;
   width: 220px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 #provider_stat_date_range_date_range_id {
   margin: 0px;
@@ -845,7 +845,7 @@ input[type="text"]#claim_sequence_wide {
   width: 112px;
 }
 input[type="text"]#claim_sequence_short {
-  width: 29px;
+  width: 30px;
 }
 span.field_seperator {
   float: left;
@@ -922,6 +922,12 @@ span.field_seperator {
   position: relative;
   float:left;
   overflow: auto;
+}
+#provider_search_table {
+	width: 804px;
+}
+#provider_action_table {
+	min-width: 1026px;
 }
 a.flag_panel {
   display: block;
@@ -1346,7 +1352,7 @@ tr.active {
 .provider_search_spec {
 }
 .provider_search_group_name {
-  width: 170px;
+  width: 171px;
 }
 .provider_search_state {
 }
@@ -1451,12 +1457,12 @@ tr.active {
 .medium_btn {
 	position: relative;
 	width: 63px;
-	height: 24px;
+	height: 26px;
 	border: none;
 	background: url('../images/inner_pages/medium_button.png') 0px 0px no-repeat;
 	color: #CFCFCF;
 	font-size: 12px;
-	padding: 0px;
+	padding-bottom: 2px;
 	text-shadow: 1px 1px 0px #333;
 }
 .medium_btn:hover {

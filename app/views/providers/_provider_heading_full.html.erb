@@ -1,5 +1,5 @@
 <div id="provider_rating_full" class="<%= provider.score_color(provider)%>_rating"><%= provider.provider_score %></div>
-<h3>Provider Name: <span><%= provider.full_name %></span></h3>
+<h3><span><%= provider.full_name %></span></h3>
 <div id="search_wrap">
   <form action="http://google.com/search" method="get" class="search" target="_blank">
       <input type="text" name="q" size="45" value="<%= provider.full_name %>"/>

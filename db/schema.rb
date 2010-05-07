@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(:version => 20100506173020) do
   end
 
   create_table "provider_specialities", :force => true do |t|
-    t.integer  "speciality_code"
+    t.string   "speciality_code"
     t.string   "speciality_type"
     t.datetime "created_at"
     t.datetime "updated_at"
