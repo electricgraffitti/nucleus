@@ -122,12 +122,12 @@ $(document).ready(function() {
  
   $("a[rel]").overlay({ 
 
-      mask: {
+      expose: {
     		color: '#000000',
     		loadSpeed: 200,
     		opacity: 0.15
       },
-      closeOnClick: false,
+
       effect: 'apple', 
 
       onBeforeLoad: function() { 
