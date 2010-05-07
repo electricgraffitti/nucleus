@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <% providers.each do |provider| %>
-      <tr class='<%=cycle('even', 'odd')%>'>
+      <tr class='<%=cycle('even', 'odd')%>' id="<%= provider.id %>">
         <td class="provider_search_score"><div class="table_icon table_rating_dot <%= provider.score_color(provider) %>_dot"><%= link_to "provider", provider_search_path(provider), :class => 'table_icon_link' %></div><%=h provider.provider_score %></td>
         <td class="provider_search_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon', :rel => '#overlay' %></td>
         <td class="provider_search_prv_seq"><%=h provider.sequence_number %></td>

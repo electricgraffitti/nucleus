@@ -26,10 +26,6 @@ var tableActions = {
     el.addClass('active');
   },
   
-  findProvider: function(el) {
-    providerId = el;
-  },
-  
   showSubContent: function(el) {
     $row = el.parents('tr').next('tr.table_sub_content').find('div.table_toggle_content');
     $row.slideToggle('slow');
@@ -47,7 +43,26 @@ var tableActions = {
 				$(this).attr('checked', '');
 			});
 		}
-  }
+  },
+
+	setHighLights: function() {
+		$('#provider_search tbody tr').click(function() {
+	    tableActions.setActive($(this));
+			tableActions.swapProvider($(this));
+	  });
+
+	  $('#provider_search tbody').children().first().click();
+	},
+	
+	findProvider: function(el) {
+    providerId = el.attr("id");
+		return providerId;
+  },
+	
+	swapProvider: function(el) {
+		data = tableActions.findProvider(el);
+		$('#provider_content').load("/nucleus-provider-search #provider_content", {id:data});
+	}
   
 };
 
@@ -88,23 +103,24 @@ $(document).ready(function() {
     tableActions.showSubContent($(this));
     return false;
   });
-  
+
+  // Table checkboxes
   $('#provider_select').click(function() {
     tableActions.selectAllCheckboxes($(this));
   });
-  
-  $('#provider_search tbody tr').click(function() {
-    tableActions.setActive($(this));
-  });
-  
-  $('#provider_search tbody').children().first().click();
-  
+	
+	// Sets up the row highlights
+	tableActions.setHighLights();
+	
+	
+  // This is the tooltips, but jqtools 1.2 breaks the code
   $('#speciality_code[title]').tooltip({ effect: 'slide'});
   $('#speciality_code_main[title]').tooltip({
     effect:'slide',
     offset:[0,-65]
   });
   
+	// Sets the default accordion window
   $('#accordion').accordion({
     active: 3,
     icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
@@ -119,17 +135,15 @@ $(document).ready(function() {
   $("a.flag_panel").click(function() {
     baseActions.accordionClick($(this));
   });
- 
-  $("a[rel]").overlay({ 
 
+ 	// Sets the note overlay
+  $("a[rel]").overlay({ 
       expose: {
     		color: '#000000',
     		loadSpeed: 200,
     		opacity: 0.15
       },
-
       effect: 'apple', 
-
       onBeforeLoad: function() { 
 
           // grab wrapper element inside content 
