@@ -1,33 +1,16 @@
-<p>
-  <b>First name:</b>
-  <%=h @client.first_name %>
-</p>
+<% content_for :header do %>
 
-<p>
-  <b>Last name:</b>
-  <%=h @client.last_name %>
-</p>
+<% end %>
+<%= render :partial => 'clients/client_settings_header', :locals => {:client => current_client} %>
+<div id="panel_layout" class="clear">
+  <div id="padded_panel_layout">
+    <div class="full_panel client_heading_full">
+      <%= render :partial => 'clients/client_heading_full', :locals => {:client => current_client} %>
+    </div>
+  </div>
+  <div class="clear"></div>
 
-<p>
-  <b>Username:</b>
-  <%=h @client.username %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @client.email %>
-</p>
-
-<p>
-  <b>Crypted password:</b>
-  <%=h @client.crypted_password %>
-</p>
-
-<p>
-  <b>Password salt:</b>
-  <%=h @client.password_salt %>
-</p>
-
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+</div>
+<% content_for :javascripts do %>
+  
+<% end %>

@@ -1,0 +1,70 @@
+<% form_for(@condition) do |f| %>
+  <%= f.error_messages %>
+    <%= f.hidden_field :provider_id, :value => provider.id %>
+  <div class="basic_panel_2">
+  <p>
+    <%= f.label :condition_type_id, "Select A Condition Type" %><br />
+    <%= collection_select(:condition, :condition_type_id, ConditionType.all, :id, :condition_type) %>
+  </p>
+  <p>
+    <%= f.label :trigger_date %><br />
+    <%= f.text_field :trigger_date, :id => "condition_date" %>
+  </p>
+  <p>
+    <%= f.label :condition_rank %><br />
+    <%= f.text_field :condition_rank %>
+  </p>
+  <p>
+    <%= f.label :total_provider %><br />
+    <%= f.text_field :total_provider %>
+  </p>
+  <p>
+    <%= f.check_box :pro_sub %>
+    <%= f.label :pro_sub, "Has Procedure Submissions" %>
+  </p>
+  </div>
+  <div class="basic_panel_2">
+    <p>
+      <%= f.label :condition_score %><br />
+      <%= f.text_field :condition_score %>
+    </p>
+    <p>
+      <%= f.label :condition_billed %><br />
+      <%= f.text_field :condition_billed %>
+    </p>
+    <p>
+      <%= f.label :expected_billed %><br />
+      <%= f.text_field :expected_billed %>
+    </p>
+    <p>
+      <%= f.label :condition_paid %><br />
+      <%= f.text_field :condition_paid %>
+    </p>
+    <p>
+      <%= f.label :hci_action %><br />
+      <%= f.text_field :hci_action %>
+    </p>
+    <p>
+      <%= f.label :speciality_average_count %><br />
+      <%= f.text_field :speciality_average_count %>
+    </p>
+    <p>
+      <%= f.label :speciality_average_percentage %><br />
+      <%= f.text_field :speciality_average_percentage %>
+    </p>
+    <p>
+      <%= f.label :speciality_average_billed %><br />
+      <%= f.text_field :speciality_average_billed %>
+    </p>
+    <p>
+      <%= f.label :speciality_average_paid %><br />
+      <%= f.text_field :speciality_average_paid %>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="basic_panel_2">
+    <p>
+      <%= f.submit 'Submit' %> | <%= link_to 'Back', providers_path %>
+    </p>
+  </div>
+<% end %>

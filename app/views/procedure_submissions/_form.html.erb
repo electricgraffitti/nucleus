@@ -1,0 +1,32 @@
+<div class="basic_panel_2">
+  <h2>Provider: <%= condition.provider.full_name %><br/>Condition: <%= condition.condition_type.condition_type %></h2>
+</div>
+<div class="clear"></div>
+<% form_for(@procedure_submission) do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :condition_id, :value => condition.id %>
+  <div class="basic_panel_2">
+  <p>
+    <%= f.label :procedure_id, "Procedure Code" %><br />
+    <%= collection_select(:procedure_submission, :procedure_id, Procedure.all, :id, :procedure_code, {:propmt => "Choose a Procedure Code"}) %>
+  </p>
+  <p>
+    <%= f.label :total_submissions %><br />
+    <%= f.text_field :total_submissions %>
+  </p>
+  <p>
+    <%= f.label :total_billed %><br />
+    <%= f.text_field :total_billed %>
+  </p>
+  <p>
+    <%= f.label :total_paid %><br />
+    <%= f.text_field :total_paid %>
+  </p>
+  </div>
+  <div class="clear"></div>
+  <div class="basic_panel_2">
+    <p>
+      <%= f.submit 'Submit' %> | <%= link_to 'Back', providers_path %>
+    </p>
+  </div>
+<% end %>

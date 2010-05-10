@@ -1,0 +1,48 @@
+<p>
+  <b>Line count:</b>
+  <%=h @condition_stat.line_count %>
+</p>
+
+<p>
+  <b>Procedure count:</b>
+  <%=h @condition_stat.procedure_count %>
+</p>
+
+<p>
+  <b>Patient count:</b>
+  <%=h @condition_stat.patient_count %>
+</p>
+
+<p>
+  <b>Savings count:</b>
+  <%=h @condition_stat.savings_count %>
+</p>
+
+<p>
+  <b>Billed count:</b>
+  <%=h @condition_stat.billed_count %>
+</p>
+
+<p>
+  <b>Total billed:</b>
+  <%=h @condition_stat.total_billed %>
+</p>
+
+<p>
+  <b>Expected billed:</b>
+  <%=h @condition_stat.expected_billed %>
+</p>
+
+<p>
+  <b>Speciality average billed:</b>
+  <%=h @condition_stat.speciality_average_billed %>
+</p>
+
+<p>
+  <b>Submission:</b>
+  <%=h @condition_stat.submission_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_condition_stat_path(@condition_stat) %> |
+<%= link_to 'Back', condition_stats_path %>

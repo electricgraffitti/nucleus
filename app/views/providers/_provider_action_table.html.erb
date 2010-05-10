@@ -16,121 +16,38 @@
                 <th>Paid</th>
                 <th>HCI Remnd Action</th>
                 <th>Client Action</th>
-                <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <% 3.times do %>
+              <% provider.conditions.each do |pc| %>
               <tr class='<%=cycle('even', 'odd')%>'>
                 <td class="provider_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
                 <td class="provider_action_toggle"><div class="table_icon table_toggle_icon"></div></td>
                 <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', "" %></td>
                 <td class="provider_action_blank"></td>
                 <td class="provider_action_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon', :rel => '#overlay' %></td>
-                <td class="provider_action_trigger_date">01/21/2010</td>
-                <td class="provider_action_condition">STPX / Procedure Combination - 98941</td>
-                <td class="provider_action_rank">120</td>
-                <td class="provider_action_ttl">13200</td>
-                <td class="provider_action_score">68</td>
-                <td class="provider_action_billed">$27,430</td>
-                <td class="provider_action_paid">No</td>
-                <td class="provider_action_remnd">True</td>
-                <td class="provider_action_client_action">N/A</td>
-                <td class="provider_action_action">N/A</td>
+                <td class="provider_action_trigger_date"><%= (pc.trigger_date).to_s(:short_date) %></td>
+                <td class="provider_action_condition"><%= pc.condition_type.condition_code %> / <%= pc.condition_type.condition_type %></td>
+                <td class="provider_action_rank"><%= pc.condition_rank %></td>
+                <td class="provider_action_ttl"><%= pc.total_provider %></td>
+                <td class="provider_action_score"><%= pc.condition_score %></td>
+                <td class="provider_action_billed"><%= number_to_currency(pc.condition_billed) %></td>
+                <td class="provider_action_paid"><%= number_to_currency(pc.condition_paid) %></td>
+                <td class="provider_action_remnd"><%= pc.hci_action %></td>
+                <td class="provider_action_client_action"></td>
               </tr>
               <tr class="table_sub_content" cellpadding='0'>
                 <td colspan='16' cellpadding='0' class="empty">
               <div class="table_toggle_content" style="display: none;">
-                <div class="table_toggle_content_section">
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Code Pct</div>
-                    <div class="table_content_value">100%</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Pat Cnt</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Cnt w/Code</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Total Paid</div>
-                    <div class="table_content_value">$4592</div>
-                  </div>
-                </div>
-                <div class="table_toggle_content_section">
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Code Pct</div>
-                    <div class="table_content_value">100%</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Pat Cnt</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Cnt w/Code</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Total Paid</div>
-                    <div class="table_content_value">$4592</div>
-                  </div>
-                </div>
-                <div class="table_toggle_content_section">
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Code Pct</div>
-                    <div class="table_content_value">100%</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Pat Cnt</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Cnt w/Code</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Total Paid</div>
-                    <div class="table_content_value">$4592</div>
-                  </div>
-                </div>
-                <div class="table_toggle_content_section">
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Code Pct</div>
-                    <div class="table_content_value">100%</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Pat Cnt</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Cnt w/Code</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Total Paid</div>
-                    <div class="table_content_value">$4592</div>
-                  </div>
-                </div>
-                <div class="table_toggle_content_section last">
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Code Pct</div>
-                    <div class="table_content_value">100%</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Pat Cnt</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row odd">
-                    <div class="table_content_title">Pat Cnt w/Code</div>
-                    <div class="table_content_value">11</div>
-                  </div>
-                  <div class="table_toggle_content_section_row even">
-                    <div class="table_content_title">Total Paid</div>
-                    <div class="table_content_value">$4592</div>
-                  </div>
-                </div>
+                <% if pc.condition_type.condition_code == "SFRO" %>
+                  <%= render :partial => 'condition_stats/sfro_table_expansion', :locals => {:cs => pc.condition_stat} %>
+                <% elsif pc.condition_type.condition_code == "SDES" %>
+                  <%= render :partial => 'condition_stats/sdes_table_expansion', :locals => {:cs => pc.condition_stat} %>
+                <% elsif pc.condition_type.condition_code == "SBRD" %>
+                  <%= render :partial => 'condition_stats/sbrd_table_expansion', :locals => {:pc => pc} %>
+                <% else %>
+                  <%= render :partial => 'condition_stats/base_table_expansion' %>
+                <% end %>
               </div>
               </td>
               </tr>

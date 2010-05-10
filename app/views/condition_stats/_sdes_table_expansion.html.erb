@@ -1,0 +1,26 @@
+<table class="expansion_table">
+  <thead>
+    <tr>
+      <th>Destruction Code Count</th>
+      <th>Destruction Count</th>
+      <th>Destruction Per Code</th>
+      <th>Destructions Total Billed</th>
+      <th>Destructions Total Paid</th>
+      <th>Spec Avg per Code</th>
+      <th>Spec Avg Billed</th>
+      <th>Spec Avg Paid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= cs.condition_code_count %></td>
+      <td><%= cs.condition_count %></td>
+      <td><%= cs.conditions_per_code %></td>
+      <td><%= number_to_currency(cs.condition.condition_billed) %></td>
+      <td><%= number_to_currency(cs.condition.condition_paid) %></td>
+      <td><%= cs.condition.speciality_average_count %></td>
+      <td><%= number_to_currency(cs.condition.speciality_average_billed) %></td>
+      <td><%= number_to_currency(cs.condition.speciality_average_paid) %></td>
+    </tr>
+  </tbody>
+</table>

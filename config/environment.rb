@@ -36,8 +36,13 @@ Rails::Initializer.run do |config|
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
-
+  
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+Time::DATE_FORMATS[:event_time] = "%A %B %d, at %I:%M %p"
+Time::DATE_FORMATS[:short_date] = "%m-%d-%Y"
+Date::DATE_FORMATS[:nice_date] = "%A, %B %d, %Y"
+Time::DATE_FORMATS[:table_date] = "%B %d %Y, at %I:%M %p"

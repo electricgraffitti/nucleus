@@ -45,13 +45,16 @@ var tableActions = {
 		}
   },
 
-	setHighLights: function() {
-		$('#provider_search tbody tr').click(function() {
+	setHighLights: function(el) {
+		el.click(function() {
 	    tableActions.setActive($(this));
 			tableActions.swapProvider($(this));
 	  });
-
+	},
+	
+	setInitHighlight: function() {
 	  $('#provider_search tbody').children().first().click();
+	  $('#provider_action_table tbody').children().first().click();
 	},
 	
 	findProvider: function(el) {
@@ -62,6 +65,16 @@ var tableActions = {
 	swapProvider: function(el) {
 		data = tableActions.findProvider(el);
 		$('#provider_content').load("/nucleus-provider-search #provider_content", {id:data});
+	}
+  
+};
+
+var adminAction = {
+  
+  setupCalendars: function() {
+		$('#condition_date').datepicker({
+			showButtonPanel: true
+		});
 	}
   
 };
@@ -103,15 +116,24 @@ $(document).ready(function() {
     tableActions.showSubContent($(this));
     return false;
   });
-
+  
+  adminAction.setupCalendars();
+  
   // Table checkboxes
   $('#provider_select').click(function() {
     tableActions.selectAllCheckboxes($(this));
   });
 	
 	// Sets up the row highlights
-	tableActions.setHighLights();
+	tableActions.setInitHighlight();
 	
+	$('#provider_search tbody tr').click(function() {
+	  tableActions.setHighLights($(this));
+	});
+	
+	$('#provider_action_table tbody tr').click(function() {
+	  tableActions.setHighLights($(this));
+	});
 	
   // This is the tooltips, but jqtools 1.2 breaks the code
   $('#speciality_code[title]').tooltip({ effect: 'slide'});
@@ -152,16 +174,6 @@ $(document).ready(function() {
           // load the page specified in the trigger 
           wrap.load(this.getTrigger().attr("href")); 
       }
-  }); 
-	
-	// injects flash div into dom
-	// flash.injectFlashBox();
-	
-	// sets up flash notice
-  // flash_message = $("#flash").html();
-  // msg = $.trim(flash_message);
-  //    if(msg != "") {
-  //  flash.activateNotice(flash_message);
-  // }
+  });
   
 });

@@ -1,0 +1,34 @@
+<h1>Listing conditions</h1>
+
+<table>
+  <tr>
+    <th>Provider</th>
+    <th>Condition type</th>
+    <th>Trigger date</th>
+    <th>Condition rank</th>
+    <th>Total provider</th>
+    <th>Condition score</th>
+    <th>Condition stat</th>
+    <th>Hci action</th>
+  </tr>
+
+<% @conditions.each do |condition| %>
+  <tr>
+    <td><%=h condition.provider_id %></td>
+    <td><%=h condition.condition_type_id %></td>
+    <td><%=h condition.trigger_date %></td>
+    <td><%=h condition.condition_rank %></td>
+    <td><%=h condition.total_provider %></td>
+    <td><%=h condition.condition_score %></td>
+    <td><%=h condition.condition_stat_id %></td>
+    <td><%=h condition.hci_action %></td>
+    <td><%= link_to 'Show', condition %></td>
+    <td><%= link_to 'Edit', edit_condition_path(condition) %></td>
+    <td><%= link_to 'Destroy', condition, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New condition', new_condition_path %>

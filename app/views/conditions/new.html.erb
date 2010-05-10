@@ -1,0 +1,9 @@
+<%= render :partial => 'conditions/condition_header' %>
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
+    <%= render :partial => 'conditions/form', :locals => {:provider => @provider} %>
+  </div>
+  <%= link_to 'Back', providers_path, :class => "full_20_wrap" %>
+  <div class="clear"></div>
+</div>
+

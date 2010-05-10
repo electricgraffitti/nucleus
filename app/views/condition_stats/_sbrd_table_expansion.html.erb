@@ -1,0 +1,39 @@
+<table class="expansion_table">
+  <thead>
+    <tr>
+      <th>Total Billed</th>
+      <th>Expected Billed</th>
+      <th>Spec Avg Billed</th>
+      <th>Top Procedure Codes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= number_to_currency(pc.condition_billed) %></td>
+      <td><%= number_to_currency(pc.expected_billed) %></td>
+      <td><%= number_to_currency(pc.speciality_average_billed) %></td>
+      <td>
+        <table class="inner_expansion_table">
+          <thead>
+            <tr>
+              <th>Proc</th>
+              <th>Total Submissions</th>
+              <th>Total Billed</th>
+              <th>Total Paid</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% pc.procedure_submissions.each do |ps| %>
+            <tr>
+              <td title="<%= ps.procedure.procedure_description %>"><%= ps.procedure.procedure_code %></td>
+              <td><%= ps.total_submissions %></td>
+              <td><%= number_to_currency(ps.total_billed) %></td>
+              <td><%= number_to_currency(ps.total_paid) %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -62,6 +62,11 @@ a {
 a:hover {
   color: #2070b5;
 }
+.admin_link {
+  margin-top: 10px;
+  float:left;
+  margin-right: 10px;
+}
 .hide_text {
   text-indent: -3000em;
 }
@@ -553,7 +558,7 @@ div.scaffold_pane label {
 .sub_panel.last {
   border-bottom: none;
 }
-.provider_info {
+.provider_info, .client_info {
   height: 175px;
   padding: 25px 10px 0px;
 }
@@ -899,7 +904,32 @@ span.field_seperator {
 .provider_heading_full h3 {
   margin-left: 95px;
 }
+.client_heading_full h3 {
+  
+}
 /** Provider Stats **/
+.provider_index_wrap {
+  position: relative;
+  float: left;
+  border-bottom: 1px solid #c0c0c0;
+  padding-top: 20px;
+  width: 100%;
+}
+.provider_index_wrap.odd {
+  background: #f9f9f9;
+}
+.provider_condition_list {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.stat_block {
+  position: relative;
+  float: left;
+  padding: 10px 0px;
+  border-bottom: 1px solid #c0c0c0;
+  width: 100%;
+}
 #provider_stats, #provider_stats .stat_group {
   position: relative;
   float: left;
@@ -1485,7 +1515,7 @@ tr.active {
 }
 .table_toggle_content {
   margin: 5px;
- border: 1px solid #c0c0c0; 
+/* border: 1px solid #c0c0c0; */
 }
 .table_toggle_content_section {
   position: relative;
@@ -1510,6 +1540,9 @@ tr.active {
   padding: 5px 20px 5px 0px;
   width:30px;
   float:right;
+}
+.expansion_table, .inner_expansion_table {
+ border-left: 1px solid #c0c0c0; 
 }
 /*********************************************/
 /******************BUTTONS********************/
@@ -1566,7 +1599,7 @@ tr.active {
 /*********************************************/
 /******************FOOTER********************/
 #ft {
-  position: absolute;
+  position: relative;
   bottom: 0px;
 /*  margin-top: -20px;*/
   width: 100%;
@@ -1752,4 +1785,8 @@ div.overlay div.close {
     color:#aba; 
     font-size:15px; 
     margin:0 0 -10px 0; 
+}
+#ui-datepicker-div {
+  background: #ffffff;
+  border: 1px solid #c0c0c0;
 }

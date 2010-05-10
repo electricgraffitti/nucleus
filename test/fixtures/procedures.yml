@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  procedure_code: 1
+  procedure_description: MyString
+
+two:
+  procedure_code: 1
+  procedure_description: MyString
+
+# == Schema Information
+#
+# Table name: procedures
+#
+#  id                    :integer(4)      not null, primary key
+#  procedure_code        :integer(4)
+#  procedure_description :string(255)
+#  created_at            :datetime
+#  updated_at            :datetime
+#
+

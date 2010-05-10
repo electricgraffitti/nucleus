@@ -1,31 +1,96 @@
-<div class="scaffold_panel">
-  <h2>Listing providers</h2>
-  <div class="form_box">
-  <% @providers.each do |provider| %>
-  <div class="listing_panel clear_left">
-    <h3>Provider Name: <span><%= provider.full_name %></span></h3>
-    <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_path(provider) %></div>
-    <div class="left">
-      <ul>
-      <% provider.locations.each do |pl| %>
-        <li><%= pl.name %> - <%= link_to "Edit Location", edit_location_path(pl) %></li>
-      <% end %>
-      </ul>
+<%= render :partial => 'providers/provider_header' %>
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
+    <% @providers.each do |provider| %>
+    <div class="provider_index_wrap <%=cycle('even', 'odd')%>">
+      <div class="panel_set_2">
+        <div class="basic_panel_2">
+          <h3>Provider: <span><%= provider.full_name %></span></h3>
+          <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_path(provider) %></div>
+        </div>
+        <div class="basic_panel_2">
+          <div class="panel_left">
+            <div class="panel_item">          
+              <div class="panel_item_title">Provider Sequence</div>
+              <div class="panel_item_value"><%=h provider.sequence_number %></div>
+            </div>
+            <div class="panel_item">          
+              <div class="panel_item_title">TIN</div>
+              <div class="panel_item_value"><%=h provider.tin %></div>
+            </div>
+            <div class="panel_item">          
+              <div class="panel_item_title">Group Name</div>
+              <div class="panel_item_value"><%=h provider.provider_group.name %></div>
+            </div>
+          </div>
+          <div class="panel_right">
+            <div class="panel_item">          
+              <div class="panel_item_title">Primary Speciality</div>
+              <div id="speciality_code_main" class="panel_item_value" title="<%= provider.provider_speciality.speciality_type %>"><%=h provider.provider_speciality.speciality_code %></div>
+            </div>
+            <div class="panel_item">          
+              <div class="panel_item_title">State</div>
+              <div class="panel_item_value"><%=h provider.state.abbreviation %></div>
+            </div>
+            <div class="panel_item">          
+              <div class="panel_item_title">Group TIN</div>
+              <div class="panel_item_value"><%=h provider.provider_group.group_tin %></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <% if provider.provider_stat.blank? %>
+            <div class="admin_link"><%= link_to 'Add Stats', new_provider_stat_path(:id => provider.id) %></div>
+          <% else %>
+            <div class="admin_link"><%= link_to 'Edit Stats', edit_provider_stat_path(:id => provider.id) %></div>
+          <% end %>
+          <div class="admin_link"><%= link_to 'Show', provider_path(provider) %></div>
+          <div class="admin_link"><%= link_to 'Edit', edit_provider_path(provider) %></div>
+          <div class="admin_link"><%= link_to 'Delete', provider, :confirm => 'Are you sure?', :method => :delete %></div>
+        </div>
+      </div>
+      <div class="panel_set_3">
+        <div class="basic_panel_3">
+          <h3>Provider Locations:</h3>
+          <ul class="provider_condition_list left">
+            <% provider.locations.each do |pl| %>
+              <li><%= pl.name %> - <%= link_to "Edit Location", edit_location_path(pl) %></li>
+            <% end %>
+          </ul>
+          <div class="admin_link clear"><%= link_to 'Add Location', new_location_path(:id => provider.id) %></div>
+        </div>
+      </div>
+      <div class="panel_set_3">
+        <div class="basic_panel_3">
+          <h3>Provider Conditions:</h3>
+          <ul class="left">
+          <% provider.conditions.each do |pc| %>
+            <li class="stat_block"><%= pc.condition_type.condition_type %> - <%= pc.condition_type.condition_code %><br/>
+              <%= link_to "Edit Condition", edit_condition_path(pc), :class => "admin_link"%>
+                <% if pc.condition_stat.blank? %>
+                  <%= link_to 'Add Stats', new_condition_stat_path(:id => pc.id), :class => "admin_link" %>
+                <% else %>
+                  <%= link_to 'Edit Stats', edit_condition_stat_path(:id => pc.id), :class => "admin_link" %>
+                <% end %>
+                <% if pc.pro_sub %>
+                  <% if pc.condition_stat.blank? %>
+                    <%= link_to 'Add Procedures', new_procedure_submission_path(:id => pc.id), :class => "admin_link" %>
+                  <% else %>
+                    <%= link_to 'Edit Procedures', edit_procedure_submission_path(:id => pc.id), :class => "admin_link" %>
+                  <% end %>
+                <% end %>
+            </li>
+          <% end %>
+          </ul>
+          <div class="admin_link clear"><%= link_to 'Add Condition', new_condition_path(:id => provider.id) %></div>
+        </div>
+      </div>
     </div>
-    <div class="left clear">
-      <div class="left"><%= link_to 'Add Location', new_location_path(:id => provider.id) %></div>
-      <% if provider.provider_stats.blank? %>
-        <div class="left"><%= link_to 'Add Stats', new_provider_stat_path(:id => provider.id) %></div>
-      <% else %>
-        <div class="left"><%= link_to 'Edit Stats', edit_provider_stat_path(:id => provider.id) %></div>
-      <% end %>
-      <div class="left"><%= link_to 'Show', provider_path(provider) %></div>
-      <div class="left"><%= link_to 'Edit', edit_provider_path(provider) %></div>
-      <div class="left"><%= link_to 'Delete', provider, :confirm => 'Are you sure?', :method => :delete %></div>
-    </div>
+    <% end %>
   </div>
-  <% end %>
+  <div class="panel_set_2">
+    <div class="basic_panel_2">
+      <%= link_to 'Add a New Provider', new_provider_path %>
+    </div>
   </div>
   <div class="clear"></div>
-  <%= link_to 'Add a New Provider', new_provider_path %>
 </div>

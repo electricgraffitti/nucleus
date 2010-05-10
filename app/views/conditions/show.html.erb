@@ -1,0 +1,43 @@
+<p>
+  <b>Provider:</b>
+  <%=h @condition.provider_id %>
+</p>
+
+<p>
+  <b>Condition type:</b>
+  <%=h @condition.condition_type_id %>
+</p>
+
+<p>
+  <b>Trigger date:</b>
+  <%=h @condition.trigger_date %>
+</p>
+
+<p>
+  <b>Condition rank:</b>
+  <%=h @condition.condition_rank %>
+</p>
+
+<p>
+  <b>Total provider:</b>
+  <%=h @condition.total_provider %>
+</p>
+
+<p>
+  <b>Condition score:</b>
+  <%=h @condition.condition_score %>
+</p>
+
+<p>
+  <b>Condition stat:</b>
+  <%=h @condition.condition_stat_id %>
+</p>
+
+<p>
+  <b>Hci action:</b>
+  <%=h @condition.hci_action %>
+</p>
+
+
+<%= link_to 'Edit', edit_condition_path(@condition) %> |
+<%= link_to 'Back', conditions_path %>

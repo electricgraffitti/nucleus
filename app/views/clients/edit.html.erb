@@ -1,36 +1,18 @@
-<h1>Editing client</h1>
+<% content_for :header do %>
 
-<% form_for(@client) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :crypted_password %><br />
-    <%= f.text_field :crypted_password %>
-  </p>
-  <p>
-    <%= f.label :password_salt %><br />
-    <%= f.text_field :password_salt %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
 <% end %>
+<%= render :partial => 'clients/client_settings_header', :locals => {:client => current_client} %>
+<div id="panel_layout" class="clear">
+  <div id="padded_panel_layout">
+    <div class="full_panel client_heading_full">
+      <h2 class="register">Client Registration</h2>
+      <%= render :partial => 'form' %>
+    </div>
+    <%= link_to 'Back', client_path(@client) %>
+  </div>
+  <div class="clear"></div>
 
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>
+</div>
+<% content_for :javascripts do %>
+  
+<% end %>

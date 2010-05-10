@@ -1,0 +1,26 @@
+<table class="expansion_table">
+  <thead>
+    <tr>
+      <th>Flap Count</th>
+      <th>Repair Count</th>
+      <th>Flap Repair Pct</th>
+      <th>Flap Repair Billed</th>
+      <th>Flap Repair Paid</th>
+      <th>Spec Avg Repair Pct</th>
+      <th>Spec Avg Repair Billed</th>
+      <th>Spec Avg Repair Paid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= cs.condition_count %></td>
+      <td><%= cs.repair_count %></td>
+      <td><%= number_to_percentage(cs.repair_percentage, :precision => 2) %></td>
+      <td><%= number_to_currency(cs.condition.condition_billed) %></td>
+      <td><%= number_to_currency(cs.condition.condition_paid) %></td>
+      <td><%= number_to_percentage(cs.condition.speciality_average_percentage, :precision => 2) %></td>
+      <td><%= number_to_currency(cs.condition.speciality_average_billed) %></td>
+      <td><%= number_to_currency(cs.condition.speciality_average_paid) %></td>
+    </tr>
+  </tbody>
+</table>

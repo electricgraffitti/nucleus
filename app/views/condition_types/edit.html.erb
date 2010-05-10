@@ -1,0 +1,16 @@
+<h1>Editing condition_type</h1>
+
+<% form_for(@condition_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :condition_type %><br />
+    <%= f.text_field :condition_type %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @condition_type %> |
+<%= link_to 'Back', condition_types_path %>

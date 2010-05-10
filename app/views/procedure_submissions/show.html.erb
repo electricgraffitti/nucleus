@@ -1,0 +1,28 @@
+<p>
+  <b>Condition:</b>
+  <%=h @procedure_submission.condition_id %>
+</p>
+
+<p>
+  <b>Procedure:</b>
+  <%=h @procedure_submission.procedure_id %>
+</p>
+
+<p>
+  <b>Total submissions:</b>
+  <%=h @procedure_submission.total_submissions %>
+</p>
+
+<p>
+  <b>Total billed:</b>
+  <%=h @procedure_submission.total_billed %>
+</p>
+
+<p>
+  <b>Total paid:</b>
+  <%=h @procedure_submission.total_paid %>
+</p>
+
+
+<%= link_to 'Edit', edit_procedure_submission_path(@procedure_submission) %> |
+<%= link_to 'Back', procedure_submissions_path %>

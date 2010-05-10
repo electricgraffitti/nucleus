@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100507145957) do
+ActiveRecord::Schema.define(:version => 20100510190748) do
 
   create_table "claims", :force => true do |t|
     t.integer  "provider_id"
@@ -39,6 +39,52 @@ ActiveRecord::Schema.define(:version => 20100507145957) do
     t.string   "persistence_token"
   end
 
+  create_table "condition_stats", :force => true do |t|
+    t.integer  "condition_count"
+    t.integer  "condition_code_count"
+    t.integer  "conditions_per_code"
+    t.integer  "repair_count"
+    t.integer  "repair_percentage"
+    t.integer  "condition_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "condition_types", :force => true do |t|
+    t.string   "condition_type"
+    t.string   "condition_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "conditions", :force => true do |t|
+    t.integer  "provider_id"
+    t.integer  "condition_type_id"
+    t.datetime "trigger_date"
+    t.integer  "condition_rank"
+    t.integer  "total_provider"
+    t.integer  "condition_score"
+    t.integer  "condition_billed"
+    t.integer  "expected_billed"
+    t.integer  "condition_paid"
+    t.string   "hci_action"
+    t.integer  "speciality_average_count"
+    t.integer  "speciality_average_percentage"
+    t.integer  "speciality_average_billed"
+    t.integer  "speciality_average_paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "condition_code"
+    t.boolean  "pro_sub"
+  end
+
+  create_table "feedbacks", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.text     "address"
@@ -52,11 +98,35 @@ ActiveRecord::Schema.define(:version => 20100507145957) do
     t.float    "longitude"
   end
 
+  create_table "messages", :force => true do |t|
+    t.integer  "disscussion_id"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "patients", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "ssn"
     t.string   "sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "procedure_submissions", :force => true do |t|
+    t.integer  "condition_id"
+    t.integer  "procedure_id"
+    t.integer  "total_submissions"
+    t.integer  "total_billed"
+    t.integer  "total_paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "procedures", :force => true do |t|
+    t.integer  "procedure_code"
+    t.string   "procedure_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -111,6 +181,12 @@ ActiveRecord::Schema.define(:version => 20100507145957) do
     t.integer  "provider_tax_id"
     t.integer  "provider_score"
     t.integer  "provider_speciality_id"
+  end
+
+  create_table "reports", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "search_topics", :force => true do |t|

@@ -18,7 +18,7 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => "application"}
       format.xml  { render :xml => @client }
     end
   end
@@ -37,6 +37,10 @@ class ClientsController < ApplicationController
   # GET /clients/1/edit
   def edit
     @client = Client.find(params[:id])
+    respond_to do |format|
+      format.html { render :layout => "application"}
+      format.xml  { render :xml => @client }
+    end
   end
 
   # POST /clients

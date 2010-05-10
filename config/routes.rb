@@ -1,11 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :provider_stats
+  map.resources :procedures
 
-  map.resources :provider_specialities
+  map.resources :procedure_submissions
 
-  map.resources :locations
+  map.resources :condition_stats
 
+  map.resources :conditions
 
+  map.resources :condition_types
+
+  
+  map.resources :feedbacks
   map.resources :products
   map.resources :patients
   map.resources :provider_groups
@@ -14,12 +19,19 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :client_sessions
   map.resources :claims
   map.resources :providers
+  map.resources :provider_stats
+  map.resources :provider_specialities
+  map.resources :locations
+  map.resources :reports
+  map.resources :messages
   
   # Login Logout
   map.login "client-login", :controller => "client_sessions", :action => "new"
   map.logout "client-logout", :controller => "client_sessions", :action => "destroy"
 
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"
+  map.client_feedback "nucleus-client-feedback", :controller => "feedbacks", :action => "index"
+  map.client_settings "nucleus-client-settings", :controller => "clients", :action => "show"
   map.help "nucleus-help", :controller => "help", :action => "index"
   map.quick_launch "nucleus-quick-launch", :controller => "dashboard", :action => "quick_launch"
   map.provider_search "nucleus-provider-search/:id", :controller => "providers", :action => "provider_search"

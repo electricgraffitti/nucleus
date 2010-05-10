@@ -1,0 +1,36 @@
+<h1>Listing condition_stats</h1>
+
+<table>
+  <tr>
+    <th>Line count</th>
+    <th>Procedure count</th>
+    <th>Patient count</th>
+    <th>Savings count</th>
+    <th>Billed count</th>
+    <th>Total billed</th>
+    <th>Expected billed</th>
+    <th>Speciality average billed</th>
+    <th>Submission</th>
+  </tr>
+
+<% @condition_stats.each do |condition_stat| %>
+  <tr>
+    <td><%=h condition_stat.line_count %></td>
+    <td><%=h condition_stat.procedure_count %></td>
+    <td><%=h condition_stat.patient_count %></td>
+    <td><%=h condition_stat.savings_count %></td>
+    <td><%=h condition_stat.billed_count %></td>
+    <td><%=h condition_stat.total_billed %></td>
+    <td><%=h condition_stat.expected_billed %></td>
+    <td><%=h condition_stat.speciality_average_billed %></td>
+    <td><%=h condition_stat.submission_id %></td>
+    <td><%= link_to 'Show', condition_stat %></td>
+    <td><%= link_to 'Edit', edit_condition_stat_path(condition_stat) %></td>
+    <td><%= link_to 'Destroy', condition_stat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New condition_stat', new_condition_stat_path %>
