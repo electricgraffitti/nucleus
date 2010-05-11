@@ -22,7 +22,7 @@ var flash = {
 var tableActions = {
   
   setActive: function(el) {
-    allRows = el.parents('tbody').children('tr').removeClass('active');
+    el.parents('tbody').children('tr').removeClass('active');
     el.addClass('active');
   },
   
@@ -44,13 +44,6 @@ var tableActions = {
 			});
 		}
   },
-
-	// setHighLights: function(el) {
-	// 	el.click(function() {
-	//     tableActions.setActive($(this));
-	// 		tableActions.swapProvider($(this));
-	//   });
-	// },
 	
 	setInitHighlight: function() {
 	  $('#provider_search tbody').children().first().click();
@@ -125,7 +118,6 @@ $(document).ready(function() {
   });
 	
 	// Sets up the row highlights
-	tableActions.setInitHighlight();
 	
 	$('#provider_search tbody tr').click(function() {
 	  tableActions.setActive($(this));
@@ -135,6 +127,8 @@ $(document).ready(function() {
 	$('#provider_action_table tbody tr').click(function() {
 	  tableActions.setActive($(this));
 	});
+	
+	tableActions.setInitHighlight();
 	
   // This is the tooltips, but jqtools 1.2 breaks the code
   $('#speciality_code[title]').tooltip({ effect: 'slide'});
