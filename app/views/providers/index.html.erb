@@ -62,7 +62,7 @@
       <div class="panel_set_3">
         <div class="basic_panel_3">
           <h3>Provider Conditions:</h3>
-          <ul class="left">
+          <ul class="left clear">
           <% provider.conditions.each do |pc| %>
             <li class="stat_block"><%= pc.condition_type.condition_type %> - <%= pc.condition_type.condition_code %><br/>
               <%= link_to "Edit Condition", edit_condition_path(pc), :class => "admin_link"%>

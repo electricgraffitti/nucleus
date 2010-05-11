@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20100510190748) do
   create_table "conditions", :force => true do |t|
     t.integer  "provider_id"
     t.integer  "condition_type_id"
+    t.boolean  "pro_sub"
     t.datetime "trigger_date"
     t.integer  "condition_rank"
     t.integer  "total_provider"
@@ -74,7 +75,6 @@ ActiveRecord::Schema.define(:version => 20100510190748) do
     t.integer  "speciality_average_paid"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "pro_sub"
   end
 
   create_table "feedbacks", :force => true do |t|
