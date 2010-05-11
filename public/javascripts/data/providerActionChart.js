@@ -30,7 +30,7 @@ actionChart = new Highcharts.Chart({
    },
    xAxis: {
      categories: ['Jan 09', 'Feb 09', 'Mar 09', 'Apr 09', 'May 09', 'Jun 09', 
-        'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 09', 'Feb 09', 'Mar 09', 'Apr 09', 'May 09'],
+        'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
      labels: {
        rotation: 90
      }
@@ -59,17 +59,17 @@ actionChart = new Highcharts.Chart({
               // Sets the point to link to the url in the data block
               // location.href = this.series.options.url;
             }
-          }
-        },
-       marker: {
-         symbol: 'square',
-          states: {
-           hover: {
-              enabled: true,
-              lineColor: 'rgb(100,100,100)'
+          },
+          marker: {
+            symbol: 'square',
+             states: {
+              hover: {
+                 enabled: true,
+                 lineColor: 'rgb(100,100,100)'
+               }
+             }
             }
-          }
-         },
+        },
          states: {
             hover: {
                marker: {
@@ -81,7 +81,7 @@ actionChart = new Highcharts.Chart({
    },
    series: [
    {  
-     name: "Condition Name",
+     name: "Condition Billing",
      data: [],
      color: 'rgba(0,133,63,1)'
    }]
