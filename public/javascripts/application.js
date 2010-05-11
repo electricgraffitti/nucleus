@@ -139,7 +139,7 @@ $(document).ready(function() {
   
 	// Sets the default accordion window
   $('#accordion').accordion({
-    active: 3,
+    active: 2,
     icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
   });
   
