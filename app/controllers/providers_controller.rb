@@ -104,15 +104,28 @@ class ProvidersController < ApplicationController
   end
   
   def provider_action
-    @provider = Provider.first
     @action_types = SearchTopic.new
+    
     if params[:id].nil?
       @provider = Provider.first
     else
       @provider = Provider.find(params[:id])
     end
     
-    @graph_data = @provider.dollars_billed_by_month(@provider)
+    if params[:condition_id].nil?
+      @condition = @provider.conditions.first
+    else
+      @condition = Condition.find_by_id(params[:condition_id])
+    end
+    
+    @billings = @condition.monthly_billings
+    @graph_data = @provider.dollars_billed_by_month(@billings)
+    
+    respond_to do |format|
+      format.html
+      format.js { render :json => @graph_data.to_json(), :callback => params[:callback], :layout => false}
+      format.json { render :json => @graph_data.to_json(), :callback => params[:callback], :layout => false}
+    end
     
   end
   

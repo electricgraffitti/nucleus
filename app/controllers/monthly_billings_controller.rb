@@ -81,7 +81,7 @@ class MonthlyBillingsController < ApplicationController
     @monthly_billing.destroy
 
     respond_to do |format|
-      format.html { redirect_to(monthly_billings_url) }
+      format.html { redirect_to new_monthly_billing_path(:id => @monthly_billing.condition.id) }
       format.xml  { head :ok }
     end
   end

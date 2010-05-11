@@ -50,14 +50,21 @@ var tableActions = {
 	  $('#provider_action_table tbody').children().first().click();
 	},
 	
-	findProvider: function(el) {
-    providerId = el.attr("id");
-		return providerId;
+	findId: function(el) {
+    elId = el.attr("id");
+		return elId;
   },
 	
 	swapProvider: function(el) {
-		data = tableActions.findProvider(el);
+		data = tableActions.findId(el);
 		$('#provider_content').load("/nucleus-provider-search #provider_content", {id:data});
+	},
+	actionChartData: function(el) {
+	 cid = tableActions.findId(el);
+   $.getJSON("/nucleus-provider-action", {condition_id:cid}, function(data) {
+     actionChart.series[0].setData(eval(data), false);
+     actionChart.redraw();
+	 });
 	}
   
 };
@@ -81,10 +88,6 @@ var baseActions = {
    $panel_selector = el.attr("panel");
    $panel = $("#" + $panel_selector);
    $panel.click();
-  },
-  
-  getJsonObject: function(obj) {
-    console.log(obj);
   }
   
 }
@@ -126,6 +129,7 @@ $(document).ready(function() {
 	
 	$('#provider_action_table tbody tr').click(function() {
 	  tableActions.setActive($(this));
+	  tableActions.actionChartData($(this));
 	});
 	
 	tableActions.setInitHighlight();
