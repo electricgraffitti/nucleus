@@ -45,12 +45,12 @@ var tableActions = {
 		}
   },
 
-	setHighLights: function(el) {
-		el.click(function() {
-	    tableActions.setActive($(this));
-			tableActions.swapProvider($(this));
-	  });
-	},
+	// setHighLights: function(el) {
+	// 	el.click(function() {
+	//     tableActions.setActive($(this));
+	// 		tableActions.swapProvider($(this));
+	//   });
+	// },
 	
 	setInitHighlight: function() {
 	  $('#provider_search tbody').children().first().click();
@@ -128,11 +128,12 @@ $(document).ready(function() {
 	tableActions.setInitHighlight();
 	
 	$('#provider_search tbody tr').click(function() {
-	  tableActions.setHighLights($(this));
+	  tableActions.setActive($(this));
+		tableActions.swapProvider($(this));
 	});
 	
 	$('#provider_action_table tbody tr').click(function() {
-	  tableActions.setHighLights($(this));
+	  tableActions.setActive($(this));
 	});
 	
   // This is the tooltips, but jqtools 1.2 breaks the code

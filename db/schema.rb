@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(:version => 20100510190748) do
     t.integer  "speciality_average_paid"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "condition_code"
     t.boolean  "pro_sub"
   end
 
