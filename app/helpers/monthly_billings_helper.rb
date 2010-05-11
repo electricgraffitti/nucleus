@@ -1,0 +1,2 @@
+module MonthlyBillingsHelper
+end

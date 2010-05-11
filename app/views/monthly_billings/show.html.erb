@@ -1,0 +1,18 @@
+<p>
+  <b>Condition:</b>
+  <%=h @monthly_billing.condition_id %>
+</p>
+
+<p>
+  <b>Month:</b>
+  <%=h @monthly_billing.month %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @monthly_billing.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_monthly_billing_path(@monthly_billing) %> |
+<%= link_to 'Back', monthly_billings_path %>

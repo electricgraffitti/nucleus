@@ -18,6 +18,8 @@
 
 class Provider < ActiveRecord::Base
   
+  include Graphs
+  
   belongs_to :provider_group
   belongs_to :provider_speciality
   belongs_to :state

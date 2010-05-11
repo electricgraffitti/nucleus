@@ -1,0 +1,24 @@
+<h1>Listing monthly_billings</h1>
+
+<table>
+  <tr>
+    <th>Condition</th>
+    <th>Month</th>
+    <th>Amount</th>
+  </tr>
+
+<% @monthly_billings.each do |monthly_billing| %>
+  <tr>
+    <td><%=h monthly_billing.condition_id %></td>
+    <td><%=h monthly_billing.month %></td>
+    <td><%=h monthly_billing.amount %></td>
+    <td><%= link_to 'Show', monthly_billing %></td>
+    <td><%= link_to 'Edit', edit_monthly_billing_path(monthly_billing) %></td>
+    <td><%= link_to 'Destroy', monthly_billing, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New monthly_billing', new_monthly_billing_path %>

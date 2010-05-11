@@ -68,6 +68,9 @@ var adminAction = {
 		$('#condition_date').datepicker({
 			showButtonPanel: true
 		});
+		$('#billing_date').datepicker({
+		  showButtonPanel: true
+		});
 	}
   
 };
@@ -80,11 +83,8 @@ var baseActions = {
    $panel.click();
   },
   
-  getJsonObject: function(el, object_url) {
-    $objs = $.getJSON(object_url);
-    console.log($objs);
-    
-    return false;
+  getJsonObject: function(obj) {
+    console.log(obj);
   }
   
 }
@@ -142,12 +142,6 @@ $(document).ready(function() {
     active: 2,
     icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
   });
-  
-  $('#get_object').click(function() {
-    baseActions.getJsonObject($(this), $(this).attr('href'));
-    return false;
-  });
-  
   
   $("a.flag_panel").click(function() {
     baseActions.accordionClick($(this));

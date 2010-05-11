@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: monthly_billings
+#
+#  id           :integer(4)      not null, primary key
+#  condition_id :integer(4)
+#  month        :date
+#  amount       :float
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  condition_id: 1
+  month: 2010-05-11
+  amount: 1.5
+
+two:
+  condition_id: 1
+  month: 2010-05-11
+  amount: 1.5

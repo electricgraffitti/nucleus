@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100510190748) do
+ActiveRecord::Schema.define(:version => 20100511173933) do
 
   create_table "claims", :force => true do |t|
     t.integer  "provider_id"
@@ -100,6 +100,14 @@ ActiveRecord::Schema.define(:version => 20100510190748) do
   create_table "messages", :force => true do |t|
     t.integer  "disscussion_id"
     t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "monthly_billings", :force => true do |t|
+    t.integer  "condition_id"
+    t.date     "month"
+    t.float    "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

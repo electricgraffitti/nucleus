@@ -45,4 +45,5 @@ end
 Time::DATE_FORMATS[:event_time] = "%A %B %d, at %I:%M %p"
 Time::DATE_FORMATS[:short_date] = "%m-%d-%Y"
 Date::DATE_FORMATS[:nice_date] = "%A, %B %d, %Y"
+Date::DATE_FORMATS[:basic_date] = "%B %d, %Y"
 Time::DATE_FORMATS[:table_date] = "%B %d %Y, at %I:%M %p"

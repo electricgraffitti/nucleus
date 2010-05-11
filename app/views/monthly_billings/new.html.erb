@@ -1,0 +1,21 @@
+<%= render :partial => 'monthly_billings/monthly_billing_header' %>
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
+    <div class="panel_set_2">
+      <%= render :partial => 'monthly_billings/form', :locals => {:condition => @condition} %>
+    </div>
+    <div class="panel_set_4">
+    <% if @condition.monthly_billings %>
+      <div class="basic_panel_4">
+       <h3>Condition Billings:</h3>
+        <ul class="provider_condition_list left">
+          <% @previous_billings.each do |mb| %>
+            <li><%= (mb.month).to_s(:basic_date) %> | <%= number_to_currency(mb.amount, :precision => 2) %> - <%= link_to "Edit Billing", edit_monthly_billing_path(mb) %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

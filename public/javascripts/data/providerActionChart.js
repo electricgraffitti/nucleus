@@ -1,11 +1,11 @@
 var scatterChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'scatter',
+      defaultSeriesType: 'spline',
       width: 310,
       height: 200,
       zoomType: 'xy',
-      margin: [20,20,20,50],
+      margin: [20,20,30,50],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -15,7 +15,7 @@ var scatterChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Provider Results',
+      text: 'Dollars Billed by Month',
       style: {
          color: "#c0c0c0",
          display: 'none'
@@ -29,32 +29,29 @@ var scatterChart = new Highcharts.Chart({
      }
    },
    xAxis: {
-      title: {
-         enabled: false,
-         text: 'Claims Count'
-      },
-      max: 100,
-      startOnTick: true,
-      endOnTick: true,
-      showLastLabel: true
+     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+     labels: {
+       rotation: 90
+     }
    },
    yAxis: {
       title: {
         enabled: false,
-        text: 'Claims Value'
+        text: 'Dollars Billed'
       }
    },
    tooltip: {
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
-            this.x +' submitted, '+ this.y +' rejected';
+            this.x + ", "+ this.y +' Amount Billed';
       }
    },
    legend: {
       enabled: false
    },
    plotOptions: {
-      scatter: {
+      line: {
         cursor: 'pointer',
           point: {
           events: {
@@ -65,8 +62,7 @@ var scatterChart = new Highcharts.Chart({
           }
         },
          marker: {
-           symbol: 'circle',
-            radius: 5,
+           symbol: 'diamond',
             states: {
                hover: {
                   enabled: true,
@@ -84,65 +80,10 @@ var scatterChart = new Highcharts.Chart({
       }
    },
    series: [
-   {
-      name: "Dr. Stevens",
-      data: [[96.2, 45678]],
-      color: 'rgba(0,133,63,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
    {  
-      name: "Dr. Stevens",
-      data: [[76.2, 53345]],
-      color: 'rgba(0,133,63,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Shulz",
-      data: [[75.2, 123567]],
-      color: 'rgba(229,181,58,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Martin",
-      data: [[69.2, 245312]],
-      color: 'rgba(152,0,46,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Evans",
-      data: [[45.2, 145345]],
-      color: 'rgba(229,181,58,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Patrick",
-      data: [[54.2, 122765]],
-      color: 'rgba(229,181,58,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Finn",
-      data: [[86.2, 101392]],
-      color: 'rgba(229,181,58,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Hanson",
-      data: [[23.2, 89253]],
-      color: 'rgba(0,133,63,1)',
-      // url: "http://localhost:3000/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Sanders",
-      data: [[41.2, 59201]],
-      color: 'rgba(0,133,63,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
-   },
-   {
-      name: "Dr. Schulzke",
-      data: [[54.2, 143980]],
-      color: 'rgba(229,181,58,1)',
-      // url: "http://demo.get-nucleus/nucleus-provider-action"
+     name: "Condition Name",
+     data: [5200, 22000, 14500, 18976, 19487, 21045, 14573, 12430, 18922, 17654, 16320, 15434],
+     color: 'rgba(0,133,63,1)'
    }]
 });
 

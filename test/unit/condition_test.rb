@@ -1,13 +1,3 @@
-require 'test_helper'
-
-class ConditionTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
-end
-
-
 # == Schema Information
 #
 # Table name: conditions
@@ -15,7 +5,7 @@ end
 #  id                            :integer(4)      not null, primary key
 #  provider_id                   :integer(4)
 #  condition_type_id             :integer(4)
-#  procedure_submissions         :boolean(1)
+#  pro_sub                       :boolean(1)
 #  trigger_date                  :datetime
 #  condition_rank                :integer(4)
 #  total_provider                :integer(4)
@@ -31,4 +21,14 @@ end
 #  created_at                    :datetime
 #  updated_at                    :datetime
 #
+
+require 'test_helper'
+
+class ConditionTest < ActiveSupport::TestCase
+  # Replace this with your real tests.
+  test "the truth" do
+    assert true
+  end
+end
+
 

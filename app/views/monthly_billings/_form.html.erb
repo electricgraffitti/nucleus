@@ -1,0 +1,24 @@
+<div class="basic_panel_2">
+  <h2>Provider: <%= condition.provider.full_name %><br/>Condition: <%= condition.condition_type.condition_type %></h2>
+</div>
+<div class="clear"></div>
+<% form_for(@monthly_billing) do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :condition_id, :value => condition.id %>
+  <div class="basic_panel_2">
+    <p>
+      <%= f.label :month, "Billing Month" %><br />
+      <%= f.text_field :month, :id => "billing_date"%>
+    </p>
+    <p>
+      <%= f.label :amount, "Monthly Billing Amount" %><br />
+      <%= f.text_field :amount %>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="basic_panel_2">
+    <p>
+      <%= f.submit 'Submit' %> | <%= link_to 'Back', providers_path %>
+    </p>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+<%= render :partial => 'monthly_billings/monthly_billing_header' %>
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
+    <%= render :partial => 'monthly_billings/form', :locals => {:condition => @condition} %>
+  </div>
+  <div class="clear"></div>
+</div>

@@ -111,6 +111,9 @@ class ProvidersController < ApplicationController
     else
       @provider = Provider.find(params[:id])
     end
+    
+    @graph_data = @provider.dollars_billed_by_month(@provider)
+    
   end
   
 end
