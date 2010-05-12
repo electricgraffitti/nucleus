@@ -933,6 +933,8 @@ span.field_seperator {
 #provider_stats, #provider_stats .stat_group {
   position: relative;
   float: left;
+  margin-bottom: 3px;
+  width: 100%;
 }
 #provider_stats .stat_group .stat_title {
   position: relative;
@@ -1289,6 +1291,11 @@ ul.help_west_list li {
   font-size: 16px;
   color: #fff;
 }
+.sidebar_panel a.sidebar_icon_link.silver_icon_link {
+  color: #444;
+  border: 1px solid #c3c4c3;
+  background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x;
+}
 .sidebar_panel a.sidebar_icon_link:hover {
 
 }
@@ -1309,10 +1316,10 @@ ul.help_west_list li {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -354px top no-repeat;
 }
 .sidebar_panel a.sidebar_icon_link div#hciu {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px top no-repeat;
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px -57px no-repeat;
 }
 .sidebar_panel a.sidebar_icon_link div#video {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px top no-repeat;
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px -57px no-repeat;
 }
 /*********************************************/
 /******************TABLES********************/
