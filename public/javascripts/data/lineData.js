@@ -18,36 +18,55 @@ var lineChart = new Highcharts.Chart({
    title: {
       text: 'Identified Savings vs. Accepted Savings',
       style: {
-         color: "#555555"
+         color: "#555555",
+         font: "16px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
       text: '2010 YTD',
       style: {
-         color: "#6ac520"
+         color: "#6ac520",
+         font: "12px Arial, Helvetica, sans-serif"
       }
    },
    xAxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      categories: ['Jan', 'Feb', 'Mar', 'April', 'May', 'June'],
       title: {
          text: 'Savings by Month',
          style: {
-            color: "#555555"
+            color: "#555555",
+            font: "10px Arial, Helvetica, sans-serif"
          }
+      },
+      labels: {
+        style: {
+          color: "#555555",
+          font: "10px Arial, Helvetica, sans-serif"
+        }
       }
    },
    yAxis: {
+     labels: {
+       formatter: function() {
+         return "$" + Highcharts.numberFormat(this.value);
+       },
+       style: {
+         color: "#555555",
+         font: "10px Arial, Helvetica, sans-serif"
+       }
+     },
      min: 0,
      max: 1000000,
      title: {
        text: '',
        style: {
-         color: "#555555"
+         color: "#555555",
+         font: "10px Arial, Helvetica, sans-serif"
        }
      },
      plotOptions: {
         areaspline: {
-           fillOpacity: 0.3
+           fillOpacity: 0.2
         }
      },
     plotLines: [{
@@ -60,6 +79,10 @@ var lineChart = new Highcharts.Chart({
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
             this.x +': $'+ this.y;
+      },
+      style: {
+        color: "#555555",
+        font: "10px Arial, Helvetica, sans-serif"
       }
    },
    legend: {
@@ -68,7 +91,9 @@ var lineChart = new Highcharts.Chart({
          position: 'absolute',
          bottom: 'auto',
          left: '100px',
-         top: '55px'
+         top: '55px',
+         color: "#555555",
+         font: "10px Arial, Helvetica, sans-serif"
       },
       borderWidth: 1,
       backgroundColor: '#FFFFFF'

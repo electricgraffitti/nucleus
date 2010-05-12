@@ -16,13 +16,15 @@ var pieChart = new Highcharts.Chart({
    title: {
       text: 'Savings by Condition',
       style: {
-        color: '#555555'
+        color: '#555555',
+        font: '16px Arial, Helvetica, sans-serif'
       }
    },
    subtitle: {
       text: '2010 YTD',
       style: {
-        color: '#6ac520'
+        color: '#6ac520',
+        font: '12px Arial, Helvetica, sans-serif'
       }
    },
    plotArea: {

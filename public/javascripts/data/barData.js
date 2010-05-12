@@ -16,13 +16,15 @@ var barChart = new Highcharts.Chart({
    title: {
       text: 'Cases Opened by Provider Type',
       style: {
-        color: '#555555'
+        color: '#555555',
+        font: '16px Arial, Helvetica, sans-serif'
       } 
    },
    subtitle: {
       text: '2010 YTD',
       style: {
-        color: '#6ac520'
+        color: '#6ac520',
+        font: '12px Arial, Helvetica, sans-serif'
       }
    },
    xAxis: {
@@ -30,8 +32,15 @@ var barChart = new Highcharts.Chart({
       title: {
          text: 'Provider Type',
          style: {
-           color: '#555555'
+           color: '#555555',
+           font: '12px Arial, Helvetica, sans-serif'
          }
+      },
+      labels: {
+        style: {
+          color: '#555555',
+          font: '10px Arial, Helvetica, sans-serif'
+        }
       }
    },
    yAxis: {
@@ -39,14 +48,24 @@ var barChart = new Highcharts.Chart({
       title: {
          text: 'Cases Opened',
          style: {
-           color: '#555555'
+           color: '#555555',
+           font: '12px Arial, Helvetica, sans-serif'
          }
+      },
+      labels: {
+        style: {
+          color: '#555555',
+          font: '10px Arial, Helvetica, sans-serif'
+        }
       }
    },
    tooltip: {
       formatter: function() {
          return '<b>'+ this.x +'</b><br/>'+
              this.series.name +': '+ this.y + " Cases Opened";
+      },
+      style: {
+        font: '12px Arial, Helvetica, sans-serif'
       }
    },
    plotOptions: {
@@ -70,12 +89,12 @@ var barChart = new Highcharts.Chart({
    },
    series: [{
       name: 'ASC',
-      data: [165, 145, 132, 112, 102, 132]
+      data: [245, 230, 210, 225, 205, 240]
       }, {
       name: 'Hosptial',
       data: [200, 195, 192, 177, 142, 174]
       }, {
       name: 'Prof',
-      data: [245, 230, 210, 225, 205, 240]
+      data: [165, 145, 132, 112, 102, 132]
    }]
 });

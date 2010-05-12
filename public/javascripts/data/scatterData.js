@@ -8,7 +8,8 @@ var scatterChart = new Highcharts.Chart({
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       style: {
-        margin: ['0px 10px 20px 0px']
+        margin: ['0px 10px 20px 0px'],
+        font: '16px Arial, Helvetica, sans-serif'
       },
       borderColor: '#e7e7e7',
       borderRadius: 10,
@@ -20,40 +21,55 @@ var scatterChart = new Highcharts.Chart({
    title: {
       text: 'Provider Distribution Profiles',
       style: {
-         color: "#555555"
+         color: "#555555",
+         font: '16px Arial, Helvetica, sans-serif'
       }
    },
    subtitle: {
       text: '2010 YTD',
       style: {
-         color: "#6ac520"
+         color: "#6ac520",
+         font: '12px Arial, Helvetica, sans-serif'
       }
    },
    xAxis: {
       title: {
-         enabled: true,
-         text: 'Provider Score',
-         style: {
-           margin: ['20px 0px 0px 0px'],
-            color: "#555555"
-         }
+        enabled: true,
+        text: 'Provider Score',
+        style: {
+         margin: ['20px 0px 0px 0px'],
+         color: "#555555",
+         font: '12px Arial, Helvetica, sans-serif'
+        }
+      },
+      labels: {
+        style: {
+          color: '#555555',
+          font: '10px Arial, Helvetica, sans-serif'
+        }
       },
       startOnTick: true,
       endOnTick: true,
       showLastLabel: true
    },
    yAxis: {
-      title: {
-         text: '',
-         style: {
-            color: "#555555"
-         }
-      }
+     labels: {
+       formatter: function() {
+         return "$" + Highcharts.numberFormat(this.value);
+        },
+        style: {
+          color: '#555555',
+          font: '10px Arial, Helvetica, sans-serif'
+        }
+      },
+      title: false
    },
    tooltip: {
       formatter: function() {
-                return '<b>'+ this.series.name +'</b><br/>'+
-            this.x +' Provider Score, '+ this.y +' Billed Amount';
+        return '<b>'+ this.series.name +'</b><br/>'+ this.x +' Provider Score, '+ this.y +' Billed Amount';
+      },
+      style: {
+        font: '12px Arial, Helvetica, sans-serif'
       }
    },
    legend: {
@@ -62,7 +78,7 @@ var scatterChart = new Highcharts.Chart({
    plotOptions: {
       scatter: {
         cursor: 'pointer',
-          point: {
+        point: {
           events: {
             click: function() {
               // Sets the point to link to the url in the data block
@@ -70,23 +86,11 @@ var scatterChart = new Highcharts.Chart({
             }
           }
         },
-         marker: {
-           symbol: 'circle',
-            radius: 5,
-            states: {
-               hover: {
-                  enabled: true,
-                  lineColor: 'rgb(100,100,100)'
-               }
-            }
-         },
-         states: {
-            hover: {
-               marker: {
-                  enabled: true
-               }
-            }
-         }
+        marker: {
+          symbol: 'circle',
+          radius: 5
+        },
+        shadow: true
       }
    },
    series: [

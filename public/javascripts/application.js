@@ -92,6 +92,9 @@ var chartActions = {
 	        '#e5b53a',
 	        '#00467f',
 	        '#78496a'
+	     ],
+	     style: [
+	       font: 'Arial, Helvetica, sans-serif'
 	     ]
 	  });
 	}
