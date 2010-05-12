@@ -134,7 +134,6 @@ $(document).ready(function() {
     return false;
   });
   
-  adminAction.setupCalendars();
   profileActions.setupAccordion();
   // Table checkboxes
   $('#provider_select').click(function() {
