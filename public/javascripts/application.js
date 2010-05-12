@@ -107,6 +107,16 @@ var adminAction = {
 		$('#billing_date').datepicker({
 		  showButtonPanel: true
 		});
+		$('#trigger_start_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal.jpg',
+      			buttonImageOnly: true
+		});
+		$('#trigger_end_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal.jpg',
+      			buttonImageOnly: true
+		});
 	}
   
 };

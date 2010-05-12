@@ -8,48 +8,49 @@
         <h3 class="grey_header">Search Filters</h3>
         <div id="sub_search_params">
           <p>
-          <%= label_tag "Batch ID"%>
-          <%= collection_select(:search, :batch_id, SearchTopic.all, :id, :name, {:prompt => "Select"}) %><%= link_to "Batch Advanced", "", :id => "batch_filter_mag", :class => "search_mag" %>
-          </p>
-          <p>
-          <%= label_tag "Product"%>
-          <%= collection_select(:search, :product_id, Product.all, :id, :name, {:prompt => "Select"}) %>
-          </p>
-          <p>
-          <%= label_tag "Status"%>
-          <%= collection_select(:search, :status_id, SearchTopic.all, :id, :name, {:prompt => "Select"}) %>
-          </p>
-          <p>
-          <%= label_tag "Claim Sequence"%>
-          <%= text_field_tag :claim_sequence, nil, :id => "claim_sequence_wide" %> <span class="field_seperator">-</span> <%= text_field_tag :claim_sequence, nil, :id => "claim_sequence_short" %>
-          </p>
-          <p>
-          <%= label_tag "Claim Number"%>
-          <%= text_field_tag :claim_number %>
-          </p>
-          <p>
-          <%= label_tag "Patient Sequence"%>
-          <%= text_field_tag :patient_sequence %><%= link_to "Patience Sequence Advanced", "", :id => "patience_sequence_mag", :class => "search_mag" %>
-          </p>
-          <p>
-          <%= label_tag "Patient Number"%>
-          <%= text_field_tag :patient_number %>
-          </p>
-          <p>
-          <%= label_tag "Patient Last Name"%>
-          <%= text_field_tag :patient_last_name %>
-          </p>
-          <p>
-          <%= label_tag "Patient First Name"%>
-          <%= text_field_tag :patient_first_name %>
-          </p>
-          <p>
-          <%= label_tag "Social Security Number" %><br/>
-          <%= text_field_tag :ssn_number %>
-          </p>
-          <p>
           <%= label_tag "Provider Sequence"%>
-          <%= text_field_tag :provider_sequence %><%= link_to "Provider Sequence Advanced", "", :id => "provider_sequence_mag", :class => "search_mag" %>
+          <%= text_field_tag :provider_sequence %><%= link_to "Batch Advanced", "", :id => "batch_filter_mag", :class => "search_mag" %>
+          </p>
+          <p>
+          <%= label_tag "Provider Tax ID"%>
+          <%= text_field_tag :provider_tax_id %>
+          </p>
+          <p>
+          <%= label_tag "Provider #"%>
+          <%= text_field_tag :provider_number %>
+          </p>
+          <p>
+          <%= label_tag "Provider Name"%>
+          <%= text_field_tag :provider_name %>
+          </p>
+          <p>
+          <%= label_tag "Provider First Name"%>
+          <%= text_field_tag :provider_first_name %>
+          </p>
+          <p>
+          <%= label_tag "Provider Last Name"%>
+          <%= text_field_tag :provider_last_name %>
+          </p>
+          <p>
+          <%= label_tag "Group Provider Name"%>
+          <%= text_field_tag :group_provider_name %>
+          </p>
+          <p>
+          <%= label_tag "Group Provider Tax ID"%>
+          <%= text_field_tag :group_provider_tax_id %>
+          </p>
+          <p>
+          <%= label_tag "Triggered Date"%>
+          <%= text_field_tag :trigger_start_date, nil, {:id => "trigger_start_date", :size => 15} %><%#= link_to "Trigger Start Date", "", :id => "trigger_start_date_icon", :class => "calendar_icon" %>
+          <%= text_field_tag :trigger_end_date, nil, {:id => "trigger_end_date", :size => 15} %><%#= link_to "Trigger End Date", "", :id => "trigger_end_date_icon", :class => "calendar_icon" %>
+          </p>
+          <p>
+          <%= label_tag "Composite Score" %><br/>
+          <%= text_field_tag :composite_score %>
+          </p>
+          <p>
+          <%= label_tag "Speciality"%>
+          <%= text_field_tag :speciality %>
           </p>
         </div>
       <% end %>

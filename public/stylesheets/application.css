@@ -847,11 +847,14 @@ div.scaffold_pane label {
 }
 #sub_search_params input[type="text"] {
   margin: 5px 0px 10px;
-  width: 162px;
+  width: 160px;
   background: #fff;
   border: 1px solid #c0c0c0;
   padding: 4px;
   float: left;
+}
+#sub_search_params input[type="text"]#trigger_start_date, #sub_search_params input[type="text"]#trigger_end_date {
+  width: 139px;
 }
 #sub_search_params input[type="text"]:focus {
   background: #f7fb87;
@@ -1317,9 +1320,11 @@ ul.help_west_list li {
 }
 .sidebar_panel a.sidebar_icon_link div#hciu {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px -57px no-repeat;
+  height: 56px;
 }
 .sidebar_panel a.sidebar_icon_link div#video {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px -57px no-repeat;
+  height: 56px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -1627,15 +1632,24 @@ input[type="text"], input[type="password"], textarea {
   border: 1px solid #c0c0c0;
   margin: 5px 0px;
 }
-a.search_mag {
+a.search_mag, a.calendar_icon {
   position: relative;
   display: block;
   float: left;
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
   text-indent: -3000em;
   margin: 7px 0px 0px 3px;
-  background: url('../images/inner_pages/mag_glass.jpg') no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -80px no-repeat;
+}
+img.ui-datepicker-trigger {
+  position: relative;
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  text-indent: -3000em;
+  margin: 7px 0px 0px 3px;
 }
 #search_wrap {
   width: 350px;
