@@ -1,7 +1,7 @@
 var lineChart = new Highcharts.Chart({
    chart: {
       renderTo: 'top_right_chart',
-      defaultSeriesType: 'line',
+      defaultSeriesType: 'areaspline',
       margin: [50, 20, 60, 80],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
@@ -16,68 +16,69 @@ var lineChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Average Fraudulent Claims',
+      text: 'Identified Savings vs. Accepted Savings',
       style: {
          color: "#555555"
       }
    },
    subtitle: {
-      text: 'Source: HCI Data Center',
+      text: '2010 YTD',
       style: {
          color: "#6ac520"
       }
    },
    xAxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
       title: {
-         text: 'Month',
+         text: 'Savings by Month',
          style: {
             color: "#555555"
          }
       }
    },
    yAxis: {
-      title: {
-         text: 'Claim Rejection Ratio',
-         style: {
-            color: "#555555"
-         }
-      },
-      plotLines: [{
-         value: 0,
-         width: 1,
-         color: '#808080'
-      }]
+     min: 0,
+     max: 1000000,
+     title: {
+       text: '',
+       style: {
+         color: "#555555"
+       }
+     },
+     plotOptions: {
+        areaspline: {
+           fillOpacity: 0.3
+        }
+     },
+    plotLines: [{
+       value: 0,
+       width: 1,
+       color: '#808080'
+    }]
    },
    tooltip: {
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
-            this.x +': '+ this.y +'Â°C';
+            this.x +': $'+ this.y;
       }
    },
    legend: {
       layout: 'vertical',
       style: {
-         left: 'auto',
+         position: 'absolute',
          bottom: 'auto',
-         right: '10px',
-         top: '20px'
+         left: '100px',
+         top: '55px'
       },
       borderWidth: 1,
       backgroundColor: '#FFFFFF'
    },
+   
    series: [{
-      name: 'Medicaid',
-      data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+      name: 'Identified',
+      data: [359687, 458976, 586741, 684235, 485742, 752635]
    }, {
-      name: 'Medicare',
-      data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-   }, {
-      name: 'Facility',
-      data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-   }, {
-      name: 'P & C',
-      data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      name: 'Accepted',
+      data: [287749, 348821, 310972, 629496, 369163, 617160]
    }]
 });

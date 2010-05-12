@@ -14,9 +14,15 @@ var pieChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'HealthCare Insight Service Share',
+      text: 'Savings by Condition',
       style: {
         color: '#555555'
+      }
+   },
+   subtitle: {
+      text: '2010 YTD',
+      style: {
+        color: '#6ac520'
       }
    },
    plotArea: {
@@ -31,18 +37,22 @@ var pieChart = new Highcharts.Chart({
    },
    plotOptions: {
       pie: {
-         allowPointSelect: true,
-         dataLabels: {
-            enabled: true,
-            formatter: function() {
-               if (this.y > 5) return this.point.name;
-            },
-            color: 'white',
-            style: {
-               font: '13px Trebuchet MS, Verdana, sans-serif'
-            }
+        borderColor: "#333333",
+        allowPointSelect: true,
+        dataLabels: {
+          enabled: true,
+          formatter: function() {
+            if (this.y > 5) return this.point.name;
+          },
+          color: 'white',
+          style: {
+            font: '13px Trebuchet MS, Verdana, sans-serif'
+          }
          },
-         shadow: true
+         shadow: true,
+         marker: {
+           lineColor: "#c0c0c0"
+         }
       }
    },
    legend: {
@@ -58,20 +68,17 @@ var pieChart = new Highcharts.Chart({
    },
         series: [{
       type: 'pie',
-      name: 'Browser share',
+      name: 'Condition',
       data: [
-         ['PCI',   44.2],
-         ['DCI',       10.6],
+         ['SDES',   44.2],
+         ['SFRO',       10.6],
          {
-            name: 'FCI',
+            name: 'SBRD',
             y: 26.6,
             sliced: true,
             selected: true
          },
-         ['OCI',    15.1],
-         ['RxI',    2.7],
-         ['VCI',     2.3]
+         ['SCFE',    15.1]
       ]
-      //data: [3.40, 1.05, 2.90, 1.65, 1.35, 2.59, 1.39, 3.07, 2.82]
    }]
 });

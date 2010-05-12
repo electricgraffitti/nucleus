@@ -18,13 +18,13 @@ var scatterChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Provider Risk Analysis',
+      text: 'Provider Distribution Profiles',
       style: {
          color: "#555555"
       }
    },
    subtitle: {
-      text: 'Source: HCI Data Center',
+      text: '2010 YTD',
       style: {
          color: "#6ac520"
       }
@@ -32,8 +32,9 @@ var scatterChart = new Highcharts.Chart({
    xAxis: {
       title: {
          enabled: true,
-         text: 'Claims Submitted',
+         text: 'Provider Score',
          style: {
+           margin: ['20px 0px 0px 0px'],
             color: "#555555"
          }
       },
@@ -43,7 +44,7 @@ var scatterChart = new Highcharts.Chart({
    },
    yAxis: {
       title: {
-         text: 'Claims Rejected',
+         text: '',
          style: {
             color: "#555555"
          }
@@ -52,7 +53,7 @@ var scatterChart = new Highcharts.Chart({
    tooltip: {
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
-            this.x +' submitted, '+ this.y +' rejected';
+            this.x +' Provider Score, '+ this.y +' Billed Amount';
       }
    },
    legend: {
@@ -89,131 +90,236 @@ var scatterChart = new Highcharts.Chart({
       }
    },
    series: [
+   // Green 
    {
-      name: "Dr. Stevens",
-      data: [[161.2, 51.6]],
-      color: 'rgba(152,0,46,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {  
-      name: "Dr. Stevens",
-      data: [[141.2, 41.6]],
-      color: 'rgba(229,181,58,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+      name: "Dr. Johnson",
+      data: [[223, 256894]],
+      color: 'rgba(0,133,63,.5)',
+      url: "http://localhost:3000/nucleus-provider-search"
    },
    {
-      name: "Dr. Shulz",
-      data: [[122.2, 31.6]],
-      color: 'rgba(229,181,58,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {
-      name: "Dr. Martin",
-      data: [[102.2, 22.6]],
-      color: 'rgba(229,181,58,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {
-      name: "Dr. Evans",
-      data: [[76.2, 15.6]],
-      color: 'rgba(0,133,63,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {
-      name: "Dr. Patrick",
-      data: [[156.2, 32.6]],
-      color: 'rgba(152,0,46,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {
-      name: "Dr. Finn",
-      data: [[187.2, 67.6]],
-      color: 'rgba(152,0,46,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {
-      name: "Dr. Hanson",
-      data: [[123.2, 12.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. Schulzke",
+      data: [[279, 296586]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
       name: "Dr. Sanders",
-      data: [[67.2, 12.6]],
-      color: 'rgba(0,133,63,1)',
+      data: [[336, 302487]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Schulzke",
-      data: [[54.2, 13.6]],
-      color: 'rgba(0,133,63,1)',
-      url: "http://localhost:3000/nucleus-provider-search"
-   },
-   {
-      name: "Dr. Blair",
-      data: [[113.2, 45.6]],
-      color: 'rgba(229,181,58,1)',
-      url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   },
-   {  
-      name: "Dr. Kirk",
-      data: [[78.2, 36.6]],
-      color: 'rgba(0,133,63,1)',
+      name: "Dr. Johnson",
+      data: [[426, 312487]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Seamans",
-      data: [[110.2, 35.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. Sampson",
+      data: [[315, 387562]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Woods",
-      data: [[134.2, 45.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. Jackson",
+      data: [[389, 302487]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Stipanov",
-      data: [[90.2, 15.6]],
-      color: 'rgba(0,133,63,1)',
+      name: "Dr. Valla",
+      data: [[489, 298675]],
+      color: 'rgba(0,133,63,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Heil",
+      data: [[368, 298675]],
+      color: 'rgba(0,133,63,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Gearson",
+      data: [[248, 415236]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
       name: "Dr. Briggs",
-      data: [[86.2, 37.6]],
-      color: 'rgba(0,133,63,1)',
+      data: [[253, 248151]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Corey",
-      data: [[116.2, 56.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. Finn",
+      data: [[286, 263895]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Phelps",
-      data: [[123.2, 23.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. Woods",
+      data: [[257, 385962]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Touje",
-      data: [[156.2, 45.6]],
-      color: 'rgba(152,0,46,1)',
+      name: "Dr. Lambros",
+      data: [[476, 458965]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Fender",
-      data: [[134.2, 27.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. Hansen",
+      data: [[402, 563245]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
    },
    {
-      name: "Dr. Gibson",
-      data: [[119.0, 56.6]],
-      color: 'rgba(229,181,58,1)',
+      name: "Dr. James",
+      data: [[436, 506895]],
+      color: 'rgba(0,133,63,.5)',
       url: "http://demo.get-nucleus.com/nucleus-provider-search"
-   }]
+   },
+   {
+      name: "Dr. North",
+      data: [[463, 503689]],
+      color: 'rgba(0,133,63,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   // Yellow
+   {
+      name: "Dr. Pierson",
+      data: [[579, 452896]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Stevens",
+      data: [[653, 489265]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Saltsman",
+      data: [[720, 568942]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Caldera",
+      data: [[568, 599867]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Dumas",
+      data: [[568, 789456]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Witt",
+      data: [[526, 678452]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Colley",
+      data: [[589, 623589]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Neilson",
+      data: [[621, 502365]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Gibbons",
+      data: [[745, 495225]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Anderson",
+      data: [[423, 356865]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Zaragoza",
+      data: [[456, 389567]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Davis",
+      data: [[502, 566231]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Stepan",
+      data: [[569, 604235]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Jones",
+      data: [[623, 648596]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Backman",
+      data: [[693, 798653]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Tolboe",
+      data: [[702, 723568]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Ludlow",
+      data: [[691, 326589]],
+      color: 'rgba(229,181,58,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   // Red
+   {
+      name: "Dr. Smith",
+      data: [[923, 869565]],
+      color: 'rgba(152,0,46,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Dickenson",
+      data: [[902, 799653]],
+      color: 'rgba(152,0,46,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Dickenson",
+      data: [[890, 778956]],
+      color: 'rgba(152,0,46,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+      name: "Dr. Dickenson",
+      data: [[852, 765989]],
+      color: 'rgba(152,0,46,.5)',
+      url: "http://demo.get-nucleus.com/nucleus-provider-search"
+   },
+   {
+       name: "Dr. Hanson",
+       data: [[812, 789562]],
+       color: 'rgba(152,0,46,.5)',
+       url: "http://demo.get-nucleus.com/nucleus-provider-search"
+    }]
 });
 

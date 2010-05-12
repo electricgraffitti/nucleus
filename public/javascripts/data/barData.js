@@ -1,7 +1,7 @@
 var barChart = new Highcharts.Chart({
    chart: {
       renderTo: 'bottom_left_chart',
-      defaultSeriesType: 'bar',
+      defaultSeriesType: 'column',
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
@@ -14,21 +14,21 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Top Fraudulent Cities',
+      text: 'Cases Opened by Provider Type',
       style: {
         color: '#555555'
       } 
    },
    subtitle: {
-      text: 'Source: HCI Data Center',
+      text: '2010 YTD',
       style: {
         color: '#6ac520'
       }
    },
    xAxis: {
-      categories: ['Los Angeles', 'New York', 'Miami', 'Orlando', 'San Diego'],
+      categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
       title: {
-         text: null,
+         text: 'Provider Type',
          style: {
            color: '#555555'
          }
@@ -37,8 +37,7 @@ var barChart = new Highcharts.Chart({
    yAxis: {
       min: 0,
       title: {
-         text: 'Fraudulent Claims by Claim Count',
-         align: 'high',
+         text: 'Cases Opened',
          style: {
            color: '#555555'
          }
@@ -47,40 +46,36 @@ var barChart = new Highcharts.Chart({
    tooltip: {
       formatter: function() {
          return '<b>'+ this.x +'</b><br/>'+
-             this.series.name +': '+ this.y +' for every 10000';
+             this.series.name +': '+ this.y + " Cases Opened";
       }
    },
    plotOptions: {
-      bar: {
-         dataLabels: {
-            enabled: true,
-            color: 'auto'
-         }
-      }
+    column: {
+      stacking: 'normal'
+    }
    },
    legend: {
-      layout: 'vertical',
-      style: {
-         left: 'auto',
-         bottom: 'auto',
-         right: '20px',
-         top: '20px'
-      },
-      borderWidth: 1,
-      backgroundColor: '#FFFFFF'
+     style: {
+        left: 'auto',
+        bottom: 'auto',
+        right: '30px',
+        top: '50px'
+     },
+     backgroundColor: '#FFFFFF',
+     borderColor: '#CCC',
+     borderWidth: 1
    },
    credits: {
       enabled: false
    },
-        series: [{
-      name: '2008',
-      data: [565, 435, 1565, 1107, 376]
-   }, {
-      name: '2009',
-      data: [795, 586, 1676, 1034, 456]
-   }, {
-      name: '2010',
-      data: [634, 423, 1045, 965, 523],
-      color: '#e5b53a'
+   series: [{
+      name: 'ASC',
+      data: [165, 145, 132, 112, 102, 132]
+      }, {
+      name: 'Hosptial',
+      data: [200, 195, 192, 177, 142, 174]
+      }, {
+      name: 'Prof',
+      data: [245, 230, 210, 225, 205, 240]
    }]
 });
