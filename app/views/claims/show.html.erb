@@ -1,13 +1,8 @@
-<p>
-  <b>Name:</b>
-  <%=h @claim.name %>
-</p>
-
-<p>
-  <b>Provider:</b>
-  <%=h @claim.provider_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_claim_path(@claim) %> |
-<%= link_to 'Back', claims_path %>
+<%= render :partial => 'claims/claim_summary_header' %>
+<div id="panel_layout" class="clear">
+    
+  <div class="clear"></div>
+</div>
+<% content_for :javascripts do %>
+  
+<% end %>

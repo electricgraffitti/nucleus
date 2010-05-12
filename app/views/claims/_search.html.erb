@@ -1,0 +1,56 @@
+<div id="top_search">
+  <% form_tag providers_path, :method => :get do %>
+    <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:prompt => "Quick Search"}) %><br/>
+    <div id="search_buttons">
+      <%= link_to "Clear Filters", "", :id => "search_clear" %>
+      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+    </div>
+    <h3 class="grey_header">Search Filters</h3>
+    <div id="sub_search_params">
+      <p>
+      <%= label_tag "Batch ID"%>
+      <%= collection_select(:search, :batch_id, SearchTopic.all, :id, :name, {:prompt => "Select"}) %><%= link_to "Batch Advanced", "", :id => "batch_filter_mag", :class => "search_mag" %>
+      </p>
+      <p>
+      <%= label_tag "Product"%>
+      <%= collection_select(:search, :product_id, Product.all, :id, :name, {:prompt => "Select"}) %>
+      </p>
+      <p>
+      <%= label_tag "Status"%>
+      <%= collection_select(:search, :status_id, SearchTopic.all, :id, :name, {:prompt => "Select"}) %>
+      </p>
+      <p>
+      <%= label_tag "Claim Sequence"%>
+      <%= text_field_tag :claim_sequence, nil, :id => "claim_sequence_wide" %> <span class="field_seperator">-</span> <%= text_field_tag :claim_sequence, nil, :id => "claim_sequence_short" %>
+      </p>
+      <p>
+      <%= label_tag "Claim Number"%>
+      <%= text_field_tag :claim_number %>
+      </p>
+      <p>
+      <%= label_tag "Patient Sequence"%>
+      <%= text_field_tag :patient_sequence %><%= link_to "Patience Sequence Advanced", "", :id => "patience_sequence_mag", :class => "search_mag" %>
+      </p>
+      <p>
+      <%= label_tag "Patient Number"%>
+      <%= text_field_tag :patient_number %>
+      </p>
+      <p>
+      <%= label_tag "Patient Last Name"%>
+      <%= text_field_tag :patient_last_name %>
+      </p>
+      <p>
+      <%= label_tag "Patient First Name"%>
+      <%= text_field_tag :patient_first_name %>
+      </p>
+      <p>
+      <%= label_tag "Social Security Number" %><br/>
+      <%= text_field_tag :ssn_number %>
+      </p>
+      <p>
+      <%= label_tag "Provider Sequence"%>
+      <%= text_field_tag :provider_sequence %><%= link_to "Provider Sequence Advanced", "", :id => "provider_sequence_mag", :class => "search_mag" %>
+      </p>
+    </div>
+  <% end %>
+</div>

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :claims
+
   map.resources :monthly_billings
 
   map.resources :procedures

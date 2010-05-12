@@ -3,10 +3,15 @@ class ClaimsController < ApplicationController
   # GET /claims.xml
   def index
     @claims = Claim.all
-
+    @providers = Provider.all
+    if params[:id].nil?
+      @provider = Provider.first
+    else
+      @provider = Provider.find(params[:id])
+    end
+     
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @claims }
     end
   end
 

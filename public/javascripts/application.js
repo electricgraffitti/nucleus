@@ -69,6 +69,35 @@ var tableActions = {
   
 };
 
+var profileActions = {
+	
+	setupAccordion: function() {
+		// Sets the default accordion window
+	  $('#accordion').accordion({
+	    active: 2,
+	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
+	  });
+	}
+	
+};
+
+var chartActions = {
+	
+	setupChartBaseColors: function() {
+		Highcharts.setOptions({
+	     colors: [
+	        '#00853f',
+	        '#009fc2',
+	        '#98002e',
+	        '#e5b53a',
+	        '#00467f',
+	        '#78496a'
+	     ]
+	  });
+	}
+	
+};
+
 var adminAction = {
   
   setupCalendars: function() {
@@ -94,17 +123,9 @@ var baseActions = {
 //**********Initialize Document**********//
 
 $(document).ready(function() {
+	
   // Set Base Colors for Charts
-  Highcharts.setOptions({
-     colors: [
-        '#00853f',
-        '#009fc2',
-        '#98002e',
-        '#e5b53a',
-        '#00467f',
-        '#78496a'
-     ]
-  });
+	chartActions.setupChartBaseColors();
   
   // Hide the table sub content(toggle)
   $toggle = $('.table_toggle_icon');
@@ -114,7 +135,7 @@ $(document).ready(function() {
   });
   
   adminAction.setupCalendars();
-  
+  profileActions.setupAccordion();
   // Table checkboxes
   $('#provider_select').click(function() {
     tableActions.selectAllCheckboxes($(this));
@@ -141,11 +162,6 @@ $(document).ready(function() {
     offset:[0,-65]
   });
   
-	// Sets the default accordion window
-  $('#accordion').accordion({
-    active: 2,
-    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
-  });
   
   $("a.flag_panel").click(function() {
     baseActions.accordionClick($(this));
