@@ -234,6 +234,7 @@ label.error {
 /*****************HEADER**********************/
 #hd {
   height: 80px;
+  background: #6b6a6a url('../images/header/header_dark_bg.jpg') left top repeat-x;
 }
 #logo {
   position: relative;
@@ -268,6 +269,7 @@ label.error {
   height: 30px;
   width: 100%;
 	background: url('../images/header/main_nav_bg.png') 0px 0px repeat-x;
+	border-top: 1px solid #6ac520;
 }
 ul.nav_ul {
   position: relative;

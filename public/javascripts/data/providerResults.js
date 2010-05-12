@@ -3,7 +3,7 @@ var scatterChart = new Highcharts.Chart({
       renderTo: 'provider_results_chart', 
       defaultSeriesType: 'scatter',
       width: 360,
-      height: 210,
+      height: 227,
       margin: [20,20,20,60],
       zoomType: 'xy',
       backgroundColor: {

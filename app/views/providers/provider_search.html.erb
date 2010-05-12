@@ -9,11 +9,11 @@
   <div id="panel_center" class="panel ui-layout-center">
     <div id="inner_panel">
       <div class="panel_set">
-      <div class="basic_panel">
-        <h3>Provider Results</h3>
-        <div id="provider_results_chart" class="clear left"></div>
+        <div class="basic_panel">
+          <h3>Provider Results</h3>
+          <div id="provider_results_chart" class="clear left"></div>
+        </div>
       </div>
-    </div>
       <div id="provider_content" class="panel_set">
         <div class="basic_panel">
           <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    </div>
+
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
@@ -73,7 +73,7 @@
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
       adminAction.setupCalendars();
+      $.getScript('../javascripts/data/providerResults.js');
     });
   </script>
-  <%= javascript_include_tag "providerSearch" %>
 <% end %>
