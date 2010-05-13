@@ -12,4 +12,8 @@ module ReportGenerators
    types = ["Triggered Providers Report"]
  end
  
+ def report_output_types
+   types = ["PDF", "XLS", "CSV"]
+ end
+ 
 end

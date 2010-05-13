@@ -595,11 +595,12 @@ div.scaffold_pane label {
 	padding-left:9px;
 	padding-top:10px;
 	width: 326px;
+	float:left;
 }
 .basic_panel_5 .report_panel_wrap {
 	width: 600px;
 }
-.report_panel_wrap form p {
+#selection_panel p, #report_output_panel p {
   float:left;
   margin-bottom:6.2px;
 }
@@ -649,7 +650,24 @@ div.scaffold_pane label {
 #schedule_dates input[type=text]#schedule_start_date, #schedule_dates input[type=text]#schedule_end_date {
   float: left;
 }
-#schedule_dates img.ui-datepicker-trigger {
+#report_parameters_dates {
+  padding-top: 10px;
+  border-right: 1px solid #c0c0c0;
+}
+#report_parameters_dates input[type="text"] {
+  width: 60px;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+#report_minimums p {
+  margin: 10px 15px 0px;
+  float: left;
+}
+#report_minimums p label {
+  font-size: 100%;
+  color: #333;
+}
+#schedule_dates img.ui-datepicker-trigger, #report_parameters_dates img.ui-datepicker-trigger {
   margin-top: -3px;
 }
 #schedule_dates input[type=text]#schedule_time {
@@ -673,6 +691,18 @@ div.scaffold_pane label {
 }
 span#occurence {
   margin-right: 31px;
+}
+#report_output_panel {
+  border: 1px solid #333;
+  background: #c0c0c0;
+  padding: 12px 0px 20px 20px;
+}
+#report_buttons {
+  float: left;
+  margin-left: 20px;
+}
+#report_buttons input[type="submit"] {
+  margin-right: 20px;
 }
 .sub_panel {
   position: relative;
@@ -960,12 +990,12 @@ span#occurence {
   padding-left: 18px;
   overflow: auto;
 }
-#sub_search_params label, .report_panel_wrap label {
+#sub_search_params label, .report_panel_wrap label, #report_output_panel label {
   font-size: 12px;
 	float: left;
 	clear: left;
 }
-#sub_search_params select, .report_panel_wrap select {
+#sub_search_params select, .report_panel_wrap select, #report_output_panel select {
   margin: 5px 0px 10px;
   width: 173px;
   background: #fff;
