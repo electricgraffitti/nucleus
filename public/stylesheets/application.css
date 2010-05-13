@@ -1036,6 +1036,7 @@ input[type="text"]#claim_sequence_wide {
 }
 input[type="text"]#claim_sequence_short {
   width: 30px;
+  clear: none;
 }
 span.field_seperator {
   float: left;
@@ -1550,7 +1551,7 @@ th, tfoot {
 tfoot {
   background: url("../images/inner_pages/page_header_bg.jpg") repeat-x;
   width: 100%;
-  height: 37px;
+  height: 21px;
 }
 td {
   padding: 4px;
@@ -1697,15 +1698,31 @@ tr.active {
   min-width: 1024px;
 }
 /**********Claim Search***********/
-.claim_provider {
-  min-width: 215px;
-}
-.claim_edits {
+.claim_sequence {
   min-width: 90px;
 }
 .claim_number {
   min-width: 80px;
 }
+.claim_form_type {
+  min-width: 60px;
+}
+.claim_edits {
+  min-width: 90px;
+}
+.claim_status {
+  min-width: 90px;
+}
+.claim_appeal_status {
+  min-width: 90px;
+}
+.claim_provider {
+  min-width: 215px;
+}
+.claim_provider_tax_id {
+  min-width: 90px;
+}
+
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
   position: relative;
