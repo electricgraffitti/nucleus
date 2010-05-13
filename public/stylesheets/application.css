@@ -575,7 +575,7 @@ div.scaffold_pane label {
 	color: #fff;
 	height: 17px;
 	background:none repeat scroll 0 0 #585958;
-	border-bottom:1px solid #818181;
+	border-bottom:2px solid #6AC520;
 	border-top:1px solid #818181;
 	color:#fff;
 	font-size:12px;
@@ -599,6 +599,12 @@ div.scaffold_pane label {
 }
 .basic_panel_5 .report_panel_wrap {
 	width: 600px;
+}
+#report_schedule, #selection_panel {
+  height: 284px;
+}
+#report_output_panel, #report_parameters {
+  height: 115px;
 }
 #selection_panel p, #report_output_panel p {
   float:left;
@@ -660,7 +666,7 @@ div.scaffold_pane label {
   margin-left: 5px;
 }
 #report_minimums p {
-  margin: 10px 15px 0px;
+  margin: 10px 13px 0px;
   float: left;
 }
 #report_minimums p label {
@@ -694,8 +700,8 @@ span#occurence {
 }
 #report_output_panel {
   border: 1px solid #333;
-  background: #c0c0c0;
-  padding: 12px 0px 20px 20px;
+  background: #6AC520;
+  padding: 12px 0px 0px 20px;
 }
 #report_buttons {
   float: left;
@@ -1000,7 +1006,7 @@ span#occurence {
   width: 173px;
   background: #fff;
   border: 1px solid #c0c0c0;
-  padding: 2px;
+  padding: 0px;
   float: left;
 	clear: left;
 }
@@ -1021,9 +1027,6 @@ span#occurence {
 }
 #sub_search_params input[type="text"]#trigger_start_date, #sub_search_params input[type="text"]#trigger_end_date {
   width: 139px;
-}
-#sub_search_params input[type="text"]:focus, .report_panel_wrap input[type="text"]:focus {
-  background: #f7fb87;
 }
 #report_description {
 	width: 300px;
@@ -1800,6 +1803,13 @@ input[type="text"], input[type="password"], textarea {
   padding: 5px;
   border: 1px solid #c0c0c0;
   margin: 5px 0px;
+}
+input[type="text"]:focus {
+  border: 1px solid #6AC520;
+  background: #efefef;
+}
+select {
+  height: 21px;
 }
 a.search_mag, a.calendar_icon {
   position: relative;
