@@ -113,6 +113,9 @@ p {
 .left {
   float: left;
 }
+.block {
+	display: block;
+}
 .space_left {
   margin-left: 10px;
 }
@@ -492,7 +495,7 @@ div.scaffold_pane label {
 .grey_panel {
   background: #e7e7e7;
 }
-.panel_set, .panel_set_2, .panel_set_3, .panel_set_4 {
+.panel_set, .panel_set_2, .panel_set_3, .panel_set_4, .panel_set_5 {
   position: relative;
   float: left;
   max-width: 400px;
@@ -507,7 +510,18 @@ div.scaffold_pane label {
 .panel_set_4 {
   max-width: 380px;
 }
-.basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .combo_panel_2, .combo_panel_3, .combo_panel_4 { /** A Combo Panel has sub_panels **/
+.panel_set_4 .panel_wrap, .panel_set_5 .panel_wrap {
+	position: relative;
+	max-width: 380px;
+	padding-top: 22px;
+}
+.panel_set_5 .panel_wrap {
+	max-width: 655px;
+}
+.panel_set_5 {
+  max-width: 655px;
+}
+.basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .basic_panel_5, .combo_panel_2, .combo_panel_3, .combo_panel_4, .combo_panel_5 { /** A Combo Panel has sub_panels **/
   position: relative;
   width: 363px;
   margin: 0px 0px 5px 20px;
@@ -534,11 +548,15 @@ div.scaffold_pane label {
   margin-left: 10px;
   width: 335px;
 }
+.basic_panel_5, .combo_panel_5 {
+  margin-left: 10px;
+  width: 615px;
+}
 .combo_panel {
   width: 383px;
   padding: 0px;
 }
-.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4, .combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
+.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4,.basic_panel_5 h3, .basic_panel_5 h4, .combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
   font-size: 14px;
   color: #555;
   padding: 5px 5px 5px 0px;
@@ -549,6 +567,58 @@ div.scaffold_pane label {
 }
 .basic_panel h3 span, .basic_panel h4 span, .combo_panel h3 span, .combo_panel h4 span {
   color: #333;
+}
+.panel_set_4 h3, .panel_set_5 h3  {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	color: #fff;
+	height: 17px;
+	background:none repeat scroll 0 0 #585958;
+	border-bottom:1px solid #818181;
+	border-top:1px solid #818181;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:20px;
+	padding-top:6px;
+	text-shadow:0 1px 1px #333333;
+}
+.panel_set_4 h3 {
+	width: 332px;
+}
+.panel_set_5 h3 {
+	width: 612px;
+}
+.report_panel_wrap {
+	margin-top:20px;
+	padding-left:9px;
+	padding-top:10px;
+	width: 326px;
+}
+.basic_panel_5 .report_panel_wrap {
+	width: 600px;
+}
+#report_schedule_panel {
+	border:1px solid #C0C0C0;
+	float:left;
+	margin:10px 0;
+	position:relative;
+	width:595px;
+}
+#report_schedule_panel ul.heading {
+	float:left;
+	padding:10px 10px 0px;
+	width:575px;
+	border-bottom: 1px solid #c0c0c0;
+}
+#report_schedule_panel #report_frequency_day_count {
+	width: 20px;
+	margin: -3px 10px 7px 10px;
+	clear: none;
+}
+#report_frequency_xdays {
+	float: left;
 }
 .sub_panel {
   position: relative;
@@ -836,30 +906,43 @@ div.scaffold_pane label {
   padding-left: 18px;
   overflow: auto;
 }
-#sub_search_params label {
+#sub_search_params label, .report_panel_wrap label {
   font-size: 12px;
+	float: left;
+	clear: left;
 }
-#sub_search_params select {
+#sub_search_params select, .report_panel_wrap select {
   margin: 5px 0px 10px;
   width: 173px;
   background: #fff;
   border: 1px solid #c0c0c0;
   padding: 2px;
   float: left;
+	clear: left;
 }
-#sub_search_params input[type="text"] {
+#sub_search_params input[type="text"], .report_panel_wrap input[type="text"] {
   margin: 5px 0px 10px;
   width: 160px;
   background: #fff;
   border: 1px solid #c0c0c0;
   padding: 4px;
   float: left;
+	clear: left;
+}
+.report_panel_wrap ul li {
+	margin-right: 10px;
+}
+.report_panel_wrap ul li input[type="radio"] {
+	margin-right: 5px;
 }
 #sub_search_params input[type="text"]#trigger_start_date, #sub_search_params input[type="text"]#trigger_end_date {
   width: 139px;
 }
-#sub_search_params input[type="text"]:focus {
+#sub_search_params input[type="text"]:focus, .report_panel_wrap input[type="text"]:focus {
   background: #f7fb87;
+}
+#report_description {
+	width: 300px;
 }
 input[type="text"]#claim_sequence_wide {
   width: 112px;

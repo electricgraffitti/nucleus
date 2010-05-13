@@ -19,7 +19,7 @@
 #
 class Report < ActiveRecord::Base
   
-  
+  include ReportGenerators
   
 end
 

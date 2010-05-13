@@ -1,19 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :claims
-
-  map.resources :monthly_billings
-
-  map.resources :procedures
-
-  map.resources :procedure_submissions
-
-  map.resources :condition_stats
-
-  map.resources :conditions
-
-  map.resources :condition_types
-
   
+  
+  map.resources :claims
+  map.resources :monthly_billings
+  map.resources :procedures
+  map.resources :procedure_submissions
+  map.resources :condition_stats
+  map.resources :conditions
+  map.resources :condition_types
   map.resources :feedbacks
   map.resources :products
   map.resources :patients

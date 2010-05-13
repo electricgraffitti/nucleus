@@ -3,7 +3,9 @@ class ReportsController < ApplicationController
   # GET /reports.xml
   def index
     @reports = Report.all
-
+    
+    @report_params = Report.new
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @reports }

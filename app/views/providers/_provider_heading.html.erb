@@ -1,2 +1,2 @@
-  <h3><span><%= provider.full_name %></span></h3>
-  <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_path(provider) %></div>
+  <h3><span><%= link_to "#{provider.full_name}", provider_path(provider) %></span></h3>
+  <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_action_path %></div>
