@@ -7,68 +7,45 @@
     </div>
   </div>
   <div id="panel_center" class="panel ui-layout-center">
-    <div id="inner_panel">
-      <div class="panel_set">
-      <div class="basic_panel">
-        <h3>Claims Results</h3>
-        <div id="provider_results_chart" class="clear left"></div>
-      </div>
-    </div>
-      <div id="provider_content" class="panel_set">
-        <div class="basic_panel">
-          <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
-        </div>
-        <div class="combo_panel">
-          <div id="provider_header" class="sub_panel">
-            <h4>Provider Sequence: <span><%= @provider.sequence_number %></span></h4>
-            <h4>Primary Specialty: <span id="speciality_code" title="<%= @provider.provider_speciality.speciality_type %>"><%= @provider.provider_speciality.speciality_code %></span></h4>
-          </div>
-          <div class="sub_panel">
-          <div id="provider_stats">
-            <div class="stat_group">
-              <div class="stat_title left">Patients</div>
-              <div class="stat_value left"><%= number_to_percentage(@provider.provider_stat.patient_percentage, :precision => 1) %></div>
-              <div class="stat_range left">
-                <%= @provider.provider_stat.final_patient_count %> of <%= @provider.provider_stat.total_patient_count %> Patients
-              </div>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Claims</div>
-              <div class="stat_value left"><%= number_to_percentage(@provider.provider_stat.claim_percentage, :precision => 1) %></div>
-              <div class="stat_range left"><%= @provider.provider_stat.final_claim_count %> of <%= @provider.provider_stat.total_claim_count %> Claims</div>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Savings</div>
-              <div class="stat_value left"><%= number_to_percentage(@provider.provider_stat.savings_percentage, :precision => 1) %></div>
-              <div class="stat_range left"><%= number_to_currency(@provider.provider_stat.final_savings_count, :precision => 0) %> of <%= number_to_currency(@provider.provider_stat.total_savings_count, :precision => 0) %> Paid</div>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Billed</div>
-              <div class="stat_value left"><%= number_to_percentage(@provider.provider_stat.billed_percentage, :precision => 1) %></div>
-              <div class="stat_range left"><%= number_to_currency(@provider.provider_stat.final_billed_count, :precision => 0) %> of <%= number_to_currency(@provider.provider_stat.total_billed_count, :precision => 0) %> Billed</div>
-            </div>
-          </div>
-        </div>
-        <div class="sub_panel last">
-          <div class="right">
-          <% form_tag providers_path, :method => :get do %>
-            <%= collection_select(:provider_stat_date_range, :date_range_id, SearchTopic.all, :id, :name, {:prompt => "Date Range"}) %><br/>
+    <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
+    <div id="provider_search_table">
+      <table id="provider_search">
+        <thead>
+          <tr>
+            <th>Claim Sequence</th>
+            <th>Claim No.</th>
+            <th>Form Type</th>
+            <th>Edit(s)</th>
+            <th>Status</th>
+            <th>Appeal Status</th>
+            <th>Provider</th>
+            <th>Provider Tax Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% 30.times do %>
+          <tr class='<%=cycle('even', 'odd')%>'>
+            <td class="claim_sequence">5882788-22</td>
+            <td class="claim_number">0945496302</td>
+            <td class="form_type">H</td>
+            <td class="claim_edits"></td>
+            <td class="claim_reviewed">Reviewed</td>
+            <td class="claim_appeal_status"></td>
+            <td class="claim_provider">Edward Smith</td>
+            <td class="claim_provider_tax_id">214748364</td>
+          </tr>
           <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div id="panel_south" class="ui-layout-south">
-      <div id="south_resizer">
-        <div class="resize_horz"></div>
-      </div>
-      <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
-      <%= render :partial => "providers/provider_search_table", :locals => {:providers => @providers} %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="8"></td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
   </div>
   <div class="clear"></div>
-</div>
+  </div>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "providerSearch" %>
 <% end %>

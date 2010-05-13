@@ -1540,12 +1540,17 @@ tr {
 td {
   border-right: 1px solid #c0c0c0;
 }
-th {
+th, tfoot {
   height: 12px;
   background: url('../images/inner_pages/table_header.jpg') repeat-x;
   color: #c9caca;
   border-right: 1px solid #c9caca;
   padding: 4px 5px 5px;
+}
+tfoot {
+  background: url("../images/inner_pages/page_header_bg.jpg") repeat-x;
+  width: 100%;
+  height: 37px;
 }
 td {
   padding: 4px;
@@ -1690,6 +1695,16 @@ tr.active {
 }
 #provider_action {
   min-width: 1024px;
+}
+/**********Claim Search***********/
+.claim_provider {
+  min-width: 215px;
+}
+.claim_edits {
+  min-width: 90px;
+}
+.claim_number {
+  min-width: 80px;
 }
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
