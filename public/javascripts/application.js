@@ -117,6 +117,16 @@ var adminAction = {
       			buttonImage: '../images/inner_pages/date_picker_cal.jpg',
       			buttonImageOnly: true
 		});
+		$('#schedule_start_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal_white.jpg',
+      			buttonImageOnly: true
+		});
+		$('#schedule_end_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal_white.jpg',
+      			buttonImageOnly: true
+		});
 	}
   
 };

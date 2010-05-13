@@ -599,6 +599,10 @@ div.scaffold_pane label {
 .basic_panel_5 .report_panel_wrap {
 	width: 600px;
 }
+.report_panel_wrap form p {
+  float:left;
+  margin-bottom:6.2px;
+}
 #report_schedule_panel {
 	border:1px solid #C0C0C0;
 	float:left;
@@ -612,13 +616,63 @@ div.scaffold_pane label {
 	width:575px;
 	border-bottom: 1px solid #c0c0c0;
 }
-#report_schedule_panel #report_frequency_day_count {
+#report_schedule_panel input[type="text"] {
+  position: relative;
+  clear: none;
+  width: 100px;
+  margin-left: 10px;
+}
+#report_schedule_panel #report_frequency_day_count, #report_schedule_panel #report_schedule_end_day_count {
 	width: 20px;
-	margin: -3px 10px 7px 10px;
+	margin:-3px 10px 7px 10px;
 	clear: none;
+}
+#schedule_dates {
+  padding: 20px;
+}
+#schedule_dates li {
+  width: 225px;
+  text-align: right;
+  margin-bottom: 1px;
+}
+#schedule_dates span {
+  text-align: right;
+}
+#schedule_dates input[type="radio"] {
+  float: right;
+  margin-top: 1px;
+}
+#schedule_dates input[type=text] {
+  float: right;
+  margin: -3px 0px 7px 10px;
+}
+#schedule_dates input[type=text]#schedule_start_date, #schedule_dates input[type=text]#schedule_end_date {
+  float: left;
+}
+#schedule_dates img.ui-datepicker-trigger {
+  margin-top: -3px;
+}
+#schedule_dates input[type=text]#schedule_time {
+  margin-right: 23px;
+}
+#schedule_date_end_days {
+  float: right;
+}
+#schedule_dates input[type="radio"]#schedule_date_no_end {
+  margin-left: 15px;
+  float: left;
 }
 #report_frequency_xdays {
 	float: left;
+}
+#schedule_dates input[type="text"]#report_email {
+  clear: left;
+  margin-right:22px;
+  margin-top:5px;
+  width:192px;
+}
+span#occurence {
+  margin-right: 31px;
 }
 .sub_panel {
   position: relative;
