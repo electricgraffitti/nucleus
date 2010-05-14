@@ -1768,17 +1768,20 @@ table.accordion_table {
 .federal_sanction_last_name, .federal_sanction_first_name, .state_sanction_last_name, .state_sanction_first_name {
   min-width: 121px;
 }
-.federal_sanction_date, .federal_sanction_type, .federal_sanction_reinstate, .state_sanction_date, .state_sanction_code, .state_sanction_case_number, .state_sanction_reinstate {
-  min-width: 100px;
+.federal_sanction_date, .federal_sanction_type, .federal_sanction_reinstate, .state_sanction_date, .state_sanction_code, .state_sanction_reinstate, .state_sanction_license {
+  min-width: 93px;
+}
+.state_sanction_case_number {
+  min-width: 85px;
 }
 .federal_sanction_description {
-  min-width: 214px;
+  min-width: 233px;
 }
 .federal_sanction_state, .federal_sanction_zip, .state_sanction_state {
   min-width: 60px;
 }
 .state_sanction_source, .state_sanction_action {
-  min-width: 50px;
+  min-width: 49px;
 }
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
