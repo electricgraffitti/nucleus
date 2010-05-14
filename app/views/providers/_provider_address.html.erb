@@ -1,0 +1,24 @@
+        	    <div class="accordion_content_wrap map_address_wrap">
+        	      <ul class="location_listing">
+        	        <% provider.locations.each do |location| %>
+        	          <div class="provider_location_box <%= cycle('even', 'odd') %>">
+        	            <div class="map_icon left">map</div>
+                      <div class="top_10_wrap">
+                        <h4><%= location.name %></h4><br/>
+        	              <ul class="left">
+        	                <li><%= location.address %></li>
+        	                <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
+        	                <li><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
+        	              </ul>
+        	              <ul class="location_stats">
+        	                <li>Type:<br/><b><%= location.location_type %></b></li>
+                          <li>Total Claims:<br/><b><%= location.total_claims %></b></li>
+                          <li>Total Patients:<br/><b><%= location.total_patients %></b></li>
+                          <li>Total Billed:<br/><b><%= number_to_currency(location.total_billed) %></b></li>
+                          <li>Total Paid:<br/><b><%= number_to_currency(location.total_paid) %></b></li>
+        	              </ul>
+      	              </div>
+        	          </div>
+        	          <% end %>
+        	     </ul>
+        	    </div>

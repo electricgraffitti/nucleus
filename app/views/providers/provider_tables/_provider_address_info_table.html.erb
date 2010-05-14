@@ -1,0 +1,23 @@
+<div id="suspect_provider_table" class="accordion_table_wrap">
+  <h4 class="accordion_table_header">Address Information</h4>
+  <table id="suspect_provider" class="accordion_table">
+    <thead>
+      <tr>
+        <th>Provider Address</th>
+        <th>Location Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% provider.locations.each do |pl| %>
+      <tr class='<%=cycle('even', 'odd')%>'>
+        <td class="group_name"><%= pl.name %></td>
+        <% if pl.location_type = "S" %>
+        <td class="group_tin">Service</td>
+        <% else %>
+        <td class="group_tin">Billing</td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

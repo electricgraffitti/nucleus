@@ -1,0 +1,35 @@
+<div id="suspect_provider_table" class="accordion_table_wrap">
+  <h4 class="accordion_table_header">Demographic Information</h4>
+  <table id="suspect_provider" class="accordion_table">
+    <thead>
+      <tr>
+        <th>Provider Last Name</th>
+        <th>Provider First Name</th>
+        <th>Provider Sequence</th>
+        <th>Provider ID</th>
+        <th>Provider TIN</th>
+        <th>UPIN</th>
+        <th>NPI</th>
+        <th>Medicare Facility ID</th>
+        <th>Facility</th>
+        <th>Client Type</th>
+        <th>Facility Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='<%=cycle('even', 'odd')%>'>
+        <td class="demographic_last_name"><%= provider.last_name %></td>
+        <td class="demographic_first_name"><%= provider.first_name %></td>
+        <td class="demographic_sn"><%= provider.sequence_number %></td>
+        <td class="demographic_id"><%= provider.id %></td>
+        <td class="demographic_tin"><%= provider.tin %></td>
+        <td class="demographic_upin">45756852</td>
+        <td class="demographic_npi">58645</td>
+        <td class="medicare_facility_id">4896</td>
+        <td class="demographic_facility">Clinic</td>
+        <td class="demographic_client_type">A</td>
+        <td class="demographic_facility_type">S</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

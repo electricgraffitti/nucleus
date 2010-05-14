@@ -75,7 +75,8 @@ var profileActions = {
 		// Sets the default accordion window
 	  $('#accordion').accordion({
 	    active: 2,
-	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
+	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' },
+	    autoHeight: false
 	  });
 	}
 	

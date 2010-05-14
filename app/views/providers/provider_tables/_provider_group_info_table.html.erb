@@ -1,0 +1,19 @@
+<div id="suspect_provider_table" class="accordion_table_wrap">
+  <h4 class="accordion_table_header">Group Information</h4>
+  <table id="suspect_provider" class="accordion_table">
+    <thead>
+      <tr>
+        <th>Group Name</th>
+        <th>Group Provider Sequence</th>
+        <th>Group TIN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='<%=cycle('even', 'odd')%>'>
+        <td class="group_name"><%= provider.provider_group.name %></td>
+        <td class="group_sequence">52361</td>
+        <td class="group_tin"><%= provider.provider_group.group_tin %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

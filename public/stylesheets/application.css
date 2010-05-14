@@ -1783,6 +1783,15 @@ table.accordion_table {
 .state_sanction_source, .state_sanction_action {
   min-width: 49px;
 }
+.credential_degree {
+  min-width: 260px;
+}
+.credential_crosswalk, .credential_client, .credential_hci {
+  min-width: 216px;
+}
+.group_name, .group_sequence, .group_tin {
+  min-width: 306px;
+}
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
   position: relative;
