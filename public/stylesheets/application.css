@@ -82,6 +82,9 @@ p {
 .top_20_wrap {
   margin: 20px 0px;
 }
+.top_10_wrap {
+  margin: 10px 0px;
+}
 .full_wrap {
   margin: 10px 10px;
 }
@@ -568,7 +571,7 @@ div.scaffold_pane label {
 .basic_panel h3 span, .basic_panel h4 span, .combo_panel h3 span, .combo_panel h4 span {
   color: #333;
 }
-.panel_set_4 h3, .panel_set_5 h3  {
+.panel_set_4 h3.report, .panel_set_5 h3.report  {
 	position: absolute;
 	top: -1px;
 	left: -1px;
@@ -584,10 +587,10 @@ div.scaffold_pane label {
 	padding-top:6px;
 	text-shadow:0 1px 1px #333333;
 }
-.panel_set_4 h3 {
+.panel_set_4 h3.report {
 	width: 332px;
 }
-.panel_set_5 h3 {
+.panel_set_5 h3.report {
 	width: 612px;
 }
 .report_panel_wrap {
@@ -700,7 +703,8 @@ span#occurence {
 }
 #report_output_panel {
   border: 1px solid #333;
-  background: #6AC520;
+ /* background: #6AC520;*/
+  background: #dedede;
   padding: 12px 0px 0px 20px;
 }
 #report_buttons {
@@ -1312,6 +1316,9 @@ div.provider_location_box {
   padding: 0px 20px 0px 0px;
   border-bottom: 1px solid #c0c0c0;
 }
+div.provider_location_box.even {
+  background: #F0F2F0;
+}
 ul.location_listing ul li {
   float:left;
   font-size:10px;
@@ -1319,7 +1326,6 @@ ul.location_listing ul li {
 }
 ul.location_listing div.map_icon {
   background:url("../images/inner_pages/map_pins.png") no-repeat scroll left top transparent;
-  border-right:1px solid #C0C0C0;
   height:35px;
   margin-right:5px;
   padding:0 2px;
@@ -1329,6 +1335,14 @@ ul.location_listing div.map_icon {
 }
 ul.location_listing div.map_icon.active {
   background:url("../images/inner_pages/map_pins.png") no-repeat scroll left -35px transparent;
+}
+ul.location_stats {
+  position: relative;
+  float: left;
+  margin: 10px 38px;
+}
+ul.location_stats li {
+  margin-right: 10px;
 }
 .provider_location_box h4 {
   float: left;
@@ -1543,7 +1557,7 @@ td {
 }
 th, tfoot {
   height: 12px;
-  background: url('../images/inner_pages/table_header.jpg') repeat-x;
+  background: #32312f url('../images/inner_pages/table_header.jpg') repeat-x;
   color: #c9caca;
   border-right: 1px solid #c9caca;
   padding: 4px 5px 5px;
@@ -1722,7 +1736,50 @@ tr.active {
 .claim_provider_tax_id {
   min-width: 90px;
 }
-
+/*********Accordion Tables********/
+h4.accordion_table_header {
+  padding: 0px 10px 10px 1px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.accordion_table_wrap {
+  position: relative;
+  float:left;
+  margin-bottom: 20px;
+}
+table.accordion_table {
+  border-left: 1px solid #c0c0c0;
+}
+.suspect_table_review_status, .suspect_table_effective, .suspect_table_expires {
+  min-width: 165px;
+}
+.provider_license_license_number, .provider_license_effective {
+  min-width: 165px;
+}
+.provider_license_state, .provider_license_type, .provider_license_statue {
+  min-width: 121px;
+}
+.provider_license_expires {
+  min-width: 200px;
+}
+.suspect_table_condition_id {
+  min-width: 379px;
+}
+.federal_sanction_last_name, .federal_sanction_first_name, .state_sanction_last_name, .state_sanction_first_name {
+  min-width: 121px;
+}
+.federal_sanction_date, .federal_sanction_type, .federal_sanction_reinstate, .state_sanction_date, .state_sanction_code, .state_sanction_case_number, .state_sanction_reinstate {
+  min-width: 100px;
+}
+.federal_sanction_description {
+  min-width: 214px;
+}
+.federal_sanction_state, .federal_sanction_zip, .state_sanction_state {
+  min-width: 60px;
+}
+.state_sanction_source, .state_sanction_action {
+  min-width: 50px;
+}
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
   position: relative;
@@ -1842,6 +1899,12 @@ input[type="text"]:focus {
 }
 select {
   height: 21px;
+}
+li.radio_wrap {
+  margin-right: 20px;
+}
+li.radio_wrap input[type="radio"] {
+  margin-right: 3px;
 }
 a.search_mag, a.calendar_icon {
   position: relative;

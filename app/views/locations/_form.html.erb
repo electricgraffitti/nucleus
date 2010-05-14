@@ -1,7 +1,9 @@
-<div class="form_box">
+<div class="basic_panel_2">
+  <h2>Provider: <%= provider.full_name %></h2>
+</div>
 <% form_for(@location) do |f| %>
   <%= f.error_messages %>
-
+  <div class="basic_panel_2">
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -22,10 +24,36 @@
     <%= f.label :zipcode %><br />
     <%= f.text_field :zipcode %>
   </p>
-    <%= f.hidden_field :provider_id, :value => provider.id %>
-    <div class="clear"></div>
   <p>
-    <%= f.submit 'Submit' %>
+    <%= f.label :location_type %><br />
+    <ul class="full_wrap">
+      <li class="radio_wrap left"><%= f.radio_button(:location_type, 'S', :checked => true) %> Service</li>
+      <li class="radio_wrap left"><%= f.radio_button(:location_type, 'B' )%> Billing</li>
+    </ul>
   </p>
-</div>
+  <div class="clear"></div>
+  <p>
+    <%= f.label :total_claims %><br />
+    <%= f.text_field :total_claims %>
+  </p>
+  <p>
+    <%= f.label :total_patients %><br />
+    <%= f.text_field :total_patients %>
+  </p>
+  <p>
+    <%= f.label :total_billed %><br />
+    <%= f.text_field :total_billed %>
+  </p>
+  <p>
+    <%= f.label :total_paid %><br />
+    <%= f.text_field :total_paid %>
+  </p>
+  </div>
+  <div class="clear"></div>
+  <div class="basic_panel_2">
+    <%= f.hidden_field :provider_id, :value => provider.id %>
+    <p>
+      <%= f.submit 'Submit' %> | <%= link_to 'Back', providers_path %>
+    </p>
+  </div>
 <% end %>

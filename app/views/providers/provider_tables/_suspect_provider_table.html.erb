@@ -1,0 +1,22 @@
+<div id="suspect_provider_table">
+  <table id="suspect_provider">
+    <thead>
+      <tr>
+        <th>Note</th>
+        <th>On Review</th>
+        <th>Effective</th>
+        <th>Expires</th>
+        <th>Condition ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='<%=cycle('even', 'odd')%>'>
+        <td class="provider_search_note"><%= link_to 'Note', note_path, :class => 'note_trigger table_icon table_note_icon', :rel => '#overlay' %></td>
+        <td class="suspect_table_review_status">Yes</td>
+        <td class="suspect_table_effective">3/1/2009</td>
+        <td class="suspect_table_expires">2/28/2010</td>
+        <td class="suspect_table_condition_id">SEMH</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
