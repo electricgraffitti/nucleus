@@ -1,0 +1,13 @@
+<div id="report_output_panel" class="basic_panel_4">
+    <p>
+    <%= label_tag "Output"%>
+    <%= select(:report, :report_selection, @report_params.report_output_types) %>
+    </p>
+    <p class="clear">
+      <%= check_box_tag :reports %> Preserve Report
+    </p>
+    <div id="report_buttons">
+      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+      <%= link_to "Clear", "", :id => "report_clear" %>
+    </div>
+</div>

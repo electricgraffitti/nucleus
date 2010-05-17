@@ -26,9 +26,10 @@ class LocationsController < ApplicationController
   def new
     @location = Location.new
     @provider = Provider.find(params[:id])
+    @locations = @provider.locations
     
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.xml  { render :xml => @location }
     end
   end
@@ -36,7 +37,8 @@ class LocationsController < ApplicationController
   # GET /locations/1/edit
   def edit
     @location = Location.find(params[:id])
-    @provider = Provider.find(params[:id])
+    @provider = @location.provider
+    @locations = @provider.locations
   end
 
   # POST /locations
@@ -64,7 +66,7 @@ class LocationsController < ApplicationController
     respond_to do |format|
       if @location.update_attributes(params[:location])
         flash[:notice] = 'Location was successfully updated.'
-        format.html { redirect_to(@location) }
+        format.html { redirect_to providers_path }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -1,6 +1,21 @@
-<div class="scaffold_panel">
-  <h2>Provider Location</h2>
-  <%= render :partial => 'locations/form', :locals => {:provider => @provider} %>
+<%= render :partial => 'locations/location_header', :locals => {:provider => @provider} %>
+<div id="panel_layout" class="clear">
+  <div id="inner_panel" class="panel ui-layout-center">
+    <div class="panel_set_2">
+       <%= render :partial => 'locations/form', :locals => {:provider => @provider} %>
+    </div>
+    <div class="panel_set_4">
+    <% if @provider.locations %>
+      <div class="basic_panel_4">
+       <h3 class="relative">Current Listed Locations:</h3>
+        <ul class="provider_condition_list left">
+          <% @locations.each do |pl| %>
+            <li><%= pl.name %> - <%= link_to "Edit Location", edit_location_path(pl) %> <%= link_to "Delete", location_path(pl), :method => :delete %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+  </div>
   <div class="clear"></div>
-  <%= link_to 'Back', locations_path %>
 </div>

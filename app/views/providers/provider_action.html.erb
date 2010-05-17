@@ -22,7 +22,7 @@
         <% end %>
       </div>
       <div class="drag_row left"><span>Drag & drop a column header here to group by that column.</span></div>
-      <%= render :partial => 'provider_action_table', :locals => {:provider => @provider} %>
+      <%= render :partial => 'provider_action_table', :locals => {:provider => @provider, :table_data => @provider_conditions} %>
     </div>
   </div>
   <div class="clear"></div>

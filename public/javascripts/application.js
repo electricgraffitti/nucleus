@@ -75,7 +75,8 @@ var profileActions = {
 		// Sets the default accordion window
 	  $('#accordion').accordion({
 	    active: 2,
-	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' }
+	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' },
+	    autoHeight: false
 	  });
 	}
 	
@@ -115,6 +116,26 @@ var adminAction = {
 		$('#trigger_end_date').datepicker({
 		  showOn: 'button',
       			buttonImage: '../images/inner_pages/date_picker_cal.jpg',
+      			buttonImageOnly: true
+		});
+		$('#schedule_start_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal_white.jpg',
+      			buttonImageOnly: true
+		});
+		$('#schedule_end_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal_white.jpg',
+      			buttonImageOnly: true
+		});
+		$('#report_trigger_start_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal_white.jpg',
+      			buttonImageOnly: true
+		});
+		$('#report_trigger_end_date').datepicker({
+		  showOn: 'button',
+      			buttonImage: '../images/inner_pages/date_picker_cal_white.jpg',
       			buttonImageOnly: true
 		});
 	}

@@ -1,0 +1,21 @@
+<div id="suspect_provider_table" class="accordion_table_wrap">
+  <h4 class="accordion_table_header">Provider Scoring</h4>
+  <table id="suspect_provider" class="accordion_table">
+    <thead>
+      <tr>
+        <th>Composite Rank</th>
+        <th>Composite Score</th>
+        <th>Composite On Review</th>
+        <th>Composite CIU Referral</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='<%=cycle('even', 'odd')%>'>
+        <td class="credential_degree"><%= provider.id %></td>
+        <td class="credential_crosswalk"><%= provider.provider_score %></td>
+        <td class="credential_client">Yes</td>
+        <td class="credential_hci"><%= link_to "Active", "" %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

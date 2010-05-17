@@ -1,35 +1,28 @@
 <%= render :partial => 'reports/reports_header' %>
+<% form_tag reports_path, :method => :get do %>
 <div id="panel_layout" class="clear">
   <div id="inner_panel" class="panel ui-layout-center">
     <div class="panel_set_4">
       <%= render :partial => 'reports/report_selection' %>
     </div>
     <div class="panel_set_5">        
-      <div class="basic_panel_5">
-        <h3 class="grey_header">Scheduling</h3>
-        <div class="report_panel_wrap">
-          <% form_tag reports_path, :method => :get do %>
-            <ul class="left">
-              <li class="left"><%= radio_button_tag 'time_frame', 'Generate Now', true %> Generate Now</li>
-              <li class="left"><%= radio_button_tag 'time_frame', 'Schedule' %> Schedule</li>
-            </ul>
-            <div id="report_schedule_panel">
-              <ul class="heading">
-                <li class="left"><%= radio_button_tag 'report_frequency', 'Once' %> Once</li>
-                <li class="left"><%= radio_button_tag 'report_frequency', 'Daily' %> Daily</li>
-                <li class="left"><%= radio_button_tag 'report_frequency', 'Weekly', true %> Weekly</li>
-                <li class="left"><%= radio_button_tag 'report_frequency', 'Monthly' %> Monthly</li>
-                <li class="left"><%= radio_button_tag 'report_frequency', 'Quarterly' %> Quarterly</li>
-                <li class="left form_combo"><%= radio_button_tag 'report_frequency', 'xdays' %> <span class="left block">Every</span> <%= text_field_tag :day_count, nil, :id => "report_frequency_day_count" %> <span class="left block">Days</span></li>
-              </ul>
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <%= render :partial => 'reports/report_schedule' %>
+    </div>
+    <div class="clear"></div>
+    <div class="panel_set_5">
+      <%= render :partial => 'reports/report_parameters' %>
+    </div>
+    <div class="panel_set_4">
+      <%= render :partial => 'report_output' %>
     </div>
   </div>
   <div class="clear"></div>
 </div>
+<% end %>
 <% content_for :javascripts do %>
-  
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      adminAction.setupCalendars();
+    });
+  </script>
 <% end %>

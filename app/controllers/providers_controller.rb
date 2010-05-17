@@ -118,6 +118,7 @@ class ProvidersController < ApplicationController
       @condition = Condition.find_by_id(params[:condition_id])
     end
     
+    @provider_conditions = @provider.conditions.billed_listings
     @billings = @condition.monthly_billings
     @graph_data = @provider.dollars_billed_by_month(@billings)
     
