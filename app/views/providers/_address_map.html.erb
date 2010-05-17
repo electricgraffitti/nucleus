@@ -2,6 +2,11 @@
         	      <ul class="location_listing">
         	        <% provider.locations.each do |location| %>
         	          <div class="provider_location_box <%= cycle('even', 'odd') %>">
+        	            <% if location.suspect_location %>
+        	            <div class="suspect_location_notice">
+        	             <%= location.name %> - This address has not been verified
+        	            </div>
+        	            <% end %>
         	            <div class="map_icon left">map</div>
                       <div class="top_10_wrap">
                         <h4><%= location.name %></h4><br/>

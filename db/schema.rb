@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100514160941) do
+ActiveRecord::Schema.define(:version => 20100517173911) do
 
   create_table "claims", :force => true do |t|
     t.integer  "provider_id"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(:version => 20100514160941) do
     t.integer  "total_patients"
     t.integer  "total_billed"
     t.integer  "total_paid"
+    t.boolean  "suspect_location"
   end
 
   create_table "messages", :force => true do |t|
