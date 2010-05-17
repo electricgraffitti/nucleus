@@ -848,8 +848,9 @@ span#occurence {
   background: #d8d8d8;
 }
 .quick_launch_wrap {
-	padding: 60px 0px 60px 100px;
-	float: left;
+ padding: 60px 0px 60px 100px;
+ float: left;
+ width:823px;
 }
 #quick_launch_top {
   position: relative;

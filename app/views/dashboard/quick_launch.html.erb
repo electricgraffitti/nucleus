@@ -1,36 +1,34 @@
 <%= render :partial => 'dashboard/quick_launch_header' %>
-<div class="clear"></div>
 <div id="panel_layout" class="clear">
   <div class="quick_launch_wrap">
-  <div id="quick_launch_top">  
-    <div class="quick_launch_box box1">
-      <%= link_to "Dashboard", dashboard_path, :class => "dash1", :title => "Nucleus Dashboard" %>
+    <div id="quick_launch_top">  
+      <div class="quick_launch_box box1">
+        <%= link_to "Dashboard", dashboard_path, :class => "dash1", :title => "Nucleus Dashboard" %>
+      </div>
+      <div class="quick_launch_box box2">
+        <%= link_to "Reports", reports_path, :class => "dash2", :title => "Nucleus Reports" %>
+      </div>
+      <div class="quick_launch_box box3">
+        <%= link_to "Search", provider_search_path, :class => "dash3", :title => "Nucleus Provider Search" %>
+      </div>
+      <div class="quick_launch_box box4">
+        <%= link_to "Help", help_path, :class => "dash4", :title => "Nucleus Support Center" %>
+      </div>
     </div>
-    <div class="quick_launch_box box2">
-      <%= link_to "Reports", reports_path, :class => "dash2", :title => "Nucleus Reports" %>
+    <div id="quick_launch_bottom">  
+      <div class="quick_launch_box box5">
+        <%= link_to "Messages", messages_path, :class => "dash5", :title => "Nucleus Message Center" %>
+      </div>
+      <div class="quick_launch_box box6">
+        <%= link_to "Feedback", client_feedback_path, :class => "dash6", :title => "Nucleus Feedback" %>
+      </div>
+      <div class="quick_launch_box box7">
+        <%= link_to "Settings", client_path(current_client), :class => "dash7", :title => "Nucleus Client Settings" %>
+      </div>
+      <div class="quick_launch_box box8">
+        <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8", :title => "Insight University" %>
+      </div>
     </div>
-    <div class="quick_launch_box box3">
-      <%= link_to "Search", provider_search_path, :class => "dash3", :title => "Nucleus Provider Search" %>
-    </div>
-    <div class="quick_launch_box box4">
-      <%= link_to "Help", help_path, :class => "dash4", :title => "Nucleus Support Center" %>
-    </div>
-  </div>
-  <div id="quick_launch_bottom">  
-    <div class="quick_launch_box box5">
-      <%= link_to "Messages", messages_path, :class => "dash5", :title => "Nucleus Message Center" %>
-    </div>
-    <div class="quick_launch_box box6">
-      <%= link_to "Feedback", client_feedback_path, :class => "dash6", :title => "Nucleus Feedback" %>
-    </div>
-    <div class="quick_launch_box box7">
-      <%= link_to "Settings", client_path(current_client), :class => "dash7", :title => "Nucleus Client Settings" %>
-    </div>
-    <div class="quick_launch_box box8">
-      <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8", :title => "Insight University" %>
-    </div>
-  </div>
   </div>
   <div class="clear"></div>
 </div>
-

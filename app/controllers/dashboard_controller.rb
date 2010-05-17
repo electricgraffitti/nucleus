@@ -1,7 +1,6 @@
 class DashboardController < ApplicationController
   
   def index
-    
     @top_providers = Provider.top_billable
     render :layout => "application"
   end
