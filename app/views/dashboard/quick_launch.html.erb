@@ -1,6 +1,7 @@
 <%= render :partial => 'dashboard/quick_launch_header' %>
 <div class="clear"></div>
-<div id="quick_launch">
+<div id="panel_layout" class="clear">
+  <div class="quick_launch_wrap">
   <div id="quick_launch_top">  
     <div class="quick_launch_box box1">
       <%= link_to "Dashboard", dashboard_path, :class => "dash1", :title => "Nucleus Dashboard" %>
@@ -28,6 +29,7 @@
     <div class="quick_launch_box box8">
       <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8", :title => "Insight University" %>
     </div>
+  </div>
   </div>
   <div class="clear"></div>
 </div>

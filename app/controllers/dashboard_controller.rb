@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
   end
   
   def quick_launch
-    
+    render :layout => "application"
   end
   
   def panel_test

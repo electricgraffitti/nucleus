@@ -1,6 +1,6 @@
 var lineChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'top_right_chart',
+      renderTo: 'bottom_right_chart',
       defaultSeriesType: 'areaspline',
       margin: [50, 20, 60, 80],
       backgroundColor: {
@@ -104,6 +104,7 @@ var lineChart = new Highcharts.Chart({
       data: [359687, 458976, 586741, 684235, 485742, 752635]
    }, {
       name: 'Accepted',
-      data: [287749, 348821, 310972, 629496, 369163, 617160]
+      data: [287749, 348821, 310972, 629496, 369163, 617160],
+			color: '#e5b53a'
    }]
 });

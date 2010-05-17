@@ -23,7 +23,7 @@ html, body {
 #login_wrapper {
   position: relative;
   margin: 0px auto;
-  width: 760px;
+  width: 960px;
   height: 470px;
   padding: 0px 0px 20px;
   background: #333;
@@ -240,6 +240,15 @@ label.error {
 /*****************HEADER**********************/
 #hd {
   height: 80px;
+  background: #6b6a6a url('../images/header/header_dark_bg.jpg') left top repeat-x;
+}
+#login_header {
+	position: relative;
+  text-align: left;
+ 	float:left;
+	width: 100%;
+  height: 51px;
+	border-bottom:2px solid #6AC520;
   background: #6b6a6a url('../images/header/header_dark_bg.jpg') left top repeat-x;
 }
 #logo {
@@ -764,7 +773,10 @@ span#occurence {
   text-align: left;
   width: 325px;
   height: 300px;
-  margin: 42px 0px 60px 40px;
+  margin: 0px 0px 60px 40px;
+}
+#login_left {
+	width: 500px;
 }
 #login_left h1 {
   position: relative;
@@ -833,6 +845,10 @@ span#occurence {
   width: 815px;
   padding: 60px;
   background: #d8d8d8;
+}
+.quick_launch_wrap {
+	padding: 60px 100px;
+	float: left;
 }
 #quick_launch_top {
   position: relative;
@@ -1048,14 +1064,14 @@ span.field_seperator {
 }
 #provider_rating, #provider_rating_full {
   background: #D3D4D4;
-  font-size:18px;
-  font-weight:bold;
-  height:32px;
-  padding:7px 0 0 25px;
-  position:absolute;
-  right:0;
-  top:0;
-  width:65px;
+	font-size:23px;
+	font-weight:bold;
+	height:34px;
+	padding:5px 0 0 25px;
+	position:absolute;
+	right:0;
+	top:0;
+	width:65px;
 }
 #provider_rating_full {
   top: 0px;

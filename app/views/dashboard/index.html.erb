@@ -10,5 +10,18 @@
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
-  <%= javascript_include_tag 'dashboardCharts' %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+
+      // Scatter Plot
+      $.getScript('javascripts/data/scatterData.js');
+
+      // Bar Graph
+      $.getScript('javascripts/data/barData.js');
+
+      // Line Chart
+      $.getScript('javascripts/data/lineData.js');
+
+    });
+  </script>
 <% end %>

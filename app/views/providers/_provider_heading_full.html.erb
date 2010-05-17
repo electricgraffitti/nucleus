@@ -1,8 +1,8 @@
-<div id="provider_rating_full" class="<%= provider.score_color(provider)%>_rating"><%= provider.provider_score %></div>
+<div id="provider_rating_full" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_action_path %></div>
 <h3><span><%= provider.full_name %></span></h3>
 <div id="search_wrap">
   <form action="http://google.com/search" method="get" class="search" target="_blank">
-      <input type="text" name="q" size="45" value="<%= provider.full_name %>"/>
+      <input type="text" name="q" size="45" value="<%= provider.full_name %> <%= provider.provider_speciality.speciality_type %> <%= provider.state.abbreviation %>"/>
       <button type="submit" class="search_btn" title="Google Search">Search</button>
   </form>
 </div>
