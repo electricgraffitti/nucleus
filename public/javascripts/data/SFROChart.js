@@ -51,8 +51,8 @@ actionChart = new Highcharts.Chart({
       style: {
          position: 'absolute',
          bottom: 'auto',
-         left: '10px',
-         top: '50px',
+         left: '30px',
+         top: '0px',
          color: "#555555",
          font: "10px Arial, Helvetica, sans-serif"
       },

@@ -54,6 +54,11 @@ var tableActions = {
     elId = el.attr("id");
 		return elId;
   },
+  
+  findChartType: function(el) {
+    elChartType = el.attr("chartType");
+		return elChartType;
+  },
 	
 	swapProvider: function(el) {
 		data = tableActions.findId(el);
@@ -61,8 +66,9 @@ var tableActions = {
 	},
 	actionChartData: function(el) {
 	 cid = tableActions.findId(el);
+	 ctype = tableActions.findChartType(el);
 	 // tableActions.setConditionChart(el);
-   $.getJSON("/nucleus-provider-action", {condition_id:cid}, function(data) {
+   $.getJSON("/nucleus-provider-action", {condition_id:cid, chart_code:ctype}, function(data) {
      //actionChart.series[0].setData(eval(data), false);
      actionChart.redraw();
 	 });
