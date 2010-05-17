@@ -20,7 +20,7 @@
             </thead>
             <tbody>
               <% table_data.each do |pc| %>
-              <tr id="<%= pc.id %>" class='<%=cycle('even', 'odd')%>'>
+              <tr id="<%= pc.id %>" class='<%=cycle('even', 'odd')%>' chartType="<%= pc.condition_type.condition_code %>">
                 <td class="provider_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
                 <td class="provider_action_toggle"><div class="table_icon table_toggle_icon"></div></td>
                 <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', "" %></td>

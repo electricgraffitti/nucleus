@@ -61,10 +61,16 @@ var tableActions = {
 	},
 	actionChartData: function(el) {
 	 cid = tableActions.findId(el);
+	 // tableActions.setConditionChart(el);
    $.getJSON("/nucleus-provider-action", {condition_id:cid}, function(data) {
-     actionChart.series[0].setData(eval(data), false);
+     //actionChart.series[0].setData(eval(data), false);
      actionChart.redraw();
 	 });
+	},
+	
+	setConditionChart: function(el) {
+	  chartType = el.attr('chartType');
+	  $.getScript('/javascripts/data/' + chartType + 'Chart.js');
 	}
   
 };
@@ -181,6 +187,7 @@ $(document).ready(function() {
 	$('#provider_action_table tbody tr').click(function() {
 	  tableActions.setActive($(this));
 	  tableActions.actionChartData($(this));
+	  tableActions.setConditionChart($(this));
 	});
 	
 	tableActions.setInitHighlight();

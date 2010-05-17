@@ -83,7 +83,10 @@ var lineChart = new Highcharts.Chart({
       style: {
         color: "#555555",
         font: "10px Arial, Helvetica, sans-serif"
-      }
+      },
+      borderColor: "#555555",
+      borderWidth: 1,
+      borderRadius: 0
    },
    legend: {
       layout: 'vertical',
@@ -96,7 +99,10 @@ var lineChart = new Highcharts.Chart({
          font: "10px Arial, Helvetica, sans-serif"
       },
       borderWidth: 1,
-      backgroundColor: '#FFFFFF'
+      backgroundColor: '#FFFFFF',
+      borderRadius: 0,
+      borderColor: '#e7e7e7',
+      shadow: false
    },
    
    series: [{

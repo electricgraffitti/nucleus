@@ -6,7 +6,7 @@
     <h2 class="main_header">Top Provider Alert</h2>
     <% @top_providers.each do |p| %>
     <div class="basic_panel">
-      <%= render :partial => 'providers/provider_heading', :locals => {:provider => p} %>
+      <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
     </div>
     <% end %>
   </div>

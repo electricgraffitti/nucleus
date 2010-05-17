@@ -34,7 +34,7 @@ class Provider < ActiveRecord::Base
   has_many :locations, :class_name => "Location"
   accepts_nested_attributes_for :locations, :allow_destroy => true
   
-  named_scope :top_billable, :order => "provider_score DESC", :limit => 3
+  named_scope :top_billable, :order => "provider_score DESC", :limit => 6
   
   
   def full_name

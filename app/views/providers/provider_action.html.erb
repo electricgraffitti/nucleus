@@ -29,9 +29,7 @@
 </div>
 <% content_for :javascripts do %>
 <script type="text/javascript" charset="utf-8">
+  // var rails_public_path = "<%= root_path %>";
   var actionChart;
-  $(document).ready(function() {
-    $.getScript('../javascripts/data/providerActionChart.js');
-  });
 </script>
 <% end %>

@@ -66,7 +66,10 @@ var barChart = new Highcharts.Chart({
       },
       style: {
         font: '12px Arial, Helvetica, sans-serif'
-      }
+      },
+      borderColor: '#555555',
+      borderRadius: 0,
+      borderWidth: 1
    },
    plotOptions: {
     column: {
@@ -78,11 +81,13 @@ var barChart = new Highcharts.Chart({
         left: 'auto',
         bottom: 'auto',
         right: '30px',
-        top: '50px'
+        top: '55px'
      },
      backgroundColor: '#FFFFFF',
-     borderColor: '#CCC',
-     borderWidth: 1
+     borderColor: '#e7e7e7',
+     borderWidth: 1,
+     borderRadius: 0,
+     shadow: false
    },
    credits: {
       enabled: false

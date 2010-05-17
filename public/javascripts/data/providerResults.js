@@ -6,10 +6,10 @@ var scatterChart = new Highcharts.Chart({
       height: 227,
       margin: [20,20,20,60],
       zoomType: 'xy',
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
-      }
+      // backgroundColor: {
+      //   linearGradient: [0, 0, 0, 300],
+      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
+      // }
    },
    credits: {
      enabled: false
