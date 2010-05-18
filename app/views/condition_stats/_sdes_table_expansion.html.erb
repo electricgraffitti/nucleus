@@ -13,14 +13,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= cs.condition_code_count %></td>
-      <td><%= cs.condition_count %></td>
-      <td><%= cs.conditions_per_code %></td>
-      <td><%= number_to_currency(cs.condition.condition_billed) %></td>
-      <td><%= number_to_currency(cs.condition.condition_paid) %></td>
-      <td><%= cs.condition.speciality_average_count %></td>
-      <td><%= number_to_currency(cs.condition.speciality_average_billed) %></td>
-      <td><%= number_to_currency(cs.condition.speciality_average_paid) %></td>
+      <td class="sdes_code_count"><%= cs.condition_code_count %></td>
+      <td class="sdes_count"><%= cs.condition_count %></td>
+      <td class="sdes_per_code"><%= cs.conditions_per_code %></td>
+      <td class="sdes_billed"><%= number_to_currency(cs.condition.condition_billed) %></td>
+      <td class="sdes_paid"><%= number_to_currency(cs.condition.condition_paid) %></td>
+      <td class="sdes_avg_count"><%= cs.condition.speciality_average_count %></td>
+      <td class="sdes_avg_billed"><%= number_to_currency(cs.condition.speciality_average_billed) %></td>
+      <td class="sdes_avg_paid"><%= number_to_currency(cs.condition.speciality_average_paid) %></td>
     </tr>
   </tbody>
 </table>

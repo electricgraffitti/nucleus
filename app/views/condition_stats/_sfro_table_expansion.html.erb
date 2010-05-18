@@ -13,14 +13,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= cs.condition_count %></td>
-      <td><%= cs.repair_count %></td>
-      <td><%= number_to_percentage(cs.repair_percentage, :precision => 2) %></td>
-      <td><%= number_to_currency(cs.condition.condition_billed) %></td>
-      <td><%= number_to_currency(cs.condition.condition_paid) %></td>
-      <td><%= number_to_percentage(cs.condition.speciality_average_percentage, :precision => 2) %></td>
-      <td><%= number_to_currency(cs.condition.speciality_average_billed) %></td>
-      <td><%= number_to_currency(cs.condition.speciality_average_paid) %></td>
+      <td class="sfro_count"><%= cs.condition_count %></td>
+      <td class="sfro_repair_count"><%= cs.repair_count %></td>
+      <td class="sfro_repair_percentage"><%= number_to_percentage(cs.repair_percentage, :precision => 2) %></td>
+      <td class="sfro_billed"><%= number_to_currency(cs.condition.condition_billed) %></td>
+      <td class="sfro_paid"><%= number_to_currency(cs.condition.condition_paid) %></td>
+      <td class="sfro_avg_percentage"><%= number_to_percentage(cs.condition.speciality_average_percentage, :precision => 2) %></td>
+      <td class="sfro_avg_billed"><%= number_to_currency(cs.condition.speciality_average_billed) %></td>
+      <td class="sfro_avg_paid"><%= number_to_currency(cs.condition.speciality_average_paid) %></td>
     </tr>
   </tbody>
 </table>

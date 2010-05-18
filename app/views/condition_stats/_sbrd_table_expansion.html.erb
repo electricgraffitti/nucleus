@@ -1,34 +1,34 @@
 <table class="expansion_table">
   <thead>
     <tr>
-      <th>Total Billed</th>
-      <th>Expected Billed</th>
-      <th>Spec Avg Billed</th>
+      <th class="text-right">Total Billed</th>
+      <th class="text-right">Expected Billed</th>
+      <th class="text-right">Spec Avg Billed</th>
       <th>Top Procedure Codes</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><%= number_to_currency(pc.condition_billed) %></td>
-      <td><%= number_to_currency(pc.expected_billed) %></td>
-      <td><%= number_to_currency(pc.speciality_average_billed) %></td>
-      <td>
-        <table class="inner_expansion_table">
+      <td class="sbrd_total_billed text-right"><%= number_to_currency(pc.condition_billed) %></td>
+      <td class="sbrd_expected_billed text-right"><%= number_to_currency(pc.expected_billed) %></td>
+      <td class="sbrd_avg_billed text-right"><%= number_to_currency(pc.speciality_average_billed) %></td>
+      <td class="sbrd_proc_codes">
+        <table class="expansion_table">
           <thead>
             <tr>
               <th>Proc</th>
               <th>Total Submissions</th>
-              <th>Total Billed</th>
-              <th>Total Paid</th>
+              <th class="text-right">Total Billed</th>
+              <th class="text-right">Total Paid</th>
             </tr>
           </thead>
           <tbody>
             <% pc.procedure_submissions.each do |ps| %>
             <tr>
-              <td title="<%= ps.procedure.procedure_description %>"><%= ps.procedure.procedure_code %></td>
-              <td><%= ps.total_submissions %></td>
-              <td><%= number_to_currency(ps.total_billed) %></td>
-              <td><%= number_to_currency(ps.total_paid) %></td>
+              <td class="sbrd_proc" title="<%= ps.procedure.procedure_description %>"><%= ps.procedure.procedure_code %></td>
+              <td class="sbrd_submissions"><%= ps.total_submissions %></td>
+              <td class="sbrd_total text-right"><%= number_to_currency(ps.total_billed) %></td>
+              <td class="sbrd_paid text-right"><%= number_to_currency(ps.total_paid) %></td>
             </tr>
             <% end %>
           </tbody>

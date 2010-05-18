@@ -58,9 +58,11 @@ html, body {
 }
 a {
   color: #555;
+  text-decoration: none;
 }
 a:hover {
   color: #2070b5;
+  text-decoration: underline;
 }
 .admin_link {
   margin-top: 10px;
@@ -1094,11 +1096,12 @@ span.field_seperator {
 	right:0;
 	top:0;
 	width:65px;
+	text-shadow: 0px 1px 0px #efefef;
 }
 #provider_rating_full {
   top: 0px;
   left: 0px;
-  padding:6px 0px 0 25px;
+  padding:5px 0px 0 25px;
   margin-right: 25px;
 }
 #provider_rating.green_rating {
@@ -1167,9 +1170,9 @@ span.field_seperator {
 #provider_stats .stat_group .stat_value {
   position: relative;
   text-align: left;
-  color: #fff;
+  color: #343434;
   font-size: 16px;
-  background: #333;
+  background: #d6d6d6;
   width: 47px;
 }
 #provider_stats .stat_group .stat_range {
@@ -1615,6 +1618,20 @@ tfoot {
   width: 100%;
   height: 21px;
 }
+table.expansion_table thead tr th, table.expansion_table tfoot {
+  height: 12px;
+  background: #d6d6d6;
+  color: #343434;
+  border-right: 1px solid #c9caca;
+  padding: 4px 5px 5px;
+  text-shadow: 0px 1px 0px #fff;
+}
+table.expansion_table tbody tr td {
+  vertical-align: top;
+}
+table.expansion_table thead tr th.text-right, table.expansion_table tbody tr td.text-right {
+  text-align: right;
+}
 td {
   padding: 4px;
 }
@@ -1895,6 +1912,19 @@ table.accordion_table {
 .expansion_table, .inner_expansion_table {
  border-left: 1px solid #c0c0c0; 
 }
+.sbrd_total_billed, .sbrd_expected_billed, .sbrd_avg_billed{
+  min-width: 155px;
+}
+.sbrd_proc, .sbrd_submissions, .sbrd_total, .sbrd_paid {
+  min-width: 118px;
+}
+.sdes_billed, .sdes_paid, .sdes_avg_billed, .sdes_avg_paid, .sdes_avg_count {
+  min-width: 117px;
+}
+.sfro_billed, .sfro_paid, .sfro_avg_billed, .sfro_avg_paid {
+  min-width: 154px;
+}
+
 /*********************************************/
 /******************BUTTONS********************/
 .btn {
