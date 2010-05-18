@@ -1826,7 +1826,7 @@ table.accordion_table {
 .federal_sanction_state, .federal_sanction_zip, .state_sanction_state {
   min-width: 60px;
 }
-.state_sanction_source, .state_sanction_action {
+.state_sanction_source, .state_sanction_action, .pd_gender, .pd_status, .pd_ssn, .pd_birth, .pd_death {
   min-width: 49px;
 }
 .credential_degree {
@@ -1837,6 +1837,24 @@ table.accordion_table {
 }
 .group_name, .group_sequence, .group_tin {
   min-width: 306px;
+}
+.pd_name {
+	min-width: 115px;
+}
+.pd_preferred_name {
+	min-width: 90px;
+}
+.pd_medicare_number {
+	min-width: 70px;
+}
+.npi_npi, .npi_drc, .npi_tax, .npi_rank, .dea_dea, .dea_activity, .dea_expires {
+	min-width: 227px;
+}
+.taxonomy_taxonomy, .taxonomy_type, .taxonomy_classifications, .taxonomy_cms, .taxonomy_cms_code {
+	min-width: 180px;
+}
+.hospital_name, .hospital_status, .hospital_expiration, .hospital_effective {
+	min-width: 225px;
 }
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {
