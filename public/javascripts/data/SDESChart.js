@@ -1,7 +1,7 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'spline',
+      defaultSeriesType: 'column',
       width: 310,
       height: 200,
       zoomType: 'xy',
@@ -29,10 +29,9 @@ actionChart = new Highcharts.Chart({
      }
    },
    xAxis: {
-     categories: ['Jan 09', 'Feb 09', 'Mar 09', 'Apr 09', 'May 09', 'Jun 09', 
-        'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
+     categories: ['17000', '17003', '17004'],
      labels: {
-       rotation: 90
+       rotation: false
      }
    },
    yAxis: {
@@ -79,11 +78,14 @@ actionChart = new Highcharts.Chart({
          }
       }
    },
-   series: [
+	 series: [
    {  
-     name: "Condition Billing",
-     data: [],
-     color: 'rgba(0,133,63,1)'
-   }]
+     name: "Edward Smith",
+     data: [4.5, 0.5, 95]
+   }, {
+     name: "Specialty Norm",
+     data: [52.9, 38.4, 8.7]
+   }
+  ]
 });
 

@@ -115,12 +115,15 @@ class ProvidersController < ApplicationController
     if params[:condition_id].nil?
       @condition = @provider.conditions.first
     else
+      # grab condition and chart_type from the Ajax get
       @condition = Condition.find_by_id(params[:condition_id])
+      @chart_type = params[:chart_code]
     end
     
+    # grab all provider conditions for data grid
     @provider_conditions = @provider.conditions.billed_listings
-    @billings = @condition.monthly_billings
-    @graph_data = @provider.dollars_billed_by_month(@billings)
+    
+    @graph_data = @provider.set_graph(@condition, @chart_type)
     
     respond_to do |format|
       format.html

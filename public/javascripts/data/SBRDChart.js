@@ -1,7 +1,7 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'area',
+      defaultSeriesType: 'spline',
       width: 310,
       height: 200,
       zoomType: 'xy',
