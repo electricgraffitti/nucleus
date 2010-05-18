@@ -1,0 +1,33 @@
+<div id="prospect_demographic_table" class="accordion_table_wrap">
+  <h4 class="accordion_table_header">Provider Demographics</h4>
+  <table id="provider_demographic" class="accordion_table">
+    <thead>
+      <tr>
+        <th>Provider Name</th>
+        <th>Preferred Name</th>
+        <th>Gender</th>
+        <th>Provider Status</th>
+        <th>SSN</th>
+        <th>Date of Birth</th>
+        <th>Date of Death</th>
+        <th>Medicare Facility #</th>
+        <th>Degree</th>
+        <th>School/Graduation Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='<%=cycle('even', 'odd')%>'>
+        <td class="pd_name"><%= provider.full_name %></td>
+        <td class="pd_preferred_name">Ed</td>
+        <td class="pd_gender">Male</td>
+        <td class="pd_status">Active</td>
+        <td class="pd_ssn">345-98-9556</td>
+        <td class="pd_birth">05/12/1972</td>
+        <td class="pd_death"></td>
+        <td class="pd_medicare_number">4896</td>
+        <td class="pd_degree">MD</td>
+        <td class="pd_school">Columbia University</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

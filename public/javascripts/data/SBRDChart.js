@@ -1,7 +1,7 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'area',
+      defaultSeriesType: 'spline',
       width: 310,
       height: 200,
       zoomType: 'xy',
@@ -43,8 +43,8 @@ actionChart = new Highcharts.Chart({
    },
    tooltip: {
       formatter: function() {
-                return '<b>'+ this.series.name +'</b><br/>'+
-            this.x + ", "+ "$"+this.y +' Billed';
+      	return '<b>'+ this.series.name +'</b><br/>'+
+        this.x + ", "+ "$"+this.y +' Billed';
       }
    },
    legend: {
