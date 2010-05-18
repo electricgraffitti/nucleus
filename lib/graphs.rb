@@ -8,7 +8,6 @@ module Graphs
     return cdata
   end
   
-  
   def dollars_billed_by_month(obj)
     chart_data = []
      obj.each do |d|
