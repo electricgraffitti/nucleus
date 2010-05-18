@@ -2,10 +2,10 @@ actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
       defaultSeriesType: 'spline',
-      width: 310,
-      height: 200,
+      width: 300,
+      height: 220,
       zoomType: 'xy',
-      margin: [40,20,40,50],
+      margin: [40,10,50,50],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -32,7 +32,10 @@ actionChart = new Highcharts.Chart({
      categories: ['Jan 09', 'Feb 09', 'Mar 09', 'Apr 09', 'May 09', 'Jun 09', 
         'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
      labels: {
-       rotation: 90
+       rotation: 90,
+       style: {
+         bottom: "20px"
+       }
      }
    },
    yAxis: {
@@ -82,7 +85,7 @@ actionChart = new Highcharts.Chart({
    series: [
    {  
      name: "Condition Billing",
-     data: [],
+     data: [2345,4253,21568,14859,19854,20635,17485,19874,18121,18003,17563,10478,13568,15689,16895,19865,14274],
      color: 'rgba(0,133,63,1)'
    }]
 });

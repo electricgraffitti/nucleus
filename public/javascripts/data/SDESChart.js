@@ -32,7 +32,8 @@ actionChart = new Highcharts.Chart({
      categories: ['17000', '17003', '17004'],
      labels: {
        rotation: false
-     }
+     },
+     minPadding: 2
    },
    yAxis: {
       title: {
@@ -93,7 +94,7 @@ actionChart = new Highcharts.Chart({
 	 series: [
    {  
      name: "Edward Smith",
-     data: [4.5, 0.5, 95]
+     data: [4.5, 1, 95]
    }, {
      name: "Specialty Norm",
      data: [52.9, 38.4, 8.7]

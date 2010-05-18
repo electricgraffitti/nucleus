@@ -943,10 +943,12 @@ span#occurence {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;
 }
 #top_left_dashboard .basic_panel {
   text-align: left;
   width: 418px;
+  background: #fff;
 }
 #top_left_dashboard h2.main_header {
   font-size: 16px;
@@ -1096,7 +1098,7 @@ span.field_seperator {
 #provider_rating_full {
   top: 0px;
   left: 0px;
-  padding:7px 0px 0 25px;
+  padding:6px 0px 0 25px;
   margin-right: 25px;
 }
 #provider_rating.green_rating {

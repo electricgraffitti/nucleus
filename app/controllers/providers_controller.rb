@@ -123,6 +123,8 @@ class ProvidersController < ApplicationController
     # grab all provider conditions for data grid
     @provider_conditions = @provider.conditions.billed_listings
     
+    # @billings = @condition.monthly_billings(:order => 'month DESC')
+    
     @graph_data = @provider.set_graph(@condition, @chart_type)
     
     respond_to do |format|
