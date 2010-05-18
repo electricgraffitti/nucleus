@@ -69,7 +69,7 @@ var tableActions = {
 	 ctype = tableActions.findChartType(el);
 	 // tableActions.setConditionChart(el);
    $.getJSON("/nucleus-provider-action", {condition_id:cid, chart_code:ctype}, function(data) {
-     actionChart.series[0].setData(eval(data), false);
+     // actionChart.series[0].setData(eval(data), false);
      actionChart.redraw();
 	 });
 	},

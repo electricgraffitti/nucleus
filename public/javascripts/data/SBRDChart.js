@@ -5,7 +5,7 @@ actionChart = new Highcharts.Chart({
       width: 310,
       height: 200,
       zoomType: 'xy',
-      margin: [20,20,40,50],
+      margin: [40,20,40,50],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -15,10 +15,10 @@ actionChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Dollars Billed by Month',
+      text: 'Billing Spike - Dollars Billed by Month',
       style: {
-         color: "#c0c0c0",
-         display: 'none'
+         color: "#555555",
+         font: "16px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {

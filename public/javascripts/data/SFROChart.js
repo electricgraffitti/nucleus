@@ -3,9 +3,9 @@ actionChart = new Highcharts.Chart({
       renderTo: 'provider_action_chart', 
       defaultSeriesType: 'column',
       width: 310,
-      height: 200,
+      height: 220,
       zoomType: 'xy',
-      margin: [20,20,40,50],
+      margin: [40,10,60,30],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -15,10 +15,10 @@ actionChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Dollars Billed by Month',
+      text: 'Repair Procedure Distribution',
       style: {
-         color: "#c0c0c0",
-         display: 'none'
+         color: "#555555",
+         font: "16px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
@@ -47,12 +47,10 @@ actionChart = new Highcharts.Chart({
       }
    },
    legend: {
-      layout: 'vertical',
       style: {
          position: 'absolute',
-         bottom: 'auto',
-         left: '30px',
-         top: '0px',
+         bottom: '0px',
+         right: '50px',
          color: "#555555",
          font: "10px Arial, Helvetica, sans-serif"
       },
