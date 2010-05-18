@@ -325,7 +325,7 @@ ul.nav_ul li a:hover {
 ul.icon_nav {
 	position: relative;
 	float: right;
-	min-height: 29px;
+	height: 29px;
 	margin-right: 11px;
 }
 ul.icon_nav li {
@@ -1249,6 +1249,7 @@ a.flag_panel {
   border-radius: 0px;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
+  clear: left;
 }
 #accordion h3 a {
   padding: 0px;
@@ -1324,7 +1325,8 @@ a.flag_panel {
 }
 .inner_accordion {
   padding: 10px;
-  clear: both;
+  /*clear: both;*/
+  float: left;
 }
 .accordion_content_wrap {
   position: relative;
@@ -1765,7 +1767,7 @@ tr.active {
   min-width: 85px;
 }
 .provider_action_condition {
-  min-width: 215px;
+  min-width: 250px;
 }
 .provider_action_client_action {
   min-width: 96px;
@@ -1919,10 +1921,10 @@ table.accordion_table {
   min-width: 118px;
 }
 .sdes_billed, .sdes_paid, .sdes_avg_billed, .sdes_avg_paid, .sdes_avg_count {
-  min-width: 117px;
+  min-width: 108px;
 }
 .sfro_billed, .sfro_paid, .sfro_avg_billed, .sfro_avg_paid {
-  min-width: 154px;
+  min-width: 151px;
 }
 
 /*********************************************/
