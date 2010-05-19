@@ -1596,8 +1596,17 @@ ul.help_west_list li {
   color:#333333;
   position:relative;
   text-align:right;
-  padding: 10px 20px 0px;
+  padding: 10px 19px 0px;
+  font-size: 12px;
+  height: 20px;
 }
+/*#user_info a, #user_info select {
+  float: left;
+}
+#user_info span {
+  display: block;
+  padding: 0px 5px;
+}*/
 p.panel_paragraph {
   margin-left:20px;
   padding:20px 0;
