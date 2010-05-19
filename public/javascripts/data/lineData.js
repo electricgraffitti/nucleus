@@ -2,7 +2,7 @@ var lineChart = new Highcharts.Chart({
    chart: {
       renderTo: 'bottom_right_chart',
       defaultSeriesType: 'areaspline',
-      margin: [50, 20, 60, 80],
+      margin: [50, 30, 60, 80],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
@@ -30,7 +30,7 @@ var lineChart = new Highcharts.Chart({
       }
    },
    xAxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'April', 'May', 'June'],
+      type: 'datetime',
       title: {
          text: 'Savings by Month',
          style: {
@@ -43,7 +43,8 @@ var lineChart = new Highcharts.Chart({
           color: "#555555",
           font: "10px Arial, Helvetica, sans-serif"
         }
-      }
+      },
+      showLastLabel: true
    },
    yAxis: {
      labels: {
@@ -107,10 +108,10 @@ var lineChart = new Highcharts.Chart({
    
    series: [{
       name: 'Identified',
-      data: [359687, 458976, 586741, 684235, 485742, 752635]
+      data: [[Date.UTC(2010, 0, 1),359687],[Date.UTC(2010, 1, 1), 458976],[Date.UTC(2010, 2, 1), 586741],[Date.UTC(2010, 3, 1), 684235],[Date.UTC(2010, 4, 1), 485742],[Date.UTC(2010, 5, 1), 752635]]
    }, {
       name: 'Accepted',
-      data: [287749, 348821, 310972, 629496, 369163, 617160],
+      data: [[Date.UTC(2010, 0, 1),287749],[Date.UTC(2010, 1, 1), 348821],[Date.UTC(2010, 2, 1), 310972],[Date.UTC(2010, 3, 1), 629496],[Date.UTC(2010, 4, 1), 369163],[Date.UTC(2010, 5, 1), 617160]],
 			color: '#e5b53a'
    }]
 });

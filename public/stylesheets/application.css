@@ -370,10 +370,12 @@ ul.icon_nav li#icon_nav_5:hover {
 	background: url('../images/header/icon_nav.png') -120px -29px no-repeat;
 }
 ul.icon_nav li#icon_nav_6 {
-	background: url('../images/header/icon_nav.png') -150px 0px no-repeat;
+	background: url('../images/header/icon_nav.png') -155px 0px no-repeat;
+	width: 20px;
 }
 ul.icon_nav li#icon_nav_6:hover {
-	background: url('../images/header/icon_nav.png') -150px -29px no-repeat;
+	background: url('../images/header/icon_nav.png') -155px -29px no-repeat;
+	width: 20px;
 }
 ul.icon_nav li#icon_nav_7 {
 	background: url('../images/header/icon_nav.png') -180px 0px no-repeat;
