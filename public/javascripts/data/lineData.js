@@ -79,7 +79,7 @@ var lineChart = new Highcharts.Chart({
    tooltip: {
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
-            this.x +': $'+ this.y;
+            Highcharts.dateFormat('%b %Y', this.x) +': $'+ this.y;
       },
       style: {
         color: "#555555",
