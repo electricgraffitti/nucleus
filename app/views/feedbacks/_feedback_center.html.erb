@@ -1,0 +1,27 @@
+<h2 class="panel_heading">
+  Welcome to the HCI Nucleus Forum. The strength of our medical and dental clinical applications comes from our talented customers. We value your input so that we can work together to make Nucleus a better tool for all of us. Join in the conversation. <%= link_to "Sign up today.", "" %>
+</h2>
+<div id="feedback_search">
+  <h2>I Suggest You...</h2>
+  <% form_tag providers_path, :method => :get do %>
+    <%= text_field_tag(:search, "Submit your idea or search our forum", {:size => 52, :class => "left"} )%>
+    <div id="search_buttons">
+      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+      <%= link_to "Clear", "", :id => "search_clear" %>
+    </div>
+    <% end %>
+    <div class="clear"></div>
+</div>
+<div id="center_feedback_content_wrap">
+  <div id="feedback_panels">
+    <ul>
+      <li><%= link_to "Top Ideas", "#feedback_panel_1" %></li>
+      <li><%= link_to "Hot", "#feedback_panel_2" %></li>
+      <li><%= link_to "New (1)", "#feedback_panel_3" %></li>
+      <li><%= link_to "Accepted (2)", "#feedback_panel_4" %></li>
+      <li><%= link_to "Completed (7)", "#feedback_panel_5" %></li>
+    </ul>
+      <%= render :partial => 'feedback_panels' %>
+    <%# end panels %>
+  </div>
+</div>

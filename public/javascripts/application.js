@@ -110,7 +110,13 @@ var chartActions = {
 	}
 	
 };
-
+var tabs = {
+  
+  setupFeedbackTabs: function() {
+    $("#feedback_panels").tabs({ selected: 0 });
+  }
+  
+};
 var adminAction = {
   
   setupCalendars: function() {
@@ -160,6 +166,11 @@ var baseActions = {
    $panel_selector = el.attr("panel");
    $panel = $("#" + $panel_selector);
    $panel.click();
+  },
+  
+  setInputFilter: function(el) {
+   initVal = el.val();
+   el.val(" ");
   }
   
 }

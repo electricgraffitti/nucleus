@@ -1,6 +1,19 @@
 <%= render :partial => 'messages/message_header' %>
-<div id="panel_layout" class="clear">
-    <%= image_tag('misc/message.jpg', :alt => "Nucleus Message Center" ) %>
+<div id="panel_layout" class="help_panels clear">
+  <div class="panel ui-layout-center">
+    <%= render :partial => 'help/help_center' %>
+  </div>
+  <div class="panel ui-layout-east">
+    <div class="sidebar_panel">
+      <%= link_to "<div id='contact' class='help_icon'></div>Contact our <br/>Support Team", "", :class => "sidebar_icon_link" %>
+      <%= link_to "<div id='chat' class='help_icon'></div>Support Team <br/>Live Chat", "", :class => "sidebar_icon_link" %>
+      <%= link_to "<div id='forum' class='help_icon'></div><span class='icon_single_line'>User Forum</span>", "", :class => "sidebar_icon_link" %>
+    </div>
+    <div class="sidebar_panel">
+      <%= link_to "<div id='hciu' class='help_icon'></div>HCI U<br/><span class='help_icon_sub_text'>Education Program</span>", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "sidebar_icon_link silver_icon_link" %>
+      <%= link_to "<div id='video' class='help_icon'></div><span class='icon_single_line'>Video Tutorials</span>", "", :class => "sidebar_icon_link silver_icon_link" %>
+    </div>
+  </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>

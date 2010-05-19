@@ -1,8 +1,54 @@
 <%= render :partial => 'feedbacks/feedback_header' %>
-<div id="panel_layout" class="clear">
-    <%= image_tag('misc/uservoice_nuc.jpg', :alt => "Nucleus Feedback" ) %>
+<div id="panel_layout" class="feedback_panels clear">
+  <div class="panel ui-layout-center">
+    <%= render :partial => 'feedbacks/feedback_center' %>
+  </div>
+  <div class="panel ui-layout-east">
+    <div id="user_info">
+      <p class="has-layout">
+        <a href="/login">Log in</a> or <a href="/signup">Sign up</a> | <select style="width: 100px;" onchange="if (this.value) location.href = '?lang='+this.value" name="switch-lang" id="switch-lang" class="select" autocomplete="off"><option selected="selected" value="en">English</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="nl">Nederlands</option>
+      <option value="pt_BR">Português Brasileiro</option>
+      <option value="cn">中文 简体</option>
+      <option value="ja">日本語</option>
+      <option value="fi">Suomi</option>
+      <option value="tr">Türkçe</option>
+      <option value="no_NB">Norwegian</option>
+      <option value="it">Italiano</option>
+      <option value="pl">Polski</option></select>
+            </p>
+      </div>
+    <div class="big_vote_box">
+      <p><span class="big_number">98</span> votes left!<p>
+    </div>
+    <h3 class="green_header">What Happens if time runs out?</h3>
+
+    <h3 class="lt_grey_header feedback_rss">Nucleus <b>activity feed</b></h3>
+    <h3 class="lt_grey_header feedback_contact"><b>Contact</b> Nucleus</h3>
+    
+    <h3 class="green_header">Categories</h3>
+    <h3 class="lt_grey_header small_bottom_spacer">All Ideas</h3>
+    <h3 class="lt_grey_header small_bottom_spacer">User Inteface</h3>
+    <h3 class="lt_grey_header small_bottom_spacer">Report Features</h3>
+    <h3 class="lt_grey_header small_bottom_spacer">Bug Reports</h3>
+    <div class="sidebar_panel">
+      
+    </div>
+  </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
-  
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+     tabs.setupFeedbackTabs();
+     
+     $("#search").click( function() {
+       baseActions.setInputFilter($(this));
+     });
+     
+    });
+  </script>
 <% end %>
