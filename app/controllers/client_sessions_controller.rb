@@ -3,7 +3,6 @@ class ClientSessionsController < ApplicationController
   before_filter :require_client, :only => :destroy
   
   def new
-    
     if current_client_session
       redirect_to quick_launch_path
     else
@@ -26,4 +25,19 @@ class ClientSessionsController < ApplicationController
     flash[:notice] = "Logout successful!"
     redirect_to new_client_session_path
   end
+  
+  def login2
+    if current_client_session
+      redirect_to quick_launch_path
+    else
+      @client_session = ClientSession.new
+    end
+    
+    respond_to do |format|
+      format.html { render :layout => "login_black"}
+    end
+    
+  end
+  
+  
 end

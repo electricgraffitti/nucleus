@@ -26,6 +26,7 @@ ActionController::Routing::Routes.draw do |map|
   # Login Logout
   map.login "client-login", :controller => "client_sessions", :action => "new"
   map.logout "client-logout", :controller => "client_sessions", :action => "destroy"
+  map.login2 "nucleus-login", :controller => "client_sessions", :action => "login2"
 
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"
   map.client_feedback "nucleus-client-feedback", :controller => "feedbacks", :action => "index"
@@ -39,7 +40,8 @@ ActionController::Routing::Routes.draw do |map|
   map.note "claim-notes", :controller => "claims", :action => "note"
   map.panel_test "panel-test", :controller => "dashboard", :action => "panel_test"
   
-  map.root :controller => "dashboard", :action => "login"
+  map.root :controller => "client_sessions", :action => "new"
+  # map.root :controller => "client_sessions", :action => "login2"
 
   
 end
