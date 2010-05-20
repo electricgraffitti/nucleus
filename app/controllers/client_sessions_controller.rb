@@ -31,10 +31,9 @@ class ClientSessionsController < ApplicationController
       redirect_to quick_launch_path
     else
       @client_session = ClientSession.new
-    end
-    
-    respond_to do |format|
-      format.html { render :layout => "login_black"}
+      respond_to do |format|
+        format.html { render :layout => "login_black"}
+      end
     end
     
   end

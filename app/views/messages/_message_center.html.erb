@@ -1,0 +1,54 @@
+<div id="message_search">
+  <h2>Share with My Feed</h2>
+  <% form_tag providers_path, :method => :get do %>
+    <%= text_area_tag(:search, nil, {:cols => 90, :rows => 5, :class => "left"} )%>
+    <div id="search_buttons">
+      <%= submit_tag "Update", :name => nil, :class => 'medium_btn' %>
+      <%= link_to "Clear", "", :id => "search_clear" %>
+    </div>
+    <% end %>
+    <div class="clear"></div>
+</div>
+<h2 class="content_header">My Feed</h2>
+<div id="center_message_content_wrap">
+  <div class="message_feed_main">
+    <div class="image_wrap">
+    </div>
+    <div class="message_wrap">
+      <h3 class="green">Jason C Pierson:</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <div class="message_links">
+        <span>48 minutes ago</span> <span class="pipe">|</span><span class="green">Reply</span>
+      </div>
+    </div>
+    <div class="message_reply">
+      <div class="image_wrap">
+      </div>
+      <h3 class="green">Darin Johnson:</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <div class="message_links">
+        <span>48 minutes ago</span>
+      </div>
+    </div>
+  </div>
+  <div class="message_feed_main">
+    <div class="image_wrap">
+    </div>
+    <div class="message_wrap">
+      <h3 class="green">Jason C Pierson:</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <div class="message_links">
+        <span>48 minutes ago</span> <span class="pipe">|</span><span class="green">Reply</span>
+      </div>
+    </div>
+    <div class="message_reply">
+      <div class="image_wrap">
+      </div>
+      <h3 class="green">Darin Johnson:</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <div class="message_links">
+        <span>48 minutes ago</span>
+      </div>
+    </div>
+  </div>
+</div>

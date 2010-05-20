@@ -40,8 +40,8 @@ ActionController::Routing::Routes.draw do |map|
   map.note "claim-notes", :controller => "claims", :action => "note"
   map.panel_test "panel-test", :controller => "dashboard", :action => "panel_test"
   
-  map.root :controller => "client_sessions", :action => "new"
-  # map.root :controller => "client_sessions", :action => "login2"
+  # map.root :controller => "dashboard", :action => "login"
+  map.root :controller => "client_sessions", :action => "login2"
 
   
 end
