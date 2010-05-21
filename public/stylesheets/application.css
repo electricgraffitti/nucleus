@@ -1645,7 +1645,7 @@ ul.message_west_list li {
 }
 #center_message_content_wrap {
   position: relative;
-  height: 435px;
+  height: 395px;
   margin: 20px;
   overflow: auto;
   overflow-x: hidden;
