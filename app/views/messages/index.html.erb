@@ -4,7 +4,25 @@
     <%= render :partial => 'messages/message_center' %>
   </div>
   <div class="panel ui-layout-east">
-
+    <div id="profile_wrap">
+      <div class="image_wrap left">
+        <%= image_tag('message/avatar_darin_johnson.jpg', :alt => "Darin Johnson Avatar") %>
+      </div>
+      <div class="profile_info left">
+        <b>Darin Johnson</b><br/>
+        HealthCare Insight<br/>
+        Vice President<br/>
+        Marketing<br/>
+        <%= link_to "Edit", "" %>
+      </div>
+    </div>
+    <h3 class="green_header clear">Categories</h3>
+    <h3 class="basic_header">Received</h3>
+    <h3 class="basic_header">Direct Messages</h3>
+    <h3 class="basic_header">Sent</h3>
+    <h3 class="basic_header">All</h3>
+    <h3 class="basic_header">RSS</h3>
+    <h3 class="basic_header">Groups</h3>
   </div>
   <div class="clear"></div>
 </div>

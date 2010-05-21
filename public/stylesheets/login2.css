@@ -84,8 +84,9 @@ h2.sub_title {
 	margin-right: 5px;
 }
 /*.login_fields_wrap input:focus {
-	padding: 3px;
-	border: 1px solid #6ac520;
+  border: 1px solid #6AC520;
+  background: #efefef;
+	padding: 5px;
 }*/
 .login_rss {
   position: relative;
