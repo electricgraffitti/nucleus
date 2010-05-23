@@ -1,5 +1,5 @@
 class ClientSessionsController < ApplicationController
-  before_filter :require_no_client, :only => [:new, :create]
+  before_filter :require_no_client, :only => [:new, :create, :login2]
   before_filter :require_client, :only => :destroy
   
   def new
@@ -23,7 +23,7 @@ class ClientSessionsController < ApplicationController
   def destroy
     current_client_session.destroy
     flash[:notice] = "Logout successful!"
-    redirect_to new_client_session_path
+    redirect_to login_path
   end
   
   def login2

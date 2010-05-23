@@ -25,7 +25,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # Login Logout
   map.login "nucleus-login", :controller => "client_sessions", :action => "login2"
-  map.logout "nucleus-logout", :controller => "client_sessions", :action => "login2"
+  map.logout "nucleus-logout", :controller => "client_sessions", :action => "destroy"
   # map.login2 "nucleus-login", :controller => "client_sessions", :action => "login2"
 
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"

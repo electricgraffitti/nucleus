@@ -1,8 +1,6 @@
-<div id="login_header">
-  <div id="logo">Nucleus</div>
-</div>
-<div id="login_left">
-  <h2 class="login green">Welcome Back!</h2>
+<div id="login_wrap">
+<h1 id="logo">Nucleus</h1>
+<h2 class="sub_title green">Welcome</h2>
   <% form_for(@client_session) do |f| %>
     <%= f.error_messages %>
     <div class="login_fields_wrap">
@@ -23,22 +21,4 @@
     </p>
     <p class="top_20_wrap"><%= f.submit "Sign In", :class => 'login_btn' %></p>
   <% end %>
-</div>
-
-<div id="login_right">
-  <div class="login_sub_box">
-    <p><b>A Solution for All Payors</b><br/>
-      Public, Private, and P&amp;C payors.
-    </p>
-    <%= link_to(image_tag('login/ad_boxes/service_ad.png', :alt => "HealthCare Insight Services"), "http://www.hcinsight.com/services", :target => "_blank") %>
-  </div>
-  <div class="login_sub_box">
-    <p><b>Learn From Industry Professionals</b><br/>
-      HCI Client Education Program.
-    </p>
-    <%= link_to(image_tag('login/ad_boxes/hciu_ad.png', :alt => "HealthCare Insight Services"), "http://stage.hcinsight.com/insight-university", :target => "_blank") %>
-  </div>
-  <p class="top_20_wrap">
-    <%= link_to "Subscribe", "#", :class => "login_rss"%>
-  </p>
 </div>
