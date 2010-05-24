@@ -1,6 +1,8 @@
 class ClientsController < ApplicationController
   
+  before_filter :require_client
   layout "client_sessions"
+  
   # GET /clients
   # GET /clients.xml
   def index

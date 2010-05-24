@@ -1,4 +1,7 @@
 class LocationsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /locations
   # GET /locations.xml
   def index

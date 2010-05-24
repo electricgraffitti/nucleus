@@ -1,4 +1,7 @@
 class ClaimsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /claims
   # GET /claims.xml
   def index

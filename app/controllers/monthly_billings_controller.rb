@@ -1,4 +1,7 @@
 class MonthlyBillingsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /monthly_billings
   # GET /monthly_billings.xml
   def index

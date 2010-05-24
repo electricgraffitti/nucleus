@@ -1,4 +1,7 @@
 class ProvidersController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /providers
   # GET /providers.xml
   def index

@@ -1,4 +1,7 @@
 class PatientsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /patients
   # GET /patients.xml
   def index

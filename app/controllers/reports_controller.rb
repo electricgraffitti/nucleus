@@ -1,4 +1,7 @@
 class ReportsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /reports
   # GET /reports.xml
   def index

@@ -1,4 +1,5 @@
 class ConditionsController < ApplicationController
+  before_filter :require_client
   # GET /conditions
   # GET /conditions.xml
   def index

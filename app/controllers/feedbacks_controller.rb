@@ -1,4 +1,7 @@
 class FeedbacksController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /feedbacks
   # GET /feedbacks.xml
   def index

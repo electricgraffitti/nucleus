@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /products
   # GET /products.xml
   def index

@@ -1,4 +1,7 @@
 class ProviderSpecialitiesController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /provider_specialities
   # GET /provider_specialities.xml
   def index

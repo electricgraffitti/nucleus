@@ -1,4 +1,7 @@
 class SearchTopicsController < ApplicationController
+  
+  before_filter :require_client
+  
   # GET /search_topics
   # GET /search_topics.xml
   def index

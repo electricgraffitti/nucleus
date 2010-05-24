@@ -1,4 +1,6 @@
 class DashboardController < ApplicationController
+
+  before_filter :require_client
   
   def index
     @top_providers = Provider.top_billable

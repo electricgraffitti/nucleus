@@ -1,4 +1,8 @@
 class ProcedureSubmissionsController < ApplicationController
+  
+  
+  before_filter :require_client
+  
   # GET /procedure_submissions
   # GET /procedure_submissions.xml
   def index
