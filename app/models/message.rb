@@ -1,6 +1,3 @@
-class Message < ActiveRecord::Base
-end
-
 # == Schema Information
 #
 # Table name: messages
@@ -12,3 +9,6 @@ end
 #  updated_at     :datetime
 #
 
+class Message < ActiveRecord::Base
+  
+end

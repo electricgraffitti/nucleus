@@ -27,5 +27,12 @@
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
-  
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      $('#message_attach_link').click(function() {
+        $('#message_attachment').slideToggle('slow');
+        return false;
+      });
+    });
+  </script>
 <% end %>

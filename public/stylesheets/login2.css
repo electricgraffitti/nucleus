@@ -83,6 +83,12 @@ h2.sub_title {
 	padding: 3px;
 	margin-right: 5px;
 }
+#login_wrap input[type="checkbox"] {
+  margin-right: 5px;
+}
+span.text_spacer {
+  margin: 0px 5px;
+}
 /*.login_fields_wrap input:focus {
   border: 1px solid #6AC520;
   background: #efefef;
