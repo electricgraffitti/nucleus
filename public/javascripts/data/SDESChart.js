@@ -45,7 +45,13 @@ actionChart = new Highcharts.Chart({
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
             this.x + ", "+ "$"+this.y +' Billed';
-      }
+      },
+      style: {
+        font: '12px Arial, Helvetica, sans-serif'
+      },
+      borderColor: '#555555',
+      borderWidth: 1,
+      borderRadius: 0
    },
    legend: {
      layout: 'horizontal',

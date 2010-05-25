@@ -1,5 +1,5 @@
 class ClientSessionsController < ApplicationController
-  before_filter :require_no_client, :only => [:new, :create, :login2]
+  
   before_filter :require_client, :only => :destroy
   
   def new

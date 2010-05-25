@@ -188,7 +188,11 @@ $(document).ready(function() {
     return false;
   });
   
-  profileActions.setupAccordion();
+  // Tooltip test
+  $('.tip').tipTip({
+    defaultPosition: "top"
+  });
+  
   // Table checkboxes
   $('#provider_select').click(function() {
     tableActions.selectAllCheckboxes($(this));

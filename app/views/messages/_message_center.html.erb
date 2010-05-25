@@ -3,14 +3,14 @@
   <% form_tag providers_path, :method => :get do %>
     <%= text_area_tag(:search, nil, {:cols => 90, :rows => 5, :class => "left"} )%>
     <div id="search_buttons">
-      <%= submit_tag "Update", :name => nil, :class => 'medium_btn' %>
-      <%= link_to "Clear", "", :id => "search_clear" %>
+      <%= submit_tag "Send", :name => nil, :class => 'medium_btn tip', :title => "Send Message" %>
+      <%= link_to "Clear", "", :id => "search_clear", :class => "tip", :title => "Clear Message Box" %>
     </div>
     <% end %>
     <div class="clear"></div>
     <div class="paperclip_link">
       <div class="green_paper_clip"></div>
-      <%= link_to "Attach File", "", :id => "message_attach_link" %>
+      <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip", :title => "Attach a File" %>
       <div id="message_attachment" style="display: none;">
         <%= file_field :attachment, :size => 16 %>
       </div>
@@ -27,7 +27,7 @@
       <h3 class="green">Jason C Pierson:</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       <div class="message_links">
-        <span>24 minutes ago</span> <span class="text_spacer">|</span><span class="green">Reply</span>
+        <span>24 minutes ago</span> <span class="text_spacer">|</span><span class="green"><%= link_to "Reply", "", :class => "green tip", :title => "Reply to this post" %></span>
       </div>
     </div>
     <div class="message_reply">
@@ -44,7 +44,7 @@
           <div class="gray_paper_clip"></div>
           <span class="text_spacer left">1 attachment |</span>
           <div class="attachment left">
-            <%= link_to "ahip_storyboard.pdf", "", :class => "green" %>
+            <%= link_to "ahip_storyboard.pdf", "", :class => "green tip", :title => "Download PDF" %>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
       <h3 class="green">Brian Smith:</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       <div class="message_links">
-        <span>over 1 hour ago</span> <span class="text_spacer">|</span><span class="green">Reply</span>
+        <span>over 1 hour ago</span> <span class="text_spacer">|</span><span class="green"><%= link_to "Reply", "", :class => "green tip", :title => "Reply to this post" %></span>
       </div>
     </div>
     <div class="message_reply">

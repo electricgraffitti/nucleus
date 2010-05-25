@@ -16,5 +16,9 @@
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
-  
+  <script>
+    $(document).ready(function() {
+      profileActions.setupAccordion();
+    });
+  </script>
 <% end %>

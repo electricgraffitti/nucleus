@@ -6,8 +6,8 @@
   <% form_tag providers_path, :method => :get do %>
     <%= text_field_tag(:search, "Submit your idea or search our forum", {:size => 52, :class => "left"} )%>
     <div id="search_buttons">
-      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
-      <%= link_to "Clear", "", :id => "search_clear" %>
+      <%= submit_tag "Search", :name => nil, :class => 'medium_btn tip', :title => "Send Suggestion" %>
+      <%= link_to "Clear", "", :id => "search_clear", :class => "tip", :title => "Clear feedback box" %>
     </div>
     <% end %>
     <div class="clear"></div>
@@ -15,11 +15,11 @@
 <div id="center_feedback_content_wrap">
   <div id="feedback_panels">
     <ul>
-      <li><%= link_to "Top Ideas", "#feedback_panel_1" %></li>
-      <li><%= link_to "Hot", "#feedback_panel_2" %></li>
-      <li><%= link_to "New (1)", "#feedback_panel_3" %></li>
-      <li><%= link_to "Accepted (2)", "#feedback_panel_4" %></li>
-      <li><%= link_to "Completed (7)", "#feedback_panel_5" %></li>
+      <li><%= link_to "Top Ideas", "#feedback_panel_1", :class => "tip", :title => "Top Ideas" %></li>
+      <li><%= link_to "Hot", "#feedback_panel_2", :class => "tip", :title => "Hot Topics" %></li>
+      <li><%= link_to "New (1)", "#feedback_panel_3", :class => "tip", :title => "New Ideas" %></li>
+      <li><%= link_to "Accepted (2)", "#feedback_panel_4", :class => "tip", :title => "Recently Accepted" %></li>
+      <li><%= link_to "Completed (7)", "#feedback_panel_5", :class => "tip", :title => "Recently Completed" %></li>
     </ul>
       <%= render :partial => 'feedback_panels' %>
     <%# end panels %>

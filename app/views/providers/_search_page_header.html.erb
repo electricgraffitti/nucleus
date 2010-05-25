@@ -4,22 +4,22 @@
   </h2>
   <ul class="page_nav">
     <li>
-      <%= link_to "Claim History", "#" %>
+      <%= link_to "Claim History", "#", :class => "tip", :title => "Claim History" %>
     </li>
     <li>
-      <%= link_to "Condition", provider_action_path(provider) %>
+      <%= link_to "Condition", provider_action_path(provider), :class => "tip", :title => "Provider Conditions" %>
     </li>
     <li>
-      <%= link_to "Score Card", "#" %>
+      <%= link_to "Score Card", "#", :class => "tip", :title => "Provider Score Card" %>
     </li>
     <li>
-      <%= link_to "Refresh", "#" %>
+      <%= link_to "Refresh", "#", :class => "tip", :title => "Refresh Page" %>
     </li>
     <li>
-      <%= link_to "Excel", "#" %>
+      <%= link_to "Excel", "#", :class => "tip", :title => "Export to Excel" %>
     </li>
     <li>
-      <%= link_to "Print", "#" %>
+      <%= link_to "Print", "#", :class => "tip", :title => "Print Page" %>
     </li>
   </ul>
 </div>

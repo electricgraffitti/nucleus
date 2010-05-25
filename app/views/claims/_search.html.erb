@@ -1,5 +1,5 @@
 <div id="top_search">
-  <% form_tag providers_path, :method => :get do %>
+  <% form_tag claims_path, :method => :get do %>
     <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:prompt => "Quick Search"}) %><br/>
     <div id="search_buttons">
       <%= link_to "Clear Filters", "", :id => "search_clear" %>

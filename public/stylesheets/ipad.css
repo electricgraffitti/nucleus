@@ -2,3 +2,6 @@ tr td div.table_icon, tr td a.table_icon {
   width: 18px;
   padding: 0px;
 }
+#provider_rating, #provider_rating_full {
+  height: 33px;
+}

@@ -1,4 +1,4 @@
-<div id="provider_rating_full" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_action_path %></div>
+<div id="provider_rating_full" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Action" %></div>
 <h3><span><%= provider.full_name %></span></h3>
 <div id="search_wrap">
   <form action="http://google.com/search" method="get" class="search" target="_blank">
