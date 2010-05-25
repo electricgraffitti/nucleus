@@ -2769,6 +2769,7 @@ div.overlay div.close {
 	color: #222;
 /*  text-shadow: 0 0 1px #333;*/
 	padding: 4px 8px;
+	border: 1px solid #555;
 	border: 1px solid rgba(85,85,85,1);
 	background-color: rgb(255,255,255);
 	background-color: rgba(255,255,255,1);
