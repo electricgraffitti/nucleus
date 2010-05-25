@@ -73,7 +73,8 @@ var barChart = new Highcharts.Chart({
    },
    plotOptions: {
     column: {
-      stacking: 'normal'
+      stacking: 'normal',
+      pointWidth: 50
     }
    },
    legend: {
