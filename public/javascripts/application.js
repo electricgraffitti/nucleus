@@ -171,6 +171,11 @@ var baseActions = {
   setInputFilter: function(el) {
    initVal = el.val();
    el.val(" ");
+  },
+  
+  setActiveMessageGroup: function(el) {
+    $('#message_categories li').removeClass('active');
+    el.addClass('active');
   }
   
 }
