@@ -39,6 +39,10 @@ body {
 #provider_action {
   min-width: 1024px;
 }
+
+#schedule_dates input[type="radio"]#schedule_date_no_end {
+  margin-left: 20px;
+}
 /*********************************************/
 /*******************HEADER********************/
 
