@@ -6,7 +6,7 @@ html, body {
   height: 100%;
 	width: 100%;
 	float:left;
-	background: #222;
+	background: #e7e7e7;
 }
 #wrapper {
   min-height: 100%;
@@ -540,7 +540,7 @@ div.scaffold_pane label {
 .grey_panel {
   background: #e7e7e7;
 }
-.panel_set, .panel_set_2, .panel_set_3, .panel_set_4, .panel_set_5 {
+.panel_set, .panel_set_2, .panel_set_3, .panel_set_4, .panel_set_5, .panel_set_6, .panel_set_7, .panel_set_8 {
   position: relative;
   float: left;
   max-width: 400px;
@@ -555,7 +555,19 @@ div.scaffold_pane label {
 .panel_set_4 {
   max-width: 380px;
 }
-.panel_set_4 .panel_wrap, .panel_set_5 .panel_wrap {
+.panel_set_5 {
+  max-width: 655px;
+}
+.panel_set_6 {
+  width: 240px;
+}
+.panel_set_7 {
+  max-width: 534px;
+}
+.panel_set_8 {
+  width: 240px;
+}
+.panel_set_4 .panel_wrap, .panel_set_5 .panel_wrap, .panel_set_6 .panel_wrap, .panel_set_7 .panel_wrap, .panel_set_8 .panel_wrap {
 	position: relative;
 	max-width: 380px;
 	padding-top: 22px;
@@ -563,10 +575,16 @@ div.scaffold_pane label {
 .panel_set_5 .panel_wrap {
 	max-width: 655px;
 }
-.panel_set_5 {
-  max-width: 655px;
+.panel_set_6 .panel_wrap {
+	max-width: 230px;
 }
-.basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .basic_panel_5, .combo_panel_2, .combo_panel_3, .combo_panel_4, .combo_panel_5 { /** A Combo Panel has sub_panels **/
+.panel_set_7 .panel_wrap {
+	max-width: 522px;
+}
+.panel_set_8 .panel_wrap {
+	max-width: 218px;
+}
+.basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .basic_panel_5, .basic_panel_6, .basic_panel_7, .basic_panel_8, .combo_panel_2, .combo_panel_3, .combo_panel_4, .combo_panel_5 { /** A Combo Panel has sub_panels **/
   position: relative;
   width: 363px;
   margin: 0px 0px 5px 20px;
@@ -597,11 +615,23 @@ div.scaffold_pane label {
   margin-left: 10px;
   width: 615px;
 }
+.basic_panel_6, .combo_panel_6 {
+  margin-left: 10px;
+  width: 208px;
+}
+.basic_panel_7, .combo_panel_7 {
+  margin-left: 10px;
+  width: 502px;
+}
+.basic_panel_8, .combo_panel_8 {
+  margin-left: 10px;
+  width: 208px;
+}
 .combo_panel {
   width: 383px;
   padding: 0px;
 }
-.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4,.basic_panel_5 h3, .basic_panel_5 h4, .combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
+.basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4,.basic_panel_5 h3, .basic_panel_5 h4, .basic_panel_6 h3, .basic_panel_6 h4, .basic_panel_7 h3, .basic_panel_7 h4, .basic_panel_8 h3, .basic_panel_8 h4,.combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
   font-size: 14px;
   color: #555;
   padding: 5px 5px 5px 0px;
@@ -613,42 +643,48 @@ div.scaffold_pane label {
 .basic_panel h3 span, .basic_panel h4 span, .combo_panel h3 span, .combo_panel h4 span {
   color: #333;
 }
-.panel_set_4 h3.report, .panel_set_5 h3.report  {
+.panel_set_4 h3.report, .panel_set_5 h3.report, .panel_set_6 h3.report, .panel_set_7 h3.report, .panel_set_8 h3.report  {
 	position: absolute;
 	top: -1px;
 	left: -1px;
 	color: #fff;
 	height: 17px;
-	background:none repeat scroll 0 0 #585958;
-	border-bottom:2px solid #6AC520;
-	border-top:1px solid #818181;
+	background:none repeat scroll 0 0 #6AC520;
 	color:#fff;
-	font-size:12px;
+	font-size:13px;
 	font-weight:bold;
 	padding-left:20px;
 	padding-top:6px;
-	text-shadow:0 1px 1px #333333;
-}
-.panel_set_4 h3.report {
-	width: 332px;
+	text-shadow: 0px 1px 1px #59a61b;
 }
 .panel_set_5 h3.report {
 	width: 612px;
+}
+.panel_set_6 h3.report {
+	width: 205px;
+}
+.panel_set_7 h3.report {
+	width: 499px;
+}
+.panel_set_8 h3.report {
+	width: 205px;
 }
 .report_panel_wrap {
 	margin-top:20px;
 	padding-left:9px;
 	padding-top:10px;
-	width: 326px;
 	float:left;
 }
 .basic_panel_5 .report_panel_wrap {
 	width: 600px;
 }
-#report_schedule, #selection_panel {
-  height: 284px;
+#report_schedule, #selection_panel, #report_parameters {
+  height: 265px;
 }
-#report_output_panel, #report_parameters {
+.schedule_time {
+  margin-top: 9px;
+}
+#report_output_panel {
   height: 115px;
 }
 #selection_panel p, #report_output_panel p {
@@ -660,12 +696,13 @@ div.scaffold_pane label {
 	float:left;
 	margin:10px 0;
 	position:relative;
-	width:595px;
+	width:480px;
+	background: #f0f2f0;
 }
 #report_schedule_panel ul.heading {
 	float:left;
 	padding:10px 10px 0px;
-	width:575px;
+	width:461px;
 	border-bottom: 1px solid #c0c0c0;
 }
 #report_schedule_panel input[type="text"] {
@@ -680,12 +717,15 @@ div.scaffold_pane label {
 	clear: none;
 }
 #schedule_dates {
-  padding: 20px;
+  padding: 10px 0px;
 }
-#schedule_dates li {
+#schedule_dates .schedule_form_block {
   width: 225px;
   text-align: right;
   margin-bottom: 1px;
+}
+.schedule_form_block.email_block {
+  margin-left: 30px;
 }
 #schedule_dates span {
   text-align: right;
@@ -693,6 +733,7 @@ div.scaffold_pane label {
 #schedule_dates input[type="radio"] {
   float: right;
   margin-top: 1px;
+  margin-right: 6px;
 }
 #schedule_dates input[type=text] {
   float: right;
@@ -703,7 +744,6 @@ div.scaffold_pane label {
 }
 #report_parameters_dates {
   padding-top: 10px;
-  border-right: 1px solid #c0c0c0;
 }
 #report_parameters_dates input[type="text"] {
   width: 60px;
@@ -711,7 +751,7 @@ div.scaffold_pane label {
   margin-left: 5px;
 }
 #report_minimums p {
-  margin: 10px 13px 0px;
+  margin: 10px 0px 0px;
   float: left;
 }
 #report_minimums p label {
@@ -744,16 +784,24 @@ span#occurence {
   margin-right: 31px;
 }
 #report_output_panel {
-  border: 1px solid #333;
- /* background: #6AC520;*/
-  background: #dedede;
+  width: 470px;
+  float: right;
   padding: 12px 0px 0px 20px;
 }
-#report_buttons {
+#report_output_panel .report_output_item {
   float: left;
-  margin-left: 20px;
+  width: 190px;
 }
-#report_buttons input[type="submit"] {
+#report_output_panel .report_output_item.checkbox {
+  width: 130px;
+  padding-top: 20px;
+}
+#report_output_panel .report_buttons {
+  width: 150px;
+  float: left;
+  padding-top: 17px;
+}
+#report_output_panel .report_buttons input[type="submit"] {
   margin-right: 20px;
 }
 .sub_panel {
@@ -1087,7 +1135,7 @@ span#occurence {
 }
 #sub_search_params input[type="text"], .report_panel_wrap input[type="text"] {
   margin: 5px 0px 10px;
-  width: 160px;
+  width: 177px;
   background: #fff;
   border: 1px solid #c0c0c0;
   padding: 4px;
@@ -1095,16 +1143,16 @@ span#occurence {
 	clear: left;
 }
 .report_panel_wrap ul li {
-	margin-right: 10px;
+	margin-right: 8px;
 }
 .report_panel_wrap ul li input[type="radio"] {
-	margin-right: 5px;
+	margin-right: 3px;
 }
 #sub_search_params input[type="text"]#trigger_start_date, #sub_search_params input[type="text"]#trigger_end_date {
   width: 139px;
 }
 #report_description {
-	width: 300px;
+	width: 180px;
 }
 input[type="text"]#claim_sequence_wide {
   width: 112px;

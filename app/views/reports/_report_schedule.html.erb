@@ -1,7 +1,7 @@
-<div id="report_schedule" class="basic_panel_5">
-  <h3 class="report grey_header">Scheduling</h3>
+<div id="report_schedule" class="basic_panel_7">
+  <h3 class="report">2. Scheduling</h3>
   <div class="report_panel_wrap">
-    <ul class="left">
+    <ul class="  left">
       <li class="left"><%= radio_button_tag 'time_frame', 'Generate Now', true %> Generate Now</li>
       <li class="left"><%= radio_button_tag 'time_frame', 'Schedule' %> Schedule</li>
     </ul>
@@ -14,36 +14,37 @@
         <li class="left"><%= radio_button_tag 'report_frequency', 'Quarterly' %> Quarterly</li>
         <li class="left form_combo"><%= radio_button_tag 'report_frequency', 'xdays' %> <span class="left block">Every</span> <%= text_field_tag :day_count, nil, :id => "report_frequency_day_count" %> <span class="left block">Days</span></li>
       </ul>
-      <ul id="schedule_dates" class="left">
-        <li class="left">
+      <div id="schedule_dates" class="left">
+        <div class="schedule_form_block left">
           <span class="right block date_field"><%= text_field_tag :schedule_start_date, nil, {:id => "schedule_start_date", :size => 15} %></span>
           <span class="right block">Start Date</span>
-        </li>
-        <li class="left">
+        </div>
+        <div class="schedule_form_block left">
           <span class="right block date_field"><%= text_field_tag :schedule_end_date, nil, {:id => "schedule_end_date", :size => 15} %></span>
           <span class="right block">End Date</span>
           <%= radio_button_tag 'schedule_date', 'end' %> 
-        </li>
-        <li class="left">
+        </div>
+        <div class="schedule_form_block left">
           <%= text_field_tag :schedule_time, nil, {:id => "schedule_time", :size => 15} %>
           <span class="right block">Time</span>
-        </li>
-        <li class="left form_combo">
+        </div>
+        <div class="schedule_form_block left form_combo">
           <span id="occurence" class="right block">Occurences</span>
           <%= text_field_tag :schdule_end_date, nil, :id => "report_schedule_end_day_count" %>
           <span class="right block">End After</span>
           <%= radio_button_tag 'schedule_date', 'end_days' %> 
-        </li>
-        <li class="left"></li>
-        <li class="left">
+        </div>
+        <div class="schedule_form_block left">
+        </div>
+        <div class="schedule_form_block left">
           <%= radio_button_tag 'schedule_date', 'no_end' %>
           <span class="left block">No End Date</span>
-        </li>
-        <li class="left">
+        </div>
+        <div class="schedule_form_block email_block left">
           <%= label_tag "Email*", nil, :class => "left clear"%>
           <%= text_field_tag :report_email, nil, :id => "report_email", :class => "left clear"%>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
