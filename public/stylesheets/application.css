@@ -763,7 +763,7 @@ div.scaffold_pane label {
   margin-left: 10px;
 }
 #report_schedule_panel #report_frequency_day_count, #report_schedule_panel #report_schedule_end_day_count {
-	width: 20px;
+	width: 21px;
 	margin:-3px 10px 7px 10px;
 	clear: none;
 }
@@ -1850,8 +1850,16 @@ h2.content_header {
   padding: 20px;
   margin: 20px;
 }
+#message_search form {
+  width: 687px;
+  height: 110px;
+  position: relative;
+}
 #message_search form input[type="text"] {
   width: 525px;
+}
+#message_search form textarea {
+  height: 87px;
 }
 #message_search h2 {
   font-size: 18px;
@@ -1862,7 +1870,7 @@ h2.content_header {
   float: left;
 }
 #message_search #search_buttons {
-  margin-top: 75px;
+  margin-top: 80px;
   margin-left:0px;
   text-align:right;
   width:125px;
@@ -2802,7 +2810,7 @@ img.ui-datepicker-trigger {
   width: 20px;
   height: 20px;
   text-indent: -3000em;
-  margin: 7px 0px 0px 2px;
+  margin: 7px 0px 0px 3px;
 }
 #search_wrap {
   width: 350px;
@@ -3076,4 +3084,18 @@ div.overlay div.close {
 	#tiptip_holder.tip_top #tiptip_arrow_inner { 
 		border-top-color: rgba(85,85,85,1);
 	}
+	#schedule_dates input[type="radio"] {
+    float: right;
+    margin-top: 1px;
+    margin-right: 4px;
+  }
+  #schedule_dates input[type=text] {
+    float: right;
+    margin: -3px 0px 7px 14px;
+  }
+  #report_schedule_panel #report_frequency_day_count, #report_schedule_panel #report_schedule_end_day_count {
+  	width: 20px;
+  	margin:-3px 10px 7px 11px;
+  	clear: none;
+  }
 }

@@ -1,7 +1,7 @@
 <div id="message_search">
   <h2>Share with My Feed</h2>
   <% form_tag providers_path, :method => :get do %>
-    <%= text_area_tag(:search, nil, {:cols => 90, :rows => 5, :class => "left"} )%>
+    <%= text_area_tag(:search, nil, {:cols => 87, :rows => 5, :class => "left"} )%>
     <div id="search_buttons">
       <%= submit_tag "Send", :name => nil, :class => 'medium_btn tip', :title => "Send Message" %>
       <%= link_to "Clear", "", :id => "search_clear", :class => "tip", :title => "Clear Message Box" %>
