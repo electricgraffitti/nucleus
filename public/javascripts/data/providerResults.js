@@ -64,7 +64,6 @@ var scatterChart = new Highcharts.Chart({
       style: {
         font: '12px Arial, Helvetica, sans-serif'
       },
-      borderColor: '#555555',
       borderWidth: 1,
       borderRadius: 0
    },

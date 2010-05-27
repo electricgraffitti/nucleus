@@ -67,7 +67,7 @@ var lineChart = new Highcharts.Chart({
      },
      plotOptions: {
         areaspline: {
-           fillOpacity: 0.2
+           fillOpacity: 1
         }
      },
     plotLines: [{
@@ -85,7 +85,6 @@ var lineChart = new Highcharts.Chart({
         color: "#555555",
         font: "10px Arial, Helvetica, sans-serif"
       },
-      borderColor: "#555555",
       borderWidth: 1,
       borderRadius: 0
    },

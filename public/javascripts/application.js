@@ -174,7 +174,7 @@ var baseActions = {
   },
   
   setActiveMessageGroup: function(el) {
-    $('#message_categories li').removeClass('active');
+    el.siblings().removeClass('active');
     el.addClass('active');
   },
   

@@ -25,18 +25,26 @@
       <p><span class="big_number">98</span> votes left!<p>
     </div>
     <h3 class="green_header">What Happens if time runs out?</h3>
-
-    <h3 class="lt_grey_header feedback_rss">Nucleus <b>activity feed</b></h3>
-    <h3 class="lt_grey_header feedback_contact"><b>Contact</b> Nucleus</h3>
-    
-    <h3 class="green_header">Categories</h3>
-    <h3 class="lt_grey_header small_bottom_spacer">All Ideas</h3>
-    <h3 class="lt_grey_header small_bottom_spacer">User Inteface</h3>
-    <h3 class="lt_grey_header small_bottom_spacer">Report Features</h3>
-    <h3 class="lt_grey_header small_bottom_spacer">Bug Reports</h3>
-    <div class="sidebar_panel">
-      
-    </div>
+    <ul id="feedback_categories" class="side_bar_list clear">
+      <li class="basic_header feedback_category active">
+        Nucleus Activity Feed
+      </li>
+      <li class="basic_header feedback_category">
+        Contact Nucleus
+      </li>
+      <li class="basic_header feedback_category">
+       All Ideas
+      </li>
+      <li class="basic_header feedback_category">
+        User Interface
+      </li>
+      <li class="basic_header feedback_category">
+        Report Features
+      </li>
+      <li class="basic_header feedback_category">
+        Bug Reports
+      </li>
+    </ul>
   </div>
   <div class="clear"></div>
 </div>
@@ -47,6 +55,10 @@
      
      $("#search").click( function() {
        baseActions.setInputFilter($(this));
+     });
+     // Sets Highlight for Active Message Category
+     $('li.feedback_category').click(function() {
+       baseActions.setActiveMessageGroup($(this));
      });
      
     });

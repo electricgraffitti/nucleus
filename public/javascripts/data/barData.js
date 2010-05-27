@@ -67,7 +67,6 @@ var barChart = new Highcharts.Chart({
       style: {
         font: '12px Arial, Helvetica, sans-serif'
       },
-      borderColor: '#555555',
       borderRadius: 0,
       borderWidth: 1
    },
@@ -95,12 +94,15 @@ var barChart = new Highcharts.Chart({
    },
    series: [{
       name: 'ASC',
-      data: [245, 230, 210, 225, 205, 240]
+      data: [245, 230, 210, 225, 205, 240],
+      color: "#78496a"
       }, {
       name: 'Hosptial',
-      data: [200, 195, 192, 177, 142, 174]
+      data: [200, 195, 192, 177, 142, 174],
+      color: '#e37f1c'
       }, {
       name: 'Prof',
-      data: [165, 145, 132, 112, 102, 132]
+      data: [165, 145, 132, 112, 102, 132],
+      color: '#00467f'
    }]
 });

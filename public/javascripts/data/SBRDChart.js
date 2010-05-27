@@ -33,8 +33,9 @@ actionChart = new Highcharts.Chart({
         'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
      labels: {
        rotation: 90,
+       y: 20,
        style: {
-         bottom: "20px"
+         font: "10px Arial, Helvetica, sans-serif"
        }
      }
    },
@@ -52,7 +53,6 @@ actionChart = new Highcharts.Chart({
       style: {
         font: '12px Arial, Helvetica, sans-serif'
       },
-      borderColor: '#555555',
       borderWidth: 1,
       borderRadius: 0
    },

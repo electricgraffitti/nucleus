@@ -1186,7 +1186,7 @@ span#occurence {
 }
 #sub_search_params input[type="text"], .report_panel_wrap input[type="text"] {
   margin: 5px 0px 10px;
-  width: 177px;
+  width: 157px;
   background: #fff;
   border: 1px solid #c0c0c0;
   padding: 4px;
@@ -1298,12 +1298,13 @@ span.field_seperator {
   padding: 5px 10px;
 }
 #provider_stats .stat_group .stat_value {
-  position: relative;
-  text-align: left;
-  color: #343434;
-  font-size: 16px;
-  background: #d6d6d6;
-  width: 47px;
+  background:none repeat scroll 0 0 #D6D6D6;
+  color:#343434;
+  font-size:16px;
+  font-weight:bold;
+  position:relative;
+  text-align:center;
+  width:47px;
 }
 #provider_stats .stat_group .stat_range {
   position: relative;
@@ -2141,6 +2142,29 @@ ul.feedback_west_list li {
 #center_feedback_content_wrap h5 {
   font-size: 12px;
 }
+.vote_button {
+  position: relative;
+  float: left;
+  margin-top: 3px;
+  width: 38px;
+  height: 21px;
+  background: url('../images/inner_pages/tutorial_icons.jpg') left -54px no-repeat;
+}
+.vote_button:hover {
+  background: url('../images/inner_pages/tutorial_icons.jpg') -38px -54px no-repeat;
+}
+.vote_button a {
+  display: block;
+  width: 38px;
+  height: 17px;
+  padding-top: 3px;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+}
+.vote_button a:hover {
+  text-decoration: none;
+}
 .tutorial_icon {
   float: left;
   width: 38px;
@@ -2246,6 +2270,24 @@ ul.feedback_west_list li {
 .icon_single_line {
   display:block;
   margin-top:10px;
+}
+
+#feedback_categories {
+  margin-top: 50px;
+}
+.feedback_category {
+  padding-left: 20px;
+  position: relative;
+}
+.feedback_category.active {
+  background: #6ac520;
+  padding-left: 20px;
+  padding-top: 5px;
+  color: #fff;
+  text-shadow: 0px 1px 1px #59a61b;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
 }
 .sidebar_panel a.sidebar_icon_link {
   position: relative;
