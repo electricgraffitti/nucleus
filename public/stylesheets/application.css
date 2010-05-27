@@ -327,6 +327,7 @@ ul.secondary_nav_ul {
   margin-left: 30px;
 }
 ul.nav_ul li {
+  position: relative;
   width: 63px;
   height: 15px;
 	padding: 7px 0px;
@@ -341,11 +342,16 @@ ul.nav_ul li:hover {
 	background: url('../images/header/main_nav_bg.png') 0px -29px repeat-x;
 }
 ul.nav_ul li a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: 29px;
-	color: #c9cdca;
+  color:#C9CDCA;
+  text-shadow: 0px 1px 0px #222;
+  display:block;
+  height:20px;
+  left:0;
+  padding-top:7px;
+  position:absolute;
+  text-decoration:none;
+  top:0;
+  width:100%;
 }
 ul.nav_ul li a:hover {
 	color: #efefef;
@@ -410,6 +416,51 @@ ul.icon_nav li#icon_nav_7 {
 }
 ul.icon_nav li#icon_nav_7:hover {
 	background: url('../images/header/icon_nav.png') -180px -29px no-repeat;
+}
+/*****Sub Nav*******/
+ul.topnav li span { /*--Drop down trigger styles--*/
+  display:block;
+  height:30px;
+  left:0;
+  position:absolute;
+  text-decoration:none;
+  top:0;
+  width:100%;
+}
+ul.topnav li ul.subnav {  
+   list-style: none;  
+   position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/  
+   left: 0; top: 30px;  
+   background: #333;  
+   margin: 0; padding: 0;  
+   display: none;  
+   float: left;  
+   width: 170px;  
+   border: 1px solid #111;
+   z-index: 300;
+}
+ul.topnav li ul.subnav li {  
+    margin: 0; padding: 0;  
+    border-top: 1px solid #252525; /*--Create bevel effect--*/  
+    border-bottom: 1px solid #444; /*--Create bevel effect--*/  
+    clear: both;  
+    width: 170px;
+    height: 30px;
+}  
+html ul.topnav li ul.subnav li a {  
+    width: 160px;  
+    background: #333 no-repeat 10px center;  
+    padding-left: 10px;
+    text-align: left;
+    height: 24px;
+    font-weight: bold;
+}  
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+    background: #6ac520;
+    color: #fff;
+    text-shadow: 0px 1px 1px #59a61b;
+    font-size: 12px;
+    font-weight: bold;
 }
 /*********************************************/
 /*****************MAIN CONTENT****************/

@@ -1,6 +1,11 @@
-<ul class="nav_ul">
+<ul class="nav_ul topnav">
   <li>
-    <b><%= link_to "Claim", claims_path, :class => "tip", :title => "Claims Summary" %></b>
+    <b><%= link_to "Claim", '', :class => "tip", :title => "Claims Summary" %></b>
+    <ul class="subnav">
+      <li><%= link_to "Claims Search", claims_path %></li>
+      <li><%= link_to "Claims Summary", "" %></li>
+      <li><%= link_to "Claims Action", "" %></li>
+    </ul>
   </li>
   <li>
     <b><%= link_to "Provider", provider_search_path, :class => "tip", :title => "Provider Search" %></b>
