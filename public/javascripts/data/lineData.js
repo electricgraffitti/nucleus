@@ -107,10 +107,11 @@ var lineChart = new Highcharts.Chart({
    
    series: [{
       name: 'Identified',
+      color: '#e37f1c',
       data: [[Date.UTC(2010, 0, 1),359687],[Date.UTC(2010, 1, 1), 458976],[Date.UTC(2010, 2, 1), 586741],[Date.UTC(2010, 3, 1), 684235],[Date.UTC(2010, 4, 1), 485742],[Date.UTC(2010, 5, 1), 752635]]
    }, {
       name: 'Accepted',
       data: [[Date.UTC(2010, 0, 1),287749],[Date.UTC(2010, 1, 1), 348821],[Date.UTC(2010, 2, 1), 310972],[Date.UTC(2010, 3, 1), 629496],[Date.UTC(2010, 4, 1), 369163],[Date.UTC(2010, 5, 1), 617160]],
-			color: '#e5b53a'
+			color: '#00467f'
    }]
 });
