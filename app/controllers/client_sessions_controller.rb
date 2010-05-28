@@ -6,7 +6,7 @@ class ClientSessionsController < ApplicationController
     if current_client_session
       redirect_to quick_launch_path
     else
-      @client_session = ClientSession.new
+      redirect_to login_path
     end
   end
   
