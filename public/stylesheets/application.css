@@ -2459,22 +2459,22 @@ tr.odd td div.table_toggle_icon {
 }
 /* Active */
 tr.active td div.table_rating_dot.red_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -40px 0px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -60px 0px;
 }
 tr.active td div.table_rating_dot.yellow_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -20px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -60px -20px;
 }
 tr.active td div.table_rating_dot.green_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -40px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -60px -40px;
 }
 tr.active td div.table_note_icon, tr.active td a.table_note_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -60px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -60px -60px no-repeat;
 }
 tr.active td div.table_mag_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -80px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -60px -80px no-repeat;
 }
 tr.active td div.table_toggle_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -40px -100px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -60px -100px no-repeat;
 }
 tr td a.table_icon_link {
   display: block;
@@ -2494,9 +2494,9 @@ tr.even {
   background: #fff;
 }
 tr.active {
-/*  background: #d2edbc;*/
-	background: #6ac520;
-	color: #fff;
+  background: #d2edbc;
+/*  background: #6ac520;*/
+	color: #222;
 }
 /******Provider Search********/
 .provider_search_score {
