@@ -84,7 +84,6 @@ var tableActions = {
 	  $toggle = $('.table_toggle_icon');
     $toggle.click(function() {
       tableActions.showSubContent($(this));
-      $(this).preventDefault();
     });
 	},
 	
@@ -109,7 +108,7 @@ var tableActions = {
   	});
   },
   
-  setDefaults: function(attribute){
+  setDefaultTableActions: function(attribute){
     // Hide the table sub content(toggle)
     tableActions.setTableToggles();
     tableActions.setTableCheckboxes();
@@ -290,7 +289,10 @@ var baseActions = {
 $(document).ready(function() {
   
   baseActions.setDefaults();
-  tableActions.setDefaults();
+  tableActions.setDefaultTableActions();
+  
+  $('#provider_search tbody tr:first').click();
+  $('#provider_action_table tbody tr:first').click();
   
   // test for js success
   console.log("js success");

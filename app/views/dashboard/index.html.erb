@@ -1,18 +1,17 @@
 <%= render :partial => 'dashboard/dashboard_header' %>
 <div id="panel_layout" class="clear">
   <div id="dashboard">
-  <%#= link_to '<div id="top_left_chart" class="graph_box"></div>', provider_search_path %>
-  <div id="top_left_dashboard" class="graph_box">
-    <h2 class="main_header">Top Provider Alert</h2>
-    <% @top_providers.each do |p| %>
-    <div class="basic_panel">
-      <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
+    <div id="top_left_dashboard" class="graph_box">
+      <h2 class="main_header">Top Provider Alert</h2>
+      <% @top_providers.each do |p| %>
+      <div class="basic_panel">
+        <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
+      </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-  <div id="top_right_chart" class="graph_box"></div>
-  <div id="bottom_left_chart" class="graph_box"></div>
-  <div id="bottom_right_chart" class="graph_box"></div>
+    <div id="top_right_chart" class="graph_box"></div>
+    <div id="bottom_left_chart" class="graph_box"></div>
+    <div id="bottom_right_chart" class="graph_box"></div>
   </div>
   <div class="clear"></div>
 </div>

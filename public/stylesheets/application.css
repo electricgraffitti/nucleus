@@ -81,12 +81,16 @@ html, body {
   margin-bottom: 5px;
 }
 a {
-  color: #555;
+  /*color: #555;*/
+  color: #2070b5;
   text-decoration: none;
 }
 a:hover {
   color: #2070b5;
   text-decoration: underline;
+}
+a:visited {
+  color: #333;
 }
 span.text_spacer {
   margin: 0px 5px;
@@ -113,6 +117,9 @@ p {
 }
 .top_10_wrap {
   margin: 10px 0px;
+}
+.top_15_wrap {
+  margin: 15px 0px;
 }
 .full_wrap {
   margin: 10px 10px;
@@ -980,8 +987,7 @@ span#occurence {
   background: #d8d8d8;
 }
 .quick_launch_wrap {
- padding: 30px 0px 30px 100px;
- float: left;
+ margin: 30px auto;
  width:823px;
 }
 #quick_launch_top {
@@ -1059,6 +1065,7 @@ span#occurence {
   width: 994px;
   margin: 15px;
   float:left;
+  text-align: center;
 }
 .graph_box {
   position: relative;
@@ -1494,24 +1501,23 @@ div.provider_location_box.even {
   background: #F0F2F0;
 }
 .suspect_location_notice {
-  position: relative;
-  float: left;
-  border: 1px solid red;
-  width: 469px;
-  height: 20px;
-  background: #990000;
-  padding: 3px 10px;
-  color: #fff;
+  background:none repeat scroll 0 0 #990000;
+  color:#FFFFFF;
+  height:20px;
+  padding:0 10px;
+  top:0;
+  width:469px;
 }
 ul.location_listing ul li {
   float:left;
-  font-size:10px;
+/*  font-size:11px;*/
   padding:1px 1px 0;
 }
 ul.location_listing div.map_icon {
   background:url("../images/inner_pages/map_pins.png") no-repeat scroll left top transparent;
   height:43px;
   margin-right:5px;
+  margin-top:10px;
   padding:0 2px;
   position:relative;
   text-indent:-3000em;
@@ -2388,13 +2394,19 @@ tfoot {
   width: 100%;
   height: 21px;
 }
-table.expansion_table thead tr th, table.expansion_table tfoot {
+table.expansion_table thead tr th, table.expansion_table tfoot, #accordion table thead tr th {
   height: 12px;
-  background: #d6d6d6;
+  background: #f0f2f0;
   color: #343434;
   border-right: 1px solid #c9caca;
   padding: 4px 5px 5px;
   text-shadow: 0px 1px 0px #fff;
+}
+#accordion table thead tr th {
+  border-top: 1px solid #c0c0c0;
+}
+#accordion table tbody tr.odd {
+  background: #f8f8f8;
 }
 table.expansion_table tbody tr td {
   vertical-align: top;
@@ -2488,7 +2500,7 @@ tr td a.note_trigger {
 }
 /* end */
 tr.odd {
-  background: #f0f2f0;
+  background: #d6d6d6;
 }
 tr.even {
   background: #fff;
