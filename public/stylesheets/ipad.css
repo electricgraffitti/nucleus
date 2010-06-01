@@ -1,7 +1,9 @@
 a {
   -webkit-tap-highlight-color: #333;
 }
-
+select#report_report_selection {
+  padding: 3px 10px;
+}
 
 #hd, #bd, #ft {
   width: 1010px;

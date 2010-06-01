@@ -2806,6 +2806,7 @@ input[type="text"]:focus {
 }
 select {
   height: 21px;
+  display: block;
 }
 li.radio_wrap {
   margin-right: 20px;
