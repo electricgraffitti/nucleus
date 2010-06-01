@@ -8,6 +8,7 @@ class DashboardController < ApplicationController
   end
   
   def quick_launch
+    @top_providers = Provider.top_billable
     render :layout => "application"
   end
   

@@ -1,37 +1,52 @@
 <%= render :partial => 'dashboard/quick_launch_header' %>
-<div id="panel_layout" class="clear">
-  <div id="dashboard" >
-  <div class="quick_launch_wrap">
-    <div id="quick_launch_top">  
-      <div class="quick_launch_box box1">
-        <%= link_to "Dashboard", dashboard_path, :class => "dash1 tip", :title => "Nucleus Dashboard" %>
+<div id="panel_layout" class="message_panels clear">
+  <div class="panel ui-layout-main">
+    <div class="quick_launch_wrap">
+      <div id="quick_launch_top">  
+        <div class="quick_launch_box box1">
+          <%= link_to "Dashboard", dashboard_path, :class => "dash1 tip", :title => "Nucleus Dashboard" %>
+        </div>
+        <div class="quick_launch_box box2">
+          <%= link_to "Reports", reports_path, :class => "dash2 tip", :title => "Nucleus Reports" %>
+        </div>
+        <div class="quick_launch_box box3">
+          <%= link_to "Search", provider_search_path, :class => "dash3 tip", :title => "Nucleus Provider Search" %>
+        </div>
+        <div class="quick_launch_box box4">
+          <%= link_to "Help", help_path, :class => "dash4 tip", :title => "Nucleus Support Center" %>
+        </div>
       </div>
-      <div class="quick_launch_box box2">
-        <%= link_to "Reports", reports_path, :class => "dash2 tip", :title => "Nucleus Reports" %>
+      <div id="quick_launch_bottom">  
+        <div class="quick_launch_box box5">
+          <%= link_to "Messages", messages_path, :class => "dash5 tip", :title => "Nucleus Message Center" %>
+        </div>
+        <div class="quick_launch_box box6">
+          <%= link_to "Feedback", client_feedback_path, :class => "dash6 tip", :title => "Nucleus Feedback" %>
+        </div>
+        <div class="quick_launch_box box7">
+          <%= link_to "Settings", client_path(current_client), :class => "dash7 tip", :title => "Nucleus Client Settings" %>
+        </div>
+        <div class="quick_launch_box box8">
+          <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8 tip", :title => "Insight University" %>
+        </div>
       </div>
-      <div class="quick_launch_box box3">
-        <%= link_to "Search", provider_search_path, :class => "dash3 tip", :title => "Nucleus Provider Search" %>
-      </div>
-      <div class="quick_launch_box box4">
-        <%= link_to "Help", help_path, :class => "dash4 tip", :title => "Nucleus Support Center" %>
-      </div>
+    <div class="clear"></div>
     </div>
-    <div id="quick_launch_bottom">  
-      <div class="quick_launch_box box5">
-        <%= link_to "Messages", messages_path, :class => "dash5 tip", :title => "Nucleus Message Center" %>
-      </div>
-      <div class="quick_launch_box box6">
-        <%= link_to "Feedback", client_feedback_path, :class => "dash6 tip", :title => "Nucleus Feedback" %>
-      </div>
-      <div class="quick_launch_box box7">
-        <%= link_to "Settings", client_path(current_client), :class => "dash7 tip", :title => "Nucleus Client Settings" %>
-      </div>
-      <div class="quick_launch_box box8">
-        <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8 tip", :title => "Insight University" %>
-      </div>
-    </div>
-  <div class="clear"></div>
-  </div>
   </div>
   <div class="clear"></div>
 </div>
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      // Toggles the file attachment
+      $('#message_attach_link').click(function() {
+        $('#message_attachment').slideToggle('slow');
+        return false;
+      });
+      // Sets Highlight for Active Message Category
+      $('li.message_category').click(function() {
+        baseActions.setActiveMessageGroup($(this));
+      });
+    });
+  </script>
+<% end %>

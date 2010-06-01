@@ -1713,6 +1713,10 @@ ul.help_west_list li {
   width: 783px;
   border-right: 1px solid #c0c0c0;
 }
+#panel_layout.message_panels .ui-layout-main {
+  width: 1024px;
+  text-align: center;
+}
 #user_info {
   color:#333333;
   position:relative;
@@ -2452,22 +2456,22 @@ tr td div.table_toggle_icon {
 }
 /* Odd */
 tr.odd td div.table_rating_dot.red_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px 0px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -80px 0px;
 }
 tr.odd td div.table_rating_dot.yellow_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -20px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -80px -20px;
 }
 tr.odd td div.table_rating_dot.green_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -40px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -80px -40px;
 }
 tr.odd td div.table_note_icon, tr.odd td a.table_note_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -60px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -80px -60px no-repeat;
 }
 tr.odd td div.table_mag_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -80px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -80px -80px no-repeat;
 }
 tr.odd td div.table_toggle_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -100px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -80px -100px no-repeat;
 }
 /* Active */
 tr.active td div.table_rating_dot.red_dot {
