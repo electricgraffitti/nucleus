@@ -649,6 +649,8 @@ div.scaffold_pane label {
   padding: 6px 10px;
   float: left;
   border: 1px solid #c0c0c0;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EAEAEA));
+  background-image: -moz-linear-gradient(19% 75% 90deg,#EAEAEA, #ffffff);
 }
 .full_panel {
   position: relative;
@@ -871,6 +873,7 @@ span#occurence {
 }
 .sub_panel.last {
   border-bottom: none;
+  padding-top:8px;
 }
 .provider_info, .client_info {
   height: 175px;
@@ -1608,9 +1611,16 @@ ul.help_west_list li {
 #center_help_content_wrap h4 {
   font-size: 14px;
   padding: 20px 20px 0px;
+  float: left;
 }
 #center_help_content_wrap h5 {
   font-size: 12px;
+  float:left;
+  width:400px;
+}
+.help_list_item p {
+  width: 400px;
+  float: left;
 }
 .tutorial_icon {
   float: left;
@@ -1636,6 +1646,7 @@ ul.help_west_list li {
   padding: 20px 0px;
   width: 450px;
   border-bottom: 1px solid #c0c0c0;
+  float: left;
 }
 .sidebar_panel {
   position: relative;

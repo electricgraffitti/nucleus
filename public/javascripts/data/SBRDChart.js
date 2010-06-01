@@ -4,6 +4,7 @@ actionChart = new Highcharts.Chart({
       defaultSeriesType: 'spline',
       width: 300,
       height: 220,
+      backgroundColor: "#ffffff",
       zoomType: 'xy',
       margin: [40,10,50,50],
       // backgroundColor: {

@@ -1,3 +1,8 @@
+a {
+  -webkit-tap-highlight-color: #333;
+}
+
+
 #hd, #bd, #ft {
   width: 1010px;
   max-width: 1010px;

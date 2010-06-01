@@ -4,6 +4,7 @@ actionChart = new Highcharts.Chart({
       defaultSeriesType: 'column',
       width: 310,
       height: 220,
+      backgroundColor: "#ffffff",
       zoomType: 'xy',
       margin: [40,10,60,30],
       // backgroundColor: {
