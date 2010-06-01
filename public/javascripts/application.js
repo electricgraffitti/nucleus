@@ -64,6 +64,7 @@ var tableActions = {
 		data = tableActions.findId(el);
 		$('#provider_content').load("/nucleus-provider-search #provider_content", {id:data});
 	},
+	
 	actionChartData: function(el) {
 	 cid = tableActions.findId(el);
 	 ctype = tableActions.findChartType(el);
@@ -77,21 +78,55 @@ var tableActions = {
 	setConditionChart: function(el) {
 	  chartType = el.attr('chartType');
 	  $.getScript('/javascripts/data/' + chartType + 'Chart.js');
-	}
+	},
+	
+	setTableToggles: function() {
+	  $toggle = $('.table_toggle_icon');
+    $toggle.click(function() {
+      tableActions.showSubContent($(this));
+      $(this).preventDefault();
+    });
+	},
+	
+	setTableCheckboxes: function() {
+    $('#provider_select').click(function() {
+      tableActions.selectAllCheckboxes($(this));
+    });
+  },
   
+  setProviderByTableRowClick: function(attribute){
+    $('#provider_search tbody tr').click(function() {
+  	  tableActions.setActive($(this));
+  		tableActions.swapProvider($(this));
+  	});
+  },
+  
+  setChartByTableRowClick: function(attribute){
+    $('#provider_action_table tbody tr').click(function() {
+  	  tableActions.setActive($(this));
+  	  tableActions.actionChartData($(this));
+  	  tableActions.setConditionChart($(this));
+  	});
+  },
+  
+  setDefaults: function(attribute){
+    // Hide the table sub content(toggle)
+    tableActions.setTableToggles();
+    tableActions.setTableCheckboxes();
+    tableActions.setInitHighlight();
+    tableActions.setProviderByTableRowClick();
+    tableActions.setChartByTableRowClick();
+  }
+  // end Table
 };
 
 var profileActions = {
 	
-	setupAccordion: function() {
-		// Sets the default accordion window
-	  $('#accordion').accordion({
-	    active: 2,
-	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' },
-	    autoHeight: false
-	  });
+	setBase: function() {
+		baseActions.setAccordionDefault();
+    baseActions.accordionTrigger();
 	}
-	
+	// end Profile
 };
 
 var chartActions = {
@@ -108,14 +143,14 @@ var chartActions = {
 	     ]
 	  });
 	}
-	
+	// End Charts
 };
 var tabs = {
   
   setupFeedbackTabs: function() {
     $("#feedback_panels").tabs({ selected: 0 });
   }
-  
+  // end Tabs
 };
 var adminAction = {
   
@@ -157,7 +192,7 @@ var adminAction = {
       			buttonImageOnly: true
 		});
 	}
-  
+  // end Admin
 };
 
 var baseActions = {
@@ -166,6 +201,20 @@ var baseActions = {
    $panel_selector = el.attr("panel");
    $panel = $("#" + $panel_selector);
    $panel.click();
+  },
+  
+  accordionTrigger: function() {
+    $("a.flag_panel").click(function() {
+      baseActions.accordionClick($(this));
+    });
+  },
+  
+  setAccordionDefault: function(attribute){
+    $('#accordion').accordion({
+	    active: 2,
+	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' },
+	    autoHeight: false
+	  });
   },
   
   setInputFilter: function(el) {
@@ -197,76 +246,52 @@ var baseActions = {
     }, function() {  //On Hover Out  
       $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
     }); 
-  }
+  },
   
+  setTips: function() {
+    $('.tip').tipTip({
+      defaultPosition: "top"
+    });
+  },
+  
+  setOverlay: function() {
+    $("a[rel]").overlay({ 
+        expose: {
+      		color: '#000000',
+      		loadSpeed: 200,
+      		opacity: 0.15
+        },
+        effect: 'apple', 
+        onBeforeLoad: function() { 
+
+            // grab wrapper element inside content 
+            var wrap = this.getOverlay().find(".contentWrap"); 
+
+            // load the page specified in the trigger 
+            wrap.load(this.getTrigger().attr("href")); 
+        }
+    });
+  },
+  
+  setDefaults: function() {
+    // Set Base Colors for Charts
+  	chartActions.setupChartBaseColors();
+  	// Sets the Drop Down Nav
+    baseActions.dropDownNav();
+    // Sets the tool tip hovers
+    baseActions.setTips();
+    // Sets the note overlay
+    baseActions.setOverlay();
+  }
+  // end base
 }
 //**********Initialize Document**********//
 
 $(document).ready(function() {
-	
-  // Set Base Colors for Charts
-	chartActions.setupChartBaseColors();
-  baseActions.dropDownNav();
-  // Hide the table sub content(toggle)
-  $toggle = $('.table_toggle_icon');
-  $toggle.click(function() {
-    tableActions.showSubContent($(this));
-    return false;
-  });
   
-  // Tooltip test
-  $('.tip').tipTip({
-    defaultPosition: "top"
-  });
+  baseActions.setDefaults();
+  tableActions.setDefaults();
   
-  // Table checkboxes
-  $('#provider_select').click(function() {
-    tableActions.selectAllCheckboxes($(this));
-  });
-	
-	// Sets up the row highlights
-	
-	$('#provider_search tbody tr').click(function() {
-	  tableActions.setActive($(this));
-		tableActions.swapProvider($(this));
-	});
-	
-	$('#provider_action_table tbody tr').click(function() {
-	  tableActions.setActive($(this));
-	  tableActions.actionChartData($(this));
-	  tableActions.setConditionChart($(this));
-	});
-	
-	tableActions.setInitHighlight();
-	
-  // This is the tooltips, but jqtools 1.2 breaks the code
-  $('#speciality_code[title]').tooltip({ effect: 'slide'});
-  $('#speciality_code_main[title]').tooltip({
-    effect:'slide',
-    offset:[0,-65]
-  });
-  
-  
-  $("a.flag_panel").click(function() {
-    baseActions.accordionClick($(this));
-  });
-
- 	// Sets the note overlay
-  $("a[rel]").overlay({ 
-      expose: {
-    		color: '#000000',
-    		loadSpeed: 200,
-    		opacity: 0.15
-      },
-      effect: 'apple', 
-      onBeforeLoad: function() { 
-
-          // grab wrapper element inside content 
-          var wrap = this.getOverlay().find(".contentWrap"); 
-
-          // load the page specified in the trigger 
-          wrap.load(this.getTrigger().attr("href")); 
-      }
-  });
-  
+  // test for js success
+  console.log("js success");
 });
