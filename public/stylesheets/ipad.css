@@ -236,3 +236,17 @@ ul.icon_nav li {
   top: 1px;
   height:28px;
 }
+#schedule_dates input#schedule_date_no_end[type="radio"] {
+  float:left;
+  margin-left: 8px;
+}
+.report_panel_wrap ul li {
+  margin-right:5px;
+}
+#report_schedule_panel #report_schedule_end_day_count {
+ width:17px;
+ margin-left: 14px;
+}
+img.ui-datepicker-trigger {
+  margin-left: 2px;
+}
