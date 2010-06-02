@@ -220,12 +220,12 @@ a.search_mag, a.calendar_icon {
 .medium_btn {
   height: 24px;
 }
-.sidebar_panel a.sidebar_icon_link div.help_icon {
-  height:56px;
-  left:0;
-  position:absolute;
-  top:0;
-  width:59px;
+.sidebar_panel div.help_icon {
+  width: 138px;
+  height: 56px;
+}
+.sidebar_panel a.sidebar_icon_link.silver_icon_link {
+  border-right: 1px solid #c3c4c3;
 }
 .provider_flag_panel .flag_box {
   background:url("../images/inner_pages/provider_flags_sprite.jpg") no-repeat scroll left top transparent;
@@ -256,4 +256,7 @@ ul.icon_nav li {
 }
 img.ui-datepicker-trigger {
   margin-left: 2px;
+}
+#center_message_content_wrap {
+  overflow-y: scroll;
 }

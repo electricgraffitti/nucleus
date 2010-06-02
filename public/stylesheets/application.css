@@ -875,6 +875,9 @@ span#occurence {
   border-bottom: none;
   padding-top:8px;
 }
+.sub_panel.last form {
+  height: 21px;
+}
 .provider_info, .client_info {
   height: 175px;
   padding: 25px 10px 0px;
@@ -1661,7 +1664,19 @@ ul.help_west_list li {
   background: #fff;
 }
 #panel_layout.help_panels .sidebar_panel h2 {
-  font-size: 18px;
+  background:url("../images/inner_pages/support_phone.jpg") no-repeat scroll left top transparent;
+  color:#333333;
+  font-size:16px;
+  height:25px;
+  padding-left:20px;
+  padding-top:9px;
+  position:relative;
+  vertical-align:text-bottom;
+  font-weight: bold;
+}
+#panel_layout.help_panels .sidebar_panel h2 span {
+  font-weight: normal;
+  font-size: 13px;
 }
 .help_icon_sub_text {
   font-size: 75%;
@@ -1670,47 +1685,69 @@ ul.help_west_list li {
   display:block;
   margin-top:10px;
 }
-.sidebar_panel a.sidebar_icon_link {
+.sidebar_panel div.help_icon {
   position: relative;
-  padding: 7px 0px 15px 70px;
-  height: 35px;
+  padding-left: 59px;
   margin: 10px 0px;
   display: block;
-  background: #333 url('../images/inner_pages/profile_flag_bg.jpg') left top repeat-x;
-  /*background: url("../images/inner_pages/support_icons.png") left top no-repeat;*/
-  text-decoration: none;
-  font-size: 16px;
   color: #fff;
+  width: 140px;
+  height: 57px;
+  border: 1px solid #222;
+}
+.sidebar_panel div.help_icon.silver_icon_div {
+  border: 1px solid #c3c4c3;
+}
+.sidebar_panel a.sidebar_icon_link {
+  background:url("../images/inner_pages/profile_flag_bg.jpg") repeat-x scroll left top #333333;
+  color:#FFFFFF;
+  display:block;
+  font-size:16px;
+  height:35px;
+  margin: 0px;
+  padding:7px 0 15px 11px;
+  position:relative;
+  text-decoration:none;
+  width:129px;
 }
 .sidebar_panel a.sidebar_icon_link.silver_icon_link {
   color: #444;
-  border: 1px solid #c3c4c3;
   background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x;
 }
 .sidebar_panel a.sidebar_icon_link:hover {
 
 }
-.sidebar_panel a.sidebar_icon_link div.help_icon {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 59px;
-  height: 57px;
-}
-.sidebar_panel a.sidebar_icon_link div#contact {
+.sidebar_panel div#contact {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -236px top no-repeat;
 }
-.sidebar_panel a.sidebar_icon_link div#chat {
+.sidebar_panel div#contact:hover {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px top no-repeat;
+}
+.sidebar_panel div#chat {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -295px top no-repeat;
 }
-.sidebar_panel a.sidebar_icon_link div#forum {
+.sidebar_panel div#chat:hover {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px top no-repeat;
+}
+.sidebar_panel div#forum {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -354px top no-repeat;
 }
-.sidebar_panel a.sidebar_icon_link div#hciu {
+.sidebar_panel div#forum:hover {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -531px top no-repeat;
+}
+.sidebar_panel div#hciu {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -531px -57px no-repeat;
+  height: 56px;
+}
+.sidebar_panel div#hciu:hover {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px -57px no-repeat;
   height: 56px;
 }
-.sidebar_panel a.sidebar_icon_link div#video {
+.sidebar_panel div#video {
+  background: url('../images/inner_pages/provider_flags_sprite.jpg') -590px -57px no-repeat;
+  height: 56px;
+}
+.sidebar_panel div#video:hover {
   background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px -57px no-repeat;
   height: 56px;
 }
@@ -2071,14 +2108,6 @@ h2.content_header {
   width: 783px;
   border-right: 1px solid #c0c0c0;
 }
-#user_info {
-  color:#333333;
-  position:relative;
-  text-align:right;
-  padding: 10px 19px 0px;
-  font-size: 12px;
-  height: 20px;
-}
 p.panel_paragraph {
   margin-left:20px;
   padding:20px 0;
@@ -2311,49 +2340,12 @@ ul.feedback_west_list li {
   font-size: 12px;
   font-weight: bold;
 }
-.sidebar_panel a.sidebar_icon_link {
-  position: relative;
-  padding: 7px 0px 15px 70px;
-  height: 35px;
-  margin: 10px 0px;
-  display: block;
-  background: #333 url('../images/inner_pages/profile_flag_bg.jpg') left top repeat-x;
-  /*background: url("../images/inner_pages/support_icons.png") left top no-repeat;*/
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-}
-.sidebar_panel a.sidebar_icon_link.silver_icon_link {
-  color: #444;
-  border: 1px solid #c3c4c3;
-  background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x;
-}
-.sidebar_panel a.sidebar_icon_link:hover {
-
-}
 .sidebar_panel a.sidebar_icon_link div.feedback_icon {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 59px;
   height: 57px;
-}
-.sidebar_panel a.sidebar_icon_link div#contact {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -236px top no-repeat;
-}
-.sidebar_panel a.sidebar_icon_link div#chat {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -295px top no-repeat;
-}
-.sidebar_panel a.sidebar_icon_link div#forum {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -354px top no-repeat;
-}
-.sidebar_panel a.sidebar_icon_link div#hciu {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -413px -57px no-repeat;
-  height: 56px;
-}
-.sidebar_panel a.sidebar_icon_link div#video {
-  background: url('../images/inner_pages/provider_flags_sprite.jpg') -472px -57px no-repeat;
-  height: 56px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -2806,7 +2798,6 @@ input[type="text"]:focus {
 }
 select {
   height: 21px;
-  display: block;
 }
 li.radio_wrap {
   margin-right: 20px;
@@ -3118,5 +3109,8 @@ div.overlay div.close {
   	width: 20px;
   	margin:-3px 10px 7px 11px;
   	clear: none;
+  }
+  .sub_panel.last form {
+    height: 25px;
   }
 }
