@@ -86,4 +86,16 @@ class ProviderStatsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def sfro_stat_panel
+    render :layout => false
+  end
+  
+  def sbrd_stat_panel
+    render :layout => false
+  end
+  
+  def sdes_stat_panel
+    render :layout => false
+  end
 end

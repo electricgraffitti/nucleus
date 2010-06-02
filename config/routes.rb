@@ -36,6 +36,11 @@ ActionController::Routing::Routes.draw do |map|
   map.provider_search "nucleus-provider-search/:id", :controller => "providers", :action => "provider_search"
   map.provider_action "nucleus-provider-action/:id", :controller => "providers", :action => "provider_action"
   
+  # For Ajax Hits
+  map.sfrp_stats "sfro-stats", :controller => "provider_stats", :action => "sfro_stat_panel"
+  map.sbrd_stats "sbrd-stats", :controller => "provider_stats", :action => "sbrd_stat_panel"
+  map.sdes_stats "sdes-stats", :controller => "provider_stats", :action => "sdes_stat_panel"
+  
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"
   map.panel_test "panel-test", :controller => "dashboard", :action => "panel_test"

@@ -93,6 +93,18 @@ var tableActions = {
     });
   },
   
+  setStatChart: function(e) {
+    if (e.attr("charttype") === "SFRO") {
+      $('#provider_stats').load("/sfro-stats");
+    } else if (e.attr("charttype") === "SDES") {
+      $('#provider_stats').load("/sdes-stats");
+    } else if (e.attr("charttype") === "SBRD") {
+      $('#provider_stats').load("/sbrd-stats");
+    } else {
+      $('#provider_stats').load("/nucleus-provider-action #provider_stats");
+    }
+  },
+  
   setProviderByTableRowClick: function(attribute){
     $('#provider_search tbody tr').click(function() {
   	  tableActions.setActive($(this));
@@ -105,6 +117,7 @@ var tableActions = {
   	  tableActions.setActive($(this));
   	  tableActions.actionChartData($(this));
   	  tableActions.setConditionChart($(this));
+  	  tableActions.setStatChart($(this));
   	});
   },
   
