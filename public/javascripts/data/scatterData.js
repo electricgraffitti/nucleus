@@ -8,7 +8,7 @@ var scatterChart = new Highcharts.Chart({
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
       style: {
-        margin: ['0px 10px 20px 0px'],
+        margin: ['0px 0px 20px 0px'],
         font: '16px Arial, Helvetica, sans-serif'
       },
       borderColor: '#e7e7e7',
@@ -57,9 +57,10 @@ var scatterChart = new Highcharts.Chart({
        formatter: function() {
          return "$" + Highcharts.numberFormat(this.value);
         },
+        x: -2,
         style: {
           color: '#555555',
-          font: '10px Arial, Helvetica, sans-serif'
+          font: '10px Arial, Helvetica, sans-serif',
         }
       },
       title: false

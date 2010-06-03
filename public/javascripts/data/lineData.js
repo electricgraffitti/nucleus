@@ -51,6 +51,7 @@ var lineChart = new Highcharts.Chart({
        formatter: function() {
          return "$" + Highcharts.numberFormat(this.value);
        },
+       x: -2,
        style: {
          color: "#555555",
          font: "10px Arial, Helvetica, sans-serif"
@@ -64,11 +65,6 @@ var lineChart = new Highcharts.Chart({
          color: "#555555",
          font: "10px Arial, Helvetica, sans-serif"
        }
-     },
-     plotOptions: {
-        areaspline: {
-           fillOpacity: 1
-        }
      },
     plotLines: [{
        value: 0,
@@ -87,6 +83,11 @@ var lineChart = new Highcharts.Chart({
       },
       borderWidth: 1,
       borderRadius: 0
+   },
+   plotOptions: {
+      areaspline: {
+         fillOpacity: 1
+      }
    },
    legend: {
       layout: 'vertical',
