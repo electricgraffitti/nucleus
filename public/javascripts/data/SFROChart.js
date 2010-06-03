@@ -67,41 +67,19 @@ actionChart = new Highcharts.Chart({
       shadow: false
    },
    plotOptions: {
-      line: {
-        cursor: 'pointer',
-        point: {
-          events: {
-            click: function() {
-              // Sets the point to link to the url in the data block
-              // location.href = this.series.options.url;
-            }
-          },
-          marker: {
-            symbol: 'square',
-             states: {
-              hover: {
-                 enabled: true,
-                 lineColor: 'rgb(100,100,100)'
-               }
-             }
-            }
-        },
-         states: {
-            hover: {
-               marker: {
-                  enabled: true
-               }
-            }
-         }
-      }
+     column: {
+       pointWidth: 20
+     }
    },
    series: [
    {  
      name: "Edward Smith",
-     data: [0.0, 28.9, 2.6, 68.4]
+     data: [0.0, 28.9, 2.6, 68.4],
+     color: "#98002e"
    }, {
      name: "Specialty Norm",
-     data: [0.50, 39.81, 42.30, 17.39]
+     data: [0.50, 39.81, 42.30, 17.39],
+     color: "#00853f"
    }
   ]
 });

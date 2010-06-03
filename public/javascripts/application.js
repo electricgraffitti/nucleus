@@ -146,12 +146,12 @@ var chartActions = {
 	setupChartBaseColors: function() {
 		Highcharts.setOptions({
 	     colors: [
-	        '#00853f',
-	        '#009fc2',
-	        '#98002e',
-	        '#e5b53a',
-	        '#00467f',
-	        '#78496a'
+	        '#00853f', // PCI
+	        '#009fc2', // DCI
+	        '#98002e', // FCI
+	        '#e5b53a', // OCI
+	        '#00467f', // RxI
+	        '#78496a' // VCI
 	     ]
 	  });
 	}
