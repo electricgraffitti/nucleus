@@ -870,16 +870,18 @@ span#occurence {
 .sub_panel {
   position: relative;
   float: left;
-  padding: 6px 10px 3px;
+  padding: 6px 10px 0px;
   width: 363px;
   border-bottom: 1px solid #c0c0c0;
 }
 #provider_header {
-  padding-bottom: 4px;
+  padding-bottom:5px;
+  padding-top:4px;
 }
 .sub_panel.last {
   border-bottom: none;
   padding-top:8px;
+  padding-bottom: 8px;
 }
 .sub_panel.last form {
   height: 21px;
