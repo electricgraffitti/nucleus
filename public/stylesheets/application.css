@@ -1115,6 +1115,7 @@ span#occurence {
   font-size: 14px;
   font-weight: bold;
   padding: 12px 10px;
+  text-align: left;
 }
 .top_provider_name {
   width: 115px;
@@ -1126,6 +1127,7 @@ span#occurence {
 }
 .top_provider_score {
   width: 68px;
+  text-align: center;
 }
 .dashboard_basic_panel {
   border:1px solid #C0C0C0;
