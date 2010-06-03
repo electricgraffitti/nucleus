@@ -21,7 +21,7 @@ class ClaimsController < ApplicationController
   # GET /claims/1
   # GET /claims/1.xml
   def show
-    @claim = Claim.find(params[:id])
+    # @claim = Claim.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

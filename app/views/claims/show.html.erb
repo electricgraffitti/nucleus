@@ -1,6 +1,47 @@
-<%= render :partial => 'claims/claim_summary_header' %>
+<%= render :partial => 'claims/claim_action_header' %>
 <div id="panel_layout" class="clear">
-    
+    <div id="action_panel" class="panel ui-layout-center">
+      <div id="claim_action_left">
+        <div class="claim_status_panel">
+        </div>            
+        <div class="claim_status_panel">
+        </div>            
+        <div class="claim_status_panel">
+        </div>            
+        <div class="claim_status_panel">
+        </div>
+      </div>
+      <div id="claim_action_right">
+        <div class="claim_action_panel">
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div id="panel_south" class="ui-layout-south">
+        <div id="south_resizer">
+          <div class="resize_horz"></div>
+        </div>
+        <div id="table_action_bar">
+          <ul class="page_nav">
+            <li>
+              <%= link_to "Notes", "", :class => "tip", :title => "Claim Notes" %>
+            </li>
+            <li>
+              <%= link_to "Documents", "", :class => "tip", :title => "Claim Docuements" %>
+            </li>
+            <li>
+              <%= link_to "Profile", "", :class => "tip", :title => "Claim Profile" %>
+            </li>
+            <li>
+              <%= link_to "Refresh", "", :class => "tip", :title => "Claim Refresh" %>
+            </li>
+            <li>
+              <%= link_to "Print", "", :class => "tip", :title => "Claim Print" %>
+            </li>
+          </ul>
+        </div>
+        <%= render :partial => 'claims/claim_action_table' %>
+      </div>
+    </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>

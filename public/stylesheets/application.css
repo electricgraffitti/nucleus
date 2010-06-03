@@ -2414,6 +2414,41 @@ ul.feedback_west_list li {
   width: 59px;
   height: 57px;
 }
+/**************Claims Action**************/
+#action_panel {
+  float:left;
+  position:relative;
+  width:100%;
+}
+#claim_action_left {
+  position: relative;
+  float: left;
+  width: 570px;
+  padding: 5px;
+  min-height: 200px;
+}
+#claim_action_right {
+  position: relative;
+  float: left;
+  width: 424px;
+  padding: 5px 5px 5px 0px;
+  min-height: 200px; 
+}
+.claim_status_panel {
+  position: relative;
+  float: left;
+  height: 50px;
+  background: #eeeeee;
+  width: 570px;
+  margin-bottom: 5px;
+}
+.claim_action_panel {
+  position: relative;
+  float: left;
+  background: #eeeeee;
+  width: 300px;
+  height: 215px;
+}
 /*********************************************/
 /******************TABLES********************/
 .drag_row, .table_select {
@@ -2671,6 +2706,20 @@ tr.active {
 }
 #provider_list_table td.claim_provider_tax_id {
   width: 107px;
+}
+/*********Claim Action Table********/
+#table_action_bar {
+  position: relative;
+  width: 1024px;
+  height: 35px;
+  background: url('../images/inner_pages/page_header_bg.jpg') left top repeat-x;
+  border-top: 1px solid #c0c0c0;
+}
+.claim_action_desc {
+  width: 140px;
+}
+.claim_action_mod {
+  width: 150px;
 }
 /*********Accordion Tables********/
 h4.accordion_table_header {

@@ -1,0 +1,64 @@
+<div id="provider_action_table" class="left">
+          <table id="provider_action" cellpadding='0' cellspacing="0">
+            <thead>
+              <tr>
+                <th></th>
+                <th><%= check_box_tag(:provider_select, 'checked') %></th>
+                <th>#</th>
+                <th>DOS</th>
+                <th>POS</th>
+                <th>Spec</th>
+                <th>Rev</th>
+                <th>Code Description</th>
+                <th>Mod</th>
+                <th>TN</th>
+                <th>TS</th>
+                <th>OC</th>
+                <th>Units</th>
+                <th>DX</th>
+                <th>Billed</th>
+                <th>Allowed</th>
+                <th>Adj Paid</th>
+                <th>Suj Paid</th>
+                <th>Savings</th>
+                <th>Edits</th>
+                <th>T</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% 3.times do %>
+              <tr id="" class='<%=cycle('even', 'odd')%>'>
+                <td class="claim_action_toggle"><div class="table_icon table_toggle_icon tip" title="Click to Toggle"></div></td>
+                <td class="claim_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
+                <td class="claim_action_number">1</td>
+                <td class="claim_action_dos">04/15/2010</td>
+                <td class="claim_action_pos">11</td>
+                <td class="claim_action_spec">19</td>
+                <td class="claim_action_rev"></td>
+                <td class="claim_action_desc">D2750</td>
+                <td class="claim_action_mod">Crown - Porcelain W/High Noble Metal (Gold)</td>
+                <td class="claim_action_tn">18</td>
+                <td class="claim_action_ts"></td>
+                <td class="claim_action_oc"></td>
+                <td class="claim_action_units">1</td>
+                <td class="claim_action_dx"></td>
+                <td class="claim_action_billed">$900.00</td>
+                <td class="claim_action_allowed">$900.00</td>
+                <td class="claim_action_adj_paid">$462.50</td>
+                <td class="claim_action_suj_paid">$462.50</td>
+                <td class="claim_action_savings">$0.00</td>
+                <td class="claim_action_edits">DXRC,DELE</td>
+                <td class="claim_action_t">9</td>
+              </tr>
+              <tr class="table_sub_content" cellpadding='0'>
+                <td colspan='21' cellpadding='0' class="empty">
+                  <%# This is the expansion table %>
+                  <div class="table_toggle_content" style="display: none;">
+                    <%= render :partial => 'claims/claim_action_table_expansion'%>
+                  </div>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
