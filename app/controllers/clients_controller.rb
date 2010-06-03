@@ -31,7 +31,7 @@ class ClientsController < ApplicationController
     @client = Client.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => 'login_black'}
       format.xml  { render :xml => @client }
     end
   end

@@ -1,14 +1,39 @@
-<div id="login_left">
-  <h1 class="med_nucleus_logo">Nucleus</h1>
-  <h2 class="register">Client Registration</h2>
-  <%= render :partial => 'form' %>
+<div id="login_wrap">
+<h1 id="logo">Nucleus</h1>
+<h2 class="sub_title green">Client Registration</h2>
+  <% form_for(@client) do |f| %>
+    <%= f.error_messages %>
+    <div class="login_fields_wrap registration_fields_wrap">
+    <p>
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name %>
+    </p>
+    <p>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </p>
+    </div>
+    <div class="top_20_wrap">
+    <p>
+      <%= f.submit 'Submit', :class => "login_btn" %>
+    </p>
+    </div>
+  <% end %>
 </div>
 
-<div id="login_right">
-  <div class="login_sub_box">
-    
-  </div>
-  <div class="login_sub_box">
-    
-  </div>
-</div>

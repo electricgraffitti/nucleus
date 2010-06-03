@@ -61,7 +61,7 @@ h2.sub_title {
 	text-align:left;
 	text-shadow:0 1px 1px #444444;
 }
-.login_sub_box, .login_fields_wrap {
+.login_sub_box, .login_fields_wrap, .registration_fields_wrap {
 	position: relative;
 	width: 282px;
 	height: 35px;
@@ -69,6 +69,9 @@ h2.sub_title {
 	margin-left: 40px;
 	margin-top: 1px;
 	margin-bottom: 0px;
+}
+.registration_fields_wrap {
+  height: 125px;
 }
 .login_fields_wrap {
   width: 400px;
