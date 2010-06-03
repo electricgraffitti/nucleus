@@ -4,6 +4,7 @@
       <div class="stat_title left">Lines</div>
       <div class="stat_value left">
          <%= number_to_percentage(@provider.provider_stat.line_percentage, :precision => 1) %>
+         <div class="stat_flag stat_flag_red"></div>
       </div>
       <div class="stat_range left">
         <%= @provider.provider_stat.final_line_count %> of <%= @provider.provider_stat.total_line_count %> Lines
@@ -13,6 +14,7 @@
       <div class="stat_title left">Procedures</div>
       <div class="stat_value left">
          <%= number_to_percentage(@provider.provider_stat.procedure_percentage, :precision => 1) %>
+         <div class="stat_flag stat_flag_red"></div>
       </div>
       <div class="stat_range left">
         <%= @provider.provider_stat.final_procedure_count %> of <%= @provider.provider_stat.total_procedure_count %> Procedures
@@ -22,6 +24,7 @@
       <div class="stat_title left">Patients</div>
       <div class="stat_value left">
         <%= number_to_percentage(@provider.provider_stat.patient_percentage, :precision => 1) %>
+        <div class="stat_flag stat_flag_green"></div>
       </div>
       <div class="stat_range left">
         <%= @provider.provider_stat.final_patient_count %> of <%= @provider.provider_stat.total_patient_count %> Patients
@@ -31,6 +34,7 @@
       <div class="stat_title left">Claims</div>
       <div class="stat_value left">
         <%= number_to_percentage(@provider.provider_stat.claim_percentage, :precision => 1) %>
+        <div class="stat_flag stat_flag_red"></div>
       </div>
       <div class="stat_range left">
         <%= @provider.provider_stat.final_claim_count %> of <%= @provider.provider_stat.total_claim_count %> Claims
@@ -40,6 +44,7 @@
       <div class="stat_title left">Savings</div>
       <div class="stat_value left">
         <%= number_to_percentage(@provider.provider_stat.savings_percentage, :precision => 1) %>
+        <div class="stat_flag stat_flag_green"></div>
       </div>
       <div class="stat_range left">
         <%= number_to_currency(@provider.provider_stat.final_savings_count, :precision => 0) %> of <%= number_to_currency(@provider.provider_stat.total_savings_count, :precision => 0) %> Paid
@@ -49,6 +54,7 @@
       <div class="stat_title left">Billed</div>
       <div class="stat_value left">
         <%= number_to_percentage(@provider.provider_stat.billed_percentage, :precision => 1) %>
+        <div class="stat_flag stat_flag_green"></div>
       </div>
       <div class="stat_range left"><%= number_to_currency(@provider.provider_stat.final_billed_count, :precision => 0) %> of <%= number_to_currency(@provider.provider_stat.total_billed_count, :precision => 0) %> Billed
       </div>

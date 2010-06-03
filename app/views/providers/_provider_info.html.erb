@@ -4,12 +4,12 @@
 <div class="basic_panel_2 provider_info">
   <div class="panel_left">
     <div class="panel_item">          
-      <div class="panel_item_title">Provider Sequence</div>
-      <div class="panel_item_value"><%=h provider.sequence_number %></div>
+      <div class="panel_item_title">Primary Speciality</div>
+      <div id="speciality_code_main" class="panel_item_value" title="<%= provider.provider_speciality.speciality_type %>"><%=h provider.provider_speciality.speciality_code %></div>
     </div>
     <div class="panel_item">          
-      <div class="panel_item_title">TIN</div>
-      <div class="panel_item_value"><%=h provider.tin %></div>
+      <div class="panel_item_title">Group TIN</div>
+      <div class="panel_item_value"><%=h provider.provider_group.group_tin %></div>
     </div>
     <div class="panel_item">          
       <div class="panel_item_title">Group Name</div>
@@ -18,16 +18,12 @@
   </div>
   <div class="panel_right">
     <div class="panel_item">          
-      <div class="panel_item_title">Primary Speciality</div>
-      <div id="speciality_code_main" class="panel_item_value" title="<%= provider.provider_speciality.speciality_type %>"><%=h provider.provider_speciality.speciality_code %></div>
+      <div class="panel_item_title">TIN</div>
+      <div class="panel_item_value"><%=h provider.tin %></div>
     </div>
     <div class="panel_item">          
       <div class="panel_item_title">State</div>
       <div class="panel_item_value"><%=h provider.state.abbreviation %></div>
-    </div>
-    <div class="panel_item">          
-      <div class="panel_item_title">Group TIN</div>
-      <div class="panel_item_value"><%=h provider.provider_group.group_tin %></div>
     </div>
   </div>
 </div>

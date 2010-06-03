@@ -898,7 +898,10 @@ span#occurence {
 .panel_left, .panel_right {
   position: relative;
   float: left;
-  width: 50%;
+  width: 185px;
+}
+.panel_right {
+  width: 75px;
 }
 .panel_item {
   position: relative;
@@ -1347,7 +1350,7 @@ span.field_seperator {
   width: 70px;
 }
 #provider_stats .stat_group div {
-  padding: 5px 10px;
+  padding: 5px 9px;
 }
 #provider_stats .stat_group .stat_value {
   background:none repeat scroll 0 0 #D6D6D6;
@@ -1355,8 +1358,25 @@ span.field_seperator {
   font-size:16px;
   font-weight:bold;
   position:relative;
-  text-align:center;
-  width:47px;
+/*  text-align:center;*/
+  width:51px;
+  border:1px solid #D7D6D6;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f0f0f0), to(#e1e1e1));
+  background-image: -moz-linear-gradient(19% 75% 90deg,#e1e1e1, #f0f0f0);
+}
+#provider_stats .stat_group div.stat_flag {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20px;
+  height: 29px;
+  padding: 0px;
+}
+.stat_flag_red {
+  background: url("../images/inner_pages/stat_flags.jpg") 0px 0px no-repeat;
+}
+.stat_flag_green {
+  background: url("../images/inner_pages/stat_flags.jpg") -20px 0px no-repeat;
 }
 #provider_stats .stat_group .stat_range {
   position: relative;
