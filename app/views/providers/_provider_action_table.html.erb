@@ -23,7 +23,7 @@
               <tr id="<%= pc.id %>" class='<%=cycle('even', 'odd')%>' chartType="<%= pc.condition_type.condition_code %>">
                 <td class="provider_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
                 <td class="provider_action_toggle"><div class="table_icon table_toggle_icon tip" title="Click to Toggle"></div></td>
-                <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', "", :class => "tip", :title => "Condition Profile" %></td>
+                <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', claims_list_path, :class => "tip", :title => "Condition Profile" %></td>
                 <td class="provider_action_blank"></td>
                 <td class="provider_action_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon tip', :title => "Condition Notes", :rel => '#overlay' %></td>
                 <td class="provider_action_trigger_date"><%= (pc.trigger_date).to_s(:short_date) %></td>

@@ -31,6 +31,7 @@ ActionController::Routing::Routes.draw do |map|
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"
   map.client_feedback "nucleus-client-feedback", :controller => "feedbacks", :action => "index"
   map.client_settings "nucleus-client-settings", :controller => "clients", :action => "show"
+  map.claims_list "condition-claims-list", :controller => "claims", :action => "claims_list"
   map.help "nucleus-help", :controller => "help", :action => "index"
   map.quick_launch "nucleus-quick-launch", :controller => "dashboard", :action => "quick_launch"
   map.provider_search "nucleus-provider-search/:id", :controller => "providers", :action => "provider_search"

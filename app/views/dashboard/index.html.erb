@@ -2,9 +2,12 @@
 <div id="panel_layout" class="clear">
   <div id="dashboard">
     <div id="top_left_dashboard" class="graph_box">
-      <h2 class="main_header">Top Provider Alert</h2>
+      <h2 class="main_header">Top 5 Providers Alert</h2>
+      <div id="panel_header" class="basic_panel">
+       <%= render :partial => 'dashboard/dashboard_top_provider_heading', :locals => {:provider => p} %>
+      </div>
       <% @top_providers.each do |p| %>
-      <div class="basic_panel">
+      <div class="dashboard_basic_panel">
         <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
       </div>
       <% end %>

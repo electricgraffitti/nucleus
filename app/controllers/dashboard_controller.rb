@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
   before_filter :require_client
   
   def index
-    @top_providers = Provider.top_billable
+    @top_providers = Provider.top_billable.small_list(5)
     render :layout => "application"
   end
   

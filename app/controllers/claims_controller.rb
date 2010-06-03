@@ -91,9 +91,11 @@ class ClaimsController < ApplicationController
     end
   end
   
+  def claims_list
+    
+  end
+  
   def note
-    
     render :layout => false
-    
   end
 end

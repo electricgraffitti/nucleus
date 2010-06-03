@@ -512,6 +512,9 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   float: left;
   width: 804px;
 }
+#panel_layout div#panel_full {
+  width: 1024px;
+}
 #panel_south {
   position: relative;
   float: left;
@@ -1090,15 +1093,49 @@ span#occurence {
   -webkit-border-radius: 10px;
   background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;
 }
-#top_left_dashboard .basic_panel {
+#top_left_dashboard .dashboard_basic_panel {
   text-align: left;
-  width: 418px;
+  width: 439px;
   background: #fff;
 }
 #top_left_dashboard h2.main_header {
   font-size: 16px;
   color: #555555;
   padding: 10px 0px;
+}
+#top_left_dashboard #panel_header {
+  background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
+  padding: 0px;
+  width: 438px;
+}
+.top_provider_block {
+  position: relative;
+  float: left;
+  height: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 10px;
+}
+.top_provider_name {
+  width: 115px;
+  border-right: 1px solid #c0c0c0;
+}
+.top_provider_billed {
+  width: 192px;
+  border-right: 1px solid #c0c0c0;
+}
+.top_provider_score {
+  width: 68px;
+}
+.dashboard_basic_panel {
+  border:1px solid #C0C0C0;
+  float:left;
+  margin:0 0 5px 20px;
+  position:relative;
+}
+#dashboard #provider_rating {
+  position: relative;
+  float: left;
 }
 /***Charts***/
 #provider_results_chart {
@@ -1326,7 +1363,7 @@ span.field_seperator {
   font-size: 12px;
   font-weight: bold;
 }
-#provider_search_table, #provider_action_table {
+#provider_search_table, #provider_action_table, #provider_list_table {
   position: relative;
   float:left;
   overflow: auto;
@@ -1336,6 +1373,9 @@ span.field_seperator {
 }
 #provider_action_table {
 	min-width: 1026px;
+}
+#provider_list_table {
+  width: 1024px;
 }
 a.flag_panel {
   display: block;
@@ -2591,6 +2631,19 @@ tr.active {
 }
 .claim_provider_tax_id {
   min-width: 90px;
+}
+/******Claim List Table********/
+#provider_list_table td.claim_sequence {
+  width: 130px;
+}
+#provider_list_table td.claim_reviewed {
+  width: 130px;
+}
+#provider_list_table td.claim_number {
+  width: 130px;
+}
+#provider_list_table td.claim_provider_tax_id {
+  width: 107px;
 }
 /*********Accordion Tables********/
 h4.accordion_table_header {

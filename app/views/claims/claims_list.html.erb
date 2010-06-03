@@ -1,0 +1,45 @@
+<%= render :partial => 'claims/claims_list_header' %>
+<div id="panel_layout" class="clear">
+  <div id="panel_full" class="panel ui-layout-main">
+    <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
+    <div id="provider_list_table">
+      <table id="provider_search">
+        <thead>
+          <tr>
+            <th>Claim Sequence</th>
+            <th>Claim No.</th>
+            <th>Form Type</th>
+            <th>Edit(s)</th>
+            <th>Status</th>
+            <th>Appeal Status</th>
+            <th>Provider</th>
+            <th>Provider Tax Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% 28.times do %>
+          <tr class='<%=cycle('even', 'odd')%>'>
+            <td class="claim_sequence">5882788-22</td>
+            <td class="claim_number">0945496302</td>
+            <td class="claim_form_type">H</td>
+            <td class="claim_edits"></td>
+            <td class="claim_reviewed">Under Review</td>
+            <td class="claim_appeal_status"></td>
+            <td class="claim_provider">Edward Smith</td>
+            <td class="claim_provider_tax_id">214748364</td>
+          </tr>
+          <% end %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="8"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </div>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "providerSearch" %>
+<% end %>

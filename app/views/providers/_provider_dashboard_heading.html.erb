@@ -1,2 +1,3 @@
-<h3><span><%= link_to "#{provider.full_name}", provider_path(provider) %></span> - Total Billed: <%= number_to_currency(provider.provider_stat.total_billed_count) %></h3>
+<div class="top_provider_block top_provider_name"><h3><%= link_to "#{provider.full_name}", provider_path(provider) %></h3></div>
+<div class="top_provider_block top_provider_billed"><h3>Total Billed: <%= number_to_currency(provider.provider_stat.total_billed_count) %></h3></div>
 <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_action_path %></div>
