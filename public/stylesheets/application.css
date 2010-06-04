@@ -1658,6 +1658,13 @@ ul.location_stats li {
   font-weight: bold;
   font-size: 12px;
 }
+.accordion_graph_box {
+  position: relative;
+  float: left;
+  width: 455px;
+  margin: 8px;
+  background: #efefef;
+}
 /** Provider Help **/
 #panel_layout.help_panels .panel {
   position: relative;

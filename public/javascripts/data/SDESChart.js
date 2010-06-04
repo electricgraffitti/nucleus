@@ -79,11 +79,11 @@ actionChart = new Highcharts.Chart({
 	 series: [
    {  
      name: "Specialty Norm",
-     data: [52900, 38400, 8700],
+     data: [52900, 38400, 18700],
      color: "#009fc2"
    }, {
      name: "Edward Smith",
-     data: [4500, 40000, 95000],
+     data: [25342, 40000, 95000],
      color: "#e37f1c"
    }
   ]

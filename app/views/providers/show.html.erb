@@ -19,6 +19,12 @@
   <script>
     $(document).ready(function() {
       profileActions.setBase();
+      
+      // Column Chart
+      $.getScript('../javascripts/data/accordionColumnData.js');
+      
+      // Line Chart
+      $.getScript('../javascripts/data/accordionLineData.js');
     });
   </script>
 <% end %>
