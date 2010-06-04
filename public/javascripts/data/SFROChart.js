@@ -1,7 +1,7 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'bar',
+      defaultSeriesType: 'column',
       width: 310,
       height: 220,
       zoomType: 'xy',
@@ -29,7 +29,7 @@ actionChart = new Highcharts.Chart({
      }
    },
    xAxis: {
-     categories: ['Simple', 'Int', 'Complex', 'Flap'],
+     categories: ['Int', 'Complex', 'Flap'],
      labels: {
        rotation: 0
      }
@@ -73,19 +73,19 @@ actionChart = new Highcharts.Chart({
      shadow: false
    },
    plotOptions: {
-     series: {
-        stacking: 'normal',
-        pointWidth: 25
+     column: {
+        groupPadding: .1,
+         pointWidth: 32
      }
    },
    series: [
    {  
      name: "Specialty Norm",
-     data: [0.50, 39.81, 42.30, 17.39],
+     data: [39.81, 42.30, 17.39],
      color: "#009fc2"
    }, {
      name: "Edward Smith",
-     data: [0.0, 28.9, 2.6, 68.4],
+     data: [28.9, 2.6, 68.4],
      color: "#e37f1c"
    }
   ]

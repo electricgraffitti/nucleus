@@ -1,7 +1,7 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'bar',
+      defaultSeriesType: 'column',
       width: 310,
       height: 220,
       zoomType: 'xy',
@@ -71,9 +71,9 @@ actionChart = new Highcharts.Chart({
      shadow: false
    },
    plotOptions: {
-     series: {
-        stacking: 'normal',
-        pointWidth: 30
+     column: {
+       groupPadding: .1,
+        pointWidth: 32
      }
    },
 	 series: [
