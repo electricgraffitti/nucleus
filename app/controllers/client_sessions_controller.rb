@@ -16,7 +16,7 @@ class ClientSessionsController < ApplicationController
       flash[:notice] = "Login successful!"
       redirect_to quick_launch_path
     else
-      render :action => :new
+      redirect_to login_path
     end
   end
   

@@ -1241,6 +1241,13 @@ span#occurence {
   border: 1px solid #c0c0c0;
   padding: 2px;
 }
+#switch-lang {
+  background: #6ac520;
+	color: #fff;
+	font-weight: bold;
+  border: 1px solid #c0c0c0;
+  padding: 2px;  
+}
 #search_search_topic_id {
   margin: 20px 0px 10px 18px;
   width: 173px;
@@ -2837,6 +2844,15 @@ table.accordion_table {
 }
 .hospital_name, .hospital_status, .hospital_expiration, .hospital_effective {
 	min-width: 225px;
+}
+li#street_link a {
+  color: #2070b5;
+  text-decoration: none;
+  margin-left: 5px;
+}
+li#street_link a:hover {
+  color: #2070b5;
+  text-decoration: underline;
 }
 /*****Table Toggle Content*******/
 .table_toggle_content, .table_toggle_content_section, .table_toggle_content_section_row, .table_content_title, .table_content_value {

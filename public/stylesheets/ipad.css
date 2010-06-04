@@ -196,22 +196,22 @@ tr.odd td div.table_toggle_icon {
 }
 /* Active */
 tr.active td div.table_rating_dot.red_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -61px 0px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -41px 0px;
 }
 tr.active td div.table_rating_dot.yellow_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -61px -20px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -41px -20px;
 }
 tr.active td div.table_rating_dot.green_dot {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -61px -40px;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -41px -40px;
 }
 tr.active td div.table_note_icon, tr.active td a.table_note_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -61px -60px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -41px -60px no-repeat;
 }
 tr.active td div.table_mag_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -61px -80px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -41px -80px no-repeat;
 }
 tr.active td div.table_toggle_icon {
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -61px -100px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -41px -100px no-repeat;
 }
 a.search_mag, a.calendar_icon {
   width: 18px;

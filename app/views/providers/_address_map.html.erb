@@ -13,7 +13,7 @@
         	              <ul class="left">
         	                <li><%= location.address %></li>
         	                <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
-        	                <li><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
+        	                <li id="street_link"><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
         	              </ul>
         	              <ul class="location_stats">
         	                <li>Type:<br/><b><%= location.location_type %></b></li>
