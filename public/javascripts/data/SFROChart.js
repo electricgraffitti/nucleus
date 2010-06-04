@@ -1,12 +1,11 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'column',
+      defaultSeriesType: 'bar',
       width: 310,
       height: 220,
-      backgroundColor: "#ffffff",
       zoomType: 'xy',
-      margin: [40,10,60,30],
+      margin: [40,15,60,58],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -19,7 +18,7 @@ actionChart = new Highcharts.Chart({
       text: 'Repair Procedure Distribution',
       style: {
          color: "#555555",
-         font: "16px Arial, Helvetica, sans-serif"
+         font: "14px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
@@ -39,7 +38,16 @@ actionChart = new Highcharts.Chart({
       title: {
         enabled: false,
         text: 'Comparison Ratio'
-      }
+      },
+      labels: {
+        formatter: function() {
+          return this.value + "%";
+        },
+        style: {
+          color: "#555555",
+          font: "10px Arial, Helvetica, sans-serif"
+        }
+      },
    },
    tooltip: {
       formatter: function() {
@@ -53,33 +61,32 @@ actionChart = new Highcharts.Chart({
       borderRadius: 0
    },
    legend: {
-      style: {
-         position: 'absolute',
-         bottom: '3px',
-         right: '50px',
-         color: "#555555",
-         font: "10px Arial, Helvetica, sans-serif"
-      },
-      borderWidth: 1,
-      backgroundColor: '#FFFFFF',
-      borderRadius: 0,
-      borderColor: '#e7e7e7',
-      shadow: false
+     style: {
+        left: 'auto',
+        bottom: 'auto',
+        right: '10px',
+        top: '185px'
+     },
+     borderColor: '#D7D6D6',
+     borderWidth: 1,
+     borderRadius: 0,
+     shadow: false
    },
    plotOptions: {
-     column: {
-       pointWidth: 20
+     series: {
+        stacking: 'normal',
+        pointWidth: 25
      }
    },
    series: [
    {  
-     name: "Edward Smith",
-     data: [0.0, 28.9, 2.6, 68.4],
-     color: "#98002e"
-   }, {
      name: "Specialty Norm",
      data: [0.50, 39.81, 42.30, 17.39],
-     color: "#00853f"
+     color: "#009fc2"
+   }, {
+     name: "Edward Smith",
+     data: [0.0, 28.9, 2.6, 68.4],
+     color: "#e37f1c"
    }
   ]
 });

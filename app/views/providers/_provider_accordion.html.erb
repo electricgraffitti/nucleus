@@ -1,8 +1,8 @@
 <div id="accordion">
-        	<h3 id="suspect_provider"><div class="accordion_rating_dot red_dot"></div><a href="#">1. Suspect Provider</a></h3>
+        	<h3 id="suspect_provider"><div class="accordion_rating_dot red_dot"></div><a href="#">1. Statistics</a></h3>
         	<div>
         	  <div class="inner_accordion">
-              <%= render :partial => "providers/provider_tables/suspect_provider_table" %>
+              
         		</div>
         	</div>
         	<h3 id="provider_license"><div class="accordion_rating_dot red_dot"></div><a href="#">2. License / Sanction</a></h3>
@@ -13,13 +13,13 @@
               <%= render :partial => "providers/provider_tables/state_sanctions_table" %>
         		</div>
         	</div>
-        	<h3 id="provider_address"><div class="accordion_rating_dot red_dot"></div><a href="#">3. Provider Address</a></h3>
+        	<h3 id="provider_address"><div class="accordion_rating_dot red_dot"></div><a href="#">3. Address</a></h3>
         	<div>
         	  <div class="inner_accordion">
               <%= render :partial => 'providers/address_map', :locals => {:m => m, :provider => provider} %>
         		</div>
         	</div>
-        	<h3 id="provider_information"><div class="accordion_rating_dot green_dot"></div><a href="#">4. Provider Information</a></h3>
+        	<h3 id="provider_information"><div class="accordion_rating_dot green_dot"></div><a href="#">4. Information</a></h3>
         	<div>
         	  <div class="inner_accordion">
               <%= render :partial => "providers/provider_tables/provider_demographic_table", :locals => {:provider => provider} %>
@@ -27,21 +27,22 @@
               <%= render :partial => "providers/provider_tables/provider_scoring_table", :locals => {:provider => provider} %>
               <%= render :partial => "providers/provider_tables/provider_group_info_table", :locals => {:provider => provider} %>
               <%= render :partial => "providers/provider_tables/provider_address_info_table", :locals => {:provider => provider} %>
+              <%= render :partial => "providers/provider_tables/suspect_provider_table" %>
         		</div>
         	</div>
-        	<h3 id="provider_demographics"><div class="accordion_rating_dot green_dot"></div><a href="#">5. Provider Demographics</a></h3>
+        	<h3 id="provider_demographics"><div class="accordion_rating_dot green_dot"></div><a href="#">5. Demographics</a></h3>
         	<div>
         	  <div class="inner_accordion">
               <%= render :partial => "providers/provider_tables/demographics", :locals => {:provider => provider} %>
         		</div>
         	</div>
-	      	<h3 id="provider_npi"><div class="accordion_rating_dot green_dot"></div><a href="#">6. Provider NPI</a></h3>
+	      	<h3 id="provider_npi"><div class="accordion_rating_dot green_dot"></div><a href="#">6. NPI</a></h3>
         	<div>
         	  <div class="inner_accordion">
               <%= render :partial => "providers/provider_tables/provider_npi", :locals => {:provider => provider} %>
         		</div>
         	</div>
-	      	<h3 id="provider_dea"><div class="accordion_rating_dot blue_dot"></div><a href="#">7. Provider DEA</a></h3>
+	      	<h3 id="provider_dea"><div class="accordion_rating_dot blue_dot"></div><a href="#">7. DEA</a></h3>
         	<div>
         	  <div class="inner_accordion">
               <%= render :partial => "providers/provider_tables/provider_dea", :locals => {:provider => provider} %>

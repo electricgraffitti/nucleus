@@ -4,7 +4,6 @@ actionChart = new Highcharts.Chart({
       defaultSeriesType: 'spline',
       width: 300,
       height: 220,
-      backgroundColor: "#ffffff",
       zoomType: 'xy',
       margin: [40,10,50,50],
       // backgroundColor: {
@@ -19,7 +18,7 @@ actionChart = new Highcharts.Chart({
       text: 'Billing Spike - Dollars Billed by Month',
       style: {
          color: "#555555",
-         font: "16px Arial, Helvetica, sans-serif"
+         font: "14px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
@@ -93,7 +92,7 @@ actionChart = new Highcharts.Chart({
    {  
      name: "Condition Billing",
      data: [2345,4253,21568,14859,19854,20635,17485,19874,18121,18003,17563,10478,13568,15689,16895,19865,14274],
-     color: '#98002e'
+     color: '#e37f1c'
    }]
 });
 

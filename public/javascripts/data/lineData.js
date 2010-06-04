@@ -90,7 +90,6 @@ var lineChart = new Highcharts.Chart({
       }
    },
    legend: {
-      layout: 'vertical',
       style: {
          position: 'absolute',
          bottom: 'auto',

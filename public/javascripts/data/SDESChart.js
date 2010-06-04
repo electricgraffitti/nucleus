@@ -1,12 +1,11 @@
 actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
-      defaultSeriesType: 'column',
+      defaultSeriesType: 'bar',
       width: 310,
       height: 220,
-      backgroundColor: "#ffffff",
       zoomType: 'xy',
-      margin: [40,10,60,30],
+      margin: [40,15,60,45],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -19,7 +18,7 @@ actionChart = new Highcharts.Chart({
       text: 'Lesion Destruction Distribution',
       style: {
          color: "#555555",
-         font: "16px Arial, Helvetica, sans-serif"
+         font: "14px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
@@ -31,21 +30,27 @@ actionChart = new Highcharts.Chart({
    },
    xAxis: {
      categories: ['17000', '17003', '17004'],
-     labels: {
-       rotation: false
-     },
-     minPadding: 2
+     showLastLabel: true
    },
    yAxis: {
       title: {
         enabled: false,
         text: 'Dollars Billed'
-      }
+      },
+      labels: {
+        formatter: function() {
+          return "$" + this.value/1000 + "k";
+        },
+        style: {
+          color: "#555555",
+          font: "10px Arial, Helvetica, sans-serif"
+        }
+      },
    },
    tooltip: {
       formatter: function() {
                 return '<b>'+ this.series.name +'</b><br/>'+
-            this.x + ", "+ "$"+this.y +' Billed';
+            this.x + ", "+ "$"+Highcharts.numberFormat(this.y, 0, ",") +'K Billed';
       },
       style: {
         font: '12px Arial, Helvetica, sans-serif'
@@ -54,34 +59,32 @@ actionChart = new Highcharts.Chart({
       borderRadius: 0
    },
    legend: {
-     layout: 'horizontal',
-      style: {
-         position: 'absolute',
-         bottom: '3px',
-         right: '50px',
-         color: "#555555",
-         font: "10px Arial, Helvetica, sans-serif"
-      },
-      borderWidth: 1,
-      backgroundColor: '#FFFFFF',
-      borderRadius: 0,
-      borderColor: '#e7e7e7',
-      shadow: false
+     style: {
+        left: 'auto',
+        bottom: 'auto',
+        right: '10px',
+        top: '185px'
+     },
+     borderColor: '#D7D6D6',
+     borderWidth: 1,
+     borderRadius: 0,
+     shadow: false
    },
    plotOptions: {
-     column: {
-       pointWidth: 25
+     series: {
+        stacking: 'normal',
+        pointWidth: 30
      }
    },
 	 series: [
    {  
-     name: "Edward Smith",
-     data: [4.5, 1, 95],
-     color: "#98002e"
-   }, {
      name: "Specialty Norm",
-     data: [52.9, 38.4, 8.7],
-     color: "#00853f"
+     data: [52900, 38400, 8700],
+     color: "#009fc2"
+   }, {
+     name: "Edward Smith",
+     data: [4500, 40000, 95000],
+     color: "#e37f1c"
    }
   ]
 });

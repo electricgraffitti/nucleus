@@ -11,11 +11,11 @@ var scatterChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Provider Results',
-      style: {
-         color: "#c0c0c0",
-         display: 'none'
-      }
+    text: 'Provider Results',
+    style: {
+       color: "#555555",
+       display: 'none'
+    }
    },
    subtitle: {
      text: 'Source: HCI Data Center',
