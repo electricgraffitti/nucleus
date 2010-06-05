@@ -2,6 +2,7 @@ var barChart = new Highcharts.Chart({
    chart: {
       renderTo: 'accordion_stat_left_chart',
       defaultSeriesType: 'column',
+			margin: [50,25,60,50],
 			width: 240,
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
@@ -43,12 +44,15 @@ var barChart = new Highcharts.Chart({
       	text: 'Cases Opened',
 				enabled: false
       },
-      labels: {
+			labels: {
+        formatter: function() {
+          return "$" + this.value/1000 + "k";
+        },
         style: {
-          color: '#555555',
-          font: '10px Arial, Helvetica, sans-serif'
+          color: "#555555",
+          font: "10px Arial, Helvetica, sans-serif"
         }
-      }
+      },
    },
    tooltip: {
       formatter: function() {
@@ -64,7 +68,7 @@ var barChart = new Highcharts.Chart({
    plotOptions: {
     column: {
 			groupPadding: .1,
-      pointWidth: 22
+      pointWidth: 32
     }
    },
    legend: {

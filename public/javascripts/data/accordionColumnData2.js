@@ -3,6 +3,7 @@ var barChart = new Highcharts.Chart({
       renderTo: 'accordion_stat_middle_chart',
       defaultSeriesType: 'column',
 			width: 240,
+			margin: [50,25,60,40],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
@@ -64,7 +65,7 @@ var barChart = new Highcharts.Chart({
    plotOptions: {
     column: {
 			groupPadding: .1,
-      pointWidth: 22
+      pointWidth: 32
     }
    },
    legend: {
