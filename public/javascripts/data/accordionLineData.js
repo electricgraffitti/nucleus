@@ -3,13 +3,14 @@ actionChart = new Highcharts.Chart({
       renderTo: 'accordion_stat_right_chart', 
       defaultSeriesType: 'spline',
       width: 455,
-      height: 220,
       zoomType: 'xy',
-      margin: [40,10,50,50],
-      // backgroundColor: {
-      //   linearGradient: [0, 0, 0, 300],
-      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
-      // }
+      backgroundColor: {
+        linearGradient: [0, 0, 0, 300],
+        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+      },
+      borderColor: '#e7e7e7',
+      borderRadius: 10,
+      borderWidth: 1
    },
    credits: {
      enabled: false
@@ -31,17 +32,27 @@ actionChart = new Highcharts.Chart({
    xAxis: {
      categories: ['Jun 09', 'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
      labels: {
+			 rotation: 90,
        y: 20,
        style: {
          font: "10px Arial, Helvetica, sans-serif"
        }
      }
    },
-   yAxis: {
+	 yAxis: {
       title: {
         enabled: false,
         text: 'Dollars Billed'
-      }
+      },
+      labels: {
+        formatter: function() {
+          return "$" + this.value/1000 + "k";
+        },
+        style: {
+          color: "#555555",
+          font: "10px Arial, Helvetica, sans-serif"
+        }
+      },
    },
    tooltip: {
       formatter: function() {
