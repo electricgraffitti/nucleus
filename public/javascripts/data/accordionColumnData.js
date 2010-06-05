@@ -25,7 +25,7 @@ var barChart = new Highcharts.Chart({
    xAxis: {
       categories: ['Paid', 'Billed'],
       title: {
-         text: 'Provider Type',
+         text: 'Provider Billing',
          style: {
            color: '#555555',
            font: '12px Arial, Helvetica, sans-serif'
@@ -41,7 +41,7 @@ var barChart = new Highcharts.Chart({
    yAxis: {
       min: 0,
       title: {
-      	text: 'Cases Opened',
+      	text: 'Billed',
 				enabled: false
       },
 			labels: {
@@ -56,8 +56,8 @@ var barChart = new Highcharts.Chart({
    },
    tooltip: {
       formatter: function() {
-         return '<b>'+ this.x +'</b><br/>'+
-             this.series.name +': '+ this.y + " Cases Opened";
+         return '<b>' + this.x +'</b><br/>'+
+             this.series.name +': $'+ this.y + " Billed";
       },
       style: {
         font: '12px Arial, Helvetica, sans-serif'
