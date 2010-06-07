@@ -17,7 +17,7 @@
         <div class="resize_horz"></div>
       </div>
       <div class="table_select left">
-        <% form_tag providers_path, :method => :get do %>
+        <% form_tag provider_search_path, :method => :get do %>
           <%= select(:search, :search_value, @action_types.action_types, :prompt => 'Action' ) %>
           <%= submit_tag "Submit", :class => "medium_btn" %>
         <% end %>

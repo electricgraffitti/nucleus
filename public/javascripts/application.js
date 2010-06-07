@@ -261,9 +261,13 @@ var baseActions = {
   },
   
   setTips: function() {
-    $('.tip').tipTip({
-      defaultPosition: "top"
-    });
+    if((navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPhone/i))) {
+    	 return false;
+    } else {
+      $('.tip').tipTip({
+        defaultPosition: "top"
+      }); 
+    }
   },
   
   setOverlay: function() {
