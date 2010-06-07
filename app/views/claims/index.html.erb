@@ -26,7 +26,7 @@
           <% 28.times do %>
           <tr class='<%=cycle('even', 'odd')%>'>
             <td class="claim_sequence">5882788-22</td>
-            <td class="claim_number">0945496302</td>
+            <td class="claim_number"><%= link_to "0945496302", claim_action_path %></td>
             <td class="claim_form_type">H</td>
             <td class="claim_edits"></td>
             <td class="claim_reviewed">Reviewed</td>

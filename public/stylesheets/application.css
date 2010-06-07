@@ -2601,6 +2601,12 @@ table.claim_action_table {
   margin: 5px 10px;
   width: 240px;
   background: #fff;
+  border: 1px solid #e0e0e0;
+}
+#claim_action_right table tr th {
+  background: url('../images/inner_pages/claim_action_burton_bg.jpg') left top repeat-x;
+  color: #333;
+  height: 23px;
 }
 #claim_action_right table tr, #claim_action_right table td {
   border: none;
