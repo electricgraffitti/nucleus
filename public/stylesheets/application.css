@@ -2506,15 +2506,15 @@ ul.feedback_west_list li {
   width: 259px;
   height: 215px;
 }
-.claim_status_panel .column {
+.claim_status_panel .column, .claim_action_panel .column {
   padding: 8px;
   float: left;
 }
-.claim_status_panel .column_title {
+.claim_status_panel .column_title, .claim_action_panel .column_title {
   color: #888888;
   margin-bottom: 3px;
 }
-.claim_status_panel .column_content {
+.claim_status_panel .column_content, .claim_action_panel .column_content {
   color: #000;
 }
 #batch_image {
@@ -2530,8 +2530,14 @@ ul.feedback_west_list li {
 .column_1 {
   width: 105px;
 }
+.claim_action_panel .column_1 {
+  width: 105px;
+}
 .column_2 {
   width: 185px;
+}
+.claim_action_panel .column_2 {
+  width: 115px;
 }
 .column_3 {
   width: 110px;
@@ -2564,6 +2570,7 @@ ul.feedback_west_list li {
  background: url('../images/inner_pages/claim_action_burton_bg.jpg') left -23px repeat-x; 
 }
 #table_action_bar ul.page_nav li a {
+  float:left;
   min-width: 25px;
   display: block;
   color: #333;
@@ -2579,6 +2586,31 @@ ul.feedback_west_list li {
 }
 #table_action_bar ul.page_nav li.toggle_link a {
   padding-right: 10px;
+/*  background: url("images/ui-icons_454545_256x240.png") 0px -16px no-repeat;*/
+}
+#table_action_bar ul.page_nav li.toggle_link a span {
+  display:block;
+  float:right;
+  height:16px;
+  margin-left:10px;
+  position:relative;
+  width:16px;
+}
+table.claim_action_table {
+  float: left;
+  margin: 5px 10px;
+  width: 240px;
+  background: #fff;
+}
+#claim_action_right table tr, #claim_action_right table td {
+  border: none;
+}
+#claim_action_right table tr {
+  height: 20px;
+}
+#claim_action_right table td {
+  padding-left: 10px;
+  font-weight: bold;
 }
 /*********************************************/
 /******************TABLES********************/

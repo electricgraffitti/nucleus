@@ -107,7 +107,72 @@
       </div>
       <div id="claim_action_right">
         <div class="claim_action_panel">
-          
+          <div class="column column_1">
+            <div class="column_title">Claim Status</div>
+            <div class="column_content">Unreviewed</div>
+          </div>
+          <div class="column column_2">
+            <div class="column_title">Released To Client</div>
+            <div class="column_content">No</div>
+          </div>
+          <table id="product_review_status_table" class="claim_action_table">
+            <thead>
+              <tr>
+                <th>
+                  Product Review Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  DCI
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="column column_2">
+            <div class="column_content">Appeals</div>
+          </div>
+          <table id="claim_appeals_table" class="claim_action_table">
+            <thead>
+              <tr>
+                <th>
+                  Sequence
+                </th>
+                <th>
+                  Type
+                </th>
+                <th>
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  
+                </td>
+                <td>
+                  
+                </td>
+                <td>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  
+                </td>
+                <td>
+                  
+                </td>
+                <td>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="clear"></div>
@@ -118,28 +183,28 @@
         <div id="table_action_bar">
           <ul class="page_nav">
             <li class="toggle_link">
-              <%= link_to "Delete", "", :class => "tip", :title => "Claim Notes" %>
+              <%= link_to "Delete <span class='ui-icon ui-icon-triangle-1-s'></span>", "", :class => "tip", :title => "Delete Claim" %>
             </li>
             <li class="toggle_link">
-              <%= link_to "View", "", :class => "tip", :title => "Claim Docuements" %>
+              <%= link_to "View <span class='ui-icon ui-icon-triangle-1-s'></span>", "", :class => "tip", :title => "View Claim" %>
             </li>
             <li class="toggle_link">
-              <%= link_to "Approve/Next", "", :class => "tip", :title => "Claim Profile" %>
+              <%= link_to "Approve/Next <span class='ui-icon ui-icon-triangle-1-s'></span>", "", :class => "tip", :title => "Approve Claim" %>
             </li>
             <li>
-              <%= link_to "All", "", :class => "tip", :title => "Claim Refresh" %>
+              <%= link_to "All", "", :class => "tip", :title => "View All Claims" %>
             </li>
             <li>
-              <%= link_to "12 Months", "", :class => "tip", :title => "Claim Print" %>
+              <%= link_to "12 Months", "", :class => "tip", :title => "Last 12 Months" %>
             </li>
             <li>
-              <%= link_to "60 Days", "", :class => "tip", :title => "Claim Print" %>
+              <%= link_to "60 Days", "", :class => "tip", :title => "60 Day History" %>
             </li>
             <li>
-              <%= link_to "Same Day", "", :class => "tip", :title => "Claim Print" %>
+              <%= link_to "Same Day", "", :class => "tip", :title => "Same Day Claims" %>
             </li>
             <li>
-              <%= link_to "Provider History", "", :class => "tip", :title => "Claim Print" %>
+              <%= link_to "Provider History", "", :class => "tip", :title => "Provider History" %>
             </li>
           </ul>
         </div>
