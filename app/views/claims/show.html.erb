@@ -3,16 +3,111 @@
     <div id="action_panel" class="panel ui-layout-center">
       <div id="claim_action_left">
         <div class="claim_status_panel">
+          <div class="column column_1">
+            <div class="column_title">Claim Sequence</div>
+            <div class="column_content">6946049-1</div>
+          </div>
+          <div class="column column_2">
+            <div class="column_title">Image ID</div>
+            <div class="column_content column_file_input">
+              <% form_tag "" do %>
+              <%= file_field_tag :batch_image, :size => 16 %>
+              <% end %>
+            </div>
+          </div>
+          <div class="column column_3">
+            <div class="column_title">Batch ID</div>
+            <div class="column_content">HCI_20100427_01</div>
+          </div>
+          <div class="column column_4">
+            <div class="column_title">Review Group</div>
+            <div class="column_content">577</div>
+          </div>
+          <div class="column column_5">
+            <div class="column_title">Form Type</div>
+            <div class="column_content">UB</div>
+          </div>
+          <div class="column column_6">
+            <div class="column_title">Network Status</div>
+            <div class="column_content">In Network</div>
+          </div>
+        </div>
+        <div class="claim_status_panel">
+          <div class="column column_1">
+            <div class="column_title">Patient Sequence</div>
+            <div class="column_content">337048</div>
+          </div>
+          <div class="column column_2">
+            <div class="column_title">Age</div>
+            <div class="column_content">
+              31 years 9 months
+            </div>
+          </div>
+          <div class="column column_3">
+            <div class="column_title">Gender</div>
+            <div class="column_content">Female</div>
+          </div>
         </div>            
         <div class="claim_status_panel">
+          <div class="column column_1">
+            <div class="column_title">Provider Sequence</div>
+            <div class="column_content">213148</div>
+          </div>
+          <div class="column column_2">
+            <div class="column_title">Provider Name</div>
+            <div class="column_content">
+              C JED KESLER
+            </div>
+          </div>
+          <div class="column column_3">
+            <div class="column_title">Specialty</div>
+            <div class="column_content">19 - Oral Sugery</div>
+          </div>
+          <div class="column column_4">
+            <div class="column_title">State</div>
+            <div class="column_content">OH</div>
+          </div>
+          <div class="column column_5">
+            <div class="column_title">Zip Code</div>
+            <div class="column_content">43050</div>
+          </div>
+          <div class="column column_6">
+            <div class="column_title">Group Name</div>
+            <div class="column_content"></div>
+          </div>
         </div>            
         <div class="claim_status_panel">
-        </div>            
-        <div class="claim_status_panel">
+          <div class="column column_1">
+            <div class="column_title">Provider Sequence</div>
+            <div class="column_content">213148</div>
+          </div>
+          <div class="column column_2">
+            <div class="column_title">Provider Name</div>
+            <div class="column_content">
+              C JED KESLER
+            </div>
+          </div>
+          <div class="column column_3">
+            <div class="column_title">Specialty</div>
+            <div class="column_content">19 - Oral Sugery</div>
+          </div>
+          <div class="column column_4">
+            <div class="column_title">State</div>
+            <div class="column_content">OH</div>
+          </div>
+          <div class="column column_5">
+            <div class="column_title">Zip Code</div>
+            <div class="column_content">43050</div>
+          </div>
+          <div class="column column_6">
+            <div class="column_title">Group Name</div>
+            <div class="column_content"></div>
+          </div>
         </div>
       </div>
       <div id="claim_action_right">
         <div class="claim_action_panel">
+          
         </div>
       </div>
       <div class="clear"></div>
@@ -22,20 +117,29 @@
         </div>
         <div id="table_action_bar">
           <ul class="page_nav">
-            <li>
-              <%= link_to "Notes", "", :class => "tip", :title => "Claim Notes" %>
+            <li class="toggle_link">
+              <%= link_to "Delete", "", :class => "tip", :title => "Claim Notes" %>
+            </li>
+            <li class="toggle_link">
+              <%= link_to "View", "", :class => "tip", :title => "Claim Docuements" %>
+            </li>
+            <li class="toggle_link">
+              <%= link_to "Approve/Next", "", :class => "tip", :title => "Claim Profile" %>
             </li>
             <li>
-              <%= link_to "Documents", "", :class => "tip", :title => "Claim Docuements" %>
+              <%= link_to "All", "", :class => "tip", :title => "Claim Refresh" %>
             </li>
             <li>
-              <%= link_to "Profile", "", :class => "tip", :title => "Claim Profile" %>
+              <%= link_to "12 Months", "", :class => "tip", :title => "Claim Print" %>
             </li>
             <li>
-              <%= link_to "Refresh", "", :class => "tip", :title => "Claim Refresh" %>
+              <%= link_to "60 Days", "", :class => "tip", :title => "Claim Print" %>
             </li>
             <li>
-              <%= link_to "Print", "", :class => "tip", :title => "Claim Print" %>
+              <%= link_to "Same Day", "", :class => "tip", :title => "Claim Print" %>
+            </li>
+            <li>
+              <%= link_to "Provider History", "", :class => "tip", :title => "Claim Print" %>
             </li>
           </ul>
         </div>

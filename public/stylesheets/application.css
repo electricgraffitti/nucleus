@@ -2476,14 +2476,14 @@ ul.feedback_west_list li {
 #claim_action_left {
   position: relative;
   float: left;
-  width: 570px;
+  width: 750px;
   padding: 5px;
   min-height: 200px;
 }
 #claim_action_right {
   position: relative;
   float: left;
-  width: 424px;
+  width: 259px;
   padding: 5px 5px 5px 0px;
   min-height: 200px; 
 }
@@ -2492,15 +2492,89 @@ ul.feedback_west_list li {
   float: left;
   height: 50px;
   background: #eeeeee;
-  width: 570px;
+  width: 750px;
   margin-bottom: 5px;
 }
 .claim_action_panel {
   position: relative;
   float: left;
   background: #eeeeee;
-  width: 300px;
+  width: 259px;
   height: 215px;
+}
+.claim_status_panel .column {
+  padding: 8px;
+  float: left;
+}
+.claim_status_panel .column_title {
+  color: #888888;
+  margin-bottom: 3px;
+}
+.claim_status_panel .column_content {
+  color: #000;
+}
+#batch_image {
+  z-index: 2;
+  height: 20px;
+  opacity: 0;
+}
+.column_file_input {
+  width: 180px;
+  height: 20px;
+  background: url('../images/inner_pages/file_input_bg.jpg') no-repeat;
+}
+.column_1 {
+  width: 105px;
+}
+.column_2 {
+  width: 185px;
+}
+.column_3 {
+  width: 110px;
+}
+.column_4 {
+  width: 85px;
+}
+.column_5 {
+  width: 70px;
+}
+.column_6 {
+  width: 85px;
+}
+#table_action_bar ul.page_nav {
+  position: relative;
+  float:left;
+}
+#table_action_bar ul.page_nav li {
+  position: relative;
+  margin: 5px;
+  height: 23px;
+  color: #333;
+  border: 1px solid #dcdcdc;
+  float:left;
+  text-align: center;
+  background: url('../images/inner_pages/claim_action_burton_bg.jpg') left top repeat-x;
+}
+#table_action_bar ul.page_nav li:hover, #table_action_bar ul.page_nav li.active {
+  color: #fff;
+ background: url('../images/inner_pages/claim_action_burton_bg.jpg') left -23px repeat-x; 
+}
+#table_action_bar ul.page_nav li a {
+  min-width: 25px;
+  display: block;
+  color: #333;
+  padding: 3px 8px;
+  height: 17px;
+}
+#table_action_bar ul.page_nav li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+#table_action_bar ul.page_nav li.toggle_link {
+  text-align: left;
+}
+#table_action_bar ul.page_nav li.toggle_link a {
+  padding-right: 10px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -2773,10 +2847,10 @@ tr.active {
   border-top: 1px solid #c0c0c0;
 }
 .claim_action_desc {
-  width: 140px;
+  width: 115px;
 }
 .claim_action_mod {
-  width: 150px;
+  width: 130px;
 }
 /*********Accordion Tables********/
 h4.accordion_table_header {
