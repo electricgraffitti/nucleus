@@ -3,10 +3,14 @@
 
 class ApplicationController < ActionController::Base
     helper :all
-    helper_method :current_client, :current_client_session, :super?, :super_admin
+    helper_method :current_client, :current_client_session, :super?, :super_admin, :ipad?
     filter_parameter_logging :password, :password_confirmation
 
     private
+      
+      def ipad?
+        request.user_agent =~ /iPad/i
+      end
       
       def current_client_session
         return @current_client_session if defined?(@current_client_session)

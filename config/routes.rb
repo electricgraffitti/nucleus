@@ -43,6 +43,8 @@ ActionController::Routing::Routes.draw do |map|
   map.sbrd_stats "sbrd-stats", :controller => "provider_stats", :action => "sbrd_stat_panel"
   map.sdes_stats "sdes-stats", :controller => "provider_stats", :action => "sdes_stat_panel"
   
+  map.street_view "street-view", :controller => "providers", :action => "street_view"
+  
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"
   map.panel_test "panel-test", :controller => "dashboard", :action => "panel_test"

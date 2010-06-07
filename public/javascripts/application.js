@@ -223,7 +223,7 @@ var baseActions = {
   
   setAccordionDefault: function(attribute){
     $('#accordion').accordion({
-	    active: 2,
+	    active: 2, // Set the default accordion pane
 	    icons: { 'header': 'ui-icon-triangle-1-s', 'headerSelected': 'ui-icon-triangle-1-n' },
 	    autoHeight: false
 	  });

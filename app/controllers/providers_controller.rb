@@ -97,6 +97,12 @@ class ProvidersController < ApplicationController
     end
   end
   
+  def street_view
+    respond_to do |format|
+      format.html { render :layout => false }
+    end
+  end
+  
   def provider_search
     @providers = Provider.all
     if params[:id].nil?
