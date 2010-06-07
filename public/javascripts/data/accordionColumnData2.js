@@ -1,9 +1,9 @@
 var barChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'accordion_stat_left_chart',
+      renderTo: 'accordion_stat_middle_chart',
       defaultSeriesType: 'column',
-			margin: [50,25,60,50],
 			width: 240,
+			margin: [50,25,60,40],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
@@ -16,16 +16,16 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Provider Billing',
+      text: 'Patient Averages',
       style: {
         color: '#555555',
         font: '16px Arial, Helvetica, sans-serif'
       } 
    },
    xAxis: {
-      categories: ['Paid', 'Billed'],
+      categories: ['Total', 'Per Visit'],
       title: {
-         text: 'Provider Billing',
+         text: 'Patient Averages',
          style: {
            color: '#555555',
            font: '12px Arial, Helvetica, sans-serif'
@@ -41,23 +41,20 @@ var barChart = new Highcharts.Chart({
    yAxis: {
       min: 0,
       title: {
-      	text: 'Billed',
+      	text: 'Patients',
 				enabled: false
       },
-			labels: {
-        formatter: function() {
-          return "$" + this.value/1000 + "k";
-        },
+      labels: {
         style: {
-          color: "#555555",
-          font: "10px Arial, Helvetica, sans-serif"
+          color: '#555555',
+          font: '10px Arial, Helvetica, sans-serif'
         }
-      },
+      }
    },
    tooltip: {
       formatter: function() {
-         return '<b>' + this.x +'</b><br/>'+
-             this.series.name +': $'+ this.y + " Billed";
+         return '<b>'+ this.x +'</b><br/>'+
+             this.series.name +': '+ this.y + " Patients";
       },
       style: {
         font: '12px Arial, Helvetica, sans-serif'
@@ -72,27 +69,18 @@ var barChart = new Highcharts.Chart({
     }
    },
    legend: {
-     style: {
-        left: '2px',
-        bottom: 'auto',
-        right: 'auto',
-        top: '355px'
-     },
-     borderColor: '#e7e7e7',
-     borderWidth: 1,
-     borderRadius: 0,
-     shadow: false
+		enabled: false
    },
    credits: {
       enabled: false
    },
    series: [{
       name: 'Speciality Average',
-      data: [86923, 217886],
+      data: [127, 39],
       color: "#009fc2"
       }, {
       name: 'Dr. Smith',
-      data: [254032, 469950],
+      data: [271, 103],
       color: '#e37f1c'
       }]
 });
