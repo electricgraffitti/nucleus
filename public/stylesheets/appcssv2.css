@@ -1,0 +1,108 @@
+/***************************************************************************************/
+/*************************************************************PROVIDER PROFILE**********/
+#v2 #provider_rating, #v2 #provider_rating_full {
+  background: #D3D4D4;
+	font-size:23px;
+	font-weight:bold;
+	height:34px;
+	position:absolute;
+	padding:5px 0px 0 46px;
+	right:0;
+	top:0;
+	width:55px;
+	text-shadow: 0px 1px 0px #efefef;
+}
+#v2 #provider_rating_full {
+  top: 0px;
+  left: 0px;
+  padding:5px 0px 0 46px;
+  margin-right: 25px;
+}
+#v2 #provider_rating.green_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs_left-v2.png') right -117px no-repeat;
+}
+#v2 #provider_rating_full.green_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs_left-v2.png') left -117px no-repeat;
+}
+#v2 #provider_rating.yellow_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs_left-v2.png') right -39px no-repeat;
+}
+#v2 #provider_rating_full.yellow_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs_left-v2.png') left -39px no-repeat;
+}
+#v2 #provider_rating.red_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs_left-v2.png') right 0px no-repeat;
+}
+#v2 #provider_rating_full.red_rating {
+  background: #D3D4D4 url('../images/inner_pages/provider_rating_discs_left-v2.png') left 0px no-repeat;
+}
+#v2 .provider_heading_full h3 {
+  margin-left: 100px;
+}
+#v2 .small_flag_panel {
+  position: relative;
+  float: left;
+}
+#v2 a.flag_panel {
+  float:left;
+}
+#v2 .small_flag_panel .provider_flag_panel {
+  background:url("../images/inner_pages/profile_flag_bgv2.jpg") repeat-x scroll left top #333333;
+  color:#FFFFFF;
+  float:left;
+  font-size:12px;
+  height:25px;
+  margin:0 0 5px 6px;
+  padding:0;
+  position:relative;
+  text-align:center;
+  width:159px;
+}
+#v2 .small_flag_panel .provider_flag_panel.first {
+  margin-left: 0px;
+}
+#v2 .small_flag_panel .inner_flag_panel {
+  position: relative;
+  margin: 0px auto;
+  padding: 5px 0px 0px 0px;
+  height: 20px;
+}
+#v2 .small_flag_panel .inner_flag_panel.statistics {
+  width: 75px;
+}
+#v2 .small_flag_panel .inner_flag_panel.license {
+  width: 125px;
+}
+#v2 .small_flag_panel .inner_flag_panel.address {
+  width: 72px;
+}
+#v2 .small_flag_panel .inner_flag_panel.information {
+  width: 90px;
+}
+#v2 .small_flag_panel .inner_flag_panel.npi {
+  width: 75px;
+}
+#v2 .small_flag_panel .inner_flag_panel.specialty {
+  width: 85px;
+}
+#v2 .small_flag_panel .flag_box {
+  position: relative;
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-top: -5px;
+}
+#v2 .small_flag_panel .flag_box.red_flag {
+  background: url("../images/inner_pages/provider_flags_spritev2.jpg") left top no-repeat #333333;
+}
+#v2 .small_flag_panel .flag_box.green_flag {
+  background: url("../images/inner_pages/provider_flags_spritev2.jpg") -25px top no-repeat #333333;
+}
+#v2 #accordion h3 span {
+  float:left;
+  margin-right:15px;
+  position:relative;
+}
+#v2 #accordion h3 {
+  padding-left: 0px;
+}

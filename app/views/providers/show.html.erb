@@ -8,9 +8,9 @@
     <div class="full_panel provider_heading_full">
       <%= render :partial => 'providers/provider_heading_full', :locals => {:provider => @provider} %>
     </div>
-    <%= render :partial => 'providers/provider_flags' %>
+    <%= render :partial => 'providers/provider_flags' + APP['appversion'] %>
     <div id="panel_south" class="ui-layout-south">
-      <%= render :partial => 'providers/provider_accordion', :locals => {:m => @map, :provider => @provider} %>
+      <%= render :partial => 'providers/provider_accordion' + APP['appversion'], :locals => {:m => @map, :provider => @provider} %>
     </div>
   </div>
   <div class="clear"></div>
