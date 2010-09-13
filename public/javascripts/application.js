@@ -282,7 +282,7 @@ var baseActions = {
 
             // grab wrapper element inside content 
             var wrap = this.getOverlay().find(".contentWrap"); 
-
+            // var theurl = this.getTrigger().attr("href");
             // load the page specified in the trigger 
             wrap.load(this.getTrigger().attr("href")); 
         }
@@ -312,5 +312,5 @@ $(document).ready(function() {
   $('#provider_action_table tbody tr:first').click();
   
   // test for js success
-  console.log("js success");
+  // console.log("js success");
 });

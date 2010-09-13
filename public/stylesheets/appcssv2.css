@@ -106,3 +106,44 @@
 #v2 #accordion h3 {
   padding-left: 0px;
 }
+/***************************************************************************************/
+/*************************************************************Profile Overlay***********/
+
+/*/* overlay size and background image */ 
+div.overlay2 { 
+    position: relative;
+    width:900px; 
+    /*background-image:url(../images/overlay/apple.png); */
+    background: #fff;
+    display:none; 
+    padding: 0 !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+    -moz-box-shadow: 2px 2px 5px #000;
+    -webkit-box-shadow: 2px 2px 5px #000;
+} 
+ 
+/* close button for overlay */ 
+div.overlay2 div.close { 
+    background:url(../images/overlay/apple-close.png) no-repeat; 
+    position:absolute; 
+		right:-22px;
+		top:-12px;
+    width:35px; 
+    height:35px; 
+    cursor:pointer;
+    z-index: 10;
+}
+.contentWrap {
+  position: relative;
+  float: left;
+  text-align: left;
+}
+.iframe {
+  border: none;
+}
+#inner {
+  margin-top: -200px;
+}

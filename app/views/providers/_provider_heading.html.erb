@@ -1,2 +1,6 @@
-  <h3><span><%= link_to "#{provider.full_name}", provider_path(provider), :class => "tip", :title => "Provider Profile" %></span></h3>
-  <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating"><%= link_to "#{provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Actions" %></div>
+  <h3>
+    <span><%= link_to "#{provider.full_name}", provider_path(provider), :class => "tip provider_profile_link", :title => "Provider Profile", :rel => '#overlay' %></span>
+  </h3>
+  <div id="provider_rating" class="<%= provider.score_color(provider)%>_rating">
+    <%= link_to "#{provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Actions" %>
+  </div>
