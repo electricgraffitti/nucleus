@@ -270,6 +270,41 @@ var baseActions = {
     }
   },
   
+  containerTrigger: function() {
+    $('.provider_container_trigger').bind("click", function() {
+      var linkurl = $(this).attr('href');
+      var data = $(this).attr('provider_id');
+      newwindow = window.open(linkurl,'Provider Profile','width=1024, height=768, location=false,menubar=false,status=false,toolbar=false');
+      if (window.focus) {newwindow.focus()}
+      
+      return false;
+    });
+  },
+  
+  // containerTrigger: function() {
+  //   $('.provider_container_trigger').bind("click", function() {
+  //     var linkurl = $(this).attr('href');
+  //     var data = $(this).attr('provider_id');
+  //     baseActions.containerBuilder(linkurl, data);
+  //     return false;
+  //   });
+  // },
+  // 
+  // containerBuilder: function(lu, d) {
+  //   $(".containerPlus").buildContainers({
+  //     containment:"document",
+  //     elementsPath:"../elements/",
+  //     onResize:function(o){},
+  //     onClose:function(o){},
+  //     onCollapse:function(o){},
+  //     onIconize:function(o){},
+  //     onDrag:function(o){},
+  //     onLoad:function(o){}
+  //   });
+  //   $("#popupContainer").mb_changeContainerContent(lu,{id:d}, "GET");
+  // },
+  
+  
   setOverlay: function() {
     $("a[rel]").overlay({ 
         expose: {
@@ -307,6 +342,7 @@ $(document).ready(function() {
   
   baseActions.setDefaults();
   tableActions.setDefaultTableActions();
+  baseActions.containerTrigger();
   
   $('#provider_search tbody tr:first').click();
   $('#provider_action_table tbody tr:first').click();
