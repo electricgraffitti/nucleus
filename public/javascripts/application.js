@@ -274,8 +274,8 @@ var baseActions = {
     $('.provider_container_trigger').bind("click", function() {
       var data = $(this).attr('provider_id');
       var linkurl = "/provider_profile/" + data;
-      profilePopout = window.open(linkurl,'Provider Profile', 'width=900, height=650, statusbar=0, location=0, menubar=0, toolbar=0');
-      if (window.focus) {profilePopout.focus()}
+      profilewindow = window.open(linkurl,'Provider_Profile', 'width=900, height=650, statusbar=0, location=0, menubar=0, toolbar=0');
+      if (window.focus) {profilewindow.focus()}
       return false;
     });
   },
