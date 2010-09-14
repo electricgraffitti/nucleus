@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
   
-  
   map.resources :claims
   map.resources :monthly_billings
   map.resources :procedures
@@ -26,8 +25,8 @@ ActionController::Routing::Routes.draw do |map|
   # Login Logout
   map.login "nucleus-login", :controller => "client_sessions", :action => "login2"
   map.logout "nucleus-logout", :controller => "client_sessions", :action => "destroy"
-  # map.login2 "nucleus-login", :controller => "client_sessions", :action => "login2"
 
+  # Named Routes
   map.dashboard "nucleus-client-dashboard", :controller => "dashboard", :action => "index"
   map.client_feedback "nucleus-client-feedback", :controller => "feedbacks", :action => "index"
   map.client_settings "nucleus-client-settings", :controller => "clients", :action => "show"
@@ -38,7 +37,10 @@ ActionController::Routing::Routes.draw do |map|
   map.provider_search "nucleus-provider-search/:id", :controller => "providers", :action => "provider_search"
   map.provider_action "nucleus-provider-action/:id", :controller => "providers", :action => "provider_action"
   
-  # For Ajax Hits
+  # For Popout Modals
+  map.profile_modal "provider_profile/:id", :controller => "modals", :action => "provider_profile"
+  
+  # For Ajax Calls
   map.sfrp_stats "sfro-stats", :controller => "provider_stats", :action => "sfro_stat_panel"
   map.sbrd_stats "sbrd-stats", :controller => "provider_stats", :action => "sbrd_stat_panel"
   map.sdes_stats "sdes-stats", :controller => "provider_stats", :action => "sdes_stat_panel"

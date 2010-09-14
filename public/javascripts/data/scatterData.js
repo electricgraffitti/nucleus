@@ -12,7 +12,7 @@ var scatterChart = new Highcharts.Chart({
         font: '16px Arial, Helvetica, sans-serif'
       },
       borderColor: '#e7e7e7',
-      borderRadius: 10,
+      borderRadius: 0,
       borderWidth: 1
    },
    credits: {

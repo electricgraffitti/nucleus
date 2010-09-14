@@ -270,13 +270,12 @@ var baseActions = {
     }
   },
   
-  containerTrigger: function() {
+  modalTrigger: function() {
     $('.provider_container_trigger').bind("click", function() {
-      var linkurl = $(this).attr('href');
       var data = $(this).attr('provider_id');
-      newwindow = window.open(linkurl,'Provider Profile','width=1024, height=768, location=false,menubar=false,status=false,toolbar=false');
-      if (window.focus) {newwindow.focus()}
-      
+      var linkurl = "/provider_profile/" + data;
+      profilePopout = window.open(linkurl,'Provider Profile', 'width=900, height=650, statusbar=0, location=0, menubar=0, toolbar=0');
+      if (window.focus) {profilePopout.focus()}
       return false;
     });
   },
@@ -342,7 +341,7 @@ $(document).ready(function() {
   
   baseActions.setDefaults();
   tableActions.setDefaultTableActions();
-  baseActions.containerTrigger();
+  baseActions.modalTrigger();
   
   $('#provider_search tbody tr:first').click();
   $('#provider_action_table tbody tr:first').click();

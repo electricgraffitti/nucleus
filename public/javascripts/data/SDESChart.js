@@ -35,7 +35,8 @@ actionChart = new Highcharts.Chart({
    yAxis: {
       title: {
         enabled: false,
-        text: 'Dollars Billed'
+        // text: 'Dollars Billed'
+        text: null
       },
       labels: {
         formatter: function() {

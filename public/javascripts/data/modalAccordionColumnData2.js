@@ -2,7 +2,8 @@ var barChart = new Highcharts.Chart({
    chart: {
       renderTo: 'accordion_stat_middle_chart',
       defaultSeriesType: 'column',
-			width: 240,
+			width: 229,
+			height: 256,
 			margin: [50,25,60,40],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
@@ -16,20 +17,22 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Patient Averages',
-      style: {
-        color: '#555555',
-        font: '16px Arial, Helvetica, sans-serif'
-      } 
+      text: null,
+      // style: {
+      //   color: '#555555',
+      //   font: '16px Arial, Helvetica, sans-serif'
+      // } 
    },
    xAxis: {
       categories: ['Total', 'Per Visit'],
       title: {
-         text: 'Patient Averages',
-         style: {
-           color: '#555555',
-           font: '12px Arial, Helvetica, sans-serif'
-         }
+         text: null,
+         enabled: false
+         // text: 'Patient Averages',
+         // style: {
+         //   color: '#555555',
+         //   font: '12px Arial, Helvetica, sans-serif'
+         // }
       },
       labels: {
         style: {
@@ -41,7 +44,7 @@ var barChart = new Highcharts.Chart({
    yAxis: {
       min: 0,
       title: {
-      	text: 'Patients',
+      	text: null,
 				enabled: false
       },
       labels: {
@@ -69,13 +72,26 @@ var barChart = new Highcharts.Chart({
     }
    },
    legend: {
-		enabled: false
+    align: 'left',
+		width: 200,
+    borderRadius: 0,
+    borderWidth: 1,
+    borderColor: "#e3e3e3",
+    itemWidth: 100,
+    layout: "horizontal",
+    symbolWidth: 13,
+    symbolPadding: 2,
+    itemStyle: {
+        fontWeight: 'bold',
+        color: '#555555',
+        fontSize: '10px'
+    }
    },
    credits: {
       enabled: false
    },
    series: [{
-      name: 'Speciality Average',
+      name: 'Specialty Avg',
       data: [127, 39],
       color: "#009fc2"
       }, {

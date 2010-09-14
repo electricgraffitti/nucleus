@@ -3,7 +3,8 @@ var barChart = new Highcharts.Chart({
       renderTo: 'accordion_stat_left_chart',
       defaultSeriesType: 'column',
 			margin: [50,25,60,50],
-			width: 240,
+			width: 229,
+			height: 256,
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
@@ -16,20 +17,22 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Provider Billing',
-      style: {
-        color: '#555555',
-        font: '16px Arial, Helvetica, sans-serif'
-      } 
+      text: null,
+      // style: {
+      //   color: '#555555',
+      //   font: '16px Arial, Helvetica, sans-serif'
+      // } 
    },
    xAxis: {
       categories: ['Paid', 'Billed'],
       title: {
-         text: 'Provider Billing',
-         style: {
-           color: '#555555',
-           font: '12px Arial, Helvetica, sans-serif'
-         }
+        text: null,
+				enabled: false
+         // text: 'Provider Billing',
+         // style: {
+         //   color: '#555555',
+         //   font: '12px Arial, Helvetica, sans-serif'
+         // }
       },
       labels: {
         style: {
@@ -41,7 +44,6 @@ var barChart = new Highcharts.Chart({
    yAxis: {
       min: 0,
       title: {
-      	// text: 'Billed',
       	text: null,
 				enabled: false
       },
@@ -73,23 +75,27 @@ var barChart = new Highcharts.Chart({
     }
    },
    legend: {
-     enabled: false,
-     style: {
-        left: '2px',
-        bottom: 'auto',
-        right: 'auto',
-        top: '355px'
-     },
-     borderColor: '#e7e7e7',
-     borderWidth: 1,
+     align: 'left',
+ 		 width: 197,
      borderRadius: 0,
-     shadow: false
+     borderWidth: 1,
+     borderColor: "#e3e3e3",
+     itemWidth: 98,
+     layout: "horizontal",
+     symbolWidth: 13,
+     symbolHeight: 10,
+     symbolPadding: 2,
+     itemStyle: {
+         fontWeight: 'bold',
+         color: '#555555',
+         fontSize: '10px'
+     }
    },
    credits: {
       enabled: false
    },
    series: [{
-      name: 'Speciality Average',
+      name: 'Specialty Avg',
       data: [86923, 217886],
       color: "#009fc2"
       }, {

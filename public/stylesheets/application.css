@@ -1128,9 +1128,9 @@ span#occurence {
   height: 338px;
   text-align: center;
   border: 1px solid #e7e7e7;
-  border-radius: 10px;
+/*  border-radius: 10px;
   -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -webkit-border-radius: 10px;*/
   background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;
 }
 #top_left_dashboard .dashboard_basic_panel {

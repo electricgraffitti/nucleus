@@ -9,7 +9,7 @@ var lineChart = new Highcharts.Chart({
       },
       zoomType: 'xy',
       borderColor: '#e7e7e7',
-      borderRadius: 10,
+      borderRadius: 0,
       borderWidth: 1
    },
    credits: {

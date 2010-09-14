@@ -1,0 +1,13 @@
+<div class="side_wrap">
+  <%= link_to '<div id="logo">Nucleus</div>', quick_launch_path %>
+  <div id="brand_wrap">
+  <%= image_tag("header/account_brand.png", :alt => "Molina Healthcare", :id => "account_brand") %>
+  </div>
+  <div id="client_name">
+    Welcome <%= current_client.first_name %>
+  </div>
+</div>
+<div id="nav_wrapper">
+  <%= render :partial => 'layouts/main_nav', :locals => {:client => current_client} %>
+  <%= render :partial => 'layouts/icon_nav' %>
+</div>

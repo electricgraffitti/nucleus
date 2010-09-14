@@ -1,50 +1,61 @@
 actionChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'provider_action_chart', 
+      renderTo: 'accordion_stat_right_chart', 
       defaultSeriesType: 'spline',
-      width: 300,
-      height: 220,
+      width: 373,
+      height: 256,
+      margin: [50,30,40,45],
       zoomType: 'xy',
-      margin: [40,10,50,50],
-      // backgroundColor: {
-      //   linearGradient: [0, 0, 0, 300],
-      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
-      // }
+      backgroundColor: {
+        linearGradient: [0, 0, 0, 300],
+        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+      },
+      borderColor: '#e7e7e7',
+      borderRadius: 0,
+      borderWidth: 1
    },
    credits: {
      enabled: false
    },
    title: {
-      text: 'Billing Spike - Dollars Billed by Month',
+      text: 'Dr. Edward Smith - Dollars Billed by Month',
       style: {
          color: "#555555",
          font: "14px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
-     text: 'Source: HCI Data Center',
+     text: 'Past 12 Months',
      style: {
-        color: "#c0c0c0",
-        display: 'none'
+        color: "#1aa64a",
+        fontSize: "10px"
+        // display: 'none'
      }
    },
    xAxis: {
-     categories: ['Jan 09', 'Feb 09', 'Mar 09', 'Apr 09', 'May 09', 'Jun 09', 
-        'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
+     categories: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug', 'Sept', 'Oct'],
      labels: {
-       rotation: 90,
+			 rotation: 0,
        y: 20,
        style: {
          font: "10px Arial, Helvetica, sans-serif"
        }
      }
    },
-   yAxis: {
+	 yAxis: {
       title: {
         enabled: false,
-        // text: 'Dollars Billed'
         text: null
-      }
+      },
+      labels: {
+        formatter: function() {
+          return "$" + this.value/1000 + "k";
+        },
+        style: {
+          color: "#555555",
+          font: "10px Arial, Helvetica, sans-serif"
+        }
+      },
    },
    tooltip: {
       formatter: function() {
@@ -92,7 +103,7 @@ actionChart = new Highcharts.Chart({
    series: [
    {  
      name: "Condition Billing",
-     data: [2345,4253,21568,14859,19854,20635,17485,19874,18121,18003,17563,10478,13568,15689,16895,19865,14274],
+     data: [2345,4253,4953,3752,3254,6500,23485,19874,18121,18003,17563,10478],
      color: '#e37f1c'
    }]
 });

@@ -37,7 +37,8 @@ actionChart = new Highcharts.Chart({
    yAxis: {
       title: {
         enabled: false,
-        text: 'Comparison Ratio'
+        // text: 'Comparison Ratio'
+        text: null
       },
       labels: {
         formatter: function() {

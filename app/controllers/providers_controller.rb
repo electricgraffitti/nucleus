@@ -6,7 +6,6 @@ class ProvidersController < ApplicationController
   # GET /providers.xml
   def index
     @providers = Provider.all
-    
     @response = { :item => @providers }
     
     respond_to do |format|
