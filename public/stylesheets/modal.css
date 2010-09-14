@@ -1822,4 +1822,10 @@ div.overlay div.close {
   .sub_panel.last form {
     height: 25px;
   }
+  div.provider_location_box {
+    width: 435px;
+  }
+  .suspect_location_notice {
+    width:435px;
+  }
 }
