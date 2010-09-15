@@ -958,7 +958,7 @@ a.flag_panel {
 .charts_maps_wrap {
   position: relative;
   float: left;
-  width: 386px;
+  width: 394px;
   padding: 0px;
   height: 218px;
   border: 1px solid #c0c0c0;
@@ -967,7 +967,7 @@ a.flag_panel {
 div.provider_location_box {
   position: relative;
   float: left;
-  width: 430px;
+  width: 450px;
   padding: 0px 20px 0px 0px;
   border-bottom: 1px solid #c0c0c0;
 }

@@ -12,11 +12,11 @@ body {
   color: #6ac520;
 }
 a {
-  color: #6ac520;
+  color: #00a1e4;
   text-decoration: none;
 }
 a:hover {
-  color: #2070b5;
+  color: #f99e29;
   text-decoration: underline;
 }
 #wrapper {
@@ -31,7 +31,7 @@ a:hover {
 	width:100%;
 }
 #inner {
-	background: transparent url('../images/login2/graphic_bg.jpg') -55px 50% no-repeat;
+	background: transparent url('../images/login2/graphic_bg2.jpg') -55px 50% no-repeat;
 	color:#F3F3F3;
 	display:block;
 	height:100%;
@@ -53,7 +53,7 @@ a:hover {
 	width: 180px;
 	height: 56px;
 	text-indent: -3000em;
-	background: url('../images/login2/logo.png') no-repeat;
+	background: url('../images/login2/logo2.png') no-repeat;
 }
 h2.sub_title {
 	font-size:18px;
