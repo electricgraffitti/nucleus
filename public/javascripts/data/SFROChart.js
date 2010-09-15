@@ -83,11 +83,11 @@ actionChart = new Highcharts.Chart({
    {  
      name: "Specialty Norm",
      data: [39.81, 42.30, 17.39],
-     color: "#009fc2"
+     color: "#009fe2"
    }, {
      name: "Edward Smith",
      data: [28.9, 2.6, 68.4],
-     color: "#e37f1c"
+     color: "#f89c28"
    }
   ]
 });

@@ -95,14 +95,14 @@ var barChart = new Highcharts.Chart({
    series: [{
       name: 'ASC',
       data: [245, 230, 210, 225, 205, 240],
-      color: "#78496a"
+      color: "#71bd44"
       }, {
       name: 'Hosptial',
       data: [200, 195, 192, 177, 142, 174],
-      color: '#e37f1c'
+      color: '#f89c28'
       }, {
       name: 'Prof',
       data: [165, 145, 132, 112, 102, 132],
-      color: '#00467f'
+      color: '#009fe2'
    }]
 });

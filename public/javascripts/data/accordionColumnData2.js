@@ -77,10 +77,10 @@ var barChart = new Highcharts.Chart({
    series: [{
       name: 'Speciality Average',
       data: [127, 39],
-      color: "#009fc2"
+      color: "#009fe2"
       }, {
       name: 'Dr. Smith',
       data: [271, 103],
-      color: '#e37f1c'
+      color: '#f89c28'
       }]
 });

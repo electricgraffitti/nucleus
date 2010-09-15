@@ -101,7 +101,7 @@ actionChart = new Highcharts.Chart({
    {  
      name: "Condition Billing",
      data: [2345,4253,4953,3752,3254,6500,23485,19874,18121,18003,17563,10478],
-     color: '#e37f1c'
+     color: '#f89c28'
    }]
 });
 

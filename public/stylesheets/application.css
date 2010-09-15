@@ -57,7 +57,7 @@ html, body {
   text-shadow:0 1px 1px #DEDEDE;
 }
 .green_header {
-  background: #6ac520;
+  background: #71bd44;
   padding-left: 20px;
   padding-top: 5px;
   color: #fff;
@@ -177,10 +177,11 @@ p {
   text-align: justify;
 }
 .green_background {
-  background: #6ac520;
+  background: #71bd44;
 }
 .green {
-  color: #6ac520;
+  /*color: #71bd44;*/
+  color: #71bd44;
 }
 .grey_background {
   background: #d2d3d3 url('../images/login/grey_bg_gradient.jpg') left top repeat-x;
@@ -285,7 +286,7 @@ label.error {
  	float:left;
 	width: 100%;
   height: 51px;
-	border-bottom:2px solid #6AC520;
+	border-bottom:2px solid #71bd44;
 	border-top: 1px solid #424041;
   background: #6b6a6a url('../images/header/header_dark_bg.jpg') left top repeat-x;
 }
@@ -322,7 +323,7 @@ label.error {
   height: 30px;
   width: 100%;
 	background: url('../images/header/main_nav_bg.png') 0px 0px repeat-x;
-	border-top: 1px solid #6ac520;
+	border-top: 1px solid #71bd44;
 }
 ul.nav_ul {
   position: relative;
@@ -463,7 +464,7 @@ html ul.topnav li ul.subnav li a {
     font-weight: bold;
 }  
 html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
-    background: #6ac520;
+    background: #71bd44;
     color: #fff;
     text-shadow: 0px 1px 1px #59a61b;
     font-size: 12px;
@@ -724,7 +725,7 @@ div.scaffold_pane label {
 	left: -1px;
 	color: #fff;
 	height: 17px;
-	background:none repeat scroll 0 0 #6AC520;
+	background:none repeat scroll 0 0 #71bd44;
 	color:#fff;
 	font-size:13px;
 	font-weight:bold;
@@ -1235,14 +1236,14 @@ span#occurence {
 #provider_stat_date_range_date_range_id {
   margin: 0px;
   width: 173px;
-  background: #6ac520;
+  background: #71bd44;
 	color: #fff;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
   padding: 2px;
 }
 #switch-lang {
-  background: #6ac520;
+  background: #71bd44;
 	color: #fff;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
@@ -1251,7 +1252,7 @@ span#occurence {
 #search_search_topic_id {
   margin: 20px 0px 10px 18px;
   width: 173px;
-  background: #6ac520;
+  background: #71bd44;
 	color: #fff;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
@@ -1702,7 +1703,7 @@ ul.help_west_list li {
 }
 #help_search {
   position: relative;
-  background: #6ac520;
+  background: #71bd44;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -1926,7 +1927,7 @@ h2.panel_heading {
   position: relative;
 }
 .message_category.active {
-  background: #6ac520;
+  background: #71bd44;
   padding-left: 35px;
   padding-top: 5px;
   color: #fff;
@@ -2025,7 +2026,7 @@ h2.content_header {
 }
 #message_search {
   position: relative;
-  background: #6ac520;
+  background: #71bd44;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -2266,7 +2267,7 @@ ul.feedback_west_list li {
 }
 #feedback_search {
   position: relative;
-  background: #6ac520;
+  background: #71bd44;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -2455,7 +2456,7 @@ ul.feedback_west_list li {
   position: relative;
 }
 .feedback_category.active {
-  background: #6ac520;
+  background: #71bd44;
   padding-left: 20px;
   padding-top: 5px;
   color: #fff;
@@ -2641,7 +2642,7 @@ table.claim_action_table {
 }
 .table_select select {
   width: 173px;
-  background: #6ac520;
+  background: #71bd44;
 	color: #fff;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
@@ -2788,7 +2789,7 @@ tr.even {
 }
 tr.active {
 /*  background: #d2edbc;*/
-  background: #6ac520;
+  background: #71bd44;
 	color: #fff;
 	font-weight: bold;
 }
@@ -3104,7 +3105,7 @@ input[type="text"], input[type="password"], textarea {
   margin: 5px 0px;
 }
 input[type="text"]:focus {
-  border: 1px solid #6AC520;
+  border: 1px solid #71bd44;
   background: #efefef;
 }
 select {
@@ -3243,7 +3244,7 @@ div.overlay div.close {
 	padding: 20px;
 }
 .claim_notes h1 {
-  color: #6ac520;
+  color: #71bd44;
   text-shadow: 1px 1px 1px rgba('0,0,0,.2');
   margin-bottom: 10px;
   font-size: 18px;

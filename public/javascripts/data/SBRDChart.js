@@ -29,8 +29,8 @@ actionChart = new Highcharts.Chart({
      }
    },
    xAxis: {
-     categories: ['Jan 09', 'Feb 09', 'Mar 09', 'Apr 09', 'May 09', 'Jun 09', 
-        'Jul 09', 'Aug 09', 'Sep 09', 'Oct 09', 'Nov 09', 'Dec 09','Jan 10', 'Feb 10', 'Mar 10', 'Apr 10', 'May 10'],
+     categories: ['July', 'Aug', 'Sept', 'Oct','Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 
+        'May', 'June', 'July', 'Aug', 'Sept', 'Oct','Nov'],
      labels: {
        rotation: 90,
        y: 20,
@@ -93,7 +93,7 @@ actionChart = new Highcharts.Chart({
    {  
      name: "Condition Billing",
      data: [2345,4253,21568,14859,19854,20635,17485,19874,18121,18003,17563,10478,13568,15689,16895,19865,14274],
-     color: '#e37f1c'
+     color: '#f89c28'
    }]
 });
 
