@@ -1,9 +1,3 @@
-class Product < ActiveRecord::Base
-  
-  has_many :claims
-  
-end
-
 # == Schema Information
 #
 # Table name: products
@@ -14,3 +8,8 @@ end
 #  updated_at :datetime
 #
 
+class Product < ActiveRecord::Base
+
+  has_many :claims
+
+end
