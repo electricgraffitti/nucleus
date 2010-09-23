@@ -1,16 +1,33 @@
 <div class='claim_notes'>
-  <h1>Claim Notes</h1>
-  <div class="note_wrap">
-    <h2 class="note_title">Some Note</h2>
-    <div class="note_date">Thursday, March 18, 2010</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <h1>Provider Rational</h1>
+  <div class="modal_claim_wrap">
+    <% form_tag note_path, :id => "provider_comment_form", :method => :get do %>
+      <div id="client_visible" class="form_field">
+        <%= label_tag :client_visible, 'Visible to Client'  %>
+        <%= check_box_tag :client_visible %>
+      </div>
+      <div class="form_field">
+        <%= label_tag :comment, "Comments" %><br />
+        <%= text_area_tag :first_name %>
+      </div>
+      <div class="form_field">
+        <%= label_tag :retrigger_period, "Retrigger Period" %><br />
+        <ul class="heading">
+          <li class="left form_combo">
+            <%= radio_button_tag 'report_frequency', 'xdays' %>
+            <%= text_field_tag :day_count, nil, :id => "provider_comment_frequency_day_count" %>
+            Days (1-89)
+          </li>
+          <li class="left"><%= radio_button_tag 'report_frequency', 'Once', true %> 90 Days</li>
+          <li class="left"><%= radio_button_tag 'report_frequency', 'Daily' %> 6 Months</li>
+          <li class="left"><%= radio_button_tag 'report_frequency', 'Weekly' %> 1 Year</li>
+          <li class="left"><%= radio_button_tag 'report_frequency', 'Monthly' %> Never</li>
+        </ul>
+      </div>
+      <div class="comment_buttons">
+        <%= submit_tag "Save", :name => nil, :class => 'medium_btn' %>
+        <%= link_to "Cancel", "", :class => "close" %>
+      </div>
+    <% end %>
   </div>
-  <div class="note_wrap">
-    <h2 class="note_title">Some Note</h2>
-    <div class="note_date">Friday, March 19, 2010</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-  <p>
-    <%= link_to "Add a Note", "", :class => 'right' %>
-  </p>
 </div>
