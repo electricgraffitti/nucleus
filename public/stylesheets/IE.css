@@ -46,6 +46,12 @@ body {
 .sub_panel.last form {
   height: 21px;
 }
+div.overlay {
+  background: #333;
+}
+/*.contentWrap {
+  background: #fff;
+}*/
 /*********************************************/
 /*******************HEADER********************/
 

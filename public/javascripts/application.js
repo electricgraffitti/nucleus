@@ -292,37 +292,14 @@ var baseActions = {
 		});
 	},
 
-	// containerTrigger: function() {
-	//   $('.provider_container_trigger').bind("click", function() {
-	//     var linkurl = $(this).attr('href');
-	//     var data = $(this).attr('provider_id');
-	//     baseActions.containerBuilder(linkurl, data);
-	//     return false;
-	//   });
-	// },
-	// 
-	// containerBuilder: function(lu, d) {
-	//   $(".containerPlus").buildContainers({
-	//     containment:"document",
-	//     elementsPath:"../elements/",
-	//     onResize:function(o){},
-	//     onClose:function(o){},
-	//     onCollapse:function(o){},
-	//     onIconize:function(o){},
-	//     onDrag:function(o){},
-	//     onLoad:function(o){}
-	//   });
-	//   $("#popupContainer").mb_changeContainerContent(lu,{id:d}, "GET");
-	// },
-
 	setOverlay: function() {
 		$("a[rel]").overlay({
-			expose: {
-				color: '#000000',
-				loadSpeed: 200,
-				opacity: 0.15
-			},
-			effect: 'apple',
+      expose: {
+       color: '#000000',
+       loadSpeed: 200,
+       opacity: 0.15
+      },
+      // effect: 'apple',
 			onBeforeLoad: function() {
 
 				// grab wrapper element inside content 
