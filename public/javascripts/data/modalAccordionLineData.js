@@ -27,7 +27,7 @@ actionChart = new Highcharts.Chart({
    subtitle: {
      text: 'Past 12 Months',
      style: {
-        color: "#1aa64a",
+        color: "#5bab46",
         fontSize: "10px"
         // display: 'none'
      }
@@ -104,7 +104,7 @@ actionChart = new Highcharts.Chart({
    {  
      name: "Condition Billing",
      data: [2345,4253,4953,3752,3254,6500,23485,19874,18121,18003,17563,10478],
-     color: '#e37f1c'
+     color: '#f47727'
    }]
 });
 

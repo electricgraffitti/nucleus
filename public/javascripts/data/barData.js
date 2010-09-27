@@ -23,7 +23,7 @@ var barChart = new Highcharts.Chart({
    subtitle: {
       text: '2010 YTD',
       style: {
-        color: '#6ac520',
+        color: '#5bab46',
         font: '12px Arial, Helvetica, sans-serif'
       }
    },
@@ -95,14 +95,14 @@ var barChart = new Highcharts.Chart({
    series: [{
       name: 'ASC',
       data: [245, 230, 210, 225, 205, 240],
-      color: "#71bd44"
+      color: "#5bab46" // Green
       }, {
       name: 'Hosptial',
       data: [200, 195, 192, 177, 142, 174],
-      color: '#f89c28'
+      color: '#f47727' // Orange
       }, {
       name: 'Prof',
       data: [165, 145, 132, 112, 102, 132],
-      color: '#009fe2'
+      color: '#398dcc' // Blue
    }]
 });
