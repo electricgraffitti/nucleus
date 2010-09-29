@@ -48,10 +48,10 @@ class Provider < ActiveRecord::Base
     score = s.provider_score
 
     score_color = case score
-    when 800..1000: "red"
-    when 450..799: "yellow"
-    else "green"
-    end
+      when 800..1000: "red"
+      when 450..799: "yellow"
+      else "green"
+      end
     return score_color
   end
 
