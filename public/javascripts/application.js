@@ -215,7 +215,79 @@ var adminAction = {
 	// end Admin
 };
 
+var drag = {
+  
+  setupQuickLaunch: function(a,b,c) {
+    // set the Selector
+    var ss = a;
+    // set cookie name
+    var scn = b;
+    // set cookie expiry time (days):
+    var sce = c;
+    
+    $(ss).sortable({
+      cursor: "move",
+      update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
+    });
+  },
+  
+  setQuickLaunchOrder: function(ss,scn,sce) {
+    $.cookie(scn, $(ss).sortable("toArray"), { expires: sce, path: "/" });
+  },
+  
+  loadQuickLaunchOrder: function(ss,scn) {
+    var list = $(ss);
+    if (list == null) return
+
+    // fetch the cookie value (saved order)
+    var cookie = $.cookie(scn);
+    if (!cookie) return;
+
+    // make array from saved order
+    var IDs = cookie.split(",");
+
+    // fetch current order
+    var items = list.sortable("toArray");
+
+    // make array from current order
+    var rebuild = new Array();
+    
+    for ( var v=0, len=items.length; v<len; v++ ) {
+      rebuild[items[v]] = items[v];
+    }
+
+    for (var i = 0, n = IDs.length; i < n; i++) {
+      var itemID = IDs[i];
+      
+      if (itemID in rebuild) {
+        var item = rebuild[itemID];
+
+        // select the item according to current order
+        var child = $("div.ui-sortable").children("#" + item);
+
+        // select the item according to the saved order
+        var savedOrd = $("div.ui-sortable").children("#" + itemID);
+
+        // remove all the items
+        child.remove();
+
+        // add the items in turn according to saved order
+        // we need to filter here since the "ui-sortable"
+        // class is applied to all ul elements and we
+        // only want the very first! You can modify this
+        // to support multiple lists - not tested!
+        $("div.ui-sortable").filter(":first").append(savedOrd);
+      }
+    }
+  }
+  
+}
+
 var baseActions = {
+  
+  setXHR: function() {
+    $.ajaxSetup({ 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}});
+  },
 
 	accordionClick: function(el) {
 		$panel_selector = el.attr("panel");
@@ -325,7 +397,7 @@ var baseActions = {
 }
 //**********Initialize Document**********//
 $(document).ready(function() {
-
+  baseActions.setXHR();
 	baseActions.setDefaults();
 	tableActions.setDefaultTableActions();
 	baseActions.modalTrigger();

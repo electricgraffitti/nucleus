@@ -3,30 +3,28 @@
   <div class="panel ui-layout-main">
     <div class="quick_launch_wrap">
       <div id="quick_launch_top">  
-        <div class="quick_launch_box box1">
+        <div id="1" class="quick_launch_box dashboard_widget">
           <%= link_to "Dashboard", dashboard_path, :class => "dash1 tip", :title => "Nucleus Dashboard" %>
         </div>
-        <div class="quick_launch_box box2">
+        <div id="2" class="quick_launch_box reports_widget">
           <%= link_to "Reports", reports_path, :class => "dash2 tip", :title => "Nucleus Reports" %>
         </div>
-        <div class="quick_launch_box box3">
+        <div id="3" class="quick_launch_box search_widget">
           <%= link_to "Search", provider_search_path, :class => "dash3 tip", :title => "Nucleus Provider Search" %>
         </div>
-        <div class="quick_launch_box box4">
+        <div id="4" class="quick_launch_box help_widget">
           <%= link_to "Help", help_path, :class => "dash4 tip", :title => "Nucleus Support Center" %>
         </div>
-      </div>
-      <div id="quick_launch_bottom">  
-        <div class="quick_launch_box box5">
+        <div id="5" class="quick_launch_box messages_widget">
           <%= link_to "Messages", messages_path, :class => "dash5 tip", :title => "Nucleus Message Center" %>
         </div>
-        <div class="quick_launch_box box6">
+        <div id="6" class="quick_launch_box feedback_widget">
           <%= link_to "Feedback", client_feedback_path, :class => "dash6 tip", :title => "Nucleus Feedback" %>
         </div>
-        <div class="quick_launch_box box7">
+        <div id="7" class="quick_launch_box settings_widget">
           <%= link_to "Settings", client_path(current_client), :class => "dash7 tip", :title => "Nucleus Client Settings" %>
         </div>
-        <div class="quick_launch_box box8">
+        <div id="8" class="quick_launch_box university_widget">
           <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8 tip", :title => "Insight University" %>
         </div>
       </div>
@@ -38,15 +36,8 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
-      // Toggles the file attachment
-      $('#message_attach_link').click(function() {
-        $('#message_attachment').slideToggle('slow');
-        return false;
-      });
-      // Sets Highlight for Active Message Category
-      $('li.message_category').click(function() {
-        baseActions.setActiveMessageGroup($(this));
-      });
+      drag.setupQuickLaunch("#quick_launch_top", "quickLaunchCookie", 1000);
+      drag.loadQuickLaunchOrder("#quick_launch_top", "quickLaunchCookie");
     });
   </script>
 <% end %>
