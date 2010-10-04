@@ -30,6 +30,9 @@
 
       // Line Chart
       $.getScript('javascripts/data/lineData.js');
+      
+      drag.setupQuickLaunch("#dashboard", "graph_box", 1000);
+      drag.loadQuickLaunchOrder("#dashboard", "graph_box");
 
     });
   </script>
