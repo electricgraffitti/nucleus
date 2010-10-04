@@ -1,9 +1,12 @@
 <div id="top_search">
   <% form_tag claims_path, :method => :get do %>
-    <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:prompt => "Quick Search"}) %><br/>
-    <div id="search_buttons">
-      <%= link_to "Clear Filters", "", :id => "search_clear" %>
-      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+    <div id="search_top">
+      <%= label_tag "Quick Search"%>
+      <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:index => 2}) %><br/>
+      <div id="search_buttons">
+        <%= link_to "Clear Filters", "", :id => "search_clear" %>
+        <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+      </div>
     </div>
     <h3 class="grey_header">Search Filters</h3>
     <div id="sub_search_params">

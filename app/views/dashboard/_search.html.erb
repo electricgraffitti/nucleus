@@ -1,9 +1,12 @@
     <div id="top_search">
       <% form_tag providers_path, :method => :get do %>
-        <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:prompt => "Quick Search"}) %><br/>
-        <div id="search_buttons">
-          <%= link_to "Clear Filters", "", :id => "search_clear" %>
-          <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+        <div id="search_top">
+          <%= label_tag "Quick Search"%>
+          <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name) %><br/>
+          <div id="search_buttons">
+            <%= link_to "Clear Filters", "", :id => "search_clear" %>
+            <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+          </div>
         </div>
         <h3 class="grey_header">Search Filters</h3>
         <div id="sub_search_params">
@@ -43,6 +46,11 @@
           <%= label_tag "Triggered Date"%>
           <%= text_field_tag :trigger_start_date, nil, {:id => "trigger_start_date", :size => 15} %>
           <%= text_field_tag :trigger_end_date, nil, {:id => "trigger_end_date", :size => 15} %>
+          </p>
+          <p>
+          <%= label_tag "Action Date"%>
+          <%= text_field_tag :action_start_date, nil, {:id => "action_start_date", :size => 15} %>
+          <%= text_field_tag :action_end_date, nil, {:id => "action_end_date", :size => 15} %>
           </p>
           <p>
           <%= label_tag "Composite Score" %><br/>

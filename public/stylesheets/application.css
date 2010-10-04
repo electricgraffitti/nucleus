@@ -900,8 +900,10 @@ span#occurence {
   height: 21px;
 }
 .provider_info, .client_info {
-  height: 175px;
-  padding: 25px 10px 0px;
+/*  height: 175px;
+  padding: 25px 10px 0px;*/
+  height: 188px;
+  padding: 12px 10px 0px;
 }
 .provider_stats {
   /*height: 224px;*/
@@ -939,7 +941,8 @@ span#occurence {
   width: 185px;
 }
 .panel_right {
-  width: 75px;
+  /*width: 75px;*/
+  width: 80px;
 }
 .panel_item {
   position: relative;
@@ -1268,7 +1271,7 @@ span#occurence {
   padding: 2px;  
 }
 #search_search_topic_id {
-  margin: 20px 0px 10px 18px;
+  margin: 10px 0px;
   width: 173px;
 /*  background: #5bab46;*/
 	color: #222;
@@ -1276,14 +1279,21 @@ span#occurence {
   border: 1px solid #c0c0c0;
   padding: 2px;
 }
+#search_top {
+  overflow:auto;
+  padding-left:18px;
+  padding-top:10px;
+  width:202px;
+  font-size: 12px;
+}
 #search_buttons {
-  margin-left: 18px;
+  /*margin-left: 18px;*/
   margin-bottom: 10px;
   width: 173px;
   text-align: right;
 }
 #search_clear {
-  margin-right: 44px;
+  margin-right: 40px;
 }
 #sub_search_params {
   position: relative;
@@ -1324,7 +1334,7 @@ span#occurence {
 .report_panel_wrap ul li input[type="radio"] {
 	margin-right: 3px;
 }
-#sub_search_params input[type="text"]#trigger_start_date, #sub_search_params input[type="text"]#trigger_end_date {
+#sub_search_params input[type="text"]#trigger_start_date, #sub_search_params input[type="text"]#trigger_end_date, #sub_search_params input[type="text"]#action_start_date, #sub_search_params input[type="text"]#action_end_date {
   width: 139px;
 }
 #report_description {
@@ -1429,7 +1439,7 @@ span.field_seperator {
   font-weight:bold;
   position:relative;
 /*  text-align:center;*/
-  width:51px;
+  width:60px;
   border:1px solid #D7D6D6;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f0f0f0), to(#e1e1e1));
   background-image: -moz-linear-gradient(19% 75% 90deg,#e1e1e1, #f0f0f0);
@@ -1473,7 +1483,7 @@ span.field_seperator {
 	width: 804px;
 }
 #provider_action_table {
-	min-width: 1026px;
+	min-width: 1024px;
 }
 #provider_list_table {
   width: 1024px;
@@ -2669,8 +2679,8 @@ table.claim_action_table {
 }
 .table_select select {
   width: 173px;
-  background: #5bab46;
-	color: #fff;
+  /*background: #5bab46;*/
+	color: #333;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
   padding: 2px;
@@ -2822,35 +2832,50 @@ tr.active {
 /*  font-weight: bold;*/
 }
 /******Provider Search********/
+#provider_search {
+  width: 1850px;
+}
+.search_lock {
+  width: 10px;
+}
 .provider_search_score {
-  width: 46px;
-}
-.provider_search_note {
-  width: 25px;
-}
-.provider_search_prv_seq {
   width: 50px;
 }
+.provider_search_note {
+  width: 10px;
+}
+.provider_search_prv_seq {
+  width: 90px;
+}
 .provider_search_provider_name {
-  width: 110px;
+  width: 90px;
 }
 .provider_search_tin {
+  width: 20px;
 }
 .provider_search_spec {
+  width: 20px;
 }
 .provider_search_group_name {
-  width: 171px;
+  width: 150px;
+}
+.provider_search_group_tin, .provider_search_suspect_conditions, .provider_search_trigger_date, .provider_search_action_date {
+  width: 115px;
 }
 .provider_search_state {
+  width: 10px;
 }
 .provider_search_ciu {
-  width: 70px;
+  width: 75px;
 }
-.provider_search_condition {
-  width: 125px;
+.provider_search_condition, .provider_search_paid, .provider_search_billed, .provider_search_savings {
+  width: 20px;
 }
-.provider_search_flagged {
-  width: 85px;
+.provider_search_triggered_condition_paid {
+  width: 180px;
+}
+.provider_search_flagged, .provider_search_rank {
+  width: 20px;
 }
 /*******Provider Action*******/
 .provider_action_blank {
@@ -2869,7 +2894,7 @@ tr.active {
   min-width: 70px;
 }
 #provider_action {
-  min-width: 1024px;
+ width: 125%;
 }
 /**********Claim Search***********/
 .claim_sequence {

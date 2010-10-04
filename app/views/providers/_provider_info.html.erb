@@ -8,13 +8,20 @@
       <div id="speciality_code_main" class="panel_item_value" title="<%= provider.provider_speciality.speciality_type %>"><%=h provider.provider_speciality.speciality_code %></div>
     </div>
     <div class="panel_item">          
-      <div class="panel_item_title">Group TIN</div>
-      <div class="panel_item_value"><%=h provider.provider_group.group_tin %></div>
+      <div class="panel_item_title">Speciality</div>
+      <div class="panel_item_value"><%=h provider.provider_speciality.speciality_code %> - <%=h provider.provider_speciality.speciality_type %></div>
     </div>
+
     <div class="panel_item">          
       <div class="panel_item_title">Group Name</div>
       <div class="panel_item_value"><%=h provider.provider_group.name %></div>
     </div>
+    
+    <div class="panel_item">          
+      <div class="panel_item_title">Case Tracker ID</div>
+      <div class="panel_item_value"><%=h provider.id %></div>
+    </div>
+
   </div>
   <div class="panel_right">
     <div class="panel_item">          
@@ -24,6 +31,14 @@
     <div class="panel_item">          
       <div class="panel_item_title">State</div>
       <div class="panel_item_value"><%=h provider.state.abbreviation %></div>
+    </div>
+    <div class="panel_item">          
+      <div class="panel_item_title">Group TIN</div>
+      <div class="panel_item_value"><%=h provider.provider_group.group_tin %></div>
+    </div>
+    <div class="panel_item">          
+      <div class="panel_item_title">Case Status</div>
+      <div class="panel_item_value">Under Review</div>
     </div>
   </div>
 </div>

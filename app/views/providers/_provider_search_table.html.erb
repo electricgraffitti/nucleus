@@ -2,22 +2,31 @@
   <table id="provider_search">
     <thead>
       <tr>
+        <th>Lock</th>
         <th>Score</th>
         <th>Note</th>
-        <th>Prv Seq</th>
+        <th>Provider Sequence</th>
         <th>Provider Name</th>
         <th>TIN</th>
-        <th>Spec</th>
+        <th>Specality</th>
         <th>Group Name</th>
+        <th>Group Provider TIN</th>
         <th>State</th>
+        <th>Suspect Conditions</th>
+        <th>Triggered Date</th>
+        <th>Action Date</th>
+        <th>Paid</th>
+        <th>Billed</th>
+        <th>Savings</th>
+        <th>Triggered Condition Paid</th>
         <th>CIU Alerts</th>
-        <th>Condition Suspect</th>
-        <th>HCI Flagged</th>
+        <th>Rank</th>
       </tr>
     </thead>
     <tbody>
       <% providers.each do |provider| %>
       <tr class='<%=cycle('even', 'odd')%>' id="<%= provider.id %>">
+        <td class="search_lock"></td>
         <td class="provider_search_score"><div class="table_icon table_rating_dot <%= provider.score_color(provider) %>_dot"></div><%= link_to "#{provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Action" %></td>
         <td class="provider_search_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon tip', :title => "Provider Notes", :rel => '#overlay' %></td>
         <td class="provider_search_prv_seq"><%=h provider.sequence_number %></td>
@@ -25,10 +34,17 @@
         <td class="provider_search_tin"><%=h provider.tin %></td>
         <td class="provider_search_spec">37</td>
         <td class="provider_search_group_name"><%=h provider.provider_group.name %></td>
+        <td class="provider_search_group_tin"></td>
         <td class="provider_search_state"><%=h provider.state.abbreviation %></td>
+        <td class="provider_search_suspect_conditions"></td>
+        <td class="provider_search_trigger_date"></td>
+        <td class="provider_search_action_date"></td>
+        <td class="provider_search_paid"></td>
+        <td class="provider_search_billed"></td>
+        <td class="provider_search_savings"></td>
+        <td class="provider_search_triggered_condition_paid"></td>
         <td class="provider_search_ciu">Yes</td>
-        <td class="provider_search_condition">SBRD</td>
-        <td class="provider_search_flagged"></td>
+        <td class="provider_search_rank"></td>
       </tr>
       <% end %>
     </tbody>

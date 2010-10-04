@@ -23,18 +23,12 @@
     <%= link_to "Batch", "#", :class => "tip", :title => "Batch List" %>
   </li>
   <li>
-    <%= link_to "Invoicing", "#", :class => "tip", :title => "Invoicing" %>
-  </li>
-  <li>
-    <%= link_to "Reference", "#", :class => "tip", :title => "Reference Index" %>
-  </li>
-  <li>
     <%= link_to "Reports", reports_path, :class => "tip", :title => "Report Generator" %>
   </li>
   <li>
-    <%= link_to "Repository", "#", :class => "tip", :title => "Repository" %>
+    <%= link_to "Settings", client_path(current_client), :class => "tip", :title => "Client Settings" %>
   </li>
   <li class="last">
-    <%= link_to "Settings", client_path(current_client), :class => "tip", :title => "Client Settings" %>
+    <%= link_to "Reference", "#", :class => "tip", :title => "Reference Index" %>
   </li>
 </ul>
