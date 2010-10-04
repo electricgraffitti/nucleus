@@ -231,6 +231,20 @@ var drag = {
     });
   },
   
+  setupDashboardPanels: function(a,b,c) {
+    // set the Selector
+    var ss = a;
+    // set cookie name
+    var scn = b;
+    // set cookie expiry time (days):
+    var sce = c;
+    
+    $(ss).sortable({
+      cursor: "move",
+      update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
+    });
+  },
+  
   setQuickLaunchOrder: function(ss,scn,sce) {
     $.cookie(scn, $(ss).sortable("toArray"), { expires: sce, path: "/" });
   },

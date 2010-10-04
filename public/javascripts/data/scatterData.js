@@ -490,12 +490,6 @@ var scatterChart = new Highcharts.Chart({
       url: "http://demo.get-nucleus.com/providers/1"
    },
    {
-      name: "Dr. Saltsman",
-      data: [[720, 568942]],
-      color: 'rgba(247,178,25,1)',
-      url: "http://demo.get-nucleus.com/providers/1"
-   },
-   {
       name: "Dr. Caldera",
       data: [[568, 599867]],
       color: 'rgba(247,178,25,1)',
@@ -526,12 +520,6 @@ var scatterChart = new Highcharts.Chart({
       url: "http://demo.get-nucleus.com/providers/1"
    },
    {
-      name: "Dr. Gibbons",
-      data: [[745, 495225]],
-      color: 'rgba(247,178,25,1)',
-      url: "http://demo.get-nucleus.com/providers/1"
-   },
-   {
       name: "Dr. Davis",
       data: [[502, 566231]],
       color: 'rgba(247,178,25,1)',
@@ -552,19 +540,121 @@ var scatterChart = new Highcharts.Chart({
    {
       name: "Dr. Backman",
       data: [[693, 798653]],
-      color: 'rgba(247,178,25,1)',
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Gibbons",
+      data: [[745, 495225]],
+      color: 'rgba(244,119,39,1)',
       url: "http://demo.get-nucleus.com/providers/1"
    },
    {
       name: "Dr. Tolboe",
       data: [[702, 723568]],
-      color: 'rgba(247,178,25,1)',
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Saltsman",
+      data: [[720, 568942]],
+      color: 'rgba(244,119,39,1)',
       url: "http://demo.get-nucleus.com/providers/1"
    },
    {
       name: "Dr. Ludlow",
       data: [[691, 326589]],
-      color: 'rgba(247,178,25,1)',
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Alberts",
+      data: [[653, 802564]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Kayman",
+      data: [[785, 565895]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Ohmie",
+      data: [[722, 763565]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Richards",
+      data: [[763, 589774]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Gardner",
+      data: [[699, 345986]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Ellis",
+      data: [[625, 745124]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Archer",
+      data: [[786, 468957]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Newton",
+      data: [[655, 725487]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Fenton",
+      data: [[735, 561235]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Easton",
+      data: [[684, 384567]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Woolfenden",
+      data: [[641, 823564]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Clutter",
+      data: [[799, 578415]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Jefferies",
+      data: [[602, 714241]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Irvine",
+      data: [[724, 574124]],
+      color: 'rgba(244,119,39,1)',
+      url: "http://demo.get-nucleus.com/providers/1"
+   },
+   {
+      name: "Dr. Powers",
+      data: [[645, 341521]],
+      color: 'rgba(244,119,39,1)',
       url: "http://demo.get-nucleus.com/providers/1"
    },
    {

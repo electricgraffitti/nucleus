@@ -1239,12 +1239,12 @@ span#occurence {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: #555;
+  color: #398dcc;
   margin-top: -3px;
   font-size: 12px;
 }
 #page_header ul.page_nav li a:hover {
-  color: #2070B5;
+  color: #f7b219;
 }
 #panel_layout #top_search {
   position: relative;
@@ -1254,8 +1254,8 @@ span#occurence {
 #provider_stat_date_range_date_range_id {
   margin: 0px;
   width: 173px;
-  background: #5bab46;
-	color: #fff;
+/*  background: #5bab46;*/
+	color: #222;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
   padding: 2px;
@@ -1270,8 +1270,8 @@ span#occurence {
 #search_search_topic_id {
   margin: 20px 0px 10px 18px;
   width: 173px;
-  background: #5bab46;
-	color: #fff;
+/*  background: #5bab46;*/
+	color: #222;
 	font-weight: bold;
   border: 1px solid #c0c0c0;
   padding: 2px;
@@ -1283,7 +1283,7 @@ span#occurence {
   text-align: right;
 }
 #search_clear {
-  margin-right: 10px;
+  margin-right: 44px;
 }
 #sub_search_params {
   position: relative;
@@ -1447,6 +1447,15 @@ span.field_seperator {
 }
 .stat_flag_green {
   background: url("../images/inner_pages/stat_flags.jpg") -20px 0px no-repeat;
+}
+.stat_flag_orange {
+  background: url("../images/inner_pages/stat_flags.jpg") -40px 0px no-repeat;
+}
+.stat_flag_yellow {
+  background: url("../images/inner_pages/stat_flags.jpg") -60px 0px no-repeat;
+}
+.stat_flag_blue {
+  background: url("../images/inner_pages/stat_flags.jpg") -80px 0px no-repeat;
 }
 #provider_stats .stat_group .stat_range {
   position: relative;
@@ -2807,9 +2816,10 @@ tr.even {
 }
 tr.active {
 /*  background: #d2edbc;*/
-  background: #5bab46;
-	color: #fff;
-	font-weight: bold;
+  /*background: #5bab46;*/
+  background: #fdf4d9;
+	color: #333;
+/*  font-weight: bold;*/
 }
 /******Provider Search********/
 .provider_search_score {
@@ -3087,14 +3097,14 @@ li#street_link a:hover {
 	width: 63px;
 	height: 25px;
 	border: none;
-	background: url('../images/inner_pages/medium_button.png') 0px 0px no-repeat;
-	color: #CFCFCF;
+	background: url('../images/inner_pages/medium_button.png') 0px -24px no-repeat;
+	color: #333;
 	font-size: 12px;
 	padding-bottom: 2px;
-	text-shadow: 1px 1px 0px #333;
+/*  text-shadow: 1px 1px 0px #333;*/
 }
 .medium_btn:hover {
-	background: url('../images/inner_pages/medium_button.png') 0px -24px no-repeat;
+	background: url('../images/inner_pages/medium_button.png') 0px 0px no-repeat;
 	color: #333;
 	text-shadow: 1px 1px 0px #efefef;
 }
