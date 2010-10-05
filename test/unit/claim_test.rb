@@ -7,6 +7,7 @@ class ClaimTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: claims
@@ -20,5 +21,6 @@ end
 #  sequence_sub_number :string(255)
 #  created_at          :datetime
 #  updated_at          :datetime
+#  claim_status_id     :integer(4)
 #
 

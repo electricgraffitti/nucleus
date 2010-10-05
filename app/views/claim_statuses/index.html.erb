@@ -1,0 +1,20 @@
+<h1>Listing claim_statuses</h1>
+
+<table>
+  <tr>
+    <th>Claim status</th>
+  </tr>
+
+<% @claim_statuses.each do |claim_status| %>
+  <tr>
+    <td><%=h claim_status.claim_status %></td>
+    <td><%= link_to 'Show', claim_status %></td>
+    <td><%= link_to 'Edit', edit_claim_status_path(claim_status) %></td>
+    <td><%= link_to 'Destroy', claim_status, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New claim_status', new_claim_status_path %>

@@ -1,11 +1,3 @@
-class Claim < ActiveRecord::Base
-  
-  belongs_to :provider
-  belongs_to :patient
-  belongs_to :product
-  
-end
-
 # == Schema Information
 #
 # Table name: claims
@@ -19,5 +11,18 @@ end
 #  sequence_sub_number :string(255)
 #  created_at          :datetime
 #  updated_at          :datetime
+#  claim_status_id     :integer(4)
 #
+
+class Claim < ActiveRecord::Base
+  
+  belongs_to :provider
+  belongs_to :patient
+  belongs_to :product
+  belongs_to :claim_status
+  
+end
+
+
+
 

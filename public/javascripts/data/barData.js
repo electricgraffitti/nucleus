@@ -14,18 +14,14 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Cases Opened by Provider Type',
-      style: {
-        color: '#555555',
-        font: '16px Arial, Helvetica, sans-serif'
-      } 
-   },
-   subtitle: {
       text: '2010 YTD',
       style: {
-        color: '#5bab46',
-        font: '12px Arial, Helvetica, sans-serif'
+         color: "#555555",
+         font: "16px Arial, Helvetica, sans-serif"
       }
+   },
+   subtitle: {
+     enabled: false
    },
    xAxis: {
       categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],

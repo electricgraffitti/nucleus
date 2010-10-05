@@ -9,17 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100517173911) do
+ActiveRecord::Schema.define(:version => 20101005194815) do
+
+  create_table "claim_statuses", :force => true do |t|
+    t.string   "claim_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "claims", :force => true do |t|
     t.integer  "provider_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "batch_number"
+    t.integer  "patient_id"
     t.integer  "product_id"
+    t.string   "batch_number"
     t.string   "sequence_number"
     t.string   "sequence_sub_number"
-    t.integer  "patient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "claim_status_id"
   end
 
   create_table "client_sessions", :force => true do |t|
@@ -60,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20100517173911) do
   create_table "conditions", :force => true do |t|
     t.integer  "provider_id"
     t.integer  "condition_type_id"
+    t.boolean  "pro_sub"
     t.datetime "trigger_date"
     t.integer  "condition_rank"
     t.integer  "total_provider"
@@ -74,7 +82,6 @@ ActiveRecord::Schema.define(:version => 20100517173911) do
     t.integer  "speciality_average_paid"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "pro_sub"
   end
 
   create_table "feedbacks", :force => true do |t|
@@ -183,6 +190,8 @@ ActiveRecord::Schema.define(:version => 20100517173911) do
   end
 
   create_table "providers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
     t.integer  "tin"
     t.integer  "state_id"
     t.datetime "created_at"
@@ -190,8 +199,6 @@ ActiveRecord::Schema.define(:version => 20100517173911) do
     t.string   "sequence_number"
     t.integer  "provider_group_id"
     t.integer  "provider_tax_id"
-    t.string   "first_name"
-    t.string   "last_name"
     t.integer  "provider_score"
     t.integer  "provider_speciality_id"
   end

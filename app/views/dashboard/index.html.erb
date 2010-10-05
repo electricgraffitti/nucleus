@@ -12,15 +12,45 @@
       </div>
       <% end %>
     </div>
-    <div id="top_right_chart" class="graph_box"></div>
-    <div id="bottom_left_chart" class="graph_box"></div>
-    <div id="bottom_right_chart" class="graph_box"></div>
+    
+    <div class="dashboard_module graph_box">
+      <div class="dashboard_module_header top_provider_block">
+        Provider Distribution Profiles
+      </div>
+      <div id="top_right_chart" class="chart">
+
+      </div>
+    </div>
+    
+    <div class="dashboard_module graph_box">
+      <div class="dashboard_module_header top_provider_block">
+        Cases Opened by Provider Type
+      </div>
+      <div id="bottom_left_chart" class="chart">
+
+      </div>
+    </div>
+    
+    <div class="dashboard_module graph_box">
+      <div class="dashboard_module_header top_provider_block">
+        Indentified Savings vs. Accepted Savings
+      </div>
+      <div id="bottom_right_chart" class="chart">
+
+      </div>
+    </div>
+
   </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      
+      var wrap = $("#dashboard");
+      
+      drag.setupDashboardPanels(wrap, "graph_box", 1000);
+      
 
       // Scatter Plot
       $.getScript('javascripts/data/scatterData.js');
@@ -31,8 +61,7 @@
       // Line Chart
       $.getScript('javascripts/data/lineData.js');
       
-      drag.setupQuickLaunch("#dashboard", "graph_box", 1000);
-      drag.loadQuickLaunchOrder("#dashboard", "graph_box");
+      drag.loadQuickLaunchOrder(wrap, "graph_box");
 
     });
   </script>

@@ -1,7 +1,7 @@
 <div id="top_search">
   <% form_tag claims_path, :method => :get do %>
     <div id="search_top">
-      <%= label_tag "Quick Search"%>
+      <%= label_tag :search, "Search For"%>
       <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:index => 2}) %><br/>
       <div id="search_buttons">
         <%= link_to "Clear Filters", "", :id => "search_clear" %>
@@ -20,7 +20,7 @@
       </p>
       <p>
       <%= label_tag "Status"%>
-      <%= collection_select(:search, :status_id, SearchTopic.all, :id, :name, {:prompt => "Select"}) %>
+      <%= collection_select(:search, :status_id, ClaimStatus.all, :id, :claim_status, {:prompt => "Select"}) %>
       </p>
       <p>
       <%= label_tag "Claim Sequence"%>

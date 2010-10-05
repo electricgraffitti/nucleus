@@ -7,19 +7,45 @@
     </div>
   </div>
   <div id="panel_center" class="panel ui-layout-center">
-    <div class="drag_row"><span>Drag & drop a column header here to group by that column.</span></div>
+    <div class="drag_row"><span>Drag &amp; drop a column header here to group by that column.</span></div>
     <div id="provider_search_table">
-      <table id="provider_search">
+      <table id="claim_search_table">
         <thead>
           <tr>
             <th>Claim Sequence</th>
             <th>Claim No.</th>
             <th>Form Type</th>
             <th>Edit(s)</th>
-            <th>Status</th>
+            <th>Claim Status</th>
             <th>Appeal Status</th>
             <th>Provider</th>
+            <th>Provider Sequence</th>
             <th>Provider Tax Id</th>
+            <th>Provider #</th>
+            <th>Group Provider</th>
+            <th>Group Provider Tax ID</th>
+            <th>Billed</th>
+            <th>Adj Paid</th>
+            <th>Savings</th>
+            <th>Patient</th>
+            <th>DOB</th>
+            <th>SSN</th>
+            <th>Patient Sequence</th>
+            <th>Patient #</th>
+            <th>Review Group</th>
+            <th>Begin DOS</th>
+            <th>End DOS</th>
+            <th>Release Date</th>
+            <th>HCI Received Date</th>
+            <th>Client Received Date</th>
+            <th>Assigned To</th>
+            <th>DCI Status</th>
+            <th>FCI Status</th>
+            <th>FFP Status</th>
+            <th>PCI Status</th>
+            <th>Batch ID</th>
+            <th>Batch Date</th>
+            <th>Pend Date</th>
           </tr>
         </thead>
         <tbody>
@@ -32,20 +58,52 @@
             <td class="claim_reviewed">Reviewed</td>
             <td class="claim_appeal_status"></td>
             <td class="claim_provider">Edward Smith</td>
+            <td class="claim_provider_sequence">202504</td>
             <td class="claim_provider_tax_id">214748364</td>
+            <td class="claim_provider_number">352163791</td>
+            <td class="claim_provider_group">Carma Medical</td>
+            <td class="claim_provider_group_tax_id">2354671-2</td>
+            <td class="claim_billed">Billed</td>
+            <td class="claim_adj_paid">Adj Paid</td>
+            <td class="claim_savings">Savings</td>
+            <td class="claim_paient">Patient</td>
+            <td class="claim_dob">DOB</td>
+            <td class="claim_ssn">SSN</td>
+            <td class="claim_patient_sequence">Patient Sequence</td>
+            <td class="claim_patient">Patient #</td>
+            <td class="claim_review_group">Review Group</td>
+            <td class="claim_begin_dos">Begin DOS</td>
+            <td class="claim_end_dos">End DOS</td>
+            <td class="claim_release_date">Release Date</td>
+            <td class="claim_hci_received">HCI Received Date</td>
+            <td class="claim_client_received">Client Received Date</td>
+            <td class="claim_assigned">Assigned To</td>
+            <td class="claim_dci_status">DCI Status</td>
+            <td class="claim_fci_status">FCI Status</td>
+            <td class="claim_ffp_status">FFP Status</td>
+            <td class="claim_pci_status">PCI Status</td>
+            <td class="claim_batch_id">Batch ID</td>
+            <td class="claim_batch_date">Batch Date</td>
+            <td class="claim_pend_date">Pend Date</td>
           </tr>
           <% end %>
         </tbody>
-        <tfoot>
+        <!-- <tfoot>
           <tr>
-            <td colspan="8"></td>
+            <td colspan="34"></td>
           </tr>
-        </tfoot>
+        </tfoot> -->
       </table>
     </div>
   </div>
   <div class="clear"></div>
   </div>
 <% content_for :javascripts do %>
-  <%= javascript_include_tag "providerSearch" %>
+  <%#= javascript_include_tag "providerSearch" %>
+  <script>
+    $(document).ready(function() {
+      $table = $('#claim_search_table');
+      drag.setupTableSort($table);
+    });
+  </script>
 <% end %>

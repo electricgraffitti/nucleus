@@ -16,18 +16,14 @@ var lineChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Identified Savings vs. Accepted Savings',
+      text: '2010 YTD',
       style: {
          color: "#555555",
          font: "16px Arial, Helvetica, sans-serif"
       }
    },
    subtitle: {
-      text: '2010 YTD',
-      style: {
-         color: "#5bab46",
-         font: "12px Arial, Helvetica, sans-serif"
-      }
+     enabled: false
    },
    xAxis: {
       type: 'datetime',

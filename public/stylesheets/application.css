@@ -464,9 +464,10 @@ html ul.topnav li ul.subnav li a {
     font-weight: bold;
 }  
 html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
-    background: #5bab46;
-    color: #fff;
-    text-shadow: 0px 1px 1px #59a61b;
+/*    background: #5bab46;*/
+    background: url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
+    color: #222;
+    text-shadow: 0px 1px 1px #ccc;
     font-size: 12px;
     font-weight: bold;
 }
@@ -1169,6 +1170,17 @@ span#occurence {
   background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
   padding: 0px;
   width: 438px;
+}
+.dashboard_module_header {
+  background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
+  padding: 0px;
+  width: 460px;
+}
+.chart {
+  position: relative;
+  float: left;
+  height:302px;
+  width:480px;
 }
 .top_provider_block {
   position: relative;
@@ -2833,7 +2845,7 @@ tr.active {
 }
 /******Provider Search********/
 #provider_search {
-  width: 1850px;
+  width: 1875px;
 }
 .search_lock {
   width: 10px;
@@ -2922,6 +2934,9 @@ tr.active {
   min-width: 90px;
 }
 /******Claim List Table********/
+#claim_search_table {
+  width: 2825px;
+}
 #provider_list_table td.claim_sequence {
   width: 130px;
 }
@@ -3480,6 +3495,32 @@ div.overlay div.close {
 	margin-left: -7px;
 	border-left-color: rgb(255,255,255);
 	border-left-color: rgba(255,255,255,1);
+}
+/*##### the dragtable table stuff #####*/
+.dragtable-sortable { 
+	list-style-type: none; margin: 0; padding: 0; 
+}
+.dragtable-sortable li {
+	margin: 0; padding: 0; float: left; font-size: 1em; background: white;
+	width: 100px;
+}
+
+.dragtable-sortable th, .dragtable-sortable td{
+	border-left: 0px;
+}
+
+.dragtable-sortable li:first-child th, .dragtable-sortable li:first-child td {
+	border-left: 1px solid #CCC; 
+}
+
+.ui-sortable-helper {
+	opacity: 0.7;filter: alpha(opacity=70);
+}
+.ui-sortable-placeholder { 
+	border: 1px dotted black; background: #EFEFEF !important; visibility: visible !important;
+}
+.ui-sortable-placeholder * { 
+	opacity: 0.0; visibility: hidden; 
 }
 
 /* Webkit Hacks  */

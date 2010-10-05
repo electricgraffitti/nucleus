@@ -227,6 +227,12 @@ var adminAction = {
 
 var drag = {
   
+  setupTableSort: function(t) {
+    // t.dragtable({
+    //   dragaccept: '.accept'
+    // });
+  },
+  
   setupQuickLaunch: function(a,b,c) {
     // set the Selector
     var ss = a;
@@ -251,13 +257,18 @@ var drag = {
     var sce = c;
     
     $(ss).sortable({
+      handle : '.dashboard_module_header',
       opacity : 0.3,
       cursor: "move",
-      update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
+      update: function() { drag.setDashboardLaunchOrder(ss,scn,sce); }
     });
   },
   
   setQuickLaunchOrder: function(ss,scn,sce) {
+    $.cookie(scn, $(ss).sortable("toArray"), { expires: sce, path: "/" });
+  },
+  
+  setDashboardLaunchOrder: function(ss,scn,sce) {
     $.cookie(scn, $(ss).sortable("toArray"), { expires: sce, path: "/" });
   },
   
