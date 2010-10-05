@@ -28,7 +28,7 @@ class ProvidersController < ApplicationController
     @map.set_map_type_init(map_type)
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => 'modal'}
       format.xml  { render :xml => @provider }
       format.json { }
     end

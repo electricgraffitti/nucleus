@@ -227,12 +227,6 @@ var adminAction = {
 
 var drag = {
   
-  setupTableSort: function(t) {
-    // t.dragtable({
-    //   dragaccept: '.accept'
-    // });
-  },
-  
   setupQuickLaunch: function(a,b,c) {
     // set the Selector
     var ss = a;
