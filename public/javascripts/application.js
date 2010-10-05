@@ -236,6 +236,7 @@ var drag = {
     var sce = c;
     
     $(ss).sortable({
+      opacity : 0.3,
       cursor: "move",
       update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
     });
@@ -250,6 +251,7 @@ var drag = {
     var sce = c;
     
     $(ss).sortable({
+      opacity : 0.3,
       cursor: "move",
       update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
     });
