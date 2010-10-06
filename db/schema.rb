@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101005194815) do
+ActiveRecord::Schema.define(:version => 20101006180253) do
 
   create_table "claim_statuses", :force => true do |t|
     t.string   "claim_status"
@@ -221,6 +221,14 @@ ActiveRecord::Schema.define(:version => 20101005194815) do
     t.boolean  "display",                   :default => true
     t.integer  "created_by"
     t.integer  "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tutorials", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -394,6 +394,27 @@ var baseActions = {
 			return false;
 		});
 	},
+	
+	tutorialTrigger: function() {
+	  trig = $('.tutorial_trigger');
+	  trig.overlay({
+	    expose: {
+       color: '#000000',
+       loadSpeed: 200,
+       opacity: 0.15
+      },
+      onBeforeLoad: function() {
+       // grab wrapper element inside content 
+       var wrap = this.getOverlay().find(".contentWrap");
+       // var theurl = this.getTrigger().attr("href");
+       // load the page specified in the trigger 
+       wrap.load(this.getTrigger().attr('tutorial_page'));
+      },
+      onLoad: function() {
+        $('.scrollable').scrollable();
+      },
+	  });
+	},
 
 	setOverlay: function() {
 		$("a[rel]").overlay({

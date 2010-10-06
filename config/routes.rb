@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tutorials
+
   map.resources :claim_statuses
   map.resources :claims
   map.resources :monthly_billings
@@ -46,6 +48,11 @@ ActionController::Routing::Routes.draw do |map|
   map.sdes_stats "sdes-stats", :controller => "provider_stats", :action => "sdes_stat_panel"
   
   map.street_view "street-view", :controller => "providers", :action => "street_view"
+  
+  # # For Tutorial Modals
+  map.action_tutorials "action_tutorials", :controller => "tutorials", :action => "action_tutorials"
+  map.quick_launch_tuorials "quick_launch_tutorials", :controller => "tutorials", :action => "quick_launch_tutorials"
+  map.dashboard_tuorials "dashboard_tutorials", :controller => "tutorials", :action => "dashboard_tutorials"
   
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"
