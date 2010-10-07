@@ -661,7 +661,7 @@ div.scaffold_pane label {
 #results_chart {
   height: 289px;
 }
-#top_left_dashboard .basic_panel {
+.top_left_dashboard .basic_panel {
  margin: 0px 0px 5px 20px; 
 }
 .full_panel {
@@ -1146,7 +1146,7 @@ span#occurence {
   height: 340px;
   margin: 8px;
 }
-#top_left_dashboard {
+.top_left_dashboard {
   width: 478px;
   height: 338px;
   text-align: center;
@@ -1156,17 +1156,17 @@ span#occurence {
   -webkit-border-radius: 10px;*/
   background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;
 }
-#top_left_dashboard .dashboard_basic_panel {
+.top_left_dashboard .dashboard_basic_panel {
   text-align: left;
   width: 439px;
   background: #fff;
 }
-#top_left_dashboard h2.main_header {
+.top_left_dashboard h2.main_header {
   font-size: 16px;
   color: #555555;
   padding: 10px 0px;
 }
-#top_left_dashboard #panel_header {
+.top_left_dashboard #panel_header {
   background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
   padding: 0px;
   width: 438px;
@@ -3435,37 +3435,69 @@ div.tutorial_overlay {
 	root element for the scrollable.
 	when scrolling occurs this element stays still.
 */
-.scrollable {
-
-	/* required settings */
+#scroll_pane {
+  float:left;
+  height:485px;
+  position:relative;
+  width:628px;
+}
+#scrolling_segment {
 	position:relative;
 	overflow:hidden;
-	width: 628px;
-	height:90px;
+	height:400px;
 }
-
-/*
-	root element for scrollable items. Must be absolutely positioned
-	and it should have a extremely large width to accommodate scrollable items.
-	it's enough that you set width and height for the root element and
-	not for this element.
-*/
-.scrollable .items {
-	/* this cannot be too large */
-	width:20000em;
-	position:absolute;
+#scroll_wrap {
+  position: relative;
+  width: 2512px;
+  height: 400px;
+  float: left;
 }
-
-/*
-	a single item. must be floated in horizontal scrolling.
-	typically, this element is the one that *you* will style
-	the most.
-*/
-.items div {
-	float:left;
+.scroll_panel {
+  position: relative;
+  float: left;
+  width: 628px;
+  height: 400px;
 }
-
-
+#panel1 {
+  background: #660000;
+}
+#panel2 {
+  background: #005500;
+}
+#panel3 {
+  background: #000033;
+}
+#panel4 {
+  background: #003355;
+}
+/***Scroll Nav***/
+#scroll_thumbs {
+  position: relative;
+  width: 628px;
+  height: 100px;
+  border-top: 1px solid #ddd;
+  float: left;
+}
+#scroll_thumbs ul {
+  float: left;
+}
+#scroll_thumbs ul li {
+  position: relative;
+  float: left;
+  width: 149px;
+  height: 75px;
+  border: 1px solid #efefef;
+  margin: 3px;
+}
+#scroll_thumbs ul li.selected {
+  border: 1px solid #5bab46;
+}
+#scroll_thumbs ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 /*****Tips********/
 #tiptip_holder {
 	display: none;

@@ -51,8 +51,8 @@ ActionController::Routing::Routes.draw do |map|
   
   # # For Tutorial Modals
   map.action_tutorials "action_tutorials", :controller => "tutorials", :action => "action_tutorials"
-  map.quick_launch_tuorials "quick_launch_tutorials", :controller => "tutorials", :action => "quick_launch_tutorials"
-  map.dashboard_tuorials "dashboard_tutorials", :controller => "tutorials", :action => "dashboard_tutorials"
+  map.quick_launch_tutorials "quick_launch_tutorials", :controller => "tutorials", :action => "quick_launch_tutorials"
+  map.dashboard_tutorials "dashboard_tutorials", :controller => "tutorials", :action => "dashboard_tutorials"
   
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"

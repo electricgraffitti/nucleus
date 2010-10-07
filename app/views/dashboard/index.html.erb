@@ -1,7 +1,7 @@
 <%= render :partial => 'dashboard/dashboard_header' %>
 <div id="panel_layout" class="clear">
   <div id="dashboard">
-    <div id="top_left_dashboard" class="graph_box">
+    <div id="dash1" class="top_left_dashboard graph_box">
       <h2 class="main_header">Top 5 Providers Alert</h2>
       <div id="panel_header" class="basic_panel">
        <%= render :partial => 'dashboard/dashboard_top_provider_heading', :locals => {:provider => p} %>
@@ -13,7 +13,7 @@
       <% end %>
     </div>
     
-    <div class="dashboard_module graph_box">
+    <div id="dash2" class="dashboard_module graph_box">
       <div class="dashboard_module_header top_provider_block">
         Provider Distribution Profiles
       </div>
@@ -22,7 +22,7 @@
       </div>
     </div>
     
-    <div class="dashboard_module graph_box">
+    <div id="dash3" class="dashboard_module graph_box">
       <div class="dashboard_module_header top_provider_block">
         Cases Opened by Provider Type
       </div>
@@ -31,7 +31,7 @@
       </div>
     </div>
     
-    <div class="dashboard_module graph_box">
+    <div id="dash4" class="dashboard_module graph_box">
       <div class="dashboard_module_header top_provider_block">
         Indentified Savings vs. Accepted Savings
       </div>
@@ -46,22 +46,21 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      
-      var wrap = $("#dashboard");
-      
-      drag.setupDashboardPanels(wrap, "graph_box", 1000);
-      
-
+      $('.scroll_nav_trigger').live('click', function(e) {
+        scroll.setScroll($(this));
+        e.preventDefault();
+      });
+      baseActions.tutorialTrigger();
+        
       // Scatter Plot
       $.getScript('javascripts/data/scatterData.js');
-
       // Bar Graph
       $.getScript('javascripts/data/barData.js');
-
       // Line Chart
       $.getScript('javascripts/data/lineData.js');
       
-      drag.loadQuickLaunchOrder(wrap, "graph_box");
+      drag.setupDashboardPanels("#dashboard", "dashboardCookie", 1000);
+      drag.loadQuickLaunchOrder("#dashboard", "dashboardCookie");
 
     });
   </script>

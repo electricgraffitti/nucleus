@@ -19,7 +19,6 @@ var flash = {
 		1400);
 	}
 };
-
 var tableActions = {
 
 	setActive: function(el) {
@@ -138,7 +137,6 @@ var tableActions = {
 	}
 	// end Table
 };
-
 var profileActions = {
 
 	setBase: function() {
@@ -147,7 +145,6 @@ var profileActions = {
 	}
 	// end Profile
 };
-
 var chartActions = {
 
 	setupChartBaseColors: function() {
@@ -224,7 +221,6 @@ var adminAction = {
 	}
 	// end Admin
 };
-
 var drag = {
   
   setupQuickLaunch: function(a,b,c) {
@@ -293,6 +289,7 @@ var drag = {
       if (itemID in rebuild) {
         var item = rebuild[itemID];
 
+        
         // select the item according to current order
         var child = $("div.ui-sortable").children("#" + item);
 
@@ -312,7 +309,37 @@ var drag = {
     }
   }
   
-}
+};
+
+var scroll = {
+  
+  initTrigger: function() {
+    
+  },
+  
+  setScroll: function(link) {
+    var $scrollWrap = jQuery('#scroll_pane'); 
+    var $scrollBox = $scrollWrap.find('#scrolling_segment')
+
+    var $panels = $scrollBox.find('.scroll_panel');
+    var $nav = jQuery('.scroll_nav');
+    var $trigger_wraps = $nav.find('li');
+    var $triggers = $nav.find('a');
+    
+    var scrollOptions = {
+      target: $scrollBox,
+      items: $panels,
+      navigation: $triggers,
+      axis: 'xy',
+      duration: 500,
+      easing: 'swing'
+    };
+    $scrollWrap.serialScroll(scrollOptions);
+    $.localScroll(scrollOptions);
+    $trigger_wraps.removeClass('selected');
+    link.parent().addClass('selected');
+  }
+};
 
 var baseActions = {
   
@@ -411,7 +438,8 @@ var baseActions = {
        wrap.load(this.getTrigger().attr('tutorial_page'));
       },
       onLoad: function() {
-        $('.scrollable').scrollable();
+        var first_trigger = $('.scroll_nav_trigger:first');
+        first_trigger.click();
       },
 	  });
 	},
@@ -446,17 +474,13 @@ var baseActions = {
 		baseActions.setOverlay();
 	}
 	// end base
-}
+};
+
+
 //**********Initialize Document**********//
 $(document).ready(function() {
   baseActions.setXHR();
 	baseActions.setDefaults();
 	tableActions.setDefaultTableActions();
 	baseActions.modalTrigger();
-
-	$('#provider_search tbody tr:first').click();
-	$('#provider_action_table tbody tr:first').click();
-
-	// test for js success
-	// console.log("js success");
 });

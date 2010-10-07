@@ -36,12 +36,15 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
+      
+      $('.scroll_nav_trigger').live('click', function(e) {
+        scroll.setScroll($(this));
+        e.preventDefault();
+      });
+      
+      baseActions.tutorialTrigger();
       drag.setupQuickLaunch("#quick_launch_top", "quickLaunchCookie", 1000);
       drag.loadQuickLaunchOrder("#quick_launch_top", "quickLaunchCookie");
-      
-      <% if ipad? %>
-        ipad.dnd();
-      <% end %>
       
     });
   </script>
