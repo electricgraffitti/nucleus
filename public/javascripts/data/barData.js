@@ -1,6 +1,6 @@
 var barChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'bottom_left_chart',
+      renderTo: 'savings_tracker',
       defaultSeriesType: 'column',
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
@@ -14,10 +14,10 @@ var barChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: '2010 YTD',
+     text: '2010 YTD',
       style: {
-         color: "#555555",
-         font: "16px Arial, Helvetica, sans-serif"
+         color: "#5bab46",
+         font: '12px Arial, Helvetica, sans-serif'
       }
    },
    subtitle: {

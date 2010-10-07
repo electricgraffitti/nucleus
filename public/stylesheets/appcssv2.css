@@ -1,10 +1,10 @@
 /***************************************************************************************/
 /*************************************************************PROVIDER DASHBOARD********/
 #v2 .top_provider_billed {
-  width: 182px;
+  width: 181px;
 }
 #v2 .top_provider_score {
-  width: 78px;
+  width: 80px;
 }
 /***************************************************************************************/
 /*************************************************************PROVIDER PROFILE**********/
@@ -19,6 +19,12 @@
 	top:0;
 	width:55px;
 	text-shadow: 0px 1px 0px #efefef;
+}
+#v2 #dashboard_providers #provider_rating, #v2 #dashboard_providers #provider_rating_full {
+	position:relative;
+  float:left;
+  border-left: none;
+  border-right: 1px solid #c0c0c0;
 }
 #v2 #provider_rating_full {
   top: 0px;

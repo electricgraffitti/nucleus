@@ -2,12 +2,14 @@
 <div id="panel_layout" class="clear">
   <div id="dashboard">
     <div id="dash1" class="top_left_dashboard graph_box">
-      <h2 class="main_header">Top 5 Providers Alert</h2>
+      <div class="dashboard_module_header top_provider_block">
+        Top 10 Flagged Providers by Score
+      </div>
       <div id="panel_header" class="basic_panel">
        <%= render :partial => 'dashboard/dashboard_top_provider_heading', :locals => {:provider => p} %>
       </div>
       <% @top_providers.each do |p| %>
-      <div class="dashboard_basic_panel">
+      <div id="dashboard_providers" class="dashboard_basic_panel">
         <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
       </div>
       <% end %>
@@ -15,29 +17,61 @@
     
     <div id="dash2" class="dashboard_module graph_box">
       <div class="dashboard_module_header top_provider_block">
-        Provider Distribution Profiles
+        Provider Distribution by Score
       </div>
-      <div id="top_right_chart" class="chart">
+      <div id="scatter_chart" class="chart">
 
       </div>
     </div>
     
     <div id="dash3" class="dashboard_module graph_box">
       <div class="dashboard_module_header top_provider_block">
-        Cases Opened by Provider Type
+        Savings Tracker by Month
       </div>
-      <div id="bottom_left_chart" class="chart">
+      <div id="savings_tracker" class="chart">
 
       </div>
     </div>
     
-    <div id="dash4" class="dashboard_module graph_box">
+    <!-- <div id="dash4" class="dashboard_module graph_box">
       <div class="dashboard_module_header top_provider_block">
         Indentified Savings vs. Accepted Savings
       </div>
       <div id="bottom_right_chart" class="chart">
 
       </div>
+    </div> -->
+    
+    <div id="dash4" class="dashboard_module graph_box">
+      <div class="dashboard_module_header top_provider_block">
+        Provider Action Summary
+      </div>
+      <div id="provider_action_summary" class="chart">
+
+      </div>
+    </div>
+    
+    <div id="dash5" class="dashboard_module graph_box">
+      <div class="dashboard_module_header top_provider_block">
+        Provider Population by Risk Category
+      </div>
+      <div id="bottom_right_chart" class="chart">
+
+      </div>
+    </div>
+    
+    <div id="dash6" class="top_left_dashboard graph_box">
+      <div class="dashboard_module_header top_provider_block">
+        Savings Opportunities by Service
+      </div>
+      <div id="panel_header" class="basic_panel">
+        <div class="top_provider_block saving_opp_product">Product</div>
+        <div class="top_provider_block saving_opp_est">Est Savings</div>
+        <div class="top_provider_block saving_opp_claims">Claims</div>
+        <div class="top_provider_block saving_opp_more">Learn More</div>
+      </div>
+      <%= render :partial => 'dashboard/service_opportunities', :locals => {:provider => p} %>
+      
     </div>
 
   </div>
@@ -58,9 +92,11 @@
       $.getScript('javascripts/data/barData.js');
       // Line Chart
       $.getScript('javascripts/data/lineData.js');
+      // Pie Chart
+      $.getScript('javascripts/data/provider_action_summary_dashboard.js');
       
-      drag.setupDashboardPanels("#dashboard", "dashboardCookie", 1000);
-      drag.loadQuickLaunchOrder("#dashboard", "dashboardCookie");
+      // drag.setupDashboardPanels("#dashboard", "dashboardCookie", 1000);
+      // drag.loadQuickLaunchOrder("#dashboard", "dashboardCookie");
 
     });
   </script>

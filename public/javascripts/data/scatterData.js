@@ -1,6 +1,6 @@
 var scatterChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'top_right_chart', 
+      renderTo: 'scatter_chart', 
       defaultSeriesType: 'scatter',
       zoomType: 'xy',
       backgroundColor: {
@@ -20,12 +20,11 @@ var scatterChart = new Highcharts.Chart({
    },
    title: {
      enabled: false,
-     text: '2010 YTD'
-      // text: 'Provider Distribution Profiles',
-      // style: {
-      //    color: "#555555",
-      //    font: '16px Arial, Helvetica, sans-serif'
-      // }
+     text: '2010 YTD',
+      style: {
+         color: "#5bab46",
+         font: '12px Arial, Helvetica, sans-serif'
+      }
    },
    subtitle: {
       enabled: false

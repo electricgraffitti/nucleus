@@ -1170,6 +1170,7 @@ span#occurence {
   background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
   padding: 0px;
   width: 438px;
+   margin-top: 12px;
 }
 .dashboard_module_header {
   background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
@@ -1195,13 +1196,46 @@ span#occurence {
   width: 115px;
   border-right: 1px solid #c0c0c0;
 }
+.saving_opp_header h3 a {
+  margin-left: 45px;
+}
+.top_provider_block.pci{
+  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px 0px no-repeat;
+}
+.top_provider_block.cra{
+  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -200px no-repeat;
+}
+.top_provider_block.fci{
+  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -80px no-repeat;
+}
+.top_provider_block.oci{
+  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -120px no-repeat;
+}
+.top_provider_block.rxi {
+  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -160px no-repeat;
+}
+.saving_opp_product {
+  width: 80px;
+  border-right: 1px solid #c0c0c0;
+}
+.saving_opp_est {
+  width: 100px;
+  border-right: 1px solid #c0c0c0;
+}
+.saving_opp_claims {
+  width: 80px;
+  border-right: 1px solid #c0c0c0;
+}
+.saving_opp_more {
+  width: 80px;
+}
 .top_provider_billed {
   width: 192px;
-  border-right: 1px solid #c0c0c0;
 }
 .top_provider_score {
   width: 68px;
   text-align: center;
+  border-right: 1px solid #c0c0c0;
 }
 .dashboard_basic_panel {
   border:1px solid #C0C0C0;

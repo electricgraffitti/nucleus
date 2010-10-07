@@ -14,18 +14,19 @@ var pieChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Savings by Condition',
-      style: {
-        color: '#555555',
-        font: '16px Arial, Helvetica, sans-serif'
-      }
+     text: '2010 YTD',
+     style: {
+       color: '#6ac520',
+       font: '12px Arial, Helvetica, sans-serif'
+     }
    },
    subtitle: {
-      text: '2010 YTD',
-      style: {
-        color: '#6ac520',
-        font: '12px Arial, Helvetica, sans-serif'
-      }
+      enabled: false
+      // text: '2010 YTD',
+      // style: {
+      //    color: "#5bab46",
+      //    font: '12px Arial, Helvetica, sans-serif'
+      // }
    },
    plotArea: {
       shadow: true,
@@ -72,8 +73,8 @@ var pieChart = new Highcharts.Chart({
       type: 'pie',
       name: 'Condition',
       data: [
-         ['SDES',   44.2],
-         ['SFRO',       10.6],
+         ['SDES', 44.2],
+         ['SFRO',10.6],
          {
             name: 'SBRD',
             y: 26.6,
