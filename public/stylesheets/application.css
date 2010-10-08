@@ -1316,6 +1316,18 @@ a.widget_option.close_option:active {
 .top_provider_block.rxi {
   background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -160px no-repeat;
 }
+.top_provider_block.risk_high {
+  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px 0px no-repeat;
+}
+.top_provider_block.risk_elevated{
+  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px -39px no-repeat;
+}
+.top_provider_block.risk_mod {
+  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px -78px no-repeat;
+}
+.top_provider_block.risk_low {
+  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px -117px no-repeat;
+}
 .saving_opp_product {
   width: 80px;
   border-right: 1px solid #c0c0c0;
@@ -1329,6 +1341,21 @@ a.widget_option.close_option:active {
   border-right: 1px solid #c0c0c0;
 }
 .saving_opp_more {
+  width: 80px;
+}
+.pro_pop_risk {
+  width: 80px;
+  border-right: 1px solid #c0c0c0;
+}
+.pro_pop_exp {
+  width: 120px;
+  border-right: 1px solid #c0c0c0;
+}
+.pro_pop_prov {
+  width: 64px;
+  border-right: 1px solid #c0c0c0;
+}
+.pro_pop_percent {
   width: 80px;
 }
 .top_provider_billed {
