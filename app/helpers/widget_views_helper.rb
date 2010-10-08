@@ -1,0 +1,2 @@
+module WidgetViewsHelper
+end

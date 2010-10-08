@@ -1,0 +1,24 @@
+<h1>Editing widget_view</h1>
+
+<% form_for(@widget_view) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :client_id %><br />
+    <%= f.text_field :client_id %>
+  </p>
+  <p>
+    <%= f.label :dashboard_widget_id %><br />
+    <%= f.text_field :dashboard_widget_id %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @widget_view %> |
+<%= link_to 'Back', widget_views_path %>

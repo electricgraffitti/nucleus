@@ -1,5 +1,7 @@
 class Client < ActiveRecord::Base
   
+  has_many :widget_views
+  
   validates_uniqueness_of :email, :on => :create, :message => "Email already registered"
   
   acts_as_authentic

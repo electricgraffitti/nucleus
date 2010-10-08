@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @dashboard_widget.name %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%=h @dashboard_widget.page %>
+</p>
+
+
+<%= link_to 'Edit', edit_dashboard_widget_path(@dashboard_widget) %> |
+<%= link_to 'Back', dashboard_widgets_path %>

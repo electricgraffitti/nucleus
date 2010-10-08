@@ -1,0 +1,22 @@
+<h1>Listing dashboard_widgets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Page</th>
+  </tr>
+
+<% @dashboard_widgets.each do |dashboard_widget| %>
+  <tr>
+    <td><%=h dashboard_widget.name %></td>
+    <td><%=h dashboard_widget.page %></td>
+    <td><%= link_to 'Show', dashboard_widget %></td>
+    <td><%= link_to 'Edit', edit_dashboard_widget_path(dashboard_widget) %></td>
+    <td><%= link_to 'Destroy', dashboard_widget, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dashboard_widget', new_dashboard_widget_path %>

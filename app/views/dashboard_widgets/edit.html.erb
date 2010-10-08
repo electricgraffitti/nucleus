@@ -1,0 +1,20 @@
+<h1>Editing dashboard_widget</h1>
+
+<% form_for(@dashboard_widget) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :page %><br />
+    <%= f.text_field :page %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dashboard_widget %> |
+<%= link_to 'Back', dashboard_widgets_path %>

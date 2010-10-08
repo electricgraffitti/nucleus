@@ -1,0 +1,24 @@
+<h1>Listing widget_views</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Dashboard widget</th>
+    <th>Active</th>
+  </tr>
+
+<% @widget_views.each do |widget_view| %>
+  <tr>
+    <td><%=h widget_view.client_id %></td>
+    <td><%=h widget_view.dashboard_widget_id %></td>
+    <td><%=h widget_view.active %></td>
+    <td><%= link_to 'Show', widget_view %></td>
+    <td><%= link_to 'Edit', edit_widget_view_path(widget_view) %></td>
+    <td><%= link_to 'Destroy', widget_view, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New widget_view', new_widget_view_path %>

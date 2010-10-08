@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101006180253) do
+ActiveRecord::Schema.define(:version => 20101008164302) do
 
   create_table "claim_statuses", :force => true do |t|
     t.string   "claim_status"
@@ -80,6 +80,13 @@ ActiveRecord::Schema.define(:version => 20101006180253) do
     t.integer  "speciality_average_percentage"
     t.integer  "speciality_average_billed"
     t.integer  "speciality_average_paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dashboard_widgets", :force => true do |t|
+    t.string   "name"
+    t.string   "page"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -236,6 +243,14 @@ ActiveRecord::Schema.define(:version => 20101006180253) do
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "widget_views", :force => true do |t|
+    t.integer  "client_id"
+    t.integer  "dashboard_widget_id"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

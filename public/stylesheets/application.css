@@ -1139,6 +1139,15 @@ span#occurence {
   float:left;
   text-align: center;
 }
+#dashboard_options {
+  background:none repeat scroll 0 0 #DDDDDD;
+  border-bottom:1px solid #AAAAAA;
+  height:200px;
+  margin:0 auto;
+  position:absolute;
+  width:1024px;
+  z-index:10;
+}
 .graph_box {
   position: relative;
   float: left;

@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :widget_views
+
+  map.resources :dashboard_widgets
+
   map.resources :tutorials
 
   map.resources :claim_statuses

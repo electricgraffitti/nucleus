@@ -341,6 +341,23 @@ var scroll = {
   }
 };
 
+var widget = {
+  
+  dashboardOptions: function(pane) {
+    var $trigger = $('#options_trigger');
+    var $pane = $(pane);
+    $trigger.click(function(e) {
+      if ($pane.is(':visible')) {
+        $pane.hide("slide", {direction: 'up'});
+      } else {
+        $pane.show("slide", {direction: 'up'});
+      }
+       e.preventDefault(); 
+    });
+  }
+  
+};
+
 var baseActions = {
   
   setXHR: function() {

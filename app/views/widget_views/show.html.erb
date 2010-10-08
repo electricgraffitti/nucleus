@@ -1,0 +1,18 @@
+<p>
+  <b>Client:</b>
+  <%=h @widget_view.client_id %>
+</p>
+
+<p>
+  <b>Dashboard widget:</b>
+  <%=h @widget_view.dashboard_widget_id %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @widget_view.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_widget_view_path(@widget_view) %> |
+<%= link_to 'Back', widget_views_path %>

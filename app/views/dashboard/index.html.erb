@@ -1,5 +1,8 @@
 <%= render :partial => 'dashboard/dashboard_header' %>
 <div id="panel_layout" class="clear">
+  <div id="dashboard_options" class="hidden">
+
+  </div>
   <div id="dashboard">
     <div id="dash1" class="top_left_dashboard graph_box">
       <div class="dashboard_module_header top_provider_block">
@@ -84,6 +87,7 @@
         scroll.setScroll($(this));
         e.preventDefault();
       });
+      widget.dashboardOptions('#dashboard_options');
       baseActions.tutorialTrigger();
         
       // Scatter Plot
