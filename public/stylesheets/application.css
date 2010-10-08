@@ -1274,6 +1274,12 @@ a.widget_option.close_option:active {
   padding: 10px 9px 14px;
   text-align: left;
 }
+.top_provider_block h3 {
+  position: relative;
+  float: left;
+  width: 350px;
+  font-weight: bold;
+}
 .top_provider_name {
   width: 115px;
   border-right: 1px solid #c0c0c0;
