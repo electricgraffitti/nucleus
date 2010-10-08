@@ -52,7 +52,8 @@ var scatterChart = new Highcharts.Chart({
       },
       startOnTick: true,
       endOnTick: true,
-      showLastLabel: true
+      showLastLabel: true,
+			gridLineWidth: 1
    },
    yAxis: {
      labels: {
