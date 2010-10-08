@@ -28,11 +28,6 @@ var scatterChart = new Highcharts.Chart({
    },
    subtitle: {
       enabled: false
-      // text: '2010 YTD',
-      // style: {
-      //    color: "#5bab46",
-      //    font: '12px Arial, Helvetica, sans-serif'
-      // }
    },
    xAxis: {
       title: {
