@@ -1,6 +1,11 @@
 <div id="page_header">
   <h2>
     Quick Launch
-    <div class="tutorial_trigger" rel="#tutorial_modal" tutorial_page="<%= quick_launch_tutorials_path() %>"></div>
+    <!-- <div class="tutorial_trigger" rel="#tutorial_modal" tutorial_page="<%= quick_launch_tutorials_path() %>"></div> -->
   </h2>
+  <ul class="page_nav">
+    <li class="last">
+      <%= link_to "Info", "", :class => "tutorial_trigger", :rel => "#tutorial_modal", :tutorial_page => quick_launch_tutorials_path() %>
+    </li>
+  </ul>
 </div>

@@ -1,77 +1,75 @@
 var barChart = new Highcharts.Chart({
-   chart: {
-      renderTo: 'savings_tracker',
-      defaultSeriesType: 'column',
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-      },
-      borderColor: '#e7e7e7',
-      borderRadius: 0,
-      borderWidth: 1
-   },
-   credits: {
-     enabled: false
-   },
-   title: {
-     text: '2010 YTD',
-      style: {
-         color: "#5bab46",
+  chart: {
+    renderTo: 'savings_tracker',
+    defaultSeriesType: 'column',
+    backgroundColor: {
+      linearGradient: [0, 0, 0, 300],
+      stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+    },
+    borderRadius: 0
+  },
+  credits: {
+   enabled: false
+  },
+  title: {
+   text: '2010 YTD',
+    style: {
+       color: "#5bab46",
+       font: '12px Arial, Helvetica, sans-serif'
+    }
+  },
+  subtitle: {
+   enabled: false
+  },
+  xAxis: {
+    categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
+    title: {
+       text: 'Provider Type',
+       style: {
+         color: '#555555',
          font: '12px Arial, Helvetica, sans-serif'
-      }
-   },
-   subtitle: {
-     enabled: false
-   },
-   xAxis: {
-      categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
-      title: {
-         text: 'Provider Type',
-         style: {
-           color: '#555555',
-           font: '12px Arial, Helvetica, sans-serif'
-         }
-      },
-      labels: {
-        style: {
-          color: '#555555',
-          font: '10px Arial, Helvetica, sans-serif'
-        }
-      }
-   },
-   yAxis: {
-      min: 0,
-      title: {
-         text: 'Cases Opened',
-         style: {
-           color: '#555555',
-           font: '12px Arial, Helvetica, sans-serif'
-         }
-      },
-      labels: {
-        style: {
-          color: '#555555',
-          font: '10px Arial, Helvetica, sans-serif'
-        }
-      }
-   },
-   tooltip: {
-      formatter: function() {
-         return '<b>'+ this.x +'</b><br/>'+
-             this.series.name +': '+ this.y + " Cases Opened";
-      },
+       }
+    },
+    labels: {
       style: {
-        font: '12px Arial, Helvetica, sans-serif'
-      },
-      borderRadius: 0,
-      borderWidth: 1
-   },
-   plotOptions: {
+        color: '#555555',
+        font: '10px Arial, Helvetica, sans-serif'
+      }
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+       text: 'Cases Opened',
+       style: {
+         color: '#555555',
+         font: '12px Arial, Helvetica, sans-serif'
+       }
+    },
+    labels: {
+      style: {
+        color: '#555555',
+        font: '10px Arial, Helvetica, sans-serif'
+      }
+    }
+  },
+  tooltip: {
+    formatter: function() {
+       return '<b>'+ this.x +'</b><br/>'+
+           this.series.name +': '+ this.y + " Cases Opened";
+    },
+    style: {
+      font: '12px Arial, Helvetica, sans-serif'
+    },
+    borderRadius: 0,
+    borderWidth: 1
+  },
+  plotOptions: {
     column: {
       stacking: 'normal',
       pointWidth: 50
     }
-   },
+  },
    legend: {
      style: {
         left: 'auto',

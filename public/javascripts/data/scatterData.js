@@ -11,9 +11,7 @@ var scatterChart = new Highcharts.Chart({
         margin: ['0px 0px 20px 0px'],
         font: '16px Arial, Helvetica, sans-serif'
       },
-      borderColor: '#e7e7e7',
-      borderRadius: 0,
-      borderWidth: 1
+      borderRadius: 0
    },
    credits: {
      enabled: false
@@ -776,5 +774,10 @@ var scatterChart = new Highcharts.Chart({
       color: 'rgba(217,59,39,1)',
       url: "http://demo.get-nucleus.com/providers/1"
     }]
+});
+
+$('#dash2 .export_option').click(function(e) {
+    scatterChart.exportChart();
+    e.preventDefault();
 });
 

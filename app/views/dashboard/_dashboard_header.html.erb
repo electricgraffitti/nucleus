@@ -1,11 +1,14 @@
 <div id="page_header">
   <h2>
     Dashboard
-    <div class="tutorial_trigger" rel="#tutorial_modal" tutorial_page="<%= dashboard_tutorials_path() %>"></div>
+    <!-- <div class="tutorial_trigger" rel="#tutorial_modal" tutorial_page="<%= dashboard_tutorials_path() %>"></div> -->
   </h2>
   <ul class="page_nav">
-    <li class="last">
+    <li>
       <%= link_to "Customize", "", :id => "options_trigger", :class => "tip", :title => "Customize Dashboard" %>
+    </li>
+    <li class="last">
+      <%= link_to "Info", "", :class => "tutorial_trigger", :rel => "#tutorial_modal", :tutorial_page => dashboard_tutorials_path() %>
     </li>
   </ul>
 </div>

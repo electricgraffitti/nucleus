@@ -149,12 +149,11 @@ var chartActions = {
 
 	setupChartBaseColors: function() {
 		Highcharts.setOptions({
-			colors: ['#00853f', // PCI
-			'#009fc2', // DCI
-			'#98002e', // FCI
-			'#e5b53a', // OCI
-			'#00467f', // RxI
-			'#78496a' // VCI
+			colors: ['#5bab46', // PCI
+			'#398dcc', // DCI
+			'#d93b27', // FCI
+			'#f7b219', // OCI
+			'#f47727' // RxI
 			]
 		});
 	}
@@ -346,14 +345,83 @@ var widget = {
   dashboardOptions: function(pane) {
     var $trigger = $('#options_trigger');
     var $pane = $(pane);
-    $trigger.click(function(e) {
-      if ($pane.is(':visible')) {
-        $pane.hide("slide", {direction: 'up'});
-      } else {
-        $pane.show("slide", {direction: 'up'});
-      }
+    $trigger.live('click', function(e) {
+      widget.optionPaneDisplay($pane);
        e.preventDefault(); 
     });
+  },
+  
+  optionPaneDisplay: function(pane) {
+    if (pane.is(':visible')) {
+      pane.hide("slide", {direction: 'up'});
+    } else {
+      pane.show("slide", {direction: 'up'});
+    }
+  },
+  
+  widgetDisplayToggle: function(panel) {
+    if (panel.is(':visible')) {
+      panel.hide("slide", {direction: 'up'});
+    } else {
+      panel.show("slide", {direction: 'up'});
+    }
+  },
+  
+  maximizeOption: function() {
+   var $trigger = $('.maximize_option');
+   $trigger.live('click', function(e) {
+     var $widget = $(this).parents(".graph_box:first");
+     var $panel = $widget.find(".widget_content");
+      if ($panel.is(':visible')) {
+        e.preventDefault();
+        return false
+      } else {
+        $panel.show("slide", {direction: 'up'});
+      }
+     e.preventDefault();
+   });
+  },
+  
+  closeOption: function() {
+    var $trigger = $('.close_option');
+    $trigger.live('click', function(e) {
+      var $widget = $(this).parents(".graph_box:first");
+      var $panel = $widget.find(".widget_content");
+      if ($panel.is(':visible')) {
+        $panel.hide("slide", {direction: 'up'});
+      } else {
+        e.preventDefault();
+        return false
+      }
+      e.preventDefault();
+    });
+  },
+
+  settingsOption: function() {
+    var $trigger = $('.settings_option');
+    $trigger.live('click', function(e) {
+      var $widget = $(this).parents(".graph_box:first");
+      var $pane = $widget.find(".dashboard_panel_options");
+      widget.optionPaneDisplay($pane);
+      e.preventDefault();
+    });
+  },
+  
+  exportOption: function() {
+    var $trigger = $('.export_option');
+    $trigger.live('click', function() {
+        scatterChart.exportChart({
+            type: 'application/pdf',
+            filename: 'x.pdf'
+        });
+    });
+  },
+  
+  widgetOptions: function() {
+    widget.settingsOption();
+    // widget.exportOption();
+    widget.closeOption();
+    widget.maximizeOption();
   }
   
 };

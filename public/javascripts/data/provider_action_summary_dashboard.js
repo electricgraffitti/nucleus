@@ -1,14 +1,12 @@
 var pieChart = new Highcharts.Chart({
    chart: {
-      renderTo: 'provider_action_summary',
-      margin: [50, 20, 60, 20],
+      renderTo: 'pie_chart',
+      margin: [50, 80, 60, 20],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],
         stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
       },
-      borderColor: '#e7e7e7',
-      borderRadius: 0,
-      borderWidth: 1
+      borderRadius: 0
    },
    credits: {
      enabled: false
@@ -22,16 +20,11 @@ var pieChart = new Highcharts.Chart({
    },
    subtitle: {
       enabled: false
-      // text: '2010 YTD',
-      // style: {
-      //    color: "#5bab46",
-      //    font: '12px Arial, Helvetica, sans-serif'
-      // }
    },
    plotArea: {
-      shadow: true,
-      borderWidth: 2,
-      backgroundColor: '#555555'
+     shadow: true,
+     borderWidth: 2,
+     backgroundColor: '#555555'
    },
    tooltip: {
       formatter: function() {
@@ -40,21 +33,17 @@ var pieChart = new Highcharts.Chart({
    },
    plotOptions: {
       pie: {
-        borderColor: "#333333",
-        allowPointSelect: true,
-        dataLabels: {
-          enabled: true,
-          formatter: function() {
-            if (this.y > 5) return this.point.name;
-          },
-          color: 'white',
-          style: {
-            font: '13px Trebuchet MS, Verdana, sans-serif'
-          }
-         },
-         shadow: true,
-         marker: {
-           lineColor: "#c0c0c0"
+         allowPointSelect: true,
+         cursor: 'pointer',
+         dataLabels: {
+            enabled: true,
+            formatter: function() {
+               if (this.y > 5) return this.point.name;
+            },
+            color: 'white',
+            style: {
+               font: '13px Trebuchet MS, Verdana, sans-serif'
+            }
          }
       }
    },
@@ -63,25 +52,24 @@ var pieChart = new Highcharts.Chart({
       style: {
          left: 'auto',
          bottom: 'auto',
-         right: '20px',
-         top: '20px'
-      },
-      borderWidth: 1,
-      backgroundColor: '#FFFFFF'
+         right: '50px',
+         top: '100px'
+      }
    },
-        series: [{
+    series: [{
       type: 'pie',
-      name: 'Condition',
+      name: 'Provider Action Summary',
+      color: ["#5bab46", '#f47727', '#398dcc', '#d93b27'],
       data: [
-         ['SDES', 44.2],
-         ['SFRO',10.6],
+         ['Deny',   45.0],
+         ['Review ',       26.8],
          {
-            name: 'SBRD',
-            y: 26.6,
+            name: 'Records',    
+            y: 18.8,
             sliced: true,
             selected: true
          },
-         ['SCFE',    15.1]
+         ['No Action',    10.5]
       ]
    }]
 });
