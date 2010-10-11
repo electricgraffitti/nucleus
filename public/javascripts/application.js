@@ -245,7 +245,7 @@ var drag = {
     // set cookie expiry time (days):
     var sce = c;
     
-    $(ss).sortable({
+    ss.sortable({
       handle : '.dashboard_module_header',
       opacity : 0.3,
       cursor: "move",
@@ -254,15 +254,15 @@ var drag = {
   },
   
   setQuickLaunchOrder: function(ss,scn,sce) {
-    $.cookie(scn, $(ss).sortable("toArray"), { expires: sce, path: "/" });
+    $.cookie(scn, ss.sortable("toArray"), { expires: sce, path: "/" });
   },
   
   setDashboardLaunchOrder: function(ss,scn,sce) {
-    $.cookie(scn, $(ss).sortable("toArray"), { expires: sce, path: "/" });
+    $.cookie(scn, ss.sortable("toArray"), { expires: sce, path: "/" });
   },
   
   loadQuickLaunchOrder: function(ss,scn) {
-    var list = $(ss);
+    var list = ss;
     if (list == null) return
 
     // fetch the cookie value (saved order)
@@ -342,6 +342,33 @@ var scroll = {
 
 var widget = {
   
+  widgetOptionTrigger: function() {
+    var $viewTrigger = $('#widget_view_controls :checkbox');
+    $viewTrigger.live('click', function() {
+      if ($(this).is(':checked')) {
+        var $w = $('#' + $(this).attr('widget'));
+        var visibleID = $w.attr('id');
+        $w.hide('fade', 1000, widget.setWidgetViewCookie(visibleID));
+      } else {
+        var $w = $('#' + $(this).attr('widget'));
+        var hiddenID = $w.attr('id');
+        console.log(hiddenID);
+        $w.show('fade', 1000, widget.destroyWidgetViewCookie(hiddenID));
+      }
+      
+    });
+  },
+  
+  setWidgetViewCookie: function(visibleID) {
+    $.cookie(visibleID, 'hidden', { expires: 1000, path: "/" } );
+  },
+  
+  destroyWidgetViewCookie: function(hiddenID) {
+    var cookie = $.cookie(hiddenID);
+    if (!cookie) return;
+    $.cookie(hiddenID, null);
+  },
+  
   dashboardOptions: function(pane) {
     var $trigger = $('#options_trigger');
     var $pane = $(pane);
@@ -417,8 +444,9 @@ var widget = {
     });
   },
   
-  widgetOptions: function() {
+  widgetOptions: function(ss) {
     widget.settingsOption();
+    widget.widgetOptionTrigger(ss);
     // widget.exportOption();
     widget.closeOption();
     widget.maximizeOption();

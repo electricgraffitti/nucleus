@@ -25,7 +25,6 @@ class WidgetViewsController < ApplicationController
   # GET /widget_views/new.xml
   def new
     @widget_view = WidgetView.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @widget_view }

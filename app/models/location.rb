@@ -1,18 +1,3 @@
-class Location < ActiveRecord::Base
-  
-  belongs_to :state
-  belongs_to :provider
-  
-  after_validation :fetch_coordinates
-  
-  geocoded_by :location
-
-  def location
-    [address, city, state, zipcode].compact.join(', ')
-  end
-  
-end
-
 # == Schema Information
 #
 # Table name: locations
@@ -35,4 +20,19 @@ end
 #  total_paid       :integer(4)
 #  suspect_location :boolean(1)
 #
+class Location < ActiveRecord::Base
+  
+  belongs_to :state
+  belongs_to :provider
+  
+  after_validation :fetch_coordinates
+  
+  geocoded_by :location
+
+  def location
+    [address, city, state, zipcode].compact.join(', ')
+  end
+  
+end
+
 

@@ -1,0 +1,8 @@
+<div id="widget_view_controls">
+  <% for dw in dashboard_widgets %>
+  <div class="dashboard_option_check">
+    <%= check_box_tag dw.name, dw.id, current_client.widget_views.include?(dw), :class => "widget_view_option", :widget => "dash#{dw.id}" %>
+    <%=h label_tag "#{(dw.name).capitalize}" %>
+  </div>
+  <% end %>
+</div>

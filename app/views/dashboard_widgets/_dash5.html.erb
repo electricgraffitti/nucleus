@@ -1,0 +1,31 @@
+<div id="dash5" class="top_left_dashboard graph_box">
+  <div class="dashboard_module_header top_provider_block">
+    <h3>Provider Population by Risk Category</h3>
+    <%= render :partial => 'dashboard/widget_options' %>
+  </div>
+  <div class="hidden dashboard_panel_options">Dash 5</div>
+  <div class="widget_content">
+    <div id="panel_header" class="basic_panel">
+      <div class="top_provider_block pro_pop_risk">Risk</div>
+      <div class="top_provider_block pro_pop_exp">Total Exposure</div>
+      <div class="top_provider_block pro_pop_prov">Providers</div>
+      <div class="top_provider_block pro_pop_percentage">Percentage</div>
+    </div>
+    <%= render :partial => 'dashboard/provider_population_risk', :locals => {:provider => p} %>
+  </div>
+  <div class="widget_footer"></div>
+</div>
+
+<!-- <div id="dash5" class="dashboard_module graph_box">
+  <div class="dashboard_module_header top_provider_block">
+    <h3>Provider Population by Risk Category</h3>
+    <%= render :partial => 'dashboard/widget_options' %>
+  </div>
+  <div class="hidden dashboard_panel_options">Dash 5</div>
+  <div class="widget_content">
+  <div id="bottom_right_chart" class="chart">
+
+  </div>
+  </div>
+  <div class="widget_footer"></div>
+</div> -->

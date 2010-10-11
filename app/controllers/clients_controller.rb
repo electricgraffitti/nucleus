@@ -66,7 +66,6 @@ class ClientsController < ApplicationController
   # PUT /clients/1.xml
   def update
     @client = Client.find(params[:id])
-
     respond_to do |format|
       if @client.update_attributes(params[:client])
         flash[:notice] = 'Account Updated'

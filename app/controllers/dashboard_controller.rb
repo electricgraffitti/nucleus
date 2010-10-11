@@ -4,6 +4,7 @@ class DashboardController < ApplicationController
   
   def index
     @top_providers = Provider.top_billable.small_list(5)
+    @dashboard_widgets = DashboardWidget.widget_type('dashboard')
     render :layout => "application"
   end
   
