@@ -1157,13 +1157,15 @@ span#occurence {
   font-size: 16px;
 }
 #dashboard_options #widget_view_controls {
-  clear: left;
+  clear:left;
+  float:left;
+  margin-top:15px;
 }
 .dashboard_option_check {
   position: relative;
   float: left;
   width: 90px;
-  padding: 20px 0px;
+  padding: 5px 0px;
 }
 .dashboard_panel_options {
   background:none repeat scroll 0 0 #DDDDDD;

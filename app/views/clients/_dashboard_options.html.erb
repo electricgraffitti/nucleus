@@ -1,7 +1,8 @@
 <div id="widget_view_controls">
+  <h3>Check to Disable Widgets</h3>
   <% for dw in dashboard_widgets %>
   <div class="dashboard_option_check">
-    <%= check_box_tag dw.name, dw.id, current_client.widget_views.include?(dw), :class => "widget_view_option", :widget => "dash#{dw.id}" %>
+    <%= check_box_tag dw.name, dw.id, current_client.widget_views.include?(dw), :class => "widget_view_option dash#{dw.id}", :widget => "dash#{dw.id}" %>
     <%=h label_tag "#{(dw.name).capitalize}" %>
   </div>
   <% end %>

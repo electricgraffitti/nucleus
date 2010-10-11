@@ -293,7 +293,12 @@ var drag = {
         var child = $("div.ui-sortable").children("#" + item);
 
         // select the item according to the saved order
-        var savedOrd = $("div.ui-sortable").children("#" + itemID);
+        if (widget.checkViewCookie(item)) {
+          var savedOrd = $("div.ui-sortable").children("#" + itemID).addClass('hidden');
+        } else {
+          var savedOrd = $("div.ui-sortable").children("#" + itemID);
+        }
+        
 
         // remove all the items
         child.remove();
@@ -303,6 +308,7 @@ var drag = {
         // class is applied to all ul elements and we
         // only want the very first! You can modify this
         // to support multiple lists - not tested!
+        
         $("div.ui-sortable").filter(":first").append(savedOrd);
       }
     }
@@ -352,7 +358,6 @@ var widget = {
       } else {
         var $w = $('#' + $(this).attr('widget'));
         var hiddenID = $w.attr('id');
-        console.log(hiddenID);
         $w.show('fade', 1000, widget.destroyWidgetViewCookie(hiddenID));
       }
       
@@ -367,6 +372,17 @@ var widget = {
     var cookie = $.cookie(hiddenID);
     if (!cookie) return;
     $.cookie(hiddenID, null);
+  },
+  
+  checkViewCookie: function(checkValue) {
+    var cookie = $.cookie(checkValue);
+    if (!cookie) {
+      return false;
+    } else {
+      var cb = $('#widget_view_controls .' + checkValue);
+      cb.attr('checked', 'checked');
+      return true;
+    }
   },
   
   dashboardOptions: function(pane) {
@@ -436,18 +452,19 @@ var widget = {
   
   exportOption: function() {
     var $trigger = $('.export_option');
-    $trigger.live('click', function() {
-        scatterChart.exportChart({
-            type: 'application/pdf',
-            filename: 'x.pdf'
-        });
+    $trigger.live('click', function(e) {
+      e.preventDefault();
+      scatterChart.exportChart({
+          type: 'application/pdf',
+          filename: 'x.pdf'
+      });
     });
   },
   
   widgetOptions: function(ss) {
     widget.settingsOption();
     widget.widgetOptionTrigger(ss);
-    // widget.exportOption();
+    widget.exportOption();
     widget.closeOption();
     widget.maximizeOption();
   }
