@@ -230,7 +230,7 @@ var drag = {
     // set cookie expiry time (days):
     var sce = c;
     
-    $(ss).sortable({
+    ss.sortable({
       opacity : 0.3,
       cursor: "move",
       update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }

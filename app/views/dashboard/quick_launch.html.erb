@@ -41,10 +41,11 @@
         scroll.setScroll($(this));
         e.preventDefault();
       });
+      var $grid = $("#quick_launch_top");
       
       baseActions.tutorialTrigger();
-      drag.setupQuickLaunch("#quick_launch_top", "quickLaunchCookie", 1000);
-      drag.loadQuickLaunchOrder("#quick_launch_top", "quickLaunchCookie");
+      drag.setupQuickLaunch($grid, "quickLaunchCookie", 1000);
+      drag.loadQuickLaunchOrder($grid, "quickLaunchCookie");
       
     });
   </script>
