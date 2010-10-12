@@ -220,6 +220,30 @@ var adminAction = {
 	}
 	// end Admin
 };
+
+var panels = {
+  
+  northResizeTrigger: function() {
+    var $north_panel = $('#panel_north');
+    $('#south_resizer').toggle(function() {
+      $north_panel.hide('slow');
+    }, function() {
+      $north_panel.show('slow');
+    });
+    
+  },
+  
+  westResizeTrigger: function() {
+    var $sidebar = $('#inner_west');
+    $('#west_resizer').toggle(function() {
+      $sidebar.animate({width: '8px'}, 1000);
+    }, function() {
+      $sidebar.animate({width: '220px'}, 1000);
+    });
+  }
+  
+};
+
 var drag = {
   
   setupQuickLaunch: function(a,b,c) {

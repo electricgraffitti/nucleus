@@ -3,12 +3,12 @@ var scatterChart = new Highcharts.Chart({
       renderTo: 'scatter_chart', 
       defaultSeriesType: 'scatter',
       zoomType: 'xy',
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-      },
+      // backgroundColor: {
+      //   linearGradient: [0, 0, 0, 300],
+      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+      // },
       style: {
-        margin: ['0px 0px 20px 0px'],
+        margin: ['0px 0px 40px 0px'],
         font: '16px Arial, Helvetica, sans-serif'
       },
       borderRadius: 0
@@ -17,12 +17,11 @@ var scatterChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-     enabled: false,
-     text: '2010 YTD',
-      style: {
-         color: "#5bab46",
-         font: '12px Arial, Helvetica, sans-serif'
-      }
+     text: null
+      // style: {
+      //    color: "#5bab46",
+      //    font: '12px Arial, Helvetica, sans-serif'
+      // }
    },
    subtitle: {
       enabled: false

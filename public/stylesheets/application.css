@@ -504,10 +504,15 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 }
 #panel_layout div#panel_west {
   position: relative;
-  width: 220px;
   height: 100%;
   background: #f1f1f1;
   float: left;
+  overflow:hidden;
+}
+#inner_west {
+  position: relative;
+  float: left;
+  width: 214px;
 }
 #panel_layout div#panel_center {
   position: relative;
@@ -516,6 +521,10 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 }
 #panel_layout div#panel_full {
   width: 1024px;
+}
+#panel_north {
+  position: relative;
+  float: left;
 }
 #panel_south {
   position: relative;
@@ -528,6 +537,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   padding: 20px 0px;
   width: 100%;
   float:left;
+  background: #fff;
 }
 #west_resizer {
   position: absolute;
@@ -648,18 +658,27 @@ div.scaffold_pane label {
 	max-width: 218px;
 }
 .basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .basic_panel_5, .basic_panel_6, .basic_panel_7, .basic_panel_8, .combo_panel_2, .combo_panel_3, .combo_panel_4, .combo_panel_5 { /** A Combo Panel has sub_panels **/
-  position: relative;
-  width: 363px;
-  /*margin: 0px 0px 5px 20px;*/
+  border:1px solid #C0C0C0;
+  float:left;
   margin:0 0 5px 11px;
-  padding: 6px 10px;
+  position:relative;
+  width:383px;
+  min-height:39px;
+}
+.module_header {
+  background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
+  width: 365px;
+  position: relative;
   float: left;
-  border: 1px solid #c0c0c0;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EAEAEA));
-  background-image: -moz-linear-gradient(19% 75% 90deg,#EAEAEA, #ffffff);
+  height: 17px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 9px 14px;
+  text-align: left;
+  
 }
 #results_chart {
-  height: 289px;
+  height: 312px;
 }
 .top_left_dashboard .basic_panel {
  margin: 0px 0px 5px 20px; 
@@ -708,7 +727,7 @@ div.scaffold_pane label {
 .basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4,.basic_panel_5 h3, .basic_panel_5 h4, .basic_panel_6 h3, .basic_panel_6 h4, .basic_panel_7 h3, .basic_panel_7 h4, .basic_panel_8 h3, .basic_panel_8 h4,.combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
   font-size: 14px;
   color: #555;
-  padding: 5px 5px 5px 0px;
+  padding:11px 5px 11px 10px;
   float: left;
 }
 .basic_panel h4, .combo_panel h4 {
@@ -882,11 +901,11 @@ span#occurence {
   margin-right: 20px;
 }
 .sub_panel {
-  position: relative;
-  float: left;
-  padding: 6px 10px 0px;
-  width: 363px;
-  border-bottom: 1px solid #c0c0c0;
+  border-bottom:1px solid #C0C0C0;
+  float:left;
+  padding:6px 7px 0 0;
+  position:relative;
+  width:376px;
 }
 #provider_header {
   padding-bottom:5px;
@@ -919,10 +938,11 @@ span#occurence {
   width:100%;
 }
 .results_chart h3 {
-  font-size:14px;
-  padding:5px 0 5px;
-  text-align:center;
-  width:100%;
+  float:left;
+  font-weight:bold;
+  position:relative;
+  width: 50%;
+  padding: 2px;
 }
 #provider_content #provider_stats h3 {
   font-size:14px;
@@ -1249,7 +1269,7 @@ a.widget_option.close_option:active {
 .graph_box {
   position: relative;
   float: left;
-  background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;
+/*  background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;*/
   width: 478px;
   border: 1px solid #e7e7e7;
   margin: 8px;
@@ -1397,7 +1417,8 @@ a.widget_option.close_option:active {
 }
 /***Charts***/
 #provider_results_chart {
-  margin-bottom: 2px;
+  margin-left:4px;
+  margin-top:12px;
 }
 /******Inner Page General*******/
 #page_header {

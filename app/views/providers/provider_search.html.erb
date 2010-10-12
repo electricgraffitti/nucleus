@@ -1,16 +1,22 @@
 <%= render :partial => 'providers/search_page_header', :locals => {:provider => @provider} %>
 <div id="panel_layout" class="clear">
   <div id="panel_west" class="ui-layout-west">
-    <%= render :partial => 'dashboard/search' %>
+    <div id="inner_west">
+      <%= render :partial => 'dashboard/search' %>
+    </div>
     <div id="west_resizer">
       <div class="resize_vert"></div>
     </div>
   </div>
   <div id="panel_center" class="panel ui-layout-center">
     <div id="inner_panel">
+      <div id="panel_north">
       <div class="panel_set">
         <div id="results_chart" class="basic_panel results_chart">
-          <h3>Provider Results</h3>
+          <div class="module_header">
+            <h3>Provider Results</h3>
+            <%= render :partial => 'dashboard/widget_options' %>
+          </div>
           <div id="provider_results_chart" class="clear left"></div>
         </div>
       </div>
@@ -72,7 +78,7 @@
         </div>
       </div>
     </div>
-
+    </div>
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
@@ -86,6 +92,8 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      panels.westResizeTrigger();
+      panels.northResizeTrigger();
       adminAction.setupCalendars();
       $.getScript('/javascripts/data/providerResults.js');
       $('#provider_search tbody tr:first').click();

@@ -1,22 +1,22 @@
 var pieChart = new Highcharts.Chart({
    chart: {
       renderTo: 'pie_chart',
-      margin: [50, 80, 60, 20],
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-      },
+      margin: [50, 80, 60, 00],
+      // backgroundColor: {
+      //   linearGradient: [0, 0, 0, 300],
+      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+      // },
       borderRadius: 0
    },
    credits: {
      enabled: false
    },
    title: {
-     text: '2010 YTD',
-     style: {
-       color: '#6ac520',
-       font: '12px Arial, Helvetica, sans-serif'
-     }
+     text: null
+     // style: {
+     //   color: '#6ac520',
+     //   font: '12px Arial, Helvetica, sans-serif'
+     // }
    },
    subtitle: {
       enabled: false
@@ -35,6 +35,7 @@ var pieChart = new Highcharts.Chart({
       pie: {
          allowPointSelect: true,
          cursor: 'pointer',
+         size: "120%",
          dataLabels: {
             enabled: true,
             formatter: function() {

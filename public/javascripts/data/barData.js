@@ -2,29 +2,33 @@ var barChart = new Highcharts.Chart({
   chart: {
     renderTo: 'savings_tracker',
     defaultSeriesType: 'column',
-    backgroundColor: {
-      linearGradient: [0, 0, 0, 300],
-      stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+    style: {
+      margin: ['0px 0px 40px 0px'],
+      font: '16px Arial, Helvetica, sans-serif'
     },
+    // backgroundColor: {
+    //   linearGradient: [0, 0, 0, 300]
+    //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+    // },
     borderRadius: 0
   },
   credits: {
    enabled: false
   },
   title: {
-   text: '2010 YTD',
-    style: {
-       color: "#5bab46",
-       font: '12px Arial, Helvetica, sans-serif'
-    }
+   text: null,
+    // style: {
+    //    color: "#5bab46",
+    //    font: '12px Arial, Helvetica, sans-serif'
+    // }
   },
   subtitle: {
    enabled: false
   },
   xAxis: {
-    categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
+    categories: ['May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct'],
     title: {
-       text: 'Provider Type',
+       text: 'Serivce Type',
        style: {
          color: '#555555',
          font: '12px Arial, Helvetica, sans-serif'
@@ -40,7 +44,7 @@ var barChart = new Highcharts.Chart({
   yAxis: {
     min: 0,
     title: {
-       text: 'Cases Opened',
+       text: 'Service Savings',
        style: {
          color: '#555555',
          font: '12px Arial, Helvetica, sans-serif'
@@ -56,7 +60,7 @@ var barChart = new Highcharts.Chart({
   tooltip: {
     formatter: function() {
        return '<b>'+ this.x +'</b><br/>'+
-           this.series.name +': '+ this.y + " Cases Opened";
+           this.series.name +': '+ this.y + " Service Savings";
     },
     style: {
       font: '12px Arial, Helvetica, sans-serif'
@@ -75,7 +79,7 @@ var barChart = new Highcharts.Chart({
         left: 'auto',
         bottom: 'auto',
         right: '30px',
-        top: '55px'
+        top: '35px'
      },
      backgroundColor: '#FFFFFF',
      borderColor: '#e7e7e7',
@@ -87,16 +91,16 @@ var barChart = new Highcharts.Chart({
       enabled: false
    },
    series: [{
-      name: 'ASC',
-      data: [245, 230, 210, 225, 205, 240],
+      name: 'PCI',
+      data: [200, 230, 245, 255, 265, 280],
       color: "#5bab46" // Green
       }, {
-      name: 'Hosptial',
-      data: [200, 195, 192, 177, 142, 174],
+      name: 'FCI',
+      data: [180, 210, 225, 235, 250, 260],
       color: '#f47727' // Orange
       }, {
-      name: 'Prof',
-      data: [165, 145, 132, 112, 102, 132],
+      name: 'DCI',
+      data: [165, 185, 200, 215, 223, 240],
       color: '#398dcc' // Blue
    }]
 });

@@ -4,7 +4,7 @@ var scatterChart = new Highcharts.Chart({
       defaultSeriesType: 'scatter',
       width: 360,
       height: 227,
-      margin: [20,20,20,75],
+      margin: [20,00,20,85],
       zoomType: 'xy'
    },
    credits: {
@@ -43,7 +43,8 @@ var scatterChart = new Highcharts.Chart({
       },
       startOnTick: true,
       endOnTick: true,
-      showLastLabel: true
+      showLastLabel: true,
+      gridLineWidth: 1
    },
    yAxis: {
      labels: {
