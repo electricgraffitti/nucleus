@@ -3,6 +3,7 @@
   <div id="dashboard_options" class="hidden">
     <h2 class="header">Dashboard Options</h2>
     <%= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
+    <%= link_to "Close", "", :class => "options_panel_close" %>
   </div>
   <div id="dashboard">
     <%= render :partial => 'dashboard_widgets/dash1', :locals => {:top_providers => @top_providers} %>

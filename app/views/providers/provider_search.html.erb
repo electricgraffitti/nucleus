@@ -18,6 +18,9 @@
             <%= render :partial => 'dashboard/widget_options' %>
           </div>
           <div id="provider_results_chart" class="clear left"></div>
+          <div class="panel_footer">
+            <div id="provider_results_chart_footer" class="resize_horz pane_handle_toggle"></div>
+          </div>
         </div>
       </div>
       <div id="provider_content" class="panel_set">
@@ -94,6 +97,7 @@
     $(document).ready(function() {
       panels.westResizeTrigger();
       panels.northResizeTrigger();
+      panels.toggleResultsChart();
       adminAction.setupCalendars();
       $.getScript('/javascripts/data/providerResults.js');
       $('#provider_search tbody tr:first').click();

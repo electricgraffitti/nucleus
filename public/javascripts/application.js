@@ -240,6 +240,15 @@ var panels = {
     }, function() {
       $sidebar.animate({width: '220px'}, 1000);
     });
+  },
+  
+  toggleResultsChart: function() {
+    var $chart = $('#provider_results_chart');
+    $('#provider_results_chart_footer').toggle(function() {
+      $chart.hide('slow');
+    }, function() {
+      $chart.show('slow');
+    });
   }
   
 };
@@ -411,8 +420,15 @@ var widget = {
   
   dashboardOptions: function(pane) {
     var $trigger = $('#options_trigger');
+    var $triggerClose = $('.options_panel_close');
     var $pane = $(pane);
+    
     $trigger.live('click', function(e) {
+      widget.optionPaneDisplay($pane);
+       e.preventDefault(); 
+    });
+    
+    $triggerClose .live('click', function(e) {
       widget.optionPaneDisplay($pane);
        e.preventDefault(); 
     });
@@ -435,33 +451,40 @@ var widget = {
   },
   
   maximizeOption: function() {
-   var $trigger = $('.maximize_option');
-   $trigger.live('click', function(e) {
-     var $widget = $(this).parents(".graph_box:first");
-     var $panel = $widget.find(".widget_content");
+    
+  },
+  
+  dashboardChartPaneToggle: function() {
+    var $trigger = $('.resize_horz');
+    
+    $trigger.live('click', function() {
+      var $widget = $(this).parents(".graph_box:first");
+      var $panel = $widget.find(".widget_content");
       if ($panel.is(':visible')) {
-        e.preventDefault();
-        return false
+        $panel.hide('slow');
       } else {
-        $panel.show("slide", {direction: 'up'});
+        $panel.show('slow');
       }
-     e.preventDefault();
-   });
+    });
   },
   
   closeOption: function() {
     var $trigger = $('.close_option');
+    
     $trigger.live('click', function(e) {
-      var $widget = $(this).parents(".graph_box:first");
-      var $panel = $widget.find(".widget_content");
-      if ($panel.is(':visible')) {
-        $panel.hide("slide", {direction: 'up'});
-      } else {
-        e.preventDefault();
-        return false
-      }
       e.preventDefault();
+      var $widget = $(this).parents(".graph_box:first");
+      var $panel = $widget.attr('id');
+      widget.setCheckBox($panel);
+      
     });
+  },
+  
+  setCheckBox: function(v) {
+    var $cb_panel = $('#widget_view_controls');
+    var cb = $cb_panel.find(('.' + v));
+    cb.click();
+    cb.attr('checked', 'checked');
   },
 
   settingsOption: function() {
@@ -489,6 +512,7 @@ var widget = {
     widget.settingsOption();
     widget.widgetOptionTrigger(ss);
     widget.exportOption();
+    widget.dashboardChartPaneToggle();
     widget.closeOption();
     widget.maximizeOption();
   }
