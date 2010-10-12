@@ -101,13 +101,13 @@ var tableActions = {
 
 	setStatChart: function(e) {
 		if (e.attr("charttype") === "SFRO") {
-			$('#provider_stats').load("/sfro-stats");
+			$('#action_stats').load("/sfro-stats");
 		} else if (e.attr("charttype") === "SDES") {
-			$('#provider_stats').load("/sdes-stats");
+			$('#action_stats').load("/sdes-stats");
 		} else if (e.attr("charttype") === "SBRD") {
-			$('#provider_stats').load("/sbrd-stats");
+			$('#action_stats').load("/sbrd-stats");
 		} else {
-			$('#provider_stats').load("/nucleus-provider-action #provider_stats");
+			$('#action_stats').load("/nucleus-provider-action #provider_stats");
 		}
 	},
 
@@ -249,7 +249,23 @@ var panels = {
     }, function() {
       $chart.show('slow');
     });
-  }
+  },
+  
+  actionPanelToggle: function() {
+    var $trigger = $('.pane_handle_toggle');
+    
+    $trigger.live('click', function() {
+      console.log('yessir');
+      var $widget = $(this).parents(".widget:first");
+      var $panel = $widget.find(".inner_panel_content");
+      if ($panel.is(':visible')) {
+        $panel.hide('slow');
+      } else {
+        $panel.show('slow');
+      }
+    });
+    
+  },
   
 };
 

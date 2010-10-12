@@ -15,18 +15,14 @@ actionChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Billing Spike - Dollars Billed by Month',
-      style: {
-         color: "#555555",
-         font: "14px Arial, Helvetica, sans-serif"
-      }
+     text: null
+      // style: {
+      //    color: "#5bab46",
+      //    font: '12px Arial, Helvetica, sans-serif'
+      // }
    },
    subtitle: {
-     text: 'Source: HCI Data Center',
-     style: {
-        color: "#c0c0c0",
-        display: 'none'
-     }
+      enabled: false
    },
    xAxis: {
      categories: ['July', 'Aug', 'Sept', 'Oct','Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 

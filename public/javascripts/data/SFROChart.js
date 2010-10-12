@@ -5,7 +5,7 @@ actionChart = new Highcharts.Chart({
       width: 310,
       height: 220,
       zoomType: 'xy',
-      margin: [40,15,60,58],
+      margin: [10,30,60,40],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -15,18 +15,14 @@ actionChart = new Highcharts.Chart({
      enabled: false
    },
    title: {
-      text: 'Repair Procedure Distribution',
-      style: {
-         color: "#555555",
-         font: "14px Arial, Helvetica, sans-serif"
-      }
+     text: null
+      // style: {
+      //    color: "#5bab46",
+      //    font: '12px Arial, Helvetica, sans-serif'
+      // }
    },
    subtitle: {
-     text: 'Source: HCI Data Center',
-     style: {
-        color: "#c0c0c0",
-        display: 'none'
-     }
+      enabled: false
    },
    xAxis: {
      categories: ['Int', 'Complex', 'Flap'],
@@ -65,8 +61,8 @@ actionChart = new Highcharts.Chart({
      style: {
         left: 'auto',
         bottom: 'auto',
-        right: '10px',
-        top: '185px'
+        right: '30px',
+        top: '180px'
      },
      borderColor: '#D7D6D6',
      borderWidth: 1,

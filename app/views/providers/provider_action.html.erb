@@ -1,16 +1,155 @@
 <%= render :partial => 'providers/action_page_header', :locals => {:provider => @provider} %>
 <div id="panel_layout" class="clear">
   <div id="inner_panel" class="panel ui-layout-center">
-    <div class="panel_set_2">
-      <%= render :partial => 'providers/provider_info', :locals => {:provider => @provider} %>
+    <div id="panel_north">
+    <div class="widget widget3">
+      
+      <%# Panel Header %>
+      <div class="provider_header module_header">
+        <h3><span><%= link_to "#{@provider.full_name}", provider_path(@provider), :class => "tip provider_container_trigger", :provider_id => @provider.id, :title => "Provider Profile" %></span></h3>
+        <div id="provider_rating" class="<%= @provider.score_color(@provider)%>_rating">
+          <%= link_to "#{@provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Actions" %>
+        </div>
+      </div>
+      
+      <%# Panel Content %>
+      <div class="inner_panel_content">
+        <div class="panel_left">
+          <div class="panel_item">          
+            <div class="panel_item_title">Primary Speciality</div>
+            <div id="speciality_code_main" class="panel_item_value" title="<%= @provider.provider_speciality.speciality_type %>"><%=h @provider.provider_speciality.speciality_code %></div>
+          </div>
+          <div class="panel_item">          
+            <div class="panel_item_title">Speciality</div>
+            <div class="panel_item_value"><%=h @provider.provider_speciality.speciality_code %> - <%=h @provider.provider_speciality.speciality_type %></div>
+          </div>
+
+          <div class="panel_item">          
+            <div class="panel_item_title">Group Name</div>
+            <div class="panel_item_value"><%=h @provider.provider_group.name %></div>
+          </div>
+
+          <div class="panel_item">          
+            <div class="panel_item_title">Case Tracker ID</div>
+            <div class="panel_item_value"><%=h @provider.id %></div>
+          </div>
+
+        </div>
+        <div class="panel_right">
+          <div class="panel_item">          
+            <div class="panel_item_title">TIN</div>
+            <div class="panel_item_value"><%=h @provider.tin %></div>
+          </div>
+          <div class="panel_item">          
+            <div class="panel_item_title">State</div>
+            <div class="panel_item_value"><%=h @provider.state.abbreviation %></div>
+          </div>
+          <div class="panel_item">          
+            <div class="panel_item_title">Group TIN</div>
+            <div class="panel_item_value"><%=h @provider.provider_group.group_tin %></div>
+          </div>
+          <div class="panel_item">          
+            <div class="panel_item_title">Case Status</div>
+            <div class="panel_item_value">Under Review</div>
+          </div>
+        </div>
+      </div>
+      
+      <%# Panel Footer %>
+      <div class="widget_footer">
+        <div class="resize_horz pane_handle_toggle"></div>
+      </div>
     </div>
-    <div class="panel_set_4">
-      <%= render :partial => 'providers/provider_action_stats', :locals => {:provider => @provider} %>
+    
+    
+    <div class="widget widget3">
+      
+      <%# Panel Header %>
+      <div class="module_header">
+        <h3>Condition Statistics</h3>
+        <%= render :partial => 'dashboard/widget_options' %>
+      </div>
+      
+      <%# Panel Content %>
+      <div id="action_stats" class="inner_panel_content">
+        <div class="stat_group">
+          <div class="stat_title left">Patients</div>
+          <div class="stat_value left">
+            45%
+            <div class="stat_flag stat_flag_red"></div>
+          </div>
+          <div class="stat_range left">
+            102 of 225 Patients
+          </div>
+        </div>
+        <div class="stat_group">
+          <div class="stat_title left">Claims</div>
+          <div class="stat_value left">
+            37%
+            <div class="stat_flag stat_flag_red"></div>
+          </div>
+          <div class="stat_range left">
+            209 of 561 Claims
+          </div>
+        </div>
+        <div class="stat_group">
+          <div class="stat_title left">Lines</div>
+          <div class="stat_value left">
+            66%
+            <div class="stat_flag stat_flag_orange"></div>
+          </div>
+          <div class="stat_range left">
+            2 of 3
+          </div>
+        </div>
+        <div class="stat_group">
+          <div class="stat_title left">Billed</div>
+          <div class="stat_value left">
+            32%
+            <div class="stat_flag stat_flag_yellow"></div>
+          </div>
+          <div class="stat_range left">
+            $63,736 of $200,551 Billed
+          </div>
+        </div>
+        <div class="stat_group">
+          <div class="stat_title left">Paid</div>
+          <div class="stat_value left">
+            40%
+            <div class="stat_flag stat_flag_yellow"></div>
+          </div>
+          <div class="stat_range left">
+            $33,611 of $84,218 Paid
+          </div>
+        </div>
+      </div>
+      
+      <%# Panel Footer %>
+      <div class="widget_footer">
+        <div class="resize_horz pane_handle_toggle"></div>
+      </div>
+      
     </div>
-    <div class="panel_set_3">
-      <div class="basic_panel_3 provider_chart">
+    
+    
+    <div class="widget widget3">
+      <%# Panel Header %>
+      <div class="module_header">
+        <h3>Condition Chart</h3>
+        <%= render :partial => 'dashboard/widget_options' %>
+      </div>
+      
+      <%# Panel Content %>
+      <div class="inner_panel_content">
         <div id="provider_action_chart" class="clear left"></div>
       </div>
+      
+      <%# Panel Footer %>
+      <div class="widget_footer">
+        <div class="resize_horz pane_handle_toggle"></div>
+      </div>
+        
+    </div>
     </div>
     <div id="panel_south" class="ui-layout-south">
       <div id="south_resizer">
@@ -31,12 +170,15 @@
 <% content_for :javascripts do %>
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function() {
+    $('#provider_action_table tbody tr:first').click();
+    baseActions.tutorialTrigger();
+    panels.northResizeTrigger();
+    panels.actionPanelToggle();
+    
     $('.scroll_nav_trigger').live('click', function(e) {
       scroll.setScroll($(this));
       e.preventDefault();
     });
-    baseActions.tutorialTrigger();
-    $('#provider_action_table tbody tr:first').click();
   });
   // var actionChart;
 </script>
