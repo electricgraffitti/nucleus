@@ -57,6 +57,14 @@ ActionController::Routing::Routes.draw do |map|
   map.action_tutorials "action_tutorials", :controller => "tutorials", :action => "action_tutorials"
   map.quick_launch_tutorials "quick_launch_tutorials", :controller => "tutorials", :action => "quick_launch_tutorials"
   map.dashboard_tutorials "dashboard_tutorials", :controller => "tutorials", :action => "dashboard_tutorials"
+  map.provider_search_tutorials "provider_search_tutorials", :controller => "tutorials", :action => "provider_search_tutorials"
+  map.provider_profile_tutorials "provider_profile_tutorials", :controller => "tutorials", :action => "provider_profile_tutorials"
+  map.message_center_tutorials "message_center_tutorials", :controller => "tutorials", :action => "message_center_tutorials"
+  map.help_center_tutorials "help_center_tutorials", :controller => "tutorials", :action => "help_center_tutorials"
+  map.idea_forum_tutorials "idea_forum_tutorials", :controller => "tutorials", :action => "idea_forum_tutorials"
+  map.report_center_tutorials "report_center_tutorials", :controller => "tutorials", :action => "report_center_tutorials"
+  map.claim_search_tutorials "claim_search_tutorials", :controller => "tutorials", :action => "claim_search_tutorials"
+  map.claim_action_tutorials "claim_action_tutorials", :controller => "tutorials", :action => "claim_action_tutorials"
   
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"

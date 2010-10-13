@@ -1,26 +1,66 @@
 <div class='tutorial_header'>
-  <h1>Dashboard Tutorials</h1>
   <div class="modal_claim_wrap">
     <div id="scroll_pane">
       <div id="scrolling_segment">
         <div id="scroll_wrap">
-          <div id="panel1" class="scroll_panel" ></div>
-          <div id="panel2" class="scroll_panel" ></div>
-          <div id="panel3" class="scroll_panel" ></div>
-          <div id="panel4" class="scroll_panel" ></div>
+          <div id="panel1" class="scroll_panel" >
+            <div class="tutorial_column_left">
+              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+            </div>
+            <div class="tutorial_column_right">
+              <h2>Page Segment Title Panel 1</h2>
+              <h3>Tutorial Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div id="panel2" class="scroll_panel" >
+            <div class="tutorial_column_left">
+              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+            </div>
+            <div class="tutorial_column_right">
+              <h2>Page Segment Title Panel 2</h2>
+              <h3>Tutorial Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div id="panel3" class="scroll_panel" >
+            <div class="tutorial_column_left">
+              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+            </div>
+            <div class="tutorial_column_right">
+              <h2>Page Segment Title Panel 3</h2>
+              <h3>Tutorial Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div id="panel4" class="scroll_panel" >
+            <div class="tutorial_column_left">
+              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+            </div>
+            <div class="tutorial_column_right">
+              <h2>Page Segment Title Panel 4</h2>
+              <h3>Tutorial Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div id="scroll_thumbs">
         <ul class="scroll_nav">
-          <li><%= link_to "Link 1", "#panel1", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to "Link 2", "#panel2", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to "Link 3", "#panel3", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to "Link 4", "#panel4", :class => "scroll_nav_trigger" %></li>
+          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
+          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
+          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
+          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
         </ul>
       </div>
-    </div>
-    <div class="comment_buttons">
-      <%= link_to "Cancel", "", :class => "close" %>
     </div>
   </div>
 </div>

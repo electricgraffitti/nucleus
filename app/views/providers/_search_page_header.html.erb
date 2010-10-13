@@ -12,8 +12,11 @@
     <li>
       <%= link_to "Profile", "#", :class => "tip", :title => "Refresh Page" %>
     </li>
-    <li class="last">
+    <li>
       <%= link_to "Export", "#", :class => "tip", :title => "Print Page" %>
+    </li>
+    <li class="last">
+      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Search Tutorials", :rel => "#tutorial_modal", :tutorial_page => provider_search_tutorials_path() %>
     </li>
   </ul>
 </div>

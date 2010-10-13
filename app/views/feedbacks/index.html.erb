@@ -52,6 +52,10 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      $('.scroll_nav_trigger').live('click', function(e) {
+        scroll.setScroll($(this));
+        e.preventDefault();
+      });
      tabs.setupFeedbackTabs();
      
      $("#search").click( function() {
@@ -61,7 +65,7 @@
      $('li.feedback_category').click(function() {
        baseActions.setActiveMessageGroup($(this));
      });
-     
+     baseActions.tutorialTrigger();
     });
   </script>
 <% end %>

@@ -95,5 +95,36 @@ class TutorialsController < ApplicationController
     render :layout => false
   end
   
+  def provider_search_tutorials
+    render :layout => false
+  end
+  
+  def provider_profile_tutorials
+    render :layout => false
+  end
+  
+  def message_center_tutorials
+    render :layout => false
+  end
+  
+  def help_center_tutorials
+    render :layout => false
+  end
+  
+  def idea_forum_tutorials
+    render :layout => false
+  end
+  
+  def report_center_tutorials
+    render :layout => false
+  end
+  
+  def claim_search_tutorials
+    render :layout => false
+  end
+  
+  def claim_action_tutorials
+    render :layout => false
+  end
   
 end

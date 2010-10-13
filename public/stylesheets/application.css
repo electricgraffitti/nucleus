@@ -3564,7 +3564,9 @@ div.overlay div.close, div.tutorial_overlay div.close {
   position: relative;
   float: left;
   padding:20px;
-  margin-bottom: 10px;
+  width:630px;
+  overflow: hidden;
+  background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
 }
 #provider_comment_form {
   position: relative;
@@ -3657,7 +3659,7 @@ div.tutorial_overlay {
 */
 #scroll_pane {
   float:left;
-  height:485px;
+  height:508px;
   position:relative;
   width:628px;
 }
@@ -3678,24 +3680,59 @@ div.tutorial_overlay {
   width: 628px;
   height: 400px;
 }
+#scroll_wrap div.tutorial_column_left {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 400px;
+}
+#scroll_wrap div.tutorial_column_right {
+  float:left;
+  height:300px;
+  padding:100px 0 0 25px;
+  position:relative;
+  width:275px;
+}
+.tutorial_column_right h2 {
+  position: relative;
+  float: left;
+  color: #fff;
+  font-size: 22px;
+  width: 100%;
+}
+.tutorial_column_right h3 {
+  position: relative;
+  float: left;
+  color: #999;
+  font-size: 16px;
+  padding: 10px 0px;
+  width: 100%;
+}
+.tutorial_column_right p {
+  position: relative;
+  float: left;
+  color: #fff;
+}
 #panel1 {
-  background: #660000;
+  
 }
 #panel2 {
-  background: #005500;
+  
 }
 #panel3 {
-  background: #000033;
+  
 }
 #panel4 {
-  background: #003355;
+  
 }
 /***Scroll Nav***/
 #scroll_thumbs {
   position: relative;
   width: 628px;
-  height: 100px;
-  border-top: 1px solid #ddd;
+  height: 93px;
+  border-top: 1px solid #666;
+  margin-top:5px;
+  padding-top:5px;
   float: left;
 }
 #scroll_thumbs ul {
@@ -3704,13 +3741,12 @@ div.tutorial_overlay {
 #scroll_thumbs ul li {
   position: relative;
   float: left;
-  width: 149px;
-  height: 75px;
-  border: 1px solid #efefef;
-  margin: 3px;
+  width: 155px;
+  height: 90px;
+/*  border: 1px solid #666;*/
 }
 #scroll_thumbs ul li.selected {
-  border: 1px solid #5bab46;
+/*  border: 1px solid #5bab46;*/
 }
 #scroll_thumbs ul li a {
   position: relative;

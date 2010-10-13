@@ -95,6 +95,7 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      baseActions.tutorialTrigger();
       panels.westResizeTrigger();
       panels.northResizeTrigger();
       panels.toggleResultsChart();
