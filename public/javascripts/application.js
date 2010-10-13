@@ -158,32 +158,36 @@ var c2Accordion = {
     $triggers.append('<span class="ui-icon ui-icon-triangle-1-s"></span>')
     var $inner_contents = $acc.find('.inner_accordion');
     $inner_contents.hide();
+    
     // Set trigger behavior
     $triggers.live('click', function() {
-      var $pane = $(this).next().children('.inner_accordion');
-      
-      if ($pane.is(':visible')) {
-        $pane.hide('slide', {direction : 'up'});
-        $(this).removeClass('ui-state-active');
-        $(this).find('span').removeClass('ui-icon-triangle-1-n');
-        $(this).find('span').addClass('ui-icon-triangle-1-s');
-      } else {
-        $pane.show('slide', {direction : 'up'});
-        $(this).addClass('ui-state-active');
-        $(this).find('span').removeClass('ui-icon-triangle-1-s');
-        $(this).find('span').addClass('ui-icon-triangle-1-n');
-      }
+      c2Accordion.triggerAccordion($(this));
     });
     
+    // nav triggers
     $navTriggers.live('click', function(e) {
       e.preventDefault();
       var navTag = $(this).attr('panel');
       var $accPanelHeader = $triggers.filter('#' + navTag);
-      
       $accPanelHeader.click();
-      
     });
     
+  },
+  
+  triggerAccordion: function(trigger) {
+    var $pane = trigger.next().children('.inner_accordion');
+    
+    if ($pane.is(':visible')) {
+      $pane.hide('slide', {direction : 'up'});
+      trigger.removeClass('ui-state-active');
+      trigger.find('span').removeClass('ui-icon-triangle-1-n');
+      trigger.find('span').addClass('ui-icon-triangle-1-s');
+    } else {
+      $pane.show('slide', {direction : 'up'});
+      trigger.addClass('ui-state-active');
+      trigger.find('span').removeClass('ui-icon-triangle-1-s');
+      trigger.find('span').addClass('ui-icon-triangle-1-n');
+    }
   }
   
 };
