@@ -18,7 +18,8 @@
 <% content_for :javascripts do %>
   <script>
     $(document).ready(function() {
-      profileActions.setBase();
+      c2Accordion.setAccordion();
+      // profileActions.setBase();
       baseActions.tutorialTrigger();
       // Column Chart 1
       $.getScript('../javascripts/data/modalAccordionColumnData.js');

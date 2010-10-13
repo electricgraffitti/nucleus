@@ -1022,7 +1022,6 @@ ul.location_stats li {
   position: relative;
   float: left;
   width: 232px;
-  margin-right: 5px;
 }
 /*********************************************/
 /******************TABLES********************/
@@ -1587,7 +1586,8 @@ p.login_checkbox_wrap {
 }
 #v2 #accordion h3 span {
   float:left;
-  margin-right:15px;
+  margin-left:7px;
+  margin-right:10px;
   position:relative;
 }
 #v2 #accordion h3 {
