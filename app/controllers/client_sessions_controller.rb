@@ -42,19 +42,19 @@ class ClientSessionsController < ApplicationController
   
   def api_session
     
-    raise params.to_yaml
-    
-    if params[:apikey] == APP['password']
-      @client_session = ClientSession.new(params[:client_session])
-      if @client_session.save
-        flash[:notice] = "Login successful!"
-        redirect_to quick_launch_path
-      else
-        redirect_to login_path
-      end
-    else
-      redirect_to login_path
-    end
+    # raise params.to_yaml
+    # 
+    # if params[:apikey] == APP['password']
+    #   @client_session = ClientSession.new(params[:client_session])
+    #   if @client_session.save
+    #     flash[:notice] = "Login successful!"
+    #     redirect_to quick_launch_path
+    #   else
+    #     redirect_to login_path
+    #   end
+    # else
+    #   redirect_to login_path
+    # end
   end
   
   
