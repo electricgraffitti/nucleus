@@ -66,6 +66,9 @@ ActionController::Routing::Routes.draw do |map|
   map.claim_search_tutorials "claim_search_tutorials", :controller => "tutorials", :action => "claim_search_tutorials"
   map.claim_action_tutorials "claim_action_tutorials", :controller => "tutorials", :action => "claim_action_tutorials"
   
+  # Main App Login
+  map.remote_login "securekey-nucleus-main", :controller => "client_sessions", :action => "api_session"
+  
   # For Test
   map.note "claim-notes", :controller => "claims", :action => "note"
   map.panel_test "panel-test", :controller => "dashboard", :action => "panel_test"
