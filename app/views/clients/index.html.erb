@@ -6,8 +6,7 @@
     <th>Last name</th>
     <th>Username</th>
     <th>Email</th>
-    <th>Crypted password</th>
-    <th>Password salt</th>
+    <th>Api Key</th>
   </tr>
 
 <% @clients.each do |client| %>
@@ -16,8 +15,7 @@
     <td><%=h client.last_name %></td>
     <td><%=h client.username %></td>
     <td><%=h client.email %></td>
-    <td><%=h client.crypted_password %></td>
-    <td><%=h client.password_salt %></td>
+    <th><%=h client.api_key %></th>
     <td><%= link_to 'Show', client %></td>
     <td><%= link_to 'Edit', edit_client_path(client) %></td>
     <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>

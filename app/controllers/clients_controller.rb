@@ -49,6 +49,8 @@ class ClientsController < ApplicationController
   # POST /clients.xml
   def create
     @client = Client.new(params[:client])
+    ak = @client.setup_key
+    @client.api_key = ak
 
     respond_to do |format|
       if @client.save
@@ -56,8 +58,8 @@ class ClientsController < ApplicationController
         format.html { redirect_to quick_launch_path }
         format.xml  { render :xml => @client, :status => :created, :location => @client }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @client.errors, :status => :unprocessable_entity }
+        flash[:notice] = 'Error - Please try again'
+        redirect_to :back
       end
     end
   end

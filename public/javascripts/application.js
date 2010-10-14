@@ -419,11 +419,13 @@ var scroll = {
   },
   
   setScroll: function(link) {
-    var $scrollWrap = jQuery('#scroll_pane'); 
-    var $scrollBox = $scrollWrap.find('#scrolling_segment')
+    var $scrollWrap = $('#scroll_pane'); 
+    var $scrollBox = $scrollWrap.find('#scrolling_segment');
+    var $scrollNav = $('#scroll_thumbs');
 
     var $panels = $scrollBox.find('.scroll_panel');
-    var $nav = jQuery('.scroll_nav');
+    var $nav = $scrollNav.find('.scroll_nav');
+    var $navTriggerWrap = $nav.find('#scroller_wrap');
     var $trigger_wraps = $nav.find('li');
     var $triggers = $nav.find('a');
     
@@ -435,10 +437,26 @@ var scroll = {
       duration: 500,
       easing: 'swing'
     };
+    
     $scrollWrap.serialScroll(scrollOptions);
     $.localScroll(scrollOptions);
     $trigger_wraps.removeClass('selected');
     link.parent().addClass('selected');
+    
+    // setup the nav scroll
+    var navScrollOptions = {
+      target: $navTriggerWrap,
+      items: $trigger_wraps,
+      cycle : true,
+      prev: 'div.trigger_l',
+      next: 'div.trigger_r',
+      axis: 'xy',
+      duration: 500,
+      easing: 'swing'
+    };
+    // $scrollNav.serialScroll(navScrollOptions);
+    // $.localScroll(navScrollOptions);
+    
   }
 };
 

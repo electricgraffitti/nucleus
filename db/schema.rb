@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101008164302) do
+ActiveRecord::Schema.define(:version => 20101014173203) do
 
   create_table "claim_statuses", :force => true do |t|
     t.string   "claim_status"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20101008164302) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "persistence_token"
+    t.string   "api_key"
   end
 
   create_table "condition_stats", :force => true do |t|

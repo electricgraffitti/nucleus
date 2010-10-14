@@ -3735,8 +3735,37 @@ div.tutorial_overlay {
   padding-top:5px;
   float: left;
 }
+#scroller_wrap {
+  position: relative;
+  width: 628px;
+  height: 93px;
+  float: left;
+  overflow: hidden;
+}
 #scroll_thumbs ul {
   float: left;
+  width: 620px;
+}
+.scroll_nav_triggers {
+  position: absolute;
+  width: 20px;
+  height: 90px;
+}
+.scroll_nav_triggers.trigger_l {
+  left: -15px;
+  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -90px no-repeat;
+}
+.scroll_nav_triggers.trigger_l:hover {
+  left: -15px;
+  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -270px no-repeat;
+}
+.scroll_nav_triggers.trigger_r {
+  right: -15px;
+  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px 0px no-repeat;
+}
+.scroll_nav_triggers.trigger_r:hover {
+  right: -15px;
+  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -180px no-repeat;
 }
 #scroll_thumbs ul li {
   position: relative;

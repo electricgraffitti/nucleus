@@ -15,6 +15,8 @@
 #
 class Client < ActiveRecord::Base
   
+  include Access
+  require "digest/sha1"
   has_many :widget_views
   has_many :dashboard_widgets, :through => :widget_views
   accepts_nested_attributes_for :dashboard_widgets
@@ -26,6 +28,10 @@ class Client < ActiveRecord::Base
   def full_name
     full_name = self.first_name + " " + self.last_name
     return full_name
+  end
+  
+  def setup_key(length = 20)
+    Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)[1..length]
   end
   
 end
