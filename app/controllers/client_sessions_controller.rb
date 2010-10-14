@@ -45,8 +45,7 @@ class ClientSessionsController < ApplicationController
         @client_session = ClientSession.new()
         @client_session.username = 'hcidemouser'
         @client_session.password = 'coffee'
-      
-      
+
       if @client_session.save
         flash[:notice] = "Login successful!"
         redirect_to quick_launch_path

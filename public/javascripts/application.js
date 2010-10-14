@@ -448,13 +448,17 @@ var widget = {
     var $viewTrigger = $('#widget_view_controls :checkbox');
     $viewTrigger.live('click', function() {
       if ($(this).is(':checked')) {
-        var $w = $('#' + $(this).attr('widget'));
-        var visibleID = $w.attr('id');
-        $w.hide('fade', 1000, widget.setWidgetViewCookie(visibleID));
-      } else {
+        
         var $w = $('#' + $(this).attr('widget'));
         var hiddenID = $w.attr('id');
         $w.show('fade', 1000, widget.destroyWidgetViewCookie(hiddenID));
+        
+      } else {
+        
+        var $w = $('#' + $(this).attr('widget'));
+        var visibleID = $w.attr('id');
+        $w.hide('fade', 1000, widget.setWidgetViewCookie(visibleID));
+      
       }
       
     });
@@ -476,7 +480,7 @@ var widget = {
       return false;
     } else {
       var cb = $('#widget_view_controls .' + checkValue);
-      cb.attr('checked', 'checked');
+      cb.attr('checked', '');
       return true;
     }
   },
@@ -547,7 +551,7 @@ var widget = {
     var $cb_panel = $('#widget_view_controls');
     var cb = $cb_panel.find(('.' + v));
     cb.click();
-    cb.attr('checked', 'checked');
+    cb.attr('checked', '');
   },
 
   settingsOption: function() {
