@@ -39,23 +39,35 @@ class ClientSessionsController < ApplicationController
   end
   
   def api_session
+    path = params[:route]
     
-      if params[:access_key] == APP['apikey']
-        
-        @client_session = ClientSession.new()
-        @client_session.username = 'hcidemouser'
-        @client_session.password = 'coffee'
+    if params[:access_key] == APP['apikey']
+      
+      @client_session = ClientSession.new()
+      @client_session.username = 'hcidemouser'
+      @client_session.password = 'coffee'
 
       if @client_session.save
-        flash[:notice] = "Login successful!"
-        redirect_to quick_launch_path
+        case path
+          when "help"
+            redirect_to help_path
+          when "dashboard"
+            redirect_to dashboard_path
+          when "forum"
+            redirect_to client_feedback_path
+          when "messaging"
+            redirect_to messages_path
+          when "quick_launch"
+            redirect_to quick_launch_path
+          else
+            redirect_to quick_launch_path
+          end
       else
         redirect_to login_path
       end
     else
       redirect_to login_path
     end
-    
   end
   
   
