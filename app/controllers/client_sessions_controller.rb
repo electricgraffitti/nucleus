@@ -11,9 +11,6 @@ class ClientSessionsController < ApplicationController
   end
   
   def create
-    
-    raise params.to_yaml
-    
     @client_session = ClientSession.new(params[:client_session])
     if @client_session.save
       flash[:notice] = "Login successful!"

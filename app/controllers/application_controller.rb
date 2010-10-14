@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
         return @current_client if defined?(@current_client)
         @current_client = current_client_session && current_client_session.record
       end
-      
+
       def require_client
         unless current_client
           store_location
