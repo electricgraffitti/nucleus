@@ -95,6 +95,11 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      $('.scroll_nav_trigger').live('click', function(e) {
+        scroll.setScroll($(this));
+        e.preventDefault();
+      });
+
       baseActions.tutorialTrigger();
       panels.westResizeTrigger();
       panels.northResizeTrigger();
