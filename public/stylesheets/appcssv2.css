@@ -234,6 +234,36 @@
   margin-left: -7px;
 }
 /***************************************************************************************/
+/*************************************************************HELP CENTER***************/
+#help_west, #help_east {
+  position: relative;
+  float: left;
+  margin: 20px;
+  width: 200px;
+}
+#help_center {
+  position: relative;
+  float: left;
+  margin: 20px 0px;
+  width: 500px;
+}
+#help_center input[type="text"] {
+  float:left;
+  width:275px;
+}
+#help_west, #help_east, #help_center {
+  border: 1px solid #C0C0C0;
+}
+#help_west .sidebar_panel, #help_east .sidebar_panel, #help_center .sidebar_panel {
+  position: relative;
+  width: 172px;
+  padding: 14px;
+  border-bottom: 1px solid #c0c0c0;
+}
+#help_west .sidebar_panel.last, #help_east .sidebar_panel.last, #help_center .sidebar_panel.last {
+  border: none;
+}
+/***************************************************************************************/
 /*************************************************************Profile Container*********/
 
 /*

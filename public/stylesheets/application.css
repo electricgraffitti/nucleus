@@ -35,16 +35,13 @@ html, body {
 /*  min-width: 1024px;*/
 }
 .grey_header {
-  border-top: 1px solid #818181;
-  border-bottom: 1px solid #818181;
-  background: #585958;
-  padding-left: 20px;
-  padding-top: 5px;
-  color: #CFCFCF;
-  text-shadow: 0px 1px 1px #333;
-  height: 20px;
-  font-size: 12px;
-  font-weight: bold;
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
+  border-bottom:1px solid #C0C0C0;
+  font-size:12px;
+  font-weight:bold;
+  height:20px;
+  padding-left:14px;
+  padding-top:5px;
 }
 .lt_grey_header {
   background:none repeat scroll 0 0 #C6C6C6;
@@ -182,6 +179,9 @@ p {
 .green {
   /*color: #5bab46;*/
   color: #5bab46;
+}
+.grey {
+  background: #eee;
 }
 .grey_background {
   background: #d2d3d3 url('../images/login/grey_bg_gradient.jpg') left top repeat-x;
@@ -1922,7 +1922,7 @@ ul.location_stats li {
 #panel_layout.help_panels .panel {
   position: relative;
   float: left;
-  min-height: 620px;
+  min-height: 636px;
 }
 #panel_layout.help_panels .ui-layout-center {
   width: 542px;
@@ -1951,16 +1951,14 @@ ul.help_west_list li {
 }
 #help_search {
   position: relative;
-  background: #5bab46;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  border: 1px solid #c0c0c0;
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
   padding: 20px;
   margin: 20px;
 }
 #help_search h2 {
   font-size: 18px;
-  color: #fff;
+/*  color: #fff;*/
 }
 #help_search form {
   float: left;
@@ -1973,7 +1971,7 @@ ul.help_west_list li {
   float: left;
 }
 #help_search #search_buttons a {
-  color: #fff;
+/*  color: #fff;*/
 }
 #help_search #search_buttons #search_clear {
   margin: 0px 0px 0px 10px;
@@ -2039,13 +2037,13 @@ ul.help_west_list li {
 #panel_layout.help_panels .sidebar_panel h2 {
   background:url("../images/inner_pages/support_phone.jpg") no-repeat scroll left top transparent;
   color:#333333;
-  font-size:16px;
+  font-size:13px;
+  font-weight:bold;
   height:25px;
-  padding-left:20px;
+  padding-left:25px;
   padding-top:9px;
   position:relative;
   vertical-align:text-bottom;
-  font-weight: bold;
 }
 #panel_layout.help_panels .sidebar_panel h2 span {
   font-weight: normal;
@@ -2059,14 +2057,14 @@ ul.help_west_list li {
   margin-top:10px;
 }
 .sidebar_panel div.help_icon {
-  position: relative;
-  padding-left: 59px;
-  margin: 10px 0px;
-  display: block;
-  color: #fff;
-  width: 140px;
-  height: 57px;
-  border: 1px solid #222;
+  border:1px solid #222222;
+  color:#FFFFFF;
+  display:block;
+  height:57px;
+  margin:10px 0;
+  padding-left:59px;
+  position:relative;
+  width:109px;
 }
 .sidebar_panel div.help_icon.silver_icon_div {
   border: 1px solid #c3c4c3;
@@ -2075,13 +2073,13 @@ ul.help_west_list li {
   background:url("../images/inner_pages/profile_flag_bg.jpg") repeat-x scroll left top #333333;
   color:#FFFFFF;
   display:block;
-  font-size:16px;
+  font-size:14px;
   height:35px;
-  margin: 0px;
-  padding:7px 0 15px 11px;
+  margin:0;
+  padding:9px 0 12px 11px;
   position:relative;
   text-decoration:none;
-  width:129px;
+  width:98px;
 }
 .sidebar_panel a.sidebar_icon_link.silver_icon_link {
   color: #444;
@@ -3400,6 +3398,10 @@ input[type="text"], input[type="password"], textarea {
   padding: 5px;
   border: 1px solid #c0c0c0;
   margin: 5px 0px;
+  -moz-box-shadow:inset 1px 1px 3px #333333;
+  -webkit-box-shadow:inset 1px 1px 3px #333333;
+  box-shadow:inset 1px 1px 3px #333333;
+  
 }
 input[type="text"]:focus {
   border: 1px solid #5bab46;
