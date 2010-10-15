@@ -239,7 +239,7 @@
   position: relative;
   float: left;
   margin: 20px;
-  width: 200px;
+  width: 219px;
 }
 #help_center {
   position: relative;
@@ -257,7 +257,7 @@
 }
 #help_west .sidebar_panel, #help_east .sidebar_panel, #help_center .sidebar_panel {
   position: relative;
-  width: 172px;
+  width: 191px;
   padding: 14px;
   border-bottom: 1px solid #c0c0c0;
 }
