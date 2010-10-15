@@ -246,6 +246,7 @@
   float: left;
   margin: 20px 0px;
   width: 500px;
+  background: #eee;
 }
 #help_center input[type="text"] {
   float:left;
@@ -262,6 +263,208 @@
 }
 #help_west .sidebar_panel.last, #help_east .sidebar_panel.last, #help_center .sidebar_panel.last {
   border: none;
+}
+/***************************************************************************************/
+/*********************************************************MESSAGE CENTER****************/
+#message_center_wrap {
+  position: relative;
+  width: 982px;
+  margin: 20px;
+  border: 1px solid #c0c0c0;
+  background: #eee;
+  float: left;
+}
+#message_center_breadcrumb {
+  position: relative;
+  float: left;
+  padding: 14px;
+  width: 954px;
+}
+#message_center_breadcrumb ul, #message_center_breadcrumb ul li, #message_center_breadcrumb ul li a {
+  position: relative;
+  float: left;
+}
+#message_center_breadcrumb ul li a {
+  display: block;
+  padding: 0px 5px 10px;
+}
+#message_sidebar {
+  position: relative;
+  float: left;
+  width: 216px;
+  padding: 14px;
+}
+#message_sidebar #profile_wrap {
+  padding: 0px;
+}
+.profile_image {
+  float:left;
+  height:75px;
+  margin-bottom:10px;
+  position:relative;
+  width:174px;
+}
+.message_sidebar_panel {
+  float:left;
+  margin-top:14px;
+  width:100%;
+}
+.message_sidebar_panel h3 {
+  border-bottom:1px solid #C0C0C0;
+  font-weight: bold;
+  padding-bottom:8px;
+  width:100%;
+}
+.message_count_block {
+  position: relative;
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  text-align: center;
+}
+.message_count_block .count_block {
+  position: relative;
+  float: left;
+  height: 20px;
+  width: 38px;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
+  font-size: 16px;
+  font-weight: bold;
+}
+.message_count_block.middle {
+  margin: 10px 18px 0px;
+}
+.message_count_block .count_label {
+  margin-top: 2px;
+  float: left;
+  width: 60px;
+}
+.message_sidebar_panel.contact_information ul li {
+  height:13px;
+  margin:10px 0;
+  padding:6px 0 0 28px;
+  width:100%;
+}
+.message_sidebar_panel.contact_information ul li.email {
+  background: url('../images/inner_pages/table_icon_sprite.png') -0px -357px no-repeat;
+}
+.message_sidebar_panel.contact_information ul li.contact {
+  background: url('../images/inner_pages/table_icon_sprite.png') -0px -339px no-repeat;
+} 
+#message_center_tabs {
+  position: relative;
+  float: left;
+  width: 724px;
+  margin-right: 14px;
+  margin-bottom: 20px;
+}
+#message_center_tabs ul {
+  position: relative;
+  float: left;
+  width:722px;
+  border-bottom: 1px solid #c0c0c0;
+}
+#message_center_tabs ul li {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  height: 32px;
+  text-align: center;
+  border-left: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+  border-top: 1px solid #c0c0c0;
+  background: #dfdfdf;
+}
+#message_center_tabs ul li:hover {
+  background: #eee;
+}
+#message_center_tabs ul li a {
+  position: relative;
+  float: left;
+  height: 32px;
+  padding:8px 30px;
+}
+#message_center_tabs ul li a:hover {
+  text-decoration: none;
+}
+#message_center_tabs ul li.active {
+  background:none repeat scroll 0 0 #FFFFFF;
+  border-bottom:1px solid #FFFFFF;
+  margin-bottom:-1px;
+}
+#post_block {
+  border:1px solid #C0C0C0;
+  float:left;
+  margin-bottom:14px;
+  padding:14px;
+  position:relative;
+  width:664px;
+}
+#post_header {
+  background:none repeat scroll 0 0 #EEEEEE;
+  border-bottom:1px solid #C0C0C0;
+  float:left;
+  padding:7px 0;
+  position:relative;
+  width:694px;
+}
+#post_header h2 {
+  color:#555555;
+  float:left;
+  font-size:16px;
+  height:25px;
+  margin-left:18px;
+}
+.post_btn {
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
+  border:1px solid #C0C0C0;
+  color:#666666;
+  font-size:14px;
+  margin-left:14px;
+  margin-top:5px;
+  padding:6px 10px;
+  position:relative;
+  width:63px;
+}
+#message_center_tabs #center_message_content_wrap {
+  border:medium none;
+  float:left;
+  margin:0;
+  width:694px;
+}
+.message_panel {
+  position: relative;
+  float: left;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  border-top: none;
+  padding: 14px;
+  width: 694px;
+  height: 573px;
+}
+.follow_btn {
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left -13px #F2F2F2;
+  border:1px solid #C0C0C0;
+  bottom:7px;
+  display:block;
+  height:16px;
+  padding:2px 0 2px 0;
+  position:absolute;
+  right:-42px;
+  width:86px;
+}
+.follow_btn span {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 5px -380px #E6E6E6;
+  border-right:1px solid #EFEFEF;
+  float:left;
+  height:20px;
+  margin-right:10px;
+  margin-top:-2px;
+  position:relative;
+  width:30px;
 }
 /***************************************************************************************/
 /*************************************************************Profile Container*********/

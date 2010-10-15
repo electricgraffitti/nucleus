@@ -36,7 +36,7 @@ html, body {
 }
 .grey_header {
   background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
-  border-bottom:1px solid #C0C0C0;
+  /*border-bottom:1px solid #C0C0C0;*/
   font-size:12px;
   font-weight:bold;
   height:20px;
@@ -1948,10 +1948,12 @@ ul.help_west_list li {
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  background: #fff;
 }
 #help_search {
   position: relative;
   border: 1px solid #c0c0c0;
+  border-bottom: 0px;
   background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
   padding: 20px;
   margin: 20px;
@@ -2083,7 +2085,7 @@ ul.help_west_list li {
 }
 .sidebar_panel a.sidebar_icon_link.silver_icon_link {
   color: #444;
-  background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x;
+  background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left 17px repeat-x;
 }
 .sidebar_panel a.sidebar_icon_link:hover {
 
@@ -2316,7 +2318,7 @@ h2.content_header {
 	position: relative;
 	float: left;
 	padding: 20px;
-	width: 685px;
+	width: 634px;
 }
 #profile_wrap .image_wrap {
   border: 2px solid #c0c0c0;
@@ -2333,10 +2335,10 @@ h2.content_header {
 	position: relative;
 	float: left;
 	min-height: 64px;
-	width: 596px;
+	width: 500px;
 }
 .reply_message_wrap {
-  width: 470px;
+  width: 420px;
 }
 .message_links {
 	position: relative;
@@ -2356,7 +2358,7 @@ h2.content_header {
 	margin-left: 85px;
 	background: #f0f2f0;
 	padding: 20px;
-	width: 560px;
+	width: 500px;
 }
 .message_reply .image_wrap {
 	width: 49px;
@@ -2367,13 +2369,16 @@ h2.content_header {
 	padding: 20px;
 }
 #profile_wrap .image_wrap {
-	margin-right: 10px;
+	height:64px;
+  margin-right:10px;
+  width:64px;
 }
 #center_message_content_wrap h3, #center_message_content_wrap h4, #center_message_content_wrap h5 {
   font-weight: bold;
 }
 #center_message_content_wrap h3 {
-  font-size: 16px;
+  font-size:14px;
+  font-weight:normal;
 }
 #center_message_content_wrap h4 {
   font-size: 14px;
@@ -2441,7 +2446,7 @@ h2.content_header {
 #panel_layout.message_panels .sidebar_panel h2 {
   font-size: 18px;
 }
-.green_paper_clip, .gray_paper_clip {
+.green_paper_clip, .gray_paper_clip, .paper_clip {
   position: relative;
   float: left;
   width: 20px;
@@ -2452,6 +2457,9 @@ h2.content_header {
 .gray_paper_clip {
   background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -140px;
 }
+.paper_clip {
+  background: url('../images/inner_pages/table_icon_sprite.jpg') -0px -140px;
+}
 #message_search .paperclip_link a {
   float: left;
   color: #fff;
@@ -2460,6 +2468,7 @@ h2.content_header {
 #message_attachment {
   float: left;
   margin-left: 10px;
+  margin-right:5px;
 }
 .attachment_wrap {
   position: relative;
@@ -3398,9 +3407,9 @@ input[type="text"], input[type="password"], textarea {
   padding: 5px;
   border: 1px solid #c0c0c0;
   margin: 5px 0px;
-  -moz-box-shadow:inset 1px 1px 3px #333333;
-  -webkit-box-shadow:inset 1px 1px 3px #333333;
-  box-shadow:inset 1px 1px 3px #333333;
+  -moz-box-shadow:inset 1px 1px 0px #333333;
+  -webkit-box-shadow:inset 1px 1px 0px #333333;
+  box-shadow:inset 1px 1px 0px #333333;
   
 }
 input[type="text"]:focus {

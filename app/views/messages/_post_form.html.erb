@@ -1,0 +1,17 @@
+        <div id="post_block">
+          <% form_tag providers_path, :method => :get do %>
+            <%= text_area_tag(:search, nil, {:cols => 94, :rows => 4, :class => "left"} )%>
+            <div id="post_buttons">
+              <%= submit_tag "Post", :name => nil, :class => 'post_btn tip', :title => "Post Message" %>
+            </div>
+          <% end %>
+          <div class="clear"></div>
+          <div class="paperclip_link">
+            <div class="paper_clip"></div>
+            <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip", :title => "Attach a File" %>
+            <div id="message_attachment" style="display: none;">
+              <%= file_field :attachment, :size => 16 %>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>

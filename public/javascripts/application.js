@@ -314,6 +314,22 @@ var panels = {
     
   },
   
+  messageTabs: function() {
+    var $tabs = $('#message_center_tabs ul:first li a');
+    var $panels = $('#message_center_tabs .message_panel');
+    
+    $tabs.click(function(e) {
+      e.preventDefault();
+      $panels.hide();
+      $(this).parent().siblings().removeClass('active');
+      $(this).parent().addClass('active');
+      var panelId = $(this).attr('href');
+      var $panel = $(panelId);
+      $panel.show();
+    });
+    
+  },
+  
 };
 
 var drag = {
