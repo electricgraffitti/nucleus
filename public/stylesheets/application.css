@@ -642,7 +642,7 @@ div.scaffold_pane label {
   max-width: 534px;
 }
 .panel_set_8 {
-  width: 240px;
+  width: 270px;
 }
 .panel_set_4 .panel_wrap, .panel_set_5 .panel_wrap, .panel_set_6 .panel_wrap, .panel_set_7 .panel_wrap, .panel_set_8 .panel_wrap {
 	position: relative;
@@ -763,13 +763,13 @@ div.scaffold_pane label {
 	width: 612px;
 }
 .panel_set_6 h3.report {
-	width: 211px;
+	width: 210px;
 }
 .panel_set_7 h3.report {
 	width: 484px;
 }
 .panel_set_8 h3.report {
-	width: 210px;
+	width: 229px;
 }
 .report_panel_wrap {
 	margin-top:20px;
