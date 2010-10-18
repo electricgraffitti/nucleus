@@ -104,7 +104,7 @@ class ProvidersController < ApplicationController
   end
   
   def provider_search
-    @providers = Provider.all
+    @providers = Provider.top_billable
     if params[:id].nil?
       @provider = Provider.first
     else
