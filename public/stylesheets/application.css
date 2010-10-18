@@ -745,17 +745,11 @@ div.scaffold_pane label {
 }
 .panel_set_4 h3.report, .panel_set_5 h3.report, .panel_set_6 h3.report, .panel_set_7 h3.report, .panel_set_8 h3.report  {
 	position: absolute;
-	top: -1px;
-	left: -1px;
-	color: #fff;
 	height: 17px;
-	background:none repeat scroll 0 0 #5bab46;
-	color:#fff;
 	font-size:13px;
 	font-weight:bold;
 	padding-left:20px;
 	padding-top:6px;
-	text-shadow: 0px 1px 1px #59a61b;
 }
 .panel_footer {
   background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left -18px transparent;
@@ -769,13 +763,13 @@ div.scaffold_pane label {
 	width: 612px;
 }
 .panel_set_6 h3.report {
-	width: 205px;
+	width: 211px;
 }
 .panel_set_7 h3.report {
-	width: 499px;
+	width: 484px;
 }
 .panel_set_8 h3.report {
-	width: 205px;
+	width: 210px;
 }
 .report_panel_wrap {
 	margin-top:20px;
@@ -787,7 +781,7 @@ div.scaffold_pane label {
 	width: 600px;
 }
 #report_schedule, #selection_panel, #report_parameters {
-  height: 265px;
+  height: 285px;
 }
 .schedule_time {
   margin-top: 9px;

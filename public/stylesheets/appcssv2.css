@@ -250,9 +250,6 @@ table a.score {
 }
 /***************************************************************************************/
 /**********************************************************REPORTS CENTER***************/
-.panel_set_7 h3.report {
-  width:479px;
-}
 .basic_panel_6, .combo_panel_6 {
   margin-left:10px;
   width:228px;
@@ -263,9 +260,19 @@ table a.score {
 }
 .report_panel_wrap {
   float:left;
-  margin-top:25px;
+  margin-top: 0px;
   padding-left:9px;
   padding-top:10px;
+}
+#inner_panel h3.report {
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left top transparent;
+  float:left;
+  font-size:14px;
+  font-weight:bold;
+  height:17px;
+  padding:10px 9px 14px;
+  position:relative;
+  text-align:left;
 }
 /***************************************************************************************/
 /*************************************************************HELP CENTER***************/
