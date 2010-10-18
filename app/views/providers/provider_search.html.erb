@@ -72,12 +72,12 @@
           </div>
         </div>
         <div class="sub_panel last">
-          <div class="right">
-          <% form_tag providers_path, :method => :get do %>
-            <%= collection_select(:provider_stat_date_range, :date_range_id, SearchTopic.all, :id, :name, {:prompt => "Date Range"}) %>
-            <%= submit_tag "Submit", :class => "medium_btn" %>
-          <% end %>
-          </div>
+          <!-- <div class="right">
+          <%# form_tag providers_path, :method => :get do %>
+            <%#= collection_select(:provider_stat_date_range, :date_range_id, SearchTopic.all, :id, :name, {:prompt => "Date Range"}) %>
+            <%#= submit_tag "Submit", :class => "medium_btn" %>
+          <%# end %>
+          </div> -->
         </div>
       </div>
     </div>
