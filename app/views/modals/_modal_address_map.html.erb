@@ -13,11 +13,6 @@
           <ul class="left">
             <li><%= location.address %></li>
             <li><%= location.city %>, <%= location.state.abbreviation %>, <%= location.zipcode %></li>
-            <% if ipad? %>
-              <li id="street_link"><%= link_to "Street View", street_view_path, :rel => "#overlay" %></li>
-            <% else %>
-              <li id="street_link"><%= link_to "Street View", location_path(location), :rel => "#overlay" %></li>
-            <% end %>
           </ul>
           <ul class="location_stats">
             <li>Type:<br/><b><%= location.location_type %></b></li>
@@ -31,6 +26,6 @@
       <% end %>
  </ul>
 </div>
-<div class="charts_maps_wrap">
-  <%= m.div(:width => 385, :height => 218) %>
+<div id="gmap" class="charts_maps_wrap">
+  <%#= m.div(:width => 385, :height => 218) %>
 </div>

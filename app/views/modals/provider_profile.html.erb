@@ -1,6 +1,11 @@
 <% content_for :header do %>
-  <%= GMap.header %>
-	<%= @map.to_html unless @map.blank? %>
+  <!-- <%= GMap.header %>
+  <%= @map.to_html unless @map.blank? %> -->
+	
+	<% if ipad? %>
+	  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<% end %>
+	
 <% end %>
 <%= render :partial => 'providers/provider_profile_header', :locals => {:provider => @provider} %>
 <div id="panel_layout" class="clear">
@@ -16,11 +21,20 @@
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <script>
+    var lng = parseFloat("<%= @long %>");
+    var lat = parseFloat("<%= @lat %>");
+    var mapOpts = {
+      zoom : 15,
+      svc : true // Street View Control
+    }
+    // var cor = <%= @coordsj[0].to_f %>;
     $(document).ready(function() {
       c2Accordion.setAccordion();
-      var $trigger = $('#suspect_provider');
+      var $trigger = $('#provider_address');
       c2Accordion.triggerAccordion($trigger);
+      gmaps.initMap('gmap', lng, lat, mapOpts);
       // profileActions.setBase();
       baseActions.tutorialTrigger();
       // Column Chart 1
