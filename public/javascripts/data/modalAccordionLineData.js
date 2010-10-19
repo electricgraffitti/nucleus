@@ -6,32 +6,32 @@ actionChart = new Highcharts.Chart({
       height: 256,
       margin: [50,30,40,45],
       zoomType: 'xy',
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-      },
-      borderColor: '#e7e7e7',
-      borderRadius: 0,
-      borderWidth: 1
+      // backgroundColor: {
+      //   linearGradient: [0, 0, 0, 300],
+      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+      // },
+      // borderColor: '#e7e7e7',
+      // borderRadius: 0,
+      borderWidth: 0
    },
    credits: {
      enabled: false
    },
    title: {
-      text: 'Dr. Edward Smith - Dollars Billed by Month',
-      style: {
-         color: "#555555",
-         font: "14px Arial, Helvetica, sans-serif"
-      }
+      text: null
+      // style: {
+      //    color: "#555555",
+      //    font: "14px Arial, Helvetica, sans-serif"
+      // }
    },
-   subtitle: {
-     text: 'Past 12 Months',
-     style: {
-        color: "#5bab46",
-        fontSize: "10px"
-        // display: 'none'
-     }
-   },
+   // subtitle: {
+   //   text: 'Past 12 Months',
+   //   style: {
+   //      color: "#5bab46",
+   //      fontSize: "10px"
+   //      // display: 'none'
+   //   }
+   // },
    xAxis: {
      categories: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug', 'Sept', 'Oct'],
      labels: {

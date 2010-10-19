@@ -846,7 +846,7 @@ a.flag_panel {
   height: 500px;
   overflow: auto;
 }
-#accordion h3 {
+#accordion h3.acc_header {
   background:none repeat scroll 0 0 #E7E7E7;
   border: none;
   border-bottom:2px solid #FFFFFF;
@@ -863,17 +863,17 @@ a.flag_panel {
   -webkit-border-radius: 0px;
   clear: left;
 }
-#accordion h3 a {
+#accordion h3.acc_header a {
   padding: 0px;
   color: #333;
   text-decoration:none;
 }
-#accordion h3 span {
+#accordion h3.acc_header span {
   position: relative;
   float: right;
   margin-right: 5px;
 }
-#accordion h3 div.accordion_rating_dot {
+#accordion h3.acc_header div.accordion_rating_dot {
   position: relative;
   float: left;
   width: 14px;
@@ -1022,6 +1022,119 @@ ul.location_stats li {
   position: relative;
   float: left;
   width: 232px;
+}
+.provider_module.half {
+  position: relative;
+  width: 229px;
+  float: left;
+  margin-right: 6px;
+}
+.widget_content {
+  position: relative;
+  float: left;
+  border: 1px solid #e7e7e7;
+  border-top: none;
+}
+.provider_module {
+  position: relative;
+  width: 343px;
+  float: left;
+}
+.provider_module .widget_content {
+  width: 374px;
+}
+.provider_module.half .widget_content {
+  width: 229px;
+}
+.provider_module .profile_module_header {
+  background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
+  padding: 0px;
+  border:1px solid #E7E7E7;
+  float:left;
+  height:15px;
+  padding:10px 9px 14px;
+  position:relative;
+  text-align:left;
+}
+.provider_module .profile_module_header h3 {
+  font-size:14px;
+  font-weight:bold;
+}
+.provider_module .profile_module_header {
+  width: 356px;
+}
+.provider_module.half .profile_module_header {
+  width: 211px;
+}
+.dashboard_widget_options {
+  height:20px;
+  position:absolute;
+  right:5px;
+  top:10px;
+  width:100px;
+}
+.dashboard_widget_options ul {
+  position: relative;
+  width: 100px;
+  float: left;
+}
+.dashboard_widget_options ul li {
+  position: relative;
+  width: 20px;
+  float: left;
+}
+.dashboard_widget_options ul li a {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  float: left;
+  display: block;
+  text-indent: -3000em;
+}
+a.widget_option.email_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) 0px 0px no-repeat;
+}
+a.widget_option.settings_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -20px 0px no-repeat;
+}
+a.widget_option.export_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -40px 0px no-repeat;
+}
+a.widget_option.maximize_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -60px 0px no-repeat;
+}
+a.widget_option.close_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -80px 0px no-repeat;
+}
+a.widget_option.email_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) 0px -20px no-repeat;
+}
+a.widget_option.settings_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -20px -20px no-repeat;
+}
+a.widget_option.export_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -40px -20px no-repeat;
+}
+a.widget_option.maximize_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -60px -20px no-repeat;
+}
+a.widget_option.close_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -80px -20px no-repeat;
+}
+a.widget_option.email_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) 0px -40px no-repeat;
+}
+a.widget_option.settings_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -20px -40px no-repeat;
+}
+a.widget_option.export_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -40px -40px no-repeat;
+}
+a.widget_option.maximize_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -60px -40px no-repeat;
+}
+a.widget_option.close_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -80px -40px no-repeat;
 }
 /*********************************************/
 /******************TABLES********************/

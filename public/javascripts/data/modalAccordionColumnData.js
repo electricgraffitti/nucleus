@@ -5,13 +5,13 @@ var barChart = new Highcharts.Chart({
 			margin: [50,25,60,50],
 			width: 229,
 			height: 256,
-      backgroundColor: {
-        linearGradient: [0, 0, 0, 300],
-        stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-      },
-      borderColor: '#e7e7e7',
-      borderRadius: 0,
-      borderWidth: 1
+      // backgroundColor: {
+      //   linearGradient: [0, 0, 0, 300],
+      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
+      // },
+      // borderColor: '#e7e7e7',
+      // borderRadius: 0,
+      borderWidth: 0
    },
    credits: {
      enabled: false

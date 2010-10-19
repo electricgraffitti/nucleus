@@ -1,3 +1,41 @@
-<div id="accordion_stat_left_chart" class="accordion_graph_box half"></div>
-<div id="accordion_stat_middle_chart" class="accordion_graph_box half"></div>
-<div id="accordion_stat_right_chart" class="accordion_graph_box"></div>
+<div id="profile1" class="provider_module graph_box half">
+  <div class="profile_module_header top_provider_block">
+    <h3>Paid Average</h3>
+    <%= render :partial => 'dashboard/widget_options' %>
+  </div>
+  <div class="hidden profile_panel_options">Profile 1</div>
+  <div class="widget_content">
+    <div id="accordion_stat_left_chart" class=""></div>
+  </div>
+  <div class="widget_footer">
+    <div class="resize_horz pane_handle_toggle"></div>
+  </div>
+</div>
+
+<div id="profile2" class="provider_module graph_box half">
+  <div class="profile_module_header top_provider_block">
+    <h3>Visit Average</h3>
+    <%= render :partial => 'dashboard/widget_options' %>
+  </div>
+  <div class="hidden profile_panel_options">Profile 1</div>
+  <div class="widget_content">
+    <div id="accordion_stat_middle_chart"></div>
+  </div>
+  <div class="widget_footer">
+    <div class="resize_horz pane_handle_toggle"></div>
+  </div>
+</div>
+
+<div id="profile3" class="provider_module graph_box">
+  <div class="profile_module_header top_provider_block">
+    <h3>Dollars Billed by Month</h3>
+    <%= render :partial => 'dashboard/widget_options' %>
+  </div>
+  <div class="hidden profile_panel_options">Profile 1</div>
+  <div class="widget_content">
+    <div id="accordion_stat_right_chart"></div>
+  </div>
+  <div class="widget_footer">
+    <div class="resize_horz pane_handle_toggle"></div>
+  </div>
+</div>

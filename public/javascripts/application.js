@@ -151,7 +151,7 @@ var c2Accordion = {
   setAccordion: function() {
     var $acc = $('#accordion');
     var $accNav = $('#accordion_nav');
-    var $triggers = $acc.find('h3');
+    var $triggers = $acc.find('h3.acc_header');
     var $navTriggers = $accNav.find('a');
     
     
