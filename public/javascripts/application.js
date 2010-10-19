@@ -302,7 +302,6 @@ var panels = {
     var $trigger = $('.pane_handle_toggle');
     
     $trigger.live('click', function() {
-      console.log('yessir');
       var $widget = $(this).parents(".widget:first");
       var $panel = $widget.find(".inner_panel_content");
       if ($panel.is(':visible')) {
