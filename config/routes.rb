@@ -1,10 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :widget_views
-
   map.resources :dashboard_widgets
-
   map.resources :tutorials
-
   map.resources :claim_statuses
   map.resources :claims
   map.resources :monthly_billings
@@ -52,6 +50,20 @@ ActionController::Routing::Routes.draw do |map|
   map.sdes_stats "sdes-stats", :controller => "provider_stats", :action => "sdes_stat_panel"
   
   map.street_view "street-view", :controller => "providers", :action => "street_view"
+  
+  # Dashboard Widgets
+  map.dash1 "dash_1_call", :controller => "api", :action => 'dash1'
+  map.dash2 "dash_2_call", :controller => "api", :action => 'dash2'
+  map.dash3 "dash_3_call", :controller => "api", :action => 'dash3'
+  map.dash4 "dash_4_call", :controller => "api", :action => 'dash4'
+  map.dash5 "dash_5_call", :controller => "api", :action => 'dash5'
+  map.dash6 "dash_6_call", :controller => "api", :action => 'dash6'
+  map.dash7 "dash_7_call", :controller => "api", :action => 'dash7'
+  map.dash8 "dash_8_call", :controller => "api", :action => 'dash8'
+  map.dash9 "dash_9_call", :controller => "api", :action => 'dash9'
+  map.dash10 "dash_10_call", :controller => "api", :action => 'dash10'
+  map.dash11 "dash_11_call", :controller => "api", :action => 'dash11'
+  map.dash12 "dash_12_call", :controller => "api", :action => 'dash12'
   
   # # For Tutorial Modals
   map.action_tutorials "action_tutorials", :controller => "tutorials", :action => "action_tutorials"

@@ -3419,7 +3419,7 @@ input[type="text"], input[type="password"], textarea {
   
 }
 input[type="text"]:focus {
-  border: 1px solid #5bab46;
+  border: 1px solid #398dcc;
   background: #efefef;
 }
 select {

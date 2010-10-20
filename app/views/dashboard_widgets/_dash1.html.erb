@@ -1,20 +1,25 @@
-    <div id="dash1" class="top_left_dashboard graph_box">
-      <div class="dashboard_module_header top_provider_block">
-        <h3>Top 10 Flagged Providers by Score</h3>
-        <%= render :partial => 'dashboard/widget_options' %>
-      </div>
-      <div class="hidden dashboard_panel_options">Dash 1</div>
-      <div class="widget_content">
-        <div id="panel_header" class="basic_panel">
-         <%= render :partial => 'dashboard/dashboard_top_provider_heading', :locals => {:provider => p} %>
-        </div>
-        <% top_providers.each do |p| %>
-        <div id="dashboard_providers" class="dashboard_basic_panel">
-          <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
-        </div>
-        <% end %>
-      </div>
-      <div class="widget_footer">
-        <div class="resize_horz pane_handle_toggle"></div>
-      </div>
+<div id="dash1" class="top_left_dashboard graph_box">
+  <div class="dashboard_module_header top_provider_block">
+    <h3>Top 10 Flagged Providers by Score</h3>
+    <%= render :partial => 'dashboard/widget_options' %>
+  </div>
+  
+  <%# hidden panel %>
+  <div class="hidden dashboard_panel_options">
+    <%= render :partial => 'dashboard_widgets/provider_score_options' %>
+  </div>
+  
+  <div class="widget_content">
+    <div id="panel_header" class="basic_panel">
+     <%= render :partial => 'dashboard/dashboard_top_provider_heading', :locals => {:provider => p} %>
     </div>
+    <% top_providers.each do |p| %>
+    <div id="dashboard_providers" class="dashboard_basic_panel">
+      <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
+    </div>
+    <% end %>
+  </div>
+  <div class="widget_footer">
+    <div class="resize_horz pane_handle_toggle"></div>
+  </div>
+</div>

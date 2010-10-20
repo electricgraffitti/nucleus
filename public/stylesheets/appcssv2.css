@@ -4,7 +4,27 @@
   width: 180px;
 }
 #v2 .top_provider_score {
-  width: 81px;
+  width: 83px;
+}
+.widget_component {
+  position: relative;
+  float: left;
+  text-align: left;
+  margin: 0px 10px;
+}
+.widget_component label {
+  font-size: 12px;
+}
+.widget_component input[type="text"], .widget_component select {
+  width: 100px;
+}
+.widget_controls {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.widget_options_panel_close {
+  margin-left: 3px;
 }
 /***************************************************************************************/
 /*************************************************************PROVIDER PROFILE**********/

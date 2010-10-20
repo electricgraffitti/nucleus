@@ -3,7 +3,12 @@
     <h3>Provider Distribution by Score</h3>
     <%= render :partial => 'dashboard/widget_options' %>
   </div>
-  <div class="hidden dashboard_panel_options">Dash 2</div>
+  
+  <%# hidden panel %>
+  <div class="hidden dashboard_panel_options">
+    <%= render :partial => 'dashboard_widgets/distribution_by_score' %>
+  </div>
+  
   <div class="widget_content">
   <div id="scatter_chart" class="chart">
 

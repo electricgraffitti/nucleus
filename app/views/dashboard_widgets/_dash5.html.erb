@@ -3,7 +3,12 @@
     <h3>Provider Population by Risk Category</h3>
     <%= render :partial => 'dashboard/widget_options' %>
   </div>
-  <div class="hidden dashboard_panel_options">Dash 5</div>
+  
+  <%# hidden panel %>
+  <div class="hidden dashboard_panel_options">
+    <%= render :partial => 'dashboard_widgets/risk_category' %>
+  </div>
+  
   <div class="widget_content">
     <div id="panel_header" class="basic_panel">
       <div class="top_provider_block pro_pop_risk">Risk</div>

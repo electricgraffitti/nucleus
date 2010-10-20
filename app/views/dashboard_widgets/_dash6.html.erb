@@ -3,7 +3,12 @@
     <h3>Savings Opportunities by Service</h3>
     <%= render :partial => 'dashboard/widget_options' %>
   </div>
-  <div class="hidden dashboard_panel_options">Dash 6</div>
+  
+  <%# hidden panel %>
+  <div class="hidden dashboard_panel_options">
+    <%= render :partial => 'dashboard_widgets/savings_by_service' %>
+  </div>
+  
   <div class="widget_content">
     <div id="panel_header" class="basic_panel">
       <div class="top_provider_block saving_opp_product">Product</div>

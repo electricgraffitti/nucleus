@@ -3,7 +3,12 @@
     <h3>Provider Action Summary</h3>
     <%= render :partial => 'dashboard/widget_options' %>
   </div>
-  <div class="hidden dashboard_panel_options">Dash 4</div>
+  
+  <%# hidden panel %>
+  <div class="hidden dashboard_panel_options">
+    <%= render :partial => 'dashboard_widgets/action_summary' %>
+  </div>
+  
   <div class="widget_content">
   <div id="pie_chart" class="chart">
 

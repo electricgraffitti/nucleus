@@ -1,0 +1,33 @@
+<% form_tag "/dash_6_call", :method => :get, :class => "widget_form" do %>
+  <div class="widget_component">
+    <%= label_tag "Condition" %><br/>
+    <%= select_tag :provider_condition,
+                    "<option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>"
+    %>
+  </div>
+  <div class="widget_component">
+    <%= label_tag "Speciality" %><br/>
+    <%= select_tag :provider_speciality,
+                    "<option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>"
+    %>
+  </div>
+  <div class="widget_component">
+    <%= label_tag "Date Range" %><br/>
+    <%= select_tag :provider_score,
+                    "<option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>"
+    %>
+  </div>
+  <div class="widget_controls">
+    <%= submit_tag "Update", :name => nil, :title => "Set Widget Options", :class => "medium_btn widget_submit" %>
+    <%= link_to "Cancel", "", :class => "widget_options_panel_close" %>
+  </div>
+<% end %>

@@ -568,6 +568,15 @@ var widget = {
     });
   },
   
+  closeWidgetOptions: function(attribute){
+    var $trigger2 = $('.widget_options_panel_close');
+    $trigger2.live('click', function(e) {
+      e.preventDefault();
+      var $panel = $(this).closest('.dashboard_panel_options').first();
+      $panel.hide("slide", {direction: 'up'});
+    });
+  },
+  
   closeOption: function() {
     var $trigger = $('.close_option');
     
@@ -608,13 +617,23 @@ var widget = {
     });
   },
   
+  optionSubmitTriggers: function() {
+    var $form = $('.widget_form');
+    $form.live('submit', function(e) {
+      console.log($(this));
+      e.preventDefault();
+    });
+  },
+  
   widgetOptions: function(ss) {
     widget.settingsOption();
     widget.widgetOptionTrigger(ss);
+    widget.closeWidgetOptions();
     widget.exportOption();
     widget.dashboardChartPaneToggle();
     widget.closeOption();
     widget.maximizeOption();
+    widget.optionSubmitTriggers();
   }
   
 };

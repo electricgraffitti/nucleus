@@ -3,7 +3,12 @@
         <h3>Savings Tracker by Month</h3>
         <%= render :partial => 'dashboard/widget_options' %>
       </div>
-      <div class="hidden dashboard_panel_options">Dash 3</div>
+      
+      <%# hidden panel %>
+      <div class="hidden dashboard_panel_options">
+        <%= render :partial => 'dashboard_widgets/savings_tracker' %>
+      </div>
+      
       <div class="widget_content">
         <div id="savings_tracker" class="chart">
 
