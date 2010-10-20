@@ -57,6 +57,10 @@ class ClientSessionsController < ApplicationController
             redirect_to client_feedback_path
           when "messaging"
             redirect_to messages_path
+          when "report"
+            redirect_to reports_path
+          when "university"
+            redirect_to "http://www.hcinsight.com/insight-university"
           when "quick_launch"
             redirect_to quick_launch_path
           else
