@@ -388,6 +388,7 @@ table a.score {
 }
 #help_east .sidebar_panel {
   border-bottom:1px solid #C0C0C0;
+  border-top: 1px solid #efefef;
   padding: 5px 14px;
   position:relative;
   width: 191px;
