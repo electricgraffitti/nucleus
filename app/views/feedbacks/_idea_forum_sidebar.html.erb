@@ -1,0 +1,32 @@
+<div class="idea_forum_btn">
+  <span class="idea_forum_cross"></span>
+  <%= link_to "Submit Your Idea", "", :class => "" %>
+</div>
+<div class="idea_forum_sidebar_panel idea_forum_sidebar_dark">
+  <h3>Explore Idea Forum</h3>
+  <ul class="help_west_list">
+    <li><%= link_to "Popular Ideas", "#", :class => "tip", :title => "Forum Appeals" %></li>
+    <li><%= link_to "Ideas In Development", "#", :class => "tip", :title => "Forum Claims" %></li>
+    <li><%= link_to "Implemented Ideas", "#", :class => "tip", :title => "Forum Claim Setting" %></li>
+  </ul>
+</div>
+<div class="idea_forum_sidebar_panel idea_forum_sidebar_dark">
+  <% form_tag providers_path, :method => :get do %>
+    <%= label_tag :search, "Search" %><br/>
+    <%= text_field_tag :idea_search %><br/>
+    <div id="idea_search_buttons">
+      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
+    </div>
+  <% end %>
+</div>
+<div class="idea_forum_sidebar_panel idea_forum_sidebar_dark categories_information">
+  <h3>Categories</h3>
+  <ul class="help_west_list">
+    <li><%= link_to "Appeals", "#", :class => "tip", :title => "Forum Appeals" %></li>
+    <li><%= link_to "Claims", "#", :class => "tip", :title => "Forum Claims" %></li>
+    <li><%= link_to "Claim Settings", "#", :class => "tip", :title => "Forum Claim Setting" %></li>
+    <li><%= link_to "Providers", "#", :class => "tip", :title => "Forum Providers" %></li>
+    <li><%= link_to "Reporting", "#", :class => "tip", :title => "Forum Reporting" %></li>
+    <li><%= link_to "User Settings", "#", :class => "tip", :title => "User Settings" %></li>
+  </ul>
+</div>

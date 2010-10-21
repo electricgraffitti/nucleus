@@ -345,6 +345,22 @@ var panels = {
     
   },
   
+  forumTabs: function() {
+    var $tabs = $('#idea_forum_center_tabs ul:first li a');
+    var $panels = $('#idea_forum_center_tabs .idea_forum_panel');
+    
+    $tabs.click(function(e) {
+      e.preventDefault();
+      $panels.hide();
+      $(this).parent().siblings().removeClass('active');
+      $(this).parent().addClass('active');
+      var panelId = $(this).attr('href');
+      var $panel = $(panelId);
+      $panel.show();
+    });
+    
+  },
+  
 };
 
 var drag = {

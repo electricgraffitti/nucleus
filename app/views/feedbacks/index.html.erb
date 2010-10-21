@@ -1,71 +1,48 @@
 <%= render :partial => 'feedbacks/feedback_header' %>
-<div id="panel_layout" class="feedback_panels clear">
-  <div class="panel ui-layout-center">
-    <%= render :partial => 'feedbacks/feedback_center' %>
-  </div>
-  <div class="panel ui-layout-east">
-    <div id="user_info">
-      <p class="has-layout">
-        <%= link_to "Login", "", :class => "tip", :title => "Login to Feedback Forum" %> <span class="">or</span> <%= link_to "Sign Up", "", :class => "tip", :title => "Sign up for a forum account" %> <span class="">|</span> <select style="width: 100px;" name="switch-lang" id="switch-lang" class="select" autocomplete="off">
-      <option selected="selected" value="en">English</option>
-      <option value="es">Español</option>
-      <option value="de">Deutsch</option>
-      <option value="fr">Français</option>
-      <option value="nl">Nederlands</option>
-      <option value="pt_BR">Português Brasileiro</option>
-      <option value="cn">中文 简体</option>
-      <option value="ja">日本語</option>
-      <option value="fi">Suomi</option>
-      <option value="tr">Türkçe</option>
-      <option value="no_NB">Norwegian</option>
-      <option value="it">Italiano</option>
-      <option value="pl">Polski</option></select>
-            </p>
-      </div>
-    <div class="big_vote_box">
-      <p><span class="big_number">98</span> votes left!<p>
+<div id="panel_layout" class="idea_forum_panels clear">
+  <div id="idea_forum_center_wrap">
+    
+    <%# Message Center Sidebar %>
+    <div id="idea_forum_sidebar">
+      <%= render :partial => 'feedbacks/idea_forum_sidebar' %>
     </div>
-    <h3 class="green_header">What Happens if time runs out?</h3>
-    <ul id="feedback_categories" class="side_bar_list clear">
-      <li class="basic_header feedback_category active">
-        Nucleus Activity Feed
-      </li>
-      <li class="basic_header feedback_category">
-        Contact Nucleus
-      </li>
-      <li class="basic_header feedback_category">
-       All Ideas
-      </li>
-      <li class="basic_header feedback_category">
-        User Interface
-      </li>
-      <li class="basic_header feedback_category">
-        Report Features
-      </li>
-      <li class="basic_header feedback_category">
-        Bug Reports
-      </li>
-    </ul>
+    
+    <%# Message Center Tabs %>
+    <div id="idea_forum_center_tabs">
+      <%= render :partial => 'feedbacks/idea_forum_tabs' %>
+
+      <div id="panel1" class="idea_forum_panel">
+        <%= render :partial => 'feedbacks/idea_forum_posts' %>
+      </div>
+      <div id="panel2" class="idea_forum_panel hidden">
+        <h2>Panel 2</h2>
+      </div>
+      <div id="panel3" class="idea_forum_panel hidden">
+        <h2>Panel 3</h2>
+      </div>
+    </div>
+    
+    <%# End %>
   </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
+    $(document).ready(function () {
+      
       $('.scroll_nav_trigger').live('click', function(e) {
         scroll.setScroll($(this));
         e.preventDefault();
       });
-     tabs.setupFeedbackTabs();
-     
-     $("#search").click( function() {
-       baseActions.setInputFilter($(this));
-     });
-     // Sets Highlight for Active Message Category
-     $('li.feedback_category').click(function() {
-       baseActions.setActiveMessageGroup($(this));
-     });
-     baseActions.tutorialTrigger();
+
+      baseActions.tutorialTrigger();
+      
+      panels.forumTabs();
+      // Toggles the file attachment
+      $('#message_attach_link').click(function() {
+        $('#message_attachment').slideToggle('slow');
+        return false;
+      });
     });
   </script>
 <% end %>
