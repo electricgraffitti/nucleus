@@ -1,13 +1,15 @@
 <%= render :partial => 'help/help_page_header', :locals => {:provider => @provider} %>
 <div id="panel_layout" class="help_panels clear">
-  <div id="help_west" class="panel grey">
-    <%= render :partial => 'help/help_west' %>
-  </div>
-  <div id="help_center" class="panel">
-    <%= render :partial => 'help/help_center' %>
-  </div>
-  <div id="help_east" class="panel grey">
-    <%= render :partial => 'help_east' %>
+  <div id="help_center_wrap">
+    <div id="help_west" class="panel grey">
+      <%= render :partial => 'help/help_west' %>
+    </div>
+    <div id="help_center_tabs" class="panel">
+      <%= render :partial => 'help/help_center' %>
+    </div>
+    <div id="help_east" class="panel grey">
+      <%= render :partial => 'help_east' %>
+    </div>
   </div>
   <div class="clear"></div>
 </div>
@@ -19,6 +21,7 @@
         e.preventDefault();
       });
       baseActions.tutorialTrigger();
+      panels.helpTabs();
     });
   </script>
 <% end %>

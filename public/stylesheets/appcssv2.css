@@ -296,34 +296,174 @@ table a.score {
 }
 /***************************************************************************************/
 /*************************************************************HELP CENTER***************/
-#help_west, #help_east {
+#help_center_wrap {
+  position: relative;
+  width: 982px;
+  margin: 20px;
+  float: left;
+}
+#help_east {
   position: relative;
   float: left;
-  margin: 20px;
+  margin: 0px;
   width: 219px;
 }
 #help_center {
   position: relative;
   float: left;
-  margin: 20px 0px;
   width: 500px;
-  background: #eee;
 }
 #help_center input[type="text"] {
   float:left;
   width:275px;
 }
-#help_west, #help_east, #help_center {
-  border: 1px solid #C0C0C0;
-}
-#help_west .sidebar_panel, #help_east .sidebar_panel, #help_center .sidebar_panel {
+#help_center_tabs {
   position: relative;
-  width: 191px;
-  padding: 14px;
+  float: left;
+  width: 489px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+#help_center_tabs ul.main {
+  position: relative;
+  float: left;
+  width:489px;
   border-bottom: 1px solid #c0c0c0;
 }
-#help_west .sidebar_panel.last, #help_east .sidebar_panel.last, #help_center .sidebar_panel.last {
-  border: none;
+#help_center_tabs ul.main li {
+  position: relative;
+  float: left;
+  margin-right: 1px;
+  height: 30px;
+  text-align: center;
+  background: #E63C2B url(../images/message/button_bg-red.png) 0px 0px repeat-x;
+}
+#help_center_tabs ul.main li:hover {
+  background: #eee;
+}
+#help_center_tabs ul.main li a {
+  position: relative;
+  float: left;
+  height: 29px;
+  padding:8px 30px;
+  color: #fff;
+  font-weight: bold;
+  border-top: 1px solid #f2a66d;
+}
+#help_center_tabs ul.main li a:hover, #help_center_tabs ul.main li.active a {
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid #efefef;
+}
+ #help_center_tabs ul.main li.active a {
+   border-top: 1px solid #efefef;
+ }
+#help_center_tabs ul.main li.active {
+  background:none repeat scroll 0 0 #E4E3E4;
+  border-color:#C0C0C0 #C0C0C0 #DDDDDD;
+  border-style:solid;
+  border-width:1px;
+  margin-bottom:-2px;
+  color: #333;
+}
+#help_search {
+  float:left;
+  padding:20px;
+  position:relative;
+  width:449px;
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
+}
+#center_help_content_wrap {
+  position: relative;
+  border-top: 1px solid #c0c0c0;
+  width: 489px;
+  height: 435px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+}
+#help_east {
+  border: 1px solid #C0C0C0;
+}
+#help_east .sidebar_panel {
+  border-bottom:1px solid #C0C0C0;
+  padding: 5px 14px;
+  position:relative;
+  width: 191px;
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
+}
+#help_east .sidebar_panel.last {
+  border-top: 1px solid #efefef;
+  border-bottom: none;
+  background: none;
+  height: 343px;
+}
+#help_west {
+  background:none repeat scroll 0 0 #F2F2F2;
+  float:left;
+  margin-right:20px;
+  position:relative;
+  width:210px;
+}
+.help_sidebar_panel {
+  border-color:#EFEFEF #C0C0C0 #C0C0C0;
+  border-right:1px solid #C0C0C0;
+  border-style:solid;
+  border-width:1px;
+  float:left;
+  padding:8px 15px;
+  width:178px;
+}
+.help_sidebar_dark {
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
+}
+.help_sidebar_panel h3 {
+  margin: 10px 0px;
+  font-weight: bold;
+}
+.help_sidebar_panel p {
+  margin-bottom: 10px;
+}
+.help_topics {
+  min-height: 314px;
+}
+.help_btn {
+  background:url("../images/message/button_bg-red.png") repeat-x scroll left top #E63C2B;
+  border:1px solid #9E2A1E;
+  display:block;
+  height:29px;
+  position:relative;
+  width:208px;
+}
+.help_btn div {
+  border-left:1px solid #9E2A1E;
+  border-top:1px solid #E56B5F;
+  color:#FFFFFF;
+  display:block;
+  float:right;
+  height:18px;
+  padding:6px 10px 5px;
+  width:150px;
+}
+.help_btn span {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -72px -376px transparent;
+  border-right:1px solid #e56b5f;
+  border-top:1px solid #e56b5f;
+  display:block;
+  float:left;
+  height:29px;
+  position:relative;
+  width:36px;
+}
+.help_panel {
+  position: relative;
+  float: left;
+  background: #E4E3E4;
+  border: 1px solid #c0c0c0;
+  border-top: none;
+  width: 489px;
+  height: 552px;
 }
 /***************************************************************************************/
 /*********************************************************MESSAGE CENTER****************/

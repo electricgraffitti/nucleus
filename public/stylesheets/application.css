@@ -1913,11 +1913,6 @@ ul.location_stats li {
   margin-right: 5px;
 }
 /** Provider Help **/
-#panel_layout.help_panels .panel {
-  position: relative;
-  float: left;
-  min-height: 636px;
-}
 #panel_layout.help_panels .ui-layout-center {
   width: 542px;
   border-left: 1px solid #c0c0c0;
@@ -1933,28 +1928,6 @@ ul.help_west_list li {
 #panel_layout.help_panels .ui-layout-west #top_search h2 {
   font-weight: bold;
   padding: 10px 20px 0px;
-}
-#center_help_content_wrap {
-  position: relative;
-  border: 1px solid #c0c0c0;
-  height: 435px;
-  margin: 20px;
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #fff;
-}
-#help_search {
-  position: relative;
-  border: 1px solid #c0c0c0;
-  border-bottom: 0px;
-  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
-  padding: 20px;
-  margin: 20px;
-}
-#help_search h2 {
-  font-size: 18px;
-/*  color: #fff;*/
 }
 #help_search form {
   float: left;
@@ -2075,7 +2048,7 @@ ul.help_west_list li {
   padding:9px 0 12px 11px;
   position:relative;
   text-decoration:none;
-  width:120px;
+  width:119px;
 }
 .sidebar_panel a.sidebar_icon_link.silver_icon_link {
   color: #444;
@@ -2418,12 +2391,6 @@ h2.content_header {
 .list_item_contact_wrap a {
   color: #2070b5;
 }
-.sidebar_panel {
-  position: relative;
-  padding: 20px;
-  width:200px;
-  border-bottom: 1px solid #c0c0c0;
-}
 .message_rss {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -2600,6 +2567,9 @@ ul.feedback_west_list li {
 .tutorial_icon.pdf_icon {
   background: url('../images/inner_pages/tutorial_icons.jpg') -76px top no-repeat;
 }
+.tutorial_icon.doc_icon {
+  background: url('../images/inner_pages/tutorial_icons.jpg') -0px top no-repeat;
+}
 .tutorial_icon.video_icon {
   background: url('../images/inner_pages/tutorial_icons.jpg') -38px top no-repeat;
 }
@@ -2648,12 +2618,6 @@ ul.feedback_west_list li {
 }
 .list_item_contact_wrap a {
   color: #2070b5;
-}
-.sidebar_panel {
-  position: relative;
-  padding: 20px;
-  width:200px;
-  border-bottom: 1px solid #c0c0c0;
 }
 .big_vote_box {
   margin-top: 10px;

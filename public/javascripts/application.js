@@ -329,6 +329,22 @@ var panels = {
     
   },
   
+  helpTabs: function() {
+    var $tabs = $('#help_center_tabs ul:first li a');
+    var $panels = $('#help_center_tabs .help_panel');
+    
+    $tabs.click(function(e) {
+      e.preventDefault();
+      $panels.hide();
+      $(this).parent().siblings().removeClass('active');
+      $(this).parent().addClass('active');
+      var panelId = $(this).attr('href');
+      var $panel = $(panelId);
+      $panel.show();
+    });
+    
+  },
+  
 };
 
 var drag = {
