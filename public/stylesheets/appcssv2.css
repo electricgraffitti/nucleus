@@ -330,15 +330,13 @@ table a.score {
 #message_center_wrap {
   position: relative;
   width: 982px;
-  margin: 20px;
-  border: 1px solid #c0c0c0;
-  background: #eee;
+  margin: 10px 20px;
   float: left;
 }
 #message_center_breadcrumb {
   position: relative;
   float: left;
-  padding: 14px;
+  padding: 3px 0px;
   width: 954px;
 }
 #message_center_breadcrumb ul, #message_center_breadcrumb ul li, #message_center_breadcrumb ul li a {
@@ -349,54 +347,62 @@ table a.score {
   display: block;
   padding: 0px 5px 10px;
 }
-#message_sidebar {
-  position: relative;
-  float: left;
-  width: 216px;
-  padding: 14px;
+#message_center_breadcrumb ul li a.first {
+  padding-left: 0px;
 }
-#message_sidebar #profile_wrap {
-  padding: 0px;
+#message_sidebar {
+  background:none repeat scroll 0 0 #F2F2F2;
+  float:left;
+  margin-right:20px;
+  min-height:605px;
+  position:relative;
+  width:242px;
 }
 .profile_image {
   float:left;
   height:75px;
-  margin-bottom:10px;
   position:relative;
   width:174px;
 }
 .message_sidebar_panel {
   float:left;
-  margin-top:14px;
-  width:100%;
+  padding: 8px 15px;
+  width: 210px;
+  border: 1px solid #c0c0c0;
+  border-top: 1px solid #efefef;
+}
+.message_sidebar_dark {
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
+}
+.message_sidebar_panel.contact_information {
+  min-height: 330px;
 }
 .message_sidebar_panel h3 {
-  border-bottom:1px solid #C0C0C0;
   font-weight: bold;
   padding-bottom:8px;
   width:100%;
 }
 .message_count_block {
-  position: relative;
-  float: left;
-  width: 60px;
-  height: 60px;
-  margin-top: 10px;
-  text-align: center;
+  float:left;
+  height:50px;
+  position:relative;
+  text-align:center;
+  width:60px;
 }
 .message_count_block .count_block {
   position: relative;
   float: left;
   height: 20px;
   width: 38px;
-  padding: 10px;
-  border: 1px solid #c0c0c0;
-  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
+  padding: 5px 10px;
+  border: 1px solid #c36b2a;
+  background: #d36c21 url(../images/message/button_bg-orange.png) 0px 0px repeat-x;
   font-size: 16px;
   font-weight: bold;
+  color: #fff;
 }
 .message_count_block.middle {
-  margin: 10px 18px 0px;
+  margin: 0px 15px;
 }
 .message_count_block .count_label {
   margin-top: 2px;
@@ -418,7 +424,7 @@ table a.score {
 #message_center_tabs {
   position: relative;
   float: left;
-  width: 724px;
+  width: 704px;
   margin-right: 14px;
   margin-bottom: 20px;
 }
@@ -431,13 +437,10 @@ table a.score {
 #message_center_tabs ul li {
   position: relative;
   float: left;
-  margin-right: 5px;
-  height: 32px;
+  margin-right: 1px;
+  height: 30px;
   text-align: center;
-  border-left: 1px solid #c0c0c0;
-  border-right: 1px solid #c0c0c0;
-  border-top: 1px solid #c0c0c0;
-  background: #dfdfdf;
+  background: #d36c21 url(../images/message/button_bg-orange.png) 0px 0px repeat-x;
 }
 #message_center_tabs ul li:hover {
   background: #eee;
@@ -445,32 +448,48 @@ table a.score {
 #message_center_tabs ul li a {
   position: relative;
   float: left;
-  height: 32px;
+  height: 29px;
   padding:8px 30px;
+  color: #fff;
+  font-weight: bold;
+  border-top: 1px solid #f2a66d;
 }
-#message_center_tabs ul li a:hover {
+#message_center_tabs ul li a:hover, #message_center_tabs ul li.active a {
   text-decoration: none;
+  color: #333;
+  border-top: 1px solid #efefef;
 }
+ #message_center_tabs ul li.active a {
+   border-top: 1px solid #efefef;
+ }
 #message_center_tabs ul li.active {
-  background:none repeat scroll 0 0 #FFFFFF;
-  border-bottom:1px solid #FFFFFF;
-  margin-bottom:-1px;
+  background:none repeat scroll 0 0 #E4E3E4;
+  border-color:#C0C0C0 #C0C0C0 #DDDDDD;
+  border-style:solid;
+  border-width:1px;
+  margin-bottom:-2px;
+  color: #333;
 }
 #post_block {
-  border:1px solid #C0C0C0;
   float:left;
-  margin-bottom:14px;
   padding:14px;
   position:relative;
-  width:664px;
+  width:692px;
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
+}
+#posts {
+  position: relative;
+  float:left;
+  border-top: 1px solid #c0c0c0;
+  background: #fff;
 }
 #post_header {
-  background:none repeat scroll 0 0 #EEEEEE;
+  background:none repeat scroll 0 0 #ededed;
   border-bottom:1px solid #C0C0C0;
   float:left;
   padding:7px 0;
   position:relative;
-  width:694px;
+  width:720px;
 }
 #post_header h2 {
   color:#555555;
@@ -494,38 +513,54 @@ table a.score {
   border:medium none;
   float:left;
   margin:0;
-  width:694px;
+  width:720px;
+  height:389px;
+}
+#v2 .message_reply {
+  background:none repeat scroll 0 0 #F3F3F3;
+  float:left;
+  margin-left:85px;
+  margin-top:10px;
+  padding:20px;
+  position:relative;
+  width:500px;
 }
 .message_panel {
   position: relative;
   float: left;
-  background: #fff;
+  background: #E4E3E4;
   border: 1px solid #c0c0c0;
   border-top: none;
-  padding: 14px;
-  width: 694px;
+  width: 720px;
   height: 573px;
 }
 .follow_btn {
-  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left -13px #F2F2F2;
-  border:1px solid #C0C0C0;
-  bottom:7px;
+  background:url("../images/message/button_bg-orange.png") repeat-x scroll left top #F2F2F2;
+  border:1px solid #C36B2A;
   display:block;
-  height:16px;
-  padding:2px 0 2px 0;
-  position:absolute;
-  right:-42px;
-  width:86px;
+  height:29px;
+  position:relative;
+  width:240px;
+}
+.follow_btn a {
+  border-left:1px solid #C36B2A;
+  border-top:1px solid #F2A66D;
+  color:#FFFFFF;
+  display:block;
+  float:right;
+  height:18px;
+  padding: 6px 10px 5px;
+  width:182px;
 }
 .follow_btn span {
-  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 5px -380px #E6E6E6;
-  border-right:1px solid #EFEFEF;
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -32px -376px transparent;
+  border-right:1px solid #F2A66D;
+  border-top:1px solid #F2A66D;
+  display:block;
   float:left;
-  height:20px;
-  margin-right:10px;
-  margin-top:-2px;
+  height:29px;
   position:relative;
-  width:30px;
+  width:36px;
 }
 /***************************************************************************************/
 /*************************************************************Profile Container*********/

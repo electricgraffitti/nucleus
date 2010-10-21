@@ -620,7 +620,6 @@ var widget = {
   optionSubmitTriggers: function() {
     var $form = $('.widget_form');
     $form.live('submit', function(e) {
-      console.log($(this));
       e.preventDefault();
     });
   },
