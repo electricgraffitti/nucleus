@@ -373,11 +373,14 @@ table a.score {
   width:449px;
   background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
 }
+#search {
+  width: 250px;
+}
 #center_help_content_wrap {
   position: relative;
   border-top: 1px solid #c0c0c0;
   width: 489px;
-  height: 435px;
+  height: 471px;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
