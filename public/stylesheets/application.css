@@ -1067,23 +1067,26 @@ span#occurence {
   background: #d8d8d8;
 }
 .quick_launch_wrap {
- margin: 30px auto;
- width:823px;
+  margin: 30px auto;
+  overflow:hidden;
+  width:795px;
 }
 #quick_launch_top {
   position: relative;
   float: left;
   width: 800px;
   height: 400px;
+  margin-top:-1px;
   /*border-bottom: 1px solid #c0c0c0;*/
 }
 .quick_launch_box {
-  position: relative;
-  float: left;
-  border: 1px solid #c0c0c0;
-  width: 178px;
-  height: 178px;
-  padding: 10px;
+  border-right:1px solid #C0C0C0;
+  border-top:1px solid #C0C0C0;
+  float:left;
+  height:178px;
+  padding:10px;
+  position:relative;
+  width:178px;
 }
 .quick_launch_box a {
   position: relative;
@@ -3403,7 +3406,7 @@ a.search_mag, a.calendar_icon {
   height: 20px;
   text-indent: -3000em;
   margin: 7px 0px 0px 3px;
-  background: url('../images/inner_pages/table_icon_sprite.jpg') -20px -80px no-repeat;
+  background: url('../images/inner_pages/table_icon_sprite.png') -20px -80px no-repeat;
 }
 img.ui-datepicker-trigger {
   position: relative;

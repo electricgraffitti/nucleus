@@ -582,9 +582,28 @@ var widget = {
     }
   },
   
-  maximizeOption: function() {
-    
-  },
+  printWidget: function() {
+	 var $printTrigger = $('.email_option');
+	 
+	 $printTrigger.live('click', function(e) {
+	   e.preventDefault();
+	   var $printArea = $(this).closest('.graph_box');
+	   // console.log($printArea);
+     $printArea.printElement({
+       leaveOpen:true,
+       printMode:'popup',
+       overrideElementCSS:[
+         '/stylesheets/reset-fonts-grids.css',
+         '/stylesheets/application.css',
+         '/stylesheets/appcssv2.css'
+       ],
+       iframeElementOptions: {
+         classNameToAdd : 'v2'
+       }
+     });
+	 });
+	 
+	},
   
   dashboardChartPaneToggle: function() {
     var $trigger = $('.resize_horz');
@@ -663,7 +682,7 @@ var widget = {
     widget.exportOption();
     widget.dashboardChartPaneToggle();
     widget.closeOption();
-    widget.maximizeOption();
+    widget.printWidget();
     widget.optionSubmitTriggers();
   }
   
@@ -751,8 +770,8 @@ var baseActions = {
 	},
 	
 	tutorialTrigger: function() {
-	  trig = $('.tutorial_trigger');
-	  trig.overlay({
+	  var $trig = $('.tutorial_trigger');
+	  $trig.overlay({
 	    expose: {
        color: '#000000',
        loadSpeed: 200,
