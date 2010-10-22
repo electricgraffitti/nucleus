@@ -25,7 +25,19 @@
           <%= link_to "Settings", "", :class => "dash7 tip", :title => "Nucleus Client Settings" %>
         </div>
         <div id="8" class="quick_launch_box university_widget">
-          <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8 tip", :title => "Insight University" %>
+          <%= link_to "HCI U", "", :target => "_blank", :class => "dash8 tip", :title => "Insight University" %>
+        </div>
+        <div id="9" class="quick_launch_box high_risk_widget">
+          <%= link_to "High Risk", "", :target => "_blank", :class => "dash9 tip", :title => "High Risk Providers" %>
+        </div>
+        <div id="10" class="quick_launch_box elevated_risk_widget">
+          <%= link_to "Elevated Risk", "", :target => "_blank", :class => "dash10 tip", :title => "Elevated Risk Providers" %>
+        </div>
+        <div id="11" class="quick_launch_box moderate_risk_widget">
+          <%= link_to "Moderate Risk", "", :target => "_blank", :class => "dash11 tip", :title => "Moderate Risk Providers" %>
+        </div>
+        <div id="12" class="quick_launch_box low_risk_widget">
+          <%= link_to "Low Risk", "", :target => "_blank", :class => "dash12 tip", :title => "Low Risk Providers" %>
         </div>
       </div>
     <div class="clear"></div>
@@ -40,6 +52,7 @@
       drag.setupQuickLaunch($grid, "quickLaunchCookie", 1000);
       drag.loadQuickLaunchOrder($grid, "quickLaunchCookie");
       baseActions.tutorialTrigger();
+      baseActions.setQuickLaunchHovers();
     });
   </script>
 <% end %>

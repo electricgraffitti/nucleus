@@ -19,6 +19,7 @@ var flash = {
 		1400);
 	}
 };
+
 var tableActions = {
 
 	setActive: function(el) {
@@ -137,6 +138,7 @@ var tableActions = {
 	}
 	// end Table
 };
+
 var profileActions = {
 
 	setBase: function() {
@@ -807,6 +809,29 @@ var baseActions = {
 	triggerActionTable: function() {
 	  var $tableTrigger = $('#provider_action_table table tbody tr').first();
 	  $tableTrigger.click();
+	},
+	
+	setQuickLaunchHovers: function() {
+	  var $qlboxes = $('#quick_launch_top .quick_launch_box');
+	  $qlboxes.removeClass('highlight');
+	  var $links = $qlboxes.find('a');
+	  $links.prepend('<span class="active" />').each(function() {
+	        var $span = $('> span.active', this).css({opacity : 0});
+	        $(this).hover(function() {
+	          if ($(this).hasClass('active')) {
+	            $span.stop().fadeTo(400, 0);
+	          } else {
+	           $span.stop().fadeTo(400, 1); 
+	          }
+	        }, function() {
+	          $span.stop().fadeTo(400, 0);
+	      });
+	      $(this).click( function() {
+	        $span.fadeTo(200, 0);
+	        $('ul#main_nav_ul a').removeClass('active');
+	        $(this).addClass('active');
+	      });
+	  });
 	},
 
 	setOverlay: function() {

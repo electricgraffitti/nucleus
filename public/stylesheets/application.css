@@ -1075,7 +1075,7 @@ span#occurence {
   position: relative;
   float: left;
   width: 800px;
-  height: 400px;
+  height: 600px;
   margin-top:-1px;
   /*border-bottom: 1px solid #c0c0c0;*/
 }
@@ -1088,6 +1088,16 @@ span#occurence {
   position:relative;
   width:178px;
 }
+.quick_launch_box span.active {
+  display: block;
+	background: #fff;
+	float:left;
+	width: 164px;
+  height: 164px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
 .quick_launch_box a {
   position: relative;
   margin: 7px;
@@ -1098,6 +1108,7 @@ span#occurence {
   background: #d8d8d8;
   text-indent: -3000em;
 }
+/*****Regular*****/
 .dashboard_widget a {
   background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1px 0px no-repeat;
 }
@@ -1122,6 +1133,57 @@ span#occurence {
 .university_widget a {
   background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -496px 0px no-repeat;
 }
+.high_risk_widget a {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1321px 0px no-repeat;
+}
+.elevated_risk_widget a {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1486px 0px no-repeat;
+}
+.moderate_risk_widget a {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1651px 0px no-repeat;
+}
+.low_risk_widget a {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1816px 0px no-repeat;
+}
+/****Hover****/
+.dashboard_widget.highlight a:hover, .dashboard_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1px -164px no-repeat;
+}
+.reports_widget.highlight a:hover, .reports_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -826px -164px no-repeat;
+}
+.search_widget.highlight a:hover, .search_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -661px -164px no-repeat;
+}
+.help_widget.highlight a:hover, .help_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1156px -164px no-repeat;
+}
+.messages_widget.highlight a:hover, .messages_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -991px -164px no-repeat;
+}
+.feedback_widget.highlight a:hover, .feedback_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -166px -164px no-repeat;
+}
+.settings_widget.highlight a:hover, .settings_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -331px -164px no-repeat;
+}
+.university_widget.highlight a:hover, .university_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -496px -164px no-repeat;
+}
+.high_risk_widget.highlight a:hover, .high_risk_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1321px -164px no-repeat;
+}
+.elevated_risk_widget.highlight a:hover, .elevated_risk_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1486px -164px no-repeat;
+}
+.moderate_risk_widget.highlight a:hover, .moderate_risk_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1651px -164px no-repeat;
+}
+.low_risk_widget.highlight a:hover, .low_risk_widget span.active {
+  background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -1816px -164px no-repeat;
+}
+
+
 /*****Dashboard*****/
 #dashboard {
   position: relative;
