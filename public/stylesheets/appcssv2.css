@@ -865,7 +865,7 @@ table a.score {
   width:182px;
 }
 .idea_forum_btn span {
-  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -32px -376px transparent;
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 7px -437px transparent;
   border-right:1px solid #fbce6a;
   border-top:1px solid #fbce6a;
   display:block;
@@ -895,6 +895,35 @@ table a.score {
 }
 input#idea_search {
   width: 195px;
+}
+.list_item_contact_wrap {
+  float:left;
+  margin-top:15px;
+  position:relative;
+  width: 280px;
+}
+.list_item_contact_wrap div.link_wrap {
+  position: relative;
+  float: left;
+  width: 130px;
+  margin-right:10px;
+}
+.list_item_contact_wrap div span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+}
+.list_item_contact_wrap a {
+  float: left;
+  color:#2070B5;
+}
+.list_item_contact_wrap div span.comment_count {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat 0px -481px transparent;
+}
+.list_item_contact_wrap div span.add_comment {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat 0px -502px transparent;
 }
 /***************************************************************************************/
 /*************************************************************Profile Container*********/
