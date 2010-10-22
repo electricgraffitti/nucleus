@@ -3731,6 +3731,9 @@ div.tutorial_overlay {
   float: left;
   width: 620px;
 }
+#scroller_wrap ul {
+  width: 100%;
+}
 .scroll_nav_triggers {
   position: absolute;
   width: 20px;

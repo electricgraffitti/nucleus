@@ -453,14 +453,19 @@ var drag = {
 
 var scroll = {
   
-  setScroll: function(link) {
+  setScroll: function() {
     var $scrollWrap = $('#scroll_pane');
     var $scrollNav = $('#scroll_thumbs');
     var $scrollBox = $scrollWrap.find('#scrolling_segment');
+    var $innerWrap = $scrollBox.find('#scroll_wrap');
     var $panels = $scrollBox.find('.scroll_panel');
-    var $nav = $scrollNav.find('.scroll_nav');
+    var $nav = $scrollNav.find('#scroll_nav');
     var $triggers = $nav.find('a');
-     
+    
+    var panelWrapWidth = (628 * $triggers.length);
+    $innerWrap.css({width:panelWrapWidth});
+    
+    
     var scrollOptions = {
       target: $scrollBox,
       items: $panels,
@@ -471,30 +476,32 @@ var scroll = {
     };
     
     $scrollWrap.serialScroll(scrollOptions);
-    $.localScroll(scrollOptions);
-    // $trigger_wraps.removeClass('selected');
-    // link.parent().addClass('selected');    
+    $.localScroll(scrollOptions);  
   },
   
-  scrolNavScroll: function() {
+  tutorialNavScroll: function() {
     var $scrollNav = $('#scroll_thumbs');
-    var $nav = $scrollNav.find('.scroll_nav');
-    var $navTriggerWrap = $nav.find('#scroller_wrap');
+    var $navTriggerWrap = $scrollNav.find('#scroller_wrap');
+    var $nav = $scrollNav.find('#scroll_nav');
     var $trigger_wraps = $nav.find('li');
-    var $triggers = $nav.find('a');
+    var $trigger_left = $('#scroll_nav_trigger_l');
+    var $trigger_right = $('#scroll_nav_trigger_r');
+    
+    var navwidth = (155 * $trigger_wraps.length);
+    $nav.css({width:navwidth});
     
     var navScrollOptions = {
       target: $navTriggerWrap,
       items: $trigger_wraps,
       cycle : true,
-      prev: 'div.trigger_l',
-      next: 'div.trigger_r',
+      prev: $trigger_left,
+      next: $trigger_right,
       axis: 'xy',
       duration: 500,
       easing: 'swing'
     };
     
-    $scrollNav.serialScroll(navScrollOptions);
+    $navTriggerWrap.serialScroll(navScrollOptions);
     $.localScroll(navScrollOptions);
   }
   
@@ -785,6 +792,7 @@ var baseActions = {
 	  
 	  $('.scroll_nav_trigger').live('click', function(e) {
       scroll.setScroll($(this));
+      scroll.tutorialNavScroll();
       e.preventDefault();
     });
 	},
