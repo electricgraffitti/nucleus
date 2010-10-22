@@ -2,7 +2,7 @@
 <div id="panel_layout" class="clear">
   <div id="inner_panel" class="panel ui-layout-center">
     <div id="panel_north">
-    <div class="widget widget3">
+      <div class="widget widget3">
       
       <%# Panel Header %>
       <div class="provider_header module_header">
@@ -62,7 +62,7 @@
     </div>
     
     
-    <div class="widget widget3">
+      <div class="widget widget3">
       
       <%# Panel Header %>
       <div class="module_header">
@@ -132,7 +132,7 @@
     </div>
     
     
-    <div class="widget widget3">
+      <div class="widget widget3">
       <%# Panel Header %>
       <div class="module_header">
         <h3>Condition Chart</h3>
@@ -168,18 +168,12 @@
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
-<script type="text/javascript" charset="utf-8">
-  $(document).ready(function() {
-    $('#provider_action_table tbody tr:first').click();
-    baseActions.tutorialTrigger();
-    panels.northResizeTrigger();
-    panels.actionPanelToggle();
-    
-    $('.scroll_nav_trigger').live('click', function(e) {
-      scroll.setScroll($(this));
-      e.preventDefault();
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      baseActions.triggerActionTable();
+      baseActions.tutorialTrigger();
+      panels.northResizeTrigger();
+      panels.actionPanelToggle();
     });
-  });
-  // var actionChart;
-</script>
+  </script>
 <% end %>

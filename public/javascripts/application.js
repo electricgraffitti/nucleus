@@ -206,15 +206,7 @@ var chartActions = {
 	}
 	// End Charts
 };
-var tabs = {
 
-	setupFeedbackTabs: function() {
-		$("#feedback_panels").tabs({
-			selected: 0
-		});
-	}
-	// end Tabs
-};
 var adminAction = {
 
 	setupCalendars: function() {
@@ -314,7 +306,7 @@ var panels = {
   },
   
   messageTabs: function() {
-    var $tabs = $('#message_center_tabs ul:first li a');
+    var $tabs = $('#message_center_tabs ul#tab_nav li a');
     var $panels = $('#message_center_tabs .message_panel');
     
     $tabs.click(function(e) {
@@ -330,7 +322,7 @@ var panels = {
   },
   
   helpTabs: function() {
-    var $tabs = $('#help_center_tabs ul:first li a');
+    var $tabs = $('#help_center_tabs ul#tab_nav li a');
     var $panels = $('#help_center_tabs .help_panel');
     
     $tabs.click(function(e) {
@@ -346,7 +338,7 @@ var panels = {
   },
   
   forumTabs: function() {
-    var $tabs = $('#idea_forum_center_tabs ul:first li a');
+    var $tabs = $('#idea_forum_center_tabs ul#tab_nav li a');
     var $panels = $('#idea_forum_center_tabs .idea_forum_panel');
     
     $tabs.click(function(e) {
@@ -461,21 +453,14 @@ var drag = {
 
 var scroll = {
   
-  initTrigger: function() {
-    
-  },
-  
   setScroll: function(link) {
-    var $scrollWrap = $('#scroll_pane'); 
-    var $scrollBox = $scrollWrap.find('#scrolling_segment');
+    var $scrollWrap = $('#scroll_pane');
     var $scrollNav = $('#scroll_thumbs');
-
+    var $scrollBox = $scrollWrap.find('#scrolling_segment');
     var $panels = $scrollBox.find('.scroll_panel');
     var $nav = $scrollNav.find('.scroll_nav');
-    var $navTriggerWrap = $nav.find('#scroller_wrap');
-    var $trigger_wraps = $nav.find('li');
     var $triggers = $nav.find('a');
-    
+     
     var scrollOptions = {
       target: $scrollBox,
       items: $panels,
@@ -487,10 +472,17 @@ var scroll = {
     
     $scrollWrap.serialScroll(scrollOptions);
     $.localScroll(scrollOptions);
-    $trigger_wraps.removeClass('selected');
-    link.parent().addClass('selected');
+    // $trigger_wraps.removeClass('selected');
+    // link.parent().addClass('selected');    
+  },
+  
+  scrolNavScroll: function() {
+    var $scrollNav = $('#scroll_thumbs');
+    var $nav = $scrollNav.find('.scroll_nav');
+    var $navTriggerWrap = $nav.find('#scroller_wrap');
+    var $trigger_wraps = $nav.find('li');
+    var $triggers = $nav.find('a');
     
-    // setup the nav scroll
     var navScrollOptions = {
       target: $navTriggerWrap,
       items: $trigger_wraps,
@@ -501,10 +493,11 @@ var scroll = {
       duration: 500,
       easing: 'swing'
     };
-    // $scrollNav.serialScroll(navScrollOptions);
-    // $.localScroll(navScrollOptions);
     
+    $scrollNav.serialScroll(navScrollOptions);
+    $.localScroll(navScrollOptions);
   }
+  
 };
 
 var widget = {
@@ -789,6 +782,23 @@ var baseActions = {
         first_trigger.click();
       },
 	  });
+	  
+	  $('.scroll_nav_trigger').live('click', function(e) {
+      scroll.setScroll($(this));
+      e.preventDefault();
+    });
+	},
+	
+	toggleUpload: function() {
+	  $('#message_attach_link').click(function(e) {
+	    e.preventDefault();
+      $('#message_attachment').slideToggle('slow');
+    });
+	},
+	
+	triggerActionTable: function() {
+	  var $tableTrigger = $('#provider_action_table table tbody tr').first();
+	  $tableTrigger.click();
 	},
 
 	setOverlay: function() {

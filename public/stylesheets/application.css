@@ -3736,6 +3736,9 @@ div.tutorial_overlay {
   width: 20px;
   height: 90px;
 }
+.scroll_nav_triggers:hover {
+  cursor: pointer;
+}
 .scroll_nav_triggers.trigger_l {
   left: -15px;
   background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -90px no-repeat;

@@ -20,14 +20,14 @@
     <div id="message_center_tabs">
       <%= render :partial => 'messages/message_tabs' %>
 
-      <div id="panel1" class="message_panel">
+      <div id="tab1" class="message_panel">
         <%= render :partial => 'messages/post_form' %>
         <%= render :partial => 'messages/message_posts' %>
       </div>
-      <div id="panel2" class="message_panel hidden">
+      <div id="tab2" class="message_panel hidden">
         <h2>Panel 2</h2>
       </div>
-      <div id="panel3" class="message_panel hidden">
+      <div id="tab3" class="message_panel hidden">
         <h2>Panel 3</h2>
       </div>
     </div>
@@ -39,20 +39,9 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
-      
-      $('.scroll_nav_trigger').live('click', function(e) {
-        scroll.setScroll($(this));
-        e.preventDefault();
-      });
-
-      baseActions.tutorialTrigger();
-      
       panels.messageTabs();
-      // Toggles the file attachment
-      $('#message_attach_link').click(function() {
-        $('#message_attachment').slideToggle('slow');
-        return false;
-      });
+      baseActions.tutorialTrigger();
+      baseActions.toggleUpload();
     });
   </script>
 <% end %>

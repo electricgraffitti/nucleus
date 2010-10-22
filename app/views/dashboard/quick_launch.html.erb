@@ -36,17 +36,10 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
-      
-      $('.scroll_nav_trigger').live('click', function(e) {
-        scroll.setScroll($(this));
-        e.preventDefault();
-      });
       var $grid = $("#quick_launch_top");
-      
-      baseActions.tutorialTrigger();
       drag.setupQuickLaunch($grid, "quickLaunchCookie", 1000);
       drag.loadQuickLaunchOrder($grid, "quickLaunchCookie");
-      
+      baseActions.tutorialTrigger();
     });
   </script>
 <% end %>

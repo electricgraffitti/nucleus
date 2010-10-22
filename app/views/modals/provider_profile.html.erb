@@ -31,12 +31,14 @@
     }
     // var cor = <%= @coordsj[0].to_f %>;
     $(document).ready(function() {
+      
       c2Accordion.setAccordion();
       var $trigger = $('#provider_address');
       c2Accordion.triggerAccordion($trigger);
       gmaps.initMap('gmap', lng, lat, mapOpts);
-      // profileActions.setBase();
+      
       baseActions.tutorialTrigger();
+      
       // Column Chart 1
       $.getScript('../javascripts/data/modalAccordionColumnData.js');
       
