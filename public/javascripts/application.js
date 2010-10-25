@@ -459,11 +459,15 @@ var scroll = {
     var $scrollWrap = $('#scroll_pane');
     var $scrollNav = $('#scroll_thumbs');
     var $scrollBox = $scrollWrap.find('#scrolling_segment');
-    var $innerWrap = $scrollBox.find('#scroll_wrap');
     var $panels = $scrollBox.find('.scroll_panel');
     var $nav = $scrollNav.find('#scroll_nav');
+    var $trigger_wrap = $nav.children('li');
     var $triggers = $nav.find('a');
     
+    var twidth = (630 / $trigger_wrap.length);
+    $trigger_wrap.css({width:twidth});
+        
+    var $innerWrap = $scrollBox.find('#scroll_wrap');
     var panelWrapWidth = (628 * $triggers.length);
     $innerWrap.css({width:panelWrapWidth});
     
@@ -794,7 +798,7 @@ var baseActions = {
 	  
 	  $('.scroll_nav_trigger').live('click', function(e) {
       scroll.setScroll($(this));
-      scroll.tutorialNavScroll();
+      // scroll.tutorialNavScroll();
       e.preventDefault();
     });
 	},
