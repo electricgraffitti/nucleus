@@ -1,10 +1,11 @@
 <div id="page_header">
   <h2>
     Reports
+    <div id="tutorial_trigger">
+      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => report_center_tutorials_path() %>
+    </div>
   </h2>
   <ul class="page_nav">
-    <li class="last">
-      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Report Center Tutorials", :rel => "#tutorial_modal", :tutorial_page => report_center_tutorials_path() %>
-    </li>
+
   </ul>
 </div>

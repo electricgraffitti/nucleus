@@ -3683,6 +3683,20 @@ div.tutorial_overlay {
    display:none; 
    padding: 0 !important;
 }
+#tutorial_trigger {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: transparent url(../images/inner_pages/table_icon_sprite.png) -20px -338px no-repeat;
+  margin-top: -5px;
+}
+#tutorial_trigger a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -3000em;
+}
 .tutorial_header {
   background:none repeat scroll 0 0 #FFFFFF;
   float:left;

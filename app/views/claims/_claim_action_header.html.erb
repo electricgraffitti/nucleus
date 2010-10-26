@@ -1,6 +1,9 @@
 <div id="page_header">
   <h2>
     Claim Action
+    <div id="tutorial_trigger">
+      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => claim_action_tutorials_path() %>
+    </div>
   </h2>
   <ul class="page_nav">
     <li>
@@ -15,11 +18,8 @@
     <li>
       <%= link_to "Refresh", "", :class => "tip", :title => "Claim Refresh" %>
     </li>
-    <li>
-      <%= link_to "Print", "", :class => "tip", :title => "Claim Print" %>
-    </li>
     <li class="last">
-      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Claim Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => claim_action_tutorials_path() %>
+      <%= link_to "Print", "", :class => "tip", :title => "Claim Print" %>
     </li>
   </ul>
 </div>

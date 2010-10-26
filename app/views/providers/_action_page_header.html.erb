@@ -1,7 +1,7 @@
 <div id="page_header">
   <h2>
     Provider Action
-    <!-- <div class="tutorial_trigger" rel="#tutorial_modal" tutorial_page="<%= action_tutorials_path() %>"></div> -->
+    <div id="tutorial_trigger"><%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => action_tutorials_path() %></div>    
   </h2>
   <ul class="page_nav">
     <li>
@@ -10,11 +10,8 @@
     <li>
       <%= link_to "Notes", "", :class => "tip", :title => "Notes" %>
     </li>
-    <li>
-      <%= link_to "List", "#", :class => "tip", :title => "List" %>
-    </li>
     <li class="last">
-      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => action_tutorials_path() %>
+      <%= link_to "List", "#", :class => "tip", :title => "List" %>
     </li>
   </ul>
 </div>

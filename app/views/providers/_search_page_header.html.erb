@@ -1,6 +1,9 @@
 <div id="page_header">
   <h2>
     Provider Search
+    <div id="tutorial_trigger">
+      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => provider_search_tutorials_path() %>
+    </div>
   </h2>
   <ul class="page_nav">
     <li>
@@ -12,11 +15,8 @@
     <li>
       <%= link_to "Profile", "#", :class => "tip", :title => "Refresh Page" %>
     </li>
-    <li>
-      <%= link_to "Export", "#", :class => "tip", :title => "Print Page" %>
-    </li>
     <li class="last">
-      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Search Tutorials", :rel => "#tutorial_modal", :tutorial_page => provider_search_tutorials_path() %>
+      <%= link_to "Export", "#", :class => "tip", :title => "Print Page" %>
     </li>
   </ul>
 </div>

@@ -1,6 +1,9 @@
 <div id="page_header">
   <h2>
     Provider Profile
+    <div id="tutorial_trigger">
+      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => provider_profile_tutorials_path() %>
+    </div>
   </h2>
   <ul class="page_nav">
     <li>
@@ -9,11 +12,8 @@
     <li>
       <%= link_to "Action", provider_action_path %>
     </li>
-    <li>
-      <%= link_to "Print", "#" %>
-    </li>
     <li class="last">
-      <%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Profile Tutorials", :rel => "#tutorial_modal", :tutorial_page => provider_profile_tutorials_path() %>
+      <%= link_to "Print", "#" %>
     </li>
   </ul>
 </div>
