@@ -1,7 +1,9 @@
 <%= render :partial => 'claims/claim_search_header' %>
 <div id="panel_layout" class="clear">
   <div id="panel_west" class="ui-layout-west">
-    <%= render :partial => 'claims/search' %>
+    <div id="inner_west">
+      <%= render :partial => 'claims/search' %>
+    </div>
     <div id="west_resizer">
       <div class="resize_vert"></div>
     </div>
@@ -103,6 +105,7 @@
   <script>
     $(document).ready(function() {
       baseActions.tutorialTrigger();
+      panels.westResizeTrigger();
     });
   </script>
 <% end %>

@@ -1709,9 +1709,17 @@ p.login_checkbox_wrap {
 }
 /********************************************/
 /**************TUTORIAL STYLES***************/
+.modal_claim_wrap {
+  position: relative;
+  float: left;
+  padding:20px;
+  width:795px;
+  overflow: hidden;
+  background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
+}
 div.tutorial_overlay { 
    position: relative;
-   width:700px; 
+   width:855px; 
    /*background-image:url(../images/overlay/apple.png); */
    background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
    display:none; 
@@ -1731,20 +1739,12 @@ div.tutorial_overlay {
   height: 20px;
   text-indent: -3000em;
 }
-.modal_claim_wrap {
-  position: relative;
-  float: left;
-  padding:20px;
-  width:630px;
-  overflow: hidden;
-  background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
-}
 .tutorial_header {
   background:none repeat scroll 0 0 #FFFFFF;
   float:left;
-  margin:15px;
+  margin:10px;
   position:relative;
-  width:670px;
+  width:835px;
 }
 .tutorial_header h1 {
   background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
@@ -1762,14 +1762,14 @@ div.tutorial_overlay {
 */
 #scroll_pane {
   float:left;
-  height:485px;
+  height:518px;
   position:relative;
-  width:630px;
+  width:795px;
 }
 #scrolling_segment {
 	position:relative;
 	overflow:hidden;
-	height:400px;
+	height:415px;
 }
 #scroll_wrap {
   position: relative;
@@ -1780,19 +1780,20 @@ div.tutorial_overlay {
 .scroll_panel {
   position: relative;
   float: left;
-  width: 628px;
+  width: 795px;
   height: 400px;
 }
 #scroll_wrap div.tutorial_column_left {
   position: relative;
   float: left;
-  width: 300px;
+  width: 400px;
   height: 400px;
+  padding-left: 40px;
 }
 #scroll_wrap div.tutorial_column_right {
   float:left;
   height:300px;
-  padding:100px 0 0 25px;
+  padding:100px 0 0 0px;
   position:relative;
   width:275px;
 }
@@ -1824,18 +1825,18 @@ div.tutorial_overlay {
   margin-top:5px;
   padding-top:5px;
   position:relative;
-  width:630px;
+  width:795px;
 }
 #scroller_wrap {
   position: relative;
-  width: 628px;
+  width: 795px;
   height: 93px;
   float: left;
   overflow: hidden;
 }
 #scroll_thumbs ul {
   float: left;
-  width: 630px;
+  width: 795px;
 }
 #scroller_wrap ul {
   width: 100%;
@@ -1866,9 +1867,9 @@ div.tutorial_overlay {
 }
 #scroll_thumbs ul li {
   float:left;
-  height:73px;
+  height:90px;
   position:relative;
-  width:126px;
+  width:155px;
 }
 #scroll_thumbs ul li.selected {
 /*  border: 1px solid #5bab46;*/
@@ -1879,8 +1880,6 @@ div.tutorial_overlay {
   width: 100%;
   height: 100%;
 }
-
-
 /********************************************/
 /**************OVERLAY STYLES****************/
 

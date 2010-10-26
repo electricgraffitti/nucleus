@@ -464,11 +464,11 @@ var scroll = {
     var $trigger_wrap = $nav.children('li');
     var $triggers = $nav.find('a');
     
-    var twidth = (630 / $trigger_wrap.length);
+    var twidth = (795 / $trigger_wrap.length);
     $trigger_wrap.css({width:twidth});
         
     var $innerWrap = $scrollBox.find('#scroll_wrap');
-    var panelWrapWidth = (628 * $triggers.length);
+    var panelWrapWidth = (795 * $triggers.length);
     $innerWrap.css({width:panelWrapWidth});
     
     
@@ -767,7 +767,7 @@ var baseActions = {
 		$('.provider_container_trigger').bind("click", function() {
 			var data = $(this).attr('provider_id');
 			var linkurl = "/provider_profile/" + data;
-			profilewindow = window.open(linkurl, 'Provider_Profile', 'width=900, height=650, statusbar=0, location=0, menubar=0, toolbar=0');
+			var profilewindow = window.open(linkurl, 'Provider_Profile', 'width=900, height=650, statusbar=0, location=0, menubar=0, toolbar=0');
 			if (window.focus) {
 				profilewindow.focus()
 			}
@@ -801,6 +801,33 @@ var baseActions = {
       // scroll.tutorialNavScroll();
       e.preventDefault();
     });
+	},
+	
+	noteTrigger: function() {
+	 var $nTrig = $('a.note_trigger');
+		
+	 	$nTrig.overlay({
+     expose: {
+      color: '#000000',
+      loadSpeed: 200,
+      opacity: 0.15
+     },
+     // effect: 'apple',
+			onBeforeLoad: function() {
+
+				// grab wrapper element inside content 
+				var wrap = this.getOverlay().find(".contentWrap");
+				// var theurl = this.getTrigger().attr("href");
+				// load the page specified in the trigger 
+				wrap.load(this.getTrigger().attr("href"));
+			}
+		});
+		
+	 	$nTrig.click(function(e) {
+		  e.preventDefault();
+		  console.log('ya');
+		});
+		
 	},
 	
 	toggleUpload: function() {
@@ -839,7 +866,8 @@ var baseActions = {
 	},
 
 	setOverlay: function() {
-		$("a[rel]").overlay({
+	  
+		$('a[rel]').overlay({
       expose: {
        color: '#000000',
        loadSpeed: 200,
