@@ -1,8 +1,9 @@
 <div id="page_header">
   <h2>
     Provider Action
-    <div id="tutorial_trigger"><%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => action_tutorials_path() %></div>    
   </h2>
+  <div id="tutorial_trigger"><%= link_to "Info", "", :class => "tutorial_trigger tip", :title => "Provider Action Tutorials", :rel => "#tutorial_modal", :tutorial_page => action_tutorials_path() %>
+  </div>    
   <ul class="page_nav">
     <li>
       <%= link_to "Profile", provider_path(provider), :class => "tip provider_container_trigger", :provider_id => provider.id, :title => "Provider Profile" %>
