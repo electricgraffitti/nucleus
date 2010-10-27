@@ -66,8 +66,15 @@
       
       <%# Panel Header %>
       <div class="module_header">
-        <h3>Condition Statistics</h3>
-        <%= render :partial => 'dashboard/widget_options' %>
+        <div class="widget_header_top">
+          <h3>Condition Statistics</h3>
+        </div>
+        <div class="widget_header_bottom">
+          <div class='widget_header_sub_title'>
+            06/01/10 - 10/31/10
+          </div>
+          <%= render :partial => 'dashboard/widget_options' %>
+        </div>
       </div>
       
       <%# Panel Content %>
@@ -135,8 +142,15 @@
       <div class="widget widget3">
       <%# Panel Header %>
       <div class="module_header">
-        <h3>Condition Chart</h3>
-        <%= render :partial => 'dashboard/widget_options' %>
+        <div class="widget_header_top">
+          <h3>Condition Chart</h3>
+        </div>
+        <div class="widget_header_bottom">
+          <div class='widget_header_sub_title'>
+            06/01/10 - 10/31/10
+          </div>
+          <%= render :partial => 'dashboard/widget_options' %>
+        </div>
       </div>
       
       <%# Panel Content %>

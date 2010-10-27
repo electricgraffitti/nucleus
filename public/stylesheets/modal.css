@@ -1033,7 +1033,7 @@ ul.location_stats li {
 .widget_content {
   position: relative;
   float: left;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #c4c5c4;
   border-top: none;
 }
 .provider_module {
@@ -1048,14 +1048,28 @@ ul.location_stats li {
   width: 229px;
 }
 .provider_module .profile_module_header {
-  background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
-  padding: 0px;
-  border:1px solid #E7E7E7;
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left 10px #F2F2F2;
+  border:1px solid #C4C5C4;
   float:left;
-  height:15px;
-  padding:10px 9px 14px;
+  font-size:14px;
+  font-weight:bold;
+  height:25px;
+  padding:5px 9px 14px;
   position:relative;
   text-align:left;
+}
+.provider_module .profile_module_header .widget_header_bottom, .provider_module .profile_module_header  .widget_header_top{
+  float:left;
+  position:relative;
+  width:100%;
+  margin-bottom: 2px;
+}
+.provider_module .profile_module_header .widget_header_bottom .widget_header_sub_title {
+  color: #5bab46;
+  font-weight: normal;
+  font-size: 12px;
+  width: 53%;
+  float: left;
 }
 .provider_module .profile_module_header h3 {
   font-size:14px;
@@ -1068,11 +1082,11 @@ ul.location_stats li {
   width: 211px;
 }
 .dashboard_widget_options {
+  float:right;
   height:20px;
-  position:absolute;
-  right:5px;
-  top:10px;
-  width:100px;
+  position:relative;
+  width:95px;
+  margin-top: -3px;
 }
 .dashboard_widget_options ul {
   position: relative;

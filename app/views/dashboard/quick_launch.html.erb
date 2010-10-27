@@ -1,5 +1,10 @@
 <%= render :partial => 'dashboard/quick_launch_header' %>
 <div id="panel_layout" class="message_panels clear">
+  <div id="dashboard_options" class="hidden">
+    <h2 class="header">Quick Launch Options</h2>
+    <%#= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
+    <%= link_to "Close", "", :class => "options_panel_close" %>
+  </div>
   <div class="panel ui-layout-main">
     <div class="quick_launch_wrap">
       <div id="quick_launch_top">  
@@ -49,6 +54,7 @@
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
       var $grid = $("#quick_launch_top");
+      widget.dashboardOptions('#dashboard_options');
       drag.setupQuickLaunch($grid, "quickLaunchCookie", 1000);
       drag.loadQuickLaunchOrder($grid, "quickLaunchCookie");
       baseActions.tutorialTrigger();

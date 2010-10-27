@@ -14,10 +14,21 @@
       <div class="panel_set">
         <div id="results_chart" class="basic_panel results_chart">
           <div class="module_header">
-            <h3>Provider Results</h3>
-            <%= render :partial => 'dashboard/widget_options' %>
+            <div class="widget_header_top">
+              <h3>Provider Results</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <div class='widget_header_sub_title'>
+                06/01/10 - 10/31/10
+              </div>
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
           </div>
-          <div id="provider_results_chart" class="clear left"></div>
+          <div class="module_content">
+            <div id="provider_results_chart" class="clear left">
+            
+            </div>
+          </div>
           <div class="panel_footer">
             <div id="provider_results_chart_footer" class="resize_horz pane_handle_toggle"></div>
           </div>

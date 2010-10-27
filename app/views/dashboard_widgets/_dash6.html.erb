@@ -1,7 +1,14 @@
 <div id="dash6" class="top_left_dashboard graph_box">
   <div class="dashboard_module_header top_provider_block">
-    <h3>Savings Opportunities by Service</h3>
-    <%= render :partial => 'dashboard/widget_options' %>
+    <div class="widget_header_top">
+      <h3>Savings Opportunities by Service</h3>
+    </div>
+    <div class="widget_header_bottom">
+      <div class='widget_header_sub_title'>
+        06/01/10 - 10/31/10
+      </div>
+      <%= render :partial => 'dashboard/widget_options' %>
+    </div>
   </div>
   
   <%# hidden panel %>

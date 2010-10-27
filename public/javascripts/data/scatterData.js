@@ -86,7 +86,8 @@ var scatterChart = new Highcharts.Chart({
         },
         marker: {
           symbol: 'circle',
-          radius: 5
+          radius: 5,
+          lineWidth: 1
         },
         shadow: true
       }

@@ -26,6 +26,59 @@
 .widget_options_panel_close {
   margin-left: 3px;
 }
+#dashboard ul#tab_nav {
+  position: relative;
+  float: left;
+  width:994px;
+  border-bottom: 1px solid #c0c0c0;
+}
+#dashboard ul#tab_nav li {
+  position: relative;
+  float: left;
+  margin-right: 1px;
+  height: 30px;
+  text-align: center;
+  background: #63c54a url(../images/message/button_bg-green.png) 0px 0px repeat-x;
+}
+#dashboard ul#tab_nav li:hover {
+  background: #eee;
+}
+#dashboard ul#tab_nav li a {
+  position: relative;
+  float: left;
+  height: 29px;
+  padding:8px 30px;
+  color: #fff;
+  font-weight: bold;
+  border-top: 1px solid #6bd450;
+}
+#dashboard ul#tab_nav li a:hover, #dashboard ul#tab_nav li.active a {
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid #efefef;
+}
+ #dashboard ul#tab_nav li.active a {
+   border-top: 1px solid #efefef;
+ }
+#dashboard ul#tab_nav li.active {
+  background:none repeat scroll 0 0 #fff;
+  border-color:#C0C0C0 #C0C0C0 #fff;
+  border-style:solid;
+  border-width:1px;
+  margin-bottom:-2px;
+  color: #333;
+}
+.dash_panel {
+  background:none repeat scroll 0 0 #fff;
+  border-color:-moz-use-text-color #C0C0C0 #C0C0C0;
+  border-right:1px solid #C0C0C0;
+  border-style:none solid solid;
+  border-width:medium 1px 1px;
+  float:left;
+  position:relative;
+  width:992px;
+  padding-bottom: 10px;
+}
 /***************************************************************************************/
 /*************************************************************PROVIDER PROFILE**********/
 .v2 #provider_rating, .v2 #provider_rating_full {
@@ -165,8 +218,8 @@ table a.score {
 .inner_panel_content {
   position: relative;
   float: left;
-  border-left:1px solid #E7E7E7;
-  border-right:1px solid #E7E7E7;
+  border-left:1px solid #c4c5c4;
+  border-right:1px solid #c4c5c4;
   min-height: 160px;
 }
 .widget .panel_left {
@@ -181,15 +234,14 @@ table a.score {
   width: 314px; 
 }
 .widget3 .module_header {
-  border:1px solid #E7E7E7;
+  border:1px solid #c4c5c4;
   width: 296px;
-  height: 15px;
 }
 .widget3 .provider_header {
-  border:1px solid #E7E7E7;
+  border:1px solid #c4c5c4;
   background: transparent;
   width: 296px;
-  height: 15px;
+  height: 23px;
 }
 .widget3 .widget_footer {
   width: 314px;
@@ -197,6 +249,11 @@ table a.score {
 .module_header h3 {
   float: left;
   width: 50%;
+}
+.module_header h3 span {
+  display: block;
+  padding-top: 8px;
+  float: left;
 }
 .stat_block {
   position: relative;

@@ -284,7 +284,7 @@ var panels = {
   },
   
   toggleResultsChart: function() {
-    var $chart = $('#provider_results_chart');
+    var $chart = $('.module_content');
     $('#provider_results_chart_footer').toggle(function() {
       $chart.hide('slow');
     }, function() {
@@ -353,6 +353,20 @@ var panels = {
       $panel.show();
     });
     
+  },
+  
+  dashTabs: function() {
+    var $tabs = $('#dashboard ul#tab_nav li a');
+    var $panels = $('#dashboard .dash_panel');
+    $tabs.click(function(e) {
+      e.preventDefault();
+      $panels.hide();
+      $(this).parent().siblings().removeClass('active');
+      $(this).parent().addClass('active');
+      var panelId = $(this).attr('href');
+      var page = $(panelId);
+      page.show();
+    });
   },
   
 };
