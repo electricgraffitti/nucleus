@@ -288,8 +288,6 @@ var panels = {
     var $panelcenter = $('#panel_center');
     var $tablePanel = $('#provider_search_table');
     
-    console.log(w);
-    
     $panelcenter.animate({width:($panelLayout.width() - w)}, 1000);
     $tablePanel.animate({width:($panelLayout.width() - w)}, 1000);
   },
