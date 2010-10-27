@@ -277,18 +277,32 @@ var panels = {
   westResizeTrigger: function() {
     var $sidebar = $('#inner_west');
     $('#west_resizer').toggle(function() {
-      $sidebar.animate({width: '8px'}, 1000);
+      $sidebar.animate({width: '8px'}, 1000, panels.clientSearchPanelResize($(this).width() + 2));
     }, function() {
-      $sidebar.animate({width: '220px'}, 1000);
+      $sidebar.animate({width: '220px'}, 1000, panels.clientSearchPanelResize($(this).width() + 214));
     });
+  },
+  
+  clientSearchPanelResize: function(w) {
+    var $panelLayout = $('#panel_layout');
+    var $panelcenter = $('#panel_center');
+    var $tablePanel = $('#provider_search_table');
+    
+    console.log(w);
+    
+    $panelcenter.animate({width:($panelLayout.width() - w)}, 1000);
+    $tablePanel.animate({width:($panelLayout.width() - w)}, 1000);
   },
   
   toggleResultsChart: function() {
     var $chart = $('.module_content');
+    
     $('#provider_results_chart_footer').toggle(function() {
+      $('.toggle_arrow').addClass('close');
       $chart.hide('slow');
     }, function() {
       $chart.show('slow');
+      $('.toggle_arrow').removeClass('close');
     });
   },
   
@@ -298,10 +312,13 @@ var panels = {
     $trigger.live('click', function() {
       var $widget = $(this).parents(".widget:first");
       var $panel = $widget.find(".inner_panel_content");
+      var $toggle_arrow = $(this).children('.toggle_arrow');
       if ($panel.is(':visible')) {
         $panel.hide('slow');
+        $toggle_arrow.addClass('close');
       } else {
         $panel.show('slow');
+        $toggle_arrow.removeClass('close');
       }
     });
     
@@ -631,10 +648,13 @@ var widget = {
     $trigger.live('click', function() {
       var $widget = $(this).parents(".graph_box:first");
       var $panel = $widget.find(".widget_content");
+      var $toggleArrow = $(this).children('.toggle_arrow');
       if ($panel.is(':visible')) {
         $panel.hide('slow');
+        $toggleArrow.addClass('close');
       } else {
         $panel.show('slow');
+        $toggleArrow.removeClass('close');
       }
     });
   },

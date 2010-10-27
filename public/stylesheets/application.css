@@ -512,7 +512,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 #inner_west {
   position: relative;
   float: left;
-  width: 214px;
+  width: 220px;
 }
 #panel_layout div#panel_center {
   position: relative;
@@ -534,7 +534,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 }
 #inner_panel {
   position: relative;
-  padding: 20px 0px 0px;
+  padding: 10px 0px 0px;
   width: 100%;
   float:left;
   background: #fff;
@@ -571,8 +571,18 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   width:100%;
 }
 .pane_handle_toggle {
+  text-align: center;
   height: 15px;
-  background: url('../images/inner_pages/pane_handle_toggle.png')  center top no-repeat;
+}
+.toggle_arrow.close {
+  background: url('../images/inner_pages/table_icon_sprite.png') 0px -543px no-repeat;
+}
+.toggle_arrow {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  margin: 0px auto;
+  background: url('../images/inner_pages/table_icon_sprite.png') 0px -523px no-repeat;
 }
 .scaffold_panel {
   position: relative;
@@ -673,7 +683,7 @@ div.scaffold_pane label {
   font-size:14px;
   font-weight:bold;
   height:23px;
-  padding:2px 9px 14px;
+  padding:2px 9px 22px;
   position:relative;
   text-align:left;
   width:365px;
@@ -3710,7 +3720,7 @@ div.tutorial_overlay {
 }
 #tutorial_trigger {
   position: relative;
-  float: right;
+  float: left;
   width: 20px;
   height: 20px;
   background: transparent url(../images/inner_pages/table_icon_sprite.png) -20px -338px no-repeat;
