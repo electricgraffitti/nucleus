@@ -1,0 +1,10 @@
+<div id="feeds"></div>
+
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      widget.getFeeds('http://www.hcinsight.com/articles.rss', 5);
+    });
+  </script>
+<% end %>

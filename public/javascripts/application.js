@@ -544,6 +544,15 @@ var scroll = {
 
 var widget = {
   
+  getFeeds: function(url, feedCount) {
+    $('#feeds').rssfeed(url, {
+      limit: feedCount
+    });
+    
+    
+    
+  },
+  
   widgetOptionTrigger: function() {
     var $viewTrigger = $('#widget_view_controls :checkbox');
     $viewTrigger.live('click', function() {

@@ -1,0 +1,31 @@
+<div id="dash7" class="top_left_dashboard graph_box">
+  <div class="dashboard_module_header top_provider_block">
+    <div class="widget_header_top">
+      <h3>HCI News</h3>
+    </div>
+    <div class="widget_header_bottom">
+      <div class='widget_header_sub_title'>
+        Updated on 11/02/10
+      </div>
+      <%= render :partial => 'dashboard/widget_options' %>
+    </div>
+  </div>
+  
+  <%# hidden panel %>
+  <div class="hidden dashboard_panel_options">
+    <%= render :partial => 'dashboard_widgets/savings_by_service' %>
+  </div>
+  
+  <div class="widget_content">
+    <div id="panel_header" class="basic_panel">
+      <div class="top_provider_block saving_opp_product">Product</div>
+      <div class="top_provider_block saving_opp_est">Est Savings</div>
+      <div class="top_provider_block saving_opp_claims">Claims</div>
+      <div class="top_provider_block saving_opp_more">Learn More</div>
+    </div>
+    <%= render :partial => 'dashboard/service_opportunities', :locals => {:provider => p} %>
+  </div>
+  <div class="widget_footer">
+    <div class="resize_horz pane_handle_toggle"><div class="toggle_arrow"></div></div>
+  </div>
+</div>

@@ -6,6 +6,8 @@
 :domain: demo.get-nucleus.com
 :domain_aliases:
   - demo.get-nucleus.com
+  - nucleusdemo.com
+  - www.nucleusdemo.com
 
 :repository: git@github.com:electricgraffitti/nucleus.git
 :branch: v2

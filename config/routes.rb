@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :feeds
+
 
   map.resources :widget_views
   map.resources :dashboard_widgets
