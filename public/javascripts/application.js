@@ -542,15 +542,24 @@ var scroll = {
   
 };
 
+
 var widget = {
   
-  getFeeds: function(url, feedCount) {
-    $('#feeds').rssfeed(url, {
-      limit: feedCount
+  getFeeds: function() {
+    
+    // $.get('http://www.hcinsight.com/articles.json', widget.showFeeds(), 'jsonp');
+    $.ajax({
+      url: 'http://www.hcinsight.com/articles.json',
+      type: "GET",
+      dataType: 'jsonp',
+      success: function(d) {
+       widget.showFeeds(d)
+      }
     });
-    
-    
-    
+  },
+  
+  showFeeds: function(d) {
+    console.log(d);
   },
   
   widgetOptionTrigger: function() {
