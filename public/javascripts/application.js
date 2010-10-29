@@ -541,8 +541,7 @@ var scroll = {
   }
   
 };
-
-
+	
 var widget = {
   
   getFeeds: function() {
@@ -559,8 +558,18 @@ var widget = {
   },
   
   showFeeds: function(d) {
-    console.log(d);
+		for(var i=0; i<d.length; i++) {
+			// console.log( d[i].article.title );
+			$('<li/>', {
+				'text': d[i].article.title
+			}).appendTo("#feeds");
+		}
+		
   },
+
+	dashFeeds: function() {
+		$("#feed_widget").load("/feeds #feeds");
+	},
   
   widgetOptionTrigger: function() {
     var $viewTrigger = $('#widget_view_controls :checkbox');

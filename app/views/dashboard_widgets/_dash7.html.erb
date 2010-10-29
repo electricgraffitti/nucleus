@@ -16,14 +16,7 @@
     <%= render :partial => 'dashboard_widgets/savings_by_service' %>
   </div>
   
-  <div class="widget_content">
-    <div id="panel_header" class="basic_panel">
-      <div class="top_provider_block saving_opp_product">Product</div>
-      <div class="top_provider_block saving_opp_est">Est Savings</div>
-      <div class="top_provider_block saving_opp_claims">Claims</div>
-      <div class="top_provider_block saving_opp_more">Learn More</div>
-    </div>
-    <%= render :partial => 'dashboard/service_opportunities', :locals => {:provider => p} %>
+  <div id="feed_widget" class="widget_content">
   </div>
   <div class="widget_footer">
     <div class="resize_horz pane_handle_toggle"><div class="toggle_arrow"></div></div>
