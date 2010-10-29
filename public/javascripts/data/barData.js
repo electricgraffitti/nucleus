@@ -28,7 +28,7 @@ var barChart = new Highcharts.Chart({
   xAxis: {
     categories: ['May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct'],
     title: {
-       text: 'Serivce Type',
+       text: 'Service Type',
        style: {
          color: '#555555',
          font: '12px Arial, Helvetica, sans-serif'
