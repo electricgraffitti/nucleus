@@ -69,15 +69,56 @@
   color: #333;
 }
 .dash_panel {
-  background:none repeat scroll 0 0 #fff;
-  border-color:-moz-use-text-color #C0C0C0 #C0C0C0;
-  border-right:1px solid #C0C0C0;
-  border-style:none solid solid;
-  border-width:medium 1px 1px;
+  border: 1px solid #c4c5c4;
   float:left;
   position:relative;
   width:992px;
   padding-bottom: 10px;
+}
+/**feed**/
+ul#feeds {
+  float:left;
+  height:301px;
+  margin:0;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  position:relative;
+  width:478px;
+}
+ul#feeds li {
+  border-bottom:1px solid #C4C5C4;
+  float:left;
+  height:70px;
+  padding:10px 5px;
+  position:relative;
+  width:453px;
+}
+ul#feeds li div.feed_date {
+  background:url("../images/inner_pages/rss_date_bg.jpg") no-repeat scroll 0 0 transparent;
+  float:left;
+  font-size:11px;
+  font-weight:bold;
+  height:50px;
+  margin-right:10px;
+  padding:20px 8px 0;
+  position:relative;
+  text-align:center;
+  width:55px;
+  vertical-align: baseline/sub/super/top/text-top/middle/bottom/text-bottom/length/%;
+}
+ul#feeds li h3 {
+  float: left;
+  margin-bottom: 5px;
+  width: 370px;
+  height: 20px;
+  font-weight: bold;
+}
+ul#feeds li div.feed_content {
+  position: relative;
+  float: left;
+  width: 370px;
+  height: 45px;
+  overflow: hidden;
 }
 /***************************************************************************************/
 /*************************************************************PROVIDER PROFILE**********/

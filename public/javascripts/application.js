@@ -553,6 +553,7 @@ var widget = {
       dataType: 'jsonp',
       success: function(d) {
        widget.showFeeds(d)
+       // console.log(d)
       }
     });
   },
@@ -560,10 +561,18 @@ var widget = {
   showFeeds: function(d) {
 		for(var i=0; i<d.length; i++) {
 			// console.log( d[i].article.title );
-			$('<li/>', {
-				'text': d[i].article.title
-			}).appendTo("#feeds");
+			$('<li/>').append($('<div/>', {
+			  'class':'feed_date',
+			  'html': d[i].article.created_at
+			})).append($('<h3/>', {
+			  'html': d[i].article.title
+			})).append($('<div/>', {
+			  'class':'feed_content',
+			  'html': d[i].article.description
+			})).appendTo("#feeds");
 		}
+		
+		$('.feed_date').cuteTime();
 		
   },
 

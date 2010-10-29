@@ -35,12 +35,11 @@
       var $dash = $("#dashboard");
       widget.dashboardOptions('#dashboard_options');
       widget.widgetOptions($dash);
-      widget.dashFeeds();
       drag.setupDashboardPanels($dash, "dashboardCookie", 1000);
       drag.loadQuickLaunchOrder($dash, "dashboardCookie");
       panels.dashTabs();
       baseActions.tutorialTrigger();
-        
+      widget.getFeeds();
       // Scatter Plot
       $.getScript('javascripts/data/scatterData.js');
       // Bar Graph

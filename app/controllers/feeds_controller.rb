@@ -1,6 +1,7 @@
 class FeedsController < ApplicationController
-  # GET /feeds
-  # GET /feeds.xml
+  
+  before_filter :require_client
+  
   def index
     @feeds = Feed.all
 
