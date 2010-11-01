@@ -382,7 +382,7 @@ var panels = {
       var page = $(panelId);
       page.show();
     });
-  },
+  }
   
 };
 
@@ -858,7 +858,7 @@ var baseActions = {
       onLoad: function() {
         var first_trigger = $('.scroll_nav_trigger:first');
         first_trigger.click();
-      },
+      }
 	  });
 	  
 	  $('.scroll_nav_trigger').live('click', function(e) {

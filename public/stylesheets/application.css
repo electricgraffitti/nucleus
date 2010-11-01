@@ -3758,8 +3758,8 @@ div.tutorial_overlay {
   float: left;
   width: 20px;
   height: 20px;
-  background: transparent url(../images/inner_pages/table_icon_sprite.png) -20px -338px no-repeat;
-  margin-top: -5px;
+  background: transparent url(../images/inner_pages/table_icon_sprite.png) -0px -560px no-repeat;
+  margin-top: -3px;
 }
 #tutorial_trigger a {
   display: block;
