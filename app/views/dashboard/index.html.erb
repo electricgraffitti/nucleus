@@ -33,10 +33,17 @@
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
       var $dash = $("#dashboard");
+      var $page1 = $("#page1");
+      var $page2 = $("#page2");
+      var $page3 = $("#page3");
       widget.dashboardOptions('#dashboard_options');
       widget.widgetOptions($dash);
-      drag.setupDashboardPanels($dash, "dashboardCookie", 1000);
-      drag.loadQuickLaunchOrder($dash, "dashboardCookie");
+      drag.setupDashboardPanels($page1, "dashPage1", 1000);
+      drag.setupDashboardPanels($page2, "dashPage2", 1000);
+      drag.setupDashboardPanels($page3, "dashPage3", 1000);
+      drag.loadQuickLaunchOrder($page1, "dashPage1");
+      drag.loadQuickLaunchOrder($page2, "dashPage2");
+      drag.loadQuickLaunchOrder($page3, "dashPage3");
       panels.dashTabs();
       baseActions.tutorialTrigger();
       widget.getFeeds();

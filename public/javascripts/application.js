@@ -406,6 +406,7 @@ var drag = {
   setupDashboardPanels: function(a,b,c) {
     // set the Selector
     var ss = a;
+    // console.log(a);
     // set cookie name
     var scn = b;
     // set cookie expiry time (days):
@@ -456,13 +457,13 @@ var drag = {
 
         
         // select the item according to current order
-        var child = $("div.ui-sortable").children("#" + item);
+        var child = ss.children("#" + item);
 
         // select the item according to the saved order
         if (widget.checkViewCookie(item)) {
-          var savedOrd = $("div.ui-sortable").children("#" + itemID).addClass('hidden');
+          var savedOrd = ss.children("#" + itemID).addClass('hidden');
         } else {
-          var savedOrd = $("div.ui-sortable").children("#" + itemID);
+          var savedOrd = ss.children("#" + itemID);
         }
         
 
@@ -475,7 +476,7 @@ var drag = {
         // only want the very first! You can modify this
         // to support multiple lists - not tested!
         
-        $("div.ui-sortable").filter(":first").append(savedOrd);
+        ss.filter(":first").append(savedOrd);
       }
     }
   }
@@ -576,10 +577,6 @@ var widget = {
 		
   },
 
-	dashFeeds: function() {
-		$("#feed_widget").load("/feeds #feeds");
-	},
-  
   widgetOptionTrigger: function() {
     var $viewTrigger = $('#widget_view_controls :checkbox');
     $viewTrigger.live('click', function() {
