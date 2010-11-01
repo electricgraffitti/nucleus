@@ -67,9 +67,11 @@
   border-width:1px;
   margin-bottom:-2px;
   color: #333;
+  height: 29px;
 }
 .dash_panel {
   border: 1px solid #c4c5c4;
+  border-top: none;
   float:left;
   position:relative;
   width:992px;

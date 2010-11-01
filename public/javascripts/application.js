@@ -628,7 +628,7 @@ var widget = {
        e.preventDefault(); 
     });
     
-    $triggerClose .live('click', function(e) {
+    $triggerClose.live('click', function(e) {
       widget.optionPaneDisplay($pane);
        e.preventDefault(); 
     });
@@ -706,6 +706,7 @@ var widget = {
       e.preventDefault();
       var $widget = $(this).parents(".graph_box:first");
       var $panel = $widget.attr('id');
+      console.log($panel);
       widget.setCheckBox($panel);
       
     });
