@@ -2692,7 +2692,7 @@ ul.feedback_west_list li {
 }
 .tutorial_icon {
   float: left;
-  width: 38px;
+  width: 37px;
   height: 53px;
   margin-right: 10px;
   color: #fff;
@@ -2705,7 +2705,7 @@ ul.feedback_west_list li {
   background: url('../images/inner_pages/tutorial_icons.jpg') -114px top no-repeat;
 }
 .tutorial_icon.video_icon {
-  background: url('../images/inner_pages/tutorial_icons.jpg') -38px top no-repeat;
+  background: url('../images/inner_pages/tutorial_icons.jpg') -39px top no-repeat;
 }
 .tutorial_icon .inner_icon {
   text-align: center;

@@ -1,9 +1,7 @@
 <%#= ******** JAVASCRIPTS ********** %>
-<%= javascript_include_tag 'jquery', 'jqtools', 'jqui', 'cookies', 'highcharts', 'print', 'containers', 'jquery.easing', 'jQueryTimer', 'jquery.alerts', 'jquery.validate', 'app_validations', 'jqlayout', 'json2', 'tiptip', 'time', 'scroll', :cache => true %>
+<%= javascript_include_tag 'jquery', 'jqtools', 'jqui', 'cookies', 'highcharts', 'print', 'containers', 'jquery.easing', 'jQueryTimer', 'jquery.alerts', 'jquery.validate', 'app_validations', 'jqlayout', 'json2', 'tiptip', 'time','ipad_scroll', 'scroll', :cache => true %>
 
-<% if ipad? %>
-  <%= javascript_include_tag 'ext-touch' %>
-<% end %>
+
 
 <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.compiled.js"></script><![endif]-->
 <%= yield :javascripts %>

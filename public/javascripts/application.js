@@ -401,6 +401,7 @@ var drag = {
       cursor: "move",
       update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
     });
+    // ss.dialog().addTouch();
   },
   
   setupDashboardPanels: function(a,b,c) {
@@ -539,6 +540,26 @@ var scroll = {
     
     $navTriggerWrap.serialScroll(navScrollOptions);
     $.localScroll(navScrollOptions);
+  },
+  
+  setiPadMessageScroll: function() {
+    $('#center_message_content_wrap').jScrollTouch();
+  },
+  
+  setiPadHelpScroll: function() {
+    $('#center_help_content_wrap').jScrollTouch();
+  },
+  
+  setiPadIdeaScroll: function() {
+   $('#center_idea_forum_content_wrap').jScrollTouch();
+  },
+  
+  setiPadProviderSearchScroll: function() {
+   $('#provider_search_table').jScrollTouch();
+  },
+  
+  setiPadClaimSearchScroll: function() {
+    $('#provider_search_table').jScrollTouch();
   }
   
 };
