@@ -183,6 +183,15 @@ ul.icon_nav li#icon_nav_7:hover {
 .provider_search_widget.highlight a:hover, .provider_search_widget span.active {
   background: url('../images/inner_pages/dashboard_icon_sprite.jpg') -492px -164px no-repeat;
 }
+#search_wrap .search button {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -37px -80px #E7E7E7;
+  border:1px solid #C0C0C0;
+  height:22px;
+  margin:0 0px 0 -10px;
+  outline:medium none;
+  text-indent:-3000em;
+  width:24px;
+}
 .sidebar_panel div.help_icon {
   width: 130px;
 }

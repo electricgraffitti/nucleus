@@ -627,10 +627,11 @@ div.scaffold_pane label {
   background: #e7e7e7;
 }
 .panel_set, .panel_set_2, .panel_set_3, .panel_set_4, .panel_set_5, .panel_set_6, .panel_set_7, .panel_set_8 {
-  position: relative;
-  float: left;
-  max-width: 400px;
-  /*margin-bottom: 20px;*/
+  float:left;
+  margin-bottom:10px;
+  margin-left:10px;
+  max-width:390px;
+  position:relative;
 }
 .panel_set_2 {
   max-width: 322px;
@@ -673,10 +674,8 @@ div.scaffold_pane label {
 .basic_panel, .combo_panel, .basic_panel_2, .basic_panel_3, .basic_panel_4, .basic_panel_5, .basic_panel_6, .basic_panel_7, .basic_panel_8, .combo_panel_2, .combo_panel_3, .combo_panel_4, .combo_panel_5 { /** A Combo Panel has sub_panels **/
   border:1px solid #C0C0C0;
   float:left;
-  margin:0 0 5px 11px;
   position:relative;
-  width:383px;
-  min-height:39px;
+  width:386px;
 }
 .module_header {
   background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left 10px #F2F2F2;
@@ -688,15 +687,16 @@ div.scaffold_pane label {
   padding:2px 9px 22px;
   position:relative;
   text-align:left;
-  width:365px;
+  width:369px;
 }
 .module_content {
+  border-bottom:1px solid #C4C5C4;
   border-left:1px solid #C4C5C4;
   border-right:1px solid #C4C5C4;
   float:left;
-  height:248px;
+  height:264px;
   position:relative;
-  width:383px;
+  width:387px;
 }
 .panel_footer {
   background: #ebebeb;
@@ -751,8 +751,9 @@ div.scaffold_pane label {
   width: 208px;
 }
 .combo_panel {
-  width: 383px;
-  padding: 0px;
+  margin-top:5px;
+  padding:0;
+  width:386px;
 }
 .basic_panel h3, .basic_panel h4, .combo_panel h3, .combo_panel h4, .basic_panel_2 h3, .basic_panel_2 h4, .combo_panel_2 h3, .combo_panel_2 h4, .basic_panel_3 h3, .basic_panel_3 h4, .combo_panel_3 h3, .combo_panel_3 h4,.basic_panel_4 h3, .basic_panel_4 h4,.basic_panel_5 h3, .basic_panel_5 h4, .basic_panel_6 h3, .basic_panel_6 h4, .basic_panel_7 h3, .basic_panel_7 h4, .basic_panel_8 h3, .basic_panel_8 h4,.combo_panel_4 h3, .combo_panel_4 h4, .full_panel h3, .full_panel h4 {
   font-size: 14px;
@@ -929,7 +930,7 @@ span#occurence {
   float:left;
   padding:6px 7px 0 0;
   position:relative;
-  width:376px;
+  width:379px;
 }
 #provider_header {
   padding-bottom:5px;
