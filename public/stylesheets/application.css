@@ -292,11 +292,11 @@ label.error {
 }
 #logo {
   position: relative;
-  width: 151px;
+  width: 268px;
   height: 46px;
 	float: left;
 	text-indent: -3000em;
-  background: url('../images/header/logo2.png') no-repeat;
+  background: url('../images/header/logo3.png') no-repeat;
   margin-left: 10px;
 }
 #hd #brand_wrap {
@@ -314,13 +314,14 @@ label.error {
 	color: #fff;
 	margin-right: 10px;
 	top: 20px;
+	font-size: 12px;
 }
 /*******Navigation********/
 #nav_wrapper {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  height: 30px;
+  height: 28px;
   width: 100%;
 	background: url('../images/header/main_nav_bg.png') 0px 0px repeat-x;
 	border-top: 1px solid #5bab46;
@@ -328,7 +329,7 @@ label.error {
 ul.nav_ul {
   position: relative;
   float: left;
-  min-height: 29px;
+  min-height: 28px;
   margin-left: 4px;
 }
 ul.secondary_nav_ul {
@@ -350,7 +351,8 @@ ul.nav_ul li:hover {
 	background: url('../images/header/main_nav_bg.png') 0px -29px repeat-x;
 }
 ul.nav_ul li a {
-  color:#C9CDCA;
+  /*color:#C9CDCA;*/
+  color: #fff;
   text-shadow: 0px 1px 0px #222;
   display:block;
   height:20px;
@@ -367,12 +369,12 @@ ul.nav_ul li a:hover {
 ul.icon_nav {
 	position: relative;
 	float: right;
-	height: 29px;
+	height: 28px;
 	margin-right: 11px;
 }
 ul.icon_nav li {
   width: 30px;
-  height: 29px;
+  height: 28px;
   float: left;
 }
 ul.icon_nav li a {
@@ -428,7 +430,7 @@ ul.icon_nav li#icon_nav_7:hover {
 /*****Sub Nav*******/
 ul.topnav li span { /*--Drop down trigger styles--*/
   display:block;
-  height:30px;
+  height:28px;
   left:0;
   position:absolute;
   text-decoration:none;
@@ -438,7 +440,7 @@ ul.topnav li span { /*--Drop down trigger styles--*/
 ul.topnav li ul.subnav {  
    list-style: none;  
    position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/  
-   left: 0; top: 30px;  
+   left: 0; top: 28px;  
    background: #333;  
    margin: 0; padding: 0;  
    display: none;  
@@ -453,7 +455,7 @@ ul.topnav li ul.subnav li {
     border-bottom: 1px solid #444; /*--Create bevel effect--*/  
     clear: both;  
     width: 170px;
-    height: 30px;
+    height: 28px;
 }  
 html ul.topnav li ul.subnav li a {  
     width: 160px;  
@@ -709,7 +711,7 @@ div.scaffold_pane label {
   border: none;
 }
 .top_left_dashboard .basic_panel {
- margin: 0px 0px 5px 20px; 
+ margin: 0px 0px 7px 10px; 
 }
 .full_panel {
   position: relative;
@@ -1358,20 +1360,18 @@ a.widget_option.close_option:active {
   background: transparent url(../images/inner_pages/widget_option_icons.png) -80px -40px no-repeat;
 }
 .graph_box {
-  position: relative;
-  float: left;
-/*  background: #fff url('../images/inner_pages/panel_gradient.jpg') left bottom repeat-x;*/
-  width: 478px;
-  height: 357px;
-/*  border: 1px solid #e7e7e7;*/
-  margin: 8px;
+  float:left;
+  height:350px;
+  margin:10px 0 0 10px;
+  position:relative;
+  width:481px;
 }
 .top_left_dashboard {
   text-align: center;
 }
 .top_left_dashboard .dashboard_basic_panel {
   text-align: left;
-  width: 439px;
+  width: 457px;
   background: #fff;
 }
 .top_left_dashboard h2.main_header {
@@ -1380,9 +1380,10 @@ a.widget_option.close_option:active {
   padding: 10px 0px;
 }
 .top_left_dashboard #panel_header {
-  background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;
+ /* background: url("../images/inner_pages/page_header_bg.jpg") left top repeat-x;*/
+ background: #f6f6f6;
   padding: 0px;
-  width: 438px;
+  width: 457px;
   margin-top: 12px;
 }
 .v2 .dashboard_module_header {
@@ -1435,9 +1436,10 @@ a.widget_option.close_option:active {
   position: relative;
   float: left;
   width: 478px;
-  height:300px;
+  height:302px;
   border-left:1px solid #c4c5c4;
   border-right:1px solid #c4c5c4;
+  border-bottom: 1px solid #c4c5c4;
 }
 .widget_footer {
   background: #ebebeb;
@@ -1466,16 +1468,16 @@ a.widget_option.close_option:active {
   background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -160px no-repeat;
 }
 .top_provider_block.risk_high {
-  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px 0px no-repeat;
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px 0px no-repeat;
 }
 .top_provider_block.risk_elevated{
-  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px -39px no-repeat;
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -39px no-repeat;
 }
 .top_provider_block.risk_mod {
-  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px -78px no-repeat;
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -78px no-repeat;
 }
 .top_provider_block.risk_low {
-  background: url(../images/inner_pages/provider_risk_icons.jpg) 0px -117px no-repeat;
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -117px no-repeat;
 }
 .saving_opp_product {
   width: 80px;
@@ -1518,7 +1520,7 @@ a.widget_option.close_option:active {
 .dashboard_basic_panel {
   border:1px solid #C0C0C0;
   float:left;
-  margin:0 0 5px 20px;
+  margin:0 0 7px 10px;
   position:relative;
 }
 #dashboard #provider_rating {
