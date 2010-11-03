@@ -5,49 +5,50 @@
         <div id="scroll_wrap">
           <div id="panel1" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/idea_forum/if-tutorial-1.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 1</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Idea Forum Overview</h2>
+              <h3>Idea Forum Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Take part in the evolution of Nucleus. Mixing the latest in social media and crowd-sourcing technology, you can share feedback, brainstorm with other users and post ideas to improve Nucleus. You have a voice. We’re listening.
               </p>
             </div>
           </div>
           <div id="panel2" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/idea_forum/if-tutorial-2.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 2</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Submit Your Own Ideas</h2>
+              <h3>Idea Forum Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Have a great idea on how to improve Nucleus? Let us know by going to the Idea Forum and typing it in under the "I Suggest You" field and clicking "Submit". Yep, it’s that easy.
+                                Have you noticed some software glitches that are hindering your user experience? Click on the "Bug Reports" link under the right side menu and let us know. We’ll get right on it. Promise.
               </p>
             </div>
           </div>
           <div id="panel3" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/idea_forum/if-tutorial-3.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 3</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Vote on Other User Ideas</h2>
+              <h3>Idea Forum Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We consider Nucleus as a community of peers. As such, we want everyone to have a voice. By clicking on the "Top Ideas", "Hot" and "New" tabs, you can vote on ideas others have suggested, see what’s popular amongst other users and even keep track of ideas that have been accepted and built into Nucleus.
               </p>
             </div>
           </div>
           <div id="panel4" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/idea_forum/if-tutorial-4.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 4</h2>
-              <h3>Tutorial Title</h3>
+              <h2>See Your Ideas in Action</h2>
+              <h3>Idea Forum Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Once your ideas have been voted on by users and approved by HCI, they’ll be tracked under the "Ideas in Development" tab. Our engineers will keep an ongoing status log of all updates that can include changes made, anticipated completion dates and much more. As the ideas are completed and implemented into Nucleus, we’ll store them within our “Implemented Ideas” for all the world to see.
               </p>
             </div>
           </div>
@@ -55,10 +56,22 @@
       </div>
       <div id="scroll_thumbs">
         <ul id="scroll_nav" class="scroll_nav">
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-1.png'), "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Idea Forum Overview", "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-2.png'), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Submit Your Own Ideas"), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-3.png'), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Vote on Other User Ideas"), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-4.png'), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("See Your Ideas in Action"), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
         </ul>
       </div>
     </div>

@@ -646,13 +646,13 @@ div.scaffold_pane label {
   max-width: 655px;
 }
 .panel_set_6 {
-  width: 240px;
+  width: 230px;
 }
 .panel_set_7 {
   max-width: 534px;
 }
 .panel_set_8 {
-  width: 270px;
+  width: 260px;
 }
 .panel_set_4 .panel_wrap, .panel_set_5 .panel_wrap, .panel_set_6 .panel_wrap, .panel_set_7 .panel_wrap, .panel_set_8 .panel_wrap {
 	position: relative;
@@ -739,15 +739,12 @@ div.scaffold_pane label {
   width: 615px;
 }
 .basic_panel_6, .combo_panel_6 {
-  margin-left: 10px;
   width: 208px;
 }
 .basic_panel_7, .combo_panel_7 {
-  margin-left: 10px;
   width: 502px;
 }
 .basic_panel_8, .combo_panel_8 {
-  margin-left: 10px;
   width: 208px;
 }
 .combo_panel {
@@ -3817,16 +3814,16 @@ div.tutorial_overlay {
 #scroll_wrap div.tutorial_column_left {
   position: relative;
   float: left;
-  width: 400px;
+  width: 375px;
   height: 400px;
   padding-left: 40px;
 }
 #scroll_wrap div.tutorial_column_right {
   float:left;
   height:300px;
-  padding:100px 0 0 0px;
+  padding:75px 0 0;
   position:relative;
-  width:275px;
+  width:330px;
 }
 .tutorial_column_right h2 {
   position: relative;
@@ -3844,9 +3841,14 @@ div.tutorial_overlay {
   width: 100%;
 }
 .tutorial_column_right p {
-  position: relative;
-  float: left;
-  color: #fff;
+  color:#FFFFFF;
+  float:left;
+  font-size:12px;
+  height:215px;
+  overflow-x:hidden;
+  overflow-y:auto;
+  position:relative;
+  padding-right:10px;
 }
 /***Scroll Nav***/
 #scroll_thumbs {
@@ -3908,8 +3910,24 @@ div.tutorial_overlay {
 #scroll_thumbs ul li a {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
+}
+#scroll_thumbs ul li a.scroll_nav_trigger_image {
+  position: relative;
+  float: left;
+  width:75px;
+  height: 90px;
+}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy {
+  color:#999999;
+  float:left;
+  height:65px;
+  margin-left:5px;
+  padding-top:25px;
+  position:relative;
+  width:74px;
+}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
+  text-decoration: none;
 }
 /*****Tips********/
 #tiptip_holder {

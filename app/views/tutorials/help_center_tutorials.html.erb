@@ -5,49 +5,49 @@
         <div id="scroll_wrap">
           <div id="panel1" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/help_center/hc-tutorial-1.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 1</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Support Center Overview</h2>
+              <h3>Help Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                You'll never be left in the dark with the Nucleus Help Center. Providing new ways to navigate the user experience, you can chat online with our support team, watch video tutorials and visit HCI U. With Nucleus, help is only a click away.
               </p>
             </div>
           </div>
           <div id="panel2" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/help_center/hc-tutorial-2.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 2</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Live Chats with Customer Support</h2>
+              <h3>Help Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+               Chat directly with one of the Nucleus experts with the click of a button. And some typing. Just click on the "Support Team Live Chat" icon and, just like in the Message Center, type messages, paste links or attach documents and data to have all your questions answered online.
               </p>
             </div>
           </div>
           <div id="panel3" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/help_center/hc-tutorial-3.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 3</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Search Knowledge Database</h2>
+              <h3>Help Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Looking for How to Guides, Video Tutorials or answers to common topics and questions? Type your query in the "Search Knowledge Base" field and your related links (and the answers therein) will be with you in a second.
               </p>
             </div>
           </div>
           <div id="panel4" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/help_center/hc-tutorial-4.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 4</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Learn More at HCI U</h2>
+              <h3>Help Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Want to know more about Nucleus, HCI and other fraud resources?  Click on the "HCI U Education Program" button and we'll redirect you to HCI's vast library of information and educational tools.
               </p>
             </div>
           </div>
@@ -55,10 +55,22 @@
       </div>
       <div id="scroll_thumbs">
         <ul id="scroll_nav" class="scroll_nav">
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-1.png'), "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Support Center Overview", "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-2.png'), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Live Chats with Customer Support"), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-3.png'), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Search Knowledge Database"), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-4.png'), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Learn More<br/>at HCI U"), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
         </ul>
       </div>
     </div>

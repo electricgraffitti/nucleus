@@ -400,11 +400,9 @@ table a.score {
 /***************************************************************************************/
 /**********************************************************REPORTS CENTER***************/
 .basic_panel_6, .combo_panel_6 {
-  margin-left:10px;
   width:228px;
 }
 .basic_panel_8, .combo_panel_8 {
-  margin-left:10px;
   width:247px;
 }
 .report_panel_wrap {
@@ -900,6 +898,7 @@ table a.score {
   height: 30px;
   text-align: center;
   background: #d36c21 url(../images/message/button_bg-yellow.png) 0px 0px repeat-x;
+  /*outline:#00FF00 solid 1px;*/
 }
 #idea_forum_center_tabs ul.main li:hover {
   background: #eee;

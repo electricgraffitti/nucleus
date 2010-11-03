@@ -798,7 +798,7 @@ var baseActions = {
 		});
 	},
 
-	setAccordionDefault: function(attribute) {
+	setAccordionDefault: function() {
 		$('#accordion').accordion({
 			active: 2,
 			// Set the default accordion pane

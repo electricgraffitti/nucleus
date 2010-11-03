@@ -5,49 +5,49 @@
         <div id="scroll_wrap">
           <div id="panel1" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/dashboard/db-tutorial-1.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 1</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Dashboard Overview</h2>
+              <h3>Dashboard Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                The Nucleus Dashboard is a dynamic interface that allows you to customize widgets, edit preferences and view your results in real-time, all so you can work smarter.
               </p>
             </div>
           </div>
           <div id="panel2" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/dashboard/db-tutorial-2.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 2</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Customize Page Layout</h2>
+              <h3>Dashboard Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Not only can you add, delete and rearrange each widget, you can also change the settings for each. From the Dashboard, click on "Customize" to either enable or disable each widget. To change the settings of an individual widget, click on the "Change Settings" icon and choose from the various criteria to maximize your efficiency.
               </p>
             </div>
           </div>
           <div id="panel3" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/dashboard/db-tutorial-3.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 3</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Dashboard Widgets &amp; Controls</h2>
+              <h3>Dashboard Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Each widget has a list of icons on the top right of the Header. By clicking on an individual icon you can quickly email, change settings, export, maximize the size or delete that widget from you Dashboard.
               </p>
             </div>
           </div>
           <div id="panel4" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/dashboard/db-tutorial-4.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 4</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Move Dashboard Widgets</h2>
+              <h3>Dashboard Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Want to rearrange your widgets, so the ones you use most are the first you see? Done. Simply Click and Hold on the Header Bar and drag the widget to the Dashboard location that works best for you.
               </p>
             </div>
           </div>
@@ -55,10 +55,22 @@
       </div>
       <div id="scroll_thumbs">
         <ul id="scroll_nav" class="scroll_nav">
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-1.png'), "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Dashboard Overview", "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-2.png'), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Customize Page Layout", "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-3.png'), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Dashboard Widgets & Controls", "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-4.png'), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Move Dashboard Widgets", "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
         </ul>
       </div>
     </div>

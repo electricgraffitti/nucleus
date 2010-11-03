@@ -5,49 +5,49 @@
         <div id="scroll_wrap">
           <div id="panel1" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/quick_launch/ql-tutorial-1.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 1</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Site Navigation Overview</h2>
+              <h3>Quick Launch Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Welcome to Nucleus, the industry most advanced payment integrity application. Navigating Nucleus is easy. On the left side are pages focused on providers, claims and patients. On the right side are icons and links to help you do everything from provide feedback, get help and more. Go on, start exploring!
               </p>
             </div>
           </div>
           <div id="panel2" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/quick_launch/ql-tutorial-2.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 2</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Quick Launch Overview</h2>
+              <h3>Quick Launch Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Every application should be this easy. Nucleus’ Quick Launch page gives you the ability to quickly access popular pages, user-defined shortcuts and saved searches in a single click.
               </p>
             </div>
           </div>
           <div id="panel3" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/quick_launch/ql-tutorial-3.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 3</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Customizing Page Layout</h2>
+              <h3>Quick Launch Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Make Nucleus yours. The Quick Launch page gives you the power to add and delete quick launch tiles. Just click the "Customize" button and select your shortcuts &mdash; it’s that simple.
               </p>
             </div>
           </div>
           <div id="panel4" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/quick_launch/ql-tutorial-4.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 4</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Move Quick Launch Tiles</h2>
+              <h3>Quick Launch Tutorials</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Don’t like the order of your Quick Launch tiles? That’s ok by us. To reorder and organize the tiles the way you want, just click, hold and drag the tile to your preferred location.
               </p>
             </div>
           </div>
@@ -55,10 +55,22 @@
       </div>
       <div id="scroll_thumbs">
         <ul id="scroll_nav" class="scroll_nav">
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-1.png'), "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Site Navigation Overview", "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-2.png'), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Quick Launch Overview", "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-3.png'), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Customizing Page Layout", "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-4.png'), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Move Quick Launch Tiles", "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
         </ul>
       </div>
     </div>

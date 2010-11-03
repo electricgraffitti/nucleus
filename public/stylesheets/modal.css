@@ -1741,11 +1741,11 @@ div.tutorial_overlay {
 }
 #tutorial_trigger {
   position: relative;
-  float: right;
+  float: left;
   width: 20px;
   height: 20px;
-  background: transparent url(../images/inner_pages/table_icon_sprite.png) -20px -338px no-repeat;
-  margin-top: -5px;
+  background: transparent url(../images/inner_pages/table_icon_sprite.png) -0px -560px no-repeat;
+  margin-top: -3px;
 }
 #tutorial_trigger a {
   display: block;
@@ -1827,9 +1827,14 @@ div.tutorial_overlay {
   width: 100%;
 }
 .tutorial_column_right p {
-  position: relative;
-  float: left;
-  color: #fff;
+  color:#FFFFFF;
+  float:left;
+  font-size:12px;
+  height:215px;
+  overflow-x:hidden;
+  overflow-y:auto;
+  position:relative;
+  padding-right:10px;
 }
 /***Scroll Nav***/
 #scroll_thumbs {
@@ -1891,8 +1896,24 @@ div.tutorial_overlay {
 #scroll_thumbs ul li a {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
+}
+#scroll_thumbs ul li a.scroll_nav_trigger_image {
+  position: relative;
+  float: left;
+  width:75px;
+  height: 90px;
+}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy {
+  float:left;
+  height:73px;
+  margin-left:5px;
+  padding-top:17px;
+  position:relative;
+  width:75px;
+  color: #999 ;
+}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
+  text-decoration: none;
 }
 /********************************************/
 /**************OVERLAY STYLES****************/

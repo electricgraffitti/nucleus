@@ -5,66 +5,64 @@
         <div id="scroll_wrap">
           <div id="panel1" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/provider_profile/pp-tutorial-1.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 1</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Provider Profile Overview</h2>
+              <h3>Provider Profile Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                A comprehensive list of a provider’s overall statistics, license and sanction information, address, scoring rank and so much more. Provider Profile packs the perfect information punch.
               </p>
             </div>
           </div>
           <div id="panel2" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/provider_profile/pp-tutorial-2.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 2</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Intelligent Scoring &amp; Risk Levels</h2>
+              <h3>Provider Profile Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                The Nucleus Provider Profile scores each provider on two criteria: the individual provider score and the condition score. Within those two scores are numerous variables, vital statistics, suspect billing patterns and various other data that are all combined to give you the most intelligent scoring and the most accurate risk level available for each provider.
               </p>
             </div>
           </div>
           <div id="panel3" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/provider_profile/pp-tutorial-3.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 3</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Billing Stats &amp; Sanction Visualizations</h2>
+              <h3>Provider Profile Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Get vital billing statistics and easily view existing sanctions against providers. Nucleus looks for billing abnormalities and processes findings in visually rich data fields and widgets to better paint you a picture of the average billing trends, so when those abnormalities are found, they’re dealt with.
               </p>
             </div>
           </div>
           <div id="panel4" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/provider_profile/pp-tutorial-4.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 4</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Demographic &amp; Sanction Info</h2>
+              <h3>Provider Profile Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                More than just a snapshot, Nucleus digs deep into the background of each of your providers. Taking into consideration both geographic and demographic information it's able to raise red flags with greater accuracy. And crosschecking databases of federal and state sanctions, you'll know before you pay an existing sanctioned provider.
               </p>
             </div>
           </div>
-        
           <div id="panel5" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/provider_profile/pp-tutorial-5.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 5</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Google Maps &amp; Web Searches</h2>
+              <h3>Provider Profile Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Atop the Profile Page is a Google search tool. Type your request, hit enter and instantly get results. Nucleus also includes Google Maps and a Street View for complete address information of each provider, located under the "Address" tab.
               </p>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -72,11 +70,26 @@
         <!-- <div id="scroll_nav_trigger_l" class="scroll_nav_triggers trigger_l"></div>
           <div id="scroller_wrap"> -->
             <ul id="scroll_nav" class="scroll_nav">
-              <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
-              <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
-              <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
-              <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
-              <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel5", :class => "scroll_nav_trigger" %></li>
+              <li>
+                <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-1.png'), "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+                <%= link_to "Provider Profile Overview", "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+              </li>
+              <li>
+                <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-2.png'), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+                <%= link_to "Intelligent<br/>Scoring &<br/>Risk Levels", "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+              </li>
+              <li>
+                <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-3.png'), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+                <%= link_to raw("Billing<br/>Stats &<br/>Sanction<br/>Visualizations"), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+              </li>
+              <li>
+                <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-4.png'), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+                <%= link_to raw("Demographic<br/>& Sanction<br/>Info"), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+              </li>
+              <li>
+                <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-5.png'), "#panel5", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+                <%= link_to raw("Google Maps<br/>& Web<br/>Searches"), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+              </li>
             </ul>
           <!-- </div>
         <div id="scroll_nav_trigger_r" class="scroll_nav_triggers trigger_r"></div> -->

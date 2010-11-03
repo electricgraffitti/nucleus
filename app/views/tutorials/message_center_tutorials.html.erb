@@ -5,49 +5,49 @@
         <div id="scroll_wrap">
           <div id="panel1" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/message_center/mc-tutorial-1.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 1</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Message Center Overview</h2>
+              <h3>Message Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Social Messaging opens the possibilities of communicating. A first of its kind, the Nucleus Message Center allows you to group organizational contacts, post rich data to threads and even start community chats with our customer service.
               </p>
             </div>
           </div>
           <div id="panel2" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/message_center/mc-tutorial-2.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 2</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Share Rich Data &amp; Links</h2>
+              <h3>Message Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Share thoughts, important information, links and even attachments with your feed. Under "Share with My Feed", simply type or paste, and click "Send". Or, to share rich data, click "Attach File" located under the field, choose your attachment, click "Send" and watch it load in real time.
               </p>
             </div>
           </div>
           <div id="panel3" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/message_center/mc-tutorial-3.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 3</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Create Peer Groups &amp; Favorites</h2>
+              <h3>Message Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Nucleus allows you to create various groups within your organization so you can streamline communications. Click the "Groups" tab on the right side of the page, then click "Create Group".
               </p>
             </div>
           </div>
           <div id="panel4" class="scroll_panel" >
             <div class="tutorial_column_left">
-              <%= image_tag('/images/tutorials/quick_launch/tutorial_pane-image4.png') %>
+              <%= image_tag('/images/tutorials/message_center/mc-tutorial-4.png') %>
             </div>
             <div class="tutorial_column_right">
-              <h2>Page Segment Title Panel 4</h2>
-              <h3>Tutorial Title</h3>
+              <h2>Subscribe to Feeds &amp; Bookmark Threads</h2>
+              <h3>Message Center Tutorial</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                You can also follow groups and other feeds created within your organization by searching by related keywords or from within the profile pages. Once you've found who you’re looking for, join the conversation. Once subscribed, bookmark threads of particular interest or that contain relevant information to any project you’re working on.
               </p>
             </div>
           </div>
@@ -55,10 +55,22 @@
       </div>
       <div id="scroll_thumbs">
         <ul id="scroll_nav" class="scroll_nav">
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane1.png'), "#panel1", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane2.png'), "#panel2", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane3.png'), "#panel3", :class => "scroll_nav_trigger" %></li>
-          <li><%= link_to image_tag('/images/tutorials/nav/quick_launch/pane4.png'), "#panel4", :class => "scroll_nav_trigger" %></li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-1.png'), "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Message Center Overview", "#panel1", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-2.png'), "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to "Share Rich<br/>Data &<br/>Links", "#panel2", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-3.png'), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Create Peer<br/>Groups &amp;<br/>Favorites"), "#panel3", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
+          <li>
+            <%= link_to image_tag('/images/tutorials/general_nav/tutorial_nav_icon-4.png'), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_image" %>
+            <%= link_to raw("Subscribe to<br/>Feeds &amp;<br/>Bookmark<br/>Threads"), "#panel4", :class => "scroll_nav_trigger scroll_nav_trigger_copy" %>
+          </li>
         </ul>
       </div>
     </div>
