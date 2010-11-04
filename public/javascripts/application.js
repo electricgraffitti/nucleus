@@ -264,12 +264,37 @@ var adminAction = {
 
 var panels = {
   
+  setScriptWidths: function() {
+    var $win = $(window);
+    var win_width = $win.width();
+    var win_height = $win.height();
+    
+    var $body = $("#bd");
+    var $panelWrap = $("#panel_layout");
+    var $mainPanel = $("#panel_center");
+    var $westPanel = $("#panel_west");
+    
+    $body.css({width: win_width, height: win_height - 118 });
+    $panelWrap.css({width: $body.width(), height:($body.height() - 40)});
+    $westPanel.css({height:$mainPanel.height()});
+    $mainPanel.css({width: ($panelWrap.width() - $westPanel.width())});
+    
+    $win.resize(function() {
+      win_width = $(this).width();
+      win_height = $(this).height();
+      $body.css({width: win_width, height: win_height - 118 });
+      $panelWrap.css({width: $body.width(), height: ($body.height() - 40)});
+      $mainPanel.css({width: ($panelWrap.width() - $westPanel.width())});
+    })
+    
+  },
+  
   northResizeTrigger: function() {
     var $north_panel = $('#panel_north');
     $('#south_resizer').toggle(function() {
-      $north_panel.hide('slow');
+      $north_panel.hide();
     }, function() {
-      $north_panel.show('slow');
+      $north_panel.show();
     });
     
   },
@@ -277,19 +302,17 @@ var panels = {
   westResizeTrigger: function() {
     var $sidebar = $('#inner_west');
     $('#west_resizer').toggle(function() {
-      $sidebar.animate({width: '8px'}, 1000, panels.clientSearchPanelResize($(this).width() + 2));
+      $sidebar.animate({width: '6px'}, 0, panels.clientSearchPanelResize($(this).width() + 2));
     }, function() {
-      $sidebar.animate({width: '220px'}, 1000, panels.clientSearchPanelResize($(this).width() + 214));
+      $sidebar.animate({width: '220px'}, 0, panels.clientSearchPanelResize($(this).width() + 216));
     });
   },
   
   clientSearchPanelResize: function(w) {
-    var $panelLayout = $('#panel_layout');
+    var $win = $(window);
     var $panelcenter = $('#panel_center');
-    var $tablePanel = $('#provider_search_table');
     
-    $panelcenter.animate({width:($panelLayout.width() - w)}, 1000);
-    $tablePanel.animate({width:($panelLayout.width() - w)}, 1000);
+    $panelcenter.animate({width:($win.width() - w)}, 0);
   },
   
   toggleResultsChart: function() {
@@ -997,6 +1020,7 @@ var baseActions = {
 
 //**********Initialize Document**********//
 $(document).ready(function() {
+  panels.setScriptWidths();
   baseActions.setXHR();
 	baseActions.setDefaults();
 	tableActions.setDefaultTableActions();

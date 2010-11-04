@@ -6,8 +6,8 @@ select#report_report_selection {
 }
 
 #hd, #bd, #ft {
-  width: 1010px;
-  max-width: 1010px;
+/*  width: 1010px;
+  max-width: 1010px;*/
 }
 ul.icon_nav {
 	position: relative;

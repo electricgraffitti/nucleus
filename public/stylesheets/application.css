@@ -476,7 +476,6 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   color: #222;
   text-shadow: 0px 1px 1px #ccc;
   font-size: 12px;
-  font-weight: bold;
 }
 /*********************************************/
 /*****************MAIN CONTENT****************/
@@ -524,7 +523,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 #panel_layout div#panel_center {
   position: relative;
   float: left;
-  width: 804px;
+  width: 100%;
 }
 #panel_layout div#panel_full {
   width: 1024px;
@@ -550,7 +549,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   position: absolute;
   top: 0;
   right: 0;
-  width: 6px;
+  width: 4px;
   height: 100%;
   background: #f1f1f1;
   border-left: 1px solid #c0c0c0;
@@ -576,6 +575,7 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   border-top:1px solid #FFFFFF;
   position:relative;
   width:100%;
+  background: url('../images/inner_pages/resize_handle_horz.jpg') no-repeat;
 }
 .pane_handle_toggle {
   text-align: center;
@@ -1566,7 +1566,7 @@ a.widget_option.close_option:active {
 }
 #page_header ul.page_nav {
   float: right;
-  margin-right: 18px;
+  margin-right: 10px;
 }
 #page_header ul.page_nav li {
   float: left;
@@ -1612,7 +1612,7 @@ a.widget_option.close_option:active {
   padding: 2px;  
 }
 #search_search_topic_id {
-  margin: 10px 0px;
+  margin: 0px 0px 10px;
   width: 173px;
 /*  background: #5bab46;*/
 	color: #222;
@@ -1622,7 +1622,7 @@ a.widget_option.close_option:active {
 }
 #search_top {
   overflow:auto;
-  padding-left:18px;
+  padding-left:10px;
   padding-top:10px;
   width:202px;
   font-size: 12px;
@@ -1643,7 +1643,7 @@ a.widget_option.close_option:active {
 #sub_search_params {
   width: 202px;
   padding-top: 10px;
-  padding-left: 18px;
+  padding-left: 10px;
   overflow: auto;
 }
 #sub_search_params label, .report_panel_wrap label, #report_output_panel label {
@@ -1821,7 +1821,8 @@ span.field_seperator {
   overflow: auto;
 }
 #provider_search_table {
-	width: 804px;
+	/*width: 804px;*/
+	width: 100%;
 }
 #provider_action_table {
 	min-width: 1024px;
@@ -3580,7 +3581,7 @@ img.ui-datepicker-trigger {
 }
 label {
   color: #000;
-  font-size: 14px;
+  font-size: 12px;
 }
 p.small_label label {
   font-size: 11px;
