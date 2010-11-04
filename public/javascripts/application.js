@@ -264,6 +264,13 @@ var adminAction = {
 
 var panels = {
   
+  setScriptSize: function() {
+    var $westPane = $("#panel_west");
+    var $westbar = $("#west_resizer");
+    
+    $westbar.height($westPane.height());
+  },
+  
   northResizeTrigger: function() {
     var $north_panel = $('#panel_north');
     $('#south_resizer').toggle(function() {
@@ -277,9 +284,9 @@ var panels = {
   westResizeTrigger: function() {
     var $sidebar = $('#inner_west');
     $('#west_resizer').toggle(function() {
-      $sidebar.animate({width: '8px'}, 1000, panels.clientSearchPanelResize($(this).width() + 2));
+      $sidebar.animate({width: '0px'}, 0, panels.clientSearchPanelResize($(this).width()));
     }, function() {
-      $sidebar.animate({width: '220px'}, 1000, panels.clientSearchPanelResize($(this).width() + 214));
+      $sidebar.animate({width: '212px'}, 0, panels.clientSearchPanelResize($(this).width()));
     });
   },
   
@@ -288,8 +295,8 @@ var panels = {
     var $panelcenter = $('#panel_center');
     var $tablePanel = $('#provider_search_table');
     
-    $panelcenter.animate({width:($panelLayout.width() - w)}, 1000);
-    $tablePanel.animate({width:($panelLayout.width() - w)}, 1000);
+    $panelcenter.animate({width:($panelLayout.width() - w)}, 0);
+    $tablePanel.animate({width:($panelLayout.width() - w)}, 0);
   },
   
   toggleResultsChart: function() {
@@ -997,6 +1004,7 @@ var baseActions = {
 
 //**********Initialize Document**********//
 $(document).ready(function() {
+  panels.setScriptSize();
   baseActions.setXHR();
 	baseActions.setDefaults();
 	tableActions.setDefaultTableActions();
