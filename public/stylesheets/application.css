@@ -2978,13 +2978,13 @@ table.claim_action_table {
   border-top: 1px solid #c0c0c0;
   border-bottom: 1px solid #818181;
 /*  background: #f3f3f3;*/
-  background: #888;
+  background: #d9d9d9;
 /*  color: #818181;*/
-  color: #ddd;
+  color: #333;
   padding: 5px 0px;
 }
 .drag_row span {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .table_select form {
   position: relative;
@@ -3016,11 +3016,12 @@ td {
 }
 th, tfoot {
   height: 12px;
-  background: #32312f url('../images/inner_pages/table_header.jpg') repeat-x;
-  color: #c9caca;
+/*  background: #32312f url('../images/inner_pages/table_header.jpg') repeat-x;
+  color: #c9caca;*/
+  background: #333;
+  color: #eee;
   border-right: 1px solid #c9caca;
   padding: 4px 5px 5px;
-  font-weight:bold;
 }
 tfoot {
   background: url("../images/inner_pages/page_header_bg.jpg") repeat-x;
