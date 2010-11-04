@@ -911,7 +911,6 @@ var baseActions = {
 		
 	 	$nTrig.click(function(e) {
 		  e.preventDefault();
-		  console.log('ya');
 		});
 		
 	},
@@ -971,6 +970,15 @@ var baseActions = {
 		});
 	},
 
+  stopPropagation: function() {
+    var $stopLink = $('.stop_prop');
+    
+    $stopLink.click(function(e) {
+      e.stopPropagation();
+    });
+    
+  },
+
 	setDefaults: function() {
 		// Set Base Colors for Charts
 		chartActions.setupChartBaseColors();
@@ -980,6 +988,8 @@ var baseActions = {
 		baseActions.setTips();
 		// Sets the note overlay
 		baseActions.setOverlay();
+		// Stops event propagation on certain links
+		baseActions.stopPropagation();
 	}
 	// end base
 };

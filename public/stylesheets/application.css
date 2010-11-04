@@ -7,6 +7,7 @@ html, body {
 	width: 100%;
 	float:left;
 	background: #e7e7e7;
+	font:12px/1.231 "Segoe UI",Arial,sans-serif;
 }
 #wrapper {
   min-height: 100%;
@@ -276,7 +277,7 @@ label.error {
 /*********************************************/
 /*****************HEADER**********************/
 #hd {
-  height: 80px;
+  height: 78px;
   /*background: #000000 url('../images/header/header_dark_bg.jpg') left top repeat-x;*/
 	background: #000000;
 }
@@ -297,7 +298,7 @@ label.error {
 	float: left;
 	text-indent: -3000em;
   background: url('../images/header/logo3.png') no-repeat;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 #hd #brand_wrap {
 	position: relative;
@@ -327,17 +328,16 @@ label.error {
 	border-top: 1px solid #5bab46;
 }
 ul.nav_ul {
-  position: relative;
-  float: left;
-  min-height: 28px;
-  margin-left: 4px;
+  float:left;
+  min-height:28px;
+  position:relative;
 }
 ul.secondary_nav_ul {
   margin-left: 30px;
 }
 ul.nav_ul li {
   position: relative;
-  width: 63px;
+  width: 70px;
   height: 15px;
 	padding: 7px 0px;
   float: left;
@@ -365,6 +365,12 @@ ul.nav_ul li a {
 }
 ul.nav_ul li a:hover {
 	color: #efefef;
+}
+ul.nav_ul li.claim {
+  width: 63px;
+}
+.claim_a {
+  margin-left: -4px;
 }
 ul.icon_nav {
 	position: relative;
@@ -438,40 +444,39 @@ ul.topnav li span { /*--Drop down trigger styles--*/
   width:100%;
 }
 ul.topnav li ul.subnav {  
-   list-style: none;  
-   position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/  
-   left: 0; top: 28px;  
-   background: #333;  
-   margin: 0; padding: 0;  
-   display: none;  
-   float: left;  
-   width: 170px;  
-   border: 1px solid #111;
-   z-index: 300;
+  list-style: none;  
+  position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/  
+  left: 0; top: 28px;  
+  background: #333;  
+  margin: 0; padding: 0;  
+  display: none;  
+  float: left;  
+  width: 170px;  
+  border: 1px solid #111;
+  z-index: 300;
 }
 ul.topnav li ul.subnav li {  
-    margin: 0; padding: 0;  
-    border-top: 1px solid #252525; /*--Create bevel effect--*/  
-    border-bottom: 1px solid #444; /*--Create bevel effect--*/  
-    clear: both;  
-    width: 170px;
-    height: 28px;
+  margin: 0; padding: 0;  
+/*    border-top: 1px solid #252525; 
+  border-bottom: 1px solid #444; */
+  clear: both;  
+  width: 170px;
+  height: 28px;
 }  
 html ul.topnav li ul.subnav li a {  
-    width: 160px;  
-    background: #333 no-repeat 10px center;  
-    padding-left: 10px;
-    text-align: left;
-    height: 24px;
-    font-weight: bold;
+  width: 160px;  
+  background: #333 no-repeat 10px center;  
+  padding-left: 10px;
+  text-align: left;
+  height: 24px;
 }  
 html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
 /*    background: #5bab46;*/
-    background: url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
-    color: #222;
-    text-shadow: 0px 1px 1px #ccc;
-    font-size: 12px;
-    font-weight: bold;
+  background: url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
+  color: #222;
+  text-shadow: 0px 1px 1px #ccc;
+  font-size: 12px;
+  font-weight: bold;
 }
 /*********************************************/
 /*****************MAIN CONTENT****************/
@@ -1538,14 +1543,14 @@ a.widget_option.close_option:active {
   width: 100%;
   min-width: 1026px;
   height: 26px;
-  padding: 7px 0px;
+  padding:9px 0 5px;
   background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x
 }
 #page_header h2 {
   float: left;
   height: 25px;
   font-size: 18px;
-  margin-left: 18px;
+  margin-left: 12px;
   color: #555;
   font-weight: bold;
   text-shadow: 1px 1px 0px #efefef;
@@ -3754,12 +3759,13 @@ div.tutorial_overlay {
    padding: 0 !important;
 }
 #tutorial_trigger {
-  position: relative;
-  float: left;
-  width: 20px;
-  height: 20px;
-  background: transparent url(../images/inner_pages/table_icon_sprite.png) -0px -560px no-repeat;
-  margin-top: -3px;
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 0 -560px transparent;
+  float:left;
+  height:20px;
+  margin-left:2px;
+  margin-top:-2px;
+  position:relative;
+  width:20px;
 }
 #tutorial_trigger a {
   display: block;
@@ -3844,7 +3850,7 @@ div.tutorial_overlay {
   color:#FFFFFF;
   float:left;
   font-size:12px;
-  height:215px;
+  height:230px;
   overflow-x:hidden;
   overflow-y:auto;
   position:relative;

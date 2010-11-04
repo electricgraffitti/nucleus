@@ -1,6 +1,6 @@
 <ul class="nav_ul topnav">
-  <li>
-    <b><%= link_to "Claim", '', :class => "tip", :title => "Claims Summary" %></b>
+  <li class="claim">
+    <%= link_to "Claim", '', :class => "tip claim_a", :title => "Claims Summary" %>
     <ul class="subnav">
       <li><%= link_to "Claims Search", claims_path %></li>
       <li><%= link_to "Claims Line Search", "" %></li>
@@ -8,32 +8,54 @@
     </ul>
   </li>
   <li>
-    <b><%= link_to "Provider", "", :class => "tip", :title => "Provider Search" %></b>
+    <%= link_to "Provider", "", :class => "tip", :title => "Provider Search" %>
     <ul class="subnav">
       <li><%= link_to "Provider Search", provider_search_path %></li>
       <li><%= link_to "CIU Referral", "" %></li>
     </ul>
   </li>
   <li>
-    <b><%= link_to "Patient", "", :class => "tip", :title => "Patient List" %></b>
+    <%= link_to "Patient", "", :class => "tip", :title => "Patient List" %>
     <ul class="subnav">
       <li><%= link_to "Patient Search", "" %></li>
     </ul>
   </li>
   <li>
-    <%= link_to "Appeals", "#", :class => "tip", :title => "Appeals List" %>
+    <%= link_to "Appeal", "#", :class => "tip", :title => "Appeals List" %>
+    <ul class="subnav">
+      <li><%= link_to "Appeal", "" %></li>
+      <li><%= link_to "Create Appeal", "" %></li>
+      <li><%= link_to "Category Management", "" %></li>
+    </ul>
   </li>
   <li>
     <%= link_to "Batch", "#", :class => "tip", :title => "Batch List" %>
+    <ul class="subnav">
+      <li><%= link_to "Batch Search", "" %></li>
+    </ul>
   </li>
   <li>
-    <%= link_to "Reports", reports_path, :class => "tip", :title => "Report Generator" %>
+    <%= link_to "Reports", "", :class => "tip", :title => "Report Generator" %>
+    <ul class="subnav">
+      <li><%= link_to "Report Center", reports_path %></li>
+    </ul>
   </li>
   <li>
     <%= link_to "Settings", client_path(current_client), :class => "tip", :title => "Client Settings" %>
+    <ul class="subnav">
+      <li><%= link_to "Client Search", "" %></li>
+      <li><%= link_to "Group Search", "" %></li>
+      <li><%= link_to "Invoice Parameter Search", "" %></li>
+      <li><%= link_to "User", "" %></li>
+    </ul>
   </li>
   <li class="last">
     <%= link_to "Reference", "#", :class => "tip", :title => "Reference Index" %>
+    <ul class="subnav">
+      <li><%= link_to "Crosswalk", "" %></li>
+      <li><%= link_to "Dental Board", "" %></li>
+      <li><%= link_to "Medical Board", "" %></li>
+    </ul>
   </li>
 </ul>
 
