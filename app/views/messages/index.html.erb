@@ -1,6 +1,8 @@
-<%= render :partial => 'messages/message_header' %>
-<div id="panel_layout" class="message_panels clear">
-  <div id="message_center_wrap">
+<% content_for :page_header do %>
+  <%= render :partial => 'messages/message_header' %>
+<% end %>
+<div id="centered_layout" class="message_panels clear">
+  <div id="message_center_wrap" class="inner_box">
   
     <%# Message Center Breadcrumb %>
     <div id="message_center_breadcrumb">
@@ -39,10 +41,11 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
+      app.centeredHeight();
       panels.messageTabs();
       scroll.setiPadMessageScroll();
-      baseActions.tutorialTrigger();
-      baseActions.toggleUpload();
+      app.tutorialTrigger();
+      app.toggleUpload();
     });
   </script>
 <% end %>

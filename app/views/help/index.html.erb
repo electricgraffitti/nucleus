@@ -1,6 +1,9 @@
-<%= render :partial => 'help/help_page_header', :locals => {:provider => @provider} %>
-<div id="panel_layout" class="help_panels clear">
-  <div id="help_center_wrap">
+<% content_for :page_header do %>
+  <%= render :partial => 'help/help_page_header', :locals => {:provider => @provider} %>
+<% end %>
+
+<div id="centered_layout" class="help_panels clear">
+  <div id="help_center_wrap" class="inner_box">
     <div id="help_west" class="panel grey">
       <%= render :partial => 'help/help_west' %>
     </div>
@@ -10,14 +13,16 @@
     <div id="help_east" class="panel grey">
       <%= render :partial => 'help_east' %>
     </div>
+    <div class="clear"></div>
   </div>
   <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      app.centeredHeight();
       scroll.setiPadHelpScroll();
-      baseActions.tutorialTrigger();
+      app.tutorialTrigger();
       panels.helpTabs();
     });
   </script>

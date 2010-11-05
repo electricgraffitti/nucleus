@@ -170,9 +170,9 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      baseActions.triggerActionTable();
-      baseActions.tutorialTrigger();
-      baseActions.noteTrigger();
+      app.triggerActionTable();
+      app.tutorialTrigger();
+      app.noteTrigger();
       panels.northResizeTrigger();
       panels.actionPanelToggle();
     });

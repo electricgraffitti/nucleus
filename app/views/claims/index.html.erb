@@ -1,17 +1,21 @@
-<%= render :partial => 'claims/claim_search_header' %>
+<% content_for :page_header do %>
+  <%= render :partial => 'claims/claim_search_header' %>
+<% end %>
+
 <div id="panel_layout" class="clear">
-  <div id="panel_west" class="ui-layout-west">
-    <div id="inner_west">
-      <%= render :partial => 'claims/search' %>
+
+    <div id="panel_west">
+      <div id="inner_west">
+        <%= render :partial => 'claims/search' %>
+      </div>
+      <div id="west_resizer">
+        <div class="resize_vert"></div>
+      </div>
     </div>
-    <div id="west_resizer">
-      <div class="resize_vert"></div>
-    </div>
-  </div>
-  <div id="panel_center" class="panel ui-layout-center">
-    <div class="drag_row"><span>Drag a column header and drop it here to group by that column</span></div>
-    <div id="provider_search_table">
-      <table id="claim_search_table">
+    <div id="panel_center" class="panel">
+      <div class="drag_row"><span>Drag a column header and drop it here to group by that column</span></div>
+      <div id="data_table">
+        <table id="claim_search_table">
         <thead>
           <tr>
             <th>Claim Sequence</th>
@@ -96,17 +100,20 @@
           </tr>
         </tfoot> -->
       </table>
+      </div>
     </div>
-  </div>
-  <div class="clear"></div>
-  </div>
+    <div class="clear"></div>
+
+</div>
+
 <% content_for :javascripts do %>
   <%#= javascript_include_tag "providerSearch" %>
   <script>
     $(document).ready(function() {
-      scroll.setiPadClaimSearchScroll();
-      baseActions.tutorialTrigger();
-      panels.westResizeTrigger();
+      var $table = $("#data_table");
+      app.panelLayoutHeight();
+      scroll.setTableScroll($table);
+      app.tutorialTrigger();
     });
   </script>
 <% end %>

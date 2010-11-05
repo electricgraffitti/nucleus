@@ -1,8 +1,12 @@
-<%= render :partial => 'claims/claim_action_header' %>
-<div id="panel_layout" class="clear">
-    <div id="action_panel" class="panel ui-layout-center">
-      <div id="claim_action_left">
-        <div class="claim_status_panel">
+<% content_for :page_header do %>
+  <%= render :partial => 'claims/claim_action_header' %>
+<% end %>
+
+<div id="centered_layout" class="clear">
+    <div id="action_panel" class="inner_box">
+      <div id="panel_north">
+        <div id="claim_action_left">
+          <div class="claim_status_panel">
           <div class="column column_1">
             <div class="column_title">Claim Sequence</div>
             <div class="column_content">6946049-1</div>
@@ -32,7 +36,7 @@
             <div class="column_content">In Network</div>
           </div>
         </div>
-        <div class="claim_status_panel">
+          <div class="claim_status_panel">
           <div class="column column_1">
             <div class="column_title">Patient Sequence</div>
             <div class="column_content">337048</div>
@@ -48,7 +52,7 @@
             <div class="column_content">Female</div>
           </div>
         </div>            
-        <div class="claim_status_panel">
+          <div class="claim_status_panel">
           <div class="column column_1">
             <div class="column_title">Provider Sequence</div>
             <div class="column_content">213148</div>
@@ -76,7 +80,7 @@
             <div class="column_content"></div>
           </div>
         </div>            
-        <div class="claim_status_panel">
+          <div class="claim_status_panel">
           <div class="column column_1">
             <div class="column_title">Provider Sequence</div>
             <div class="column_content">213148</div>
@@ -104,9 +108,9 @@
             <div class="column_content"></div>
           </div>
         </div>
-      </div>
-      <div id="claim_action_right">
-        <div class="claim_action_panel">
+        </div>
+        <div id="claim_action_right">
+          <div class="claim_action_panel">
           <div class="column column_1">
             <div class="column_title">Claim Status</div>
             <div class="column_content">Unreviewed</div>
@@ -174,12 +178,15 @@
             </tbody>
           </table>
         </div>
+        </div>
+        <div class="clear"></div>
       </div>
       <div class="clear"></div>
-      <div id="panel_south" class="ui-layout-south">
-        <div id="south_resizer">
-          <div class="resize_horz"></div>
-        </div>
+      <div id="south_resizer">
+        <div class="resize_horz"></div>
+      </div>
+      <div id="panel_south">
+
         <div id="table_action_bar">
           <ul class="page_nav">
             <li class="toggle_link">
@@ -219,7 +226,9 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      baseActions.tutorialTrigger();
+      app.centeredHeight();
+      app.tutorialTrigger();
+      panels.northResizeTrigger();
     });
   </script>
 <% end %>

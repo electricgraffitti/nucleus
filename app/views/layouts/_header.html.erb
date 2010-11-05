@@ -11,3 +11,6 @@
   <%= render :partial => 'layouts/main_nav', :locals => {:client => current_client} %>
   <%= render :partial => 'layouts/icon_nav' %>
 </div>
+<div id="page_header_wrapper">
+  <%= yield :page_header %>
+</div>

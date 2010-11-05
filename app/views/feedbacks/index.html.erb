@@ -1,6 +1,9 @@
-<%= render :partial => 'feedbacks/feedback_header' %>
-<div id="panel_layout" class="idea_forum_panels clear">
-  <div id="idea_forum_center_wrap">
+<% content_for :page_header do %>
+  <%= render :partial => 'feedbacks/feedback_header' %>
+<% end %>
+
+<div id="centered_layout" class="idea_forum_panels clear">
+  <div id="idea_forum_center_wrap" class="inner_box">
     
     <%# Message Center Sidebar %>
     <div id="idea_forum_sidebar">
@@ -29,10 +32,11 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
+      app.centeredHeight();
       panels.forumTabs();
       scroll.setiPadIdeaScroll();
-      baseActions.tutorialTrigger();
-      baseActions.toggleUpload();
+      app.tutorialTrigger();
+      app.toggleUpload();
     });
   </script>
 <% end %>

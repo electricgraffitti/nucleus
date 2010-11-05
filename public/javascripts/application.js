@@ -112,14 +112,14 @@ var tableActions = {
 		}
 	},
 
-	setProviderByTableRowClick: function(attribute) {
+	setProviderByTableRowClick: function() {
 		$('#provider_search tbody tr').click(function() {
 			tableActions.setActive($(this));
 			tableActions.swapProvider($(this));
 		});
 	},
 
-	setChartByTableRowClick: function(attribute) {
+	setChartByTableRowClick: function() {
 		$('#provider_action_table tbody tr').click(function() {
 			tableActions.setActive($(this));
 			tableActions.actionChartData($(this));
@@ -128,7 +128,7 @@ var tableActions = {
 		});
 	},
 
-	setDefaultTableActions: function(attribute) {
+	setDefaultTableActions: function() {
 		// Hide the table sub content(toggle)
 		tableActions.setTableToggles();
 		tableActions.setTableCheckboxes();
@@ -142,8 +142,8 @@ var tableActions = {
 var profileActions = {
 
 	setBase: function() {
-		baseActions.setAccordionDefault();
-		baseActions.accordionTrigger();
+		app.setAccordionDefault();
+		app.accordionTrigger();
 	}
 	// end Profile
 };
@@ -264,39 +264,43 @@ var adminAction = {
 
 var panels = {
   
-  setScriptSize: function() {
-    var $westPane = $("#panel_west");
-    var $westbar = $("#west_resizer");
-    
-    $westbar.height($westPane.height());
+  setWestPanelHeight: function(win, hd, wp, wpr, iw) {
+    wp.height(win.height() - hd.height());
+    wp.css({minHeight: iw.height()})
+    panels.setWestResizeBar(wp, wpr);
+  },
+  
+  setWestResizeBar: function(wp, wpr) {
+    wpr.height(wp.height());
   },
   
   northResizeTrigger: function() {
     var $north_panel = $('#panel_north');
     $('#south_resizer').toggle(function() {
-      $north_panel.hide('slow');
+      $north_panel.hide();
     }, function() {
-      $north_panel.show('slow');
+      $north_panel.show();
     });
     
   },
   
-  westResizeTrigger: function() {
-    var $sidebar = $('#inner_west');
-    $('#west_resizer').toggle(function() {
-      $sidebar.animate({width: '0px'}, 0, panels.clientSearchPanelResize($(this).width()));
+  setNorthWidgetWrap: function() {
+    var $widgetWrap = $("#inner_north");
+    var $widgets = $widgetWrap.find('.widget');
+    $widgetWrap.width(($widgets.length * $widgets.first().outerWidth()) + ($widgets.length * 10));
+    scroll.setWidgetScroll();
+  },
+  
+  westResizeTrigger: function(win, cp, iw, wpr) {
+    wpr.toggle(function() {
+      iw.animate({width: '0px'}, 0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 1 )));
     }, function() {
-      $sidebar.animate({width: '212px'}, 0, panels.clientSearchPanelResize($(this).width()));
+      iw.animate({width: '212px'}, 0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 213 )));
     });
   },
   
-  clientSearchPanelResize: function(w) {
-    var $panelLayout = $('#panel_layout');
-    var $panelcenter = $('#panel_center');
-    var $tablePanel = $('#provider_search_table');
-    
-    $panelcenter.animate({width:($panelLayout.width() - w)}, 0);
-    $tablePanel.animate({width:($panelLayout.width() - w)}, 0);
+  centerPanelResize: function(win, cp, w) {
+    cp.width(win.width() - w);
   },
   
   toggleResultsChart: function() {
@@ -567,6 +571,14 @@ var scroll = {
   
   setiPadClaimSearchScroll: function() {
     $('#provider_search_table').jScrollTouch();
+  },
+  
+  setTableScroll: function(table) {
+   table.jScrollTouch(); 
+  },
+  
+  setWidgetScroll: function() {
+   $("#panel_north").jScrollTouch(); 
   }
   
 };
@@ -787,7 +799,7 @@ var widget = {
   
 };
 
-var baseActions = {
+var app = {
   
   setXHR: function() {
     $.ajaxSetup({ 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}});
@@ -985,18 +997,78 @@ var baseActions = {
     });
     
   },
+  
+  centeredHeight: function() {
+    var $win = $(window);
+    var $head = $("#hd");
+    var $centered_box = $("#centered_layout");
+    var $inner_box = $centered_box.children(".inner_box");
+    
+    $centered_box.height($win.height() - $head.height());
+    
+    $win.resize(function() {
+      $centered_box.height($win.height() - $head.height());
+      $centered_box.css({minHeight:$inner_box.height()});
+    });
+    
+  },
+  
+  panelLayoutHeight: function() {
+    var $win = $(window);
+    var $head = $("#hd");
+    var $panel_box = $("#panel_layout");
+    var $westPanel = $("#panel_west");
+    var $centerPanel = $("#panel_center");
+    var $innerWest = $("#inner_west");
+    var $westresizerbar = $("#west_resizer");
+  
+    $panel_box.height($win.height() - $head.height());
+    $centerPanel.width($win.width() - $westPanel.width());
+    
+    panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
+    panels.westResizeTrigger($win, $centerPanel, $innerWest, $westresizerbar);
+    
+    $win.resize(function() {
+      $panel_box.height($(this).height() - $head.height());
+      $centerPanel.width($(this).width() - $westPanel.width());
+      panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
+    });
+  },
+  
+  panelLayoutWidthHeight: function() {
+    var $win = $(window);
+    var $head = $("#hd");
+    var $panel_box = $("#panel_layout");
+    var $westPanel = $("#panel_west");
+    var $centerPanel = $("#panel_center");
+    var $innerWest = $("#inner_west");
+    var $westresizerbar = $("#west_resizer");
+  
+    $panel_box.height($win.height() - $head.height());
+    $centerPanel.width($win.width() - $westPanel.width());
+    panels.northResizeTrigger();
+    panels.setNorthWidgetWrap();
+    panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
+    panels.westResizeTrigger($win, $centerPanel, $innerWest, $westresizerbar);
+    
+    $win.resize(function() {
+      $panel_box.height($(this).height() - $head.height());
+      $centerPanel.width($(this).width() - $westPanel.width());
+      panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
+    });
+  },
 
 	setDefaults: function() {
 		// Set Base Colors for Charts
 		chartActions.setupChartBaseColors();
 		// Sets the Drop Down Nav
-		baseActions.dropDownNav();
+		app.dropDownNav();
 		// Sets the tool tip hovers
-		baseActions.setTips();
+		app.setTips();
 		// Sets the note overlay
-		baseActions.setOverlay();
+		app.setOverlay();
 		// Stops event propagation on certain links
-		baseActions.stopPropagation();
+		app.stopPropagation();
 	}
 	// end base
 };
@@ -1004,9 +1076,8 @@ var baseActions = {
 
 //**********Initialize Document**********//
 $(document).ready(function() {
-  panels.setScriptSize();
-  baseActions.setXHR();
-	baseActions.setDefaults();
+  app.setXHR();
+	app.setDefaults();
 	tableActions.setDefaultTableActions();
-	baseActions.modalTrigger();
+	app.modalTrigger();
 });

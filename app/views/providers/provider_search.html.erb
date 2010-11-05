@@ -1,19 +1,20 @@
-<%= render :partial => 'providers/search_page_header', :locals => {:provider => @provider} %>
+<% content_for :page_header do %>
+  <%= render :partial => 'providers/search_page_header', :locals => {:provider => @provider} %>
+<% end %>
 <div id="panel_layout" class="clear">
-  <div id="panel_west" class="ui-layout-west">
+  <div id="panel_west">
     <div id="inner_west">
       <%= render :partial => 'dashboard/search' %>
     </div>
     <div id="west_resizer">
-      <div class="resize_vert"></div>
+      <div class="resize_vert tip" title="Collapse/Expand the Search Pref Pane"></div>
     </div>
   </div>
-  <div id="panel_center" class="panel ui-layout-center">
-    <div id="inner_panel">
+  <div id="panel_center">
       <div id="panel_north">
-      <div class="panel_set">
-        <div id="results_chart" class="basic_panel results_chart">
-          <div class="module_header">
+        <div id="inner_north">
+          <div id="results_chart" class="widget">
+          <div class="widget_header">
             <div class="widget_header_top">
               <h3>Provider Results</h3>
             </div>
@@ -24,25 +25,40 @@
               <%= render :partial => 'dashboard/widget_options' %>
             </div>
           </div>
-          <div class="module_content">
+          <div class="widget_content">
             <div id="provider_results_chart" class="clear left">
             
             </div>
           </div>
         </div>
-      </div>
-      <div id="provider_content" class="panel_set">
-        <div class="basic_panel">
-          <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
-        </div>
-        <div class="combo_panel">
-          <div id="provider_header" class="sub_panel">
-            <h4>Provider Sequence: <span><%= @provider.sequence_number %></span></h4>
-            <h4 class="search_speciality">Primary Specialty: <span id="speciality_code" title="<%= @provider.provider_speciality.speciality_type %>"><%= @provider.provider_speciality.speciality_code %></span></h4>
+        
+          <div class="widget">
+          <div class="widget_header">
+            <div class="widget_header_top">
+              <h3>Provider Information</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
           </div>
-          <div class="sub_panel">
-          <div id="provider_stats">
-            <h3>Flagged Condition Statistics</h3>
+          <div id="provider_content" class="widget_content">
+            <div class="provider_header">
+              <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
+            </div>
+            <div class="stat_group">
+              <div class="stat_title left">Identified Savings</div>
+              <div class="stat_value left">
+                <div class="stat_flag stat_flag_red"></div>
+                2,048,157
+              </div>
+            </div>
+            <div class="stat_group">
+              <div class="stat_title left">Accepted Savings</div>
+              <div class="stat_value left">
+                <div class="stat_flag stat_flag_red"></div>
+                2,048,157
+              </div>
+            </div>
             <div class="stat_group">
               <div class="stat_title left">Patients</div>
               <div class="stat_value left">
@@ -61,53 +77,76 @@
               </div>
               <div class="stat_range left"><%= @provider.provider_stat.final_claim_count %> of <%= @provider.provider_stat.total_claim_count %> Claims</div>
             </div>
-            <div class="stat_group">
-              <div class="stat_title left">Exposure</div>
-              <div class="stat_value left">
-                <%= number_to_percentage(@provider.provider_stat.savings_percentage, :precision => 1) %>
-                <div class="stat_flag stat_flag_yellow"></div>
-              </div>
-              <div class="stat_range left"><%= number_to_currency(@provider.provider_stat.final_savings_count, :precision => 0) %> of <%= number_to_currency(@provider.provider_stat.total_savings_count, :precision => 0) %> Paid</div>
+          </div>
+        </div>
+        
+          <div class="widget">
+          <div class="widget_header">
+            <div class="widget_header_top">
+              <h3>Provider Information</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
+          </div>
+          <div id="provider_content" class="widget_content">
+            <div class="provider_header">
+              <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
             </div>
             <div class="stat_group">
-              <div class="stat_title left">Billed</div>
+              <div class="stat_title left">Identified Savings</div>
               <div class="stat_value left">
-                <%= number_to_percentage(@provider.provider_stat.billed_percentage, :precision => 1) %>
-                <div class="stat_flag stat_flag_orange"></div>
+                <div class="stat_flag stat_flag_red"></div>
+                2,048,157
               </div>
-              <div class="stat_range left"><%= number_to_currency(@provider.provider_stat.final_billed_count, :precision => 0) %> of <%= number_to_currency(@provider.provider_stat.total_billed_count, :precision => 0) %> Billed</div>
+            </div>
+            <div class="stat_group">
+              <div class="stat_title left">Accepted Savings</div>
+              <div class="stat_value left">
+                <div class="stat_flag stat_flag_red"></div>
+                2,048,157
+              </div>
+            </div>
+            <div class="stat_group">
+              <div class="stat_title left">Patients</div>
+              <div class="stat_value left">
+                <%= number_to_percentage(@provider.provider_stat.patient_percentage, :precision => 1) %>
+                <div class="stat_flag stat_flag_red"></div>
+              </div>
+              <div class="stat_range left">
+                <%= @provider.provider_stat.final_patient_count %> of <%= @provider.provider_stat.total_patient_count %> Patients
+              </div>
+            </div>
+            <div class="stat_group">
+              <div class="stat_title left">Claims</div>
+              <div class="stat_value left">
+                <%= number_to_percentage(@provider.provider_stat.claim_percentage, :precision => 1) %>
+                <div class="stat_flag stat_flag_red"></div>
+              </div>
+              <div class="stat_range left"><%= @provider.provider_stat.final_claim_count %> of <%= @provider.provider_stat.total_claim_count %> Claims</div>
             </div>
           </div>
         </div>
-        <div class="sub_panel last">
-          <!-- <div class="right">
-          <%# form_tag providers_path, :method => :get do %>
-            <%#= collection_select(:provider_stat_date_range, :date_range_id, SearchTopic.all, :id, :name, {:prompt => "Date Range"}) %>
-            <%#= submit_tag "Submit", :class => "medium_btn" %>
-          <%# end %>
-          </div> -->
         </div>
+     </div>
+     <div id="panel_south" class="ui-layout-south">
+        <div id="south_resizer">
+          <div class="resize_horz tip" title="Collapse/Expand the top pane"></div>
+        </div>
+        <div class="drag_row"><span>Drag a column header and drop it here to group by that column</span></div>
+        <%= render :partial => "providers/provider_search_table", :locals => {:providers => @providers} %>
       </div>
-    </div>
-    </div>
-    <div id="panel_south" class="ui-layout-south">
-      <div id="south_resizer">
-        <div class="resize_horz"></div>
-      </div>
-      <div class="drag_row"><span>Drag a column header and drop it here to group by that column</span></div>
-      <%= render :partial => "providers/provider_search_table", :locals => {:providers => @providers} %>
-    </div>
+    <div class="clear"></div>
   </div>
-  <div class="clear"></div>
 </div>
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      scroll.setiPadProviderSearchScroll();
-      baseActions.tutorialTrigger();
-      baseActions.noteTrigger();
-      panels.westResizeTrigger();
-      panels.northResizeTrigger();
+      var $table = $("#data_table")
+      app.panelLayoutWidthHeight();
+      scroll.setTableScroll($table);
+      app.tutorialTrigger();
+      app.noteTrigger();
       panels.toggleResultsChart();
       adminAction.setupCalendars();
       $.getScript('/javascripts/data/providerResults.js');
