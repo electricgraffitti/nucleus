@@ -1,5 +1,5 @@
-<div id="dash1" class="top_left_dashboard graph_box">
-  <div class="dashboard_module_header top_provider_block">
+<div id="dash1" class="widget">
+  <div class="widget_header">
     <div class="widget_header_top">
       <h3>Top 10 Flagged Providers by Score</h3>
     </div>
@@ -17,18 +17,13 @@
   </div>
   
   <div class="widget_content">
-    <div id="panel_header" class="basic_panel">
+    <div class="widget_table_header">
      <%= render :partial => 'dashboard/dashboard_top_provider_heading', :locals => {:provider => p} %>
     </div>
     <% top_providers.each do |p| %>
-    <div id="dashboard_providers" class="dashboard_basic_panel">
-      <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
-    </div>
+      <div class="widget_table_data">
+        <%= render :partial => 'providers/provider_dashboard_heading', :locals => {:provider => p} %>
+      </div>
     <% end %>
   </div>
-  <!-- <div class="widget_footer">
-    <div class="resize_horz pane_handle_toggle">
-      <div class="toggle_arrow"></div>
-    </div>
-  </div> -->
 </div>

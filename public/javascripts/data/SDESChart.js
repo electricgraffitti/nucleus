@@ -2,10 +2,10 @@ actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
       defaultSeriesType: 'column',
-      width: 310,
-      height: 220,
+      width: 370,
+      height: 240,
       zoomType: 'xy',
-      margin: [10,30,60,40],
+      margin: [10,0,50,40],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
@@ -39,7 +39,7 @@ actionChart = new Highcharts.Chart({
           return "$" + this.value/1000 + "k";
         },
         style: {
-          color: "#555555",
+          color: "#333333",
           font: "10px Arial, Helvetica, sans-serif"
         }
       },
@@ -50,19 +50,18 @@ actionChart = new Highcharts.Chart({
             this.x + ", "+ "$"+Highcharts.numberFormat(this.y, 0, ",") +'K Billed';
       },
       style: {
-        font: '12px Arial, Helvetica, sans-serif'
+        font: '10px Arial, Helvetica, sans-serif'
       },
       borderWidth: 1,
       borderRadius: 0
    },
    legend: {
      style: {
-        left: 'auto',
-        bottom: 'auto',
-        right: '30px',
-        top: '180px'
+       left: 'auto',
+       bottom: 'auto',
+       top: '210px'
      },
-     borderColor: '#D7D6D6',
+     borderColor: '#c3c4c3',
      borderWidth: 1,
      borderRadius: 0,
      shadow: false

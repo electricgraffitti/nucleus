@@ -1,11 +1,9 @@
 var pieChart = new Highcharts.Chart({
    chart: {
       renderTo: 'pie_chart',
-      margin: [50, 80, 60, 00],
-      // backgroundColor: {
-      //   linearGradient: [0, 0, 0, 300],
-      //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-      // },
+      width: 370,
+      height: 240,
+      margin: [30, 50, 30, 0],
       borderRadius: 0
    },
    credits: {
@@ -53,8 +51,8 @@ var pieChart = new Highcharts.Chart({
       style: {
          left: 'auto',
          bottom: 'auto',
-         right: '50px',
-         top: '100px'
+         right: '00px',
+         top: '165px'
       }
    },
     series: [{

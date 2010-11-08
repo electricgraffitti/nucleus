@@ -13,6 +13,8 @@
   <div id="panel_center">
       <div id="panel_north">
         <div id="inner_north">
+          
+          
           <div id="results_chart" class="widget">
           <div class="widget_header">
             <div class="widget_header_top">
@@ -41,25 +43,30 @@
               <%= render :partial => 'dashboard/widget_options' %>
             </div>
           </div>
-          <div id="provider_content" class="widget_content">
+          <div id="dynamic_search_content">
+            <div id="provider_content" class="widget_content">
             <div class="provider_header">
               <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
             </div>
-            <div class="stat_group">
-              <div class="stat_title left">Identified Savings</div>
-              <div class="stat_value left">
-                <div class="stat_flag stat_flag_red"></div>
-                2,048,157
+            <div class="stat_box">
+              <div class="stat_group group_2">
+                <div class="stat_title left">Identified Savings</div>
+                <div class="saving_stat left">
+                  <div class="stat_dollar stat_flag_dollar"></div>
+                  2,048,157
+                </div>
+              </div>
+              <div class="stat_group group_2">
+                <div class="stat_title left">Accepted Savings</div>
+                <div class="saving_stat left">
+                  <div class="stat_dollar stat_flag_dollar"></div>
+                  2,048,157
+                </div>
               </div>
             </div>
-            <div class="stat_group">
-              <div class="stat_title left">Accepted Savings</div>
-              <div class="stat_value left">
-                <div class="stat_flag stat_flag_red"></div>
-                2,048,157
-              </div>
-            </div>
-            <div class="stat_group">
+
+            <div class="stat_box">
+              <div class="stat_group">
               <div class="stat_title left">Patients</div>
               <div class="stat_value left">
                 <%= number_to_percentage(@provider.provider_stat.patient_percentage, :precision => 1) %>
@@ -69,7 +76,7 @@
                 <%= @provider.provider_stat.final_patient_count %> of <%= @provider.provider_stat.total_patient_count %> Patients
               </div>
             </div>
-            <div class="stat_group">
+              <div class="stat_group">
               <div class="stat_title left">Claims</div>
               <div class="stat_value left">
                 <%= number_to_percentage(@provider.provider_stat.claim_percentage, :precision => 1) %>
@@ -77,56 +84,11 @@
               </div>
               <div class="stat_range left"><%= @provider.provider_stat.final_claim_count %> of <%= @provider.provider_stat.total_claim_count %> Claims</div>
             </div>
+            </div>
+          </div>
           </div>
         </div>
-        
-          <div class="widget">
-          <div class="widget_header">
-            <div class="widget_header_top">
-              <h3>Provider Information</h3>
-            </div>
-            <div class="widget_header_bottom">
-              <%= render :partial => 'dashboard/widget_options' %>
-            </div>
-          </div>
-          <div id="provider_content" class="widget_content">
-            <div class="provider_header">
-              <%= render :partial => 'providers/provider_heading', :locals => {:provider => @provider} %>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Identified Savings</div>
-              <div class="stat_value left">
-                <div class="stat_flag stat_flag_red"></div>
-                2,048,157
-              </div>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Accepted Savings</div>
-              <div class="stat_value left">
-                <div class="stat_flag stat_flag_red"></div>
-                2,048,157
-              </div>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Patients</div>
-              <div class="stat_value left">
-                <%= number_to_percentage(@provider.provider_stat.patient_percentage, :precision => 1) %>
-                <div class="stat_flag stat_flag_red"></div>
-              </div>
-              <div class="stat_range left">
-                <%= @provider.provider_stat.final_patient_count %> of <%= @provider.provider_stat.total_patient_count %> Patients
-              </div>
-            </div>
-            <div class="stat_group">
-              <div class="stat_title left">Claims</div>
-              <div class="stat_value left">
-                <%= number_to_percentage(@provider.provider_stat.claim_percentage, :precision => 1) %>
-                <div class="stat_flag stat_flag_red"></div>
-              </div>
-              <div class="stat_range left"><%= @provider.provider_stat.final_claim_count %> of <%= @provider.provider_stat.total_claim_count %> Claims</div>
-            </div>
-          </div>
-        </div>
+
         </div>
      </div>
      <div id="panel_south" class="ui-layout-south">

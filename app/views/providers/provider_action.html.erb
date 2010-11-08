@@ -1,157 +1,160 @@
-<%= render :partial => 'providers/action_page_header', :locals => {:provider => @provider} %>
+<% content_for :page_header do %>
+  <%= render :partial => 'providers/action_page_header', :locals => {:provider => @provider} %>
+<% end %>
 <div id="panel_layout" class="clear">
-  <div id="inner_panel" class="panel ui-layout-center">
     <div id="panel_north">
-      <div class="widget widget3">
-      
-      <%# Panel Header %>
-      <div class="provider_header module_header">
-        <h3><span><%= link_to "#{@provider.full_name}", provider_path(@provider), :class => "tip provider_container_trigger", :provider_id => @provider.id, :title => "Provider Profile" %></span></h3>
-        <div id="provider_rating" class="<%= @provider.score_color(@provider)%>_rating">
-          <%= link_to "#{@provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Actions" %>
-        </div>
-      </div>
-      
-      <%# Panel Content %>
-      <div class="inner_panel_content">
-        <div class="panel_left">
-          <div class="panel_item">          
-            <div class="panel_item_title">Primary Speciality</div>
-            <div id="speciality_code_main" class="panel_item_value" title="<%= @provider.provider_speciality.speciality_type %>"><%=h @provider.provider_speciality.speciality_code %></div>
-          </div>
-          <div class="panel_item">          
-            <div class="panel_item_title">Speciality</div>
-            <div class="panel_item_value"><%=h @provider.provider_speciality.speciality_code %> - <%=h @provider.provider_speciality.speciality_type %></div>
-          </div>
-
-          <div class="panel_item">          
-            <div class="panel_item_title">Group Name</div>
-            <div class="panel_item_value"><%=h @provider.provider_group.name %></div>
-          </div>
-
-          <div class="panel_item">          
-            <div class="panel_item_title">Case Tracker ID</div>
-            <div class="panel_item_value"><%=h @provider.id %></div>
-          </div>
-
-        </div>
-        <div class="panel_right">
-          <div class="panel_item">          
-            <div class="panel_item_title">TIN</div>
-            <div class="panel_item_value"><%=h @provider.tin %></div>
-          </div>
-          <div class="panel_item">          
-            <div class="panel_item_title">State</div>
-            <div class="panel_item_value"><%=h @provider.state.abbreviation %></div>
-          </div>
-          <div class="panel_item">          
-            <div class="panel_item_title">Group TIN</div>
-            <div class="panel_item_value"><%=h @provider.provider_group.group_tin %></div>
-          </div>
-          <div class="panel_item">          
-            <div class="panel_item_title">Case Status</div>
-            <div class="panel_item_value">Under Review</div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    
-      <div class="widget widget3">
-      
-      <%# Panel Header %>
-      <div class="module_header">
-        <div class="widget_header_top">
-          <h3>Condition Statistics</h3>
-        </div>
-        <div class="widget_header_bottom">
-          <div class='widget_header_sub_title'>
-            06/01/10 - 10/31/10
-          </div>
-          <%= render :partial => 'dashboard/widget_options' %>
-        </div>
-      </div>
-      
-      <%# Panel Content %>
-      <div id="action_stats" class="inner_panel_content">
-        <div class="stat_group">
-          <div class="stat_title left">Patients</div>
-          <div class="stat_value left">
-            45%
-            <div class="stat_flag stat_flag_red"></div>
-          </div>
-          <div class="stat_range left">
-            102 of 225 Patients
-          </div>
-        </div>
-        <div class="stat_group">
-          <div class="stat_title left">Claims</div>
-          <div class="stat_value left">
-            37%
-            <div class="stat_flag stat_flag_red"></div>
-          </div>
-          <div class="stat_range left">
-            209 of 561 Claims
-          </div>
-        </div>
-        <div class="stat_group">
-          <div class="stat_title left">Lines</div>
-          <div class="stat_value left">
-            66%
-            <div class="stat_flag stat_flag_orange"></div>
-          </div>
-          <div class="stat_range left">
-            2 of 3
-          </div>
-        </div>
-        <div class="stat_group">
-          <div class="stat_title left">Billed</div>
-          <div class="stat_value left">
-            32%
-            <div class="stat_flag stat_flag_yellow"></div>
-          </div>
-          <div class="stat_range left">
-            $63,736 of $200,551 Billed
-          </div>
-        </div>
-        <div class="stat_group">
-          <div class="stat_title left">Paid</div>
-          <div class="stat_value left">
-            40%
-            <div class="stat_flag stat_flag_yellow"></div>
-          </div>
-          <div class="stat_range left">
-            $33,611 of $84,218 Paid
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    
-      <div class="widget widget3">
-      <%# Panel Header %>
-      <div class="module_header">
-        <div class="widget_header_top">
-          <h3>Condition Chart</h3>
-        </div>
-        <div class="widget_header_bottom">
-          <div class='widget_header_sub_title'>
-            06/01/10 - 10/31/10
-          </div>
-          <%= render :partial => 'dashboard/widget_options' %>
-        </div>
-      </div>
-      
-      <%# Panel Content %>
-      <div class="inner_panel_content">
-        <div id="provider_action_chart" class="clear left"></div>
-      </div>
+      <div id="inner_north">
         
+        <div class="module">
+          <div class="module_header">
+            <h3>
+              <span>
+                <%= link_to "#{@provider.full_name}", provider_path(@provider), :class => "tip provider_container_trigger", :provider_id => @provider.id, :title => "Provider Profile" %>
+              </span>
+            </h3>
+            <div id="provider_rating" class="<%= @provider.score_color(@provider)%>_rating">
+              <%= link_to "#{@provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Actions" %>
+            </div>
+          </div>
+          <div class="module_content">
+            <div class="content_left">
+              <div class="module_item">          
+                <div class="module_item_title">Provider Sequence</div>
+                <div id="speciality_code_main" class="module_item_value" title=""><%=h @provider.sequence_number %></div>
+              </div>
+              <div class="module_item">          
+                <div class="module_item_title">Speciality</div>
+                <div class="module_item_value"><%=h @provider.provider_speciality.speciality_code %> - <%=h @provider.provider_speciality.speciality_type %></div>
+              </div>
+
+              <div class="module_item">          
+                <div class="module_item_title">Group Name</div>
+                <div class="module_item_value"><%=h @provider.provider_group.name %></div>
+              </div>
+
+              <div class="module_item">          
+                <div class="module_item_title">Total Billed</div>
+                <div class="module_item_value"><%=h number_to_currency(@provider.provider_stat.total_billed_count) %></div>
+              </div>
+              
+              <div class="module_item">          
+                <div class="module_item_title">Total Paid</div>
+                <div class="module_item_value"><%=h number_to_currency(@provider.provider_stat.final_billed_count) %></div>
+              </div>
+
+            </div>
+            <div class="content_right">
+              <div class="module_item">          
+                <div class="module_item_title">TIN</div>
+                <div class="module_item_value"><%=h @provider.tin %></div>
+              </div>
+              <div class="module_item">          
+                <div class="module_item_title">State</div>
+                <div class="module_item_value"><%=h @provider.state.abbreviation %></div>
+              </div>
+              <div class="module_item">          
+                <div class="module_item_title">Group TIN</div>
+                <div class="module_item_value"><%=h @provider.provider_group.group_tin %></div>
+              </div>
+              <div class="module_item">          
+                <div class="module_item_title">CIU Referral</div>
+                <div class="module_item_value">Under Review</div>
+              </div>
+              <div class="module_item">          
+                <div class="module_item_title">Case History</div>
+                <div class="module_item_value">None</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget_header">
+            <div class="widget_header_top">
+              <h3>Condition Statistics</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <div class='widget_header_sub_title'>
+                06/01/10 - 10/31/10
+              </div>
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
+          </div>
+          <div class="widget_content">
+              <div class="stat_box">
+                <div class="stat_group group_2">
+                  <div class="stat_title left">Identified Savings</div>
+                  <div class="saving_stat left">
+                    <div class="stat_dollar stat_flag_dollar"></div>
+                    2,048,157
+                  </div>
+                </div>
+                <div class="stat_group group_2">
+                  <div class="stat_title left">Accepted Savings</div>
+                  <div class="saving_stat left">
+                    <div class="stat_dollar stat_flag_dollar"></div>
+                    2,048,157
+                  </div>
+                </div>
+              </div>
+
+              <div class="stat_box">
+                <div class="stat_group">
+                  <div class="stat_title left">Patients</div>
+                  <div class="stat_value left">
+                    45%
+                    <div class="stat_flag stat_flag_red"></div>
+                  </div>
+                  <div class="stat_range left">
+                    102 of 225 Patients
+                  </div>
+                </div>
+                <div class="stat_group">
+                  <div class="stat_title left">Claims</div>
+                  <div class="stat_value left">
+                    37%
+                    <div class="stat_flag stat_flag_red"></div>
+                  </div>
+                  <div class="stat_range left">
+                    209 of 561 Claims
+                  </div>
+                </div>
+                <div class="stat_group">
+                  <div class="stat_title left">Lines</div>
+                  <div class="stat_value left">
+                    66%
+                    <div class="stat_flag stat_flag_orange"></div>
+                  </div>
+                  <div class="stat_range left">
+                    2 of 3
+                  </div>
+                </div>     
+            </div>
+          </div>
+        </div>
+        
+        <div class="widget">
+          <div class="widget_header">
+            <div class="widget_header_top">
+              <h3>Condition Chart</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <div class='widget_header_sub_title'>
+                06/01/10 - 10/31/10
+              </div>
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
+          </div>
+          <div class="widget_content">
+            <div id="provider_action_chart" class="clear left">
+          
+            </div>
+          </div>
+        </div>
+      
+      </div>
     </div>
-    </div>
-    <div id="panel_south" class="ui-layout-south">
+    <div id="panel_south">
       <div id="south_resizer">
         <div class="resize_horz"></div>
       </div>
@@ -164,12 +167,13 @@
       <div class="drag_row left"><span>Drag &amp; drop a column header here to group by that column.</span></div>
       <%= render :partial => 'provider_action_table', :locals => {:provider => @provider, :table_data => @provider_conditions} %>
     </div>
-  </div>
   <div class="clear"></div>
 </div>
+
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      app.panelLayoutWidthHeight();
       app.triggerActionTable();
       app.tutorialTrigger();
       app.noteTrigger();

@@ -1,5 +1,5 @@
-<div id="dash6" class="top_left_dashboard graph_box">
-  <div class="dashboard_module_header top_provider_block">
+<div id="dash6" class="widget">
+  <div class="widget_header">
     <div class="widget_header_top">
       <h3>Savings Opportunities by Service</h3>
     </div>
@@ -17,15 +17,12 @@
   </div>
   
   <div class="widget_content">
-    <div id="panel_header" class="basic_panel">
-      <div class="top_provider_block saving_opp_product">Product</div>
-      <div class="top_provider_block saving_opp_est">Est Savings</div>
-      <div class="top_provider_block saving_opp_claims">Claims</div>
-      <div class="top_provider_block saving_opp_more">Learn More</div>
+    <div class="widget_table_header">
+      <div class="widget_table_head product">Product</div>
+      <div class="widget_table_head est">Est Savings</div>
+      <div class="widget_table_head claims">Claims</div>
+      <div class="widget_table_head more">Free Trial</div>
     </div>
     <%= render :partial => 'dashboard/service_opportunities', :locals => {:provider => p} %>
   </div>
-  <!-- <div class="widget_footer">
-    <div class="resize_horz pane_handle_toggle"><div class="toggle_arrow"></div></div>
-  </div> -->
 </div>

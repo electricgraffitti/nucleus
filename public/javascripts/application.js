@@ -47,8 +47,7 @@ var tableActions = {
 	},
 
 	setInitHighlight: function() {
-		$('#provider_search tbody').children().first().click();
-		$('#provider_action_table tbody').children().first().click();
+	  $('#data_table table tbody').children().first().click();
 	},
 
 	findId: function(el) {
@@ -63,7 +62,7 @@ var tableActions = {
 
 	swapProvider: function(el) {
 		data = tableActions.findId(el);
-		$('#provider_content').load("/nucleus-provider-search #provider_content", {
+		$('#dynamic_search_content').load("/nucleus-provider-search #provider_content", {
 			id: data
 		});
 	},
@@ -120,7 +119,7 @@ var tableActions = {
 	},
 
 	setChartByTableRowClick: function() {
-		$('#provider_action_table tbody tr').click(function() {
+		$('.action_table tbody tr').click(function() {
 			tableActions.setActive($(this));
 			tableActions.actionChartData($(this));
 			tableActions.setConditionChart($(this));
@@ -285,9 +284,6 @@ var panels = {
   },
   
   setNorthWidgetWrap: function() {
-    var $widgetWrap = $("#inner_north");
-    var $widgets = $widgetWrap.find('.widget');
-    $widgetWrap.width(($widgets.length * $widgets.first().outerWidth()) + ($widgets.length * 10));
     scroll.setWidgetScroll();
   },
   
@@ -579,6 +575,10 @@ var scroll = {
   
   setWidgetScroll: function() {
    $("#panel_north").jScrollTouch(); 
+  },
+  
+  setDashScroll: function() {
+    $("#dashboard").jScrollTouch();
   }
   
 };
@@ -1039,10 +1039,15 @@ var app = {
     var $win = $(window);
     var $head = $("#hd");
     var $panel_box = $("#panel_layout");
+    var $innerNorth = $("#inner_north");
     var $westPanel = $("#panel_west");
     var $centerPanel = $("#panel_center");
     var $innerWest = $("#inner_west");
     var $westresizerbar = $("#west_resizer");
+    
+    
+    var widgetCount = $innerNorth.children().length;
+    $innerNorth.width(widgetCount * 400);
   
     $panel_box.height($win.height() - $head.height());
     $centerPanel.width($win.width() - $westPanel.width());

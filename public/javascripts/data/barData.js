@@ -2,25 +2,19 @@ var barChart = new Highcharts.Chart({
   chart: {
     renderTo: 'savings_tracker',
     defaultSeriesType: 'column',
+    width: 370,
+    height: 240,
+    margin: [0,0,40,0],
     style: {
-      margin: ['0px 0px 40px 0px'],
-      font: '16px Arial, Helvetica, sans-serif'
+      font: '13px Arial, Helvetica, sans-serif'
     },
-    // backgroundColor: {
-    //   linearGradient: [0, 0, 0, 300]
-    //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(234,234,234)']]
-    // },
     borderRadius: 0
   },
   credits: {
    enabled: false
   },
   title: {
-   text: null,
-    // style: {
-    //    color: "#5bab46",
-    //    font: '12px Arial, Helvetica, sans-serif'
-    // }
+   text: null
   },
   subtitle: {
    enabled: false
@@ -30,13 +24,13 @@ var barChart = new Highcharts.Chart({
     title: {
        text: 'Service Type',
        style: {
-         color: '#555555',
+         color: '#333333',
          font: '12px Arial, Helvetica, sans-serif'
        }
     },
     labels: {
       style: {
-        color: '#555555',
+        color: '#333333',
         font: '10px Arial, Helvetica, sans-serif'
       }
     }
@@ -46,13 +40,13 @@ var barChart = new Highcharts.Chart({
     title: {
        text: 'Service Savings',
        style: {
-         color: '#555555',
+         color: '#333333',
          font: '12px Arial, Helvetica, sans-serif'
        }
     },
     labels: {
       style: {
-        color: '#555555',
+        color: '#333333',
         font: '10px Arial, Helvetica, sans-serif'
       }
     }
@@ -63,7 +57,7 @@ var barChart = new Highcharts.Chart({
            this.series.name +': '+ this.y + " Service Savings";
     },
     style: {
-      font: '12px Arial, Helvetica, sans-serif'
+      font: '10px Arial, Helvetica, sans-serif'
     },
     borderRadius: 0,
     borderWidth: 1
@@ -78,8 +72,8 @@ var barChart = new Highcharts.Chart({
      style: {
         left: 'auto',
         bottom: 'auto',
-        right: '30px',
-        top: '35px'
+        right: '7px',
+        top: '7px'
      },
      backgroundColor: '#FFFFFF',
      borderColor: '#e7e7e7',

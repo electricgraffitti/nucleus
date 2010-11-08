@@ -1,10 +1,15 @@
-<%= render :partial => 'dashboard/dashboard_header' %>
+<% content_for :page_header do %>
+  <%= render :partial => 'dashboard/dashboard_header' %>
+<% end %>
+
 <div id="panel_layout" class="clear">
+  
   <div id="dashboard_options" class="hidden">
     <h2 class="header">Dashboard Options</h2>
     <%= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
     <%= link_to "Close", "", :class => "options_panel_close" %>
   </div>
+  
   <div id="dashboard">
     <ul id="tab_nav" class="main">
       <li class="active"><%= link_to "Page 1", "#page1" %></li>
@@ -16,14 +21,15 @@
       <%= render :partial => 'dashboard_widgets/dash2' %>
       <%= render :partial => 'dashboard_widgets/dash3' %>
       <%= render :partial => 'dashboard_widgets/dash4' %>
-    </div>
-    <div id="page2" class="dash_panel hidden">
       <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
       <%= render :partial => 'dashboard_widgets/dash6', :locals => {:p => p} %>
     </div>
-    <div id="page3" class="dash_panel hidden">
+    <div id="page2" class="dash_panel hidden">
       <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
       <%= render :partial => 'dashboard_widgets/dash7', :locals => {:top_providers => @top_providers} %>
+    </div>
+    <div id="page3" class="dash_panel hidden">
+
     </div>
   </div>
   <div class="clear"></div>
@@ -36,6 +42,7 @@
       var $page1 = $("#page1");
       var $page2 = $("#page2");
       var $page3 = $("#page3");
+      scroll.setDashScroll();
       widget.dashboardOptions('#dashboard_options');
       widget.widgetOptions($dash);
       drag.setupDashboardPanels($page1, "dashPage1", 1000);
@@ -45,7 +52,7 @@
       drag.loadQuickLaunchOrder($page2, "dashPage2");
       drag.loadQuickLaunchOrder($page3, "dashPage3");
       panels.dashTabs();
-      baseActions.tutorialTrigger();
+      app.tutorialTrigger();
       widget.getFeeds();
       // Scatter Plot
       $.getScript('javascripts/data/scatterData.js');

@@ -2,10 +2,10 @@ actionChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_chart', 
       defaultSeriesType: 'spline',
-      width: 300,
-      height: 220,
+      width: 370,
+      height: 240,
       zoomType: 'xy',
-      margin: [40,10,50,50],
+      margin: [10,0,50,50],
       // backgroundColor: {
       //   linearGradient: [0, 0, 0, 300],
       //   stops: [[0, 'rgb(255,255,255)'],[1, 'rgb(240,240,240)']]
