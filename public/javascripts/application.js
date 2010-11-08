@@ -908,6 +908,17 @@ var app = {
     });
 	},
 	
+	comingSoonOverlay: function() {
+	  var $trig = $('.coming_soon');
+	  $trig.overlay({
+	    expose: {
+       color: '#000000',
+       loadSpeed: 200,
+       opacity: 0.15
+      }
+	  });
+	},
+	
 	noteTrigger: function() {
 	 var $nTrig = $('a.note_trigger');
 		

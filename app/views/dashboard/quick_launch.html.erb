@@ -54,13 +54,13 @@
           <%= link_to "DentalClaim Insight", "", :target => "_blank", :class => "dash14 tip", :title => "DentalClaim Insight" %>
         </div>
         <div id="15" class="quick_launch_box cti_widget">
-          <%= link_to "CaseTracker Insight", "", :target => "_blank", :class => "dash15 tip", :title => "CaseTracker Insight" %>
+          <%= link_to "CaseTracker Insight", "", :target => "_blank", :class => "dash15 tip", :rel => "#coming_soon", :title => "CaseTracker Insight" %>
         </div>
         <div id="16" class="quick_launch_box flagged_widget">
-          <%= link_to "Flagged Providers", "", :target => "_blank", :class => "dash16 tip", :title => "Flagged Providers" %>
+          <%= link_to "Flagged Providers", claims_list_path, :target => "_blank", :class => "dash16 tip", :title => "Flagged Providers" %>
         </div>
         <div id="17" class="quick_launch_box suspect_provider_widget">
-          <%= link_to "Suspect Providers", "", :target => "_blank", :class => "dash17 tip", :title => "Suspect Providers" %>
+          <%= link_to "Suspect Providers", provider_search_path, :target => "_blank", :class => "dash17 tip", :title => "Suspect Providers" %>
         </div>
         <div id="18" class="quick_launch_box provider_search_widget">
           <%= link_to "Provider Search", provider_search_path, :target => "_blank", :class => "dash18 tip", :title => "Provider Search" %>
@@ -80,6 +80,7 @@
       drag.setupQuickLaunch($grid, "quickLaunchCookie", 1000);
       drag.loadQuickLaunchOrder($grid, "quickLaunchCookie");
       app.tutorialTrigger();
+      app.comingSoonOverlay();
       app.setQuickLaunchHovers();
     });
   </script>

@@ -352,7 +352,7 @@ label.error {
   left: 0px;
   height: 28px;
   width: 100%;
-	background: url('../images/header/main_nav_bg.png') 0px 0px repeat-x;
+	background:url("../images/header/main_nav_bg.png") repeat-x scroll 0 0 transparent;
 	border-top: 1px solid #5bab46;
 }
 ul.nav_ul {
@@ -3434,6 +3434,31 @@ div.tutorial_overlay {
 #scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
   text-decoration: none;
 }
+/***********************************************************************************************************************/
+/*************************************************************************************** COMING SOON MODALS ************/
+div.coming_soon { 
+    position: relative;
+    width:490px; 
+    background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    display:none; 
+    padding: 0 !important;
+}
+div.coming_soon div.close { 
+  background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
+  cursor:pointer;
+  height:38px;
+  position:absolute;
+  right:-12px;
+  top:-10px;
+  width:38px;
+  z-index:10;
+}
+.contentWrap {
+  position: relative;
+  float: left;
+  text-align: left;
+}
+
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/
 #tiptip_holder {
