@@ -3764,6 +3764,9 @@ div.tutorial_overlay {
   position: relative;
   display: block;
 }
+#scroll_thumbs ul li.active a.scroll_nav_trigger_copy {
+  color: #fff;
+}
 #scroll_thumbs ul li a.scroll_nav_trigger_image {
   position: relative;
   float: left;
