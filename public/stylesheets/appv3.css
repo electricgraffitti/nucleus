@@ -2225,9 +2225,15 @@ a.csv_table_icon {
   float:left;
   margin:0;
   width:720px;
-  height:395px;
+  height:390px;
 	overflow-x: hidden;
 	overflow-y: auto;
+}
+#post_block form {
+  width: 650px;
+}
+#post_block form textarea {
+  width: 560px;
 }
  .message_reply {
   background:none repeat scroll 0 0 #F3F3F3;
