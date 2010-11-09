@@ -16,11 +16,64 @@
     <div id="report_output" class="report module">
       <%= render :partial => 'reports/report_output' %>
     </div>
-    <div class="clear"></div>
-    <div id="report_tabs">
-      
-    </div>
   <% end %>
+  <div id="report_center_tabs">
+    <ul id="tab_nav" class="main">
+      <li class="active"><%= link_to "Scheduled Events", "#tab1" %></li>
+      <li><%= link_to "Completed Events", "#tab2" %></li>
+    </ul>
+
+    <div id="tab1" class="report_panel">
+        <div id="data_table" class="reports_table action_table left">
+          <table id="report_scheduled" cellpadding='0' cellspacing="0">
+            <thead>
+              <tr>
+                <th class="accept">Name</th>
+                <th class="accept">Description</th>
+                <th class="accept">Format</th>
+                <th class="accept">Completed Date</th>
+                <th class="accept">Submitted</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Bob Hanson"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Darin Johnson"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "xls", :report_owner => "Rick Schultz"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "xls", :report_owner => "Aaron Case"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Brian Henderson"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "csv", :report_owner => "Susan Romero"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "csv", :report_owner => "Patricia Higgins"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Steve Ellison"} %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <div id="tab2" class="report_panel hidden">
+        <div id="data_table" class="action_table left">
+          <table id="report_scheduled" cellpadding='0' cellspacing="0">
+            <thead>
+              <tr>
+                <th class="accept">Name</th>
+                <th class="accept">Description</th>
+                <th class="accept">Format</th>
+                <th class="accept">Completed Date</th>
+                <th class="accept">Submitted</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Bob Hanson"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Darin Johnson"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "xls", :report_owner => "Rick Schultz"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "xls", :report_owner => "Aaron Case"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Brian Henderson"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "csv", :report_owner => "Susan Romero"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "csv", :report_owner => "Patricia Higgins"} %>
+              <%= render :partial => 'report_table_row', :locals => {:report_type => "pdf", :report_owner => "Steve Ellison"} %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
   <div class="clear"></div>
 </div>
 
@@ -29,6 +82,7 @@
     $(document).ready(function() {
       adminAction.setupCalendars();
       app.tutorialTrigger();
+      panels.reportTabs();
     });
   </script>
 <% end %>

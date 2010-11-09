@@ -367,6 +367,20 @@ var panels = {
       $(this).parent().addClass('active');
       page.show();
     });
+  },
+  
+  reportTabs: function() {
+    var $tabs = $('#report_center_tabs ul#tab_nav li a');
+    var $panels = $('#report_center_tabs .report_panel');
+    $tabs.click(function(e) {
+      e.preventDefault();
+      var panelId = $(this).attr('href');
+      var page = $(panelId);
+      $panels.hide();
+      $(this).parent().siblings().removeClass('active');
+      $(this).parent().addClass('active');
+      page.show();
+    });
   }
   
 };

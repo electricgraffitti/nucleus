@@ -1,59 +1,59 @@
 <div id="data_table" class="action_table left">
-          <table id="provider_action" cellpadding='0' cellspacing="0">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="accept"><%= check_box_tag(:provider_select, 'checked') %></th>
-                <th class="accept">Score</th>
-                <th class="accept"></th>
-                <th class="accept"></th>
-                <th class="accept">Trigger Date</th>
-                <th class="accept">Condition</th>
-                <th class="accept">Rank</th>
-                <th class="accept">Ttl Provider</th>
-                <th class="accept">Billed</th>
-                <th class="accept">Paid</th>
-                <th class="accept">HCI Action</th>
-                <th class="accept">HCI Action Date</th>
-                <th class="accept">Client Action</th>
-                <th class="accept">Client Action Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% table_data.each do |pc| %>
-              <tr id="<%= pc.id %>" class='<%=cycle('even', 'odd')%>' chartType="<%= pc.condition_type.condition_code %>">
-                <td class="provider_action_toggle"><div class="table_icon table_toggle_icon tip" title="Click to Toggle"></div></td>
-                <td class="provider_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
-                <td class="provider_search_score"><div class="table_icon table_rating_dot <%= provider.score_color(provider) %>_dot"></div><%= link_to "#{provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Action" %></td>
-                <td class="provider_action_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon tip', :title => "Condition Notes", :rel => '#overlay' %></td>
-                <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', claims_list_path, :class => "tip", :title => "Condition Profile" %></td>
-                <td class="provider_action_trigger_date"><%= (pc.trigger_date).to_s(:short_date) %></td>
-                <td class="provider_action_condition"><%= pc.condition_type.condition_code %> / <%= pc.condition_type.condition_type %></td>
-                <td class="provider_action_rank"><%= pc.condition_rank %></td>
-                <td class="provider_action_ttl"><%= pc.total_provider %></td>
-                <td class="provider_action_billed"><%= number_to_currency(pc.condition_billed) %></td>
-                <td class="provider_action_paid"><%= number_to_currency(pc.condition_paid) %></td>
-                <td class="provider_action_remnd"><%= pc.hci_action %></td>
-                <td class="provider_action_date"></td>
-                <td class="provider_action_client_action"></td>
-                <td class="provider_action_client_action_date"></td>
-              </tr>
-              <tr class="table_sub_content" cellpadding='0'>
-                <td colspan='16' cellpadding='0' class="empty">
-              <div class="table_toggle_content" style="display: none;">
-                <% if pc.condition_type.condition_code == "SFRO" %>
-                  <%= render :partial => 'condition_stats/sfro_table_expansion', :locals => {:cs => pc.condition_stat} %>
-                <% elsif pc.condition_type.condition_code == "SDES" %>
-                  <%= render :partial => 'condition_stats/sdes_table_expansion', :locals => {:cs => pc.condition_stat} %>
-                <% elsif pc.condition_type.condition_code == "SBRD" %>
-                  <%= render :partial => 'condition_stats/sbrd_table_expansion', :locals => {:pc => pc} %>
-                <% else %>
-                  <%= render :partial => 'condition_stats/base_table_expansion' %>
-                <% end %>
-              </div>
-              </td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+  <table id="provider_action" cellpadding='0' cellspacing="0">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="accept"><%= check_box_tag(:provider_select, 'checked') %></th>
+        <th class="accept">Score</th>
+        <th class="accept"></th>
+        <th class="accept"></th>
+        <th class="accept">Trigger Date</th>
+        <th class="accept">Condition</th>
+        <th class="accept">Rank</th>
+        <th class="accept">Ttl Provider</th>
+        <th class="accept">Billed</th>
+        <th class="accept">Paid</th>
+        <th class="accept">HCI Action</th>
+        <th class="accept">HCI Action Date</th>
+        <th class="accept">Client Action</th>
+        <th class="accept">Client Action Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% table_data.each do |pc| %>
+      <tr id="<%= pc.id %>" class='<%=cycle('even', 'odd')%>' chartType="<%= pc.condition_type.condition_code %>">
+        <td class="provider_action_toggle"><div class="table_icon table_toggle_icon tip" title="Click to Toggle"></div></td>
+        <td class="provider_action_checkbox"><%= check_box_tag(:provider_select, :value => 'checked', :checked => false) %></td>
+        <td class="provider_search_score"><div class="table_icon table_rating_dot <%= provider.score_color(provider) %>_dot"></div><%= link_to "#{provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Action" %></td>
+        <td class="provider_action_note"><%= link_to 'Claim Note', note_path, :class => 'note_trigger table_icon table_note_icon tip', :title => "Condition Notes", :rel => '#overlay' %></td>
+        <td class="provider_action_search"><%= link_to '<div class="table_icon table_mag_icon"></div>', claims_list_path, :class => "tip", :title => "Condition Profile" %></td>
+        <td class="provider_action_trigger_date"><%= (pc.trigger_date).to_s(:short_date) %></td>
+        <td class="provider_action_condition"><%= pc.condition_type.condition_code %> / <%= pc.condition_type.condition_type %></td>
+        <td class="provider_action_rank"><%= pc.condition_rank %></td>
+        <td class="provider_action_ttl"><%= pc.total_provider %></td>
+        <td class="provider_action_billed"><%= number_to_currency(pc.condition_billed) %></td>
+        <td class="provider_action_paid"><%= number_to_currency(pc.condition_paid) %></td>
+        <td class="provider_action_remnd"><%= pc.hci_action %></td>
+        <td class="provider_action_date"></td>
+        <td class="provider_action_client_action"></td>
+        <td class="provider_action_client_action_date"></td>
+      </tr>
+      <tr class="table_sub_content" cellpadding='0'>
+        <td colspan='16' cellpadding='0' class="empty">
+      <div class="table_toggle_content" style="display: none;">
+        <% if pc.condition_type.condition_code == "SFRO" %>
+          <%= render :partial => 'condition_stats/sfro_table_expansion', :locals => {:cs => pc.condition_stat} %>
+        <% elsif pc.condition_type.condition_code == "SDES" %>
+          <%= render :partial => 'condition_stats/sdes_table_expansion', :locals => {:cs => pc.condition_stat} %>
+        <% elsif pc.condition_type.condition_code == "SBRD" %>
+          <%= render :partial => 'condition_stats/sbrd_table_expansion', :locals => {:pc => pc} %>
+        <% else %>
+          <%= render :partial => 'condition_stats/base_table_expansion' %>
+        <% end %>
+      </div>
+      </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

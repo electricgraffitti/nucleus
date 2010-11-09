@@ -1674,6 +1674,15 @@ table a.score {
 }
 /***********************************************************************************************************************/
 /***************************************************************************************** REPORT CENTER ***************/
+#centered_layout form {
+  float: left;
+}
+#form_top {
+  position: relative;
+  float: left;
+  width: 1002px;
+  height: 397px;
+}
 #report_selection.module {
   width: 230px;
 }
@@ -1886,11 +1895,79 @@ span#occurence {
 }
 #report_buttons {
   float: right;
-  width: 100px;
+  width: 107px;
   height: 20px;
 }
 #report_clear {
   margin-left: 10px;
+}
+#report_center_tabs {
+  position: relative;
+  float: left;
+  width: 1002px;
+  margin: 0px 10px 10px;
+}
+#report_center_tabs ul {
+  position: relative;
+  float: left;
+  width:1002px;
+  border-bottom: 1px solid #c0c0c0;
+}
+#report_center_tabs ul li {
+  position: relative;
+  float: left;
+  margin-right: 1px;
+  height: 30px;
+  text-align: center;
+  background: #d36c21 url(../images/message/button_bg-green.png) 0px 0px repeat-x;
+}
+#report_center_tabs ul li:hover {
+  background: #eee;
+}
+#report_center_tabs ul li a {
+  position: relative;
+  float: left;
+  height: 29px;
+  padding:8px 30px;
+  color: #fff;
+  font-weight: bold;
+   border-top:1px solid #6BD450;
+}
+#report_center_tabs ul li a:hover, #report_center_tabs ul li.active a {
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid #efefef;
+}
+#report_center_tabs ul li.active a {
+ border-top: 1px solid #efefef;
+}
+#report_center_tabs ul li.active {
+  background:none repeat scroll 0 0 #E4E3E4;
+  border-color:#C0C0C0 #C0C0C0 #E4E3E4 #C0C0C0;
+  border-style:solid;
+  border-width:1px;
+  margin-bottom:-2px;
+  color: #333;
+}
+#report_center_tabs .report_panel {
+  background:none repeat scroll 0 0 #E4E3E4;
+  border-bottom:1px solid #C4C5C4;
+  border-left:1px solid #C4C5C4;
+  border-right:1px solid #C4C5C4;
+  float:left;
+  height:312px;
+  padding-top:20px;
+  width:1000px;
+}
+#report_scheduled {
+  width: 1000px;
+}
+#report_scheduled td {
+  padding:10px;
+}
+#report_scheduled .reports_table {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 /***********************************************************************************************************************/
 /**************************************************************************************** MESSAGE CENTER ***************/
