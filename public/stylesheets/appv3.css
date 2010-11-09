@@ -3697,11 +3697,11 @@ div.tutorial_overlay {
 }
 /***Scroll Nav***/
 #scroll_thumbs {
+  border-bottom:1px solid #101010;
   border-top:1px solid #666666;
   float:left;
-  height:73px;
-  margin-top:5px;
-  padding-top:5px;
+  height:100px;
+  margin-top:0;
   position:relative;
   width:795px;
 }
@@ -3713,8 +3713,10 @@ div.tutorial_overlay {
   overflow: hidden;
 }
 #scroll_thumbs ul {
-  float: left;
-  width: 795px;
+  border-bottom:1px solid #333333;
+  float:left;
+  height:101px;
+  width:795px;
 }
 #scroller_wrap ul {
   width: 100%;
@@ -3745,12 +3747,18 @@ div.tutorial_overlay {
 }
 #scroll_thumbs ul li {
   float:left;
-  height:90px;
+  height:100px;
   position:relative;
   width:155px;
 }
-#scroll_thumbs ul li.selected {
-/*  border: 1px solid #5bab46;*/
+#scroll_thumbs ul li.active {
+  background: transparent url(../images/tutorials/nav/hover_bg.png) center top no-repeat;
+  border-bottom:1px solid #333;
+  border-left:1px solid #000;
+  border-right:1px solid #444;
+  box-shadow:inset 1px 1px 10px #000000;
+  -moz-box-shadow:inset 1px 1px 10px #000000;
+  -webkit-box-shadow:inset 1px 1px 10px #000000;
 }
 #scroll_thumbs ul li a {
   position: relative;
@@ -3760,16 +3768,17 @@ div.tutorial_overlay {
   position: relative;
   float: left;
   width:75px;
-  height: 90px;
+  height: 100px;
+  margin-left: 10px;
 }
 #scroll_thumbs ul li a.scroll_nav_trigger_copy {
   color:#999999;
   float:left;
   height:65px;
-  margin-left:5px;
+  margin-left:0px;
   padding-top:25px;
   position:relative;
-  width:74px;
+  width:73px;
 }
 #scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
   text-decoration: none;

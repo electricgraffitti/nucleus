@@ -397,7 +397,7 @@ var scroll = {
     var $triggers = $nav.find('a');
     
     var twidth = (795 / $trigger_wrap.length);
-    $trigger_wrap.css({width:twidth});
+    $trigger_wrap.css({width:twidth - 1});
         
     var $innerWrap = $scrollBox.find('#scroll_wrap');
     var panelWrapWidth = (795 * $triggers.length);
@@ -441,7 +441,7 @@ var scroll = {
     
     $navTriggerWrap.serialScroll(navScrollOptions);
     $.localScroll(navScrollOptions);
-  }  
+  }
 };
 	
 var widget = {
@@ -769,6 +769,14 @@ var app = {
     });
 	},
 	
+	tutorialTriggerState: function() {
+    var $t = $("#scroll_thumbs ul li");
+    $t.live('click', function() {
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+    });
+  },
+	
 	comingSoonOverlay: function() {
 	  var $trig = $('.coming_soon');
 	  $trig.overlay({
@@ -958,4 +966,5 @@ $(document).ready(function() {
 	app.setDefaults();
 	tableActions.setDefaultTableActions();
 	app.modalTrigger();
+	app.tutorialTriggerState();
 });
