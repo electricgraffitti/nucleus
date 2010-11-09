@@ -58,6 +58,10 @@ var scroll = {
    $("#panel_north").jScrollTouch(); 
   },
   
+  setReportScroll: function() {
+   $(".reports_table").jScrollTouch(); 
+  },
+  
   setDashScroll: function() {
     $("#dashboard").jScrollTouch();
   }

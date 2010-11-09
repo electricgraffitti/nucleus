@@ -10,11 +10,11 @@
   </ul>
   <div id="report_schedule_panel">
     <ul class="heading">
-      <li class="left"><%= radio_button_tag 'report_frequency', 'Once' %> Once</li>
-      <li class="left"><%= radio_button_tag 'report_frequency', 'Daily' %> Daily</li>
-      <li class="left"><%= radio_button_tag 'report_frequency', 'Weekly', true %> Weekly</li>
-      <li class="left"><%= radio_button_tag 'report_frequency', 'Monthly' %> Monthly</li>
-      <li class="left"><%= radio_button_tag 'report_frequency', 'Quarterly' %> Quarterly</li>
+      <li class="left"><%= radio_button_tag 'report_frequency', 'Once' %> <span class="left block">Once</span></li>
+      <li class="left"><%= radio_button_tag 'report_frequency', 'Daily' %> <span class="left block">Daily</span></li>
+      <li class="left"><%= radio_button_tag 'report_frequency', 'Weekly', true %> <span class="left block">Weekly</span></li>
+      <li class="left"><%= radio_button_tag 'report_frequency', 'Monthly' %> <span class="left block">Monthly</span></li>
+      <li class="left"><%= radio_button_tag 'report_frequency', 'Quarterly' %> <span class="left block">Quarterly</span></li>
       <li class="left form_combo"><%= radio_button_tag 'report_frequency', 'xdays' %> <span class="left block">Every</span> <%= text_field_tag :day_count, nil, :id => "report_frequency_day_count" %> <span class="left block">Days</span></li>
     </ul>
     <div id="schedule_dates" class="left">

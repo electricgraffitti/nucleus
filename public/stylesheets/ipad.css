@@ -66,3 +66,27 @@ input {
 	width:128px;
 	height: 56px;
 }
+/***********************************************************************************************************************/
+/***************************************************************************************** REPORT CENTER ***************/
+#schedule_dates input#schedule_date_no_end[type="radio"] {
+  float:left;
+  margin-left: 6px;
+}
+#report_schedule_panel ul li input[type="radio"] {
+  float: left;
+}
+#report_schedule_panel #report_frequency_day_count {
+  clear: none;
+  margin: -3px 8px 7px 10px;
+  width: 20px;
+}
+#report_schedule .widget_content ul li {
+  margin-right: 5px;
+}
+/***********************************************************************************************************************/
+/***************************************************************************************** BUTTONS *********************/
+.medium_btn {
+	font-size: 11px;
+	padding-right: 2px;
+	-webkit-appearance:none;
+}

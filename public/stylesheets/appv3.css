@@ -1719,6 +1719,9 @@ table a.score {
 #report_schedule .widget_content ul li input[type="radio"] {
  margin-right:3px;
 }
+#report_schedule_panel ul li input[type="radio"] {
+  float: left;
+}
 #report_schedule_panel {
   background:none repeat scroll 0 0 #F0F2F0;
   border:1px solid #C0C0C0;

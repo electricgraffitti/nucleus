@@ -83,6 +83,9 @@
       adminAction.setupCalendars();
       app.tutorialTrigger();
       panels.reportTabs();
+      <% if ipad? %>
+        scroll.setReportScroll();
+      <% end %>
     });
   </script>
 <% end %>
