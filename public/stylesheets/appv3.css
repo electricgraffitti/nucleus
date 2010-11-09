@@ -1138,7 +1138,7 @@ input#claim_sequence_wide[type="text"] {
   border-bottom:1px solid #C0C0C0;
   float:left;
   position:relative;
-  width:1210px;
+  width:1002px;
 }
 #dashboard ul#tab_nav li.active {
   background:none repeat scroll 0 0 #FFFFFF;
@@ -1189,14 +1189,26 @@ input#claim_sequence_wide[type="text"] {
   float:left;
   position:relative;
   padding-bottom: 10px;
-  width:1210px;
+  width:1000px;
+}
+#dashboard .widget {
+  width: 490px;
+  height: 352px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#dashboard .widget_header, #dashboard .widget_content {
+  width:460px;
+}
+#dashboard .widget_content {
+	height: 292px;
 }
 .widget_table_header, .widget_table_data {
   border:1px solid #c4c5c4;
   float:left;
-  margin-bottom:2px;
+  margin-bottom:11px;
   position:relative;
-  width:368px;
+  width:456px;
 }
 .widget_table_data {
   background: none;
@@ -1220,10 +1232,10 @@ input#claim_sequence_wide[type="text"] {
 }
 .widget_table_head.name, .widget_data.name {
   border-right:1px solid #c4c5c4;
-  width:115px;
+  width:149px;
 }
 .widget_table_head.billed, .widget_data.billed {
-  width:114px;
+  width:168px;
 }
 .widget_table_head.risk, .widget_data.risk {
   width:82px;
@@ -1231,14 +1243,14 @@ input#claim_sequence_wide[type="text"] {
 }
 .widget_table_head.exp, .widget_data.exp {
   border-right:1px solid #c4c5c4;
-  width:83px;
+  width:110px;
 }
 .widget_table_head.prov, .widget_data.prov {
-  width:64px;
+  width:93px;
   border-right:1px solid #c4c5c4;
 }
 .widget_table_head.percentage, .widget_data.percentage {
-  width:64px;
+  width:96px;
 }
 .widget_table_head.product, .widget_data.product {
   width:82px;
@@ -1246,14 +1258,14 @@ input#claim_sequence_wide[type="text"] {
 }
 .widget_table_head.est, .widget_data.est {
   border-right:1px solid #c4c5c4;
-  width:83px;
+  width:110px;
 }
 .widget_table_head.claims, .widget_data.claims {
-  width:64px;
+  width:93px;
   border-right:1px solid #c4c5c4;
 }
 .widget_table_head.more, .widget_data.more {
-  width:64px;
+  width:96px;
 }
 .widget_data.risk h3 a {
   float: right;
@@ -1282,19 +1294,19 @@ input#claim_sequence_wide[type="text"] {
   background: #f6f6f6 url('../images/inner_pages/provider_rating_discs_left-v2-flat.png') right 0px no-repeat;
 }
 .widget_data.pci{
-  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px 0px no-repeat;
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px 0px no-repeat;
 }
 .widget_data.cra{
-  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -200px no-repeat;
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -175px no-repeat;
 }
 .widget_data.fci{
-  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -80px no-repeat;
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -70px no-repeat;
 }
 .widget_data.oci{
-  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -120px no-repeat;
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -104px no-repeat;
 }
 .widget_data.rxi {
-  background: url(../images/inner_pages/dashboard_savings_icons.png) 5px -160px no-repeat;
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -139px no-repeat;
 }
 .widget_data.risk_high {
   background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px 0px no-repeat;
@@ -1309,18 +1321,18 @@ input#claim_sequence_wide[type="text"] {
   background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -117px no-repeat;
 }
 #feed_widget.widget_content {
-  height:259px;
+  height:311px;
   padding:0;
-  width:388px;
+  width:478px;
 }
 ul#feeds {
   float:left;
-  height:260px;
+  height:311px;
   margin:0;
   overflow-x:hidden;
   overflow-y:scroll;
   position:relative;
-  width:388px;
+  width:478px;
 }
 ul#feeds li {
   border-bottom:1px solid #C4C5C4;
@@ -1328,7 +1340,7 @@ ul#feeds li {
   height: 80px;
   padding:10px 5px;
   position:relative;
-  width:363px;
+  width:454px;
 }
 ul#feeds li div.feed_date {
   background:none repeat scroll 0 0 #C3C4C3;
@@ -1336,7 +1348,7 @@ ul#feeds li div.feed_date {
   font-size:11px;
   font-weight:bold;
   height:40px;
-  margin-right:7px;
+  margin:0 9px 0 4px;
   padding:12px 0 0;
   position:relative;
   text-align:center;
@@ -1352,7 +1364,7 @@ ul#feeds li div.feed_content {
   height:45px;
   overflow:hidden;
   position:relative;
-  width:296px;
+  width:385px;
 }
 /***********************************************************************************************************************/
 /****************************************************************************************** CLAIM SEARCH ***************/
@@ -1893,7 +1905,9 @@ table a.score {
   float:left;
   margin:0;
   width:720px;
-  height:389px;
+  height:395px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
  .message_reply {
   background:none repeat scroll 0 0 #F3F3F3;
@@ -3437,11 +3451,11 @@ div.tutorial_overlay {
 /***********************************************************************************************************************/
 /*************************************************************************************** COMING SOON MODALS ************/
 div.coming_soon { 
-    position: relative;
-    width:490px; 
-    background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
-    display:none; 
-    padding: 0 !important;
+  position: relative;
+  width:855px;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+  display:none; 
+  padding: 0 !important;
 }
 div.coming_soon div.close { 
   background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
@@ -3453,12 +3467,6 @@ div.coming_soon div.close {
   width:38px;
   z-index:10;
 }
-.contentWrap {
-  position: relative;
-  float: left;
-  text-align: left;
-}
-
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/
 #tiptip_holder {
@@ -3615,6 +3623,9 @@ div.coming_soon div.close {
   .sub_panel.last form {
     height: 25px;
   }
+	#message_center_tabs #center_message_content_wrap {
+		height: 412px;
+	}
 }
 
 

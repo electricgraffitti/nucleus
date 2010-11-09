@@ -21,7 +21,9 @@
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
       app.centeredHeight();
+      <% if ipad? %>
       scroll.setiPadHelpScroll();
+      <% end %>
       app.tutorialTrigger();
       panels.helpTabs();
     });

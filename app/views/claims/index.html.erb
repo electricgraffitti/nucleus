@@ -112,7 +112,9 @@
     $(document).ready(function() {
       var $table = $("#data_table");
       app.panelLayoutHeight();
+      <% if ipad? %>
       scroll.setTableScroll($table);
+      <% end %>
       app.tutorialTrigger();
     });
   </script>

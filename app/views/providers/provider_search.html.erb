@@ -106,7 +106,9 @@
     $(document).ready(function() {
       var $table = $("#data_table")
       app.panelLayoutWidthHeight();
+      <% if ipad? %>
       scroll.setTableScroll($table);
+      <% end %> 
       app.tutorialTrigger();
       app.noteTrigger();
       panels.toggleResultsChart();

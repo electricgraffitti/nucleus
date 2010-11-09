@@ -41,11 +41,15 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
+      <% if !ipad? %>
       app.centeredHeight();
+      <% end %>
       panels.messageTabs();
-      scroll.setiPadMessageScroll();
       app.tutorialTrigger();
       app.toggleUpload();
+      <% if ipad? %>
+        scroll.setiPadMessageScroll();
+      <% end %>
     });
   </script>
 <% end %>

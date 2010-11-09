@@ -21,15 +21,14 @@
       <%= render :partial => 'dashboard_widgets/dash2' %>
       <%= render :partial => 'dashboard_widgets/dash3' %>
       <%= render :partial => 'dashboard_widgets/dash4' %>
-      <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
-      <%= render :partial => 'dashboard_widgets/dash6', :locals => {:p => p} %>
     </div>
     <div id="page2" class="dash_panel hidden">
       <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
-      <%= render :partial => 'dashboard_widgets/dash7', :locals => {:top_providers => @top_providers} %>
+      <%= render :partial => 'dashboard_widgets/dash6', :locals => {:p => p} %>
     </div>
     <div id="page3" class="dash_panel hidden">
-
+      <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
+      <%= render :partial => 'dashboard_widgets/dash7', :locals => {:top_providers => @top_providers} %>
     </div>
   </div>
   <div class="clear"></div>
@@ -42,15 +41,17 @@
       var $page1 = $("#page1");
       var $page2 = $("#page2");
       var $page3 = $("#page3");
-      scroll.setDashScroll();
+
       widget.dashboardOptions('#dashboard_options');
       widget.widgetOptions($dash);
-      drag.setupDashboardPanels($page1, "dashPage1", 1000);
-      drag.setupDashboardPanels($page2, "dashPage2", 1000);
-      drag.setupDashboardPanels($page3, "dashPage3", 1000);
-      drag.loadQuickLaunchOrder($page1, "dashPage1");
-      drag.loadQuickLaunchOrder($page2, "dashPage2");
-      drag.loadQuickLaunchOrder($page3, "dashPage3");
+      <% if !ipad? %>
+        drag.setupDashboardPanels($page1, "dashPage1", 1000);
+        drag.setupDashboardPanels($page2, "dashPage2", 1000);
+        drag.setupDashboardPanels($page3, "dashPage3", 1000);
+        drag.loadQuickLaunchOrder($page1, "dashPage1");
+        drag.loadQuickLaunchOrder($page2, "dashPage2");
+        drag.loadQuickLaunchOrder($page3, "dashPage3");
+      <% end %>
       panels.dashTabs();
       app.tutorialTrigger();
       widget.getFeeds();

@@ -1,6 +1,8 @@
 var pieChart = new Highcharts.Chart({
    chart: {
       renderTo: 'provider_action_summary',
+      width: 460,
+      height: 292,
       margin: [50, 20, 60, 20],
       backgroundColor: {
         linearGradient: [0, 0, 0, 300],

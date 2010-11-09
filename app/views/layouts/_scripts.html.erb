@@ -5,4 +5,12 @@
 
 <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.compiled.js"></script><![endif]-->
 <%= yield :javascripts %>
+<% if !ipad? %>
+  <%= javascript_include_tag "no_ipad" %>
+<% end %>
+
 <%= javascript_include_tag 'gmap', 'application' %>
+
+<% if ipad? %>
+  <%= javascript_include_tag "ipad_app" %>
+<% end %>

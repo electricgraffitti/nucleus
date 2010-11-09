@@ -2,10 +2,10 @@ var scatterChart = new Highcharts.Chart({
    chart: {
       renderTo: 'scatter_chart', 
       defaultSeriesType: 'scatter',
-      width: 370,
-      height: 240,
+      width: 460,
+      height: 292,
       zoomType: 'xy',
-      margin: [10,15,50,67],
+      margin: [10,15,50,70],
       style: {
         // margin: ['0px 0px 40px 0px'],
         font: '16px Arial, Helvetica, sans-serif'

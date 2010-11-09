@@ -179,6 +179,11 @@
       app.noteTrigger();
       panels.northResizeTrigger();
       panels.actionPanelToggle();
+      <% if ipad? %>
+        var t = $("#data_table");
+        scroll.setWidgetScroll();
+        scroll.setTableScroll(t);
+      <% end %>
     });
   </script>
 <% end %>

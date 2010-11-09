@@ -18,7 +18,9 @@
 <link rel="apple-touch-icon" href="http://demo.get-nucleus.com/apple-touch-icon.png" />
 
 <!-- iPad Stylesheet -->
-<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="../stylesheets/ipad.css" type="text/css" />
+<% if ipad? %>
+<link rel="stylesheet" href="../stylesheets/ipad.css" type="text/css" />
+<% end %>
 
 <!-- iPhone Stylesheet -->
 <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../stylesheets/iphone.css" type="text/css" />

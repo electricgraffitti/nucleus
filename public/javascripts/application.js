@@ -1,25 +1,3 @@
-var flash = {
-
-	injectFlashBox: function() {
-		$('#flash').addClass("flash_wrap");
-		$("#flash").hide();
-	},
-
-	activateNotice: function(flash_message) {
-		flash_div = $("#flash");
-		flash_div.html(flash_message);
-		flash_div.fadeIn(400);
-		// Set the fadeout
-		setTimeout(function() {
-			flash_div.fadeOut(2000, function() {
-				flash_div.html("");
-				flash_div.hide()
-			})
-		},
-		1400);
-	}
-};
-
 var tableActions = {
 
 	setActive: function(el) {
@@ -284,14 +262,14 @@ var panels = {
   },
   
   setNorthWidgetWrap: function() {
-    scroll.setWidgetScroll();
+    // scroll.setWidgetScroll();
   },
   
   westResizeTrigger: function(win, cp, iw, wpr) {
     wpr.toggle(function() {
-      iw.animate({width: '0px'}, 0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 1 )));
+      iw.hide(0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 1 )));
     }, function() {
-      iw.animate({width: '212px'}, 0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 213 )));
+      iw.show(0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 213)));
     });
   },
   
@@ -382,111 +360,13 @@ var panels = {
     var $panels = $('#dashboard .dash_panel');
     $tabs.click(function(e) {
       e.preventDefault();
+      var panelId = $(this).attr('href');
+      var page = $(panelId);
       $panels.hide();
       $(this).parent().siblings().removeClass('active');
       $(this).parent().addClass('active');
-      var panelId = $(this).attr('href');
-      var page = $(panelId);
       page.show();
     });
-  }
-  
-};
-
-var drag = {
-  
-  setupQuickLaunch: function(a,b,c) {
-    // set the Selector
-    var ss = a;
-    // set cookie name
-    var scn = b;
-    // set cookie expiry time (days):
-    var sce = c;
-    
-    ss.sortable({
-      opacity : 0.3,
-      cursor: "move",
-      update: function() { drag.setQuickLaunchOrder(ss,scn,sce); }
-    });
-    // ss.dialog().addTouch();
-  },
-  
-  setupDashboardPanels: function(a,b,c) {
-    // set the Selector
-    var ss = a;
-    // console.log(a);
-    // set cookie name
-    var scn = b;
-    // set cookie expiry time (days):
-    var sce = c;
-    
-    ss.sortable({
-      handle : '.dashboard_module_header',
-      opacity : 0.3,
-      cursor: "move",
-      update: function() { drag.setDashboardLaunchOrder(ss,scn,sce); }
-    });
-  },
-  
-  setQuickLaunchOrder: function(ss,scn,sce) {
-    $.cookie(scn, ss.sortable("toArray"), { expires: sce, path: "/" });
-  },
-  
-  setDashboardLaunchOrder: function(ss,scn,sce) {
-    $.cookie(scn, ss.sortable("toArray"), { expires: sce, path: "/" });
-  },
-  
-  loadQuickLaunchOrder: function(ss,scn) {
-    var list = ss;
-    if (list == null) return
-
-    // fetch the cookie value (saved order)
-    var cookie = $.cookie(scn);
-    if (!cookie) return;
-
-    // make array from saved order
-    var IDs = cookie.split(",");
-
-    // fetch current order
-    var items = list.sortable("toArray");
-
-    // make array from current order
-    var rebuild = new Array();
-    
-    for ( var v=0, len=items.length; v<len; v++ ) {
-      rebuild[items[v]] = items[v];
-    }
-
-    for (var i = 0, n = IDs.length; i < n; i++) {
-      var itemID = IDs[i];
-      
-      if (itemID in rebuild) {
-        var item = rebuild[itemID];
-
-        
-        // select the item according to current order
-        var child = ss.children("#" + item);
-
-        // select the item according to the saved order
-        if (widget.checkViewCookie(item)) {
-          var savedOrd = ss.children("#" + itemID).addClass('hidden');
-        } else {
-          var savedOrd = ss.children("#" + itemID);
-        }
-        
-
-        // remove all the items
-        child.remove();
-
-        // add the items in turn according to saved order
-        // we need to filter here since the "ui-sortable"
-        // class is applied to all ul elements and we
-        // only want the very first! You can modify this
-        // to support multiple lists - not tested!
-        
-        ss.filter(":first").append(savedOrd);
-      }
-    }
   }
   
 };
@@ -547,40 +427,7 @@ var scroll = {
     
     $navTriggerWrap.serialScroll(navScrollOptions);
     $.localScroll(navScrollOptions);
-  },
-  
-  setiPadMessageScroll: function() {
-    $('#center_message_content_wrap').jScrollTouch();
-  },
-  
-  setiPadHelpScroll: function() {
-    $('#center_help_content_wrap').jScrollTouch();
-  },
-  
-  setiPadIdeaScroll: function() {
-   $('#center_idea_forum_content_wrap').jScrollTouch();
-  },
-  
-  setiPadProviderSearchScroll: function() {
-   $('#provider_search_table').jScrollTouch();
-  },
-  
-  setiPadClaimSearchScroll: function() {
-    $('#provider_search_table').jScrollTouch();
-  },
-  
-  setTableScroll: function(table) {
-   table.jScrollTouch(); 
-  },
-  
-  setWidgetScroll: function() {
-   $("#panel_north").jScrollTouch(); 
-  },
-  
-  setDashScroll: function() {
-    $("#dashboard").jScrollTouch();
-  }
-  
+  }  
 };
 	
 var widget = {
@@ -1069,7 +916,8 @@ var app = {
     
     $win.resize(function() {
       $panel_box.height($(this).height() - $head.height());
-      $centerPanel.width($(this).width() - $westPanel.width());
+			$centerPanel.width($(this).width() - $westPanel.width());
+      
       panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
     });
   },

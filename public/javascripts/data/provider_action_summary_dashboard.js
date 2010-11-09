@@ -1,8 +1,8 @@
 var pieChart = new Highcharts.Chart({
    chart: {
       renderTo: 'pie_chart',
-      width: 370,
-      height: 240,
+      width: 460,
+      height: 292,
       margin: [30, 50, 30, 0],
       borderRadius: 0
    },
