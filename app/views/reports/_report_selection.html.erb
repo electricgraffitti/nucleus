@@ -1,21 +1,21 @@
-<div id="selection_panel" class="basic_panel_6">
-  <h3 class="report">1. Selection</h3>
-  <div class="report_panel_wrap">
-    <p>
-    <%= label_tag "Type*"%>
-    <%= select(:report, :report_selection, @report_params.report_types) %>
-    </p>
-    <p>
-    <%= label_tag "Category*"%>
-    <%= select(:report, :report_selection, @report_params.report_categories) %>
-    </p>
-    <p>
-    <%= label_tag "Sub-Category*"%>
-    <%= select(:report, :report_selection, @report_params.report_sub_categories) %>
-    </p>
-    <p>
-    <%= label_tag "Description"%>
-    <%= text_field_tag :provider_number, nil, :id => "report_description" %>
-    </p>
-  </div>
+<div class="widget_header">
+  <h3>1. Selection</h3>
+</div>
+<div class="widget_content">
+  <p>
+  <%= label_tag "Type*"%>
+  <%= select(:report, :report_selection, @report_params.report_types) %>
+  </p>
+  <p>
+  <%= label_tag "Category*"%>
+  <%= select(:report, :report_selection, @report_params.report_categories) %>
+  </p>
+  <p>
+  <%= label_tag "Sub-Category*"%>
+  <%= select(:report, :report_selection, @report_params.report_sub_categories) %>
+  </p>
+  <p>
+  <%= label_tag "Description"%>
+  <%= text_field_tag :provider_number, nil, :id => "report_description" %>
+  </p>
 </div>

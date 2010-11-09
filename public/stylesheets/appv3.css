@@ -862,7 +862,7 @@ a.widget_option.close_option:active {
   padding:2px;
   width:173px;
 }
-#sub_search_params select, .report_panel_wrap select, #report_output_panel select {
+#sub_search_params select, .report_panel_wrap select {
   background:none repeat scroll 0 0 #FFFFFF;
   border:1px solid #C0C0C0;
   clear:left;
@@ -883,7 +883,7 @@ input#claim_sequence_wide[type="text"] {
   padding:4px;
   width:157px;
 }
-#sub_search_params label, .report_panel_wrap label, #report_output_panel label {
+#sub_search_params label, .report_panel_wrap label {
   clear:left;
   float:left;
   font-size:12px;
@@ -1674,7 +1674,224 @@ table a.score {
 }
 /***********************************************************************************************************************/
 /***************************************************************************************** REPORT CENTER ***************/
-
+#report_selection.module {
+  width: 230px;
+}
+#report_selection .widget_header, #report_selection .widget_content {
+  width: 211px;
+}
+.report.module .widget_header h3 {
+  font-weight: bold;
+  padding-top: 9px;
+}
+#report_selection.module .widget_content p {
+  float:left;
+  margin-bottom:25px;
+  position:relative;
+  width:199px;
+}
+#report_selection.module .widget_content p label, #report_selection.module .widget_content p input, #report_selection.module .widget_content p select {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+#report_schedule.module {
+  width: 502px;
+}
+#report_schedule .widget_header, #report_schedule .widget_content {
+  width: 482px;
+}
+.schedule_time {
+  margin-top:9px;
+}
+#report_schedule .widget_content ul li {
+  margin-right: 8px;
+}
+#report_schedule .widget_content ul li input[type="radio"] {
+ margin-right:3px;
+}
+#report_schedule_panel {
+  background:none repeat scroll 0 0 #F0F2F0;
+  border:1px solid #C0C0C0;
+  float:left;
+  margin:10px 0;
+  position:relative;
+  width:498px;
+}
+#report_schedule_panel ul.heading {
+  border-bottom:1px solid #C0C0C0;
+  float:left;
+  padding:10px 10px 0;
+  width:479px;
+}
+.schedule_time {
+  margin-top: 9px;
+}
+#selection_panel p, #report_output_panel p {
+  float:left;
+  margin-bottom:6.2px;
+}
+#report_schedule_panel {
+	border:1px solid #C0C0C0;
+	float:left;
+	margin:10px 0;
+	position:relative;
+	width:480px;
+	background: #f0f2f0;
+}
+#report_schedule_panel ul.heading {
+	float:left;
+	padding:10px 10px 0px;
+	width:461px;
+	border-bottom: 1px solid #c0c0c0;
+}
+#report_schedule_panel input[type="text"] {
+  position: relative;
+  clear: none;
+  width: 100px;
+  margin-left: 10px;
+}
+#report_schedule_panel #report_frequency_day_count, #report_schedule_panel #report_schedule_end_day_count {
+	width: 21px;
+	margin:-3px 8px 7px 10px;
+	clear: none;
+}
+#schedule_dates {
+  padding: 10px 0px;
+}
+#schedule_dates .schedule_form_block {
+  width: 225px;
+  text-align: right;
+  margin-bottom: 1px;
+}
+.schedule_form_block.email_block {
+  margin-left: 30px;
+}
+#schedule_dates span {
+  text-align: right;
+}
+#schedule_dates input[type="radio"] {
+  float: right;
+  margin-top: 1px;
+  margin-right: 6px;
+}
+#schedule_dates input[type=text] {
+  float: right;
+  margin: -3px 0px 7px 10px;
+}
+#schedule_dates input[type=text]#schedule_start_date, #schedule_dates input[type=text]#schedule_end_date {
+  float: left;
+}
+#report_parameters_dates {
+  padding-top: 10px;
+}
+#report_parameters_dates input[type="text"] {
+  width: 55px;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+#report_minimums p {
+  margin: 10px 0px 0px;
+  float: left;
+}
+#report_minimums p label {
+  font-size: 100%;
+  color: #333;
+}
+#schedule_dates img.ui-datepicker-trigger, #report_parameters_dates img.ui-datepicker-trigger {
+  margin-top: -3px;
+}
+#schedule_dates input[type=text]#schedule_time {
+  margin-right: 23px;
+}
+#schedule_date_end_days {
+  float: right;
+}
+#schedule_dates input[type="radio"]#schedule_date_no_end {
+  margin-left: 11px;
+  float: left;
+}
+#report_frequency_xdays {
+	float: left;
+}
+#schedule_dates input[type="text"]#report_email {
+  clear: left;
+  margin-right:22px;
+  margin-top:5px;
+  width:192px;
+}
+span#occurence {
+  margin-right: 30px;
+}
+#report_output_panel {
+  float:right;
+  height:77px;
+  width:252px;
+}
+#report_output_panel .report_output_item {
+  float: left;
+  width: 111px;
+}
+#report_output_panel .report_output_item.checkbox {
+  width: 100px;
+  padding-top: 3px;
+}
+#report_output_panel .report_buttons {
+  width: 150px;
+  float: left;
+  padding-top: 17px;
+}
+#report_output_panel .report_buttons input[type="submit"] {
+  margin-right: 20px;
+}
+#report_parameters.module {
+  width: 252px;
+}
+#report_parameters .widget_header, #report_parameters .widget_content {
+  width: 232px;
+}
+#report_parameters_dates {
+  padding-top: 10px;
+}
+#report_parameters_dates input[type="text"] {
+  width: 55px;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+#report_parameters_dates input[type="text"] {
+  margin-left:5px;
+  margin-top:-3px;
+  width:55px;
+  float: left;
+}
+#report_output {
+  position: relative;
+  float: left;
+  width: 1004px;
+  margin: 10px 10px 0px;
+  height: 77px;
+}
+#report_ouput #report_output_panel {
+  position: relative;
+  float: right;
+  width: 252px;
+  height: 77px;
+}
+#report_output_controls {
+  float: left;
+  width: 232px;
+  height: 20px;
+  border-top: 1px solid #c4c5c4;
+  margin-bottom: 10px;
+}
+#report_buttons {
+  float: right;
+  width: 100px;
+  height: 20px;
+}
+#report_clear {
+  margin-left: 10px;
+}
 /***********************************************************************************************************************/
 /**************************************************************************************** MESSAGE CENTER ***************/
 #message_center_wrap {

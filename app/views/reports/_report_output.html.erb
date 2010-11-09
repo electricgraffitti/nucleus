@@ -1,13 +1,15 @@
 <div id="report_output_panel" class="">
+  <div id="report_output_controls" class="widget_content">
     <div class="report_output_item">
     <%= label_tag "Output"%>
     <%= select(:report, :report_selection, @report_params.report_output_types) %>
     </div>
     <div class="report_output_item checkbox">
-      <%= check_box_tag :reports %> Preserve Report
+      <%= check_box_tag :reports %> Save Report
     </div>
-    <div class="report_output_item report_buttons">
-      <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
-      <%= link_to "Clear", "", :id => "report_clear" %>
-    </div>
+  </div>
+  <div id="report_buttons">
+    <%= submit_tag "Generate", :name => nil, :class => 'medium_btn' %>
+    <%= link_to "Clear", "", :id => "report_clear" %>
+  </div>
 </div>

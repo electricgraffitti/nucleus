@@ -1,28 +1,34 @@
-<%= render :partial => 'reports/reports_header' %>
-<% form_tag reports_path, :method => :get do %>
-<div id="panel_layout" class="message_panels clear">
-  <div id="inner_panel" class="panel ui-layout-main">
-    <div class="panel_set_6">
+<% content_for :page_header do %>
+  <%= render :partial => 'reports/reports_header' %>
+<% end %>
+
+<div id="centered_layout" class="message_panels clear">
+  <% form_tag reports_path, :method => :get do %>
+    <div id="report_selection" class="report module">
       <%= render :partial => 'reports/report_selection' %>
     </div>
-    <div class="panel_set_7">        
+    <div id="report_schedule" class="report module">        
       <%= render :partial => 'reports/report_schedule' %>
     </div>
-    <div class="panel_set_8">
+    <div id="report_parameters" class="report module">
       <%= render :partial => 'reports/report_parameters' %>
     </div>
-    <div class="">
-      <%= render :partial => 'report_output' %>
+    <div id="report_output" class="report module">
+      <%= render :partial => 'reports/report_output' %>
     </div>
-  </div>
+    <div class="clear"></div>
+    <div id="report_tabs">
+      
+    </div>
+  <% end %>
   <div class="clear"></div>
 </div>
-<% end %>
+
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
       adminAction.setupCalendars();
-      baseActions.tutorialTrigger();
+      app.tutorialTrigger();
     });
   </script>
 <% end %>
