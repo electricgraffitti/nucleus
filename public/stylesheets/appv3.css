@@ -1765,6 +1765,9 @@ table a.score {
 	margin:-3px 8px 7px 10px;
 	clear: none;
 }
+#report_frequency_day_count {
+  float: left;
+}
 #schedule_dates {
   padding: 10px 0px;
 }
@@ -1965,9 +1968,29 @@ span#occurence {
 #report_scheduled td {
   padding:10px;
 }
-#report_scheduled .reports_table {
+#report_center_tabs div.reports_table {
+  position: relative;
+  width: 1000px;
+  height: 312px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+table#report_scheduled tbody tr td.report_type a {
+  display:block;
+  height:15px;
+  padding-left:25px;
+  padding-top:5px;
+  position:relative;
+  width:30px;
+}
+a.pdf_table_icon {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -80px -440px transparent;
+}
+a.xls_table_icon {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -80px -460px transparent;
+}
+a.csv_table_icon {
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll -80px -480px transparent;
 }
 /***********************************************************************************************************************/
 /**************************************************************************************** MESSAGE CENTER ***************/
@@ -3920,6 +3943,15 @@ div.coming_soon div.close {
 	#message_center_tabs #center_message_content_wrap {
 		height: 412px;
 	}
+	#schedule_dates input[type="text"] {
+  float: right;
+  margin: -3px 0px 7px 12px;
+  }
+  #report_schedule_panel #report_frequency_day_count, #report_schedule_panel #report_schedule_end_day_count {
+  clear: none;
+  margin: -3px 8px 7px 13px;
+  width: 20px;
+  }
 }
 
 
