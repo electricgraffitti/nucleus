@@ -702,7 +702,8 @@ var app = {
 
 	dropDownNav: function() {
 		$("ul.subnav").parent().append("<span class='tip', title='Claims Summary'></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
-		$("ul.topnav li span").hover(function() { //When trigger is clicked...  
+		$("ul.topnav li span").hover(function() { 
+		  //When trigger is clicked...  
 			//Following events are applied to the subnav itself (moving subnav up and down)  
 			$(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
 			$(this).parent().hover(function() {},
@@ -827,7 +828,7 @@ var app = {
 	},
 	
 	setQuickLaunchHovers: function() {
-	  var $qlboxes = $('#quick_launch_top .quick_launch_box');
+	  var $qlboxes = $('#quick_launch_wrap .quick_launch_box');
 	  $qlboxes.removeClass('highlight');
 	  var $links = $qlboxes.find('a');
 	  $links.prepend('<span class="active" />').each(function() {
