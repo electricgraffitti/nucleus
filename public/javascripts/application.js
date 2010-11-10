@@ -247,6 +247,13 @@ var panels = {
     panels.setWestResizeBar(wp, wpr);
   },
   
+  setOptionsWidth: function() {
+    var win = $(window);
+    var op = $("#dashboard_options");
+
+    op.width(win.width() - 30);
+  },
+  
   setWestResizeBar: function(wp, wpr) {
     wpr.height(wp.height());
   },
@@ -535,11 +542,18 @@ var widget = {
     });
   },
   
+  ezCheck: function() {
+    $("#dashboard_options input[type='checkbox']").ezMark();
+  },
+  
   optionPaneDisplay: function(pane) {
+    var w = $(window);
     if (pane.is(':visible')) {
-      pane.hide("slide", {direction: 'up'});
+      pane.hide();
     } else {
-      pane.show("slide", {direction: 'up'});
+      pane.show();
+      panels.setOptionsWidth()
+      widget.ezCheck();
     }
   },
   
@@ -656,6 +670,7 @@ var widget = {
     widget.closeOption();
     widget.printWidget();
     widget.optionSubmitTriggers();
+    widget.ezCheck();
   }
   
 };
@@ -884,12 +899,15 @@ var app = {
     var $head = $("#hd");
     var $centered_box = $("#centered_layout");
     var $inner_box = $centered_box.children(".inner_box");
+    var $op = $("#dashboard_options");
     
     $centered_box.height($win.height() - $head.height());
+    panels.setOptionsWidth($op, $win);
     
     $win.resize(function() {
       $centered_box.height($win.height() - $head.height());
       $centered_box.css({minHeight:$inner_box.height()});
+      panels.setOptionsWidth($op, $win);
     });
     
   },
@@ -902,16 +920,18 @@ var app = {
     var $centerPanel = $("#panel_center");
     var $innerWest = $("#inner_west");
     var $westresizerbar = $("#west_resizer");
+    var $op = $("#dashboard_options");
   
     $panel_box.height($win.height() - $head.height());
     $centerPanel.width($win.width() - $westPanel.width());
-    
+    panels.setOptionsWidth($op, $win);
     panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
     panels.westResizeTrigger($win, $centerPanel, $innerWest, $westresizerbar);
     
     $win.resize(function() {
       $panel_box.height($(this).height() - $head.height());
       $centerPanel.width($(this).width() - $westPanel.width());
+      panels.setOptionsWidth($op, $win);
       panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
     });
   },
@@ -925,6 +945,7 @@ var app = {
     var $centerPanel = $("#panel_center");
     var $innerWest = $("#inner_west");
     var $westresizerbar = $("#west_resizer");
+    var $op = $("#dashboard_options");
     
     
     var widgetCount = $innerNorth.children().length;
@@ -934,13 +955,14 @@ var app = {
     $centerPanel.width($win.width() - $westPanel.width());
     panels.northResizeTrigger();
     panels.setNorthWidgetWrap();
+    panels.setOptionsWidth($op, $win);
     panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
     panels.westResizeTrigger($win, $centerPanel, $innerWest, $westresizerbar);
     
     $win.resize(function() {
       $panel_box.height($(this).height() - $head.height());
 			$centerPanel.width($(this).width() - $westPanel.width());
-      
+      panels.setOptionsWidth($op, $win);
       panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
     });
   },

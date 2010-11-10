@@ -975,6 +975,36 @@ input#claim_sequence_wide[type="text"] {
   border-right: 1px solid #c4c5c4;
 }
 /***********************************************************************************************************************/
+/***************************************************************************************** OPTION PANELS ***************/
+#dashboard_options {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-width: 1026px;
+  margin: 15px;
+  background: #f4f5f4;
+  border: 1px solid #c4c5c4;
+  text-align: left;
+}
+#dashboard_options .option_header {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-width: 1026px;
+  height: 26px;
+  padding:9px 0 5px;
+  background: #f2f2f2 url('../images/inner_pages/page_header_bg.jpg') left bottom repeat-x
+}
+#dashboard_options .option_header h2 {
+  float: left;
+  height: 25px;
+  font-size: 18px;
+  margin-left: 12px;
+  color: #555;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #efefef;
+}
+/***********************************************************************************************************************/
 /****************************************************************************************** QUICK LAUNCH ***************/
 #quick_launch_wrap {
   margin:0 auto;
@@ -3481,14 +3511,24 @@ div.overlay {
     padding: 0 !important;
 }
 div.overlay div.close, div.tutorial_overlay div.close { 
-  background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
+  background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
   cursor:pointer;
   height:38px;
   position:absolute;
-  right:-12px;
-  top:-10px;
+/*  right:-12px;
+  top:-10px;*/
+  right:0;
+  top:22px;
   width:38px;
   z-index:10;
+}
+#thead {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 40px;
+  background: #000 url(../images/overlay/modal-header.png) 0px 0px repeat-x;
+  cursor: move;
 }
 .contentWrap {
   position: relative;

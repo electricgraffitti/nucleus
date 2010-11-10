@@ -5,7 +5,9 @@
 <div id="panel_layout" class="clear">
   
   <div id="dashboard_options" class="hidden">
-    <h2 class="header">Dashboard Options</h2>
+    <div class="option_header">
+      <h2>Dashboard Options</h2>
+    </div>
     <%= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
     <%= link_to "Close", "", :class => "options_panel_close" %>
   </div>

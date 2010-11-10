@@ -92,11 +92,15 @@ var drag = {
         ss.filter(":first").append(savedOrd);
       }
     }
-  }
+  },
   
+  tutorialDrag: function() {
+    var t = $("#tutorial_modal");
+    t.draggable({ handle: 'thead' });
+  }
 };
 
 
 $(document).ready(function() {
-	
+	drag.tutorialDrag();
 });

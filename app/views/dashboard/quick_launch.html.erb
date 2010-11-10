@@ -2,13 +2,34 @@
   <%= render :partial => 'dashboard/quick_launch_header' %>
 <% end %>
 
-<div id="centered_layout" class="message_panels clear">
-  <div id="dashboard_options" class="hidden">
-    <h2 class="header">Quick Launch Options</h2>
-    <%#= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
-    <%= link_to "Close", "", :class => "options_panel_close" %>
+<div id="dashboard_options" class="hidden">
+  <div class="option_header">
+    <h2>Quick Launch Options</h2>
   </div>
+  <div id="ql_checkboxes">
+    <%= check_box_tag "ql1", "ql1", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql2", "ql2", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql3", "ql3", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql4", "ql4", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql5", "ql5", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql6", "ql6", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql7", "ql7", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql9", "ql9", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql10", "ql10", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql11", "ql11", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql12", "ql12", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql13", "ql13", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql14", "ql14", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql15", "ql15", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql16", "ql16", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql17", "ql17", :checked => "checked", :class => "widget_view_option" %>
+    <%= check_box_tag "ql18", "ql18", :checked => "checked", :class => "widget_view_option" %>
+  </div>
+  <%#= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
+  <%= link_to "Close", "", :class => "options_panel_close" %>
+</div>
 
+<div id="centered_layout" class="message_panels clear">
     <div id="quick_launch_wrap" class="inner_box">
       <div id="quick_launch_icons">  
         <div id="1" class="quick_launch_box dashboard_widget">
