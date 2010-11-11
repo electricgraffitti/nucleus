@@ -1004,6 +1004,225 @@ input#claim_sequence_wide[type="text"] {
   font-weight: bold;
   text-shadow: 1px 1px 0px #efefef;
 }
+.options_panel_close {
+  background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+  cursor:pointer;
+  height:15px;
+  position:absolute;
+  right:10px;
+  text-indent:-3000em;
+  top:13px;
+  width:15px;
+  z-index:10;
+}
+.option_subtitle {
+  border-bottom:1px solid #E7E7E7;
+  color:#000000;
+  font-family:Arial,'Lucida Grande',Verdana,Sans-Serif;
+  font-size:12px;
+  margin:0 10px;
+  padding:8px 0;
+  clear: both;
+}
+.option_cb_wrap {
+  border-top:1px solid #FFFFFF;
+  margin:0 10px 5px;
+}
+#dashboard_options .option_trigger {
+  display:block;
+  float:left;
+  font-family:Arial,'Lucida Grande',Verdana,Sans-Serif;
+  font-size:12px;
+  height:23px;
+  margin:5px;
+  overflow:hidden;
+  width:164px;
+  color: #C3C4C3;
+}
+#dashboard_options .option_trigger a {
+  cursor:pointer;
+  display:block;
+  color: #0088cc;
+  text-decoration: underline;
+  float: left;
+  height:18px;
+  padding-top:5px;
+  width:137px;
+}
+#dashboard_options .option_trigger.active a {
+  color: #C3C4C3;
+  text-decoration: none;
+}
+#dashboard_options .option_trigger a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") 0px 0px no-repeat;
+  float:left;
+  height:23px;
+  margin-right:3px;
+  width:23px;
+  text-indent: -3000em;
+}
+#dashboard_options .option_trigger.ql_dash.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") 0px -23px;
+}
+#dashboard_options .option_trigger.ql_dash a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") 0px 0px;
+}
+#dashboard_options .option_trigger.ql_dash.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") 0px -46px;
+}
+#dashboard_options .option_trigger.ql_report.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -92px -23px;
+}
+#dashboard_options .option_trigger.ql_report a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -92px 0px;
+}
+#dashboard_options .option_trigger.ql_report.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -92px -46px;
+}
+#dashboard_options .option_trigger.ql_search.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -184px -23px;
+}
+#dashboard_options .option_trigger.ql_search a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -184px 0px;
+}
+#dashboard_options .option_trigger.ql_search.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -184px -46px;
+}
+#dashboard_options .option_trigger.ql_pro_search.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -276px -23px;
+}
+#dashboard_options .option_trigger.ql_pro_search a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -276px 0px;
+}
+#dashboard_options .option_trigger.ql_pro_search.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -276px -46px;
+}
+#dashboard_options .option_trigger.ql_suspect.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -345px -23px;
+}
+#dashboard_options .option_trigger.ql_suspect a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -345px 0px;
+}
+#dashboard_options .option_trigger.ql_suspect.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -345px -46px;
+}
+#dashboard_options .option_trigger.ql_hciu.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -23px -23px;
+}
+#dashboard_options .option_trigger.ql_hciu a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -23px 0px;
+}
+#dashboard_options .option_trigger.ql_hciu.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -23px -46px;
+}
+#dashboard_options .option_trigger.ql_messages.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -115px -23px;
+}
+#dashboard_options .option_trigger.ql_messages a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -115px 0px;
+}
+#dashboard_options .option_trigger.ql_messages.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -115px -46px;
+}
+#dashboard_options .option_trigger.ql_idea.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -207px -23px;
+}
+#dashboard_options .option_trigger.ql_idea a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -207px 0px;
+}
+#dashboard_options .option_trigger.ql_idea.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -207px -46px;
+}
+#dashboard_options .option_trigger.ql_help.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -299px -23px;
+}
+#dashboard_options .option_trigger.ql_help a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -299px 0px;
+}
+#dashboard_options .option_trigger.ql_help.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -299px -46px;
+}
+#dashboard_options .option_trigger.ql_settings.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -368px -23px;
+}
+#dashboard_options .option_trigger.ql_settings a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -368px 0px;
+}
+#dashboard_options .option_trigger.ql_settings.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -368px -46px;
+}
+#dashboard_options .option_trigger.ql_high.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -46px -23px;
+}
+#dashboard_options .option_trigger.ql_high a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -46px 0px;
+}
+#dashboard_options .option_trigger.ql_high.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -46px -46px;
+}
+#dashboard_options .option_trigger.ql_elevated.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -138px -23px;
+}
+#dashboard_options .option_trigger.ql_elevated a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -138px 0px;
+}
+#dashboard_options .option_trigger.ql_elevated.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -138px -46px;
+}
+#dashboard_options .option_trigger.ql_moderate.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -230px -23px;
+}
+#dashboard_options .option_trigger.ql_moderate a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -230px 0px;
+}
+#dashboard_options .option_trigger.ql_moderate.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -230px -46px;
+}
+#dashboard_options .option_trigger.ql_low.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -322px -23px;
+}
+#dashboard_options .option_trigger.ql_low a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -322px 0px;
+}
+#dashboard_options .option_trigger.ql_low.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -322px -46px;
+}
+#dashboard_options .option_trigger.ql_flagged.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -391px -23px;
+}
+#dashboard_options .option_trigger.ql_flagged a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -391px 0px;
+}
+#dashboard_options .option_trigger.ql_flagged.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -391px -46px;
+}
+#dashboard_options .option_trigger.ql_pci.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -69px -23px;
+}
+#dashboard_options .option_trigger.ql_pci a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -69px 0px;
+}
+#dashboard_options .option_trigger.ql_pci.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -69px -46px;
+}
+#dashboard_options .option_trigger.ql_dci.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -161px -23px;
+}
+#dashboard_options .option_trigger.ql_dci a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -161px 0px;
+}
+#dashboard_options .option_trigger.ql_dci.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -161px -46px;
+}
+#dashboard_options .option_trigger.ql_cti.active a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -253px -23px;
+}
+#dashboard_options .option_trigger.ql_cti a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -253px 0px;
+}
+#dashboard_options .option_trigger.ql_cti.disabled a.option_icon {
+  background: url("../images/inner_pages/ql-settings-sprite.png") -253px -46px;
+}
 /***********************************************************************************************************************/
 /****************************************************************************************** QUICK LAUNCH ***************/
 #quick_launch_wrap {

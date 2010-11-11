@@ -542,9 +542,9 @@ var widget = {
     });
   },
   
-  ezCheck: function() {
-    $("#dashboard_options input[type='checkbox']").ezMark();
-  },
+  // ezCheck: function() {
+  //   $("#dashboard_options input[type='checkbox']").ezMark();
+  // },
   
   optionPaneDisplay: function(pane) {
     var w = $(window);
@@ -552,9 +552,23 @@ var widget = {
       pane.hide();
     } else {
       pane.show();
-      panels.setOptionsWidth()
-      widget.ezCheck();
+      panels.setOptionsWidth();
     }
+    widget.quickLaunchOptions();
+  },
+  
+  quickLaunchOptions: function() {
+    var trig = $("#ql_checkboxes a");
+    
+    trig.live('click', function(e) {
+      e.preventDefault();
+      var wrap = $(this).parent('.option_trigger');
+      if (wrap.hasClass("active")) {
+        wrap.removeClass('active');
+      } else {
+        wrap.addClass('active');
+      }
+    });
   },
   
   widgetDisplayToggle: function(panel) {
