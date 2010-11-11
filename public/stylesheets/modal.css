@@ -944,8 +944,8 @@ a.flag_panel {
 .accordion_content_wrap {
   position: relative;
   float: left;
-  width: 486px;
-  height: 218px;
+/*  width: 486px;
+  height: 218px;*/
 }
 .map_address_wrap {
   width: 445px;
@@ -959,9 +959,9 @@ a.flag_panel {
 .charts_maps_wrap {
   position: relative;
   float: left;
-  width: 400px;
+  width: 832px;
   padding: 0px;
-  height: 218px;
+  height: 402px;
   border: 1px solid #c0c0c0;
 /*  margin-left: 10px;*/
 }
@@ -1081,24 +1081,172 @@ ul.location_stats li {
 .provider_module.half .profile_module_header {
   width: 211px;
 }
-.dashboard_widget_options {
+.widget, .module {
+  position: relative;
+  float: left;
+  width: 390px;
+  height: 300px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#accordion_map.widget {
+  width: 828px;
+  height: 445px;
+  margin-left: 0px;
+}
+.widget_header {
+  position: relative;
+  float:left;
+  border: 1px solid #c3c4c3;
+  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left 10px #F2F2F2;
+  font-size:14px;
+  font-weight:bold;
+  height:23px;
+  padding:2px 9px 13px;
+  text-align:left;
+  width: 816px;
+}
+.module_header {
+  position: relative;
+  float:left;
+  border: 1px solid #c3c4c3;
+  font-size:14px;
+  font-weight:bold;
+  height:23px;
+  padding:2px 9px 13px;
+  text-align:left;
+  width:370px;
+}
+.widget_header h3 {
+  float:left;
+  height:18px;
+  position:relative;
+  width:100%;
+  font-weight: bold;
+  font-size: 13px;
+}
+.module_header h3 {
+  float:left;
+  height:18px;
+  position:relative;
+  width: 280px;
+  padding-top: 8px;
+}
+.module_header #provider_rating {
+  font-size:23px;
+  font-weight:bold;
+  height:33px;
+  padding:5px 0 0 46px;
+  position:absolute;
+  right:0;
+  text-shadow:0 1px 0 #EFEFEF;
+  top:0;
+  width:55px;
+}
+.module_header #provider_rating.red_rating {
+  background:url("../images/inner_pages/provider_rating_discs_left-v2.png") no-repeat scroll right 0 #D3D4D4;
+}
+.widget_header_bottom, .widget_header_top {
+  float:left;
+  position:relative;
+  width:100%;
+  height: 18px;
+}
+.widget_header_bottom .widget_header_sub_title {
+  color:#5BAB46;
+  float:left;
+  font-size:12px;
+  font-weight:bold;
+  width:50%;
+}
+.widget_options {
+  position: relative;
+  width: 100px;
+  height: 18px;
+  float: right;
+}
+.widget_options ul {
+  position: relative;
+  width: 100px;
+  float: left;
+  margin-top: -5px;
+}
+.widget_options ul li {
+  position: relative;
+  width: 20px;
+  float: left;
+}
+.widget_options ul li a {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  float: left;
+  display: block;
+  text-indent: -3000em;
+}
+a.widget_option.email_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) 0px 0px no-repeat;
+}
+a.widget_option.settings_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -20px 0px no-repeat;
+}
+a.widget_option.export_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -40px 0px no-repeat;
+}
+a.widget_option.maximize_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -60px 0px no-repeat;
+}
+a.widget_option.close_option {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -80px 0px no-repeat;
+}
+a.widget_option.email_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) 0px -20px no-repeat;
+}
+a.widget_option.settings_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -20px -20px no-repeat;
+}
+a.widget_option.export_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -40px -20px no-repeat;
+}
+a.widget_option.maximize_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -60px -20px no-repeat;
+}
+a.widget_option.close_option:hover {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -80px -20px no-repeat;
+}
+a.widget_option.email_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) 0px -40px no-repeat;
+}
+a.widget_option.settings_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -20px -40px no-repeat;
+}
+a.widget_option.export_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -40px -40px no-repeat;
+}
+a.widget_option.maximize_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -60px -40px no-repeat;
+}
+a.widget_option.close_option:active {
+  background: transparent url(../images/inner_pages/widget_option_icons.png) -80px -40px no-repeat;
+}
+.widget_options {
   float:right;
   height:20px;
   position:relative;
   width:95px;
   margin-top: -3px;
 }
-.dashboard_widget_options ul {
+.widget_options ul {
   position: relative;
   width: 100px;
   float: left;
 }
-.dashboard_widget_options ul li {
+.widget_options ul li {
   position: relative;
   width: 20px;
   float: left;
 }
-.dashboard_widget_options ul li a {
+.widget_options ul li a {
   position: relative;
   width: 20px;
   height: 20px;
@@ -1195,13 +1343,20 @@ tr {
 td {
   border-right: 1px solid #c0c0c0;
 }
-th, tfoot {
+/*th, tfoot {
   height: 12px;
   background: #32312f url('../images/inner_pages/table_header.jpg') repeat-x;
   color: #c9caca;
   border-right: 1px solid #c9caca;
   padding: 4px 5px 5px;
   font-weight:bold;
+}*/
+th, tfoot {
+  background:none repeat scroll 0 0 #333333;
+  border-right:1px solid #C9CACA;
+  color:#EEEEEE;
+  height:12px;
+  padding:4px 5px 5px;
 }
 tfoot {
   background: url("../images/inner_pages/page_header_bg.jpg") repeat-x;
@@ -1214,10 +1369,18 @@ table.expansion_table thead tr th, table.expansion_table tfoot, #accordion table
   color: #343434;
   border-right: 1px solid #c9caca;
   padding: 4px 5px 5px;
-  text-shadow: 0px 1px 0px #fff;
+}
+#accordion table {
+  width: 837px;
+  border-left:1px solid #C4C5C4;
 }
 #accordion table thead tr th {
   border-top: 1px solid #c0c0c0;
+  background:none repeat scroll 0 0 #333333;
+  border-right:1px solid #C9CACA;
+  color:#EEEEEE;
+  height:12px;
+  padding:4px 5px 5px;
 }
 #accordion table tbody tr.odd {
   background: #f8f8f8;
@@ -1321,9 +1484,13 @@ tr.even {
 }
 tr.active {
 /*  background: #d2edbc;*/
-  background: #6ac520;
+  background: #fdf4d9;
 	color: #fff;
 	font-weight: bold;
+}
+tr:hover {
+  background: #fdf4d9;
+	color: #333;
 }
 /*********Accordion Tables********/
 h4.accordion_table_header {

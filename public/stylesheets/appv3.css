@@ -980,7 +980,7 @@ input#claim_sequence_wide[type="text"] {
   position: relative;
   float: left;
   width: 100%;
-  min-width: 1026px;
+  min-width: 1022px;
   margin: 15px;
   background: #f4f5f4;
   border: 1px solid #c4c5c4;

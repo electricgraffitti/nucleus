@@ -4,8 +4,15 @@ class ModalsController < ApplicationController
   
   def provider_profile
     @provider = Provider.find(params[:id])
-    map_type = GMapType::G_HYBRID_MAP
-    @coords = @provider.locations.first.fetch_coordinates()
+    map_type = GMapType::G_HYBRID_MAP 
+    
+    if params[:location_id]
+      @location = Location.find(params[:location_id])
+    else
+      @location = @provider.locations.first
+    end
+    
+    @coords = @location.fetch_coordinates()
     
     @coordsj = @coords.to_json
     

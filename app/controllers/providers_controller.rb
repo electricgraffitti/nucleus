@@ -20,7 +20,17 @@ class ProvidersController < ApplicationController
   def show
     @provider = Provider.find(params[:id])
     map_type = GMapType::G_HYBRID_MAP
-    coords = @provider.locations.first.fetch_coordinates()
+    
+    
+    if params[:location_id]
+      @location = Location.find(params[:location_id])
+    else
+      @location = @provider.locations.first
+    end
+    
+    raise @location.to_yaml
+    
+    coords = @location.fetch_coordinates()
     @map = GMap.new("map")
     @map.control_init(:large_map => true, :map_type => true, :street_view_control => true)
     @map.center_zoom_init(coords,14)
