@@ -16,77 +16,77 @@
     Customize your Quick Launch Links by adding from the list below. A minimum of eight icons is required.
   </div>
   <div id="ql_checkboxes" class="option_cb_wrap">
-    <div class="option_trigger ql_dash ">
-      <%= link_to "Dashboard", "", :class => "option_icon" %>
-      <%= link_to "Dashboard", "" %>
+    <div class="option_trigger ql_dash active">
+      <%= link_to "Dashboard", "", :class => "option_icon", :icon => "1"  %>
+      <%= link_to "Dashboard", "", :icon => "1" %>
     </div>
     <div class="option_trigger ql_report active">
-      <%= link_to "Reports Center", "", :class => "option_icon" %>
-      <%= link_to "Reports Center", "" %>
+      <%= link_to "Reports Center", "", :class => "option_icon", :icon => "2" %>
+      <%= link_to "Reports Center", "", :icon => "2" %>
     </div>
     <div class="option_trigger ql_search active">
-      <%= link_to "Search", "", :class => "option_icon" %>
-      <%= link_to "Claim Search", "" %>
+      <%= link_to "Search", "", :class => "option_icon", :icon => "3" %>
+      <%= link_to "Claim Search", "", :icon => "3" %>
     </div>
     <div class="option_trigger ql_pro_search active"> 
-      <%= link_to "Provider Search", "", :class => "option_icon" %>
-      <%= link_to "Provider Search", "" %>
+      <%= link_to "Provider Search", "", :class => "option_icon", :icon => "4" %>
+      <%= link_to "Provider Search", "", :icon => "4" %>
     </div>
     <div class="option_trigger ql_suspect active"> 
-      <%= link_to "Suspect Providers", "", :class => "option_icon" %>
-      <%= link_to "Suspect Providers", "" %>
+      <%= link_to "Suspect Providers", "", :class => "option_icon", :icon => "5" %>
+      <%= link_to "Suspect Providers", "", :icon => "5" %>
     </div>
     <div class="option_trigger ql_hciu active"> 
-      <%= link_to "HCI U", "", :class => "option_icon" %>
-      <%= link_to "HCI U", "" %>
+      <%= link_to "HCI U", "", :class => "option_icon", :icon => "6" %>
+      <%= link_to "HCI U", "", :icon => "6" %>
     </div>
     <div class="option_trigger ql_messages active"> 
-      <%= link_to "Message Center", "", :class => "option_icon" %>
-      <%= link_to "Message Center", "" %>
+      <%= link_to "Message Center", "", :class => "option_icon", :icon => "7" %>
+      <%= link_to "Message Center", "", :icon => "7" %>
     </div>
     <div class="option_trigger ql_idea active"> 
-      <%= link_to "Idea Forum", "", :class => "option_icon" %>
-      <%= link_to "Idea Forum", "" %>
+      <%= link_to "Idea Forum", "", :class => "option_icon", :icon => "8" %>
+      <%= link_to "Idea Forum", "", :icon => "8" %>
     </div>
     <div class="option_trigger ql_help active"> 
-      <%= link_to "Help Center", "", :class => "option_icon" %>
-      <%= link_to "Help Center", "" %>
+      <%= link_to "Help Center", "", :class => "option_icon", :icon => "9" %>
+      <%= link_to "Help Center", "", :icon => "9" %>
     </div>
     <div class="option_trigger ql_settings active"> 
-      <%= link_to "Settings", "", :class => "option_icon" %>
-      <%= link_to "Settings", "" %>
+      <%= link_to "Settings", "", :class => "option_icon", :icon => "10" %>
+      <%= link_to "Settings", "", :icon => "10" %>
     </div>
     <div class="option_trigger ql_high active"> 
-      <%= link_to "High Risk", "", :class => "option_icon" %>
-      <%= link_to "High Risk", "" %>
+      <%= link_to "High Risk", "", :class => "option_icon", :icon => "11" %>
+      <%= link_to "High Risk", "", :icon => "11" %>
     </div>
     <div class="option_trigger ql_elevated active"> 
-      <%= link_to "Elevated Risk", "", :class => "option_icon" %>
-      <%= link_to "Elevated Risk", "" %>
+      <%= link_to "Elevated Risk", "", :class => "option_icon", :icon => "12" %>
+      <%= link_to "Elevated Risk", "", :icon => "12" %>
     </div>
     <div class="option_trigger ql_moderate active"> 
-      <%= link_to "Moderate Risk", "", :class => "option_icon" %>
-      <%= link_to "Moderate Risk", "" %>
+      <%= link_to "Moderate Risk", "", :class => "option_icon", :icon => "13" %>
+      <%= link_to "Moderate Risk", "", :icon => "13" %>
     </div>
     <div class="option_trigger ql_low active"> 
-      <%= link_to "Low Risk", "", :class => "option_icon" %>
-      <%= link_to "Low Risk", "" %>
+      <%= link_to "Low Risk", "", :class => "option_icon", :icon => "14" %>
+      <%= link_to "Low Risk", "", :icon => "14" %>
     </div>
     <div class="option_trigger ql_flagged active"> 
-      <%= link_to "Flagged Claims", "", :class => "option_icon" %>
-      <%= link_to "Flagged Claims", "" %>
+      <%= link_to "Flagged Claims", "", :class => "option_icon", :icon => "15" %>
+      <%= link_to "Flagged Claims", "", :icon => "15" %>
     </div>
     <div class="option_trigger ql_pci active"> 
-      <%= link_to "PCI", "", :class => "option_icon" %> 
-      <%= link_to "PCI", "" %>
+      <%= link_to "PCI", "", :class => "option_icon", :icon => "16" %> 
+      <%= link_to "PCI", "", :icon => "16" %>
     </div>
     <div class="option_trigger ql_dci active">
-      <%= link_to "DCI", "", :class => "option_icon" %>
-      <%= link_to "DCI", "" %>
+      <%= link_to "DCI", "", :class => "option_icon", :icon => "17" %>
+      <%= link_to "DCI", "", :icon => "17" %>
     </div>
     <div class="option_trigger ql_cti active"> 
-      <%= link_to "CTI", "", :class => "option_icon" %>
-      <%= link_to "CTI", "" %>
+      <%= link_to "CTI", "", :class => "option_icon", :icon => "18" %>
+      <%= link_to "CTI", "", :icon => "18" %>
     </div>
   </div>
   <%#= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
@@ -96,58 +96,58 @@
     <div id="quick_launch_wrap" class="inner_box">
       <div id="quick_launch_icons">  
         <div id="1" class="quick_launch_box dashboard_widget">
-          <%= link_to "Dashboard", dashboard_path, :class => "dash1 tip", :title => "Nucleus Dashboard" %>
+          <%= link_to "Dashboard", dashboard_path, :class => "tip", :title => "Nucleus Dashboard" %>
         </div>
         <div id="2" class="quick_launch_box reports_widget">
-          <%= link_to "Reports Center", reports_path, :class => "dash2 tip", :title => "Nucleus Reports" %>
+          <%= link_to "Reports Center", reports_path, :class => "tip", :title => "Nucleus Reports" %>
         </div>
         <div id="3" class="quick_launch_box search_widget">
-          <%= link_to "Claim Search", claims_list_path, :class => "dash3 tip", :title => "Nucleus Claim Search" %>
+          <%= link_to "Claim Search", claims_list_path, :class => "tip", :title => "Nucleus Claim Search" %>
         </div>
         <div id="4" class="quick_launch_box provider_search_widget">
-          <%= link_to "Provider Search", provider_search_path, :class => "dash18 tip", :title => "Provider Search" %>
+          <%= link_to "Provider Search", provider_search_path, :class => "tip", :title => "Provider Search" %>
         </div>
         <div id="5" class="quick_launch_box suspect_provider_widget">
-          <%= link_to "Suspect Providers", provider_search_path, :class => "dash17 tip", :title => "Suspect Providers" %>
+          <%= link_to "Suspect Providers", provider_search_path, :class => "tip", :title => "Suspect Providers" %>
         </div>
         <div id="6" class="quick_launch_box university_widget">
           <%= link_to "HCI U", "http://www.hcinsight.com/insight-university", :target => "_blank", :class => "dash8 tip", :title => "Insight University" %>
         </div>
         <div id="7" class="quick_launch_box messages_widget">
-          <%= link_to "Messages", messages_path, :class => "dash5 tip", :title => "Nucleus Message Center" %>
+          <%= link_to "Messages", messages_path, :class => "tip", :title => "Nucleus Message Center" %>
         </div>
         <div id="8" class="quick_launch_box feedback_widget">
-          <%= link_to "Idea Center", client_feedback_path, :class => "dash6 tip", :title => "Nucleus Idea Forum" %>
+          <%= link_to "Idea Center", client_feedback_path, :class => "tip", :title => "Nucleus Idea Forum" %>
         </div>
         <div id="9" class="quick_launch_box help_widget">
-          <%= link_to "Help Center", help_path, :class => "dash4 tip", :title => "Nucleus Help Center" %>
+          <%= link_to "Help Center", help_path, :class => "tip", :title => "Nucleus Help Center" %>
         </div>
         <div id="10" class="quick_launch_box settings_widget">
           <%= link_to "Settings", "", :class => "dash7 tip coming_soon", :rel => "#coming_soon", :title => "Nucleus Client Settings" %>
         </div>
         <div id="11" class="quick_launch_box high_risk_widget">
-          <%= link_to "High Risk", provider_search_path, :class => "dash9 tip", :title => "High Risk Providers" %>
+          <%= link_to "High Risk", provider_search_path, :class => "tip", :title => "High Risk Providers" %>
         </div>
         <div id="12" class="quick_launch_box elevated_risk_widget">
-          <%= link_to "Elevated Risk", provider_search_path, :class => "dash10 tip", :title => "Elevated Risk Providers" %>
+          <%= link_to "Elevated Risk", provider_search_path, :class => "tip", :title => "Elevated Risk Providers" %>
         </div>
         <div id="13" class="quick_launch_box moderate_risk_widget">
-          <%= link_to "Moderate Risk", provider_search_path, :class => "dash11 tip", :title => "Moderate Risk Providers" %>
+          <%= link_to "Moderate Risk", provider_search_path, :class => "tip", :title => "Moderate Risk Providers" %>
         </div>
         <div id="14" class="quick_launch_box low_risk_widget">
-          <%= link_to "Low Risk", provider_search_path, :class => "dash12 tip", :title => "Low Risk Providers" %>
+          <%= link_to "Low Risk", provider_search_path, :class => "tip", :title => "Low Risk Providers" %>
         </div>
         <div id="15" class="quick_launch_box flagged_widget">
-          <%= link_to "Flagged Providers", claims_list_path, :class => "dash16 tip", :title => "Flagged Providers" %>
+          <%= link_to "Flagged Providers", claims_list_path, :class => "tip", :title => "Flagged Providers" %>
         </div>
         <div id="16" class="quick_launch_box pci_widget">
-          <%= link_to "PhysicianClaim Insight", "", :class => "dash13 tip coming_soon", :rel => "#coming_soon", :title => "PhysicianClaim Insight" %>
+          <%= link_to "PhysicianClaim Insight", "", :class => "tip coming_soon", :rel => "#coming_soon", :title => "PhysicianClaim Insight" %>
         </div>
         <div id="17" class="quick_launch_box dci_widget">
-          <%= link_to "DentalClaim Insight", "", :class => "dash14 tip coming_soon", :rel => "#coming_soon", :title => "DentalClaim Insight" %>
+          <%= link_to "DentalClaim Insight", "", :class => "tip coming_soon", :rel => "#coming_soon", :title => "DentalClaim Insight" %>
         </div>
         <div id="18" class="quick_launch_box cti_widget">
-          <%= link_to "CaseTracker Insight", "", :class => "dash15 tip coming_soon", :rel => "#coming_soon", :title => "CaseTracker Insight" %>
+          <%= link_to "CaseTracker Insight", "", :class => "tip coming_soon", :rel => "#coming_soon", :title => "CaseTracker Insight" %>
         </div>
 
 

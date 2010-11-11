@@ -562,13 +562,28 @@ var widget = {
     
     trig.live('click', function(e) {
       e.preventDefault();
+      var ql_icon = $('#' + $(this).attr('icon'));
       var wrap = $(this).parent('.option_trigger');
+      
       if (wrap.hasClass("active")) {
+        var hiddenID = ql_icon.attr('id');
         wrap.removeClass('active');
+        ql_icon.hide(widget.setQuickLaunchViewCookie(hiddenID));
       } else {
+        var visibleID = ql_icon.attr('id');
         wrap.addClass('active');
+        ql_icon.show(widget.destroyQuickLaunchViewCookie(visibleID));
       }
     });
+  },
+  
+  setQuickLaunchViewCookie: function(visibleID) {
+    // $.cookie(visibleID, 'qlhidden', { expires: 1000, path: "/" } );
+  },
+  
+  destroyQuickLaunchViewCookie: function(hiddenID) {
+    // var cookie = $.cookie(hiddenID);
+    // if (!cookie) return;    
   },
   
   widgetDisplayToggle: function(panel) {
