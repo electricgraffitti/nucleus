@@ -2157,6 +2157,25 @@ div.overlay div.close, div.tutorial_overlay div.close {
 #inner {
   margin-top: -200px;
 }
+/***********************************************************************************************************************/
+/*************************************************************************************** COMING SOON MODALS ************/
+div.coming_soon { 
+  position: relative;
+  width:855px;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+  display:none; 
+  padding: 0 !important;
+}
+div.coming_soon div.close { 
+  background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
+  cursor:pointer;
+  height:38px;
+  position:absolute;
+  right:-12px;
+  top:-10px;
+  width:38px;
+  z-index:10;
+}
 /***Modals***/
 .claim_notes {
 	position: relative;

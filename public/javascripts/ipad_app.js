@@ -41,6 +41,14 @@ var scroll = {
   setiPadIdeaScroll: function() {
    $('#center_idea_forum_content_wrap').jScrollTouch();
   },
+
+	setAccordionScroll: function() {
+		$("#accordion").jScrollTouch();
+	},
+	
+	setNewsScroll: function() {
+		$("ul#feeds").jScrollTouch();
+	},
   
   setiPadProviderSearchScroll: function() {
    $('#provider_search_table').jScrollTouch();

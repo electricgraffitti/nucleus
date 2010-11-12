@@ -37,6 +37,10 @@
       
       app.tutorialTrigger();
       
+      <% if ipad? %> 
+       scroll.setAccordionScroll();
+       <% end %>
+      
       // Column Chart 1
       $.getScript('../javascripts/data/modalAccordionColumnData.js');
       
