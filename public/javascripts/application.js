@@ -1029,7 +1029,6 @@ var app = {
     $panel_box.height($win.height() - $head.height());
     $centerPanel.width($win.width() - $westPanel.width());
     panels.northResizeTrigger();
-    panels.setNorthWidgetWrap();
     panels.setOptionsWidth($op, $win);
     panels.setWestPanelHeight($win, $head, $westPanel, $westresizerbar, $innerWest);
     panels.westResizeTrigger($win, $centerPanel, $innerWest, $westresizerbar);
