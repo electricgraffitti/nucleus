@@ -1,0 +1,23 @@
+<p>
+  <b>Client:</b>
+  <%=h @client_connection.client_id %>
+</p>
+
+<p>
+  <b>Follower count:</b>
+  <%=h @client_connection.follower_count %>
+</p>
+
+<p>
+  <b>Following count:</b>
+  <%=h @client_connection.following_count %>
+</p>
+
+<p>
+  <b>Group count:</b>
+  <%=h @client_connection.group_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_connection_path(@client_connection) %> |
+<%= link_to 'Back', client_connections_path %>

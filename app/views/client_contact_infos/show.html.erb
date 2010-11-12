@@ -1,0 +1,33 @@
+<p>
+  <b>Client:</b>
+  <%=h @client_contact_info.client_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @client_contact_info.company %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @client_contact_info.title %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%=h @client_contact_info.department %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @client_contact_info.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @client_contact_info.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_contact_info_path(@client_contact_info) %> |
+<%= link_to 'Back', client_contact_infos_path %>

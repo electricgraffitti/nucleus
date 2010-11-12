@@ -1,0 +1,26 @@
+<h1>Listing client_connections</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Follower count</th>
+    <th>Following count</th>
+    <th>Group count</th>
+  </tr>
+
+<% @client_connections.each do |client_connection| %>
+  <tr>
+    <td><%=h client_connection.client_id %></td>
+    <td><%=h client_connection.follower_count %></td>
+    <td><%=h client_connection.following_count %></td>
+    <td><%=h client_connection.group_count %></td>
+    <td><%= link_to 'Show', client_connection %></td>
+    <td><%= link_to 'Edit', edit_client_connection_path(client_connection) %></td>
+    <td><%= link_to 'Destroy', client_connection, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client_connection', new_client_connection_path %>

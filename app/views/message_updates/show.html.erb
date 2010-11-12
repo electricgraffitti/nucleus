@@ -1,0 +1,18 @@
+<p>
+  <b>Message:</b>
+  <%=h @message_update.message_id %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%=h @message_update.client_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @message_update.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_update_path(@message_update) %> |
+<%= link_to 'Back', message_updates_path %>

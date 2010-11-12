@@ -1,0 +1,30 @@
+<h1>Listing client_contact_infos</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Company</th>
+    <th>Title</th>
+    <th>Department</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+
+<% @client_contact_infos.each do |client_contact_info| %>
+  <tr>
+    <td><%=h client_contact_info.client_id %></td>
+    <td><%=h client_contact_info.company %></td>
+    <td><%=h client_contact_info.title %></td>
+    <td><%=h client_contact_info.department %></td>
+    <td><%=h client_contact_info.email %></td>
+    <td><%=h client_contact_info.phone %></td>
+    <td><%= link_to 'Show', client_contact_info %></td>
+    <td><%= link_to 'Edit', edit_client_contact_info_path(client_contact_info) %></td>
+    <td><%= link_to 'Destroy', client_contact_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client_contact_info', new_client_contact_info_path %>

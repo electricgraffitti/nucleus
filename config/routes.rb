@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :message_updates
+
+  map.resources :client_connections
+
+  map.resources :client_contact_infos
+
   map.resources :feeds
 
 

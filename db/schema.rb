@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101028161304) do
+ActiveRecord::Schema.define(:version => 20101112224856) do
 
   create_table "claim_statuses", :force => true do |t|
     t.string   "claim_status"
@@ -27,6 +27,26 @@ ActiveRecord::Schema.define(:version => 20101028161304) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "claim_status_id"
+  end
+
+  create_table "client_connections", :force => true do |t|
+    t.integer  "client_id"
+    t.integer  "follower_count"
+    t.integer  "following_count"
+    t.integer  "group_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "client_contact_infos", :force => true do |t|
+    t.integer  "client_id"
+    t.string   "company"
+    t.string   "title"
+    t.string   "department"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "client_sessions", :force => true do |t|
@@ -125,11 +145,20 @@ ActiveRecord::Schema.define(:version => 20101028161304) do
     t.boolean  "suspect_location"
   end
 
+  create_table "message_updates", :force => true do |t|
+    t.integer  "message_id"
+    t.integer  "client_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "messages", :force => true do |t|
     t.integer  "disscussion_id"
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "client_id"
   end
 
   create_table "monthly_billings", :force => true do |t|
