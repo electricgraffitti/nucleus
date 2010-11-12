@@ -581,20 +581,34 @@ var widget = {
   quickLaunchOptions: function() {
     var trig = $("#ql_checkboxes a");
     
-    trig.live('click', function(e) {
-      e.preventDefault();
-      var ql_icon = $('#' + $(this).attr('icon'));
-      var wrap = $(this).parent('.option_trigger');
-      
-      if (wrap.hasClass("active")) {
-        var visibleID = ql_icon.attr('id');
-        wrap.removeClass('active');
-        ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
-      } else {
-        var hiddenID = ql_icon.attr('id');
-        wrap.addClass('active');
-        ql_icon.show(widget.destroyQuickLaunchViewCookie(hiddenID));
+    trig.overlay({
+	    expose: {
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
       }
+    
+    // trig.live('click', function(e) {
+    //   e.preventDefault();
+    //   var ql_icon = $('#' + $(this).attr('icon'));
+    //   var wrap = $(this).parent('.option_trigger');
+    //   
+    //   if (wrap.hasClass("active")) {
+    //     var visibleID = ql_icon.attr('id');
+    //     wrap.removeClass('active');
+    //     // ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
+    //   } else {
+    //     var hiddenID = ql_icon.attr('id');
+    //     wrap.addClass('active');
+    //     // ql_icon.show(widget.destroyQuickLaunchViewCookie(hiddenID));
+    //   }
+    });
+  },
+  
+  confirmClose: function() {
+    var close = $(".confirm_no");
+    close.live('click', function(e) {
+      e.preventDefault();
     });
   },
   

@@ -3742,7 +3742,7 @@ div.overlay {
     display:none; 
     padding: 0 !important;
 }
-div.overlay div.close, div.tutorial_overlay div.close { 
+div.overlay div.close, div.tutorial_overlay div.close, div.confirm div.close { 
   background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
   cursor:pointer;
   height:38px;
@@ -4079,6 +4079,58 @@ div.coming_soon div.close {
   top:-10px;
   width:38px;
   z-index:10;
+}
+/***********************************************************************************************************************/
+/******************************************************************************************* CONFIRM MODALS ************/
+div.confirm { 
+  position: relative;
+  width:514px;
+  height: 214px;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  display:none; 
+  padding: 0 !important;
+}
+.confirm_content {
+  position: relative;
+  float: left;
+  padding: 40px 10px 10px;
+}
+#thead span.modal_title {
+  display:block;
+  padding: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+.confirm_content img {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+  float:left;
+}
+.confirm_content p {
+  width: 399px;
+  padding-top: 20px;
+  float:left;
+}
+.confirm_body {
+  background: #fff;
+  margin: 10px;
+}
+#confirm_links {
+  float:right;
+  height:40px;
+  padding:0 10px;
+  position:relative;
+  text-align:right;
+  width:100px;
+}
+#confirm_links a {
+  display:block;
+  float:left;
+  height:21px;
+  margin-left:10px;
+  padding-top:4px;
+  text-align:center;
 }
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/

@@ -1,10 +1,10 @@
 <div class="side_wrap">
   <%= link_to '<div id="logo">Nucleus</div>', quick_launch_path %>
   <div id="brand_wrap">
-  <%= image_tag("header/account_brand.png", :alt => "Molina Healthcare", :id => "account_brand") %>
+    <%= link_to image_tag("header/account_brand.png", :alt => "Molina Healthcare", :id => "account_brand"), "http://Nucleusdemo.com/Pages/QuickLaunch.aspx" %>
   </div>
   <div id="client_name">
-    Hello, <%= current_client.first_name %>
+    Hello, <%#= current_client.first_name %> Demo
   </div>
 </div>
 <div id="nav_wrapper">

@@ -26,3 +26,19 @@
   </div>
 </div>
 
+<div class="confirm" id="confirm">
+  <div class="close"></div>
+  <div class="contentWrap confirm_body">
+    <div id="thead">
+      <span class="modal_title">Confirm Icon Removal</span>
+    </div>
+    <div class="confirm_content">
+      <%= image_tag("/images/inner_pages/confirm_icon.png", :alt => "Confirm Removal") %>
+      <p>Are you sure you want to remove this widget?</p>
+    </div>
+    <div id="confirm_links">
+      <%= link_to "Yes", "", :class => "confirm_yes medium_btn" %>
+      <%= link_to "No", "", :class => "confirm_no close" %>
+    </div>
+  </div>
+</div>
