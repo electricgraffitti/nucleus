@@ -367,7 +367,7 @@ var panels = {
     var $panels = $('#dashboard .dash_panel');
     $tabs.click(function(e) {
       e.preventDefault();
-      var panelId = $(this).attr('href');
+      var panelId = $(this).attr('hash');
       var page = $(panelId);
       $panels.hide();
       $(this).parent().siblings().removeClass('active');
@@ -699,7 +699,6 @@ var widget = {
     widget.closeOption();
     widget.printWidget();
     widget.optionSubmitTriggers();
-    widget.ezCheck();
   }
   
 };
