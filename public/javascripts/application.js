@@ -582,10 +582,11 @@ var widget = {
     var trig = $("#ql_checkboxes a");
     
     trig.live('click', function(e) {
-      e.preventDefault();
+      
       var wrap = $(this).parent('.option_trigger');
       
-      if (wrap.hasClass("active")) {      
+      if (wrap.hasClass("active")) {
+        e.preventDefault();     
         $(this).overlay({
       	    expose: {
               color: '#AAAAAA',
@@ -600,7 +601,7 @@ var widget = {
       			}
   			  });
   			} else {
-          
+          e.preventDefault();
           var ql_icon = $('#' + $(this).attr('icon'));
   			  var hiddenID = ql_icon.attr('id');
           wrap.addClass('active');
@@ -892,6 +893,29 @@ var app = {
       e.preventDefault();
     });
 	},
+	
+	messageModal: function() {
+	  var $trig = $('.email_contact');
+	  $trig.overlay({
+	    expose: {
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
+      }
+	  });
+	},
+	
+	ideaModal: function() {
+	  var $trig = $('.idea_modal');
+	  $trig.overlay({
+	    expose: {
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
+      }
+	  });
+  },
+	
 	
 	tutorialTriggerState: function() {
     var $t = $("#scroll_thumbs ul li");
