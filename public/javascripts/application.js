@@ -581,28 +581,47 @@ var widget = {
   quickLaunchOptions: function() {
     var trig = $("#ql_checkboxes a");
     
-    trig.overlay({
-	    expose: {
-        color: '#AAAAAA',
-        loadSpeed: 200,
-        opacity: 0.5
-      }
-    
-    // trig.live('click', function(e) {
-    //   e.preventDefault();
-    //   var ql_icon = $('#' + $(this).attr('icon'));
-    //   var wrap = $(this).parent('.option_trigger');
-    //   
-    //   if (wrap.hasClass("active")) {
-    //     var visibleID = ql_icon.attr('id');
-    //     wrap.removeClass('active');
-    //     // ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
-    //   } else {
-    //     var hiddenID = ql_icon.attr('id');
-    //     wrap.addClass('active');
-    //     // ql_icon.show(widget.destroyQuickLaunchViewCookie(hiddenID));
-    //   }
+    trig.live('click', function(e) {
+      e.preventDefault();
+      var wrap = $(this).parent('.option_trigger');
+      
+      if (wrap.hasClass("active")) {      
+        $(this).overlay({
+      	    expose: {
+              color: '#AAAAAA',
+              loadSpeed: 200,
+              opacity: 0.5
+            },
+            onBeforeLoad: function() {
+              var el = this.getTrigger();
+              var ol = this.getOverlay();
+              var yesLink = ol.find('a.confirm_yes');
+              widget.confirmQuickLaunchRemoval(yesLink, el);
+      			}
+  			  });
+  			} else {
+          
+          var ql_icon = $('#' + $(this).attr('icon'));
+  			  var hiddenID = ql_icon.attr('id');
+          wrap.addClass('active');
+          ql_icon.show(widget.destroyQuickLaunchViewCookie(hiddenID));
+  			}
     });
+  },
+  
+  confirmQuickLaunchRemoval: function(link, el) {
+    
+    link.click(function() {
+      e.preventDefault();
+      var ql_icon = $('#' + el.attr('icon'));
+      var wrap = el.parent('.option_trigger');
+      var visibleID = ql_icon.attr('id');
+      wrap.removeClass('active');
+      ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
+      link.siblings('a.close').click();
+    });
+    
+
   },
   
   confirmClose: function() {
