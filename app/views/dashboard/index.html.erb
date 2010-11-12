@@ -4,13 +4,9 @@
 
 <div id="panel_layout" class="clear">
   
-  <div id="dashboard_options" class="hidden">
-    <div class="option_header">
-      <h2>Dashboard Options</h2>
-    </div>
-    <%= render :partial => "clients/dashboard_options", :locals => {:dashboard_widgets => @dashboard_widgets} %>
-    <%= link_to "Close", "", :class => "options_panel_close" %>
-  </div>
+  <%# Dashboard Options %>
+  <%= render :partial => "clients/dashboard_options" %>
+  
   
   <div id="dashboard">
     <ul id="tab_nav" class="main">
@@ -50,6 +46,9 @@
         drag.setupDashboardPanels($page1, "dashPage1", 1000);
         drag.setupDashboardPanels($page2, "dashPage2", 1000);
         drag.setupDashboardPanels($page3, "dashPage3", 1000);
+        drag.loadDashboardLaunchOrder($page1, "dashPage1");
+        drag.loadDashboardLaunchOrder($page2, "dashPage2");
+        drag.loadDashboardLaunchOrder($page3, "dashPage3");
       <% end %>
       <% if ipad? %>
         scroll.setNewsScroll();

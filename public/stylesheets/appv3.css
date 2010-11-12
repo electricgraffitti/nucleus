@@ -1027,8 +1027,9 @@ input#claim_sequence_wide[type="text"] {
 .option_cb_wrap {
   border-top:1px solid #FFFFFF;
   margin:0 10px 5px;
+  float:left;
 }
-#dashboard_options .option_trigger {
+#dashboard_options .option_trigger, #dashboard_options .db_option_trigger {
   display:block;
   float:left;
   font-family:Arial,'Lucida Grande',Verdana,Sans-Serif;
@@ -1039,7 +1040,10 @@ input#claim_sequence_wide[type="text"] {
   width:164px;
   color: #C3C4C3;
 }
-#dashboard_options .option_trigger a {
+#dashboard_options .db_option_trigger {
+  width:220px;
+}
+#dashboard_options .option_trigger a, #dashboard_options .db_option_trigger a {
   cursor:pointer;
   display:block;
   color: #0088cc;
@@ -1049,17 +1053,26 @@ input#claim_sequence_wide[type="text"] {
   padding-top:5px;
   width:137px;
 }
-#dashboard_options .option_trigger.active a {
+#dashboard_options .db_option_trigger a {
+  width: 190px;
+}
+#dashboard_options .option_trigger.active a, #dashboard_options .db_option_trigger.active a {
   color: #C3C4C3;
   text-decoration: none;
 }
-#dashboard_options .option_trigger a.option_icon {
+#dashboard_options .option_trigger a.option_icon, #dashboard_options .db_option_trigger a.db_option_icon {
   background: url("../images/inner_pages/ql-settings-sprite.png") 0px 0px no-repeat;
   float:left;
   height:23px;
   margin-right:3px;
   width:23px;
   text-indent: -3000em;
+}
+#dashboard_options .db_option_trigger a.db_option_icon {
+  background: url("../images/inner_pages/dashboard-options-sprite.png") 0px 0px no-repeat;
+}
+#dashboard_options .db_option_trigger.active a.db_option_icon {
+  background: url("../images/inner_pages/dashboard-options-sprite.png") 0px -23px no-repeat;
 }
 #dashboard_options .option_trigger.ql_dash.active a.option_icon {
   background: url("../images/inner_pages/ql-settings-sprite.png") 0px -23px;
@@ -3855,7 +3868,7 @@ div.tutorial_overlay {
    position: relative;
    width:855px; 
    /*background-image:url(../images/overlay/apple.png); */
-   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
    display:none; 
    padding: 0 !important;
 }
@@ -4053,7 +4066,7 @@ div.tutorial_overlay {
 div.coming_soon { 
   position: relative;
   width:855px;
-  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   display:none; 
   padding: 0 !important;
 }

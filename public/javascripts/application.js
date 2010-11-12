@@ -482,22 +482,38 @@ var widget = {
   },
 
   widgetOptionTrigger: function() {
-    var $viewTrigger = $('#widget_view_controls :checkbox');
-    $viewTrigger.live('click', function() {
-      if ($(this).is(':checked')) {
-        
-        var $w = $('#' + $(this).attr('widget'));
-        var hiddenID = $w.attr('id');
-        $w.show('fade', 1000, widget.destroyWidgetViewCookie(hiddenID));
-        
+    var trig = $("a.widget_option");
+    
+    trig.live('click', function() {
+      var dashWidget = $(this).parents(".widget").first();
+      var visibleID = dashWidget.attr("id");
+      var optionLink = $("#db_checkboxes div." + visibleID);
+      
+      // jAlert fork goes here
+      optionLink.removeClass('active');
+      dashWidget.hide(widget.setQuickLaunchViewCookie(visibleID));
+      
+    });
+    
+  },
+  
+  dashboardOptionTrigger: function() {
+    var trig = $("#db_checkboxes a");
+    
+    trig.live('click', function(e) {
+      e.preventDefault();
+      var db_icon = $('#' + $(this).attr('icon'));
+      var wrap = $(this).parent('.db_option_trigger');
+      
+      if (wrap.hasClass("active")) {
+        var visibleID = db_icon.attr('id');
+        wrap.removeClass('active');
+        db_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
       } else {
-        
-        var $w = $('#' + $(this).attr('widget'));
-        var visibleID = $w.attr('id');
-        $w.hide('fade', 1000, widget.setWidgetViewCookie(visibleID));
-      
+        var hiddenID = db_icon.attr('id');
+        wrap.addClass('active');
+        db_icon.show(widget.destroyQuickLaunchViewCookie(hiddenID));
       }
-      
     });
   },
   
@@ -513,13 +529,26 @@ var widget = {
   
   checkViewCookie: function(checkValue) {
     var cookie = $.cookie(checkValue);
+    
     if (!cookie) {
       return false;
     } else {
-      var cb = $('#widget_view_controls .' + checkValue);
-      cb.attr('checked', '');
+      var cb = $('#db_checkboxes .' + checkValue);
+      cb.removeClass('active');
       return true;
     }
+  },
+  
+  // Called from no_ipad.js in drag object
+  checkForDBToggleCookies: function(ss) {
+    var icons = ss.children();
+    
+    icons.each(function() {
+      var x = widget.checkViewCookie($(this).attr("id"));
+      if (x) {
+        $(this).hide();
+      }
+    });
   },
   
   dashboardOptions: function(pane) {
@@ -591,6 +620,7 @@ var widget = {
     }
   },
   
+  // Called from no_ipad.js in drag object
   checkForQLToggleCookies: function(ss) {
     var icons = ss.children();
     
@@ -708,6 +738,7 @@ var widget = {
   
   widgetOptions: function(ss) {
     widget.settingsOption();
+    widget.dashboardOptionTrigger(ss);
     widget.widgetOptionTrigger(ss);
     widget.closeWidgetOptions();
     widget.exportOption();
@@ -805,8 +836,9 @@ var app = {
 	  var $trig = $('.tutorial_trigger');
 	  $trig.overlay({
 	    expose: {
-       color: '#000000',
-       opacity: 0.35
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
       },
       onBeforeLoad: function() {
        // grab wrapper element inside content 
@@ -840,9 +872,9 @@ var app = {
 	  var $trig = $('.coming_soon');
 	  $trig.overlay({
 	    expose: {
-       color: '#000000',
-       loadSpeed: 200,
-       opacity: 0.35
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
       }
 	  });
 	},
@@ -852,9 +884,9 @@ var app = {
 		
 	 	$nTrig.overlay({
      expose: {
-      color: '#000000',
-      loadSpeed: 200,
-      opacity: 0.35
+       color: '#AAAAAA',
+       loadSpeed: 200,
+       opacity: 0.5
      },
      // effect: 'apple',
 			onBeforeLoad: function() {
@@ -912,9 +944,9 @@ var app = {
 	  
 		$('a[rel]').overlay({
       expose: {
-       color: '#000000',
+       color: '#AAAAAA',
        loadSpeed: 200,
-       opacity: 0.35
+       opacity: 0.5
       },
       // effect: 'apple',
 			onBeforeLoad: function() {
