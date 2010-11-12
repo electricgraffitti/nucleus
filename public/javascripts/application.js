@@ -1097,4 +1097,5 @@ $(document).ready(function() {
 	tableActions.setDefaultTableActions();
 	app.modalTrigger();
 	app.tutorialTriggerState();
+	app.comingSoonOverlay();
 });
