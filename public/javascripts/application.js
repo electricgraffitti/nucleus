@@ -790,8 +790,7 @@ var app = {
 	  $trig.overlay({
 	    expose: {
        color: '#000000',
-       loadSpeed: 200,
-       opacity: 0.15
+       opacity: 0.35
       },
       onBeforeLoad: function() {
        // grab wrapper element inside content 
