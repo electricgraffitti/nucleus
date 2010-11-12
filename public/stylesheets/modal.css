@@ -1898,6 +1898,8 @@ p.login_checkbox_wrap {
   overflow: hidden;
   background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
 }
+/***********************************************************************************************************************/
+/****************************************************************************************** TUTORIAL MODALS ************/
 div.tutorial_overlay { 
    position: relative;
    width:855px; 
@@ -1907,12 +1909,13 @@ div.tutorial_overlay {
    padding: 0 !important;
 }
 #tutorial_trigger {
-  position: relative;
-  float: left;
-  width: 20px;
-  height: 20px;
-  background: transparent url(../images/inner_pages/table_icon_sprite.png) -0px -560px no-repeat;
-  margin-top: -3px;
+  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 0 -560px transparent;
+  float:left;
+  height:20px;
+  margin-left:2px;
+  margin-top:-2px;
+  position:relative;
+  width:20px;
 }
 #tutorial_trigger a {
   display: block;
@@ -1967,16 +1970,16 @@ div.tutorial_overlay {
 #scroll_wrap div.tutorial_column_left {
   position: relative;
   float: left;
-  width: 400px;
+  width: 375px;
   height: 400px;
   padding-left: 40px;
 }
 #scroll_wrap div.tutorial_column_right {
   float:left;
   height:300px;
-  padding:100px 0 0 0px;
+  padding:75px 0 0;
   position:relative;
-  width:275px;
+  width:330px;
 }
 .tutorial_column_right h2 {
   position: relative;
@@ -2005,11 +2008,11 @@ div.tutorial_overlay {
 }
 /***Scroll Nav***/
 #scroll_thumbs {
+  border-bottom:1px solid #101010;
   border-top:1px solid #666666;
   float:left;
-  height:73px;
-  margin-top:5px;
-  padding-top:5px;
+  height:100px;
+  margin-top:0;
   position:relative;
   width:795px;
 }
@@ -2021,8 +2024,10 @@ div.tutorial_overlay {
   overflow: hidden;
 }
 #scroll_thumbs ul {
-  float: left;
-  width: 795px;
+  border-bottom:1px solid #333333;
+  float:left;
+  height:101px;
+  width:795px;
 }
 #scroller_wrap ul {
   width: 100%;
@@ -2053,36 +2058,45 @@ div.tutorial_overlay {
 }
 #scroll_thumbs ul li {
   float:left;
-  height:90px;
+  height:100px;
   position:relative;
   width:155px;
 }
-#scroll_thumbs ul li.selected {
-/*  border: 1px solid #5bab46;*/
+#scroll_thumbs ul li.active {
+  background: transparent url(../images/tutorials/nav/hover_bg.png) center top no-repeat;
+  border-bottom:1px solid #333;
+  border-left:1px solid #000;
+  border-right:1px solid #444;
+  box-shadow:inset 1px 1px 10px #000000;
+  -moz-box-shadow:inset 1px 1px 10px #000000;
+  -webkit-box-shadow:inset 1px 1px 10px #000000;
 }
 #scroll_thumbs ul li a {
   position: relative;
   display: block;
 }
+#scroll_thumbs ul li.active a.scroll_nav_trigger_copy {
+  color: #fff;
+}
 #scroll_thumbs ul li a.scroll_nav_trigger_image {
   position: relative;
   float: left;
   width:75px;
-  height: 90px;
+  height: 100px;
+  margin-left: 10px;
 }
 #scroll_thumbs ul li a.scroll_nav_trigger_copy {
+  color:#999999;
   float:left;
-  height:73px;
-  margin-left:5px;
-  padding-top:17px;
+  height:65px;
+  margin-left:0px;
+  padding-top:25px;
   position:relative;
-  width:75px;
-  color: #999 ;
+  width:73px;
 }
 #scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
   text-decoration: none;
-}
-/********************************************/
+}/********************************************/
 /**************OVERLAY STYLES****************/
 
 /*/* overlay size and background image */ 
@@ -2112,15 +2126,25 @@ div.overlay div.close {
     cursor:pointer;
     z-index: 10;
 }
-div.overlay div.close, div.tutorial_overlay div.close {
-background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
-cursor:pointer;
-height:38px;
-position:absolute;
-right:-12px;
-top:-10px;
-width:38px;
-z-index:10;
+div.overlay div.close, div.tutorial_overlay div.close { 
+  background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+  cursor:pointer;
+  height:38px;
+  position:absolute;
+/*  right:-12px;
+  top:-10px;*/
+  right:0;
+  top:22px;
+  width:38px;
+  z-index:10;
+}
+#thead {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 40px;
+  background: #000 url(../images/overlay/modal-header.png) 0px 0px repeat-x;
+  cursor: move;
 }
 .contentWrap {
   position: relative;
