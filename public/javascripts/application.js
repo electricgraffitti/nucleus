@@ -268,10 +268,6 @@ var panels = {
     
   },
   
-  setNorthWidgetWrap: function() {
-    // scroll.setWidgetScroll();
-  },
-  
   westResizeTrigger: function(win, cp, iw, wpr) {
     wpr.toggle(function() {
       iw.hide(0, panels.centerPanelResize(win, cp, ($(this).outerWidth() + 1 )));
@@ -541,11 +537,7 @@ var widget = {
        e.preventDefault(); 
     });
   },
-  
-  // ezCheck: function() {
-  //   $("#dashboard_options input[type='checkbox']").ezMark();
-  // },
-  
+
   optionPaneDisplay: function(pane) {
     var w = $(window);
     if (pane.is(':visible')) {
@@ -566,24 +558,48 @@ var widget = {
       var wrap = $(this).parent('.option_trigger');
       
       if (wrap.hasClass("active")) {
-        var hiddenID = ql_icon.attr('id');
-        wrap.removeClass('active');
-        ql_icon.hide(widget.setQuickLaunchViewCookie(hiddenID));
-      } else {
         var visibleID = ql_icon.attr('id');
+        wrap.removeClass('active');
+        ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
+      } else {
+        var hiddenID = ql_icon.attr('id');
         wrap.addClass('active');
-        ql_icon.show(widget.destroyQuickLaunchViewCookie(visibleID));
+        ql_icon.show(widget.destroyQuickLaunchViewCookie(hiddenID));
       }
     });
   },
   
   setQuickLaunchViewCookie: function(visibleID) {
-    // $.cookie(visibleID, 'qlhidden', { expires: 1000, path: "/" } );
+    $.cookie(visibleID, 'hidden', { expires: 1000, path: "/" } );
   },
   
   destroyQuickLaunchViewCookie: function(hiddenID) {
-    // var cookie = $.cookie(hiddenID);
-    // if (!cookie) return;    
+    var cookie = $.cookie(hiddenID);
+    if (!cookie) return;
+    $.cookie(hiddenID, null);   
+  },
+  
+  checkQLCookie: function(checkValue) {
+    var cookie = $.cookie(checkValue);
+    
+    if (!cookie) {
+      return false;
+    } else {
+      var cb = $('#ql_checkboxes .' + checkValue);
+      cb.removeClass('active');
+      return true;
+    }
+  },
+  
+  checkForQLToggleCookies: function(ss) {
+    var icons = ss.children();
+    
+    icons.each(function() {
+      var x = widget.checkQLCookie($(this).attr("id"));
+      if (x) {
+        $(this).hide();
+      }
+    });
   },
   
   widgetDisplayToggle: function(panel) {
@@ -826,7 +842,7 @@ var app = {
 	    expose: {
        color: '#000000',
        loadSpeed: 200,
-       opacity: 0.15
+       opacity: 0.35
       }
 	  });
 	},
@@ -838,7 +854,7 @@ var app = {
      expose: {
       color: '#000000',
       loadSpeed: 200,
-      opacity: 0.15
+      opacity: 0.35
      },
      // effect: 'apple',
 			onBeforeLoad: function() {
@@ -898,7 +914,7 @@ var app = {
       expose: {
        color: '#000000',
        loadSpeed: 200,
-       opacity: 0.15
+       opacity: 0.35
       },
       // effect: 'apple',
 			onBeforeLoad: function() {

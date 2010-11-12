@@ -43,15 +43,19 @@ var drag = {
   
   loadQuickLaunchOrder: function(ss,scn) {
     var list = ss;
+    
     if (list == null) return
 
     // fetch the cookie value (saved order)
     var cookie = $.cookie(scn);
-    if (!cookie) return;
+    if (!cookie) {
+      widget.checkForQLToggleCookies(ss);
+      return
+    };
 
     // make array from saved order
     var IDs = cookie.split(",");
-
+    
     // fetch current order
     var items = list.sortable("toArray");
 
@@ -73,7 +77,7 @@ var drag = {
         var child = ss.children("#" + item);
 
         // select the item according to the saved order
-        if (widget.checkViewCookie(item)) {
+        if (widget.checkQLCookie(item)) {
           var savedOrd = ss.children("#" + itemID).addClass('hidden');
         } else {
           var savedOrd = ss.children("#" + itemID);
