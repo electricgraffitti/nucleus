@@ -4,7 +4,7 @@
       <%= label_tag :search, "Search For"%>
       <%= collection_select(:search, :search_topic_id, SearchTopic.all, :id, :name, {:index => 2}) %><br/>
       <div id="search_buttons">
-        <%= link_to "Clear Filters", "", :id => "search_clear" %>
+        <%= link_to "Clear Filters", "", :class => "coming_soon", :rel => "#coming_soon", :id => "search_clear" %>
         <%= submit_tag "Search", :name => nil, :class => 'medium_btn' %>
       </div>
     </div>
@@ -32,7 +32,7 @@
       </p>
       <p>
       <%= label_tag "Patient Sequence"%>
-      <%= text_field_tag :patient_sequence %><%= link_to "Patience Sequence Advanced", "", :id => "patience_sequence_mag", :class => "search_mag" %>
+      <%= text_field_tag :patient_sequence %><%= link_to "Patience Sequence Advanced", "", :rel => "#coming_soon", :id => "patience_sequence_mag", :class => "search_mag coming_soon" %>
       </p>
       <p>
       <%= label_tag "Patient Number"%>
@@ -52,7 +52,7 @@
       </p>
       <p>
       <%= label_tag "Provider Sequence"%>
-      <%= text_field_tag :provider_sequence %><%= link_to "Provider Sequence Advanced", "", :id => "provider_sequence_mag", :class => "search_mag" %>
+      <%= text_field_tag :provider_sequence %><%= link_to "Provider Sequence Advanced", "", :rel => "#coming_soon", :id => "provider_sequence_mag", :class => "search_mag coming_soon" %>
       </p>
     </div>
   <% end %>
