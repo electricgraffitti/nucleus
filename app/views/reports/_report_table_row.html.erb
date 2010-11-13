@@ -2,7 +2,7 @@
   <td class="report_name">Report Name</td>
   <td class="report_desc">Report Description</td>
   <td class="report_type <%= report_type %>">
-    <%= link_to "#{(report_type).upcase}", "", :class => "table_report_link #{report_type}_table_icon" %>
+    <%= link_to "#{(report_type).upcase}", "/reports/generated_report.pdf", :class => "table_report_link #{report_type}_table_icon" %>
   </td>
   <td class="report_date">10/16/2010</td>
   <td class="report_owner"><%= report_owner %></td>

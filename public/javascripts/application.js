@@ -358,6 +358,20 @@ var panels = {
     
   },
   
+  voteIncrement: function() {
+    var vl = $("#feedback_panel_1 a.vote_link");
+    
+    vl.click(function(e) {
+      e.preventDefault();
+      var ref = $(this).attr('vote_box');
+      var num = $("#feedback_panel_1 b." + ref);
+      var count = parseInt(num.html());
+      var newcount = (count + 1);      
+      num.html(newcount);
+    });
+     
+  },
+  
   dashTabs: function() {
     var $tabs = $('#dashboard ul#tab_nav li a');
     var $panels = $('#dashboard .dash_panel');
@@ -582,10 +596,11 @@ var widget = {
     var trig = $("#ql_checkboxes a");
     
     trig.live('click', function(e) {
-      e.preventDefault();
+      
       var wrap = $(this).parent('.option_trigger');
       
-      if (wrap.hasClass("active")) {      
+      if (wrap.hasClass("active")) {
+        e.preventDefault();     
         $(this).overlay({
       	    expose: {
               color: '#AAAAAA',
@@ -600,7 +615,7 @@ var widget = {
       			}
   			  });
   			} else {
-          
+          e.preventDefault();
           var ql_icon = $('#' + $(this).attr('icon'));
   			  var hiddenID = ql_icon.attr('id');
           wrap.addClass('active');
@@ -892,6 +907,29 @@ var app = {
       e.preventDefault();
     });
 	},
+	
+	messageModal: function() {
+	  var $trig = $('.email_contact');
+	  $trig.overlay({
+	    expose: {
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
+      }
+	  });
+	},
+	
+	ideaModal: function() {
+	  var $trig = $('.idea_modal');
+	  $trig.overlay({
+	    expose: {
+        color: '#AAAAAA',
+        loadSpeed: 200,
+        opacity: 0.5
+      }
+	  });
+  },
+	
 	
 	tutorialTriggerState: function() {
     var $t = $("#scroll_thumbs ul li");

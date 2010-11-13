@@ -2658,11 +2658,11 @@ a.csv_table_icon {
 }
 .tutorial_icon {
   float: left;
-  width: 37px;
-  height: 53px;
+  width: 38px;
+  height: 52px;
   margin-right: 10px;
   color: #fff;
-  background: url('../images/inner_pages/tutorial_icons.jpg') left top no-repeat;
+  background: url('../images/inner_pages/vote_bg.jpg') left top no-repeat;
 }
 .tutorial_icon.pdf_icon {
   background: url('../images/inner_pages/tutorial_icons.jpg') -76px top no-repeat;
@@ -3058,6 +3058,27 @@ a.csv_table_icon {
   height:29px;
   position:relative;
   width:36px;
+}
+.vote_link {
+  position: relative;
+  float: left;
+  display: block;
+  width: 39px;
+  height: 13px;
+  background: transparent url(../images/inner_pages/vote_button.jpg) 0px 0px no-repeat;
+  margin-top: 5px;
+  text-indent: -3000em;
+}
+.list_item_left, .list_item_right {
+  position: relative;
+  float: left;
+}
+.list_item_left {
+  width: 36px;
+  margin-right: 10px;
+}
+.list_item_right {
+  width: 630px;
 }
 .feedback_list_item div.list_item_right h3 {
   margin-bottom:0px;
@@ -4071,14 +4092,58 @@ div.coming_soon {
   padding: 0 !important;
 }
 div.coming_soon div.close { 
-  background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
-  cursor:pointer;
-  height:38px;
-  position:absolute;
-  right:-12px;
-  top:-10px;
-  width:38px;
-  z-index:10;
+    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+    cursor:pointer;
+    height:38px;
+    position:absolute;
+  /*  right:-12px;
+    top:-10px;*/
+    right:0;
+    top:22px;
+    width:38px;
+    z-index:10;
+}
+/***********************************************************************************************************************/
+/******************************************************************************************* MESSAGE MODALS ************/
+div.idea_post { 
+  position: relative;
+  width:855px;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  display:none; 
+  padding: 0 !important;
+}
+div.idea_post div.close { 
+    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+    cursor:pointer;
+    height:38px;
+    position:absolute;
+  /*  right:-12px;
+    top:-10px;*/
+    right:0;
+    top:22px;
+    width:38px;
+    z-index:10;
+}
+/***********************************************************************************************************************/
+/********************************************************************************************** IDEA MODALS ************/
+div.message_post { 
+  position: relative;
+  width:855px;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  display:none; 
+  padding: 0 !important;
+}
+div.message_post div.close { 
+    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+    cursor:pointer;
+    height:38px;
+    position:absolute;
+  /*  right:-12px;
+    top:-10px;*/
+    right:0;
+    top:22px;
+    width:38px;
+    z-index:10;
 }
 /***********************************************************************************************************************/
 /******************************************************************************************* CONFIRM MODALS ************/
