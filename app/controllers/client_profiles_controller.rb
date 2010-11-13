@@ -41,7 +41,7 @@ class ClientProfilesController < ApplicationController
   # POST /client_profiles.xml
   def create
     @client_profile = ClientProfile.new(params[:client_profile])
-
+    @client_profile.client_id = current_client.id
     respond_to do |format|
       if @client_profile.save
         format.html { redirect_to messages_path }
