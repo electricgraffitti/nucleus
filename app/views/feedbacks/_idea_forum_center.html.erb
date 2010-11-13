@@ -4,13 +4,13 @@
     <%= text_area_tag(:search, nil, {:cols => 87, :rows => 5, :class => "left"} )%>
     <div id="search_buttons">
       <%= submit_tag "Send", :name => nil, :class => 'medium_btn tip', :title => "Send Message" %>
-      <%= link_to "Clear", "", :id => "search_clear", :class => "tip", :title => "Clear Message Box" %>
+      <%= link_to "Clear", "", :id => "search_clear", :class => "tip coming_soon", :rel => "#coming_soon", :title => "Clear Message Box" %>
     </div>
     <% end %>
     <div class="clear"></div>
     <div class="paperclip_link">
       <div class="green_paper_clip"></div>
-      <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip", :title => "Attach a File" %>
+      <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip coming_soon", :rel => "#coming_soon", :title => "Attach a File" %>
       <div id="message_attachment" style="display: none;">
         <%= file_field :attachment, :size => 16 %>
       </div>
