@@ -2658,11 +2658,11 @@ a.csv_table_icon {
 }
 .tutorial_icon {
   float: left;
-  width: 37px;
-  height: 53px;
+  width: 38px;
+  height: 52px;
   margin-right: 10px;
   color: #fff;
-  background: url('../images/inner_pages/tutorial_icons.jpg') left top no-repeat;
+  background: url('../images/inner_pages/vote_bg.jpg') left top no-repeat;
 }
 .tutorial_icon.pdf_icon {
   background: url('../images/inner_pages/tutorial_icons.jpg') -76px top no-repeat;
@@ -3063,9 +3063,9 @@ a.csv_table_icon {
   position: relative;
   float: left;
   display: block;
-  width: 36px;
-  height: 10px;
-  background: #efd322;
+  width: 39px;
+  height: 13px;
+  background: transparent url(../images/inner_pages/vote_button.jpg) 0px 0px no-repeat;
   margin-top: 5px;
   text-indent: -3000em;
 }
