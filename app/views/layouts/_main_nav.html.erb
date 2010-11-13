@@ -1,6 +1,6 @@
 <ul class="nav_ul topnav">
   <li class="claim">
-    <%= link_to "Claim", '', :class => "tip claim_a", :title => "Claims Summary" %>
+    <%= link_to "Claim", '', :rel => "#coming_soon", :class => "tip claim_a coming_soon", :title => "Claims Summary" %>
     <ul class="subnav">
       <li><%= link_to "Claims Search", claims_path %></li>
       <li><%= link_to "Claims Line Search", "", :class => "coming_soon", :rel => "#coming_soon" %></li>
@@ -15,7 +15,7 @@
     </ul>
   </li>
   <li>
-    <%= link_to "Patient", "", :class => "tip", :title => "Patient List" %>
+    <%= link_to "Patient", "", :rel => "#coming_soon", :class => "tip coming_soon", :title => "Patient List" %>
     <ul class="subnav">
       <li><%= link_to "Patient Search", "", :class => "coming_soon", :rel => "#coming_soon" %></li>
     </ul>
@@ -35,7 +35,7 @@
     </ul>
   </li>
   <li>
-    <%= link_to "Reports", "", :class => "tip", :title => "Report Generator" %>
+    <%= link_to "Reports", "", :rel => "#coming_soon", :class => "tip coming_soon", :title => "Report Generator" %>
     <ul class="subnav">
       <li><%= link_to "Report Center", reports_path %></li>
     </ul>
