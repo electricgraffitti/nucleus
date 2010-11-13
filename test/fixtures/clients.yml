@@ -16,6 +16,7 @@ two:
   crypted_password: MyString
   password_salt: MyString
 
+
 # == Schema Information
 #
 # Table name: clients
@@ -30,5 +31,6 @@ two:
 #  created_at        :datetime
 #  updated_at        :datetime
 #  persistence_token :string(255)
+#  api_key           :string(255)
 #
 

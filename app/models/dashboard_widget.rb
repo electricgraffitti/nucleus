@@ -7,3 +7,15 @@ class DashboardWidget < ActiveRecord::Base
   named_scope :widget_type, lambda {|widget_type| {:conditions => ["page = ?", widget_type]}}
   
 end
+
+# == Schema Information
+#
+# Table name: dashboard_widgets
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  page       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

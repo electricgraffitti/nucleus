@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :client_profiles
+
   map.resources :message_updates
 
   map.resources :client_connections
