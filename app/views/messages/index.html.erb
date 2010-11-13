@@ -25,14 +25,81 @@
       <%= render :partial => 'messages/message_tabs' %>
 
       <div id="tab1" class="message_panel">
-        <%= render :partial => 'messages/post_form' %>
+        <%= render :partial => 'messages/post_form', :locals => {:message => @message} %>
         <%= render :partial => 'messages/message_posts' %>
       </div>
       <div id="tab2" class="message_panel hidden">
         <h2>Panel 2</h2>
       </div>
       <div id="tab3" class="message_panel hidden">
-        <h2>Panel 3</h2>
+        <div id="profile_block">
+          <%= image_tag(current_client.client_profile.avatar.url(:full)) %>
+          <div class="client_profile">
+            <h2><%= current_client.full_name %></h2>
+            <h3 class="client_title"><%= current_client.client_profile.title %></h3>
+            <div class="info client_company"><%= current_client.client_profile.company %></div>
+            <div class="info client_email"><%= current_client.client_profile.email %></div>
+            <div class="info client_phone"><%= current_client.client_profile.phone %></div>
+          </div>
+          <div class="connections">
+            <h2>My Connections</h2>
+            <div class="message_count_block">
+              <div class="count_block">10</div>
+              <div class="count_label">Followers</div>
+            </div>
+            <div class="message_count_block middle">
+              <div class="count_block">15</div>
+              <div class="count_label">Following</div>
+            </div>
+            <div class="message_count_block">
+              <div class="count_block">2</div>
+              <div class="count_label">Groups</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="profile_form_wrap">
+          <h2>Profile Information</h2>
+          <% form_for(@client_profile) do |f| %>
+            <%= f.error_messages %>
+            <div class="form_field">
+              <%= f.label :company %><br />
+              <%= f.text_field :company %>
+            </div>
+            <div class="form_field">
+              <%= f.label :title %><br />
+              <%= f.text_field :title %>
+            </div>
+            <div class="form_field">
+              <%= f.label :department %><br />
+              <%= f.text_field :department %>
+            </div>
+            <div class="form_field">
+              <%= f.label :email %><br />
+              <%= f.text_field :email %>
+            </div>
+            <div class="form_field">
+              <%= f.label :phone %><br />
+              <%= f.text_field :phone %>
+            </div>
+            <div class="form_field submit_button">
+              <%= f.submit 'Update', :class => "medium_btn" %>
+            </div>
+          <% end %>
+        </div>
+        <div id="profile_form_wrap">
+          <h2>Profile Avatar</h2>
+          <% form_for(@client_profile, :html => {:multipart => true}) do |f| %>
+            <%= f.error_messages %>
+            <div class="form_field">
+          		<%= f.label :avatar, "Upload Avatar"  %><br />
+          		<%= f.file_field :avatar, :size => 16 %>
+          	</div>
+            <div class="form_field submit_button">
+              <%= f.submit 'Update', :class => "medium_btn" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     

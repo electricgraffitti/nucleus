@@ -7,6 +7,7 @@ class ClientTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: clients
@@ -21,5 +22,6 @@ end
 #  created_at        :datetime
 #  updated_at        :datetime
 #  persistence_token :string(255)
+#  api_key           :string(255)
 #
 

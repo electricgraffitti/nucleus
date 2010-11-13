@@ -1,8 +1,9 @@
 <div id="post_block">
-  <% form_tag providers_path, :method => :get do %>
-    <%= text_area_tag(:search, nil, {:cols => 94, :rows => 4, :class => "left"} )%>
+  <% form_for(message) do |f| %>
+    <%= f.text_area :message, {:cols => 94, :rows => 4, :class => "left"} %>
+    <%#= text_area_tag(:search, nil, {:cols => 94, :rows => 4, :class => "left"} )%>
     <div id="post_buttons">
-      <%= submit_tag "Post", :name => nil, :class => 'post_btn tip', :title => "Post Message" %>
+      <%= f.submit "Post", :name => nil, :class => 'post_btn tip', :title => "Post Message" %>
     </div>
   <% end %>
   <div class="clear"></div>

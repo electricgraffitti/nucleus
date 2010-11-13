@@ -20,6 +20,7 @@ Rails::Initializer.run do |config|
   config.gem "sqlite3-ruby", :lib => "sqlite3"
   config.gem "authlogic"
   config.gem "rails-geocoder", :lib => "geocoder", :source => "http://gemcutter.org/"
+  config.gem 'paperclip', :source => 'http://rubygems.org'
   # config.gem "aws-s3", :lib => "aws/s3"
 
   # Only load the plugins named here, in the order given (default is alphabetical).

@@ -1,0 +1,30 @@
+<h1>Listing client_profiles</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Company</th>
+    <th>Title</th>
+    <th>Department</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+
+<% @client_profiles.each do |client_profile| %>
+  <tr>
+    <td><%=h client_profile.client_id %></td>
+    <td><%=h client_profile.company %></td>
+    <td><%=h client_profile.title %></td>
+    <td><%=h client_profile.department %></td>
+    <td><%=h client_profile.email %></td>
+    <td><%=h client_profile.phone %></td>
+    <td><%= link_to 'Show', client_profile %></td>
+    <td><%= link_to 'Edit', edit_client_profile_path(client_profile) %></td>
+    <td><%= link_to 'Destroy', client_profile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client_profile', new_client_profile_path %>

@@ -21,6 +21,8 @@ class Client < ActiveRecord::Base
   has_many :dashboard_widgets, :through => :widget_views
   accepts_nested_attributes_for :dashboard_widgets
   
+  has_one :client_profile
+  
   validates_uniqueness_of :email, :on => :create, :message => "Email already registered"
   
   acts_as_authentic
@@ -35,4 +37,3 @@ class Client < ActiveRecord::Base
   end
   
 end
-
