@@ -358,6 +358,20 @@ var panels = {
     
   },
   
+  voteIncrement: function() {
+    var vl = $("#feedback_panel_1 a.vote_link");
+    
+    vl.click(function(e) {
+      e.preventDefault();
+      var ref = $(this).attr('vote_box');
+      var num = $("#feedback_panel_1 b." + ref);
+      var count = parseInt(num.html());
+      var newcount = (count + 1);      
+      num.html(newcount);
+    });
+     
+  },
+  
   dashTabs: function() {
     var $tabs = $('#dashboard ul#tab_nav li a');
     var $panels = $('#dashboard .dash_panel');
