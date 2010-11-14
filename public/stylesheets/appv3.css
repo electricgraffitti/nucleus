@@ -2770,10 +2770,12 @@ ul#message_tools li a.delete_message {
 	padding-left:10px;
 	padding-right:30px;
 	width:100px;
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 70px -110px no-repeat;
 }
 #sort_bar span.sort_view {
 	width: 55px;
 	padding-right: 10px;
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 35px -110px no-repeat;
 }
 #message_list {
 	position: relative;
