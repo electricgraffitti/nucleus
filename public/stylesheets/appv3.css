@@ -3018,6 +3018,7 @@ li.mb_cat_item .mailbox_item_count.has_count {
   padding:20px 0;
   position:relative;
   width:450px;
+	text-align: left;
 }
 .help_list_item p {
   float:left;
@@ -4441,7 +4442,6 @@ div.coming_soon div.close {
 /******************************************************************************************* MESSAGE MODALS ************/
 div.idea_post { 
   position: relative;
-  width:855px;
   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   display:none; 
   padding: 0 !important;
@@ -4478,6 +4478,51 @@ div.message_post div.close {
     top:22px;
     width:38px;
     z-index:10;
+}
+.modal_message_widget {
+	position: relative;
+	float: left;
+	width: 305px;
+	height: 303px;
+	border: 1px solid #c4c5c4;
+	background: #eeeeee;
+	padding: 10px;
+	margin: 10px 0px 10px 10px;
+}
+#idea_message_image.modal_message_widget {
+	background: none;
+	border: 1px solid #fff;
+	margin-left: 0px;
+}
+#idea_links {
+  float:right;
+  height:40px;
+  padding:0 10px;
+  position:relative;
+  text-align:right;
+  width:125px;
+}
+#idea_links a {
+  display:block;
+  float:left;
+  height:21px;
+  margin-left:10px;
+  padding-top:4px;
+  text-align:center;
+}
+#idea_message .form_field {
+	margin-bottom: 10px;
+}
+#idea_message .form_field label {
+	color: #666;
+	font-weight: bold;
+}
+#idea_message .form_field input[type="text"] {
+	width:292px;
+}
+#idea_message .form_field textarea {
+	width:292px;
+	height: 163px;
 }
 /***********************************************************************************************************************/
 /******************************************************************************************* CONFIRM MODALS ************/
@@ -4521,7 +4566,7 @@ div.confirm {
   padding:0 10px;
   position:relative;
   text-align:right;
-  width:100px;
+  width:125px;
 }
 #confirm_links a {
   display:block;
@@ -4531,6 +4576,7 @@ div.confirm {
   padding-top:4px;
   text-align:center;
 }
+
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/
 #tiptip_holder {
