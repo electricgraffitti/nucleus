@@ -10,14 +10,14 @@
     <div id="message_center_breadcrumb">
       <ul>
         <li><%= link_to "HealthCare Insight", "", :rel => "#coming_soon", :class => "first coming_soon" %> ></li>
-        <li><%= link_to "Carma Medical Group", "", :rel => "#coming_soon", :class => "coming_soon" %> ></li>
-        <li><%= link_to "Paul White", "", :rel => "#coming_soon", :class => "coming_soon" %></li>
+        <li><%= link_to "Carma Medical Group", "", :rel => "#coming_soon", :class => "coming_soon" %> > </li>
+        <li> <%= current_client.full_name %></li>
       </ul>
     </div>
     
     <%# Message Center Sidebar %>
     <div id="message_sidebar">
-      <%= render :partial => 'messages/message_sidebar' %>
+      <%= render :partial => 'messages/message_sidebar', :locals => {:view_client => @view_client} %>
     </div>
     
     <%# Message Center Tabs %>
@@ -25,35 +25,119 @@
       <%= render :partial => 'messages/message_tabs' %>
 
       <div id="tab1" class="message_panel">
-        <%= render :partial => 'messages/post_form', :locals => {:message => @message} %>
-        <%= render :partial => 'messages/message_posts' %>
+        <%= render :partial => 'messages/post_form', :locals => {:post => @post, :comment => @comment} %>
+        <%= render :partial => 'messages/message_posts', :locals => {:posts => @posts} %>
       </div>
       <div id="tab2" class="message_panel hidden">
-        <h2>Panel 2</h2>
+        <div id="post_block">
+          <div id="messages_wrap">
+            <ul id="message_tools">
+              <li><%= link_to "New Message", "", :class => "message_tools_nav new_message tip", :title => "New Message" %></li>
+              <li><%= link_to "Save Message", "", :class => "message_tools_nav save_message tip", :title => "Save Message" %></li>
+              <li><%= link_to "Forward Message", "", :class => "message_tools_nav forward_message tip", :title => "Forward Message" %></li>
+              <li><%= link_to "Delete Message", "", :class => "message_tools_nav delete_message tip", :title => "Delete Message" %></li>
+            </ul>
+          </div>
+        </div>
+        <div id="message_interface">
+          <div id="mailbox_categories">
+            <ul>
+              <li id="mb_mailbox_refresh" class="mb_cat_header">
+                <span class="mailbox_title">Mailboxes</span>
+                <span class="mailbox_header_icon"></span>
+              </li>
+              <li id="mb_inbox" class="mb_cat_item">
+                <span class="mailbox_title">Inbox</span>
+                <span class="mailbox_item_count">21</span>
+              </li>
+              <li id="mb_drafts" class="mb_cat_item">
+                <span class="mailbox_title">Drafts</span>
+                <span class="mailbox_item_count">3</span>
+              </li>
+              <li id="mb_sent" class="mb_cat_item">
+                <span class="mailbox_title">Sent</span>
+                <span class="mailbox_item_count">47</span>
+              </li>
+              <li id="mb_trash" class="mb_cat_item">
+                <span class="mailbox_title">Trash</span>
+                <span class="mailbox_item_count"></span>
+              </li>
+              <li id="mb_folders" class="mb_cat_header">
+                <span class="mailbox_title">Folders</span>
+                <span class="mailbox_header_icon"></span>
+              </li>
+              <li id="mb_notes" class="mb_cat_item">
+                <span class="mailbox_title">Notes</span>
+                <span class="mailbox_item_count"></span>
+              </li>
+            </ul>
+          </div>
+          <div id="mailbox_items">
+            <div id="mailbox_search">
+              <form action="/messages" method="get" class="search">
+                  <input type="text" name="mb_search" value="search inbox"/>
+                  <button type="submit" class="search_btn" title="Mailbox Search">Search</button>
+              </form>
+            </div>
+            <div id="sort_bar">
+              <span class="mailbox_sort_option switch_view">Switch View</span>
+              <span class="mailbox_sort_option sort_view">Sort by</span>
+            </div>
+            <div id="message_list">
+              <ul id="messages">
+                <% 10.times do %>
+                <li>
+                  <div class="message_from">Bob Hanson</div>
+                  <div class="message_time">4:24 PM</div>
+                  <div class="message_subject">RE: Data Changes</div>
+                  <div class="message_preview">To change the data needed for 2009</div>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+          <div id="message_view">
+            <div id="message_header">
+              <h2 id="message_title">Updates for Q3</h2>
+              <div id="message_meta">From <%= link_to "Bob Hanson", "" %> today at 12:09 PM</div>
+            </div>
+            <div id="message_content">
+              <p>
+                Let me know when the updates have completed. We’ll need to make sure that we have the numbers from JT and Karen. They sould already be aware of the timeframe that needed.
+              </p>
+              <p>
+                Thanks for your assistance during the last two week.<br/>
+                Bob
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="tab3" class="message_panel hidden">
         <div id="profile_block">
-          <%= image_tag(current_client.client_profile.avatar.url(:full)) %>
-          <div class="client_profile">
-            <h2><%= current_client.full_name %></h2>
-            <h3 class="client_title"><%= current_client.client_profile.title %></h3>
-            <div class="info client_company"><%= current_client.client_profile.company %></div>
-            <div class="info client_email"><%= current_client.client_profile.email %></div>
-            <div class="info client_phone"><%= current_client.client_profile.phone %></div>
-          </div>
-          <div class="connections">
-            <h2>My Connections</h2>
-            <div class="message_count_block">
-              <div class="count_block">10</div>
-              <div class="count_label">Followers</div>
+          <div id="profile_wrap">
+            <%= image_tag(current_client.client_profile.avatar.url(:full)) %>
+            <div class="client_profile">
+              <h2><%= current_client.full_name %></h2>
+              <h3 class="client_title"><%= current_client.client_profile.title %></h3>
+              <div class="info client_company"><%= current_client.client_profile.company %></div>
+              <div class="info client_email"><%= current_client.client_profile.email %></div>
+              <div class="info client_phone"><%= current_client.client_profile.phone %></div>
             </div>
-            <div class="message_count_block middle">
-              <div class="count_block">15</div>
-              <div class="count_label">Following</div>
-            </div>
-            <div class="message_count_block">
-              <div class="count_block">2</div>
-              <div class="count_label">Groups</div>
+            <div class="connections">
+              <h2>My Connections</h2>
+              <div class="message_count_block">
+                <div class="count_block"><%= current_client.client_connection.follower_count %></div>
+                <div class="count_label">Followers</div>
+              </div>
+              <div class="message_count_block middle">
+                <div class="count_block"><%= current_client.client_connection.following_count %></div>
+                <div class="count_label">Following</div>
+              </div>
+              <div class="message_count_block">
+                <div class="count_block"><%= current_client.client_connection.group_count %></div>
+                <div class="count_label">Groups</div>
+              </div>
             </div>
           </div>
         </div>
@@ -117,6 +201,10 @@
       app.tutorialTrigger();
       app.toggleUpload();
       app.messageModal();
+      app.updateMessageSidebar();
+      app.messagePost();
+      app.messageReplyTrigger();
+      app.inboxSelect();
       <% if ipad? %>
         scroll.setiPadMessageScroll();
       <% end %>

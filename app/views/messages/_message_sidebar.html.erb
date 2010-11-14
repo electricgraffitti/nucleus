@@ -2,37 +2,39 @@
   <span class="follow_cross"></span>
   <%= link_to "Follow This Person", "", :rel => "#coming_soon", :class => "coming_soon" %>
 </div>
-<div class="message_sidebar_panel message_sidebar_dark">
-  <div class="profile_image left">
-    <div class="image_wrap left">
-      <%= image_tag('message/avatar_darin_johnson.jpg', :alt => "Darin Johnson Avatar") %>
+<div id="profile_view">
+  <div class="message_sidebar_panel message_sidebar_dark">
+    <div class="profile_image left">
+      <div class="image_wrap left">
+        <%= image_tag(view_client.client_profile.avatar.url(:thumb)) %>
+      </div>
+    </div>
+    <div class="profile_info left">
+      <b><%= view_client.full_name %></b><br/>
+      <%= view_client.client_profile.company %><br/>
+      <%= view_client.client_profile.title %>, <%= view_client.client_profile.department %>
     </div>
   </div>
-  <div class="profile_info left">
-    <b>Paul White</b><br/>
-    Carma Medical Group<br/>
-    Vice President, Marketing
-  </div>
-</div>
-<div class="message_sidebar_panel message_sidebar_dark">
+  <div class="message_sidebar_panel message_sidebar_dark">
   <h3>Connections</h3>
   <div class="message_count_block">
-    <div class="count_block">25</div>
+    <div class="count_block"><%= view_client.client_connection.follower_count %></div>
     <div class="count_label">Followers</div>
   </div>
   <div class="message_count_block middle">
-    <div class="count_block">63</div>
+    <div class="count_block"><%= view_client.client_connection.following_count %></div>
     <div class="count_label">Following</div>
   </div>
   <div class="message_count_block">
-    <div class="count_block">7</div>
+    <div class="count_block"><%= view_client.client_connection.group_count %></div>
     <div class="count_label">Groups</div>
   </div>
-</div>
-<div class="message_sidebar_panel contact_information">
-  <h3>Contact Information</h3>
-  <ul>
-    <li class="email"><%= link_to "Paul White", "", :class => "email_contact", :rel => "#message_post" %></li>
-    <li class="contact">801-285-0000</li>
-  </ul>
+  </div>
+  <div class="message_sidebar_panel contact_information">
+    <h3>Contact Information</h3>
+    <ul>
+      <li class="email"><%= link_to "#{view_client.full_name}", "", :class => "email_contact", :rel => "#message_post" %></li>
+      <li class="contact"><%= view_client.client_profile.phone %></li>
+    </ul>
+  </div>
 </div>

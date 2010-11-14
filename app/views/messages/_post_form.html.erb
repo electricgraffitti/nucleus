@@ -1,18 +1,42 @@
 <div id="post_block">
-  <% form_for(message) do |f| %>
-    <%= f.text_area :message, {:cols => 94, :rows => 4, :class => "left"} %>
-    <%#= text_area_tag(:search, nil, {:cols => 94, :rows => 4, :class => "left"} )%>
-    <div id="post_buttons">
-      <%= f.submit "Post", :name => nil, :class => 'post_btn tip', :title => "Post Message" %>
-    </div>
-  <% end %>
-  <div class="clear"></div>
-  <div class="paperclip_link">
-    <div class="paper_clip"></div>
-    <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip", :title => "Attach a File" %>
-    <div id="message_attachment" style="display: none;">
-      <%= file_field :attachment, :size => 16 %>
-    </div>
+  <div id="new_post_wrap">
+    <h2>New Post</h2>
+    <% form_for(post, :html => {:multipart => true}) do |f| %>
+      <%= f.text_area :post, {:cols => 94, :rows => 4, :class => "left"} %>
+      <%#= text_area_tag(:search, nil, {:cols => 94, :rows => 4, :class => "left"} )%>
+      <div id="post_buttons">
+        <%= f.submit "Post", :name => nil, :class => 'post_btn tip', :title => "Post Message" %>
+      </div>
     <div class="clear"></div>
+    <div class="paperclip_link">
+      <div class="paper_clip"></div>
+      <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip", :title => "Attach a File" %>
+      <div id="message_attachment" style="display: none;">
+        <%= f.file_field :attachment, :size => 16 %>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <% end %>
+  </div>
+  <div id="new_comment_wrap" class="hidden">
+    <h2>New Comment - (<%= link_to "Back to New Post", "", :class => "new_post_link" %>)</h2>
+    <% form_for(comment, :html => {:multipart => true}) do |f| %>
+      <%= f.hidden_field :post_id %>
+      <%= f.hidden_field :client_id, :value => current_client.id %>
+        <%= f.text_area :comment, {:cols => 94, :rows => 4, :class => "left"} %>
+        <%#= text_area_tag(:search, nil, {:cols => 94, :rows => 4, :class => "left"} )%>
+        <div id="post_buttons">
+          <%= f.submit "Post", :name => nil, :class => 'post_btn tip', :title => "Post Message" %>
+        </div>
+      <div class="clear"></div>
+      <div class="paperclip_link">
+        <div class="paper_clip"></div>
+        <%= link_to "Attach File", "", :id => "message_attach_link", :class => "tip", :title => "Attach a File" %>
+        <div id="message_attachment" style="display: none;">
+          <%= f.file_field :attachment, :size => 16 %>
+        </div>
+        <div class="clear"></div>
+      </div>
+    <% end %>
   </div>
 </div>

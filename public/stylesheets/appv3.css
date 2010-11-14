@@ -2301,8 +2301,8 @@ a.csv_table_icon {
 }
 .message_sidebar_panel {
   float:left;
-  padding: 8px 15px;
-  width: 210px;
+	padding:8px 0 8px 15px;
+	width:225px;
   border: 1px solid #c0c0c0;
   border-top: 1px solid #efefef;
 }
@@ -2310,7 +2310,7 @@ a.csv_table_icon {
   background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
 }
 .message_sidebar_panel.contact_information {
-  min-height: 330px;
+  min-height: 352px;
 }
 .message_sidebar_panel h3 {
   font-weight: bold;
@@ -2407,9 +2407,7 @@ a.csv_table_icon {
 }
 #post_block, #profile_block {
   float:left;
-  padding:14px;
   position:relative;
-  width:692px;
   background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
 }
 .message_feed_main {
@@ -2500,6 +2498,10 @@ a.csv_table_icon {
 #post_block form textarea {
   width: 560px;
 }
+.post_box {
+	float:left;
+	border: 1px solid #fff;
+}
  .message_reply {
   background:none repeat scroll 0 0 #F3F3F3;
   float:left;
@@ -2516,7 +2518,7 @@ a.csv_table_icon {
   border: 1px solid #c0c0c0;
   border-top: none;
   width: 720px;
-  height: 573px;
+  height: 597px;
 }
 .follow_btn {
   background:url("../images/message/button_bg-orange.png") repeat-x scroll left top #F2F2F2;
@@ -2605,6 +2607,229 @@ a.csv_table_icon {
 	position: absolute;
 	right: 10px;
 	bottom: 0px;
+}
+.post_box.active {
+	border: 1px solid #f47727;
+}
+#new_post_wrap, #new_comment_wrap, #profile_wrap, #messages_wrap {
+	position: relative;
+	float: left;
+	padding:14px;
+	position:relative;
+	width:692px;
+}
+#new_post_wrap h2 {
+	font-weight: bold;
+}
+#new_comment_wrap {
+	background: #ccc;
+}
+#new_comment_wrap h2 {
+	color: #fff;
+	font-weight: bold;
+}
+ul#message_tools {
+	position: relative;
+	float:right;
+	height: 23px;
+	width: 132px;
+	background: none;
+	border: none;
+}
+ul#message_tools li {
+	position: relative;
+	float:left;
+	height: 23px;
+	width: 23px;
+	background: none;
+	border: none;
+	margin-right: 10px;
+}
+ul#message_tools li a {
+	position: relative;
+	float:left;
+	display: block;
+	height: 23px;
+	width: 23px;
+	text-indent: -3000em;
+	padding: 0px;
+	border: none;
+	margin-right: 3px;
+}
+ul#message_tools li a.new_message {
+	background: transparent url(../images/inner_pages/message_tools.png) -9px 0px no-repeat;
+}
+ul#message_tools li a.save_message {
+	background: transparent url(../images/inner_pages/message_tools.png) -46px 0px no-repeat;
+}
+ul#message_tools li a.forward_message {
+	background: transparent url(../images/inner_pages/message_tools.png) -80px 0px no-repeat;
+}
+ul#message_tools li a.delete_message {
+	background: transparent url(../images/inner_pages/message_tools.png) -114px 0px no-repeat;
+}
+#message_interface {
+	position: relative;
+	float: left;
+	background: #fff;
+}
+#message_interface ul, #message_interface ul li {
+	background: none;
+	border: none;
+}
+#mailbox_categories {
+	position: relative;
+	float: left;
+	background: #eee;
+	width: 125px;
+	border-right: 1px solid #c4c5c4;
+	height: 546px;
+}
+#mailbox_items {
+	position: relative;
+	float: left;
+	width: 208px;
+	border-right: 1px solid #c4c5c4;
+}
+#message_view {
+	background:none repeat scroll 0 0 #FFFFFF;
+	float:left;
+	padding:10px;
+	position:relative;
+	width:365px;
+}
+#mailbox_categories ul {
+	position: relative;
+	float: left;
+	width: 125px;
+}
+#mailbox_categories ul li {
+	position: relative;
+	float: left;
+	width: 110px;
+	padding: 10px 0px 10px 15px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #c4c5c4;
+	text-align: left;
+	height: 16px;
+}
+#mailbox_categories ul li span {
+	display: block;
+	float: left;
+}
+#mailbox_categories ul li span.mailbox_title {
+	color: #333;
+	font-weight: bold;
+	width: 85px;
+	height: 16px;
+}
+#mailbox_categories ul li.mb_cat_item span.mailbox_title {
+	padding-left: 22px;
+	width: 59px;
+}
+#mailbox_categories ul li.mb_cat_item span.mailbox_item_count {
+	font-weight: bold;
+	color: #fff;
+}
+#mailbox_categories ul li span.mailbox_header_icon, #mailbox_categories ul li span.mailbox_item_count {
+	position: relative;
+	float: left;
+	width: 29px;
+	height: 16px;
+}
+#mailbox_categories ul li.mb_cat_header span.mailbox_title {
+	color: #666;
+}
+#mailbox_search {
+	position: relative;
+	float: left;
+	width: 208px;
+}
+#sort_bar {
+	position: relative;
+	float: left;
+	width: 208px;
+	height: 22px;
+	border-bottom: 1px solid #c4c5c4;
+	background: #eee;
+}
+#sort_bar span {
+	display: block;
+	float: left;
+	color: #666;
+	font-size: 11px;
+	padding-top: 4px;
+}
+#sort_bar span.switch_view {
+	padding-left:10px;
+	padding-right:30px;
+	width:100px;
+}
+#sort_bar span.sort_view {
+	width: 55px;
+	padding-right: 10px;
+}
+#message_list {
+	position: relative;
+	float: left;
+	width: 208px;
+}
+#message_list ul {
+	position: relative;
+	float: left;
+	height: 498px;
+	width: 208px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#message_list ul li {
+	position: relative;
+	float: left;
+	border-bottom: 1px solid #c4c5c4;
+	padding: 10px 0px 10px 10px;
+	width:184px;
+	height: 40px;
+	text-align: left;
+}
+#message_list ul li.active {
+	background: transparent url(../images/inner_pages/inbox_highlight.png) left bottom repeat-x;
+	color: #fff;
+}
+#messages li .message_from {
+	position: relative;
+	float: left;
+	font-weight: bold;
+	width: 130px;
+}
+#messages li .message_time {
+	position: relative;
+	float: left;
+	font-weight: bold;
+	width: 50px;
+}
+#messages li .message_subject, #messages li .message_preview {
+	width: 184px;
+}
+#messages li .message_preview {
+	color: #666;
+	font-size: 11px;
+}
+#messages li.active .message_preview {
+	color: #fff;
+}
+#message_header {
+	position: relative;
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #c4c5c4;
+	margin-bottom: 10px;
+}
+#message_header h2 {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#message_content p {
+	margin-bottom: 10px;
 }
 /***********************************************************************************************************************/
 /******************************************************************************************* HELP CENTER ***************/
@@ -3262,7 +3487,7 @@ img.ui-datepicker-trigger {
 .search input {
   padding:5px 0 3px 5px;
 }
-#search_wrap .search button {
+#search_wrap .search button, #mailbox_search .search button {
   width: 24px;
   height: 22px;
   /*background: #e7e7e7 url('../images/inner_pages/search_mag.jpg') left top no-repeat;*/
@@ -3274,6 +3499,10 @@ img.ui-datepicker-trigger {
 	box-sizing: content-box;
   -moz-box-sizing: content-box;
 /*  -webkit-box-sizing: content-box;*/
+}
+#mailbox_search .search input[type="text"] {
+	margin: 0px;
+	width: 178px;
 }
 label {
   color: #000;

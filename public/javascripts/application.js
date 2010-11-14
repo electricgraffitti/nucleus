@@ -919,6 +919,67 @@ var app = {
 	  });
 	},
 	
+	updateMessageSidebar: function() {
+		var postLink = $('.client_profile_link');
+		var sidebarBox = $("#profile_view");
+		var posts = $(".post_box");
+				
+		postLink.click(function(e) {
+			e.preventDefault();
+			var profileId = $(this).attr("poster_id");
+			var wrapper = $(this).parents('.post_box').first();
+			posts.removeClass("active");
+			wrapper.addClass("active");
+			sidebarBox.load("/post_client", {client_id:profileId});
+		});
+	},
+	
+	messagePost: function() {
+		$("#post_submit").click(function() {
+			$("#new_post").submit();
+		});
+	},
+	
+	messageReplyTrigger: function() {
+		var rtrig = $(".post_reply");
+		var backtopost = $('.new_post_link');
+		var postWrap = $("#new_post_wrap");
+		var commentWrap = $("#new_comment_wrap");
+		rtrig.click(function(e) {
+			e.preventDefault();
+			postWrap.hide();
+			commentWrap.show(app.setCommentPostID($(this)));
+			
+		});
+		
+		backtopost.click(function(e) {
+			e.preventDefault();
+			commentWrap.hide();
+			postWrap.show();
+		});
+	},
+	
+	setCommentPostID: function(el) {
+		var pid = $('input[name=comment[post_id]]');
+		var postnum = el.attr("postnum");
+		pid.val(parseInt(postnum));
+	},
+	
+	commentPost: function() {
+		$("#comment_submit").click(function() {
+			$("#new_comment").submit();
+		});
+	},
+	
+	inboxSelect: function() {
+		var inboxItems = $("#messages li");
+		
+		inboxItems.click(function() {
+			inboxItems.removeClass('active');
+			$(this).addClass("active");
+		});
+	},
+	
 	ideaModal: function() {
 	  var $trig = $('.idea_modal');
 	  $trig.overlay({
@@ -929,8 +990,7 @@ var app = {
       }
 	  });
   },
-	
-	
+		
 	tutorialTriggerState: function() {
     var $t = $("#scroll_thumbs ul li");
     $t.live('click', function() {
@@ -940,8 +1000,8 @@ var app = {
   },
 	
 	comingSoonOverlay: function() {
-	  var $trig = $('.coming_soon');
-	  $trig.overlay({
+	  var cstrig = $('.coming_soon');
+	  cstrig.overlay({
 	    expose: {
         color: '#AAAAAA',
         loadSpeed: 200,

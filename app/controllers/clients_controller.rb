@@ -91,4 +91,15 @@ class ClientsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def message_profile
+    @view_client = Client.find(params[:client_id])
+    
+    respond_to do |format|
+      format.js  { render :layout => false }
+    end
+  end
+  
+  
+  
 end

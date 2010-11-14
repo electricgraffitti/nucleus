@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101113165854) do
+ActiveRecord::Schema.define(:version => 20101114053159) do
 
   create_table "claim_statuses", :force => true do |t|
     t.string   "claim_status"
@@ -80,6 +80,18 @@ ActiveRecord::Schema.define(:version => 20101113165854) do
     t.datetime "updated_at"
     t.string   "persistence_token"
     t.string   "api_key"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "post_id"
+    t.integer  "client_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "comment_attachment_file_name"
+    t.string   "comment_attachment_content_type"
+    t.integer  "comment_attachment_file_size"
+    t.datetime "comment_attachment_updated_at"
   end
 
   create_table "condition_stats", :force => true do |t|
@@ -191,6 +203,17 @@ ActiveRecord::Schema.define(:version => 20101113165854) do
     t.string   "sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.integer  "client_id"
+    t.text     "post"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
   create_table "procedure_submissions", :force => true do |t|

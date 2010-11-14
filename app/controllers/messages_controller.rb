@@ -6,13 +6,18 @@ class MessagesController < ApplicationController
   # GET /messages.xml
   def index
     @messages = Message.all
-    @message = Message.new
+    @post = Post.new
+    @comment = Comment.new
+    @posts = Post.my_feed
     
     if current_client.client_profile
       @client_profile = ClientProfile.find(current_client.client_profile.id)
     else
       @client_profile = ClientProfile.new  
     end
+    
+    @view_client = @posts.first.client
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @messages }

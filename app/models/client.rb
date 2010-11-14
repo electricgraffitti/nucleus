@@ -21,7 +21,10 @@ class Client < ActiveRecord::Base
   has_many :dashboard_widgets, :through => :widget_views
   accepts_nested_attributes_for :dashboard_widgets
   
+  has_many :posts
+  
   has_one :client_profile
+  has_one :client_connection
   
   validates_uniqueness_of :email, :on => :create, :message => "Email already registered"
   

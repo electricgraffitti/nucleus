@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :comments
+
+  map.resources :posts
+
   map.resources :client_profiles
 
   map.resources :message_updates
@@ -58,6 +62,7 @@ ActionController::Routing::Routes.draw do |map|
   map.sfrp_stats "sfro-stats", :controller => "provider_stats", :action => "sfro_stat_panel"
   map.sbrd_stats "sbrd-stats", :controller => "provider_stats", :action => "sbrd_stat_panel"
   map.sdes_stats "sdes-stats", :controller => "provider_stats", :action => "sdes_stat_panel"
+  map.message_sidebar_profile "post_client", :controller => "clients", :action => "message_profile"
   
   map.street_view "street-view", :controller => "providers", :action => "street_view"
   
