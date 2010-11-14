@@ -2807,13 +2807,13 @@ ul#message_tools li a.delete_message {
 	position: relative;
 	float: left;
 	font-weight: bold;
-	width: 130px;
+	width: 120px;
 }
 #messages li .message_time {
 	position: relative;
 	float: left;
 	font-weight: bold;
-	width: 50px;
+	width: 60px;
 }
 #messages li .message_subject, #messages li .message_preview {
 	width: 184px;
