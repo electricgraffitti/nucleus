@@ -29,7 +29,7 @@
         <%= render :partial => 'messages/message_posts', :locals => {:posts => @posts} %>
       </div>
       <div id="tab2" class="message_panel hidden">
-        <div id="post_block">
+        <div id="message_block">
           <div id="messages_wrap">
             <ul id="message_tools">
               <li><%= link_to "New Message", "", :class => "message_tools_nav new_message tip", :title => "New Message" %></li>
@@ -46,17 +46,17 @@
                 <span class="mailbox_title">Mailboxes</span>
                 <span class="mailbox_header_icon"></span>
               </li>
-              <li id="mb_inbox" class="mb_cat_item">
+              <li id="mb_inbox" class="mb_cat_item active">
                 <span class="mailbox_title">Inbox</span>
-                <span class="mailbox_item_count">21</span>
+                <span class="mailbox_item_count active has_count">21</span>
               </li>
               <li id="mb_drafts" class="mb_cat_item">
                 <span class="mailbox_title">Drafts</span>
-                <span class="mailbox_item_count">3</span>
+                <span class="mailbox_item_count has_count">3</span>
               </li>
               <li id="mb_sent" class="mb_cat_item">
                 <span class="mailbox_title">Sent</span>
-                <span class="mailbox_item_count">47</span>
+                <span class="mailbox_item_count has_count">47</span>
               </li>
               <li id="mb_trash" class="mb_cat_item">
                 <span class="mailbox_title">Trash</span>
@@ -205,6 +205,7 @@
       app.messagePost();
       app.messageReplyTrigger();
       app.inboxSelect();
+      app.mbCatItemSelect();
       <% if ipad? %>
         scroll.setiPadMessageScroll();
       <% end %>

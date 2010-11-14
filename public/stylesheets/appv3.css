@@ -2410,6 +2410,12 @@ a.csv_table_icon {
   position:relative;
   background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
 }
+#message_block {
+  float:left;
+  position:relative;
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left top repeat-x;
+	border-bottom: 1px solid #c4c5c4;
+}
 .message_feed_main {
   float:left;
   padding:20px;
@@ -2683,7 +2689,7 @@ ul#message_tools li a.delete_message {
 	background: #eee;
 	width: 125px;
 	border-right: 1px solid #c4c5c4;
-	height: 546px;
+	height: 545px;
 }
 #mailbox_items {
 	position: relative;
@@ -2720,7 +2726,7 @@ ul#message_tools li a.delete_message {
 #mailbox_categories ul li span.mailbox_title {
 	color: #333;
 	font-weight: bold;
-	width: 85px;
+	width: 80px;
 	height: 16px;
 }
 #mailbox_categories ul li.mb_cat_item span.mailbox_title {
@@ -2735,7 +2741,7 @@ ul#message_tools li a.delete_message {
 	position: relative;
 	float: left;
 	width: 29px;
-	height: 16px;
+	height: 15px;
 }
 #mailbox_categories ul li.mb_cat_header span.mailbox_title {
 	color: #666;
@@ -2830,6 +2836,43 @@ ul#message_tools li a.delete_message {
 }
 #message_content p {
 	margin-bottom: 10px;
+}
+#mb_mailbox_refresh .mailbox_header_icon {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 0px 0px no-repeat;
+}
+#mb_folders .mailbox_header_icon {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 0px -17px no-repeat;
+}
+#mb_inbox .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -34px no-repeat;
+}
+#mb_drafts .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -66px no-repeat;
+}
+#mb_sent .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -48px no-repeat;
+}
+#mb_trash .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -86px no-repeat;
+}
+#mb_notes .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -130px no-repeat;
+}
+li.mb_cat_item .mailbox_item_count.has_count {
+	background:url("../images/inner_pages/message_center_sprite.png") no-repeat scroll 3px -150px transparent;
+	font-size:10px;
+	padding-top:2px;
+	text-align:center;
+}
+#mailbox_categories ul li.mb_cat_item.active {
+	border: none;
+	border-top: 1px solid #fff;
+	border-bottom:1px solid #C4C5C4;
+	background: #e1e1e1;
+	margin-bottom: 0px;
+}
+#mailbox_categories ul li.mb_cat_item.active .mailbox_item_count.has_count {
+	background:url("../images/inner_pages/message_center_sprite.png") no-repeat scroll 3px -169px transparent;
 }
 /***********************************************************************************************************************/
 /******************************************************************************************* HELP CENTER ***************/

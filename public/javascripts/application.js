@@ -980,6 +980,15 @@ var app = {
 		});
 	},
 	
+	mbCatItemSelect: function() {
+		var mb_item = $(".mb_cat_item");
+		
+		mb_item.click(function() {
+			mb_item.removeClass('active');
+			$(this).addClass('active');
+		});
+	},
+	
 	ideaModal: function() {
 	  var $trig = $('.idea_modal');
 	  $trig.overlay({
