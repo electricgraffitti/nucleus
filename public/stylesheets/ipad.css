@@ -44,6 +44,248 @@ input {
 }
 /***********************************************************************************************************************/
 /********************************************************************************************* DASHBOARD ***************/
+/***********************************************************************************************************************/
+/********************************************************************************************* DASHBOARD ***************/
+#dashboard {
+  float:left;
+  margin:10px 10px 10px 12px;
+  position:relative;
+  width:100%;
+}
+#dashboard ul#tab_nav {
+  border-bottom:1px solid #C0C0C0;
+  float:left;
+  position:relative;
+	padding-left: 40px;
+  width:962px;
+}
+#dashboard ul#tab_nav li.active {
+  background:none repeat scroll 0 0 #FFFFFF;
+  border-color:#C0C0C0 #C0C0C0 #FFFFFF;
+  border-style:solid;
+  border-width:1px;
+  color:#333333;
+  height:29px;
+  margin-bottom:-2px;
+}
+#dashboard ul#tab_nav li {
+  background:url("../images/message/button_bg-green.png") repeat-x scroll 0 0 #63C54A;
+  float:left;
+  height:30px;
+  margin-right:1px;
+  position:relative;
+  text-align:center;
+}
+#dashboard ul#tab_nav li a {
+  border-top:1px solid #6BD450;
+  color:#FFFFFF;
+  float:left;
+  font-weight:bold;
+  height:29px;
+  padding:8px 30px;
+  position:relative;
+}
+#dashboard ul#tab_nav li.active {
+  background:none repeat scroll 0 0 #FFFFFF;
+  border-color:#C0C0C0 #C0C0C0 #FFFFFF;
+  border-style:solid;
+  border-width:1px;
+  color:#333333;
+  height:29px;
+  margin-bottom:-2px;
+}
+#dashboard ul#tab_nav li a {
+ border-top:1px solid #EFEFEF; 
+}
+#dashboard ul#tab_nav li a:hover, #dashboard ul#tab_nav li.active a {
+  border-top:1px solid #EFEFEF;
+  color:#333333;
+  text-decoration:none;
+}
+.dash_panel {
+  border: 1px solid #c4c5c4;
+  border-top: none;
+  float:left;
+  position:relative;
+  padding-bottom: 10px;
+  width:1000px;
+}
+#dashboard .widget {
+  width: 490px;
+  height: 352px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#dashboard .widget_header, #dashboard .widget_content {
+  width:460px;
+}
+#dashboard .widget_content {
+	height: 292px;
+}
+.widget_table_header, .widget_table_data {
+  border:1px solid #c4c5c4;
+  float:left;
+  margin-bottom:11px;
+  position:relative;
+  width:456px;
+}
+.widget_table_data {
+  background: none;
+}
+.widget_table_head, .widget_data {
+  float:left;
+  font-size:13px;
+  font-weight:bold;
+  height:13px;
+  padding:10px 9px 14px;
+  position:relative;
+  text-align:left;
+  background: #f5f6f5;
+}
+.widget_data {
+  background: #fff;
+}
+.widget_table_head.score, .widget_data.score {
+  width:83px;
+  border-right:1px solid #c4c5c4;
+}
+.widget_table_head.name, .widget_data.name {
+  border-right:1px solid #c4c5c4;
+  width:149px;
+}
+.widget_table_head.billed, .widget_data.billed {
+  width:168px;
+}
+.widget_table_head.risk, .widget_data.risk {
+  width:82px;
+  border-right:1px solid #c4c5c4;
+}
+.widget_table_head.exp, .widget_data.exp {
+  border-right:1px solid #c4c5c4;
+  width:110px;
+}
+.widget_table_head.prov, .widget_data.prov {
+  width:93px;
+  border-right:1px solid #c4c5c4;
+}
+.widget_table_head.percentage, .widget_data.percentage {
+  width:96px;
+}
+.widget_table_head.product, .widget_data.product {
+  width:82px;
+  border-right:1px solid #c4c5c4;
+}
+.widget_table_head.est, .widget_data.est {
+  border-right:1px solid #c4c5c4;
+  width:110px;
+}
+.widget_table_head.claims, .widget_data.claims {
+  width:93px;
+  border-right:1px solid #c4c5c4;
+}
+.widget_table_head.more, .widget_data.more {
+  width:96px;
+}
+.widget_data.risk h3 a {
+  float: right;
+}
+.widget_data.score {
+  font-size:23px;
+  font-weight:bold;
+  text-shadow:0 1px 0 #EFEFEF;
+  height:32px;
+  padding:5px 0 0 46px;
+  right:0;
+  text-shadow:0 1px 0 #EFEFEF;
+  top:0;
+  width:55px; 
+}
+.widget_data.score.red_rating {
+  background:url("../images/inner_pages/provider_rating_discs_left-v2-flat.png") no-repeat scroll right 0 #F6F6F6;
+}
+.widget_data.score.yellow_rating {
+  background: #f6f6f6 url('../images/inner_pages/provider_rating_discs_left-v2-flat.png') right -78px no-repeat;
+}
+.widget_data.score.orange_rating {
+  background: #f6f6f6 url('../images/inner_pages/provider_rating_discs_left-v2-flat.png') right -39px no-repeat;
+}
+.widget_data.score.provider_rating.red_rating {
+  background: #f6f6f6 url('../images/inner_pages/provider_rating_discs_left-v2-flat.png') right 0px no-repeat;
+}
+.widget_data.pci{
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px 0px no-repeat;
+}
+.widget_data.cra{
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -175px no-repeat;
+}
+.widget_data.fci{
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -70px no-repeat;
+}
+.widget_data.oci{
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -104px no-repeat;
+}
+.widget_data.rxi {
+  background: url(../images/inner_pages/dashboard_savings_icons2.png) 5px -139px no-repeat;
+}
+.widget_data.risk_high {
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px 0px no-repeat;
+}
+.widget_data.risk_elevated{
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -39px no-repeat;
+}
+.widget_data.risk_mod {
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -78px no-repeat;
+}
+.widget_data.risk_low {
+  background: url(../images/inner_pages/provider_risk_icons-flat.jpg) 0px -117px no-repeat;
+}
+#feed_widget.widget_content {
+  height:311px;
+  padding:0;
+  width:478px;
+}
+ul#feeds {
+  float:left;
+  height:311px;
+  margin:0;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  position:relative;
+  width:478px;
+}
+ul#feeds li {
+  border-bottom:1px solid #C4C5C4;
+  float:left;
+  height: 80px;
+  padding:10px 5px;
+  position:relative;
+  width:454px;
+}
+ul#feeds li div.feed_date {
+  background:none repeat scroll 0 0 #C3C4C3;
+  float:left;
+  font-size:11px;
+  font-weight:bold;
+  height:40px;
+  margin:0 9px 0 4px;
+  padding:12px 0 0;
+  position:relative;
+  text-align:center;
+  width:55px;
+}
+ul#feeds li h3 {
+  float:left;
+  font-weight:bold;
+  width:295px;
+}
+ul#feeds li div.feed_content {
+  float:left;
+  height:45px;
+  overflow:hidden;
+  position:relative;
+  width:385px;
+}
+
 #dashboard_options {
 	background:none repeat scroll 0 0 #F4F5F4;
 	border:1px solid #C4C5C4;

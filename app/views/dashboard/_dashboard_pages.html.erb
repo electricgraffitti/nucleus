@@ -1,0 +1,15 @@
+<div id="page1" class="dash_panel">
+  <%= render :partial => 'dashboard_widgets/dash1', :locals => {:top_providers => @top_providers} %>
+  <%= render :partial => 'dashboard_widgets/dash2' %>
+  <%= render :partial => 'dashboard_widgets/dash3' %>
+  <%= render :partial => 'dashboard_widgets/dash4' %>
+  <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
+  <%= render :partial => 'dashboard_widgets/dash6', :locals => {:p => p} %>
+</div>
+<div id="page2" class="dash_panel hidden">
+  <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
+  <%= render :partial => 'dashboard_widgets/dash7', :locals => {:top_providers => @top_providers} %>
+</div>
+<div id="page3" class="dash_panel hidden">
+
+</div>

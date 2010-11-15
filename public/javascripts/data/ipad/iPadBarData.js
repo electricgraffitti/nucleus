@@ -2,8 +2,8 @@ var barChart = new Highcharts.Chart({
   chart: {
     renderTo: 'savings_tracker',
     defaultSeriesType: 'column',
-    width: 370,
-    height: 240,
+    width: 460,
+    height: 292,
     margin: [0,0,40,0],
     style: {
       font: '13px Arial, Helvetica, sans-serif'

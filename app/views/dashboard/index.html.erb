@@ -16,20 +16,11 @@
       <li><%= link_to "Page 2", "#page2" %></li>
       <li><%= link_to "Page 3", "#page3" %></li>
     </ul>
-    <div id="page1" class="dash_panel">
-      <%= render :partial => 'dashboard_widgets/dash1', :locals => {:top_providers => @top_providers} %>
-      <%= render :partial => 'dashboard_widgets/dash2' %>
-      <%= render :partial => 'dashboard_widgets/dash3' %>
-      <%= render :partial => 'dashboard_widgets/dash4' %>
-    </div>
-    <div id="page2" class="dash_panel hidden">
-      <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
-      <%= render :partial => 'dashboard_widgets/dash6', :locals => {:p => p} %>
-    </div>
-    <div id="page3" class="dash_panel hidden">
-      <%= render :partial => 'dashboard_widgets/dash5', :locals => {:p => p} %>
-      <%= render :partial => 'dashboard_widgets/dash7', :locals => {:top_providers => @top_providers} %>
-    </div>
+    <% if ipad? %>
+      <%= render :partial => 'dashboard_pages_ipad' %>
+    <% else %>
+      <%= render :partial => 'dashboard_pages' %>
+    <% end %>
   </div>
   <div class="clear"></div>
 </div>
@@ -51,22 +42,28 @@
         drag.loadDashboardLaunchOrder($page1, "dashPage1");
         drag.loadDashboardLaunchOrder($page2, "dashPage2");
         drag.loadDashboardLaunchOrder($page3, "dashPage3");
+        // Scatter Plot
+        $.getScript('javascripts/data/scatterData.js');
+        // Bar Graph
+        $.getScript('javascripts/data/barData.js');
+        // Pie Chart
+        $.getScript('javascripts/data/provider_action_summary_dashboard.js');
       <% end %>
+      
+      
       <% if ipad? %>
         scroll.setNewsScroll();
+        // Scatter Plot
+        $.getScript('javascripts/data/ipad/iPadScatterData.js');
+        // Bar Graph
+        $.getScript('javascripts/data/ipad/iPadBarData.js');
+        // Pie Chart
+        $.getScript('javascripts/data/ipad/iPadProviderAction.js');
       <% end %>
+      
       panels.dashTabs();
       app.tutorialTrigger();
       widget.getFeeds();
-      // Scatter Plot
-      $.getScript('javascripts/data/scatterData.js');
-      // Bar Graph
-      $.getScript('javascripts/data/barData.js');
-      // Line Chart
-      // $.getScript('javascripts/data/lineData.js');
-      // Pie Chart
-      $.getScript('javascripts/data/provider_action_summary_dashboard.js');
-      
     });
   </script>
 <% end %>
