@@ -4439,7 +4439,7 @@ div.coming_soon div.close {
     z-index:10;
 }
 /***********************************************************************************************************************/
-/******************************************************************************************* MESSAGE MODALS ************/
+/********************************************************************************************** IDEA MODALS ************/
 div.idea_post { 
   position: relative;
   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
@@ -4451,29 +4451,6 @@ div.idea_post div.close {
     cursor:pointer;
     height:38px;
     position:absolute;
-  /*  right:-12px;
-    top:-10px;*/
-    right:0;
-    top:22px;
-    width:38px;
-    z-index:10;
-}
-/***********************************************************************************************************************/
-/********************************************************************************************** IDEA MODALS ************/
-div.message_post { 
-  position: relative;
-  width:855px;
-  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  display:none; 
-  padding: 0 !important;
-}
-div.message_post div.close { 
-    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
-    cursor:pointer;
-    height:38px;
-    position:absolute;
-  /*  right:-12px;
-    top:-10px;*/
     right:0;
     top:22px;
     width:38px;
@@ -4521,6 +4498,69 @@ div.message_post div.close {
 	width:292px;
 }
 #idea_message .form_field textarea {
+	width:292px;
+	height: 163px;
+}
+/***********************************************************************************************************************/
+/******************************************************************************************* MESSAGE MODALS ************/
+div.message_post { 
+  position: relative;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  display:none; 
+  padding: 0 !important;
+}
+div.message_post div.close { 
+    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+    cursor:pointer;
+    height:38px;
+    position:absolute;
+    right:0;
+    top:22px;
+    width:38px;
+    z-index:10;
+}
+.modal_message_widget {
+	position: relative;
+	float: left;
+	width: 305px;
+	height: 303px;
+	border: 1px solid #c4c5c4;
+	background: #eeeeee;
+	padding: 10px;
+	margin: 10px 0px 10px 10px;
+}
+#email_message_image.modal_message_widget {
+	background: none;
+	border: 1px solid #fff;
+	margin-left: 0px;
+}
+#email_links {
+  float:right;
+  height:40px;
+  padding:0 10px;
+  position:relative;
+  text-align:right;
+  width:125px;
+}
+#email_links a {
+  display:block;
+  float:left;
+  height:21px;
+  margin-left:10px;
+  padding-top:4px;
+  text-align:center;
+}
+#email_message .form_field {
+	margin-bottom: 10px;
+}
+#email_message .form_field label {
+	color: #666;
+	font-weight: bold;
+}
+#email_message .form_field input[type="text"] {
+	width:292px;
+}
+#email_message .form_field textarea {
 	width:292px;
 	height: 163px;
 }

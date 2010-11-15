@@ -83,19 +83,21 @@
       <span class="modal_title">Send an Email</span>
     </div>
     <% form_tag("/messages/new") do %>
-      <div class="confirm_content">
-        <div id="email_message">
-          <div class="form_field">
-            <%= label_tag :email, "Email Address" %><br />
-            <%= text_field_tag :email %>
-          </div>
-          <div class="form_field">
-            <%= label_tag :message, "Message" %><br />
-            <%= text_area_tag :message %>
-          </div>
+      <div id="email_message" class="modal_message_widget">
+        <div class="form_field">
+          <%= label_tag :email, "Email Address" %><br />
+          <%= text_field_tag :email %>
+        </div>
+        <div class="form_field">
+          <%= label_tag :message, "Message" %><br />
+          <%= text_area_tag :message %>
         </div>
       </div>
-      <div id="confirm_links">
+      <div id="email_message_image" class="modal_message_widget">
+        
+      </div>
+      <div class="clear"></div>
+      <div id="email_links">
         <%= link_to "Send", "", :class => "medium_btn" %>
         <%= link_to "Cancel", "", :class => "confirm_no close" %>
       </div>
