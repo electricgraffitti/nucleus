@@ -78,7 +78,7 @@ html, body {
 }
 a {
   /*color: #555;*/
-  color: #398dcc;
+  color: #2070B5;
   text-decoration: none;
 }
 a:hover {
@@ -325,7 +325,7 @@ label.error {
 #page_header ul.page_nav li {
   float: left;
   padding: 0px 5px;
-  border-right: 1px solid #555;
+  border-right: 1px solid #999;
   height: 10px;
   margin-top: 7px;
 }
@@ -337,7 +337,7 @@ label.error {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: #398dcc;
+  color: #2070B5;
   margin-top: -3px;
   font-size: 12px;
 }
@@ -504,8 +504,6 @@ html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
   background: url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
   color: #222;
   text-shadow: 0px 1px 1px #ccc;
-  font-size: 12px;
-  font-weight: bold;
 }
 /***********************************************************************************************************************/
 /**************************************************************************************** MAIN ELEMENTS ****************/
