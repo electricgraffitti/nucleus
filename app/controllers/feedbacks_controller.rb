@@ -6,7 +6,6 @@ class FeedbacksController < ApplicationController
   # GET /feedbacks.xml
   def index
     @feedbacks = Feedback.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @feedbacks }

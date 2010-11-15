@@ -45,22 +45,62 @@
 
 <div class="idea_post" id="idea_post">
   <div class="close"></div>
-  <div class="contentWrap">
-    <div class='tutorial_header'>
-      <div class="modal_claim_wrap">
-        Idea Form
-      </div>
+  <div class="contentWrap confirm_body">
+    <div id="thead">
+      <span class="modal_title">Submit an Idea</span>
     </div>
+    <% form_tag("/feedbacks/new") do %>
+      <div id="idea_message" class="modal_message_widget">
+        <div class="form_field">
+          <%= label_tag :title, "Idea Title" %><br />
+          <%= text_field_tag :title %>
+        </div>
+        <div class="form_field">
+          <%= label_tag :idea_category, "Idea Type" %><br />
+          <%= collection_select(:feedback, :idea_category, IdeaCategory.all, :id, :idea_type, :prompt => true) %>
+        </div>
+        <div class="form_field">
+          <%= label_tag :description, "Description" %><br />
+          <%= text_area_tag :description %>
+        </div>
+      </div>
+      <div id="idea_message_image" class="modal_message_widget">
+        
+      </div>
+      <div class="clear"></div>
+      <div id="idea_links">
+        <%= link_to "Send", "", :class => "medium_btn" %>
+        <%= link_to "Cancel", "", :class => "confirm_no close" %>
+      </div>
+    <% end %>
   </div>
 </div>
 
 <div class="message_post" id="message_post">
   <div class="close"></div>
-  <div class="contentWrap">
-    <div class='tutorial_header'>
-      <div class="modal_claim_wrap">
-        Message Form
-      </div>
+  <div class="contentWrap confirm_body">
+    <div id="thead">
+      <span class="modal_title">Send an Email</span>
     </div>
+    <% form_tag("/messages/new") do %>
+      <div id="email_message" class="modal_message_widget">
+        <div class="form_field">
+          <%= label_tag :email, "Email Address" %><br />
+          <%= text_field_tag :email %>
+        </div>
+        <div class="form_field">
+          <%= label_tag :message, "Message" %><br />
+          <%= text_area_tag :message %>
+        </div>
+      </div>
+      <div id="email_message_image" class="modal_message_widget">
+        
+      </div>
+      <div class="clear"></div>
+      <div id="email_links">
+        <%= link_to "Send", "", :class => "medium_btn" %>
+        <%= link_to "Cancel", "", :class => "confirm_no close" %>
+      </div>
+    <% end %>
   </div>
 </div>

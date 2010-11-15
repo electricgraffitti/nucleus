@@ -922,7 +922,7 @@ input#claim_sequence_wide[type="text"] {
 #inner_north {
   position: relative;
   float: left;
-  height: 310px;
+  height: 320px;
 }
 #panel_south {
   position: relative;
@@ -1400,7 +1400,8 @@ input#claim_sequence_wide[type="text"] {
   border-bottom:1px solid #C0C0C0;
   float:left;
   position:relative;
-  width:1002px;
+	padding-left: 40px;
+  width:958px;
 }
 #dashboard ul#tab_nav li.active {
   background:none repeat scroll 0 0 #FFFFFF;
@@ -2410,6 +2411,12 @@ a.csv_table_icon {
   position:relative;
   background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left bottom repeat-x;
 }
+#message_block {
+  float:left;
+  position:relative;
+  background: #e4e3e4 url(../images/misc/gray_panel_bg.png) left top repeat-x;
+	border-bottom: 1px solid #c4c5c4;
+}
 .message_feed_main {
   float:left;
   padding:20px;
@@ -2683,7 +2690,7 @@ ul#message_tools li a.delete_message {
 	background: #eee;
 	width: 125px;
 	border-right: 1px solid #c4c5c4;
-	height: 546px;
+	height: 545px;
 }
 #mailbox_items {
 	position: relative;
@@ -2720,7 +2727,7 @@ ul#message_tools li a.delete_message {
 #mailbox_categories ul li span.mailbox_title {
 	color: #333;
 	font-weight: bold;
-	width: 85px;
+	width: 80px;
 	height: 16px;
 }
 #mailbox_categories ul li.mb_cat_item span.mailbox_title {
@@ -2735,7 +2742,7 @@ ul#message_tools li a.delete_message {
 	position: relative;
 	float: left;
 	width: 29px;
-	height: 16px;
+	height: 15px;
 }
 #mailbox_categories ul li.mb_cat_header span.mailbox_title {
 	color: #666;
@@ -2764,10 +2771,12 @@ ul#message_tools li a.delete_message {
 	padding-left:10px;
 	padding-right:30px;
 	width:100px;
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 70px -110px no-repeat;
 }
 #sort_bar span.sort_view {
 	width: 55px;
 	padding-right: 10px;
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 35px -110px no-repeat;
 }
 #message_list {
 	position: relative;
@@ -2799,13 +2808,13 @@ ul#message_tools li a.delete_message {
 	position: relative;
 	float: left;
 	font-weight: bold;
-	width: 130px;
+	width: 120px;
 }
 #messages li .message_time {
 	position: relative;
 	float: left;
 	font-weight: bold;
-	width: 50px;
+	width: 60px;
 }
 #messages li .message_subject, #messages li .message_preview {
 	width: 184px;
@@ -2830,6 +2839,43 @@ ul#message_tools li a.delete_message {
 }
 #message_content p {
 	margin-bottom: 10px;
+}
+#mb_mailbox_refresh .mailbox_header_icon {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 0px 0px no-repeat;
+}
+#mb_folders .mailbox_header_icon {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) 0px -17px no-repeat;
+}
+#mb_inbox .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -34px no-repeat;
+}
+#mb_drafts .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -66px no-repeat;
+}
+#mb_sent .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -48px no-repeat;
+}
+#mb_trash .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -86px no-repeat;
+}
+#mb_notes .mailbox_title {
+	background: transparent url(../images/inner_pages/message_center_sprite.png) -2px -130px no-repeat;
+}
+li.mb_cat_item .mailbox_item_count.has_count {
+	background:url("../images/inner_pages/message_center_sprite.png") no-repeat scroll 3px -150px transparent;
+	font-size:10px;
+	padding-top:2px;
+	text-align:center;
+}
+#mailbox_categories ul li.mb_cat_item.active {
+	border: none;
+	border-top: 1px solid #fff;
+	border-bottom:1px solid #C4C5C4;
+	background: #e1e1e1;
+	margin-bottom: 0px;
+}
+#mailbox_categories ul li.mb_cat_item.active .mailbox_item_count.has_count {
+	background:url("../images/inner_pages/message_center_sprite.png") no-repeat scroll 3px -169px transparent;
 }
 /***********************************************************************************************************************/
 /******************************************************************************************* HELP CENTER ***************/
@@ -2973,6 +3019,7 @@ ul#message_tools li a.delete_message {
   padding:20px 0;
   position:relative;
   width:450px;
+	text-align: left;
 }
 .help_list_item p {
   float:left;
@@ -4393,10 +4440,9 @@ div.coming_soon div.close {
     z-index:10;
 }
 /***********************************************************************************************************************/
-/******************************************************************************************* MESSAGE MODALS ************/
+/********************************************************************************************** IDEA MODALS ************/
 div.idea_post { 
   position: relative;
-  width:855px;
   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   display:none; 
   padding: 0 !important;
@@ -4406,18 +4452,60 @@ div.idea_post div.close {
     cursor:pointer;
     height:38px;
     position:absolute;
-  /*  right:-12px;
-    top:-10px;*/
     right:0;
     top:22px;
     width:38px;
     z-index:10;
 }
+.modal_message_widget {
+	position: relative;
+	float: left;
+	width: 305px;
+	height: 303px;
+	border: 1px solid #c4c5c4;
+	background: #eeeeee;
+	padding: 10px;
+	margin: 10px 0px 10px 10px;
+}
+#idea_message_image.modal_message_widget {
+	background: none;
+	border: 1px solid #fff;
+	margin-left: 0px;
+}
+#idea_links {
+  float:right;
+  height:40px;
+  padding:0 10px;
+  position:relative;
+  text-align:right;
+  width:125px;
+}
+#idea_links a {
+  display:block;
+  float:left;
+  height:21px;
+  margin-left:10px;
+  padding-top:4px;
+  text-align:center;
+}
+#idea_message .form_field {
+	margin-bottom: 10px;
+}
+#idea_message .form_field label {
+	color: #666;
+	font-weight: bold;
+}
+#idea_message .form_field input[type="text"] {
+	width:292px;
+}
+#idea_message .form_field textarea {
+	width:292px;
+	height: 163px;
+}
 /***********************************************************************************************************************/
-/********************************************************************************************** IDEA MODALS ************/
+/******************************************************************************************* MESSAGE MODALS ************/
 div.message_post { 
   position: relative;
-  width:855px;
   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   display:none; 
   padding: 0 !important;
@@ -4427,12 +4515,55 @@ div.message_post div.close {
     cursor:pointer;
     height:38px;
     position:absolute;
-  /*  right:-12px;
-    top:-10px;*/
     right:0;
     top:22px;
     width:38px;
     z-index:10;
+}
+.modal_message_widget {
+	position: relative;
+	float: left;
+	width: 305px;
+	height: 303px;
+	border: 1px solid #c4c5c4;
+	background: #eeeeee;
+	padding: 10px;
+	margin: 10px 0px 10px 10px;
+}
+#email_message_image.modal_message_widget {
+	background: none;
+	border: 1px solid #fff;
+	margin-left: 0px;
+}
+#email_links {
+  float:right;
+  height:40px;
+  padding:0 10px;
+  position:relative;
+  text-align:right;
+  width:125px;
+}
+#email_links a {
+  display:block;
+  float:left;
+  height:21px;
+  margin-left:10px;
+  padding-top:4px;
+  text-align:center;
+}
+#email_message .form_field {
+	margin-bottom: 10px;
+}
+#email_message .form_field label {
+	color: #666;
+	font-weight: bold;
+}
+#email_message .form_field input[type="text"] {
+	width:292px;
+}
+#email_message .form_field textarea {
+	width:292px;
+	height: 163px;
 }
 /***********************************************************************************************************************/
 /******************************************************************************************* CONFIRM MODALS ************/
@@ -4476,7 +4607,7 @@ div.confirm {
   padding:0 10px;
   position:relative;
   text-align:right;
-  width:100px;
+  width:125px;
 }
 #confirm_links a {
   display:block;
@@ -4486,6 +4617,7 @@ div.confirm {
   padding-top:4px;
   text-align:center;
 }
+
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/
 #tiptip_holder {
@@ -4514,13 +4646,13 @@ div.confirm {
 
 #tiptip_content {
 	font-size: 11px;
-	color: #222;
+	color: #666;
 /*  text-shadow: 0 0 1px #333;*/
 	padding: 4px 8px;
-	border: 1px solid #555;
-	border: 1px solid rgba(85,85,85,1);
+	border: 3px solid #999;
+	border: 3px solid rgba(153,153,153,1);
 	background-color: rgb(255,255,255);
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,.95);
 	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#ffffff));*/
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -4540,37 +4672,37 @@ div.confirm {
 }
 
 #tiptip_holder.tip_top #tiptip_arrow {
-	border-top-color: #555;
-	border-top-color: rgba(85,85,85,1);
+	border-top-color: #999;
+	border-top-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_bottom #tiptip_arrow {
-	border-bottom-color: #555;
-	border-bottom-color: rgba(85,85,85,1);
+	border-bottom-color: #999;
+	border-bottom-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_right #tiptip_arrow {
-	border-right-color: #555;
-	border-right-color: rgba(85,85,85,1);
+	border-right-color: #999;
+	border-right-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_left #tiptip_arrow {
-	border-left-color: #555;
-	border-left-color: rgba(85,85,85,1);
+	border-left-color: #999;
+	border-left-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_top #tiptip_arrow_inner {
 	margin-top: -7px;
 	margin-left: -6px;
-	border-top-color: rgb(255,255,255);
-	border-top-color: rgba(255,255,255,1);
+	border-top-color: rgba(153,153,153,1);
+	border-top-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_bottom #tiptip_arrow_inner {
 	margin-top: -5px;
 	margin-left: -6px;
-	border-bottom-color: rgb(255,255,255);
-	border-bottom-color: rgba(255,255,255,1);
+	border-bottom-color: rgba(153,153,153,1);
+	border-bottom-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_right #tiptip_arrow_inner {
@@ -4617,7 +4749,7 @@ div.confirm {
 @media screen and (-webkit-min-device-pixel-ratio:0) {	
 	#tiptip_content {
 		padding: 4px 8px 5px 8px;
-		background-color: rgba(255,255,255,1);
+		background-color: rgba(255,255,255,.9);
 	}
 	#tiptip_holder.tip_bottom #tiptip_arrow_inner { 
 		border-bottom-color: rgba(85,85,85,1);

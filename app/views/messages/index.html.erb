@@ -29,7 +29,7 @@
         <%= render :partial => 'messages/message_posts', :locals => {:posts => @posts} %>
       </div>
       <div id="tab2" class="message_panel hidden">
-        <div id="post_block">
+        <div id="message_block">
           <div id="messages_wrap">
             <ul id="message_tools">
               <li><%= link_to "New Message", "", :class => "message_tools_nav new_message tip", :title => "New Message" %></li>
@@ -46,17 +46,17 @@
                 <span class="mailbox_title">Mailboxes</span>
                 <span class="mailbox_header_icon"></span>
               </li>
-              <li id="mb_inbox" class="mb_cat_item">
+              <li id="mb_inbox" class="mb_cat_item active">
                 <span class="mailbox_title">Inbox</span>
-                <span class="mailbox_item_count">21</span>
+                <span class="mailbox_item_count active has_count">21</span>
               </li>
               <li id="mb_drafts" class="mb_cat_item">
                 <span class="mailbox_title">Drafts</span>
-                <span class="mailbox_item_count">3</span>
+                <span class="mailbox_item_count has_count">3</span>
               </li>
               <li id="mb_sent" class="mb_cat_item">
                 <span class="mailbox_title">Sent</span>
-                <span class="mailbox_item_count">47</span>
+                <span class="mailbox_item_count has_count">47</span>
               </li>
               <li id="mb_trash" class="mb_cat_item">
                 <span class="mailbox_title">Trash</span>
@@ -85,25 +85,29 @@
             </div>
             <div id="message_list">
               <ul id="messages">
-                <% 10.times do %>
-                <li>
-                  <div class="message_from">Bob Hanson</div>
-                  <div class="message_time">4:24 PM</div>
-                  <div class="message_subject">RE: Data Changes</div>
-                  <div class="message_preview">To change the data needed for 2009</div>
-                </li>
-                <% end %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Bob Hanson", :time => "4:45 PM", :subject => "RE: Data Changes", :preview => "To change the data needed for 2009", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Jeff Young", :time => "3:52 PM", :subject => "RE: Data Changes", :preview => "The data that is needed will be in", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Larry Finn", :time => "3:21 PM", :subject => "RE: Data Changes", :preview => "Updates are in", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Bob Hanson", :time => "12:09 PM", :subject => "Updates for Q3", :preview => "Let me know when the updates are", :active => "active"} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Jeff Young", :time => "11:15 AM", :subject => "RE: Luncheon Meeting", :preview => "Great, I'll see you there about", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Bob Hanson", :time => "10:55 AM", :subject => "RE: Luncheon Meeting", :preview => "Sounds good Jeff, Olive Garden", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Jeff Young", :time => "10:22 AM", :subject => "Luncheon Meeting", :preview => "Where would everyone like to meet ", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Darin Johnson", :time => "10:15 AM", :subject => "RE: Statistics", :preview => "These savings look great! keep it", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Bob Hanson", :time => "9:55 AM", :subject => "RE: Statistics", :preview => "These are the latest. I pulled them", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Darin Johnson", :time => "9:32 PM", :subject => "Statistics", :preview => "John, what is the latest saving stats", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Kara Grua", :time => "9:02 AM", :subject => "RE: Meeting Notes", :preview => "Thanks John", :active => ""} %>
+                <%= render :partial => 'inbox_message', :locals => {:name => "Bob Hanson", :time => "4:45 PM", :subject => "RE: Meeting Notes", :preview => "I have attached the most recent for", :active => ""} %>
               </ul>
             </div>
           </div>
           <div id="message_view">
             <div id="message_header">
               <h2 id="message_title">Updates for Q3</h2>
-              <div id="message_meta">From <%= link_to "Bob Hanson", "" %> today at 12:09 PM</div>
+              <div id="message_meta">From <%= link_to "Bob Hanson", "", :class => "coming_soon", :rel => "#coming_soon" %> today at 12:09 PM</div>
             </div>
             <div id="message_content">
               <p>
-                Let me know when the updates have completed. We’ll need to make sure that we have the numbers from JT and Karen. They sould already be aware of the timeframe that needed.
+                Let me know when the updates have completed. We’ll need to make sure that we have the numbers from JT and Karen. They should already be aware of the timeframe that needed.
               </p>
               <p>
                 Thanks for your assistance during the last two week.<br/>
@@ -205,6 +209,7 @@
       app.messagePost();
       app.messageReplyTrigger();
       app.inboxSelect();
+      app.mbCatItemSelect();
       <% if ipad? %>
         scroll.setiPadMessageScroll();
       <% end %>

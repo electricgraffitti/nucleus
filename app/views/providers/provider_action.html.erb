@@ -5,7 +5,7 @@
     <div id="panel_north">
       <div id="inner_north">
         
-        <div class="module">
+        <div id="pa0" class="module">
           <div class="module_header">
             <h3>
               <span>
@@ -13,7 +13,7 @@
               </span>
             </h3>
             <div id="provider_rating" class="<%= @provider.score_color(@provider)%>_rating">
-              <%= link_to "#{@provider.provider_score}", provider_action_path, :class => "tip", :title => "Provider Actions" %>
+              <%= @provider.provider_score %>
             </div>
           </div>
           <div class="module_content">
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <div class="widget">
+        <div id="pa1" class="widget">
           <div class="widget_header">
             <div class="widget_header_top">
               <h3>Condition Statistics</h3>
@@ -133,7 +133,7 @@
           </div>
         </div>
         
-        <div class="widget">
+        <div id="pa2" class="widget">
           <div class="widget_header">
             <div class="widget_header_top">
               <h3>Condition Chart</h3>
@@ -149,6 +149,20 @@
             <div id="provider_action_chart" class="clear left">
           
             </div>
+          </div>
+        </div>
+        
+        <div id="pa3" class="widget">
+          <div class="widget_header">
+            <div class="widget_header_top">
+              <h3>Lumbosacral Degeneration</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
+          </div>
+          <div class="widget_content">
+            <%= image_tag("/images/widget_images/backPain.jpg", :alt => "Lumbosacral Degeneration") %>
           </div>
         </div>
       
@@ -173,12 +187,19 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      var x = $("#provider_action table tbody tr#3");
+      // console.log(x);
       app.panelLayoutWidthHeight();
       app.triggerActionTable();
       app.tutorialTrigger();
       app.noteTrigger();
       panels.northResizeTrigger();
       panels.actionPanelToggle();
+      <% if !ipad? %>
+        var inn = $("#inner_north");
+        drag.providerActionDrag(inn, 'providerAction', 1000);
+        drag.loadProviderActionOrder(inn, 'providerAction');
+      <% end %>
       <% if ipad? %>
         var t = $("#data_table");
         scroll.setWidgetScroll();
