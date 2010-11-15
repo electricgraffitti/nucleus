@@ -187,6 +187,8 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      var x = $("#provider_action table tbody tr#3");
+      // console.log(x);
       app.panelLayoutWidthHeight();
       app.triggerActionTable();
       app.tutorialTrigger();

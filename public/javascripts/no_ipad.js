@@ -193,7 +193,6 @@ var drag = {
     
     // fetch current order
     var items = list.sortable("toArray");
-		console.log(items);
 		
     // make array from current order
     var rebuild = new Array();
