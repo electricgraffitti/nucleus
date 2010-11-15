@@ -37,7 +37,6 @@
       <% if !ipad? %>
       app.centeredHeight();
       <% end %>
-      panels.forumTabs();
       <% if ipad? %>
         scroll.setiPadIdeaScroll();
       <% end %>
@@ -45,6 +44,7 @@
       app.toggleUpload();
       panels.voteIncrement();
       app.ideaModal();
+      // panels.forumTabs();
     });
   </script>
 <% end %>
