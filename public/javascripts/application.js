@@ -598,24 +598,15 @@ var widget = {
     var trig = $("#ql_checkboxes a");
     
     trig.live('click', function(e) {
-      
       var wrap = $(this).parent('.option_trigger');
+      var ql_icon = $('#' + $(this).attr('icon'));
+      var wrap = $(this).parent('.option_trigger');
+      var visibleID = ql_icon.attr('id');
       
       if (wrap.hasClass("active")) {
-        e.preventDefault();     
-        $(this).overlay({
-      	    expose: {
-              color: '#AAAAAA',
-              loadSpeed: 200,
-              opacity: 0.5
-            },
-            onBeforeLoad: function() {
-              var el = this.getTrigger();
-              var ol = this.getOverlay();
-              var yesLink = ol.find('a.confirm_yes');
-              widget.confirmQuickLaunchRemoval(yesLink, el);
-      			}
-  			  });
+          e.preventDefault();     
+          wrap.removeClass('active');
+          ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
   			} else {
           e.preventDefault();
           var ql_icon = $('#' + $(this).attr('icon'));
@@ -626,20 +617,20 @@ var widget = {
     });
   },
   
-  confirmQuickLaunchRemoval: function(link, el) {
-    
-    link.click(function() {
-      e.preventDefault();
-      var ql_icon = $('#' + el.attr('icon'));
-      var wrap = el.parent('.option_trigger');
-      var visibleID = ql_icon.attr('id');
-      wrap.removeClass('active');
-      ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
-      link.siblings('a.close').click();
-    });
-    
-
-  },
+  // confirmQuickLaunchRemoval: function(link, el) {
+  //   
+  //   link.click(function() {
+  //     e.preventDefault();
+  //     var ql_icon = $('#' + el.attr('icon'));
+  //     var wrap = el.parent('.option_trigger');
+  //     var visibleID = ql_icon.attr('id');
+  //     wrap.removeClass('active');
+  //     ql_icon.hide(widget.setQuickLaunchViewCookie(visibleID));
+  //     link.siblings('a.close').click();
+  //   });
+  //   
+  // 
+  // },
   
   confirmClose: function() {
     var close = $(".confirm_no");
