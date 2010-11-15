@@ -922,7 +922,7 @@ input#claim_sequence_wide[type="text"] {
 #inner_north {
   position: relative;
   float: left;
-  height: 310px;
+  height: 320px;
 }
 #panel_south {
   position: relative;
@@ -4646,13 +4646,13 @@ div.confirm {
 
 #tiptip_content {
 	font-size: 11px;
-	color: #222;
+	color: #666;
 /*  text-shadow: 0 0 1px #333;*/
 	padding: 4px 8px;
-	border: 2px solid #999;
-	border: 2px solid rgba(153,153,153,1);
+	border: 3px solid #999;
+	border: 3px solid rgba(153,153,153,1);
 	background-color: rgb(255,255,255);
-	background-color: rgba(255,255,255,.9);
+	background-color: rgba(255,255,255,.95);
 	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#ffffff));*/
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
