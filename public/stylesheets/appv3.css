@@ -4603,6 +4603,61 @@ div.confirm {
   padding-top:4px;
   text-align:center;
 }
+/***********************************************************************************************************************/
+/******************************************************************************************* VIDEO MODAL ***************/
+/*/* overlay size and background image */ 
+div#video_div { 
+	position: relative;
+	width:512px; 
+	height:288px; 
+	background: url(../images/overlay/apple.png) -45px -45px no-repeat; 
+	display:none; 
+	padding: 0 !important; 
+} 
+ 
+/* close button for overlay */ 
+div#video_div a.close { 
+/*  background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
+  cursor:pointer;
+  height:38px;
+  position:absolute;
+  right:0;
+  top:22px;
+  width:38px;
+  z-index:10;*/
+}
+ 
+/* original size of the player */ 
+#ipad, #ipad embed, #ipad object { 
+  height:288px;
+  left:0px;
+  position:absolute;
+  top:0px;
+  width:512px;
+} 
+ 
+/* absolute positioning of the player */ 
+#ipad embed, #ipad object { 
+	position:relative; 
+	/* layer as the topmost element */ 
+	z-index:10000; 
+}*/
+
+/* styling for elements inside overlay */ 
+.details { 
+	position:absolute; 
+	top:15px; 
+	right:15px; 
+	font-size:11px; 
+	color:#fff; 
+	width:150px; 
+} 
+ 
+.details h3 { 
+	color:#aba; 
+	font-size:15px; 
+	margin:0 0 -10px 0; 
+}
 
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/

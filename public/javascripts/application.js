@@ -993,6 +993,26 @@ var app = {
 	  });
   },
 		
+	triggerVideo: function() {
+	  $(".video_link").overlay({	 
+  	  expose: {
+  		color: '#000',
+  		opacity: 0.85,
+  		closeSpeed: 700
+  	},
+
+    onLoad: function() {
+    var v = this.getTrigger().attr("href");
+    	player.load().play(v);
+    },
+
+    onClose: function() {
+    player.pause();
+    player.unload();
+    }
+	  });
+	},
+	
 	tutorialTriggerState: function() {
     var $t = $("#scroll_thumbs ul li");
     $t.live('click', function() {
