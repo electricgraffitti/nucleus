@@ -151,6 +151,20 @@
             </div>
           </div>
         </div>
+        
+        <div class="widget">
+          <div class="widget_header">
+            <div class="widget_header_top">
+              <h3>Lumbosacral Degeneration</h3>
+            </div>
+            <div class="widget_header_bottom">
+              <%= render :partial => 'dashboard/widget_options' %>
+            </div>
+          </div>
+          <div class="widget_content">
+            <%= image_tag("/images/widget_images/backPain.jpg", :alt => "Lumbosacral Degeneration") %>
+          </div>
+        </div>
       
       </div>
     </div>
@@ -173,6 +187,7 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
+      $("#3").click();
       app.panelLayoutWidthHeight();
       app.triggerActionTable();
       app.tutorialTrigger();

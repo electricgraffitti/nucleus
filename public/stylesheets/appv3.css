@@ -1400,7 +1400,8 @@ input#claim_sequence_wide[type="text"] {
   border-bottom:1px solid #C0C0C0;
   float:left;
   position:relative;
-  width:1002px;
+	padding-left: 40px;
+  width:958px;
 }
 #dashboard ul#tab_nav li.active {
   background:none repeat scroll 0 0 #FFFFFF;
@@ -4648,10 +4649,10 @@ div.confirm {
 	color: #222;
 /*  text-shadow: 0 0 1px #333;*/
 	padding: 4px 8px;
-	border: 1px solid #555;
-	border: 1px solid rgba(85,85,85,1);
+	border: 2px solid #999;
+	border: 2px solid rgba(153,153,153,1);
 	background-color: rgb(255,255,255);
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,.9);
 	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#ffffff));*/
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -4671,37 +4672,37 @@ div.confirm {
 }
 
 #tiptip_holder.tip_top #tiptip_arrow {
-	border-top-color: #555;
-	border-top-color: rgba(85,85,85,1);
+	border-top-color: #999;
+	border-top-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_bottom #tiptip_arrow {
-	border-bottom-color: #555;
-	border-bottom-color: rgba(85,85,85,1);
+	border-bottom-color: #999;
+	border-bottom-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_right #tiptip_arrow {
-	border-right-color: #555;
-	border-right-color: rgba(85,85,85,1);
+	border-right-color: #999;
+	border-right-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_left #tiptip_arrow {
-	border-left-color: #555;
-	border-left-color: rgba(85,85,85,1);
+	border-left-color: #999;
+	border-left-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_top #tiptip_arrow_inner {
 	margin-top: -7px;
 	margin-left: -6px;
-	border-top-color: rgb(255,255,255);
-	border-top-color: rgba(255,255,255,1);
+	border-top-color: rgba(153,153,153,1);
+	border-top-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_bottom #tiptip_arrow_inner {
 	margin-top: -5px;
 	margin-left: -6px;
-	border-bottom-color: rgb(255,255,255);
-	border-bottom-color: rgba(255,255,255,1);
+	border-bottom-color: rgba(153,153,153,1);
+	border-bottom-color: rgba(153,153,153,1);
 }
 
 #tiptip_holder.tip_right #tiptip_arrow_inner {
@@ -4748,7 +4749,7 @@ div.confirm {
 @media screen and (-webkit-min-device-pixel-ratio:0) {	
 	#tiptip_content {
 		padding: 4px 8px 5px 8px;
-		background-color: rgba(255,255,255,1);
+		background-color: rgba(255,255,255,.9);
 	}
 	#tiptip_holder.tip_bottom #tiptip_arrow_inner { 
 		border-bottom-color: rgba(85,85,85,1);
