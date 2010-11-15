@@ -23,7 +23,16 @@
                   </h3>
                   <p><%= p.post %></p>
                   <div class="message_links">
-                    <span><%= time_ago_in_words(p.created_at) %> ago</span> <span class="text_spacer">|</span><span class=""><%= link_to "Reply", new_comment_path(:post_id => p.id, :client_id => current_client.id), :class => "tip post_reply", :title => "Reply to this post", :postnum => p.id %></span>
+                    <span>
+                      <%= time_ago_in_words(p.created_at) %> ago</span> 
+                      
+                      <span class="">
+                        <%= link_to "Reply", new_comment_path(:post_id => p.id, :client_id => current_client.id), :class => "tip post_reply", :title => "Reply to this post", :postnum => p.id %>
+                      </span>
+                      <% if p.client == current_client %>
+                        <span class="text_spacer">|</span>
+                        <%= link_to "Delete Post", p, :method => :delete %>
+                      <% end %>
                   </div>
                 </div>
               </div>
@@ -48,6 +57,10 @@
                     <p><%= pc.comment %></p>
                     <div class="message_links">
                       <span><%= time_ago_in_words(pc.created_at) %> ago</span>
+                      <% if pc.client == current_client %>
+                        <span class="text_spacer">|</span>
+                        <%= link_to "Delete Post", pc, :method => :delete %>
+                      <% end %>
                     </div>
                     <div class="attachment_wrap">
                       <div class="gray_paper_clip"></div>

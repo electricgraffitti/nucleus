@@ -187,11 +187,11 @@ ActiveRecord::Schema.define(:version => 20101114225624) do
   end
 
   create_table "messages", :force => true do |t|
-    t.integer  "client_id"
     t.integer  "disscussion_id"
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "client_id"
     t.string   "email"
   end
 
