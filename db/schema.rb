@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101114053159) do
+ActiveRecord::Schema.define(:version => 20101114225624) do
 
   create_table "claim_statuses", :force => true do |t|
     t.string   "claim_status"
@@ -153,6 +153,12 @@ ActiveRecord::Schema.define(:version => 20101114053159) do
     t.datetime "updated_at"
   end
 
+  create_table "idea_categories", :force => true do |t|
+    t.string   "idea_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.text     "address"
@@ -186,6 +192,7 @@ ActiveRecord::Schema.define(:version => 20101114053159) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
   create_table "monthly_billings", :force => true do |t|
