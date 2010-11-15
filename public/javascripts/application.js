@@ -97,12 +97,14 @@ var tableActions = {
 	},
 
 	setChartByTableRowClick: function() {
-		$('.action_table tbody tr').click(function() {
+		var t = $('.action_table tbody tr');
+		t.click(function() {
 			tableActions.setActive($(this));
 			tableActions.actionChartData($(this));
 			tableActions.setConditionChart($(this));
 			tableActions.setStatChart($(this));
 		});
+		t.first().click();
 	},
 
 	setDefaultTableActions: function() {
@@ -1053,8 +1055,15 @@ var app = {
 	},
 	
 	triggerActionTable: function() {
-	  var $tableTrigger = $('#provider_action_table table tbody tr').first();
-	  $tableTrigger.click();
+	  var $tableTrigger = $('#provider_action tbody tr').first();
+		// triggerActionTable: function() {
+		// 	var x = $("#provider_action tbody tr#3");
+		// 	    x.trigger('click');
+		// },
+		// 	  $tableTrigger.click( function() {
+		// 	console.log("got it");
+		// 	
+		// });
 	},
 	
 	setQuickLaunchHovers: function() {
