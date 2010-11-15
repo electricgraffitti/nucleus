@@ -498,7 +498,7 @@ var widget = {
   },
 
   widgetOptionTrigger: function() {
-    var trig = $("a.widget_option");
+    var trig = $("a.close_option");
     
     trig.live('click', function() {
       var dashWidget = $(this).parents(".widget").first();
