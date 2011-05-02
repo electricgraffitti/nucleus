@@ -17,9 +17,8 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-  config.gem "sqlite3-ruby", :lib => "sqlite3"
   config.gem "authlogic"
-  config.gem "rails-geocoder", :lib => "geocoder", :source => "http://gemcutter.org/"
+  config.gem "geocoder", :lib => "geocoder", :source => "http://gemcutter.org/"
   config.gem 'paperclip', :source => 'http://rubygems.org'
   # config.gem "aws-s3", :lib => "aws/s3"
 
