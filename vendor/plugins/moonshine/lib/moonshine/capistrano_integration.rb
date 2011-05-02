@@ -469,7 +469,7 @@ module Moonshine
 
         namespace :aptget do
           task :update do
-            sudo 'apt-get update'
+            # sudo 'apt-get update'
           end
         end
       end
