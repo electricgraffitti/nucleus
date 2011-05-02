@@ -1,7 +1,7 @@
 --- 
-- :name: sqlite3-ruby
 - :name: authlogic
-- :source: http://gemcutter.org/
-  :name: rails-geocoder
+- :name: geocoder
+- :source: http://rubygems.org
+  :name: paperclip
 - :version: 2.3.8
   :name: rails

@@ -18,7 +18,7 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   config.gem "authlogic"
-  config.gem "geocoder", :lib => "geocoder", :source => "http://gemcutter.org/"
+  config.gem "geocoder"
   config.gem 'paperclip', :source => 'http://rubygems.org'
   # config.gem "aws-s3", :lib => "aws/s3"
 
