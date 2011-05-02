@@ -6,10 +6,7 @@ module Moonshine::Manifest::Rails::Apache
       :keep_alive_timeout => 15,
       :max_clients => 150,
       :server_limit => 16,
-      :timeout => 300,
-      :trace_enable => 'On',
-      :gzip => false,
-      :gzip_types => ['text/html', 'text/plain', 'text/xml', 'text/css', 'application/x-javascript', 'application/javascript']
+      :timeout => 300
     }
   end
 
@@ -24,9 +21,6 @@ module Moonshine::Manifest::Rails::Apache
     if configuration[:ssl]
       a2enmod('headers')
       a2enmod('ssl')
-    end
-    if configuration[:apache][:gzip]
-      a2enmod('deflate')
     end
 
     if configuration[:apache][:users]

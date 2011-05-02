@@ -1,25 +1,8 @@
 module Moonshine::Manifest::Rails::Passenger
   # Install the passenger gem
   def passenger_gem
-    blessed_version = '3.0.6'
     configure(:passenger => {})
-    if configuration[:passenger][:version] && configuration[:passenger][:version] < "3.0"
-      package "passenger",
-        :ensure => configuration[:passenger][:version],
-        :provider => :gem
-    elsif configuration[:passenger][:version] == :latest
-      package "passenger",
-        :ensure => blessed_version,
-        :provider => :gem,
-        :require => [ package('libcurl4-openssl-dev') ]
-      package 'libcurl4-openssl-dev', :ensure => :installed
-    else
-      package "passenger",
-        :ensure => (configuration[:passenger][:version] || blessed_version),
-        :provider => :gem,
-        :require => [ package('libcurl4-openssl-dev') ]
-      package 'libcurl4-openssl-dev', :ensure => :installed
-    end
+    package "passenger", :ensure => (configuration[:passenger][:version] || :latest), :provider => :gem
   end
 
   # Build, install, and enable the passenger apache module. Please see the
@@ -41,19 +24,14 @@ module Moonshine::Manifest::Rails::Passenger
     # Build Passenger from source
     exec "build_passenger",
       :cwd => configuration[:passenger][:path],
-      :command => 'sudo /usr/bin/ruby -S rake clean apache2',
-      :unless => [
-        "ls `passenger-config --root`/ext/apache2/mod_passenger.so",
-        "ls `passenger-config --root`/ext/ruby/ruby-*/passenger_native_support.so",
-        "ls `passenger-config --root`/agents/PassengerLoggingAgent"
-        ].join(" && "),
+      :command => '/usr/bin/ruby -S rake clean apache2',
+      :unless => "ls `passenger-config --root`/ext/apache2/mod_passenger.so",
       :require => [
         package("passenger"),
         package("apache2-mpm-worker"),
         package("apache2-threaded-dev"),
         exec('symlink_passenger')
-      ],
-      :timeout => 108000
+      ]
 
     load_template = "LoadModule passenger_module #{configuration[:passenger][:path]}/ext/apache2/mod_passenger.so"
 
@@ -71,9 +49,7 @@ module Moonshine::Manifest::Rails::Passenger
       :notify => service("apache2"),
       :alias => "passenger_conf"
 
-    a2enmod 'headers', :notify => service('apache2')
-
-    a2enmod 'passenger', :require => [exec("build_passenger"), file("passenger_conf"), file("passenger_load"), exec('a2enmod headers')]
+    a2enmod 'passenger', :require => [exec("build_passenger"), file("passenger_conf"), file("passenger_load")]
   end
 
   # Creates and enables a vhost configuration named after your application.

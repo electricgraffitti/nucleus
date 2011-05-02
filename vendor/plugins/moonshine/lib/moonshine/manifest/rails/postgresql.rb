@@ -68,7 +68,7 @@ module Moonshine::Manifest::Rails::Postgresql
 private
 
   def psql(query, options = {})
-    name = options.delete(:alias) || "psql #{query}"
+    name = "psql #{query}"
     hash = {
       :command => psql_query(query),
       :user => 'postgres'

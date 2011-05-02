@@ -7,33 +7,30 @@ module Moonshine::Manifest::Rails::Mysql
   def mysql_server
     package 'mysql-server', :ensure => :installed
     service 'mysql', :ensure => :running, :require => [
-      package('mysql-server')
+      package('mysql-server'),
+      package('mysql')
     ]
 
     # ensure the mysql key is present on the configuration hash
-    configure(:mysql => { :version => mysql_version })
+    configure(:mysql => {})
 
     file '/etc/mysql', :ensure => :directory
     file '/etc/mysql/conf.d', :ensure => :directory
-    
     file '/etc/mysql/conf.d/innodb.cnf',
       :ensure => :present,
       :content => template(File.join(File.dirname(__FILE__), 'templates', 'innodb.cnf.erb')),
       :before => package('mysql-server')
-    
     file '/etc/mysql/conf.d/moonshine.cnf',
       :ensure => :present,
       :content => template(File.join(File.dirname(__FILE__), 'templates', 'moonshine.cnf.erb')),
       :require => package('mysql-server'),
-      :notify => service('mysql'),
-      :checksum => :md5
-
+      :notify => service('mysql')
     file '/etc/logrotate.d/varlogmysql.conf', :ensure => :absent
   end
 
   # Install the <tt>mysql</tt> rubygem and dependencies
   def mysql_gem
-    gem(mysql_gem_name, :alias => 'mysql')
+    gem('mysql')
   end
 
   # GRANT the database user specified in the current <tt>database_environment</tt>
@@ -81,12 +78,4 @@ private
     "su -c \'/usr/bin/mysql -u root -e \"#{sql}\"\'"
   end
 
-  def mysql_version
-    ubuntu_lucid? ? 5.1 : 5
-  end
-
-  def mysql_gem_name
-    # Assume the gem name is the same as the adapter name
-    database_environment[:adapter]
-  end
 end

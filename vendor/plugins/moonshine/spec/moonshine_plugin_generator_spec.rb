@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "MoonshinePluginGenerator" do
+describe MoonshinePluginGenerator do
 
   before do
     FileUtils.mkdir_p(generator_rails_root)
@@ -16,7 +16,6 @@ describe "MoonshinePluginGenerator" do
     init_path.should exist
     module_path.should exist
     spec_path.should exist
-    license_path.should exist
   end
 
   it "generates a plugin module" do 
@@ -25,7 +24,7 @@ describe "MoonshinePluginGenerator" do
   
   it "generates an init.rb that includes the plugin module" do
     init_path.read.should match(/require ".*iptables\.rb"/)
-    init_path.read.should match(/include Moonshine::Iptables/)
+    init_path.read.should match(/include Iptables/)
   end
 
   private
@@ -35,7 +34,7 @@ describe "MoonshinePluginGenerator" do
     end
 
     def module_path
-      plugin_path + 'lib/moonshine/iptables.rb'
+      plugin_path + 'lib/iptables.rb'
     end
 
     def init_path
@@ -43,19 +42,15 @@ describe "MoonshinePluginGenerator" do
     end
 
     def readme_path
-      plugin_path + 'README.markdown'
+      plugin_path + 'README.rdoc'
     end
 
     def spec_path
-      plugin_path + 'spec/moonshine/iptables_spec.rb'
+      plugin_path + 'spec/iptables_spec.rb'
     end
 
     def spec_helper_path
       plugin_path + 'spec/spec_helper.rb'
-    end
-
-    def license_path
-      plugin_path + 'LICENSE'
     end
 
 end

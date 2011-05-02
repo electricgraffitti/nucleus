@@ -1,8 +1,7 @@
 // Automatically upgrade packages from these (origin, archive) pairs
 Unattended-Upgrade::Allowed-Origins {
-<% configuration[:unattended_upgrade][:allowed_origins].each do |origin| %>
-  "<%= origin %>";
-<% end %>
+	"Ubuntu intrepid-security";
+//	"Ubuntu intrepid-updates";
 };
 
 // List of packages to not update
