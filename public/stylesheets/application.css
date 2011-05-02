@@ -3756,191 +3756,43 @@ div.overlay div.close, div.tutorial_overlay div.close {
   border: 1px solid #c0c0c0;
 }
 /*******Tutorials Modals *********/
-div.tutorial_overlay { 
-   position: relative;
-   width:855px; 
-   /*background-image:url(../images/overlay/apple.png); */
-   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
-   display:none; 
-   padding: 0 !important;
-}
-#tutorial_trigger {
-  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 0 -560px transparent;
-  float:left;
-  height:20px;
-  margin-left:2px;
-  margin-top:-2px;
-  position:relative;
-  width:20px;
-}
-#tutorial_trigger a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  text-indent: -3000em;
-}
-.tutorial_header {
-  background:none repeat scroll 0 0 #FFFFFF;
-  float:left;
-  margin:10px;
-  position:relative;
-  width:835px;
-}
-.tutorial_header h1 {
-  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
-  float:left;
-  font-size:15px;
-  font-weight:bold;
-  height:17px;
-  padding:11px;
-  position:relative;
-  width:648px;
-}
+div.tutorial_overlay{position:relative;width:855px;/*background-image:url(../images/overlay/apple.png);*/
+background:none repeat scroll 0 0 rgba(0,0,0,0.2);display:none;padding:0 !important;}
+#tutorial_trigger{background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 0 -560px transparent;float:left;height:20px;margin-left:2px;margin-top:-2px;position:relative;width:20px;}
+#tutorial_trigger a{display:block;width:20px;height:20px;text-indent:-3000em;}
+.tutorial_header{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:10px;position:relative;width:835px;}
+.tutorial_header h1{background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;float:left;font-size:15px;font-weight:bold;height:17px;padding:11px;position:relative;width:648px;}
 /*
-	root element for the scrollable.
-	when scrolling occurs this element stays still.
+root element for the scrollable.
+when scrolling occurs this element stays still.
 */
-#scroll_pane {
-  float:left;
-  height:518px;
-  position:relative;
-  width:795px;
-}
-#scrolling_segment {
-	position:relative;
-	overflow:hidden;
-	height:415px;
-}
-#scroll_wrap {
-  position: relative;
-  width: 2512px;
-  height: 400px;
-  float: left;
-}
-.scroll_panel {
-  position: relative;
-  float: left;
-  width: 795px;
-  height: 400px;
-}
-#scroll_wrap div.tutorial_column_left {
-  position: relative;
-  float: left;
-  width: 375px;
-  height: 400px;
-  padding-left: 40px;
-}
-#scroll_wrap div.tutorial_column_right {
-  float:left;
-  height:300px;
-  padding:75px 0 0;
-  position:relative;
-  width:330px;
-}
-.tutorial_column_right h2 {
-  position: relative;
-  float: left;
-  color: #fff;
-  font-size: 22px;
-  width: 100%;
-}
-.tutorial_column_right h3 {
-  position: relative;
-  float: left;
-  color: #999;
-  font-size: 16px;
-  padding: 10px 0px;
-  width: 100%;
-}
-.tutorial_column_right p {
-  color:#FFFFFF;
-  float:left;
-  font-size:12px;
-  height:230px;
-  overflow-x:hidden;
-  overflow-y:auto;
-  position:relative;
-  padding-right:10px;
-}
+#scroll_pane{float:left;height:518px;position:relative;width:795px;}
+#scrolling_segment{position:relative;overflow:hidden;height:415px;}
+#scroll_wrap{position:relative;width:2512px;height:400px;float:left;}
+.scroll_panel{position:relative;float:left;width:795px;height:400px;}
+#scroll_wrap div.tutorial_column_left{position:relative;float:left;width:375px;height:400px;padding-left:40px;}
+#scroll_wrap div.tutorial_column_right{float:left;height:300px;padding:75px 0 0;position:relative;width:330px;}
+.tutorial_column_right h2{position:relative;float:left;color:#fff;font-size:22px;width:100%;}
+.tutorial_column_right h3{position:relative;float:left;color:#999;font-size:16px;padding:10px 0px;width:100%;}
+.tutorial_column_right p{color:#FFFFFF;float:left;font-size:12px;height:230px;overflow-x:hidden;overflow-y:auto;position:relative;padding-right:10px;}
 /***Scroll Nav***/
-#scroll_thumbs {
-  border-top:1px solid #666666;
-  float:left;
-  height:73px;
-  margin-top:5px;
-  padding-top:5px;
-  position:relative;
-  width:795px;
-}
-#scroller_wrap {
-  position: relative;
-  width: 795px;
-  height: 93px;
-  float: left;
-  overflow: hidden;
-}
-#scroll_thumbs ul {
-  float: left;
-  width: 795px;
-}
-#scroller_wrap ul {
-  width: 100%;
-}
-.scroll_nav_triggers {
-  position: absolute;
-  width: 20px;
-  height: 90px;
-}
-.scroll_nav_triggers:hover {
-  cursor: pointer;
-}
-.scroll_nav_triggers.trigger_l {
-  left: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -90px no-repeat;
-}
-.scroll_nav_triggers.trigger_l:hover {
-  left: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -270px no-repeat;
-}
-.scroll_nav_triggers.trigger_r {
-  right: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px 0px no-repeat;
-}
-.scroll_nav_triggers.trigger_r:hover {
-  right: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -180px no-repeat;
-}
-#scroll_thumbs ul li {
-  float:left;
-  height:90px;
-  position:relative;
-  width:155px;
-}
-#scroll_thumbs ul li.selected {
-/*  border: 1px solid #5bab46;*/
-}
-#scroll_thumbs ul li a {
-  position: relative;
-  display: block;
-}
-#scroll_thumbs ul li a.scroll_nav_trigger_image {
-  position: relative;
-  float: left;
-  width:75px;
-  height: 90px;
-}
-#scroll_thumbs ul li a.scroll_nav_trigger_copy {
-  color:#999999;
-  float:left;
-  height:65px;
-  margin-left:5px;
-  padding-top:25px;
-  position:relative;
-  width:74px;
-}
-#scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
-  text-decoration: none;
-}
+#scroll_thumbs{border-top:1px solid #666666;float:left;height:73px;margin-top:5px;padding-top:5px;position:relative;width:795px;}
+#scroller_wrap{position:relative;width:795px;height:93px;float:left;overflow:hidden;}
+#scroll_thumbs ul{float:left;width:795px;}
+#scroller_wrap ul{width:100%;}
+.scroll_nav_triggers{position:absolute;width:20px;height:90px;}
+.scroll_nav_triggers:hover{cursor:pointer;}
+.scroll_nav_triggers.trigger_l{left:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px -90px no-repeat;}
+.scroll_nav_triggers.trigger_l:hover{left:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px -270px no-repeat;}
+.scroll_nav_triggers.trigger_r{right:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px 0px no-repeat;}
+.scroll_nav_triggers.trigger_r:hover{right:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px -180px no-repeat;}
+#scroll_thumbs ul li{float:left;height:90px;position:relative;width:155px;}
+#scroll_thumbs ul li.selected{/* border:1px solid #5bab46;*/}
+#scroll_thumbs ul li a{position:relative;display:block;}
+#scroll_thumbs ul li a.scroll_nav_trigger_image{position:relative;float:left;width:75px;height:90px;}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy{color:#999999;float:left;height:65px;margin-left:5px;padding-top:25px;position:relative;width:74px;}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy:hover{text-decoration:none;}
+
 /*****Tips********/
 #tiptip_holder {
 	display: none;

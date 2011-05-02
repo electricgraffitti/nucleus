@@ -4078,586 +4078,125 @@ li#street_link a:hover {
 
 /***********************************************************************************************************************/
 /*********************************************************************************************** OVERLAY ***************/
-div.overlay { 
-    position: relative;
-    width:490px; 
-    background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-    display:none; 
-    padding: 0 !important;
-}
-div.overlay div.close, div.tutorial_overlay div.close, div.confirm div.close { 
-  background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
-  cursor:pointer;
-  height:38px;
-  position:absolute;
-/*  right:-12px;
-  top:-10px;*/
-  right:0;
-  top:22px;
-  width:38px;
-  z-index:10;
-}
-#thead {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 40px;
-  background: #000 url(../images/overlay/modal-header.png) 0px 0px repeat-x;
-  cursor: move;
-}
-.contentWrap {
-  position: relative;
-  float: left;
-  text-align: left;
-}
-.iframe {
-  border: none;
-}
-#inner {
-  margin-top: -200px;
-}
+div.overlay{position:relative;width:490px;background:none repeat scroll 0 0 rgba(0,0,0,0.5);display:none;padding:0 !important;}
+div.overlay div.close,div.tutorial_overlay div.close,div.confirm div.close{background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;cursor:pointer;height:38px;position:absolute;/* right:-12px;top:-10px;*/
+right:0;top:22px;width:38px;z-index:10;}
+#thead{position:relative;float:left;width:100%;height:40px;background:#000 url(../images/overlay/modal-header.png) 0px 0px repeat-x;cursor:move;}
+.contentWrap{position:relative;float:left;text-align:left;}
+.iframe{border:none;}
+#inner{margin-top:-200px;}
 /***Modals***/
-.claim_notes {
-  background:none repeat scroll 0 0 #FFFFFF;
-  float:left;
-  margin:10px;
-  position:relative;
-  width:470px;
-}
-.claim_notes h1 {
-  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
-  float:left;
-  font-size:15px;
-  font-weight:bold;
-  height:17px;
-  padding:11px;
-  position:relative;
-  width:448px;
-}
-.modal_claim_wrap {
-  position: relative;
-  float: left;
-  padding:20px;
-  width:795px;
-  overflow: hidden;
-  background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
-}
-#overlay .modal_claim_wrap {
-  width:430px;
-  background: none;
-}
-#provider_comment_form {
-  position: relative;
-}
-.comment_buttons {
-  margin-top: 20px;
-  float: right;
-}
-#provider_comment_frequency_day_count {
-  margin:-10px 5px;
-  width:27px;
-}
-#client_visible {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-#client_visible label {
-  float: right;
-  width: 100px;
-}
-#client_visible input[type="checkbox"] {
-  float: right;
-}
-#provider_comment_form  label {
-  color: #999;
-  font-size: 12px;
-}
-#provider_comment_form textarea {
-  width: 420px;
-  height: 100px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  margin-bottom: 20px;
-}
-#provider_comment_form ul {
-  margin-top: 10px;
-}
-#provider_comment_form ul li {
-  margin-right: 12px;
-}
+.claim_notes{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:10px;position:relative;width:470px;}
+.claim_notes h1{background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;float:left;font-size:15px;font-weight:bold;height:17px;padding:11px;position:relative;width:448px;}
+.modal_claim_wrap{position:relative;float:left;padding:20px;width:795px;overflow:hidden;background:#29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;}
+#overlay .modal_claim_wrap{width:430px;background:none;}
+#provider_comment_form{position:relative;}
+.comment_buttons{margin-top:20px;float:right;}
+#provider_comment_frequency_day_count{margin:-10px 5px;width:27px;}
+#client_visible{position:absolute;right:0px;top:0px;}
+#client_visible label{float:right;width:100px;}
+#client_visible input[type="checkbox"]{float:right;}
+#provider_comment_form label{color:#999;font-size:12px;}
+#provider_comment_form textarea{width:420px;height:100px;overflow-x:hidden;overflow-y:scroll;margin-bottom:20px;}
+#provider_comment_form ul{margin-top:10px;}
+#provider_comment_form ul li{margin-right:12px;}
 /* styling for elements inside overlay */ 
-.details { 
-    position:absolute; 
-    top:15px; 
-    right:15px; 
-    font-size:11px; 
-    color:#fff; 
-    width:150px; 
-} 
- 
-.details h3 { 
-    color:#aba; 
-    font-size:15px; 
-    margin:0 0 -10px 0; 
-}
-#ui-datepicker-div {
-  background: #ffffff;
-  border: 1px solid #c0c0c0;
-}
+.details{position:absolute;top:15px;right:15px;font-size:11px;color:#fff;width:150px;}
+.details h3{color:#aba;font-size:15px;margin:0 0 -10px 0;}
+#ui-datepicker-div{background:#ffffff;border:1px solid #c0c0c0;}
 /***********************************************************************************************************************/
 /****************************************************************************************** TUTORIAL MODALS ************/
-div.tutorial_overlay { 
-   position: relative;
-   width:855px; 
-   /*background-image:url(../images/overlay/apple.png); */
-   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-   display:none; 
-   padding: 0 !important;
-}
-#tutorial_trigger {
-  background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 0 -560px transparent;
-  float:left;
-  height:20px;
-  margin-left:2px;
-  margin-top:-2px;
-  position:relative;
-  width:20px;
-}
-#tutorial_trigger a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  text-indent: -3000em;
-}
-.tutorial_header {
-  background:none repeat scroll 0 0 #FFFFFF;
-  float:left;
-  margin:10px;
-  position:relative;
-  width:835px;
-}
-.tutorial_header h1 {
-  background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;
-  float:left;
-  font-size:15px;
-  font-weight:bold;
-  height:17px;
-  padding:11px;
-  position:relative;
-  width:648px;
-}
+div.tutorial_overlay{position:relative;width:855px;/*background-image:url(../images/overlay/apple.png);*/
+background:none repeat scroll 0 0 rgba(0,0,0,0.5);display:none;padding:0 !important;}
+#tutorial_trigger{background:url("../images/inner_pages/table_icon_sprite.png") no-repeat scroll 0 -560px transparent;float:left;height:20px;margin-left:2px;margin-top:-2px;position:relative;width:20px;}
+#tutorial_trigger a{display:block;width:20px;height:20px;text-indent:-3000em;}
+.tutorial_header{background:none repeat scroll 0 0 #FFFFFF;float:left;margin:10px;position:relative;width:835px;}
+.tutorial_header h1{background:url("../images/inner_pages/page_header_bg.jpg") repeat-x scroll left bottom #F2F2F2;float:left;font-size:15px;font-weight:bold;height:17px;padding:11px;position:relative;width:648px;}
 /*
-	root element for the scrollable.
-	when scrolling occurs this element stays still.
+root element for the scrollable.
+when scrolling occurs this element stays still.
 */
-#scroll_pane {
-  float:left;
-  height:518px;
-  position:relative;
-  width:795px;
-}
-#scrolling_segment {
-	position:relative;
-	overflow:hidden;
-	height:415px;
-}
-#scroll_wrap {
-  position: relative;
-  width: 2512px;
-  height: 400px;
-  float: left;
-}
-.scroll_panel {
-  position: relative;
-  float: left;
-  width: 795px;
-  height: 400px;
-}
-#scroll_wrap div.tutorial_column_left {
-  position: relative;
-  float: left;
-  width: 375px;
-  height: 400px;
-  padding-left: 40px;
-}
-#scroll_wrap div.tutorial_column_right {
-  float:left;
-  height:300px;
-  padding:75px 0 0;
-  position:relative;
-  width:330px;
-}
-.tutorial_column_right h2 {
-  position: relative;
-  float: left;
-  color: #fff;
-  font-size: 22px;
-  width: 100%;
-}
-.tutorial_column_right h3 {
-  position: relative;
-  float: left;
-  color: #999;
-  font-size: 16px;
-  padding: 10px 0px;
-  width: 100%;
-}
-.tutorial_column_right p {
-  color:#FFFFFF;
-  float:left;
-  font-size:12px;
-  height:230px;
-  overflow-x:hidden;
-  overflow-y:auto;
-  position:relative;
-  padding-right:10px;
-}
+#scroll_pane{float:left;height:518px;position:relative;width:795px;}
+#scrolling_segment{position:relative;overflow:hidden;height:415px;}
+#scroll_wrap{position:relative;width:2512px;height:400px;float:left;}
+.scroll_panel{position:relative;float:left;width:795px;height:400px;}
+#scroll_wrap div.tutorial_column_left{position:relative;float:left;width:375px;height:400px;padding-left:40px;}
+#scroll_wrap div.tutorial_column_right{float:left;height:300px;padding:75px 0 0;position:relative;width:330px;}
+.tutorial_column_right h2{position:relative;float:left;color:#fff;font-size:22px;width:100%;}
+.tutorial_column_right h3{position:relative;float:left;color:#999;font-size:16px;padding:10px 0px;width:100%;}
+.tutorial_column_right p{color:#FFFFFF;float:left;font-size:12px;height:230px;overflow-x:hidden;overflow-y:auto;position:relative;padding-right:10px;}
 /***Scroll Nav***/
-#scroll_thumbs {
-  border-bottom:1px solid #101010;
-  border-top:1px solid #666666;
-  float:left;
-  height:100px;
-  margin-top:0;
-  position:relative;
-  width:795px;
-}
-#scroller_wrap {
-  position: relative;
-  width: 795px;
-  height: 93px;
-  float: left;
-  overflow: hidden;
-}
-#scroll_thumbs ul {
-  border-bottom:1px solid #333333;
-  float:left;
-  height:101px;
-  width:795px;
-}
-#scroller_wrap ul {
-  width: 100%;
-}
-.scroll_nav_triggers {
-  position: absolute;
-  width: 20px;
-  height: 90px;
-}
-.scroll_nav_triggers:hover {
-  cursor: pointer;
-}
-.scroll_nav_triggers.trigger_l {
-  left: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -90px no-repeat;
-}
-.scroll_nav_triggers.trigger_l:hover {
-  left: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -270px no-repeat;
-}
-.scroll_nav_triggers.trigger_r {
-  right: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px 0px no-repeat;
-}
-.scroll_nav_triggers.trigger_r:hover {
-  right: -15px;
-  background: transparent url(../images/tutorials/nav/nav_triggers.png) 0px -180px no-repeat;
-}
-#scroll_thumbs ul li {
-  float:left;
-  height:100px;
-  position:relative;
-  width:155px;
-}
-#scroll_thumbs ul li.active {
-  background: transparent url(../images/tutorials/nav/hover_bg.png) center top no-repeat;
-  border-bottom:1px solid #333;
-  border-left:1px solid #000;
-  border-right:1px solid #444;
-  box-shadow:inset 1px 1px 10px #000000;
-  -moz-box-shadow:inset 1px 1px 10px #000000;
-  -webkit-box-shadow:inset 1px 1px 10px #000000;
-}
-#scroll_thumbs ul li a {
-  position: relative;
-  display: block;
-}
-#scroll_thumbs ul li.active a.scroll_nav_trigger_copy {
-  color: #fff;
-}
-#scroll_thumbs ul li a.scroll_nav_trigger_image {
-  position: relative;
-  float: left;
-  width:75px;
-  height: 100px;
-  margin-left: 10px;
-}
-#scroll_thumbs ul li a.scroll_nav_trigger_copy {
-  color:#999999;
-  float:left;
-  height:65px;
-  margin-left:0px;
-  padding-top:25px;
-  position:relative;
-  width:73px;
-}
-#scroll_thumbs ul li a.scroll_nav_trigger_copy:hover {
-  text-decoration: none;
-}
+#scroll_thumbs{border-bottom:1px solid #101010;border-top:1px solid #666666;float:left;height:100px;margin-top:0;position:relative;width:795px;}
+#scroller_wrap{position:relative;width:795px;height:93px;float:left;overflow:hidden;}
+#scroll_thumbs ul{border-bottom:1px solid #333333;float:left;height:101px;width:795px;}
+#scroller_wrap ul{width:100%;}
+.scroll_nav_triggers{position:absolute;width:20px;height:90px;}
+.scroll_nav_triggers:hover{cursor:pointer;}
+.scroll_nav_triggers.trigger_l{left:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px -90px no-repeat;}
+.scroll_nav_triggers.trigger_l:hover{left:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px -270px no-repeat;}
+.scroll_nav_triggers.trigger_r{right:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px 0px no-repeat;}
+.scroll_nav_triggers.trigger_r:hover{right:-15px;background:transparent url(../images/tutorials/nav/nav_triggers.png) 0px -180px no-repeat;}
+#scroll_thumbs ul li{float:left;height:100px;position:relative;width:155px;}
+#scroll_thumbs ul li.active{background:transparent url(../images/tutorials/nav/hover_bg.png) center top no-repeat;border-bottom:1px solid #333;border-left:1px solid #000;border-right:1px solid #444;box-shadow:inset 1px 1px 10px #000000;-moz-box-shadow:inset 1px 1px 10px #000000;-webkit-box-shadow:inset 1px 1px 10px #000000;}
+#scroll_thumbs ul li a{position:relative;display:block;}
+#scroll_thumbs ul li.active a.scroll_nav_trigger_copy{color:#fff;}
+#scroll_thumbs ul li a.scroll_nav_trigger_image{position:relative;float:left;width:75px;height:100px;margin-left:10px;}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy{color:#999999;float:left;height:65px;margin-left:0px;padding-top:25px;position:relative;width:73px;}
+#scroll_thumbs ul li a.scroll_nav_trigger_copy:hover{text-decoration:none;}
 /***********************************************************************************************************************/
 /*************************************************************************************** COMING SOON MODALS ************/
-div.coming_soon { 
-  position: relative;
-  width:855px;
-  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  display:none; 
-  padding: 0 !important;
-}
-div.coming_soon div.close { 
-    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
-    cursor:pointer;
-    height:38px;
-    position:absolute;
-  /*  right:-12px;
-    top:-10px;*/
-    right:0;
-    top:22px;
-    width:38px;
-    z-index:10;
-}
+div.coming_soon{position:relative;width:855px;background:none repeat scroll 0 0 rgba(0,0,0,0.5);display:none;padding:0 !important;}
+div.coming_soon div.close{background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;cursor:pointer;height:38px;position:absolute;/* right:-12px;top:-10px;*/
+right:0;top:22px;width:38px;z-index:10;}
 /***********************************************************************************************************************/
 /********************************************************************************************** IDEA MODALS ************/
-div.idea_post { 
-  position: relative;
-  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  display:none; 
-  padding: 0 !important;
-}
-div.idea_post div.close { 
-    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
-    cursor:pointer;
-    height:38px;
-    position:absolute;
-    right:0;
-    top:22px;
-    width:38px;
-    z-index:10;
-}
-.modal_message_widget {
-	position: relative;
-	float: left;
-	width: 305px;
-	height: 303px;
-	border: 1px solid #c4c5c4;
-	background: #eeeeee;
-	padding: 10px;
-	margin: 10px 0px 10px 10px;
-}
-#idea_message_image.modal_message_widget {
-	background: none;
-	border: 1px solid #fff;
-	margin-left: 0px;
-}
-#idea_links {
-  float:right;
-  height:40px;
-  padding:0 10px;
-  position:relative;
-  text-align:right;
-  width:125px;
-}
-#idea_links a {
-  display:block;
-  float:left;
-  height:21px;
-  margin-left:10px;
-  padding-top:4px;
-  text-align:center;
-}
-#idea_message .form_field {
-	margin-bottom: 10px;
-}
-#idea_message .form_field label {
-	color: #666;
-	font-weight: bold;
-}
-#idea_message .form_field input[type="text"] {
-	width:292px;
-}
-#idea_message .form_field textarea {
-	width:292px;
-	height: 163px;
-}
+div.idea_post{position:relative;background:none repeat scroll 0 0 rgba(0,0,0,0.5);display:none;padding:0 !important;}
+div.idea_post div.close{background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;cursor:pointer;height:38px;position:absolute;right:0;top:22px;width:38px;z-index:10;}
+.modal_message_widget{position:relative;float:left;width:305px;height:303px;border:1px solid #c4c5c4;background:#eeeeee;padding:10px;margin:10px 0px 10px 10px;}
+#idea_message_image.modal_message_widget{background:none;border:1px solid #fff;margin-left:0px;}
+#idea_links{float:right;height:40px;padding:0 10px;position:relative;text-align:right;width:125px;}
+#idea_links a{display:block;float:left;height:21px;margin-left:10px;padding-top:4px;text-align:center;}
+#idea_message .form_field{margin-bottom:10px;}
+#idea_message .form_field label{color:#666;font-weight:bold;}
+#idea_message .form_field input[type="text"]{width:292px;}
+#idea_message .form_field textarea{width:292px;height:163px;}
 /***********************************************************************************************************************/
 /******************************************************************************************* MESSAGE MODALS ************/
-div.message_post { 
-  position: relative;
-  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  display:none; 
-  padding: 0 !important;
-}
-div.message_post div.close { 
-    background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
-    cursor:pointer;
-    height:38px;
-    position:absolute;
-    right:0;
-    top:22px;
-    width:38px;
-    z-index:10;
-}
-.modal_message_widget {
-	position: relative;
-	float: left;
-	width: 305px;
-	height: 303px;
-	border: 1px solid #c4c5c4;
-	background: #eeeeee;
-	padding: 10px;
-	margin: 10px 0px 10px 10px;
-}
-#email_message_image.modal_message_widget {
-	background: none;
-	border: 1px solid #fff;
-	margin-left: 0px;
-}
-#email_links {
-  float:right;
-  height:40px;
-  padding:0 10px;
-  position:relative;
-  text-align:right;
-  width:125px;
-}
-#email_links a {
-  display:block;
-  float:left;
-  height:21px;
-  margin-left:10px;
-  padding-top:4px;
-  text-align:center;
-}
-#email_message .form_field {
-	margin-bottom: 10px;
-}
-#email_message .form_field label {
-	color: #666;
-	font-weight: bold;
-}
-#email_message .form_field input[type="text"] {
-	width:292px;
-}
-#email_message .form_field textarea {
-	width:292px;
-	height: 163px;
-}
+div.message_post{position:relative;background:none repeat scroll 0 0 rgba(0,0,0,0.5);display:none;padding:0 !important;}
+div.message_post div.close{background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;cursor:pointer;height:38px;position:absolute;right:0;top:22px;width:38px;z-index:10;}
+.modal_message_widget{position:relative;float:left;width:305px;height:303px;border:1px solid #c4c5c4;background:#eeeeee;padding:10px;margin:10px 0px 10px 10px;}
+#email_message_image.modal_message_widget{background:none;border:1px solid #fff;margin-left:0px;}
+#email_links{float:right;height:40px;padding:0 10px;position:relative;text-align:right;width:125px;}
+#email_links a{display:block;float:left;height:21px;margin-left:10px;padding-top:4px;text-align:center;}
+#email_message .form_field{margin-bottom:10px;}
+#email_message .form_field label{color:#666;font-weight:bold;}
+#email_message .form_field input[type="text"]{width:292px;}
+#email_message .form_field textarea{width:292px;height:163px;}
 /***********************************************************************************************************************/
 /******************************************************************************************* CONFIRM MODALS ************/
-div.confirm { 
-  position: relative;
-  width:514px;
-  height: 214px;
-  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  display:none; 
-  padding: 0 !important;
-}
-.confirm_content {
-  position: relative;
-  float: left;
-  padding: 40px 10px 10px;
-}
-#thead span.modal_title {
-  display:block;
-  padding: 12px;
-  color: #fff;
-  font-weight: bold;
-}
-.confirm_content img {
-  width: 65px;
-  height: 65px;
-  margin-right: 10px;
-  float:left;
-}
-.confirm_content p {
-  width: 399px;
-  padding-top: 20px;
-  float:left;
-}
-.confirm_body {
-  background: #fff;
-  margin: 10px;
-}
-#confirm_links {
-  float:right;
-  height:40px;
-  padding:0 10px;
-  position:relative;
-  text-align:right;
-  width:125px;
-}
-#confirm_links a {
-  display:block;
-  float:left;
-  height:21px;
-  margin-left:10px;
-  padding-top:4px;
-  text-align:center;
-}
+div.confirm{position:relative;width:514px;height:214px;background:none repeat scroll 0 0 rgba(0,0,0,0.5);display:none;padding:0 !important;}
+.confirm_content{position:relative;float:left;padding:40px 10px 10px;}
+#thead span.modal_title{display:block;padding:12px;color:#fff;font-weight:bold;}
+.confirm_content img{width:65px;height:65px;margin-right:10px;float:left;}
+.confirm_content p{width:399px;padding-top:20px;float:left;}
+.confirm_body{background:#fff;margin:10px;}
+#confirm_links{float:right;height:40px;padding:0 10px;position:relative;text-align:right;width:125px;}
+#confirm_links a{display:block;float:left;height:21px;margin-left:10px;padding-top:4px;text-align:center;}
 /***********************************************************************************************************************/
 /******************************************************************************************* VIDEO MODAL ***************/
 /*/* overlay size and background image */ 
-div#video_div { 
-	position: relative;
-	width:512px; 
-	height:288px; 
-	background: url(../images/overlay/apple.png) -45px -45px no-repeat; 
-	display:none; 
-	padding: 0 !important; 
-} 
- 
+div#video_div{position:relative;width:512px;height:288px;background:url(../images/overlay/apple.png) -45px -45px no-repeat;display:none;padding:0 !important;}
 /* close button for overlay */ 
-div#video_div a.close { 
-/*  background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;
-  cursor:pointer;
-  height:38px;
-  position:absolute;
-  right:0;
-  top:22px;
-  width:38px;
-  z-index:10;*/
-}
- 
+div#video_div a.close{/* background:url("../images/overlay/modal-close.png") no-repeat scroll 0 0 transparent;cursor:pointer;height:38px;position:absolute;right:0;top:22px;width:38px;z-index:10;*/}
 /* original size of the player */ 
-#ipad, #ipad embed, #ipad object { 
-  height:288px;
-  left:0px;
-  position:absolute;
-  top:0px;
-  width:512px;
-} 
- 
+#ipad,#ipad embed,#ipad object{height:288px;left:0px;position:absolute;top:0px;width:512px;}
 /* absolute positioning of the player */ 
-#ipad embed, #ipad object { 
-	position:relative; 
-	/* layer as the topmost element */ 
-	z-index:10000; 
-}*/
-
+#ipad embed,#ipad object{position:relative;/* layer as the topmost element */ 
+z-index:10000;}
+*/
 /* styling for elements inside overlay */ 
-.details { 
-	position:absolute; 
-	top:15px; 
-	right:15px; 
-	font-size:11px; 
-	color:#fff; 
-	width:150px; 
-} 
- 
-.details h3 { 
-	color:#aba; 
-	font-size:15px; 
-	margin:0 0 -10px 0; 
-}
+.details{position:absolute;top:15px;right:15px;font-size:11px;color:#fff;width:150px;}
+.details h3{color:#aba;font-size:15px;margin:0 0 -10px 0;}
 
 /***********************************************************************************************************************/
 /************************************************************************************************** TIPS ***************/

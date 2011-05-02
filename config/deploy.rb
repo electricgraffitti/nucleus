@@ -1,1 +1,1 @@
-server 'hcirack', :app, :web, :db, :primary => true
+server 'hci', :app, :web, :db, :primary => true
