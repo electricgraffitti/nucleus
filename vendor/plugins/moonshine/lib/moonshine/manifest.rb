@@ -13,7 +13,7 @@
 # The contents of your database config are parsed and are available at
 # <tt>configuration[:database]</tt>.
 #
-# If you'd like to create another 'default rails stack' using other tools that
+# If you'd like to create another 'default rails stack' using other tools than
 # what Moonshine::Manifest::Rails uses, subclass this and go nuts.
 class Moonshine::Manifest < ShadowPuppet::Manifest
 
@@ -115,7 +115,7 @@ class Moonshine::Manifest < ShadowPuppet::Manifest
   #  on_stage(:unless => [:my_stage, :my_other_stage]) do
   #    puts "I'm not on my stages"
   #  end
-  def on_stage(*args)
+  def self.on_stage(*args)
     options = args.extract_options!
     if_opt = options[:if]
     unless_opt = options[:unless]
@@ -164,11 +164,14 @@ class Moonshine::Manifest < ShadowPuppet::Manifest
     self.class.template(pathname, b)
   end
 
-  # config/moonshine.yml
+  # autoload plugins
+  Dir.glob(rails_root + 'vendor/plugins/*/moonshine/init.rb').each do |path|
+    Kernel.eval(File.read(path), binding, path)
+  end  # config/moonshine.yml
+
   if moonshine_yml.exist?
     configure(YAML::load(ERB.new(moonshine_yml.read).result))
   end
-
 
   # config/moonshine/#{rails_env}.yml
   env_config = rails_root.join('config', 'moonshine', rails_env + '.yml')
@@ -186,10 +189,6 @@ class Moonshine::Manifest < ShadowPuppet::Manifest
   if gems_yml.exist?
     configure(:gems => (YAML.load_file(gems_yml) rescue nil))
   end
-  
-  # autoload plugins
-  Dir.glob(rails_root + 'vendor/plugins/*/moonshine/init.rb').each do |path|
-    Kernel.eval(File.read(path), binding, path)
-  end
+
 
 end
