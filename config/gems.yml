@@ -1,5 +1,6 @@
 --- 
-- :name: authlogic
+- :version: = 2.1.6
+  :name: authlogic
 - :name: geocoder
 - :source: http://rubygems.org
   :name: paperclip
