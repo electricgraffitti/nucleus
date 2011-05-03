@@ -1,1 +1,1 @@
-server 'verisk2', :app, :web, :db, :primary => true
+server 'hci', :app, :web, :db, :primary => true

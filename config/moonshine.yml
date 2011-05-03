@@ -3,10 +3,9 @@
 :application: nucleus
 :user: rails
 :deploy_to: /var/www/apps/nucleus
-:domain: demo.get-nucleus.com
+:domain: nucleusdemo.com
 :domain_aliases:
   - demo.get-nucleus.com
-  - nucleusdemo.com
   - www.nucleusdemo.com
 
 :repository: git@github.com:electricgraffitti/nucleus.git
