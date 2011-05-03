@@ -1,1 +1,1 @@
-server 'yourapp.com', :app, :web, :db, :primary => true
+server 'verisk2', :app, :web, :db, :primary => true

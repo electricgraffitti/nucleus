@@ -42,7 +42,7 @@
 # tell Moonshine here:
 :apt_gems:
   :paperclip:
-  # - imagemagick
+    - imagemagick
   # :rmagick:
   #   - imagemagick
   #   - libmagickcore-dev
