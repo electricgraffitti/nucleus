@@ -1,8 +1,7 @@
-require 'fileutils'
 require 'rubygems'
+require 'isolate/scenarios'
+require 'isolate/now'
 require 'spec/autorun'
-
-require 'ginger'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -14,6 +13,8 @@ require 'shadow_puppet/test'
 
 Spec::Runner.configure do |config|
   config.include Moonshine::Matchers
+  config.include Capistrano::Spec::Matchers
+  config.include Capistrano::Spec::Helpers
   config.include MoonshineHelpers
   config.extend MoonshineHelpers::ClassMethods
 end
